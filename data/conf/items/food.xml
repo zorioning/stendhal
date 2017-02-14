@@ -4,6 +4,132 @@
 
     <!-- try to sort by affinity first, alphabetical order next -->
 
+    <!--
+        BEGIN MealForGgoongo required ingredients
+        Adding below the equired food items for the MealForGroongo quest,
+        for having them close to each other while quest is still under developement.
+        All stats will need some adjustment!
+    -->
+
+	<item name="lemon">
+		<type class="food" subclass="lemon" tileid="-1" />
+		<description>You see a good smelling lemon. It can be an essential ingredient for a decent meal.</description>
+		<implementation class-name="games.stendhal.server.entity.item.Food" />
+		<attributes>
+			<amount value="20" />
+			<frequency value="12" />
+			<quantity value="1" />
+			<regen value="3" />
+			<menu value="Eat|Use"/>
+		</attributes>
+		<weight value="1.0" />
+		<value value="1" />
+		<equipable>
+			<slot name="ground" />
+			<slot name="content" />
+			<slot name="lhand" />
+			<slot name="rhand" />
+			<slot name="bag" />
+			<slot name="trade" />
+		</equipable>
+	</item>
+
+	<item name="pinto beans">
+		<type class="food" subclass="pinto_beans" tileid="-1" />
+		<description>You see some pinto beans. They can be an essential ingredient for a decent meal.</description>
+		<implementation class-name="games.stendhal.server.entity.item.Food" />
+		<attributes>
+			<amount value="20" />
+			<frequency value="12" />
+			<quantity value="1" />
+			<regen value="3" />
+			<menu value="Eat|Use"/>
+		</attributes>
+		<weight value="1.0" />
+		<value value="1" />
+		<equipable>
+			<slot name="ground" />
+			<slot name="content" />
+			<slot name="lhand" />
+			<slot name="rhand" />
+			<slot name="bag" />
+			<slot name="trade" />
+		</equipable>
+	</item>
+
+	<item name="potato">
+		<type class="food" subclass="potato" tileid="-1" />
+		<description>You see a potato. It can be an essential ingredient for a decent meal.</description>
+		<implementation class-name="games.stendhal.server.entity.item.Food" />
+		<attributes>
+			<amount value="20" />
+			<frequency value="12" />
+			<quantity value="1" />
+			<regen value="3" />
+			<menu value="Eat|Use"/>
+		</attributes>
+		<weight value="1.0" />
+		<value value="1" />
+		<equipable>
+			<slot name="ground" />
+			<slot name="content" />
+			<slot name="lhand" />
+			<slot name="rhand" />
+			<slot name="bag" />
+			<slot name="trade" />
+		</equipable>
+	</item>
+
+	<item name="vinegar">
+		<type class="food" subclass="vinegar" tileid="-1" />
+		<description>You a bottle of vinegar. It can be an essential ingredient for a decent meal.</description>
+		<implementation class-name="games.stendhal.server.entity.item.Food" />
+		<attributes>
+			<amount value="20" />
+			<frequency value="12" />
+			<quantity value="1" />
+			<regen value="3" />
+			<menu value="Eat|Use"/>
+		</attributes>
+		<weight value="1.0" />
+		<value value="1" />
+		<equipable>
+			<slot name="ground" />
+			<slot name="content" />
+			<slot name="lhand" />
+			<slot name="rhand" />
+			<slot name="bag" />
+			<slot name="trade" />
+		</equipable>
+	</item>
+
+	<item name="olive oil">
+		<type class="food" subclass="olive_oil" tileid="-1" />
+		<description>You see a bottle of olive oil. It can be an essential ingredient for a decent meal.</description>
+		<implementation class-name="games.stendhal.server.entity.item.Food" />
+		<attributes>
+			<amount value="20" />
+			<frequency value="12" />
+			<quantity value="1" />
+			<regen value="3" />
+			<menu value="Eat|Use"/>
+		</attributes>
+		<weight value="1.0" />
+		<value value="1" />
+		<equipable>
+			<slot name="ground" />
+			<slot name="content" />
+			<slot name="lhand" />
+			<slot name="rhand" />
+			<slot name="bag" />
+			<slot name="trade" />
+		</equipable>
+	</item>
+
+    <!--
+        END MealForGgoongo required ingredients
+    -->
+
 	<item name="apple">
 		<type class="food" subclass="apple" tileid="-1" />
 		<description>You see a nice shiny apple.</description>
