@@ -15,7 +15,7 @@ import java.util.Calendar;
 
 import games.stendhal.common.Rand;
 import games.stendhal.common.constants.Actions;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * A map object that when looked at shows the server time.
@@ -59,9 +59,10 @@ public class Clock extends Sign {
 			hour = 12;
 		}
 
-		StringBuilder msg = new StringBuilder("The time is ");
+		StringBuilder msg = new StringBuilder("现在时间是 ");
 		msg.append(describeMinute(min));
-		msg.append(Grammar.numberString(hour));
+//		msg.append(numberString(hour));
+		msg.append(hour);
 		msg.append('.');
 
 		return msg.toString();
@@ -75,17 +76,17 @@ public class Clock extends Sign {
 	 */
 	private String describeMinute(int m) {
 		switch (m) {
-		case 5: return "five past ";
-		case 10: return "ten past ";
-		case 15: return "quarter past ";
-		case 20: return "twenty past ";
-		case 25: return "twenty five past ";
-		case 30: return "half past ";
-		case 35: return "twenty five to ";
-		case 40: return "twenty to ";
-		case 45: return "quarter to ";
-		case 50: return "ten to ";
-		case 55: return "five to ";
+		case 5: return "过去5分钟 ";
+		case 10: return "过去10分钟 ";
+		case 15: return "过去15分钟 ";
+		case 20: return "过去20分钟 ";
+		case 25: return "过去25分钟 ";
+		case 30: return "过去半小时 ";
+		case 35: return "过去35分钟 ";
+		case 40: return "过去40分钟 ";
+		case 45: return "过去45分钟 ";
+		case 50: return "过去50分钟 ";
+		case 55: return "过去55分钟 ";
 		default: return "";
 		}
 	}

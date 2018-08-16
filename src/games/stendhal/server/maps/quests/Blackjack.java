@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Stack;
 
 import games.stendhal.common.Direction;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -161,7 +161,7 @@ public class Blackjack extends AbstractQuest {
 			if (!playerStands) {
 				final String playerCard = deck.pop();
 				playerCards.add(playerCard);
-				messagebuf.append("You got a " + playerCard + ".\n");
+				messagebuf.append("你得到了 " + playerCard + ".\n");
 			}
 
 			if (playerStands && (playerSum < bankSum)) {
@@ -177,15 +177,15 @@ public class Blackjack extends AbstractQuest {
 			bankSum = sumValues(bankCards);
 		}
 		playerCardsItem.setQuantity(playerSum);
-		playerCardsItem.setDescription("You see the player's cards: "
-				+ Grammar.enumerateCollection(playerCards));
+		playerCardsItem.setDescription("你看了玩家的牌: "
+				+ playerCards);
 		playerCardsItem.notifyWorldAboutChanges();
 		bankCardsItem.setQuantity(bankSum);
-		bankCardsItem.setDescription("You see the bank's cards: "
-				+ Grammar.enumerateCollection(bankCards));
+		bankCardsItem.setDescription("你看了 bank's 的牌: "
+				+ bankCards);
 		bankCardsItem.notifyWorldAboutChanges();
 		if (!playerStands) {
-			messagebuf.append("You have " + playerSum + ".\n");
+			messagebuf.append("你有 " + playerSum + ".\n");
 			if (playerSum == 21) {
 				playerStands = true;
 			}
@@ -214,36 +214,36 @@ public class Blackjack extends AbstractQuest {
 		final int bankSum = sumValues(bankCards);
 		String message = null;
 		if (isBlackjack(bankCards) && isBlackjack(playerCards)) {
-			message = "You have a blackjack, but the bank has one too. It's a push. ";
+			message = "你有一张 blackjack, but the bank has one too. It's a push. ";
 			message += payOff(rpEntity, 1);
 		} else if (isBlackjack(bankCards)) {
 			message = "The bank has a blackjack. Better luck next time!";
 		} else if (isBlackjack(playerCards)) {
-			message = "You have a blackjack! Congratulations! ";
+			message = "你有一张 blackjack! 恭喜! ";
 			message += payOff(rpEntity, 3);
 		} else if (playerSum > 21) {
 			if (bankSum > 21) {
 				message = "Both have busted! This is a draw. ";
 				message += payOff(rpEntity, 1);
 			} else {
-				message = "You have busted! Better luck next time!";
+				message = "你已破产! 下次好运!";
 			}
 		} else if (bankSum > 21) {
 			message = "The bank has busted! Congratulations! ";
 			message += payOff(rpEntity, 2);
 		} else {
 			if (!playerStands) {
-				message = "Do you want another card?";
+				message = "你想再发一张牌？";
 				ramon.setCurrentState(ConversationStates.QUESTION_1);
 			} else if (!bankStands) {
 				letBankDrawAfterPause(ramon.getAttending().getName());
 			} else if (bankSum > playerSum) {
-				message = "The bank has won. Better luck next time!";
+				message = "The bank 赢了. 下次好运!";
 			} else if (bankSum == playerSum) {
 				message = "This is a draw. ";
 				message += payOff(rpEntity, 1);
 			} else {
-				message = "You have won. Congratulations! ";
+				message = "你赢了. 祝贺你! ";
 				message += payOff(rpEntity, 2);
 			}
 		}
@@ -302,13 +302,13 @@ public class Blackjack extends AbstractQuest {
 			@Override
 			protected void createDialog() {
 
-				addGreeting("Welcome to the #blackjack table! You can #play here to kill time until the ferry arrives.");
-				addJob("I was a card dealer in the Semos tavern, but I lost my gambling license. But my brother Ricardo is still working in the tavern.");
+				addGreeting("欢迎来到 #blackjack 牌桌! 在船出发之前，你可以在这里玩玩 #play 牌打发时间。");
+				addJob("我是Semos酒吧的发牌手，但我没有参与打牌的权力，但我哥哥Ricardo也在这个酒吧工作。");
 				addReply(
 						"blackjack",
-						"Blackjack is a simple card game. You can read the rules at the blackboard at the wall.");
-				addHelp("Don't get too distracted playing cards to leave this ferry! Listen out for announcements.");
-				addGoodbye("Goodbye!");
+						"Blackjack 玩法简单，不懂可以在墙上读读规则说明。.");
+				addHelp("不要太专注于玩牌而赶不上船，注意听通知");
+				addGoodbye("再见!");
 			}
 
 			@Override
@@ -320,7 +320,7 @@ public class Blackjack extends AbstractQuest {
 
 		ramon.setEntityClass("naughtyteen2npc");
 		ramon.setPosition(26, 36);
-		ramon.setDescription("Ramon wants to play some rounds of blackjack with you. Do you want to give it a try?");
+		ramon.setDescription("Ramon 想和你玩几局 blackjack. 你想给他个机会吗?");
 		ramon.setDirection(Direction.DOWN);
 		ramon.initHP(100);
 		zone.add(ramon);
@@ -349,16 +349,16 @@ public class Blackjack extends AbstractQuest {
 
 		ramon.add(ConversationStates.ATTENDING, "play", null,
 				ConversationStates.ATTENDING,
-				"In order to play, you have to at least #'stake " + MIN_STAKE
-						+ "' and at most #'stake " + MAX_STAKE
-						+ "' pieces of gold. So, how much will you risk?", null);
+				"要参与游戏, 你要压至少 #'stake " + MIN_STAKE
+						+ "' 最多 #'stake " + MAX_STAKE
+						+ "' 的金子. 所以, 你想压多少？?", null);
 
 		ramon.add(ConversationStates.ATTENDING, "stake", null,
 				ConversationStates.ATTENDING, null,
 				new BehaviourAction(new Behaviour(), "stake", "offer") {
 					@Override
 					public void fireSentenceError(Player player, Sentence sentence, EventRaiser npc) {
-			        	npc.say(sentence.getErrorString() + " Just tell me how much you want to risk, for example #'stake 50'.");
+			        	npc.say(sentence.getErrorString() + " 只用告诉我你想压多少,如比 #'stake 50'.");
 					}
 
 					@Override
@@ -378,13 +378,13 @@ public class Blackjack extends AbstractQuest {
 						stake = res.getAmount();
 
 						if (stake < MIN_STAKE) {
-							npc.say("You must stake at least " + MIN_STAKE + " pieces of gold.");
+							npc.say("你必须最少压 " + MIN_STAKE + " 的金子");
 						} else if (stake > MAX_STAKE) {
-							npc.say("You can't stake more than " + MAX_STAKE + " pieces of gold.");
+							npc.say("你不能压多少 " + MAX_STAKE + " 的金子。");
 						} else if (player.drop("money", stake)) {
 							startNewGame(player);
 						} else {
-							npc.say("Hey! You don't have enough money!");
+							npc.say("Hey! 你钱不够了!");
 						}
 					}
 				});
@@ -420,7 +420,7 @@ public class Blackjack extends AbstractQuest {
 
 		fillQuestInfo(
 				"Blackjack",
-				"While away your time on Athor Ferry with a challenging game of Blackjack.",
+				"不你在Athor码头等船时，可以玩几局Blackjack打发时间.",
 				true);
 	}
 

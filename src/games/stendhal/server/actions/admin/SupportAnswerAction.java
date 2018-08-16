@@ -20,7 +20,7 @@ import java.util.Map;
 
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.NotificationType;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.messages.SupportMessageTemplatesFactory;
 import games.stendhal.server.actions.CommandCenter;
 import games.stendhal.server.core.engine.GameEvent;
@@ -96,25 +96,25 @@ public class SupportAnswerAction extends AdministrationAction implements TurnLis
 				reply = messageTemplates.get(reply);
 				reply = String.format(reply, action.get(TARGET));
 			} else {
-				player.sendPrivateText(reply + " is not a recognised shortcut. Please check #/gmhelp #support for a list.");
+				player.sendPrivateText(reply + " 不可识别，请输入 #/gmhelp #support 核对.");
 				// send no support answer message if the shortcut wasn't understood
 				return;
 			}
 		}
 
-		final String message = sender + " answers " + Grammar.suffix_s(action.get(TARGET))
-				+ " support question: " + reply;
+		final String message = sender + " 回答 " + action.get(TARGET)
+				+ " 回复的问题: " + reply;
 
 		new GameEvent(sender, SUPPORTANSWER, action.get(TARGET), reply).raise();
 		if (supported != null) {
 
-			supported.sendPrivateText(NotificationType.SUPPORT, "Support (" + getAnonymisedAdminName(sender) + ") tells you: " + reply + " \nIf you wish to reply, use /support.");
+			supported.sendPrivateText(NotificationType.SUPPORT, "支持 (" + getAnonymisedAdminName(sender) + ") 告诉你: " + reply + " \n如果你希望回复，请使用 /support.");
 			supported.notifyWorldAboutChanges();
 			SingletonRepository.getRuleProcessor().sendMessageToSupporters(message);
 
 		} else {
 			// that player is not logged in. Do they exist at all or are they just offline? Try sending a message with postman.
-			DBCommand command = new StoreMessageCommand(getAnonymisedAdminName(sender), action.get(TARGET), "In answer to your support question:\n" + reply + " \nIf you wish to reply, use /support.", "S");
+			DBCommand command = new StoreMessageCommand(getAnonymisedAdminName(sender), action.get(TARGET), "回答你请求的问题：:\n" + reply + " \n如果你希望得到回复，请使用： /support.", "S");
 			DBCommandQueue.get().enqueueAndAwaitResult(command, handle);
 			TurnNotifier.get().notifyInTurns(0, new TurnListenerDecorator(this));
 		}
@@ -148,8 +148,8 @@ public class SupportAnswerAction extends AdministrationAction implements TurnLis
 			return;
 		}
 
-		final String message = sender + " answers " + Grammar.suffix_s(target)
-				+ " support question using postman: " + supportmessage;
+		final String message = sender + " 回答：" + target
+				+ " 信使回复提问: " + supportmessage;
 
 		SingletonRepository.getRuleProcessor().sendMessageToSupporters(message);
 	}

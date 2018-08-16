@@ -54,51 +54,51 @@ final class PrefixManager
 	/**
 	 * Initialise the map of nouns and prefix expressions.
 	 */
-	public PrefixManager() {
-		register("piece of ", "pieces of ", "meat");
-		register("piece of ", "pieces of ", "ham");
-		register("piece of ", "pieces of ", "cheese");
-		register("piece of ", "pieces of ", "wood");
-		register("piece of ", "pieces of ", "paper");
-		register("piece of ", "pieces of ", "iron");
-		register("piece of ", "pieces of ", "chicken");
-		register("piece of ", "pieces of ", "coal");
-		register("piece of ", "pieces of ", "beeswax");
-
-		register("sack of ", "sacks of ", "flour");
-		register("sack of ", "sacks of ", "sugar");
-
-		register("sheaf of ", "sheaves of ", "grain");
-		register("loaf of ", "loaves of ", "bread");
-		register("stick of ", "sticks of ", "butter");
-		register("bulb of ", "bulbs of ", "garlic");
-		register("jar of ", "jars of ", "honey");
-		register("glass of ", "glasses of ", "wine");
-		register("cup of ", "cups of ", "tea");
-		register("sprig of ", "sprigs of ", "arandula");
-		register("root of ", "roots of ", "mandragora");
-		register("bunch of ", "bunches of ", "daisies");
-		register("bunch of ", "bunches of ", "grapes");
-		register("can of ", "cans of ", "oil");
-
-		register("bottle of ", "bottles of ", "beer");
-		register("bottle of ", "bottles of ", "water");
-		register("bottle of ", "bottles of ", "fierywater");
-		register("bottle of ", "bottles of ", "milk");
-		register("bottle of ", "bottles of ", "holy water");
-
-		registerEnd("bottle of ", "bottles of ", "potion");
-		registerEnd("bottle of ", "bottles of ", "poison");
-		registerEnd("bottle of ", "bottles of ", "antidote");
-		registerEnd("nugget of ", "nuggets of ", " ore");
-
-		registerEnd("pair of ", "pairs of ", " legs");
-		registerEnd("pair of ", "pairs of ", " boots");
-
-		registerEnd("spool of ", "spools of ", " thread");
-
-		registerPrefix("suit of ", "suits of "); // "armor"
-	}
+//	public PrefixManager() {
+//		register("piece of ", "pieces of ", "meat");
+//		register("piece of ", "pieces of ", "ham");
+//		register("piece of ", "pieces of ", "cheese");
+//		register("piece of ", "pieces of ", "wood");
+//		register("piece of ", "pieces of ", "paper");
+//		register("piece of ", "pieces of ", "iron");
+//		register("piece of ", "pieces of ", "chicken");
+//		register("piece of ", "pieces of ", "coal");
+//		register("piece of ", "pieces of ", "beeswax");
+//
+//		register("sack of ", "sacks of ", "flour");
+//		register("sack of ", "sacks of ", "sugar");
+//
+//		register("sheaf of ", "sheaves of ", "grain");
+//		register("loaf of ", "loaves of ", "bread");
+//		register("stick of ", "sticks of ", "butter");
+//		register("bulb of ", "bulbs of ", "garlic");
+//		register("jar of ", "jars of ", "honey");
+//		register("glass of ", "glasses of ", "wine");
+//		register("cup of ", "cups of ", "tea");
+//		register("sprig of ", "sprigs of ", "arandula");
+//		register("root of ", "roots of ", "mandragora");
+//		register("bunch of ", "bunches of ", "daisies");
+//		register("bunch of ", "bunches of ", "grapes");
+//		register("can of ", "cans of ", "oil");
+//
+//		register("bottle of ", "bottles of ", "beer");
+//		register("bottle of ", "bottles of ", "water");
+//		register("bottle of ", "bottles of ", "fierywater");
+//		register("bottle of ", "bottles of ", "milk");
+//		register("bottle of ", "bottles of ", "holy water");
+//
+//		registerEnd("bottle of ", "bottles of ", "potion");
+//		registerEnd("bottle of ", "bottles of ", "poison");
+//		registerEnd("bottle of ", "bottles of ", "antidote");
+//		registerEnd("nugget of ", "nuggets of ", " ore");
+//
+//		registerEnd("pair of ", "pairs of ", " legs");
+//		registerEnd("pair of ", "pairs of ", " boots");
+//
+//		registerEnd("spool of ", "spools of ", " thread");
+//
+//		registerPrefix("suit of ", "suits of "); // "armor"
+//	}
 
 
 	/**
@@ -108,24 +108,24 @@ final class PrefixManager
 	 * @param lowString lowercase version of str
 	 * @return noun with prefix
 	 */
-	public String fullForm(final String str, final String lowString) {
-		String ret = lowString;
+//	public String fullForm(final String str, final String lowString) {
+//		String ret = lowString;
+//
+//		PrefixEntry found = prefixMap.get(str);
+//
+//		if (found != null) {
+//			ret = found.prefixSingular + ret;
+//		} else {
+//			for(PrefixEntry entry : prefixEndList) {
+//				if (str.endsWith(entry.keyword)) {
+//					ret = Grammar.addPrefixIfNotAlreadyThere(ret, entry.prefixSingular, entry.prefixPlural);
+//					break;
+//				}
+//			}
+//		}
 
-		PrefixEntry found = prefixMap.get(str);
-
-		if (found != null) {
-			ret = found.prefixSingular + ret;
-		} else {
-			for(PrefixEntry entry : prefixEndList) {
-				if (str.endsWith(entry.keyword)) {
-					ret = Grammar.addPrefixIfNotAlreadyThere(ret, entry.prefixSingular, entry.prefixPlural);
-					break;
-				}
-			}
-		}
-
-		return ret;
-	}
+//		return ret;
+//	}
 
 	/**
 	 * @return collection of all registered plural prefixes.

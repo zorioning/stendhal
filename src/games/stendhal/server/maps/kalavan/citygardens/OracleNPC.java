@@ -16,7 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.pathfinder.FixedPath;
@@ -49,7 +49,7 @@ public class OracleNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Lobelia") {
 			@Override
 			public void createDialog() {
-				addGreeting("Hello. You caught me enjoying the flowers here.");
+				addGreeting("你好，刚好我在这里赏花.");
 
 				// use a standard action to list the names of NPCs for quests which haven't been started in this region
 				addReply(ConversationPhrases.HELP_MESSAGES, null, new SayNPCNamesForUnstartedQuestsAction(regions));
@@ -61,15 +61,15 @@ public class OracleNPC implements ZoneConfigurator {
 						ConversationStates.ATTENDING,
 						null,
 						new SayUnstartedQuestDescriptionFromNPCNameAction(regions));
-				addQuest("There are friends in " + Grammar.enumerateCollection(regions) + " who could need #help from adventurers.");
-				addJob("I sometimes tend the beautiful flowers here, but really that is a job for lovely Sue, the gardener.");
-				addOffer("Like my #sisters in other areas, I'm here to guide you on how to #help others.");
-				addReply("sisters", "My sisters and I all have the #name of a flower. Find them to learn how to #help those nearest them.");
-				addReply("name", "Lobelia are tiny purple flowers. Perhaps you can see some in the flowerbeds. I just love it here, Sue is so clever.");
+				addQuest("在 " + regions + " 有个需要你帮助 #help 的朋友 .");
+				addJob("我有时在这照料这些漂亮的花，但这其实是可爱的园丁 Sue 的工作..");
+				addOffer("和在其他地方的我的姐妹们 #sisters 一样, 我在这指引你如何帮助 #help 他人.");
+				addReply("sisters", "我和我的姐妹们都有一个花名 #name . 找出他们，党会如何帮助 #help 附近的人们.");
+				addReply("name", "Lobelia 是小小的紫色花。可能你在花坛中看到了，在这我只爱它，Sue 很聪明.");
 
 				// just to be nice :)
 				addEmotionReply("hugs", "hugs");
-				addGoodbye("Thank you, nice to see you.");
+				addGoodbye("谢谢你，再见.");
 			}
 
 			@Override
@@ -91,7 +91,7 @@ public class OracleNPC implements ZoneConfigurator {
 			}
 		};
 		npc.setPosition(22,111);
-		npc.setDescription("You see Lobelia. She's gazing intently at the flowerbeds around her.");
+		npc.setDescription("你见到了 Lobelia. 她正注视着花坛中的花朵.");
 		npc.setEntityClass("oracle4npc");
 		zone.add(npc);
 	}

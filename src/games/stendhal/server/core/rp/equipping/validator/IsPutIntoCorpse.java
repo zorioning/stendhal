@@ -11,7 +11,7 @@
  ***************************************************************************/
 package games.stendhal.server.core.rp.equipping.validator;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.rp.equipping.EquipmentActionData;
 import games.stendhal.server.entity.item.Corpse;
 
@@ -32,7 +32,7 @@ class IsPutIntoCorpse implements Validator {
 		boolean targetIsCorpse = (data.getTargetRoot() instanceof Corpse);
 		if (!sourceIsCorpse && targetIsCorpse) {
 			data.setWarningMessage("For your information, you just dropped "
-				+ Grammar.quantityplnounWithMarker(data.getQuantity(), data.getItemName(), '§')
+				+ data.getQuantity() + data.getItemName()
 				+ " into a corpse next to you.");
 		}
 

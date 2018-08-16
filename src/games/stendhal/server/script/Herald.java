@@ -18,7 +18,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.Direction;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -221,7 +221,7 @@ public class Herald extends ScriptImpl {
 						return;
 					}
 					StringBuilder sb=new StringBuilder();
-					sb.append("Here " + Grammar.isare(newssize) + " my current " + Grammar.plnoun(newssize,"announcement") + ": ");
+					sb.append("Here " +  " is my current " + "announcement" + ": ");
 
 
 					for(int i=0; i<newssize;i++){
@@ -261,7 +261,7 @@ public class Herald extends ScriptImpl {
 					}
 
 					StringBuilder sb=new StringBuilder();
-					sb.append("Here " + Grammar.isare(newssize) + " my current " + Grammar.plnoun(newssize,"announcement") + ": ");
+					sb.append("Here " +  " is my current " + "announcement" + ": ");
 
 					for(int i=0; i<newssize;i++){
 						// will add 1 to position numbers to show position 0 as 1.

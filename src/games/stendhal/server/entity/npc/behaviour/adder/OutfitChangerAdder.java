@@ -14,7 +14,7 @@ package games.stendhal.server.entity.npc.behaviour.adder;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -87,10 +87,10 @@ public class OutfitChangerAdder {
 					null,
 					false,
 					ConversationStates.ATTENDING,
-					"You can #"
+					"你能 #"
 							+ action
 							+ " "
-							+ Grammar.enumerateCollection(outfitBehaviour.dealtItems())
+							+ outfitBehaviour.dealtItems()
 							+ ".", null);
 		}
 
@@ -106,8 +106,8 @@ public class OutfitChangerAdder {
 
 						final int price = outfitBehaviour.getUnitPrice(res.getChosenItemName()) * res.getAmount();
 
-						raiser.say("To " + action + " a " + res.getChosenItemName() + " will cost " + price
-								+ ". Do you want to " + action + " it?");
+						raiser.say("To " + action + " 一个 " + res.getChosenItemName() + " 要花费 " + price
+								+ ". 你想 " + action + " 了它?");
 
 						currentBehavRes = res;
 						raiser.setCurrentState(ConversationStates.BUY_PRICE_OFFERED); // success
@@ -122,18 +122,18 @@ public class OutfitChangerAdder {
 					public void fire(final Player player, final Sentence sentence,
 							final EventRaiser npc) {
 						final String itemName = currentBehavRes.getChosenItemName();
-						logger.debug("Selling a " + itemName + " to player " + player.getName());
+						logger.debug("销售 " + itemName + " 给玩家 " + player.getName());
 
 						if (outfitBehaviour.transactAgreedDeal(currentBehavRes, npc, player)) {
 							if (canReturn) {
-								npc.say("Thanks, and please don't forget to #return it when you don't need it anymore!");
+								npc.say("谢谢，当你不再需要它的时候，请不要忘记归还 #return !");
 								// -1 is also the public static final int NEVER_WEARS_OFF = -1;
 								// but it doesn't recognise it here ...
 							} else if (outfitBehaviour.getEndurance() != -1) {
 								// timeUntil takes a parameter in seconds so we multiply the endurance in minutes by 60
-								npc.say("Thanks! You can wear this for " +  TimeUtil.timeUntil(60 * outfitBehaviour.getEndurance()) + ".");
+								npc.say("谢谢！你可以穿上它 " +  TimeUtil.timeUntil(60 * outfitBehaviour.getEndurance()) + " 的时间.");
 							} else {
-								npc.say("Thanks!");
+								npc.say("谢谢!");
 							}
 						}
 
@@ -144,7 +144,7 @@ public class OutfitChangerAdder {
 		engine.add(ConversationStates.BUY_PRICE_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				false, ConversationStates.ATTENDING,
-				"Ok, how else may I help you?", null);
+				"Ok, 还有别的事吗?", null);
 
 		if (canReturn) {
 			engine.add(ConversationStates.ATTENDING, "return", null,
@@ -156,7 +156,7 @@ public class OutfitChangerAdder {
 							if (outfitBehaviour.returnToOriginalOutfit(player)) {
 								npc.say("Thank you!");
 							} else {
-								npc.say("I can't remember that I gave you anything.");
+								npc.say("我不能想起我给过你什么东西.");
 							}
 
 							currentBehavRes = null;

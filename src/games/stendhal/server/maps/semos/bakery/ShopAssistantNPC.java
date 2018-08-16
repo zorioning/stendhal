@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -127,7 +127,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				        new QuestCompletedCondition("pizza_delivery"),
 				        new QuestNotActiveCondition(QUEST_SLOT)),
 				    ConversationStates.ATTENDING,
-				    "I lend out " + Grammar.enumerateCollectionWithHash(ITEMS) + ". If you're interested, please say which you want.",
+				    "I lend out " + ITEMS + ". If you're interested, please say which you want.",
 				    null);
 
 				// player already has borrowed something it didn't return and will pay for it

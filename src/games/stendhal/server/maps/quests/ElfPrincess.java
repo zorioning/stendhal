@@ -18,7 +18,7 @@ import java.util.List;
 
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.Entity;
@@ -306,7 +306,7 @@ public class ElfPrincess extends AbstractQuest {
         }
 		final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {
-			res.add("I've already taken Princess Tywysoga " + Grammar.quantityplnoun(repetitions, "precious flower", "one") + ".");
+			res.add("I've already taken Princess Tywysoga " + "precious flower" + ".");
 		}
 		return res;
 	}

@@ -257,13 +257,13 @@ public final class ConversationParser extends ErrorBuffer {
                 // 4.) merge words to form a simpler sentence structure
                 sentence.mergeWords();
 
-                if (!ctx.isForMatching()) {
+         //       if (!ctx.isForMatching()) {
                     // 5.) standardise sentence type
-                    sentence.standardizeSentenceType();
+                 //   sentence.standardizeSentenceType();
 
                     // 6.) replace grammatical constructs with simpler ones
-                    sentence.performaAliasing();
-                }
+                //    sentence.performaAliasing();
+          //      }
             }
 
             sentence.setError(parser.getErrorString());

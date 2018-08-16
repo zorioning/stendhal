@@ -16,7 +16,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.npc.behaviour.impl.MultiProducerBehaviour;
@@ -90,13 +90,13 @@ public class ProducerRegister {
 				int amount = behaviour.getNumberOfProductItems(player);
 				if (behaviour.isOrderReady(player)) {
 					// put all completed orders first - player wants to collect these!
-					sb.insert(0,"\n" + npcName + " has finished " + Grammar.gerundForm(activity)
-							+ " your " + Grammar.plnoun(amount,product) + ".");
+					sb.insert(0,"\n" + npcName + " 已完成 " + activity
+							+ " your " + product + ".");
 				} else {
 					String timeleft = behaviour.getApproximateRemainingTime(player);
 					// put all ongoing orders last
-					sb.append("\n" + npcName + " is " + Grammar.gerundForm(activity)
-							+ " " + Grammar.quantityplnoun(amount, product, "a") + " and will be ready in " + timeleft + ".");
+					sb.append("\n" + npcName + " is " + activity
+							+ " " +  product  + " and will be ready in " + timeleft + ".");
 				}
 			}
 		}
@@ -114,13 +114,13 @@ public class ProducerRegister {
                 final String product = order[1];
 				if (behaviour.isOrderReady(player)) {
 					// put all completed orders first - player wants to collect these!
-					sb.insert(0,"\n" + npcName + " has finished " + Grammar.gerundForm(activity)
-							+ " your " + Grammar.plnoun(amount,product) + ".");
+					sb.insert(0,"\n" + npcName + " 已完成 " + activity
+							+ " your " + product + ".");
 				} else {
 					String timeleft = behaviour.getApproximateRemainingTime(player);
 					// put all ongoing orders last
-					sb.append("\n" + npcName + " is " + Grammar.gerundForm(activity)
-							+ " " + Grammar.quantityplnoun(amount, product, "a") + " and will be ready in " + timeleft + ".");
+					sb.append("\n" + npcName + " 是 " + activity
+							+ " " + product + " and will be ready in " + timeleft + ".");
 				}
 			}
 		}
@@ -145,7 +145,7 @@ public class ProducerRegister {
 				ProducerBehaviour behaviour = producer.second();
 				String activity =  behaviour.getProductionActivity();
 				String product =  behaviour.getProductName();
-				return npcName + " " + Grammar.plural(activity) + " " + Grammar.plural(product) + ".";
+				return npcName + " " + activity + " " + product + ".";
 			}
 		}
 		for (final Pair<String, MultiProducerBehaviour> producer : multiproducers) {
@@ -153,7 +153,7 @@ public class ProducerRegister {
 				MultiProducerBehaviour behaviour = producer.second();
 				String activity =  behaviour.getProductionActivity();
 				HashSet<String> products =  behaviour.getProductsNames();
-				return npcName + " " + Grammar.plural(activity) + " " + Grammar.enumerateCollection(products) + ".";
+				return npcName + " " + activity + " " + products + ".";
 			}
 		}
 		return "";
@@ -176,7 +176,7 @@ public class ProducerRegister {
 				String npcName = producer.first();
 				String activity =  behaviour.getProductionActivity();
 				String resources = behaviour.getRequiredResourceNames(1);
-				return  npcName + " " + Grammar.plural(activity) + " " + Grammar.plural(product) + ", which need " + resources + " each.";
+				return  npcName + " " + activity + " " + product + ", which need " + resources + " each.";
 			}
 		}
 		for (final Pair<String, MultiProducerBehaviour> producer : multiproducers) {
@@ -186,7 +186,7 @@ public class ProducerRegister {
                     String npcName = producer.first();
                     String activity =  behaviour.getProductionActivity();
                     String resources = behaviour.getRequiredResourceNames(product, 1);
-                    return npcName + " " + Grammar.plural(activity) + " " + Grammar.plural(product) + ", which need " + resources + " each.";
+                    return npcName + " " + activity + " " + product + ", which need " + resources + " each.";
                 }
 			}
 		}
@@ -277,13 +277,13 @@ public class ProducerRegister {
 					int amount = behaviour.getNumberOfProductItems(player);
 					if (behaviour.isOrderReady(player)) {
 						// put all completed orders first - player wants to collect these!
-						res.add(npcName + " has finished " + Grammar.gerundForm(activity)
-							+ " your " + Grammar.plnoun(amount,product) + ".");
+						res.add(npcName + " 已完成 " + activity
+							+ " 你的 " + product + ".");
 					} else {
 						String timeleft = behaviour.getApproximateRemainingTime(player);
 						// put all ongoing orders last
-						res.add("\n" + npcName + " is " + Grammar.gerundForm(activity)
-							+ " " + Grammar.quantityplnoun(amount, product, "a") + " and will be ready in " + timeleft + ".");
+						res.add("\n" + npcName + " 是 " + activity
+							+ " " + product + " and will be ready in " + timeleft + ".");
 					}
 				}
 			}
@@ -302,13 +302,13 @@ public class ProducerRegister {
                     final String product = order[1];
                     if (behaviour.isOrderReady(player)) {
                         // put all completed orders first - player wants to collect these!
-                        res.add(npcName + " has finished " + Grammar.gerundForm(activity)
-                            + " your " + Grammar.plnoun(amount,product) + ".");
+                        res.add(npcName + " 已完成 " + activity
+                            + " 你的 " + product + ".");
                     } else {
                         String timeleft = behaviour.getApproximateRemainingTime(player);
                         // put all ongoing orders last
-						res.add("\n" + npcName + " is " + Grammar.gerundForm(activity)
-							+ " " + Grammar.quantityplnoun(amount, product, "a") + " and will be ready in " + timeleft + ".");
+						res.add("\n" + npcName + " 是 " + activity
+							+ " " + product + " and will be ready in " + timeleft + ".");
                     }
                 }
 			}

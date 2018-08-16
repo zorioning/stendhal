@@ -27,7 +27,7 @@ import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import marauroa.common.Log4J;
 import marauroa.common.io.UnicodeSupportingInputStreamReader;
 
@@ -208,7 +208,8 @@ final public class WordList {
 					&& entry.isObject()) {
 				// complete missing plural expressions using the
 				// Grammar.plural() function
-				final String plural = Grammar.plural(normalized);
+//				final String plural = Grammar.plural(normalized);
+				final String plural = normalized;
 
 				// only store single word plurals
 				if (plural.indexOf(' ') == -1) {
@@ -218,12 +219,12 @@ final public class WordList {
 				// check plural strings using the Grammar.plural() function
 				if (!entry.isPronoun() && !entry.isObsessional() &&
 					!normalized.equals("is")) {
-					String plural = Grammar.plural(key);
+					String plural = key;
 
 					if ((plural.indexOf(' ') == -1)
 							&& !plural.equals(entry.getPlurSing())) {
 						// retry with normalized in case it differs from key
-						plural = Grammar.plural(normalized);
+						plural = normalized;
 
 						if ((plural.indexOf(' ') == -1)
 								&& !plural.equals(entry.getPlurSing())) {
@@ -368,7 +369,7 @@ final public class WordList {
 			}
 		} else {
 			// fall back: call Grammar.plural()
-			return Grammar.plural(word);
+			return word;
 		}
 	}
 
@@ -391,24 +392,27 @@ final public class WordList {
 			}
 		} else {
 			// fall back: call Grammar.singular()
-			return Grammar.singular(word);
+			return word;
 		}
 	}
 
 	/**
 	 * Return type for normalizeVerb().
 	 */
-	static class Verb extends Grammar.Verb {
-		public Verb(Grammar.Verb verb, WordEntry entry) {
-			super(verb);
+//	static class Verb extends Grammar.Verb {
+//		public Verb(Grammar.Verb verb, WordEntry entry) {
+//			super(verb);
+//
+//			assert entry != null;
+//			this.entry = entry;
+//		}
+//
+//		public WordEntry entry; // is never null
+//	}
 
-			assert entry != null;
-			this.entry = entry;
-		}
-
-		public WordEntry entry; // is never null
-	}
-
+//	static class Verb  {
+		
+//	}
 	/**
 	 * Try to normalise the given word as verb.
 	 *
@@ -416,28 +420,29 @@ final public class WordList {
 	 *
 	 * @return Verb object with additional information
 	 */
-	Verb normalizeVerb(final String word) {
-		final String trimmedWord = trimWord(word);
+//	Verb normalizeVerb(final String word) {
+//		final String trimmedWord = trimWord(word);
 
-		final Grammar.Verb verb = Grammar.normalizeRegularVerb(trimmedWord);
+//		final Grammar.Verb verb = Grammar.normalizeRegularVerb(trimmedWord);
+//		final  verb = trimmedWord;
 
-		if (verb != null) {
-			WordEntry entry = words.get(verb.word);
+//		if (verb != null) {
+//			WordEntry entry = words.get(verb.word);
+//
+//			// try and re-append "e" if it was removed by
+//			// normalizeRegularVerb()
+//			if ((entry == null) && trimmedWord.endsWith("e")
+//					&& !verb.word.endsWith("e")) {
+//				entry = words.get(verb.word + "e");
+//			}
+//
+//			if (entry != null) {
+//				return new Verb(verb, entry);
+//			}
+//		}
 
-			// try and re-append "e" if it was removed by
-			// normalizeRegularVerb()
-			if ((entry == null) && trimmedWord.endsWith("e")
-					&& !verb.word.endsWith("e")) {
-				entry = words.get(verb.word + "e");
-			}
-
-			if (entry != null) {
-				return new Verb(verb, entry);
-			}
-		}
-
-		return null;
-	}
+//		return null;
+//	}
 
 	/**
 	 * Try to find a matching word for a derived adjective.
@@ -446,17 +451,17 @@ final public class WordList {
 	 * @return WordEntry
 	 */
 	WordEntry normalizeAdjective(final String word) {
-		final String trimmedWord = trimWord(word);
-
-		final String normalized = Grammar.normalizeDerivedAdjective(trimmedWord);
-
-		if (normalized != null) {
-			final WordEntry entry = words.get(normalized);
-
-			return entry;
-		} else {
+//		final String trimmedWord = trimWord(word);
+//
+//		final String normalized = Grammar.normalizeDerivedAdjective(trimmedWord);
+//
+//		if (normalized != null) {
+//			final WordEntry entry = words.get(normalized);
+//
+//			return entry;
+//		} else {
 			return null;
-		}
+//		}
 	}
 
 	/**
@@ -685,15 +690,15 @@ final public class WordList {
 		}
 
 		// handle ambiguous cases like "mill"
-		if (Grammar.isAmbiguousNounVerb(lastExpr.getNormalized())) {
-			if (lastType.isVerb() && typeString.equals(ExpressionType.OBJECT)) {
-				return true;
-			}
-			if (lastType.isObject() && typeString.equals(ExpressionType.VERB)) {
-				return true;
-			}
-		}
-
+//		if (Grammar.isAmbiguousNounVerb(lastExpr.getNormalized())) {
+//			if (lastType.isVerb() && typeString.equals(ExpressionType.OBJECT)) {
+//				return true;
+//			}
+//			if (lastType.isObject() && typeString.equals(ExpressionType.VERB)) {
+//				return true;
+//			}
+//		}
+//
 		return false;
 	}
 
@@ -702,23 +707,23 @@ final public class WordList {
 	 *
 	 * @param verb
 	 */
-	public void registerVerb(final String verb) {
-		final String key = trimWord(verb);
-		final WordEntry entry = words.get(key);
-
-		if ((entry == null) || (entry.getType() == null)
-				|| entry.getType().isEmpty()) {
-			final WordEntry newEntry = new WordEntry();
-
-			newEntry.setNormalized(key);
-			newEntry.setType(new ExpressionType(VERB_DYNAMIC));
-
-			words.put(key, newEntry);
+//	public void registerVerb(final String verb) {
+//		final String key = trimWord(verb);
+//		final WordEntry entry = words.get(key);
+//
+//		if ((entry == null) || (entry.getType() == null)
+//				|| entry.getType().isEmpty()) {
+//			final WordEntry newEntry = new WordEntry();
+//
+//			newEntry.setNormalized(key);
+//			newEntry.setType(new ExpressionType(VERB_DYNAMIC));
+//
+//			words.put(key, newEntry);
 //		} else if (!checkNameCompatibleLastType(entry, ExpressionType.VERB)) {
 //	 		logger.warn("verb name already registered with incompatible expression type: " +
 //			entry.getNormalizedWithTypeString());
-		}
-	}
+//		}
+//	}
 
 	/**
 	 * Add a new word to the list in order to remember it later.

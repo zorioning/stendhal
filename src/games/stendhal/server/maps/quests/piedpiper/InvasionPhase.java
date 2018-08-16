@@ -21,7 +21,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -56,9 +56,9 @@ public class InvasionPhase extends TPPQuest {
 				new ChatAction() {
 					@Override
 					public void fire(Player player, Sentence sentence, EventRaiser npc) {
-						npc.say("There " + Grammar.isare(TPPQuestHelperFunctions.getRats().size()) +
-								" still about "+Integer.toString(TPPQuestHelperFunctions.getRats().size())+
-								" rats alive.");
+						npc.say("那里 " + TPPQuestHelperFunctions.getRats().size() +
+								" 仍然有 "+Integer.toString(TPPQuestHelperFunctions.getRats().size())+
+								" 老鼠存活.");
 					}
 				});
 
@@ -68,10 +68,9 @@ public class InvasionPhase extends TPPQuest {
 				"details",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
-				"Ados is being invaded by rats! "+
-				  "I dont want to either reward you or "+
-				  "explain details to you now,"+
-				  " until all rats are dead.",
+				"Ados 被老鼠要被占领了! "+
+				  "在所有老鼠消灭之前,"+
+				  "我现在不想给你回报或解释什么" ,
 				null);
 
 		// Player asked about reward at invasion time.
@@ -80,9 +79,9 @@ public class InvasionPhase extends TPPQuest {
 				"reward",
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
-				"Ados is being invaded by rats! "+
-				  "I dont want to reward you now, "+
-				  " until all rats are dead.",
+				"Ados 被老鼠要被占领了! "+
+				  "在所有老鼠消灭之前,"+
+				  "我现在不想给你回报或解释什么" ,
 				null);
 	}
 
@@ -159,8 +158,8 @@ public class InvasionPhase extends TPPQuest {
 				// add unique noises to humanoids
 				if (tempCreature.getName().equals("archrat")) {
 					final LinkedList<String> ll = new LinkedList<String>(
-							Arrays.asList("We will capture Ados!",
-							"Our revenge will awesome!"));
+							Arrays.asList("我们会占领Ados!",
+							"我们的报复会很可怕!"));
 					LinkedHashMap<String, LinkedList<String>> lhm =
 						new LinkedHashMap<String, LinkedList<String>>();
 					// add to all states except death.
@@ -183,7 +182,7 @@ public class InvasionPhase extends TPPQuest {
 	 */
 	private void notifyDead(final RPEntity dead) {
 		if (!rats.remove(dead)) {
-			logger.warn("killed creature isn't in control list ("+dead.toString()+").");
+			logger.warn("杀死的生物不在控制列表中 ("+dead.toString()+").");
 		}
 		if (rats.size()==0) {
 			phaseToDefaultPhase(
@@ -197,10 +196,9 @@ public class InvasionPhase extends TPPQuest {
 
 	@Override
 	public String getSwitchingToDefPhaseMessage() {
-		final String text = "Mayor Chalmers shouts: No #rats in Ados survived, "+
-				            "only those who always lived in the "+
-				            "haunted house. "+
-				            "Rat hunters are welcome to get their #reward.";
+		final String text = "Chalmers 市长宣布:在Ados没有老鼠 #rats 存活, "+
+				            "它们只能住在鬼屋"+
+				            "欢迎Rat 捕鼠猎人领取赏金 #reward.";
 		return(text);
 	}
 
@@ -210,12 +208,12 @@ public class InvasionPhase extends TPPQuest {
 	@Override
 	public String getSwitchingToNextPhaseMessage() {
 		final String text =
-			"Mayor Chalmers shouts: Suddenly, #rats have captured the city, "+
+			"市长 Chalmers 播报: 紧急, #rats 老鼠已占领城市, "+
 		  //"Mayor Chalmers shouts: The #rats left as suddenly as they arrived. "+
 		  //"Perhaps they have returned to the sewers. "+
-			"I now need to call the Pied Piper, a rat exterminator. "+
-			"Anyway, thanks to all who tried to clean up Ados, "+
-			" you are welcome to get your #reward.";
+			"我现在南要呼叫Pied Piper, 一个灭鼠人."+
+			"另外, 感谢所有尽力清理 Ados的市民, "+
+			"欢迎你们领取奖金 #reward.";
 		return(text);
 	}
 

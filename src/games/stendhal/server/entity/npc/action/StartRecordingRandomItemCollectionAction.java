@@ -20,7 +20,7 @@ import java.util.Map;
 import com.google.common.collect.ImmutableMap;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.annotations.Dev;
 import games.stendhal.server.core.config.annotations.Dev.Category;
@@ -89,9 +89,9 @@ public class StartRecordingRandomItemCollectionAction implements ChatAction {
 		final int quantity = items.get(itemname);
 
 		Map<String, String> substitutes = new HashMap<String, String>();
-		substitutes.put("item", Grammar.quantityplnoun(quantity, itemname, "a"));
-		substitutes.put("#item", Grammar.quantityplnounWithHash(quantity, itemname));
-		substitutes.put("the item", "the " + Grammar.plnoun(quantity, itemname));
+		substitutes.put("item",  itemname );
+		substitutes.put("#item", itemname);
+		substitutes.put("the item", "the " + itemname);
 
 
 		raiser.say(StringUtils.substitute(message,substitutes));

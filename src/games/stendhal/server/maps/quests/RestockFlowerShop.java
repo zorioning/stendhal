@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
@@ -97,24 +97,24 @@ public class RestockFlowerShop extends AbstractQuest {
 		}
 		String npcName = npc.getName();
 		if (player.isQuestInState(QUEST_SLOT, 0, "rejected")) {
-			res.add("Flowers make me sneeze.");
+			res.add("花粉老让我打喷嚏.");
 		} else if (!player.isQuestInState(QUEST_SLOT, 0, "done")) {
 			String questState = player.getQuest(QUEST_SLOT);
-			res.add("I have offered to help " + npcName + " restock the flower shop.");
+			res.add("我已给 " + npcName + " 提供帮助重建了花店.");
 
 			final ItemCollection remaining = new ItemCollection();
 			remaining.addFromQuestStateString(questState);
 
 			// Check to avoid ArrayIndexOutOfBoundsException
 			if (remaining.size() > 0) {
-				String requestedFlowers = "I still need to bring the following flowers: " + Grammar.enumerateCollection(remaining.toStringList()) + ".";
+				String requestedFlowers = "我还需要带来以下种类的花: " + remaining.toStringList() + ".";
 				res.add(requestedFlowers);
 			}
 		} else {
             if (isRepeatable(player)) {
-                res.add("It has been a while since I helped " + npcName + ". Perhaps she could use my help again.");
+                res.add("我帮助 " + npcName + " 已经有些时日了.可能她又需要我的帮助了.");
             } else {
-                res.add(npcName + " now has a good supply of flowers.");
+                res.add(npcName + " 现在花的供应够好了.");
             }
 		}
 
@@ -128,8 +128,8 @@ public class RestockFlowerShop extends AbstractQuest {
 				Arrays.asList("flower"),
 				ConversationPhrases.HELP_MESSAGES);
 		List<String> responses = Arrays.asList(
-				"Aren't flowers beautiful?",
-				"Hmmmm, I don't think there is anything I can help with.");
+				"这些花不好看吗?",
+				"Hmmmm, 我不认为我能帮助你什么");
 
 		for (int i = 0; i < responses.size(); i++) {
 			npc.add(ConversationStates.ANY,
@@ -149,14 +149,14 @@ public class RestockFlowerShop extends AbstractQuest {
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
 				null,
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I still need [items]. Did you bring any of those?"));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我还需要 [items]. 你身上带的有吗?"));
 
         npc.add(ConversationStates.QUESTION_1,
                 Arrays.asList("flower", "remind", "what", "item", "list", "something"),
                 new QuestActiveCondition(QUEST_SLOT),
                 ConversationStates.QUESTION_1,
                 null,
-                new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I still need [items]. Did you bring any of those?"));
+                new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我还需要 [items]. 你身上带的有吗?"));
 
         // Player asks to be reminded of remaining flowers required
         npc.add(ConversationStates.QUESTION_1,
@@ -164,7 +164,7 @@ public class RestockFlowerShop extends AbstractQuest {
                 new QuestActiveCondition(QUEST_SLOT),
                 ConversationStates.QUESTION_1,
                 null,
-                new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I still need [items]. Did you bring any of those?"));
+                new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我还需要 [items]. 你身上带的有吗?"));
 
 		List<List<String>> keywords = Arrays.asList(
 				Arrays.asList("daisy", "bunch of daisies", "bunches of daisies", "lilia", "pansy"),

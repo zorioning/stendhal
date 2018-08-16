@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import games.stendhal.common.ItemTools;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Expression;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -203,15 +203,15 @@ public class CloakCollector extends AbstractQuest implements BringListOfItemsQue
 
 	@Override
 	public String firstAskForMissingItems(final List<String> missingItems) {
-		return "I want " + Grammar.quantityplnoun(missingItems.size(), "cloak", "a")
-				+ ". That's " + Grammar.enumerateCollection(missingItems)
+		return "I want " + "cloak"
+				+ ". That's " + missingItems
 				+ ". Will you find them?";
 	}
 
 	@Override
 	public String askForMissingItems(final List<String> missingItems) {
-		return "I want " + Grammar.quantityplnoun(missingItems.size(), "cloak", "a")
-				+ ". That's " + Grammar.enumerateCollection(missingItems)
+		return "I want " + missingItems.size()
+				+ ". That's " + missingItems
 				+ ". Did you bring any?";
 	}
 
@@ -227,7 +227,7 @@ public class CloakCollector extends AbstractQuest implements BringListOfItemsQue
 
 	@Override
 	public String respondToOfferOfNotExistingItem(final String itemName) {
-		return "Oh, I'm disappointed. You don't really have " + Grammar.a_noun(itemName) + " with you.";
+		return "Oh, I'm disappointed. You don't really have " + itemName + " with you.";
 	}
 
 	@Override

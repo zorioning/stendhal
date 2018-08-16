@@ -17,7 +17,7 @@ import static games.stendhal.common.constants.Actions.SLOT;
 import static games.stendhal.common.constants.Actions.SUMMONAT;
 import static games.stendhal.common.constants.Actions.TARGET;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.actions.CommandCenter;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -40,18 +40,18 @@ public class SummonAtAction extends AdministrationAction {
 			final Player changed = SingletonRepository.getRuleProcessor().getPlayer(name);
 
 			if (changed == null) {
-				logger.debug("Player \"" + name + "\" not found.");
-				player.sendPrivateText("Player \"" + name + "\" not found.");
+				logger.debug("没有发现玩家 \"" + name + "\" .");
+				player.sendPrivateText("没有发现玩家 \"" + name + "\" .");
 				return;
 			}
 
 			final String slotName = action.get(SLOT);
 			if (!changed.hasSlot(slotName)) {
-				logger.debug("Player \"" + name
-						+ "\" does not have an RPSlot named \"" + slotName
+				logger.debug("玩家j \"" + name
+						+ "\" 没有 an RPSlot 称号 \"" + slotName
 						+ "\".");
 				player.sendPrivateText("Player \"" + name
-						+ "\" does not have an RPSlot named \"" + slotName
+						+ "\" 没有 an RPSlot 称号 \"" + slotName
 						+ "\".");
 				return;
 			}
@@ -63,14 +63,14 @@ public class SummonAtAction extends AdministrationAction {
 			// Is the entity an item
 			if (!manager.isItem(type)) {
 				// see it the name was in plural
-				type = Grammar.singular(typeName);
+				type = typeName;
 
 				if (!manager.isItem(type)) {
 					// see it the name was in singular but the registered type is in plural
-					type = Grammar.plural(typeName);
+					type = typeName;
 
 					if (!manager.isItem(type)) {
-						player.sendPrivateText(typeName + " is not an item.");
+						player.sendPrivateText(typeName + " 不是一件物品.");
 						type = null;
 					}
 				}

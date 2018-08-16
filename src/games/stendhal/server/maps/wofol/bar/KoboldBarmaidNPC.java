@@ -18,7 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -105,14 +105,14 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						if ("slim bottle".equals(requiredContainer) || "eared bottle".equals(requiredContainer)) {
 							if (!player.isEquipped(requiredContainer, amount) || !player.isEquipped("money", price)) {
 								seller.say("Wrauff! I can only sell you "
-									+ Grammar.plnoun(amount, chosenItemName)
+									+ chosenItemName
 									+ " if you meet the price of " + price + " and have " + amount + " empty "
-									+ Grammar.plnoun(amount, requiredContainer) + ".");
+									+ requiredContainer + ".");
 							        return false;
 							}
 						} else if (!player.isEquipped("money", price)) {
 								seller.say("Wruff! I can only sell you "
-									+ Grammar.plnoun(amount, chosenItemName)
+									+  chosenItemName
 									+ " if you have enough money.");
 						        return false;
 						}
@@ -133,12 +133,12 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						               	player.drop(requiredContainer, amount);
 							}
 							seller.say("Wroff! Here "
-									+ Grammar.isare(amount) + " your "
-									+ Grammar.plnoun(amount, chosenItemName) + "!");
+									+ amount + " your "
+									+ chosenItemName + "!");
 							return true;
                         } else {
                             seller.say("Wruff.. You cannot carry any "
-                                    + Grammar.plnoun(amount, chosenItemName)
+                                    +  chosenItemName
 									+ " in your bag now.");
                             return false;
                         }

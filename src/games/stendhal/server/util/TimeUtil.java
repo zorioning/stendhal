@@ -8,7 +8,7 @@ package games.stendhal.server.util;
 //
 //
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * Utility functions for time in the game.
@@ -47,23 +47,23 @@ public class TimeUtil {
 	 *            The number of seconds till/past (in positive values).
 	 */
 	public static void approxTimeUntil(final StringBuilder sbuf, final int seconds) {
-		if (approxUnit(sbuf, seconds, SECONDS_IN_WEEK, "week")) {
+		if (approxUnit(sbuf, seconds, SECONDS_IN_WEEK, "周")) {
 			return;
 		}
 
-		if (approxUnit(sbuf, seconds, SECONDS_IN_DAY, "day")) {
+		if (approxUnit(sbuf, seconds, SECONDS_IN_DAY, "天")) {
 			return;
 		}
 
-		if (approxUnit(sbuf, seconds, SECONDS_IN_HOUR, "hour")) {
+		if (approxUnit(sbuf, seconds, SECONDS_IN_HOUR, "时")) {
 			return;
 		}
 
-		if (approxUnit(sbuf, seconds, SECONDS_IN_MINUTE, "minute")) {
+		if (approxUnit(sbuf, seconds, SECONDS_IN_MINUTE, "分")) {
 			return;
 		}
 
-		sbuf.append("less than a minute");
+		sbuf.append("不到一分钟");
 	}
 
 	/**
@@ -97,26 +97,26 @@ public class TimeUtil {
 			sbuf.append(count);
 		} else if (remainder >= (size * 3 / 4)) {
 			count++;
-			sbuf.append("just under ");
+			sbuf.append("只有不到 ");
 			sbuf.append(count);
 		} else if (remainder >= (size * 1 / 4)) {
-			sbuf.append("about ");
+			sbuf.append("大约 ");
 			sbuf.append(count);
-			sbuf.append(" and a half");
+			sbuf.append(" 和一半");
 
 			/*
 			 * Force plural context (e.g. "1 and a half moments")
 			 */
 			count = 2;
 		} else if (remainder >= (size * 5 / 100)) {
-			sbuf.append("just over ");
+			sbuf.append("只有超过 ");
 			sbuf.append(count);
 		} else {
 			sbuf.append(count);
 		}
 
 		sbuf.append(' ');
-		sbuf.append(Grammar.plnoun(count, name));
+		sbuf.append(name);
 		return true;
 	}
 
@@ -180,8 +180,8 @@ public class TimeUtil {
 			seconds -= (count * SECONDS_IN_WEEK);
 
 			sbuf.append(count);
-			sbuf.append(' ');
-			sbuf.append(Grammar.plnoun(count, "week"));
+			sbuf.append(" 周");
+	//		sbuf.append(Grammar.plnoun(count, "week"));
 
 			appended = true;
 		}
@@ -197,8 +197,8 @@ public class TimeUtil {
 			}
 
 			sbuf.append(count);
-			sbuf.append(' ');
-			sbuf.append(Grammar.plnoun(count, "day"));
+			sbuf.append(" 天");
+//			sbuf.append("天");
 		}
 		count = seconds / SECONDS_IN_HOUR;
 		if (count != 0) {
@@ -211,8 +211,8 @@ public class TimeUtil {
 			}
 
 			sbuf.append(count);
-			sbuf.append(' ');
-			sbuf.append(Grammar.plnoun(count, "hour"));
+			sbuf.append(" 时");
+//			sbuf.append(" 时"));
 		}
 		count = seconds / SECONDS_IN_MINUTE;
 		if (count != 0) {
@@ -225,8 +225,8 @@ public class TimeUtil {
 			}
 
 			sbuf.append(count);
-			sbuf.append(' ');
-			sbuf.append(Grammar.plnoun(count, "minute"));
+			sbuf.append(" 分");
+//			sbuf.append(Grammar.plnoun(count, "minute"));
 		}
 
 		if (!appended || (forceSeconds && (seconds != 0))) {
@@ -235,8 +235,8 @@ public class TimeUtil {
 			}
 
 			sbuf.append(seconds);
-			sbuf.append(' ');
-			sbuf.append(Grammar.plnoun(count, "second"));
+			sbuf.append(" 秒");
+//			sbuf.append(Grammar.plnoun(count, "second"));
 		}
 	}
 

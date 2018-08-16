@@ -15,7 +15,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.Entity;
 import games.stendhal.server.entity.RPEntity;
@@ -69,9 +69,9 @@ public class MessagingUseBehavior implements UseBehavior {
 			return true;
 		}
 		int amount = item.getQuantity();
-		sendPrivateMessage(user, Grammar.ThatThose(amount) + " "
-				+ Grammar.plnoun(amount, item.getName()) + " "
-				+ Grammar.isare(amount) + " too far away.");
+		sendPrivateMessage(user, amount + " "
+				+ amount + item.getName() + " "
+				+ " 太远.");
 
 		return false;
 	}

@@ -12,7 +12,7 @@
  ***************************************************************************/
 package games.stendhal.server.entity.mapstuff.spawner;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
 import marauroa.common.game.Definition.Type;
@@ -87,9 +87,9 @@ public class SheepFood extends PassiveEntityRespawnPoint {
 
 	@Override
 	public String describe() {
-		final String text = "You see an aeryberry bush, with "
-				+ Grammar.quantityplnoun(getAmount(), "berry", "one")
-				+ " on it. Only sheep can eat aeryberries.";
+		final String text = "你看到树上结有 "
+				+ getAmount()+ "个树梅"
+				+ " 只有羊才可以吃.";
 		return text;
 	}
 

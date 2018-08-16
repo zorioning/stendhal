@@ -15,7 +15,7 @@ package games.stendhal.server.entity.npc.behaviour.adder;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.constants.SoundLayer;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -64,8 +64,8 @@ public class SellerAdder {
 					ConversationPhrases.OFFER_MESSAGES,
 					null,
 					false,
-					ConversationStates.ATTENDING, "I sell "
-									+ Grammar.enumerateCollection(sellerBehaviour.dealtItems())
+					ConversationStates.ATTENDING, "我销售 "
+									+ sellerBehaviour.dealtItems()
 									+ ".", null);
 		}
 
@@ -94,16 +94,16 @@ public class SellerAdder {
 						// find out if the NPC sells this item, and if so,
 						// how much it costs.
 						if (res.getAmount() > 1000) {
-							logger.warn("Refusing to sell very large amount of "
+							logger.warn("不能卖出超量的 "
 									+ res.getAmount()
 									+ " " + chosenItemName
-									+ " to player "
+									+ " 给 玩家 "
 									+ player.getName() + " talking to "
 									+ raiser.getName() + " saying "
 									+ sentence);
-							raiser.say("Sorry, the maximum number of "
+							raiser.say("抱歉，"
 									+ chosenItemName
-									+ " which I can sell at once is 1000.");
+									+ " 的数量太多，最多不能超过 1000.");
 						} else if (res.getAmount() > 0) {
 							StringBuilder builder = new StringBuilder();
 
@@ -113,9 +113,9 @@ public class SellerAdder {
 								final Item item = sellerBehaviour.getAskedItem(chosenItemName);
 
 								if (item == null) {
-									logger.error("Trying to sell a nonexistent item: " + chosenItemName);
+									logger.error("尝试卖一件不存在的商品：" + chosenItemName);
 								} else if (!(item instanceof StackableItem)) {
-									builder.append("You can only buy one " + chosenItemName + " at a time. ");
+									builder.append("你一次只能买一件 " + chosenItemName + " . ");
 									res.setAmount(1);
 								}
 							}
@@ -124,24 +124,24 @@ public class SellerAdder {
 							if (player.isBadBoy()) {
 								price = (int) (SellerBehaviour.BAD_BOY_BUYING_PENALTY * price);
 
-								builder.append("To friends I charge less, but you seem like you have played unfairly here. So,  ");
-								builder.append(Grammar.quantityplnoun(res.getAmount(), chosenItemName, "a"));
+								builder.append("朋友，我是小本买卖，但你也不能太欺负人，所以,  ");
+								builder.append( chosenItemName);
 							} else {
-								builder.append(Grammar.quantityplnoun(res.getAmount(), chosenItemName, "A"));
+								builder.append( chosenItemName);
 							}
 
-							builder.append(" will cost ");
+							builder.append(" 最少要给 ");
 							builder.append(price);
-							builder.append(". Do you want to buy ");
-							builder.append(Grammar.itthem(res.getAmount()));
-							builder.append("?");
+							builder.append(". 你看 ");
+							builder.append(res.getAmount());
+							builder.append("的这个价格可以吧 ?");
 
 							raiser.say(builder.toString());
 
 							currentBehavRes = res;
 							npc.setCurrentState(ConversationStates.BUY_PRICE_OFFERED); // success
 						} else {
-							raiser.say("Sorry, how many " + Grammar.plural(chosenItemName) + " do you want to buy?!");
+							raiser.say("抱歉, 你要买多少的 " + chosenItemName + " ?!");
 						}
 					}
 				});
@@ -167,7 +167,7 @@ public class SellerAdder {
 		engine.add(ConversationStates.BUY_PRICE_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				false, ConversationStates.ATTENDING,
-				"Ok, how else may I help you?", null);
+				"Ok, 还需要其他东西吗?", null);
 	}
 
 }

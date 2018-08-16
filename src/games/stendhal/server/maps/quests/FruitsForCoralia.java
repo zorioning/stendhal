@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
@@ -89,7 +89,7 @@ public class FruitsForCoralia extends AbstractQuest {
     @Override
     public void addToWorld() {
         fillQuestInfo("Fruits for Coralia",
-				"The Ados Tavern barmaid, Coralia, searches for fresh fruits for her exotic hat.",
+				"Ados 的旅店女待 Coralia, 要找一些新鲜的水果给她收养的老鼠",
 				true);
         prepareQuestStep();
         prepareBringingStep();
@@ -128,23 +128,23 @@ public class FruitsForCoralia extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Coralia asked me for some fresh fruits for her hat.");
+		res.add("Coralia 向我要了一些新鲜水果给她的老鼠吃");
 		final String questState = player.getQuest(QUEST_SLOT);
 
 		if ("rejected".equals(questState)) {
 			// quest rejected
-			res.add("I decided not find Coralia some fruits, I have better things to do.");
+			res.add("我决定不帮她找，我还有别的事要做.");
 		} else if (!player.isQuestCompleted(QUEST_SLOT)) {
 			// not yet finished
 			final ItemCollection missingItems = new ItemCollection();
 			missingItems.addFromQuestStateString(questState);
-			res.add("I still need to bring Coralia " + Grammar.enumerateCollection(missingItems.toStringList()) + ".");
+			res.add("我仍需要带给 Coralia " + missingItems.toStringList() + ".");
 		} else if (isRepeatable(player)) {
 			// may be repeated now
-			res.add("It's been a while since I brought Coralia fresh fruits for her hat, I wonder if the fruits have withered?");
+			res.add("为了Coralia 的老鼠，我找到的水果已经有一段时间，我想知道水果是不是已经干了。");
         } else {
         	// not (currently) repeatable
-        	res.add("I brought Coralia the fruits she needed for her hat and she restored it to its old radiance.");
+        	res.add("我把水果带给了 Coralia ，她把水果恢复到刚长成的样子。");
 		}
 		return res;
 	}
@@ -161,7 +161,7 @@ public class FruitsForCoralia extends AbstractQuest {
     			new QuestNotStartedCondition(QUEST_SLOT),
     			new QuestNotInStateCondition(QUEST_SLOT, "rejected")),
     		ConversationStates.QUEST_OFFERED,
-    		"Would you be kind enough to find me some fresh fruits for my hat? I'd be ever so grateful!",
+    		"你这么好心为了我的老鼠寻找水果？我很感谢!",
     		null);
 
     	// ask for quest again after rejected
@@ -169,7 +169,7 @@ public class FruitsForCoralia extends AbstractQuest {
     		ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, "hat"),
     		new QuestInStateCondition(QUEST_SLOT, "rejected"),
     		ConversationStates.QUEST_OFFERED,
-    		"Are you willing to find me some fresh fruits for my hat yet?",
+    		"你仍在为我的老鼠找新鲜的水果吗？",
     		null);
 
     	// repeat quest
@@ -179,8 +179,8 @@ public class FruitsForCoralia extends AbstractQuest {
             	new QuestCompletedCondition(QUEST_SLOT),
             	new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
             ConversationStates.QUEST_OFFERED,
-            "I'm sorry to say that the fruits you brought for my hat aren't very fresh anymore. " +
-            "Would you be kind enough to find me some more?",
+            "我对此歉意，你给我的老鼠找的水果不新鲜了, " +
+            "你能再次为我找一些吗?",
             null);
 
     	// quest inactive
@@ -190,7 +190,7 @@ public class FruitsForCoralia extends AbstractQuest {
         		new QuestCompletedCondition(QUEST_SLOT),
         		new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
         	ConversationStates.ATTENDING,
-        	"Doesn't my hat look so fresh? I don't need any new fresh fruits for it yet, but thanks for enquiring!",
+        	"我的老鼠看起来不新鲜？我不再需要新鲜水果了。但还是谢谢你的关心!",
         	null);
 
     	// end of quest introductions
@@ -203,7 +203,7 @@ public class FruitsForCoralia extends AbstractQuest {
         		new QuestNotStartedCondition(QUEST_SLOT),
         		new QuestNotInStateCondition(QUEST_SLOT, "rejected")),
         	ConversationStates.ATTENDING,
-        	"It's a shame for you to see it all withered like this, it really needs some fresh #fruits...",
+        	"有点歉意，你看这些水果都像这个一样干了，最好还是新鲜的 #fruits...",
         	null);
 
     	// accept quest response
@@ -214,14 +214,14 @@ public class FruitsForCoralia extends AbstractQuest {
     		null,
 			new MultipleActions(
 				new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS),
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "That's wonderful! I'd like these fresh fruits: [items].")));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "太好了，我喜欢这些新鲜水果: [items].")));
 
     	// reject quest response
     	npc.add(ConversationStates.QUEST_OFFERED,
         	ConversationPhrases.NO_MESSAGES,
         	null,
         	ConversationStates.ATTENDING,
-        	"These exotic hats don't keep themselves you know...",
+        	"这些外来的老鼠不给管好自已，你明白的...",
         	new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
     	// meet again during quest
@@ -231,7 +231,7 @@ public class FruitsForCoralia extends AbstractQuest {
 				new QuestActiveCondition(QUEST_SLOT),
 				new GreetingMatchesNameCondition(npc.getName())),
 			ConversationStates.ATTENDING,
-			"Hello again. If you've brought me some fresh fruits for my #hat, I'll happily take them!",
+			"欢迎回来，如果你给我的老鼠 #hat 带来了新鲜水果，我会乐意接受。!",
 			null);
 
 
@@ -241,49 +241,49 @@ public class FruitsForCoralia extends AbstractQuest {
         	"apple",
         	new QuestActiveCondition(QUEST_SLOT),
         	ConversationStates.QUESTION_1,
-        	"Glowing, radiant apples! The ones I have just now came from somewhere east of Semos.",
+        	"好红, 好亮的苹果! 这是我刚从Semos东边拿到的.",
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
             "banana",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "There's one particularly exotic island with bananas.. Keep west, though - lets just say the bananas aren't meaty or fleshy enough for those in the east.",
+            "来自小岛的格外异域风情香蕉。一直往西走，穿过。。还是说香蕉的事吧，它肉多且够新鲜.",
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
         	"cherry",
         	new QuestActiveCondition(QUEST_SLOT),
         	ConversationStates.QUESTION_1,
-        	"There's an old lady in Fado who sells the most beautifully vibrant cherries.",
+        	"Fado 的一位老妇销售一些漂亮的樱桃 cherries.",
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
             "grapes",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "There's a beautiful little temple in the mountains north of Semos that's covered in grape vines!  I've also heard of some by an old house in Or'ril mountains.",
+            "There's a beautiful little temple in the mountains north of Semos北面的山上有一个漂亮的神庙，上面爬满了葡萄藤 grapes!  还听说 Or'ril山上有些旧房子.",
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
         	"pear",
         	new QuestActiveCondition(QUEST_SLOT),
         	ConversationStates.QUESTION_1,
-        	"I think I saw some pear trees in the northern mountains near a beautiful waterfall.",
+        	"在北方山上有个漂亮的瀑布，我看到过那里有梨树 pear .",
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
             "watermelon",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "One of the huge watermelons from Kalavan gardens would make a nice new centrepiece for my hat.",
+            "Kalavan 花园里有一个大西瓜 watermelons ，可以给我的老鼠做成漂亮的装饰",
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
             "pomegranate",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "I've never seen pomegranate trees growing wild, but I heard of a man living south of the great river cultivating them in his garden.",
+            "我没见过长在野外的石榴树pomegranate ，但我听说一个住在南方大河的人在自家花园里种它们.",
             null);
     }
 
@@ -297,7 +297,7 @@ public class FruitsForCoralia extends AbstractQuest {
     		new QuestActiveCondition(QUEST_SLOT),
     		ConversationStates.QUESTION_2,
     		null,
-    		new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I'd still like [items]. Have you brought any?"));
+    		new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我还喜欢 [items]. 你带的有吗?"));
 
     	// player says he didn't bring any items
 		npc.add(ConversationStates.QUESTION_2,
@@ -318,7 +318,7 @@ public class FruitsForCoralia extends AbstractQuest {
 		// set up next step
     	ChatAction completeAction = new  MultipleActions(
 			new SetQuestAction(QUEST_SLOT, "done"),
-			new SayTextAction("My hat has never looked so delightful! Thank you ever so much! Here, take this as a reward."),
+			new SayTextAction("我的老鼠从未如此可爱! 非常感谢! 请收下这些回报"),
 			new IncreaseXPAction(300),
 			new IncreaseKarmaAction(5),
 			new EquipRandomAmountOfItemAction("crepes suzette", 1, 5),
@@ -337,7 +337,7 @@ public class FruitsForCoralia extends AbstractQuest {
     			null,
     			new CollectRequestedItemsAction(item.getKey(),
     				QUEST_SLOT,
-    				"Wonderful! Did you bring anything else with you?", "I already have enough of those.",
+    				"太棒了! 你又带了什么好东西吗?", "这些我已经够多了.",
     				completeAction,
     				ConversationStates.ATTENDING));
     	}

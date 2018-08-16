@@ -11,7 +11,7 @@
  ***************************************************************************/
 package games.stendhal.server.maps.quests.logic;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * Container for a collectible item. Holds information about the initial
@@ -119,7 +119,7 @@ public class ItemCollectorData implements ItemCollectorSetters {
 	 * @see #bySaying(String)
 	 */
 	public String getAnswer() {
-		String neededItems = Grammar.quantityplnoun(stillNeededAmount, itemName, "a");
+		String neededItems =  itemName;
 		return String.format(message, neededItems);
 	}
 }

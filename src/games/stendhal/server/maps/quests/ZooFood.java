@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
@@ -101,9 +101,9 @@ public class ZooFood extends AbstractQuest {
 			String questItem = player.getRequiredItemName(QUEST_SLOT,1);
 			int amount = player.getRequiredItemQuantity(QUEST_SLOT,1);
 			if (!player.isEquipped(questItem, amount)) {
-				res.add(String.format("I have been asked to fetch " +Grammar.quantityplnoun(amount, questItem, "a") + " for the animals."));
+				res.add(String.format("I have been asked to fetch " +amount + questItem + " for the animals."));
 			} else {
-				res.add(String.format("I have " +Grammar.quantityplnoun(amount, questItem, "a") + " to feed the animals, and need to take it."));
+				res.add(String.format("I have " +amount + questItem + " to feed the animals, and need to take it."));
 			}
 		}
 		if (isCompleted(player)) {
@@ -213,7 +213,7 @@ public class ZooFood extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, "start")),
 				ConversationStates.QUEST_ITEM_BROUGHT,
 				"Welcome back! Have you brought the "
-						+ Grammar.quantityplnoun(REQUIRED_HAM, "ham", "") + "?",
+						+ REQUIRED_HAM + "ham" + "?",
 			new SetQuestAction(QUEST_SLOT,"start;ham=10"));
 
 		// player returns while quest is active

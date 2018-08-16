@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.StackableItem;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -66,9 +66,9 @@ public class ToysCollector extends AbstractQuest implements
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
 			if (!"done".equals(questState)) {
-				res.add("Anna wants some toys and I need to think about what might make a little girl happy!");
+				res.add("Anna 想要一些玩具，我需要怎么能哄那个小女孩开心!");
 			} else {
-				res.add("I got some fun toys for Anna, Jens and George to play with.");
+				res.add("我拿到一个有趣的玩具给 Anna, Jens 和 George 玩.");
 			}
 			return res;
 	}
@@ -83,7 +83,7 @@ public class ToysCollector extends AbstractQuest implements
 	public void addToWorld() {
 		fillQuestInfo(
 				"Toys Collector",
-				"Anna is bored, and searches for toys for her and her friends to play with.",
+				"Anna 很无聊，找一些玩具和她一起玩.",
 				false);
 		setupAbstractQuest();
 		specialStuff();
@@ -95,7 +95,7 @@ public class ToysCollector extends AbstractQuest implements
 				ConversationPhrases.NO_MESSAGES,
 				new QuestNotCompletedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
-				"Then you should go away before I get in trouble for talking to you. Bye.",
+				"你应该在我和你说话引来麻烦之前离开这里. 再见.",
 				null);
 	}
 
@@ -131,17 +131,17 @@ public class ToysCollector extends AbstractQuest implements
 
 	@Override
 	public String welcomeBeforeStartingQuest() {
-		return "Mummy said, we are not allowed to talk to strangers. But I'm bored. I want some #toys!";
+		return "妈妈说，我们不许和陌生人说话，但我很无聊，我想要玩具 #toys!";
 	}
 
 	@Override
 	public String welcomeDuringActiveQuest() {
-		return "Hello! I'm still bored. Did you bring me toys?";
+		return "Hello! 我还是无聊，你把玩具带来了吗?";
 	}
 
 	@Override
 	public String welcomeAfterQuestIsCompleted() {
-		return "Hi! I'm busy playing with my toys, no grown ups allowed.";
+		return "Hi! 我正和我的玩具玩，没有大人的份";
 	}
 
 	@Override
@@ -151,53 +151,53 @@ public class ToysCollector extends AbstractQuest implements
 
 	@Override
 	public String respondToQuest() {
-		return "I'm not sure what toys, but whatever would be fun for me to play with! Will you bring me some please?";
+		return "我不确定什么玩具，但不管什么好玩的，你都可以带给我,好吗";
 	}
 
 	@Override
 	public String respondToQuestAfterItHasAlreadyBeenCompleted() {
-		return "The toys are great! Thanks!";
+		return "这个玩具太好了，谢谢";
 	}
 
 	@Override
 	public String respondToQuestAcception() {
-		return "Hooray! How exciting. See you soon.";
+		return "Hooray! 太激动了. 再见";
 	}
 
 	@Override
 	public String respondToQuestRefusal() {
-		return "Oh ... you're mean.";
+		return "Oh ... 你真卑鄙.";
 	}
 
 	// not used
 	@Override
 	public String firstAskForMissingItems(final List<String> missingItems) {
-		return "I'm not sure what toys, but whatever would be fun for me to play with! Will you bring me some please?";
+		return "我不确定什么玩具，但不管什么好玩的东西，都请你把它带给我，好吗？";
 	}
 
 	@Override
 	public String askForMissingItems(final List<String> missingItems) {
-		return "What toys did you bring?";
+		return "你带来的是什么玩具?";
 	}
 
 	@Override
 	public String respondToPlayerSayingHeHasNoItems(final List<String> missingItems) {
-		return "Okay then. Come back later.";
+		return "Okay 一会回来..";
 	}
 
 	@Override
 	public String askForItemsAfterPlayerSaidHeHasItems() {
-		return "What did you bring?!";
+		return "你带来的是什么玩具?";
 	}
 
 	@Override
 	public String respondToItemBrought() {
-		return "Thank you very much! What else did you bring?";
+		return "谢谢! 你还带了别的玩具吗?";
 	}
 
 	@Override
 	public String respondToLastItemBrought() {
-		return "These toys will keep me happy for ages! Please take these pies. Arlindo baked them for us but I think you should have them.";
+		return "这些玩具让我很开心，请拿这个 pies . Arlindo 给我们烤的，但我觉得你应该有了.";
 	}
 
 	@Override
@@ -212,18 +212,18 @@ public class ToysCollector extends AbstractQuest implements
 
 	@Override
 	public String respondToOfferOfNotExistingItem(final String itemName) {
-		return "Hey! It's bad to lie! You don't have "
-				+ Grammar.a_noun(itemName) + " with you.";
+		return "Hey! 说谎不好! 你根本没有 "
+				+ itemName + " 。";
 	}
 
 	@Override
 	public String respondToOfferOfNotMissingItem() {
-		return "I already have that toy!";
+		return "我已经有了一个!";
 	}
 
 	@Override
 	public String respondToOfferOfNotNeededItem() {
-		return "That's not a good toy!";
+		return "这不是好玩具!";
 	}
 
 	@Override

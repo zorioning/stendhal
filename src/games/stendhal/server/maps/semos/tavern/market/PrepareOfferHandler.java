@@ -12,7 +12,7 @@
  ***************************************************************************/
 package games.stendhal.server.maps.semos.tavern.market;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Expression;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.dbcommand.LogTradeEventCommand;
@@ -71,7 +71,7 @@ public class PrepareOfferHandler {
 	public String buildTweetMessage(Item i, int q, int p) {
 		StringBuilder message = new StringBuilder();
 		message.append("New offer for ");
-		message.append(Grammar.quantityplnoun(q, i.getName(), "a"));
+		message.append( i.getName());
 		message.append(" at ");
 		message.append(p);
 		message.append(" money. ");
@@ -111,12 +111,12 @@ public class PrepareOfferHandler {
 					Item item = player.getFirstEquipped(itemName);
 					if (item == null) {
 						// Some items are in plural. look for those
-						item = player.getFirstEquipped(Grammar.plural(itemName));
+						item = player.getFirstEquipped(itemName);
 					}
 
 					if (item == null) {
 						npc.say("Sorry, but I don't think you have any "
-								+ Grammar.plural(itemName)+ ".");
+								+ itemName + ".");
 						return;
 					}
 					// The item name might not be what was used for looking it up (plurals)
@@ -132,10 +132,10 @@ public class PrepareOfferHandler {
 						npc.say("That " + itemName + " is damaged. I cannot sell it.");
 						return;
 					} else if (number > 1000) {
-						npc.say("Sorry, my storage is not large enough for such a huge amout of " + Grammar.plural(itemName) + ".");
+						npc.say("Sorry, my storage is not large enough for such a huge amout of " + itemName + ".");
 						return;
 					} else if (price > 1000000) {
-						npc.say("That is a huge amount of money you want for your " + Grammar.plural(itemName) + ". I am sorry I cannot accept this offer.");
+						npc.say("That is a huge amount of money you want for your " + itemName + ". I am sorry I cannot accept this offer.");
 						return;
 					} else if (item.hasSlot("content") && item.getSlot("content").size() > 0) {
 						npc.say("Please empty your " + itemName + " first.");
@@ -152,7 +152,7 @@ public class PrepareOfferHandler {
 					setData(item, price, number);
 					StringBuilder msg = new StringBuilder();
 					msg.append("Do you want to sell ");
-					msg.append(Grammar.quantityplnoun(number, itemName, "a"));
+					msg.append( itemName);
 					msg.append(" for ");
 					if (number != 1) {
 						msg.append("total ");
@@ -199,7 +199,7 @@ public class PrepareOfferHandler {
 					npc.say("I added your offer to the trading center and took the fee of "+ fee +".");
 					npc.setCurrentState(ConversationStates.ATTENDING);
 				} else {
-					npc.say("You don't have " + Grammar.quantityplnoun(quantity, item.getName(), "a") + ".");
+					npc.say("You don't have " +  item.getName() + ".");
 				}
 				return;
 			}
@@ -229,7 +229,7 @@ public class PrepareOfferHandler {
 				message.append(price);
 				message.append(" created. ");
 				String messageNumberOfOffers = "You have now made "
-					+ Grammar.quantityplnoun(Integer.valueOf(shop.countOffersOfPlayer(player)), "offer", "one") + ".";
+					+  "offer"  + ".";
 				player.sendPrivateText(message.toString() + messageNumberOfOffers);
 				return true;
 			}

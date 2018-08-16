@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * ItemCollection is a collection of items with associated amount.
@@ -131,7 +131,8 @@ public class ItemCollection extends TreeMap<String, Integer> {
         final List<String> result = new LinkedList<String>();
 
         for (final Map.Entry<String, Integer> entry : entrySet()) {
-            result.add(Grammar.quantityplnoun(entry.getValue(), entry.getKey()));
+      //      result.add( item.getValue() + entry.getKey());
+            result.add(  entry.getKey());
         }
 
         return result;
@@ -144,7 +145,7 @@ public class ItemCollection extends TreeMap<String, Integer> {
         final List<String> result = new LinkedList<String>();
 
         for (final Map.Entry<String, Integer> item : entrySet()) {
-            result.add(Grammar.quantityplnounWithHash(item.getValue(), item.getKey()));
+            result.add(item.getValue() + item.getKey());
         }
 
         return result;

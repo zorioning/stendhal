@@ -17,7 +17,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.dbcommand.StoreMessageCommand;
 import games.stendhal.server.core.events.TurnListener;
 import games.stendhal.server.core.events.TurnNotifier;
@@ -119,16 +119,16 @@ public class OfferExpirer implements TurnListener{
 		for (Offer offer : list) {
 			market.expireOffer(offer);
 			StringBuilder builder = new StringBuilder();
-			builder.append("Your offer of ");
-			String itemname = "unknown item";
+			builder.append("你供应的 ");
+			String itemname = " 不存在";
 			if (offer.hasItem()) {
 				itemname = offer.getItem().getName();
 			}
-			builder.append(Grammar.a_noun(itemname));
-			builder.append(" has expired. You have ");
+			builder.append(itemname);
+			builder.append(" 已到期. 你还有 ");
 			builder.append(TimeUtil.approxTimeUntil((int) (offer.getTimestamp()
 					- System.currentTimeMillis()) / 1000 + TIME_TO_REMOVING));
-			builder.append(" left to get the item back or prolong the offer.");
+			builder.append(" 剩余的商品可以取回，或重新续期上架.");
 			sendMessage(offer.getOfferer(), builder);
 		}
 	}
@@ -142,9 +142,9 @@ public class OfferExpirer implements TurnListener{
 		for (Offer offer : list) {
 			market.removeExpiredOffer(offer);
 			StringBuilder builder = new StringBuilder();
-			builder.append("Your offer of ");
-			builder.append(Grammar.a_noun(offer.getItemName()));
-			builder.append(" has been removed permanently from the market.");
+			builder.append("你供应的 ");
+			builder.append(offer.getItemName());
+			builder.append(" 已从市场永久下架.");
 			sendMessage(offer.getOfferer(), builder);
 		}
 	}
@@ -166,9 +166,9 @@ public class OfferExpirer implements TurnListener{
 			}
 
 			StringBuilder builder = new StringBuilder();
-			builder.append("Your offer of ");
-			builder.append(Grammar.a_noun(offer.getItemName()));
-			builder.append(" will expire in ");
+			builder.append("你供应的 ");
+			builder.append(offer.getItemName());
+			builder.append(" 到期时间在 ");
 			builder.append(TimeUtil.approxTimeUntil((int) ((offer.getTimestamp() - time) / 1000 + TIME_TO_EXPIRING)));
 			builder.append(".");
 			sendMessage(offer.getOfferer(), builder);
@@ -187,9 +187,9 @@ public class OfferExpirer implements TurnListener{
 		List<Earning> list = market.getEarningsOlderThan(TIME_TO_REMOVING_EARNINGS);
 		for (Earning earning : list) {
 			StringBuilder builder = new StringBuilder();
-			builder.append("Your earning of ");
+			builder.append("你赚的 ");
 			builder.append(earning.getValue());
-			builder.append(" money has expired and can no longer be collected.");
+			builder.append(" 钱已过期，不能再被取走了.");
 			sendMessage(earning.getSeller(), builder);
 		}
 

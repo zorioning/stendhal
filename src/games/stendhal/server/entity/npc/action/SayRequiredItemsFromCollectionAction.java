@@ -19,7 +19,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.annotations.Dev;
 import games.stendhal.server.core.config.annotations.Dev.Category;
@@ -78,7 +78,7 @@ public class SayRequiredItemsFromCollectionAction implements ChatAction {
 			return;
 		} else {
 			Map<String, String> substitutes = new HashMap<String, String>();
-			substitutes.put("items", Grammar.enumerateCollection(getMissingItems(player).toStringListWithHash()));
+			substitutes.put("items", getMissingItems(player).toStringListWithHash().toString());
 
 			raiser.say(StringUtils.substitute(message,substitutes));
 		}

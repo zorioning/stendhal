@@ -15,7 +15,7 @@ package games.stendhal.server.maps.semos.bank;
 import java.awt.geom.Rectangle2D;
 import java.util.Set;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.ItemLogger;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -102,8 +102,8 @@ public class Vault extends StendhalRPZone {
 						boolean equippedToBag = player.equip("bag", item);
 						if (equippedToBag) {
 
-							message = Grammar.quantityplnoun(item.getQuantity(), item.getName(), "A")
-												+ " which you left on the floor in the vault "+ Grammar.hashave(item.getQuantity())+" been automatically "
+							message = item.getName()
+												+ " which you left on the floor in the vault "+ "have been automatically "
 												+ "returned to your bag.";
 
 							new GameEvent(player.getName(), "equip", item.getName(), "vault", "bag", Integer.toString(item.getQuantity())).raise();
@@ -112,8 +112,8 @@ public class Vault extends StendhalRPZone {
 						} else {
 							boolean equippedToBank = player.equip("bank", item);
 							if (equippedToBank) {
-								message =  Grammar.quantityplnoun(item.getQuantity(), item.getName(), "A")
-								+ " which you left on the floor in the vault "+ Grammar.hashave(item.getQuantity())+" been automatically "
+								message =  item.getName()
+								+ " which you left on the floor in the vault "+ " have  been automatically "
 								+ "returned to your bank chest.";
 
 								new GameEvent(player.getName(), "equip", item.getName(), "vault", "bank", Integer.toString(item.getQuantity())).raise();
@@ -121,8 +121,8 @@ public class Vault extends StendhalRPZone {
 								new ItemLogger().equipAction(player, item, new String[] {"ground", zone.getName(), item.getX() + " " + item.getY()}, new String[] {"slot", "a bank chest", "content"});
 							} else {
 								// the player lost their items
-								message = Grammar.quantityplnoun(item.getQuantity(), item.getName(), "A")
-													+ " which you left on the floor in the vault "+ Grammar.hashave(item.getQuantity())+" been thrown into "
+								message = item.getName()
+													+ " which you left on the floor in the vault "+ " have been thrown into "
 													+ "the void, because there was no space to fit them into either your "
 													+ "bank chest or your bag.";
 

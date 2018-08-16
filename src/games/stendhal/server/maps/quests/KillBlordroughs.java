@@ -20,7 +20,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.rule.EntityManager;
@@ -265,7 +265,7 @@ import games.stendhal.server.util.TimeUtil;
 				}
 				if(killed < killsnumber) {
 					// player killed less then needed soldiers.
-					npc.say("You killed only "+killed+" blordrough "+Grammar.plnoun(killed, "soldier")+".");
+					npc.say("You killed only "+killed+" blordrough " + "soldier"+".");
 					return;
 				}
 				if(killed == killsnumber) {
@@ -274,7 +274,7 @@ import games.stendhal.server.util.TimeUtil;
 				} else {
 					// player killed more then needed soldiers
 					npc.say("Pretty good! You killed "+(killed-killsnumber)+" extra "+
-							Grammar.plnoun(killed-killsnumber, "soldier")+"! Take this moneys, and remember, i may wish you to do this job again in one week!");
+							 "soldier"+"! Take this moneys, and remember, i may wish you to do this job again in one week!");
 				}
 				rewardPlayer(player, killed);
 			} else {

@@ -19,7 +19,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
@@ -117,46 +117,46 @@ public class SadScientist extends AbstractQuest {
 		final String questState = player.getQuest(QUEST_SLOT);
 		// it might have been rejected before Vasi even explained what he wanted.
 		if ("rejected".equals(questState)) {
-			res.add("Vasi Elos asked me for help, but I'm not really interested to help the scientist.");
+			res.add("Vasi Elos 向你求助，但我没有兴趣帮助这个科学字");
 			return res;
 		}
-		res.add("Vasi Elos asked me bring gems, gold and mithril to make a present of jewelled legs for his honey, Vera.");
+		res.add("Vasi Elos 让我带些宝石、黄金和密银，要为他的情人 Vera 制造一只宝石腿。");
 		if (getConditionForBeingInCollectionPhase().fire(player,null,null)) {
 			final ItemCollection missingItems = new ItemCollection();
 			missingItems.addFromQuestStateString(questState);
-			res.add("The jewelled legs still need " + Grammar.enumerateCollection(missingItems.toStringList()) + ".");
+			res.add("宝石腿还需要 " + missingItems.toStringList() + ".");
 			return res;
 		}
-		res.add("Vasi Elos needs a base to add those gems I brought, to. He asked for shadow legs.");
+		res.add("Vasi Elos 需要一个基座 影子腿 shadow legs, 好把这些珠宝镶到上面");
 		if ("legs".equals(questState)) {
 			return res;
 		}
-		res.add("Vasi Elos is making jewelled legs with the gems I brought.");
+		res.add("Vasi Elos 正在用这些宝石制作宝石腿.");
 		if (questState.startsWith("making")) {
 			return res;
 		}
-		res.add("Vasi Elos asked me to speak to Mayor Sakhs to find out where Vera is.");
+		res.add("Vasi Elos 让我找 Mayor Sakhs 寻问找出 Vera 在哪.");
 		if ("find_vera".equals(questState) && !player.isEquipped("note")) {
 			return res;
 		}
-		res.add("I have a note with some terrible news on it to give Vasi.");
+		res.add("我有一张信条，记录着一些可怕的事, 要把它送给 Vasi.");
 		if ("find_vera".equals(questState) && player.isEquipped("note")) {
 			return res;
 		}
-		res.add("Vasi Elos is so sad and angry that Vera is gone. I must kill his own brother and give him a goblet of blood.");
+		res.add("Vera的离开让Vasi Elos 非常伤心愤怒，我必须新旧他的亲哥哥，并把一杯鲜血带给他.");
 		if (questState.startsWith("kill_scientist") && !new KilledForQuestCondition(QUEST_SLOT, 1).fire(player, null, null)) {
 			return res;
 		}
-		res.add("I killed the Imperial Scientist Sergej Elos and must take the goblet of his blood as proof.");
+		res.add("我杀了帝国科学家 Imperial Scientist Sergej Elos ,并且取了一杯鲜血作为证据");
 		if (questState.startsWith("kill_scientist") && new KilledForQuestCondition(QUEST_SLOT, 1).fire(player, null, null)) {
 			return res;
 		}
-		res.add("Vasi Elos is really sad. He's decorating the legs he made...with blood.");
+		res.add("Vasi Elos 非常伤心，他用鲜血倒在宝石腿上.");
 		if (questState.startsWith("decorating")) {
 			return res;
 		}
-		res.add("The new legs, now black legs, darkened with blood and evil, are mine. " +
-				"But at what cost?");
+		res.add("那个腿，现在变成黑色的腿，带着血和诅咒的乌黑的腿，现属于我. " +
+				"但要不惜一切代价?");
         if ("done".equals(questState)){
         	return res;
 		}
@@ -174,7 +174,7 @@ public class SadScientist extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"A Sad Scientist",
-				"Vasi Elos, a lonely scientist, wants to deliver a present to his honey.",
+				"Vasi Elos, 一个孤独的科学家，想给他的情人送一件特别的礼物.",
 				false);
 		prepareQuestSteps();
 	}
@@ -217,7 +217,7 @@ public class SadScientist extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				condition,
 				ConversationStates.IDLE,
-				"Here are the black legs. Now I beg you to wear them. The symbol of my pain is done. Fare thee well.",
+				"这是黑色之腿. 现在我求你穿上它,它象征着我的痛苦，价钱好说",
 				action);
 
 		// time has not yet passed
@@ -225,8 +225,8 @@ public class SadScientist extends AbstractQuest {
 				new QuestStateStartsWithCondition(QUEST_SLOT,"decorating"),
 				new NotCondition( new TimePassedCondition(QUEST_SLOT, 1, 5))
 			);
-		ChatAction reply = new SayTimeRemainingAction(QUEST_SLOT, 1, 5, "I did not finish decorating the legs. " +
-						"Please check back in");
+		ChatAction reply = new SayTimeRemainingAction(QUEST_SLOT, 1, 5, "我还没装饰完这个腿 " +
+						"请回头再来");
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				notCondition,
@@ -249,13 +249,13 @@ public class SadScientist extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()), condition),
 				ConversationStates.ATTENDING,
-				"Ha, ha, ha! I will cover those jewelled legs with this blood and they will transform " +
-				"into a #symbol of pain.",
+				"哈，哈，哈！我会把这些珠宝镶在这个腿上，然后用这些鲜血，它们就会转化为 " +
+				"痛苦的符号 #symbol ",
 				null);
 
 		npc.add(ConversationStates.ATTENDING, "symbol",
 				condition, ConversationStates.IDLE,
-				"I am going to create a pair of black legs. Come back in 5 minutes.",
+				"我正去创造一双黑色之腿。请在5分钟后再来",
 				action);
 	}
 
@@ -272,7 +272,7 @@ public class SadScientist extends AbstractQuest {
 			);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				condition, ConversationStates.IDLE,
-				"I am only in pain. Kill my brother and bring me his blood. It's all I want now.",
+				"我现在只有痛苦，杀了我哥哥，把他的血带过来，我现在只想要这些!",
 				null);
 	}
 
@@ -290,15 +290,15 @@ public class SadScientist extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()), condition),
 				ConversationStates.INFORMATION_2,
-				"Hello! Do you have anything for me?",
+				"Hello! 你给我带了什么东西吗?",
 				null);
 
 		npc.add(ConversationStates.INFORMATION_2, Arrays.asList("letter", "yes", "note"),
 				condition,
 				ConversationStates.ATTENDING,
-				"Oh no! I feel the pain. I do not need to create those beautiful jewelled legs now. " +
-				"I want to transform them. I want to make them a symbol of pain. You! Go kill my brother, " +
-				"the Imperial Scientist Sergej Elos. Give me his blood.",
+				"Oh 不要! 我感到很痛苦，我不再需要创造这些美丽的宝石腿了. " +
+				"我想转变它，我要把它做成痛苦的标志。你！去杀了我哥哥 " +
+				"帝国科学家 Sergej Elos. 把他的血带给我.",
 				action);
 
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.GOODBYE_MESSAGES,
@@ -316,7 +316,7 @@ public class SadScientist extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				condition,
 				ConversationStates.IDLE,
-				"Please ask Mayor Sakhs about my wife Vera.",
+				"问问 Mayor Sakhs 我的妻子 Vera 的近况.",
 				null);
 	}
 
@@ -334,12 +334,12 @@ public class SadScientist extends AbstractQuest {
 		npc.add(ConversationStates.ATTENDING, "Vera",
 				new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
 				ConversationStates.ATTENDING,
-				"What? How do you know her? Well it is a sad story." +
-				" She was picking arandula for Ilisa (they were friends)" +
-				" and she saw the catacombs entrance. 3 months later a" +
-				" young hero saw her, and she was a vampirette. What a" +
-				" sad story. I kept this for her husband. A letter. " +
-				"I think he is in Kalavan." ,
+				"什么? 你怎么知道她? 好吧，这是个悲伤的故事." +
+				" 她正给她的朋友Ilisa挑选arandula,她看见一个地窖的入口，" +
+				" 3个月后，一个年轻的英雄看到她成了吸血鬼。" +
+				" 多么悲伤的故事。" +
+				" 我把这封信留给她丈夫，" +
+				" 我想他还呆在 Kalavan." ,
 				action);
 	}
 
@@ -352,15 +352,15 @@ public class SadScientist extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()), condition),
 				ConversationStates.INFORMATION_1,
-				"I finished the legs. But I cannot trust you. Before I give the" +
-				" jewelled legs to you, I need a message from my darling. Ask Mayor" +
-				" Sakhs for Vera. Can you do that for me?",
+				"我完成了腿的工作。但我不想信你，在我把珠宝腿给你之前" +
+				" 我需要给我的爱人送封信。" +
+				" 问问 Mayor Sakhs ，Vera 怎么样了. 你能做到吗?",
 				null);
 
 		npc.add(ConversationStates.INFORMATION_1, ConversationPhrases.YES_MESSAGES,
 				condition,
 				ConversationStates.IDLE,
-				"Oh, thank you. I am waiting.",
+				"Oh, 谢谢, 我等着你.",
 				action);
 
 		npc.add(ConversationStates.INFORMATION_1, ConversationPhrases.NO_MESSAGES,
@@ -379,8 +379,8 @@ public class SadScientist extends AbstractQuest {
 				condition,
 				ConversationStates.IDLE,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "Do you think I can work that fast? Go away. " +
-								"Come back in"));
+				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "你觉得我的工作很轻松? 出去. " +
+								"一会再回来"));
 	}
 
 	private void bringItemsPhase(final SpeakerNPC npc) {
@@ -392,7 +392,7 @@ public class SadScientist extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						itemPhaseCondition),
 				ConversationStates.QUESTION_1,
-				"Hello. Do you have any #items I need for the jewelled legs?",
+				"Hello. 你有我制作宝石腿需要的东西 #items 吗？",
 				null);
 
 		//player asks for items
@@ -400,20 +400,20 @@ public class SadScientist extends AbstractQuest {
 				itemPhaseCondition,
 				ConversationStates.QUESTION_1,
 				null,
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Please return when you have anything I need for the jewelled legs. I need [items]."));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "当你有了我制作宝石腿所需要的材料时再来。我需要以下材料 [items]."));
 
 		//player says no
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.NO_MESSAGES,
 				itemPhaseCondition,
 				ConversationStates.IDLE,
-				"What a wasteful child.",
+				"真是个败家子.",
 				null);
 
 		//player says yes
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.YES_MESSAGES,
 				itemPhaseCondition,
 				ConversationStates.QUESTION_1,
-				"Fine! So what did you bring with you?",
+				"不错! 你带了些什么过来?",
 				null);
 
 		//add transition for each item
@@ -424,12 +424,12 @@ public class SadScientist extends AbstractQuest {
 					ConversationStates.QUESTION_1, null,
 					new CollectRequestedItemsAction(
 							item.getKey(), QUEST_SLOT,
-							"Good, do you have anything else?",
-							"You have already brought that!",
+							"很好, 你还有其它什么东西?",
+							"你已经给过这些东西了!",
 							new MultipleActions(
 									new SetQuestAction(QUEST_SLOT,"legs"),
-									new SayTextAction("I am a stupid fool too much in love with my wife Vera to remember, of course these legs also need a base to add " +
-											"the jewels to. Please return with a pair of shadow legs. Bye.")), ConversationStates.IDLE
+									new SayTextAction("我是一个十足的大傻瓜，我要我的妻子记住我的爱。当然这些腿也需要些珠宝镶上 " +
+											". 请下次带来一对影之腿 shadow legs. 再见.")), ConversationStates.IDLE
 							));
 		}
 	}
@@ -470,7 +470,7 @@ public class SadScientist extends AbstractQuest {
 	npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			nolegscondition,
 			ConversationStates.IDLE,
-			"Hello again. Please return when you have the shadow legs, a base for me to add jewels to make jewelled legs for Vera.",
+			"又见面了. 请你有了 shadow legs 影之腿后再来吧, 我要为 vera 把珠宝镶到这个基座上。",
 			null);
 
 	//player returns with legs
@@ -485,8 +485,8 @@ public class SadScientist extends AbstractQuest {
 	npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			legscondition,
 			ConversationStates.IDLE,
-			"The shadow legs! Wonderful! I will start my work. I can do this in very little time with the help of technology! " +
-			"Please come back in 20 minutes.",
+			"影之腿! 太好了！我马上开始工作。我用科技的帮助做这些只用花很少时间。! " +
+			"请在 20 分钟后回来.",
 			action);
 	}
 
@@ -496,22 +496,22 @@ public class SadScientist extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"Go away!",null);
+				"出去!",null);
 
 		//offer the quest
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"So...looks like you want to help me?",null);
+				"所以...看起来你想帮助我?",null);
 
 		//accept the quest
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.QUEST_STARTED,
-				"My wife is living in Semos City. She loves gems. Can you bring me some #gems that I need to make a " +
-				"pair of precious #legs?" ,
+				"我妻子住在 Semos 城. 她喜爱宝石. 你能给我带些宝石 #gems 吗?" +
+				",我要做一件特别的腿 #legs?" ,
 				null);
 
 		// #gems
@@ -519,8 +519,8 @@ public class SadScientist extends AbstractQuest {
 				Arrays.asList("gem","gems"),
 				null,
 				ConversationStates.QUEST_STARTED,
-				"I need an emerald, an obsidian, a sapphire, 2 carbuncles, 20 gold bars and one mithril bar." +
-				" Can you do that for my wife?",
+				"我需要一个 emerald, 一个 obsidian, 一个 sapphire, 两个 carbuncles, 20 枚金条 和一个  mithril 条." +
+				" 你能为了我妻子弄到这些吗?",
 				null);
 
 		// #legs
@@ -528,8 +528,8 @@ public class SadScientist extends AbstractQuest {
 				Arrays.asList("leg","legs"),
 				null,
 				ConversationStates.QUEST_STARTED,
-				"Jewelled legs. I need an emerald, an obsidian, a sapphire, 2 carbuncles, 20 gold bars and one mithril bar." +
-				" Can you do that for my wife? Can you bring what I need?",
+				"宝石腿，我需要一个 emerald, 一个 obsidian, 一个 sapphire, 两个 carbuncles, 20 枚金条 和一个  mithril 条." +
+				" 你能为了我妻子弄到这些吗?",
 				null);
 
 		//yes, no after start of quest
@@ -537,14 +537,14 @@ public class SadScientist extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"I am waiting, Semos man." ,
+				"我等着你, Semos 来的." ,
 				new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS));
 
 		npc.add(ConversationStates.QUEST_STARTED,
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.QUEST_STARTED,
-				"Go away before I kill you!" ,
+				"在我杀掉你之前快滚开!" ,
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -10.0));
 
 		//reject the quest
@@ -552,7 +552,7 @@ public class SadScientist extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"If you change your mind please ask me again..." ,
+				"如果你改变主意，再来问我..." ,
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -10.0));
 	}
 

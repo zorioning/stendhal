@@ -22,7 +22,7 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.StackableItem;
@@ -178,7 +178,7 @@ public class KoboldishTorcibud extends AbstractQuest {
              */
             missingItems.addFromQuestStateString(player.getQuest(QUEST_SLOT));
             res.add("I'm helping her replenish her stock of supplies for preparing her Koboldish Torcibud."
-                + " I still have to bring her " + Grammar.enumerateCollection(missingItems.toStringList()));
+                + " I still have to bring her " + missingItems.toStringList());
         }
 
         return res;

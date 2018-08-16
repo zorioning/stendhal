@@ -21,7 +21,7 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.StackableItem;
@@ -79,7 +79,7 @@ import marauroa.common.Pair;
  public class KillEnemyArmy extends AbstractQuest {
 
 	private static final String QUEST_NPC = "Despot Halb Errvl";
-	private static final String QUEST_SLOT = "kill_enemy_army";
+	private static final String QUEST_SLOT = "杀死敌军";
 	private static final int delay = MathHelper.MINUTES_IN_ONE_WEEK;
 
 	protected HashMap<String, Pair<Integer, String>> enemyForces = new HashMap<String, Pair<Integer,String>>();
@@ -92,9 +92,9 @@ import marauroa.common.Pair;
 		super();
 		// fill monster types map
 		enemyForces.put("blordrough",
-				new Pair<Integer, String>(50,"Blordrough warriors now live in the Ados tunnels. They are extremely strong in battle, that is why Blordrough captured part of Deniran's territory."));
+				new Pair<Integer, String>(50,"Blordrough warriors 现在驻扎在 Ados 地下通道. 他们在战斗中十分强悍，这是 Blordrough 能占领 Deniran 的领土的原因。"));
 		enemyForces.put("madaram",
-				new Pair<Integer, String>(100,"Their forces are somewhere under Fado. They are hideous."));
+				new Pair<Integer, String>(100,"他们的攻事建在了Fado 的地下，他们真是丑恶."));
 		enemyForces.put("dark elf",
 				new Pair<Integer, String>(100,"Drows, or dark elves as they are commonly called, can be found under Nalwor. They use poison in battles, gathering it from different poisonous creatures."));
 		enemyForces.put("chaos",
@@ -304,10 +304,10 @@ import marauroa.common.Pair;
 		@Override
 		public void fire(final Player player, final Sentence sentence, final EventRaiser speakerNPC) {
 			final String monstersType = chooseRandomEnemys();
-			speakerNPC.say("I need help to defeat #enemy " + monstersType +
-					" armies. They are a grave concern. Kill at least " + enemyForces.get(monstersType).first()+
-					" of any "+ monstersType +
-					" soldiers and I will reward you.");
+			speakerNPC.say("我需要帮助，要打败敌军 #enemy " + monstersType +
+					" . 下面要发热誓. 杀掉至少 " + enemyForces.get(monstersType).first()+
+					" 的任何 "+ monstersType +
+					" soldiers ,我会奖励你。");
 			final HashMap<String, Pair<Integer, Integer>> toKill = new HashMap<String, Pair<Integer, Integer>>();
 			List<String> sortedcreatures = enemys.get(monstersType);
 			player.setQuest(QUEST_SLOT, 0, "start");
@@ -336,7 +336,7 @@ import marauroa.common.Pair;
 			} else {
 				// player killed more then needed soldiers
 				speakerNPC.say("Pretty good! You killed "+(killed-killsnumber)+" extra "+
-						Grammar.plnoun(killed-killsnumber, "soldier")+"! Take these " + moneyreward + " coins, and remember, I may wish you to do this job again in one week!");
+						 "soldier" + "! Take these " + moneyreward + " coins, and remember, I may wish you to do this job again in one week!");
 			}
 			int karmabonus = 5*(2*killed/killsnumber-1);
 			final StackableItem money = (StackableItem)
@@ -369,8 +369,8 @@ import marauroa.common.Pair;
 				}
 				if(killed < killsnumber) {
 					// player killed less then needed soldiers.
-					npc.say("You killed only "+killed+" "+Grammar.plnoun(killed, player.getQuest(QUEST_SLOT, 1))+
-							". You have to kill at least "+killsnumber+" "+Grammar.plnoun(killed, player.getQuest(QUEST_SLOT, 1)));
+					npc.say("You killed only "+killed+" "+ killed + player.getQuest(QUEST_SLOT, 1) +
+							". You have to kill at least "+killsnumber+" "+killed+  player.getQuest(QUEST_SLOT, 1));
 					return;
 				}
 
@@ -551,19 +551,19 @@ import marauroa.common.Pair;
 
 			history.add("Despot Halb Errvl asked me to kill "+
 					givenNumber+" "+
-					Grammar.plnoun(givenNumber, givenEnemies));
+					givenNumber +  givenEnemies);
 			String kn = Integer.valueOf(killedNumber).toString();
 			if(killedNumber == 0) {
 				kn="no";
 			}
-			history.add("Currently I have killed "+
-					kn+" "+
-					Grammar.plnoun(killedNumber, givenEnemies));
+			history.add("目前，你已杀了 "+
+					kn +" "+
+					killedNumber +" "+ givenEnemies);
 			if(new KilledInSumForQuestCondition(QUEST_SLOT, 2, givenNumber).fire(player, null, null)) {
-				history.add("I have killed enough creatures to get my reward now.");
+				history.add("现在我已杀了足够的生物去答复。");
 			} else {
-				history.add(givenNumber-killedNumber+" "+
-						Grammar.plnoun(givenNumber-killedNumber, givenEnemies)+" left to kill.");
+				history.add("还有" + (givenNumber-killedNumber) + " 的 "+
+						 givenEnemies + " 要杀.");
 			}
 		}
 
@@ -576,7 +576,7 @@ import marauroa.common.Pair;
 		int repetitions = player.getNumberOfRepetitions(getSlotName(), 3);
 		if (repetitions > 0) {
 			history.add("I've bloodthirstily slain "
-					+ Grammar.quantityplnoun(repetitions, "whole army") + " for Despot Halb Errvl.");
+					+ repetitions + "whole army" + " for Despot Halb Errvl.");
 		}
 		return history;
  	}

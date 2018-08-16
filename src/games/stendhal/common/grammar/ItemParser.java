@@ -69,7 +69,7 @@ public class ItemParser {
 
 		if (!found) {
 			if ((sentence.getNumeralCount() == 1)
-					&& (sentence.getUnknownTypeCount() == 0)
+//					&& (sentence.getUnknownTypeCount() == 0)
 					&& (sentence.getObjectCount() == 0)) {
 				final Expression number = sentence.getNumeral();
 
@@ -115,17 +115,18 @@ public class ItemParser {
 		Set<String> mayBeItems = res.getMayBeItems();
 
 		if (chosenItemName == null) {
-			return "Please tell me what you want to " + userAction + ".";
+			return "请告诉我你想 " + userAction + " 的.";
 		} else if (mayBeItems!=null && mayBeItems.size()>1) {
-			return "There is more than one " + chosenItemName + ". " +
-					"Please specify which sort of "
-					+ chosenItemName + " you want to " + userAction + ".";
+			return "不只有一种 " + chosenItemName + ". " +
+					"请指定用哪种 "
+					+ chosenItemName + " ，是你想 " + userAction + "的.";
 		} else if (mayBeItems!=null && !mayBeItems.isEmpty()) {
-			return "Please specify which sort of "
-					+ chosenItemName + " you want to " + userAction + ".";
+			return "请指定用哪种 "
+					+ chosenItemName + " ,是你想 " + userAction + "的.";
 		} else if (npcAction != null) {
-			return "Sorry, I don't " + npcAction + " "
-					+ Grammar.plural(chosenItemName) + ".";
+			return "抱歉, 我不 " + npcAction + " "
+					+ chosenItemName + ".";
+//					+ Grammar.plural(chosenItemName) + ".";
 		} else {
 			return null;
 		}

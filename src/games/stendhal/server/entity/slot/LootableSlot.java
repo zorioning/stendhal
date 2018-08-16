@@ -12,7 +12,7 @@
  ***************************************************************************/
 package games.stendhal.server.entity.slot;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.Entity;
 
 /**
@@ -36,7 +36,7 @@ public class LootableSlot extends EntitySlot {
 
 	@Override
 	public boolean isReachableForTakingThingsOutOfBy(final Entity entity) {
-		setErrorMessage(Grammar.makeUpperCaseWord(((Entity)getOwner()).getDescriptionName(true)) + " is too far away.");
+		setErrorMessage(((Entity)getOwner()).getDescriptionName(true) + " 离你太远.");
 		return entity.nextTo(owner);
 	}
 

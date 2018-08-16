@@ -22,7 +22,7 @@ import java.util.TreeMap;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.Direction;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.ZoneConfigurator;
@@ -186,8 +186,8 @@ public class FishermanNPC implements ZoneConfigurator {
 
 							player.equipOrPutOnGround(products);
 							npc.say("I'm done! Here you have "
-									+ Grammar.quantityplnoun(numberOfProductItems,
-											getProductName(), "the") + ".");
+									+ 
+											getProductName() + ".");
 							player.setQuest(QUEST_SLOT, "done");
 							// give some XP as a little bonus for industrious workers
 							player.addXP(numberOfProductItems);

@@ -15,7 +15,7 @@ package games.stendhal.server.entity.npc.behaviour.impl;
 
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.StackableItem;
@@ -60,20 +60,16 @@ public class BuyerBehaviour extends MerchantBehaviour {
 	public boolean transactAgreedDeal(ItemParserResult res, final EventRaiser seller, final Player player) {
 		if (player.drop(res.getChosenItemName(), res.getAmount())) {
 			payPlayer(res, player);
-			seller.say("Thanks! Here is your money.");
+			seller.say("谢谢！这是你的钱.");
 			player.incSoldForItem(res.getChosenItemName(), res.getAmount());
 			return true;
 		} else {
 			StringBuilder stringBuilder = new StringBuilder();
-			stringBuilder.append("Sorry! You don't have ");
-			if (res.getAmount() == 1) {
-				stringBuilder.append("any");
-			} else {
-				stringBuilder.append("that many");
-			}
+			stringBuilder.append("抱歉！你没有 ");
+			stringBuilder.append("任何");
 
 			stringBuilder.append(" ");
-			stringBuilder.append(Grammar.plnoun(res.getAmount(), res.getChosenItemName()));
+			stringBuilder.append(res.getAmount()+  res.getChosenItemName());
 			stringBuilder.append(".");
 			seller.say(stringBuilder.toString());
 			return false;

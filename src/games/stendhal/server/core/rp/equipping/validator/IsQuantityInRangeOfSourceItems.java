@@ -11,7 +11,7 @@
  ***************************************************************************/
 package games.stendhal.server.core.rp.equipping.validator;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.rp.equipping.EquipmentActionData;
 import games.stendhal.server.entity.Entity;
 import games.stendhal.server.entity.item.Item;
@@ -34,7 +34,7 @@ public class IsQuantityInRangeOfSourceItems implements Validator {
 
 		int sum = getSumOfSourceItems(data);
 		if (sum < quantity) {
-			data.setErrorMessage("Sorry, you don't have enough " + Grammar.plural(data.getItemName()));
+			data.setErrorMessage("抱歉，你没有足够的 " + data.getItemName());
 			return false;
 		}
 

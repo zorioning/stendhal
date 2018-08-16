@@ -15,7 +15,7 @@ package games.stendhal.server.maps.quests;
 import java.util.Arrays;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -160,18 +160,18 @@ public class WeaponsCollector extends AbstractQuest implements
 
 	@Override
 	public String askForMissingItems(final List<String> missingItems) {
-		return "There " + Grammar.isare(missingItems.size()) + " "
-				+ Grammar.quantityplnoun(missingItems.size(), "weapon", "a")
+		return "There " + missingItems.size() + " "
+				+ "weapon"
 				+ " still missing from my collection: "
-				+ Grammar.enumerateCollection(missingItems)
+				+ missingItems
 				+ ". Do you have anything of that nature with you?";
 	}
 	@Override
 	public String firstAskForMissingItems(final List<String> missingItems) {
-		return "There " + Grammar.isare(missingItems.size()) + " "
-				+ Grammar.quantityplnoun(missingItems.size(), "weapon", "a")
+		return "There " + missingItems.size() + " "
+				+ "weapon"
 				+ " missing from my collection: "
-				+ Grammar.enumerateCollection(missingItems)
+				+ missingItems
 				+ ". Will you bring them to me?";
 	}
 
@@ -179,7 +179,7 @@ public class WeaponsCollector extends AbstractQuest implements
 	@Override
 	public String respondToPlayerSayingHeHasNoItems(final List<String> missingItems) {
 		return "Let me know as soon as you find "
-				+ Grammar.itthem(missingItems.size()) + ". Farewell.";
+				+ missingItems.size() + ". Farewell.";
 	}
 
 	@Override
@@ -210,7 +210,7 @@ public class WeaponsCollector extends AbstractQuest implements
 	@Override
 	public String respondToOfferOfNotExistingItem(final String itemName) {
 		return "I may be old, but I'm not senile, and you clearly don't have "
-				+ Grammar.a_noun(itemName)
+				+ itemName
 				+ ". What do you really have for me?";
 	}
 

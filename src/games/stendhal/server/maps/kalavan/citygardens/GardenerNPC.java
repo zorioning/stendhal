@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -107,26 +107,26 @@ public class GardenerNPC implements ZoneConfigurator {
 							final long timeRemaining = (Long.parseLong(tokens[2]) + delay)
 								- System.currentTimeMillis();
 							if (timeRemaining > 0) {
-								npc.say("I'm still eating the lunch you brought me last time. It's enough to last me for another "
+								npc.say("我还在吃你上次带来的食物，这些足够吃到 "
                                         + TimeUtil.approxTimeUntil((int) (timeRemaining / 1000))
-                                        + "!");
+                                        + "的时间!");
                                 return false;
 							}
 					    }
 						if (amount > MAX_LUNCHES) {
-							npc.say("I can't take more than a week's worth of sandwiches at once! They'll go stale!");
+							npc.say("我不能一次拿起过一周的食物！它们会坏掉!");
 							return false;
 						} else if (getMaximalAmount(player) < amount) {
-							npc.say("I would only " + getProductionActivity() + " you "
-									+ Grammar.quantityplnoun(amount, getProductName(), "a")
-									+ " if you bring me "
+							npc.say("我会 " + getProductionActivity() + " 你 "
+									+ amount + getProductName()
+									+ " 如果你带给我 "
 									+ getRequiredResourceNamesWithHashes(amount) + ".");
 							return false;
 						} else {
 							res.setAmount(amount);
-							npc.say("Then I'll want "
+							npc.say("我就想要 "
 									+ getRequiredResourceNamesWithHashes(amount)
-									+ ". Did you bring that?");
+									+ ". 你带来了吗?");
 							return true;
 						}
 					}
@@ -138,7 +138,7 @@ public class GardenerNPC implements ZoneConfigurator {
 						if (getMaximalAmount(player) < amount) {
 							// The player tried to cheat us by placing the resource
 							// onto the ground after saying "yes"
-							npc.say("Hey! I'm over here! You'd better not be trying to trick me...");
+							npc.say("嗨! 我在这！你最好不要哄我...");
 							return false;
 						} else {
 							for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerItem().entrySet()) {
@@ -148,9 +148,9 @@ public class GardenerNPC implements ZoneConfigurator {
 							final long timeNow = new Date().getTime();
 							player.setQuest(QUEST_SLOT, amount + ";" + getProductName() + ";"
 											+ timeNow);
-							npc.say("Thanks! Come back in "
-									+ getApproximateRemainingTime(player) + ", and I'll have got "
-									+ Grammar.quantityplnoun(amount, getProductName(), "a") + " for you.");
+							npc.say("谢谢，在 "
+									+ getApproximateRemainingTime(player) + " 后回来, 我才能为你做好 "
+									+ amount + getProductName() + " .");
 							return true;
 						}
 					}
@@ -164,8 +164,8 @@ public class GardenerNPC implements ZoneConfigurator {
 						final long orderTime = Long.parseLong(order[2]);
 						final long timeNow = new Date().getTime();
 						if (timeNow - orderTime < getProductionTime(numberOfProductItems) * 1000) {
-							npc.say("Hello again! Oops, I still don't have your scrolls! Come back in "
-									+ getApproximateRemainingTime(player) + " to get them.");
+							npc.say("欢迎回来！Oops, 我还没做好你的卷轴，等 "
+									+ getApproximateRemainingTime(player) + " 后再回来拿.");
 						} else {
                         final StackableItem products = (StackableItem) SingletonRepository.getEntityManager().getItem(
                                         getProductName());
@@ -177,9 +177,9 @@ public class GardenerNPC implements ZoneConfigurator {
                         }
 
                         player.equipOrPutOnGround(products);
-                        npc.say("Welcome back! I've put my lunch inside ready to eat later. In exchange here you have "
-								+ Grammar.quantityplnoun(numberOfProductItems,
-                                                        getProductName(), "a") + ".");
+                        npc.say("欢迎回来！我已把我的食物放好，够吃上一段时间。作为交换，我把 "
+								+ numberOfProductItems +
+                                                        getProductName() + " 给你.");
                         // store the number of lunches given and the time so we know how long she eats for
 						player.setQuest(QUEST_SLOT, "done" + ";" + numberOfProductItems + ";"
 										+ System.currentTimeMillis());
@@ -189,18 +189,18 @@ public class GardenerNPC implements ZoneConfigurator {
 						}
 					}
 				}
-				addReply(ConversationPhrases.YES_MESSAGES, "Very warm...");
-				addReply(ConversationPhrases.NO_MESSAGES, "It's better than rain!");
-				addJob("I am the gardener. I hope you like the flowerbeds.");
-				addHelp("If you bring me some #lunch I'll #swap you for a magic scroll.");
-				addOffer("My tomatoes and garlic are doing well, I have enough that I am selling some.");
+				addReply(ConversationPhrases.YES_MESSAGES, "很烫...");
+				addReply(ConversationPhrases.NO_MESSAGES, "比下雨好多!");
+				addJob("我是个园丁。希望你喜欢这些花坛.");
+				addHelp("如果你带一些晚饭 #lunch 给我，我会拿魔法卷轴给你换 #swap .");
+				addOffer("我的西红杮和大蒜长的很好，集够了我就卖掉它.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
                 offerings.put("tomato", 30);
                 offerings.put("garlic", 50);
                 new SellerAdder().addSeller(this, new SellerBehaviour(offerings), false);
-				addReply("lunch", "Tea and a sandwich, please!");
-				addReply("sandwich", "Mmm.. I'd like a ham and cheese one.");
-				addReply(Arrays.asList("kalavan city scroll", "scroll"), "It's a magic scroll that would take you back to Kalavan. Just don't ask me how it works!");
+				addReply("lunch", "茶 Tea 和 三明治 sandwich，请用!");
+				addReply("sandwich", "Mmm.. 我喜欢汉堡和干酪一起吃.");
+				addReply(Arrays.asList("kalavan city scroll", "scroll"), "这是一个魔法卷轴，它能把你传送回 Kalavan. 不要问我它怎么工作的!");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("tea", 1);
@@ -209,17 +209,17 @@ public class GardenerNPC implements ZoneConfigurator {
 				final ProducerBehaviour behaviour = new SpecialProducerBehaviour("swap", "kalavan city scroll", requiredResources, 1 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Fine [daylightphase], isn't it?");
-				addQuest("I'd love a cup of #tea, it's thirsty work, gardening. If you bring me a #sandwich too I'll #swap you for a magic scroll.");
-				addReply(Arrays.asList("tea", "cup of tea"), "Old Granny Graham may brew you a cup. She's in that big cottage over there.");
-				addGoodbye("Bye. Enjoy the rest of the gardens.");
+				        "阳光不错 [daylightphase], 是吧?");
+				addQuest("我喜欢泡一杯茶 #tea, 园艺是个容易口渴的工作，如果你带把三明治 #sandwich 也带来，我会把这个卷轴 #swap 给你.");
+				addReply(Arrays.asList("tea", "cup of tea"), "老奶奶或许也给你倒上一杯茶，她就住在那边的大房子里.");
+				addGoodbye("再见. 欢迎来花园休息.");
 			}
 		};
 
 		npc.setEntityClass("gardenernpc");
 		npc.setPosition(100, 123);
 		npc.initHP(100);
-		npc.setDescription("You see Sue. Her flowers smell fantastic. She really has green fingers.");
+		npc.setDescription("你见到 Sue. 她的花散发出一种梦幻的香味，她的手指还真的是绿色的.");
 		zone.add(npc);
 	}
 

@@ -17,7 +17,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
@@ -71,7 +71,7 @@ public class SellerBehaviour extends MerchantBehaviour {
 
 		final Item item = getAskedItem(chosenItemName);
 		if (item == null) {
-			logger.error("Trying to sell an nonexistent item: " + chosenItemName);
+			logger.error("尝试卖一件不存在的物品: " + chosenItemName);
 			return false;
 		}
 
@@ -84,7 +84,7 @@ public class SellerBehaviour extends MerchantBehaviour {
 		}
 
 		if (amount <= 0) {
-			seller.say("Sorry, you must buy at least one item.");
+			seller.say("抱歉，你最少买一件这个商品。");
 			return false;
 		}
 
@@ -96,18 +96,18 @@ public class SellerBehaviour extends MerchantBehaviour {
 		if (player.isEquipped("money", price)) {
 			if (player.equipToInventoryOnly(item)) {
 				player.drop("money", price);
-				seller.say("Congratulations! Here "
-						+ Grammar.isare(amount) + " your "
-						+ Grammar.plnoun(amount, chosenItemName) + "!");
+				seller.say("祝贺! 这 "
+						+ amount + " 个 "
+						+ chosenItemName + " 是你的!");
 				player.incBoughtForItem(chosenItemName, amount);
 				return true;
 			} else {
-				seller.say("Sorry, but you cannot equip the "
-						+ Grammar.plnoun(amount, chosenItemName) + ".");
+				seller.say("抱歉，但你不能装备 "
+						+  chosenItemName + ".");
 				return false;
 			}
 		} else {
-			seller.say("Sorry, you don't have enough money!");
+			seller.say("抱歉，你的钱不够!");
 			return false;
 		}
 	}

@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
@@ -126,7 +126,7 @@ public class AntivenomRing extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have found the hermit apothecary's lab in Semos Mountain.");
+		res.add("在 Semos 山,我找到了隐士药济师的试验室.");
 		String quest = player.getQuest(QUEST_SLOT, 0);
 		final String[] questState = player.getQuest(QUEST_SLOT).split(",");
 		if ("done".equals(quest)) {
@@ -142,7 +142,7 @@ public class AntivenomRing extends AbstractQuest {
 			else {
 				final ItemCollection missingMixItems = new ItemCollection();
 				missingMixItems.addFromQuestStateString(questState[0]);
-				res.add("I still need to bring Jameson " + Grammar.enumerateCollection(missingMixItems.toStringList()) + ".");
+				res.add("I still need to bring Jameson " + missingMixItems.toStringList() + ".");
 			}
 
 			if (questState[1].split("=")[0] == "extracting") {
@@ -166,14 +166,14 @@ public class AntivenomRing extends AbstractQuest {
 				"apothecary",
 				null,
 				ConversationStates.ATTENDING,
-				"Hmmm, yes, I knew a man long ago who was studying medicines and antipoisons. The last I heard he was #retreating into the mountains.",
+				"Hmmm, 是的, 我知道以前有个学习药济和解毒的人. 最后我听说他隐居在深山里 #retreating .",
 				null);
 
 		hintNPC1.add(ConversationStates.ATTENDING,
 				Arrays.asList("retreat", "retreats", "retreating"),
 				null,
 				ConversationStates.ATTENDING,
-				"He's probably hiding. Keep an eye out for hidden entrances.",
+				"他可能藏起来了，眼睁大点，注意隐藏的入口",
 				null);
 
 		// Haizen is asked about an apothecary
@@ -181,14 +181,14 @@ public class AntivenomRing extends AbstractQuest {
 				"apothecary",
 				null,
 				ConversationStates.ATTENDING,
-				"Yes, there was once an estudious man in Kalavan. But, due to complications with leadership there he was forced to leave. I heard that he was #hiding somewhere in the Semos region.",
+				"是的，在 Kalavan 有个贱人. 但是,由于领导权之争，他被迫离开，听说她现在隐藏在 Semon 地区的某处 #hiding .",
 				null);
 
 		hintNPC2.add(ConversationStates.ATTENDING,
 				Arrays.asList("hide", "hides", "hiding", "hidden"),
 				null,
 				ConversationStates.ATTENDING,
-				"If I were hiding I would surely do it in a secret room with a hidden entrance.",
+				"要是我也藏起来，我一定会找一个有隐蔽入口的安全一点的房子。",
 				null);
 
 		// Ortiv Milquetoast is asked about an apothecary
@@ -196,14 +196,14 @@ public class AntivenomRing extends AbstractQuest {
 				"apothecary",
 				null,
 				ConversationStates.ATTENDING,
-				"You must be speaking of my colleague, Jameson. He was forced to #hide out because of problems in Kalavan. He hasn't told me where, but he does bring the most delicious pears when he visits.",
+				"你一定要和我的同事 Jameson 谈谈. 因为在 Dalavan 的事，他也被迫藏了起来 #hide . 他没对我说具体在哪，但他拜访我时，总带一些好吃的过来.",
 				null);
 
 		hintNPC3.add(ConversationStates.ATTENDING,
 				Arrays.asList("hide", "hides", "hiding", "hidden"),
 				null,
 				ConversationStates.ATTENDING,
-				"He hinted at a secret laboratory that he had built. Something about a hidden doorway.",
+				"他提到他在一个自己建的隐密的实验室，入口也是隐藏的.",
 				null);
 	}
 
@@ -218,7 +218,7 @@ public class AntivenomRing extends AbstractQuest {
 						new PlayerHasItemWithHimCondition("note to apothecary"),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.QUEST_OFFERED,
-				"Oh, a message from Klaas. Is that for me?",
+				"Oh, Klaas的信. 是给我的吗?",
 				null);
 
 		// In case player dropped note before speaking to Jameson
@@ -228,7 +228,7 @@ public class AntivenomRing extends AbstractQuest {
 						new PlayerHasItemWithHimCondition("note to apothecary"),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.QUEST_OFFERED,
-				"Oh, a message from Klaas. Is that for me?",
+				"Oh, Klaas 的信. 是给我的吗?",
 				null);
 
 		// Player accepts quest
@@ -240,7 +240,7 @@ public class AntivenomRing extends AbstractQuest {
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, 0, MIX_ITEMS),
 						new IncreaseKarmaAction(5.0),
 						new DropItemAction("note to apothecary"),
-						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 0, "Klaas has asked me to assist you. I can make a ring that will increase your resistance to poison. I need you to bring me [items].  Do you have any of those with you?")
+						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 0, "Klaas 让我协助你，我能做一个指环，用它提高抗毒性，我需要你带来 [items].  你带了这些物品吗？")
 				)
 		);
 
@@ -249,7 +249,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationPhrases.GOODBYE_MESSAGES,
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"That is not a \"yes\" or \"no\" question. I said, Is that note you are carrying for me?",
+				"这不是一个是非 \"yes\" 或者 \"no\" 问题. 我说，这是你带来的信吗?",
 				null);
 
 		// Player rejects quest
@@ -258,7 +258,7 @@ public class AntivenomRing extends AbstractQuest {
 				null,
 				// NPC walks away
 				ConversationStates.IDLE,
-				"Oh, well, carry on then.",
+				"Oh, 好的，带上这个.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		// Player asks for quest without having Klass's note
@@ -267,7 +267,7 @@ public class AntivenomRing extends AbstractQuest {
 				new AndCondition(new NotCondition(new PlayerHasItemWithHimCondition("note to apothecary")),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"I'm sorry, but I'm much too busy right now. Perhaps you could talk to #Klaas.",
+				"抱歉，但我现在很心，可能你应该得 #Klaas 说.",
 				null);
 
 		// Player asks for quest after it is started
@@ -277,14 +277,14 @@ public class AntivenomRing extends AbstractQuest {
 						new QuestNotCompletedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
 				null,
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I am still waiting for you to bring me [items]. Do you have any of those with you?"));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我还在等你给我带来 [items]. 你找到这些了吗?"));
 
 		// Quest has previously been completed.
 		mixer.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
-				"Thank you so much. It had been so long since I was able to enjoy a fairy cake. Are you enjoying your ring?",
+				"非常感谢. It had been so long since I was able to enjoy a fairy cake. Are you enjoying your ring?",
 				null);
 
 		// Player is enjoying the ring
@@ -292,7 +292,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Wonderful!",
+				"太好了!",
 				null);
 
 		// Player is not enjoying the ring
@@ -300,7 +300,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Oh, that's too bad.",
+				"Oh, 郁闷.",
 				null);
 		/*
         // Player asks about required items
@@ -330,7 +330,7 @@ public class AntivenomRing extends AbstractQuest {
 				Arrays.asList("ring", "rings"),
 				null,
 				ConversationStates.QUESTION_1,
-				"There are many types of rings.",
+				"有很多类型的指环.",
 				null);
 
 		mixer.add(ConversationStates.QUESTION_1,
@@ -389,28 +389,28 @@ public class AntivenomRing extends AbstractQuest {
 				Arrays.asList("ring", "rings"),
 				null,
 				ConversationStates.ATTENDING,
-				"There are many types of rings.",
+				"有很多种类的指环.",
 				null);
 
 		mixer.add(ConversationStates.ATTENDING,
 				Arrays.asList("medicinal ring", "medicinal rings"),
 				null,
 				ConversationStates.ATTENDING,
-				"Some poisonous creatures carry them.",
+				"一些生物身上带着毒.",
 				null);
 
 		mixer.add(ConversationStates.ATTENDING,
 				Arrays.asList("antivenom ring", "antivenom rings"),
 				null,
 				ConversationStates.ATTENDING,
-				"If you bring me what I need I may be able to strengthen a #medicinal #ring.",
+				"如果你把我需要的东西带来，我会加强一个药济指环 #medicinal #ring.",
 				null);
 
 		mixer.add(ConversationStates.ATTENDING,
 				Arrays.asList("antitoxin ring", "antitoxin rings", "gm antitoxin ring", "gm antitoxin rings"),
 				null,
 				ConversationStates.ATTENDING,
-				"Heh! This is the ultimate protection against poisoning. Good luck getting one!",
+				"Heh! 这是终极抗毒药，能做出来运气真的不错!",
 				null);
 		/*
 		// Player asks about snakes
@@ -431,7 +431,7 @@ public class AntivenomRing extends AbstractQuest {
 						new QuestActiveCondition(QUEST_SLOT),
 						new NotCondition(new QuestInStateCondition(QUEST_SLOT, 0, "mixing"))),
 				ConversationStates.ATTENDING,
-				"Hello again! Did you bring me the #items I requested?",
+				"你来了，你带来我要的 #items 了吗?",
 				null);
 
 		// player asks what is missing (says "items")
@@ -440,14 +440,14 @@ public class AntivenomRing extends AbstractQuest {
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
 				null,
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I need [items]. Did you bring something?"));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我需要 [items]. 你身上带着吗?"));
 
 		// player says has a required item with him (says "yes")
 		mixer.add(ConversationStates.ATTENDING,
 				ConversationPhrases.YES_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_2,
-				"What did you bring?",
+				"你带来了什么?",
 				null);
 
 		// Players says has required items (alternate conversation state)
@@ -455,7 +455,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_2,
-				"What did you bring?",
+				"你带来了什么?",
 				null);
 
 		// player says does not have a required item with him (says "no")
@@ -464,14 +464,14 @@ public class AntivenomRing extends AbstractQuest {
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
 				null,
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Okay. I still need [items]"));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Okay. 我还需要 [items]"));
 
 		// Players says does not have required items (alternate conversation state)
 		mixer.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.NO_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
-				"Okay. Let me know when you have found something.",
+				"Okay. 我想知道你是怎么找到这些东西的.",
 				null);//new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Okay. I still need [items]"));
 
 		List<String> GOODBYE_NO_MESSAGES = new ArrayList<String>();
@@ -488,7 +488,7 @@ public class AntivenomRing extends AbstractQuest {
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
 				null,
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Okay. I still need [items]"));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Okay. 我还需要 [items]"));
 
 		// Returned too early; still working
 		mixer.add(ConversationStates.IDLE,
@@ -498,7 +498,7 @@ public class AntivenomRing extends AbstractQuest {
 				new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, MIX_TIME))),
 				ConversationStates.IDLE,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, MIX_TIME, "I have not finished with the ring. Please check back in "));
+				new SayTimeRemainingAction(QUEST_SLOT, 1, MIX_TIME, "我还没完成指环制作，请稍侯再来 "));
 
 /*		// player says he didn't bring any items (says no)
 		npc.add(ConversationStates.ATTENDING,
@@ -521,12 +521,12 @@ public class AntivenomRing extends AbstractQuest {
 			new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 					new NotCondition(new TriggerInListCondition(MIX_ITEMS))),
 			ConversationStates.QUESTION_2,
-			"I don't believe I asked for that.", null);
+			"我不确定我要的东西.", null);
 
 		ChatAction mixAction = new MultipleActions (
 		new SetQuestAction(QUEST_SLOT, 1, "mixing"),
 		new SetQuestToTimeStampAction(QUEST_SLOT, 4),
-		new SayTextAction("Thank you. I'll get to work on mixing the antivenom right after I enjoy a few of these fairy cakes. Please come back in " + MIX_TIME + " minutes.")
+		new SayTextAction("谢谢你，在这我吃完这美味的仙女蛋糕 fairy cakes 后，我会去调试抗毒药的正确比例。请在" + MIX_TIME + " 分钟后回来取.")
 		);
 
 		/* add triggers for the item names */
@@ -541,8 +541,8 @@ public class AntivenomRing extends AbstractQuest {
 					new CollectRequestedItemsAction(
 							item.getKey(),
 							QUEST_SLOT,
-							"Excellent! Do you have anything else with you?",
-							"You brought me that already.",
+							"太好了！你身上还有其他东西吗？",
+							"你带的东西我已经有了",
 							mixAction,
 							ConversationStates.IDLE
 							)
@@ -562,7 +562,7 @@ public class AntivenomRing extends AbstractQuest {
 						new TimePassedCondition(QUEST_SLOT, 1, MIX_TIME)
 				),
 			ConversationStates.IDLE,
-			"I have finished mixing the antivenom. You will need to find someone who can #fuse this into an #object. Now I'll finish the rest of my fairy cakes if you dont mind.",
+			"我完成了抗毒混合药，你城要找到某个能把它 #fuse 熔合到某个物品里的人。没有其他事的话，现在我要吃完剩下的仙女蛋糕了。",
 			new MultipleActions(mixReward));
 
 	}

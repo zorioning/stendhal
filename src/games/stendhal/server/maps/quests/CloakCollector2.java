@@ -18,7 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import games.stendhal.common.ItemTools;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Expression;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -135,9 +135,9 @@ public class CloakCollector2 extends AbstractQuest {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser entity) {
 						final List<String> needed2 = missingcloaks2(player, true);
 						entity.say("It's missing "
-								+ Grammar.quantityplnoun(needed2.size(), "cloak", "a")
+								+ needed2.size() + "cloak"
 								+ ". That's "
-								+ Grammar.enumerateCollection(needed2)
+								+ needed2
 								+ ". Will you find them?");
 					}
 
@@ -259,9 +259,9 @@ public class CloakCollector2 extends AbstractQuest {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser entity) {
 						final List<String> needed2 = missingcloaks2(player, true);
 						entity.say("I want "
-								+ Grammar.quantityplnoun(needed2.size(), "cloak", "a")
+								+ needed2.size() + "cloak"
 								+ ". That's "
-								+ Grammar.enumerateCollection(needed2)
+								+ needed2
 								+ ". Did you bring any?");
 					}
 
@@ -312,7 +312,7 @@ public class CloakCollector2 extends AbstractQuest {
 								}
 							} else {
 								entity.say("Oh, I'm disappointed. You don't really have "
-												+ Grammar.a_noun(itemName)
+												+ itemName
 												+ " with you.");
 							}
 						} else {
@@ -397,7 +397,7 @@ public class CloakCollector2 extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I'm collecting more cloaks for Josephine. I still need " + Grammar.enumerateCollection(missingcloaks2(player, false)) + ".");
+				res.add("I'm collecting more cloaks for Josephine. I still need " + missingcloaks2(player, false) + ".");
 			} else {
 				res.add("I got all the other cloaks Josephine wanted and she gave me some fabulous killer boots.");
 			}

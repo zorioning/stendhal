@@ -25,7 +25,7 @@ import org.apache.log4j.Logger;
 import games.stendhal.common.Direction;
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.NotificationType;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -145,25 +145,25 @@ public class Jail implements ZoneConfigurator, LoginListener {
 		arrestWarrants.removeByName(criminalName);
 		final ArrestWarrant arrestWarrant = new ArrestWarrant(criminalName, policeman.getName(), minutes, reason);
 
-		policeman.sendPrivateText("You have jailed " + criminalName
-			+ " for " + minutes + " " + Grammar.plnoun(minutes, "minute") + ". Reason: " + reason + ".");
+		policeman.sendPrivateText("你被收监 " + criminalName
+			+ " for " + minutes + " 分钟" + ". 原因: " + reason + ".");
 		SingletonRepository.getRuleProcessor().sendMessageToSupporters("JailKeeper",
 			policeman.getName() + " jailed " + criminalName
-			+ " for " + minutes + " " + Grammar.plnoun(minutes, "minute") + ". Reason: " + reason
+			+ " for " + minutes + "分钟" + ". Reason: " + reason
 			+ ".");
 
 		if (criminal == null) {
-			final String text = "Player " + criminalName + " is not online, but the arrest warrant has been recorded anyway.";
+			final String text = "玩家 " + criminalName + " 不在线，但据捕证已生效.";
 			policeman.sendPrivateText(text);
 			LOGGER.info(text);
 		} else {
 			arrestWarrant.setStarted();
 			imprison(criminal, policeman, minutes);
 			criminal.sendPrivateText(NotificationType.SUPPORT,
-					"You have been jailed for " + minutes
-					+ " " + Grammar.plnoun(minutes, "minute") + ". Reason: " + reason + ".");
-			LOGGER.info(criminal.getName() + " has been jailed for " + minutes
-					+ " " + Grammar.plnoun(minutes, "minute") + ". Reason: " + reason + ".");
+					"你已被关押了 " + minutes
+					+ " 分钟" + ". 原因: " + reason + ".");
+			LOGGER.info(criminal.getName() + " 已被关押了 " + minutes
+					+ " 分钟" + ". 原因: " + reason + ".");
 		}
 		arrestWarrants.add(arrestWarrant);
 	}
@@ -171,7 +171,7 @@ public class Jail implements ZoneConfigurator, LoginListener {
 	protected void imprison(final Player criminal, final RPEntity policeman, final int minutes) {
 
 		if (jailzone == null) {
-			final String text = "No zone has been configured to be Jailzone";
+			final String text = "监狱地区不能设置区域参数";
 			policeman.sendPrivateText(text);
 			LOGGER.error(text);
 			return;
@@ -241,8 +241,8 @@ public class Jail implements ZoneConfigurator, LoginListener {
 
 			inmate.teleport(exitZone, 8, 7, Direction.LEFT, null);
 			inmate.sendPrivateText(NotificationType.SUPPORT,
-					"Your sentence is over. You can walk out now.");
-			LOGGER.info("Player " + inmate.getName() + " released from jail.");
+					"你的据捕时间已结束，现在你可以出去了。");
+			LOGGER.info("玩家 " + inmate.getName() + " 被释放.");
 		} else {
 			LOGGER.info("Tried to release player " + inmate.getName() + ", but " + inmate.getName() + " is not in jail.");
 		}
@@ -306,14 +306,14 @@ public class Jail implements ZoneConfigurator, LoginListener {
 
 				final long timestamp = arrestWarrant.getTimestamp();
 				player.sendPrivateText(NotificationType.SUPPORT,
-						"You have been jailed "
+						"你被据捕 "
 					+ " for " + arrestWarrant.getMinutes()
-					+ " " + Grammar.plnoun(arrestWarrant.getMinutes(), "minute") + " on " + String.format("%tF", timestamp)
-					+ ". Reason: " + arrestWarrant.getReason() + ".");
+					+ " 分钟" + " on " + String.format("%tF", timestamp)
+					+ ". 原因: " + arrestWarrant.getReason() + ".");
 				LOGGER.info(player.getName() + " logged in who has been jailed "
 						+ " for " + arrestWarrant.getMinutes()
-						+ " " + Grammar.plnoun(arrestWarrant.getMinutes(), "minute") + " on " + String.format("%tF", timestamp)
-						+ ". Reason: " + arrestWarrant.getReason() + ".");
+						+ " 分钟" + " on " + String.format("%tF", timestamp)
+						+ ". 原因: " + arrestWarrant.getReason() + ".");
 
 				handleEscapeMessages(arrestWarrant);
 				imprison(player, player, arrestWarrant.getMinutes());
@@ -334,9 +334,9 @@ public class Jail implements ZoneConfigurator, LoginListener {
 				if (arrestWarrant.isStarted()) {
 					// Notify player that his sentences is starting again because he tried to escape by logging out
 					player.sendPrivateText(NotificationType.SUPPORT,
-							"Although you already spent some "
-							+ "time in jail, your sentence has been restarted "
-							+ "because of your failed escape attempt.");
+							"因为你企图逃狱，"
+							+ "虽然你已被关了一段时间"
+							+ "但你的判决将重新计时 ");
 				} else {
 					// Jail player who was offline at the time /jail was issued.
 					arrestWarrant.setStarted();
@@ -349,7 +349,7 @@ public class Jail implements ZoneConfigurator, LoginListener {
 		if (arrestWarrants != null) {
 			return arrestWarrants.toString();
 		}
-		return "jail not inited ?";
+		return "监狱没有启动 ?";
 	}
 
 	/**

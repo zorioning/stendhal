@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 import games.stendhal.common.NotificationType;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -116,7 +116,7 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get(NPC_NAME);
 		npc.addOffer("I don't sell anything!");
 		npc.addGoodbye();
-		npc.addJob("My current job is unimportant, I will be the king of Kalavan!");
+		npc.addJob("我目前的工作不重要，我将是 Kalavan 的王!");
 
 		/* player says hi before starting the quest */
 		npc.add(ConversationStates.IDLE,
@@ -124,20 +124,20 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"Greetings. Be quick with your matters, I have a lot of work to do."
-					+ " And next time clean your boots, you are lucky that I'm not the king...yet!",
+				"你好，你的事要快一些，我还有很多事要做."
+					+ " 下次把鞋弄干净，你应该庆幸我现在还不是王。。。!",
 				null);
 
-		npc.addQuest("Hmm you could be useful for my #plan...");
+		npc.addQuest("Hmm 你对于我的计划有点用 #plan...");
 		npc.addReply("plan",
-					"Soon I will dethrone the king of Kalavan and become the new king! Right now I need myself a new #crown.");
+					"我马上要废黜现在的 Kalavan 王，然后我登基！现在我要有自已的新王冠 #crown.");
 
 		/* player says crown */
 		npc.add(ConversationStates.ATTENDING,
 				"crown",
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"Yes, I need jewels and gold for my new crown. Will you help me?",
+				"是的，我需要珠宝和黄金，订做我的新王冠，你会帮我吧？",
 				null);
 
 		/* player says yes */
@@ -145,15 +145,15 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.QUESTION_1, null,
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS),
-								    new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I want my crown to be beautiful and shiny. I need [items]. " +
-								    		"Do you have some of those now with you?")));
+								    new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我想我的王冠要华贵明亮，我需要 [items]. " +
+								    		"你能带一些给我吗?")));
 
 
 		/* player is not willing to help */
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				ConversationStates.IDLE,
-				"Oh you don't want to help me?! Get lost, you are wasting my precious time!",
+				"Oh 你不想帮助我？！滚开，你浪费了我宝贵的时间!",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 	}
 
@@ -284,7 +284,7 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 		} else if (!"done".equals(questState) && !"reward".equals(questState)) {
 			final ItemCollection missingItems = new ItemCollection();
 			missingItems.addFromQuestStateString(questState);
-			res.add(Grammar.enumerateCollection(missingItems.toStringList()) + " are still needed for the crown.");
+			res.add(missingItems.toStringList() + " are still needed for the crown.");
 		} else if ("reward".equals(questState)) {
 			res.add("I got the precious gems to make a crown, and " + REWARD_NPC_NAME + " has been instructed to give me my reward.");
 		} else {

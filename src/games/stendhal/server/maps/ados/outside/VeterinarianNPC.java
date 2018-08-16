@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 import games.stendhal.common.ItemTools;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -73,7 +73,7 @@ public class VeterinarianNPC implements ZoneConfigurator {
 
 				add(ConversationStates.ATTENDING, "heal", null, ConversationStates.ATTENDING, null, new HealPetsAction());
 
-				addJob("I'm the veterinarian.");
+				addJob("我是兽医.");
 
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("healing")) {
 
@@ -94,7 +94,7 @@ public class VeterinarianNPC implements ZoneConfigurator {
 		//npc.setDirection(Direction.DOWN);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.initHP(100);
-		npc.setDescription("You see Dr. Feelgood. He is an expert in his job.");
+		npc.setDescription("你见到兽医 Dr. Feelgood. 他是这方面的专家.");
 		zone.add(npc);
 	}
 
@@ -118,23 +118,23 @@ public class VeterinarianNPC implements ZoneConfigurator {
 			 */
 			int numHealed = healed.size();
 			if (numHealed > 0) {
-				StringBuilder msg = new StringBuilder("Your ");
+				StringBuilder msg = new StringBuilder("你的 ");
 				// if we ever get the ability to have more than 2 pets this
 				// needs to be changed.
 				msg.append(getPetName(healed.get(0)));
 				if (numHealed > 1) {
-					msg.append(" and ");
+					msg.append(" 和 ");
 					msg.append(getPetName(healed.get(1)));
 				}
 				msg.append(" ");
-				msg.append(Grammar.isare(numHealed));
-				msg.append(" healed. Take better care of ");
-				msg.append(Grammar.itthem(numHealed));
-				msg.append(" in the future.");
+				msg.append(numHealed);
+				msg.append(" 治好了.以后小心点 ");
+				msg.append(numHealed);
+				msg.append(" .");
 
 				npc.say(msg.toString());
 			} else {
-				npc.say("Sorry, I'm only licensed to heal animals. (But... ssshh! I can make you an #'offer'.)");
+				npc.say("抱歉，我只治疗动物， (但是... ssshh! 我给你开个价 #'offer'.)");
 			}
 		}
 

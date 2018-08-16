@@ -17,7 +17,7 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.Rand;
 import games.stendhal.common.constants.SoundLayer;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.events.TurnListener;
 import games.stendhal.server.core.events.TurnNotifier;
@@ -79,7 +79,7 @@ public class CoalSource extends PlayerActivityEntity {
 		put("name", "coal_source");
 		put("state", 0);
 
-		setDescription("You see something black on the rock.");
+		setDescription("你看到石头上有一些黑色的东西.");
 		handleRespawn();
 	}
 
@@ -88,7 +88,7 @@ public class CoalSource extends PlayerActivityEntity {
 	 */
 	@Override
 	public String getName() {
-		return("the vein of coal");
+		return("煤炭的纹理");
 	}
 
 
@@ -117,7 +117,7 @@ public class CoalSource extends PlayerActivityEntity {
 			return true;
 		}
 
-		player.sendPrivateText("You need a pick to extract the coal.");
+		player.sendPrivateText("你需要捡起再精选煤炭.");
 		return false;
 	}
 
@@ -151,15 +151,15 @@ public class CoalSource extends PlayerActivityEntity {
 				player.equipOrPutOnGround(item);
 				player.incMinedForItem(item.getName(), item.getQuantity());
 			    SingletonRepository.getAchievementNotifier().onObtain(player);
-				player.sendPrivateText("You found "
-						+ Grammar.a_noun(item.getTitle()) + ".");
+				player.sendPrivateText("你发现了 "
+						+ item.getTitle() + ".");
 			} else {
-				logger.error("could not find item: " + itemName);
+				logger.error("不到找到物品: " + itemName);
 			}
 			setState(getState()- 1);
 			handleRespawn();
 		} else {
-			player.sendPrivateText("You didn't find anything.");
+			player.sendPrivateText("你什么也没找到.");
 		}
 	}
 
@@ -182,7 +182,7 @@ public class CoalSource extends PlayerActivityEntity {
 	 */
 	@Override
 	protected void onStarted(final Player player) {
-		player.sendPrivateText("You have started to pick for coal.");
+		player.sendPrivateText("你已开始精选煤炭.");
         addEvent(new SoundEvent(startSound, SOUND_RADIUS, 100, SoundLayer.AMBIENT_SOUND));
         notifyWorldAboutChanges();
 	}

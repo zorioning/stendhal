@@ -22,7 +22,7 @@ import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.common.parser.ExpressionType;
 import games.stendhal.common.parser.WordList;
@@ -136,7 +136,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
 
 		// add the activity word as verb to the word list in case it is still missing there
         logger.debug("Registering VERB [" + productionActivity + "] in the word list");
-		WordList.getInstance().registerVerb(productionActivity);
+//		WordList.getInstance().registerVerb(productionActivity);
 
         // iterate through each of the required resource items and add them as a object to the word list
         String requiredResourceName;
@@ -260,10 +260,9 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         // use sorted TreeSet instead of HashSet
         final Set<String> requiredResourcesWithHashes = new TreeSet<String>();
         for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerProduct(productName).entrySet()) {
-            requiredResourcesWithHashes.add(Grammar.quantityplnounWithHash(amount
-                    * entry.getValue(), entry.getKey()));
+            requiredResourcesWithHashes.add(amount * entry.getValue()+ entry.getKey());
         }
-        return Grammar.enumerateCollection(requiredResourcesWithHashes);
+        return requiredResourcesWithHashes.toString();
     }
 
 	/**
@@ -281,9 +280,10 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
 		// use sorted TreeSet instead of HashSet
 		final Set<String> requiredResources = new TreeSet<String>();
 		for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerProduct(productName).entrySet()) {
-			requiredResources.add(Grammar.quantityplnoun(amount * entry.getValue(), entry.getKey()));
+//			requiredResources.add(amount * entry.getValue()+ entry.getKey());
+			requiredResources.add(amount * entry.getValue()+ entry.getKey());
 		}
-		return Grammar.enumerateCollection(requiredResources);
+		return requiredResources.toString();
 	}
 
     /**
@@ -322,18 +322,18 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         String productName = res.getChosenItemName();
 
         if (getMaximalAmount(productName, player) < amount) {
-            npc.say("I can only " + getProductionActivity() + " "
-                    + Grammar.quantityplnoun(amount, productName, "a")
-                    + " if you bring me "
+            npc.say("我只能 " + getProductionActivity() + " "
+                    +  productName
+                    + " 如果你带给我的话 "
                     + getRequiredResourceNamesWithHashes(productName, amount) + ".");
             return false;
         } else {
 			res.setAmount(amount);
-            npc.say("I need you to fetch me "
+            npc.say("我需要你为这个工作 "
                     + getRequiredResourceNamesWithHashes(productName, amount)
-					+ " for this job, which will take "
+					+ " 给我, which will take "
                     + TimeUtil.approxTimeUntil(getProductionTime(productName, amount))
-                    + ". Do you have what I need?");
+                    + ". 你找到我要的东西了吗?");
 
             return true;
         }
@@ -357,7 +357,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         if (getMaximalAmount(productName, player) < amount) {
             // The player tried to cheat us by placing the resource
             // onto the ground after saying "yes"
-            npc.say("Hey! I'm over here! You'd better not be trying to trick me...");
+            npc.say("Hey! 我在这！你最好别哄我...");
             return false;
         } else {
             for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerProduct(productName).entrySet()) {
@@ -366,12 +366,12 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
             }
             final long timeNow = new Date().getTime();
             player.setQuest(questSlot, amount + ";" + productName + ";" + timeNow);
-            npc.say("OK, I will "
+            npc.say("OK, 我会 "
                     + getProductionActivity()
                     + " "
-                    + Grammar.quantityplnoun(amount, productName, "a")
-                    + " for you, but that will take some time. Please come back in "
-                    + getApproximateRemainingTime(player) + ".");
+                    + amount + productName
+                    + " 给你，但要花点时间，请等 "
+                    + getApproximateRemainingTime(player) + "后再来拿.");
             return true;
         }
     }
@@ -394,10 +394,10 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         final String productName = order[1];
 
 		if (!isOrderReady(player)) {
-			npc.say("Welcome back! I'm still busy with your order to "
-					+ getProductionActivity() + " " + Grammar.quantityplnoun(numberOfProductItems, productName, "a")
-					+ " for you. Come back in "
-					+ getApproximateRemainingTime(player) + " to get it.");
+			npc.say("欢迎回来，我正忙着你 "
+					+ getProductionActivity() + " " + numberOfProductItems + productName
+					+ " 的事情，再过 "
+					+ getApproximateRemainingTime(player) + " 就完成了.");
 		} else {
 			final StackableItem products = (StackableItem) SingletonRepository.getEntityManager().getItem(productName);
 			products.setQuantity(numberOfProductItems);
@@ -407,8 +407,8 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
 			}
 
 			if (player.equipToInventoryOnly(products)) {
-				npc.say("Welcome back! I'm done with your order. Here you have "
-					+ Grammar.quantityplnoun(numberOfProductItems, productName, "the") + ".");
+				npc.say("欢迎回来！你的事情我弄好了，这个 "
+					+ numberOfProductItems + productName + "给你.");
 				player.setQuest(questSlot, "done");
 				// give some XP as a little bonus for industrious workers
 				player.addXP(numberOfProductItems);
@@ -416,9 +416,9 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
 				player.incProducedCountForItem(productName, products.getQuantity());
 				SingletonRepository.getAchievementNotifier().onProduction(player);
 			} else {
-				npc.say("Welcome back! I'm done with your order. But right now you cannot take the "
-						+ Grammar.plnoun(numberOfProductItems, productName)
-						+ ". Come back when you have space.");
+				npc.say("欢迎回来！你的事我已经完成了，但现在你的背包太满，还不能拿走 "
+						+ numberOfProductItems + productName
+						+ ". 等你身上有空再回来拿.");
 			}
 		}
 	}

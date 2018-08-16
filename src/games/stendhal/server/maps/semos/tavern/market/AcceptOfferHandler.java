@@ -18,7 +18,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.dbcommand.StoreMessageCommand;
 import games.stendhal.server.entity.npc.ChatAction;
@@ -71,7 +71,7 @@ public class AcceptOfferHandler extends OfferHandler {
 					if (o.hasItem()) {
 						setOffer(o);
 						int quantity = getQuantity(o.getItem());
-						npc.say("Do you want to buy " + Grammar.quantityplnoun(quantity, o.getItem().getName(), "a") + " for " + o.getPrice() + " money?");
+						npc.say("Do you want to buy " + o.getItem().getName() + " for " + o.getPrice() + " money?");
 						npc.setCurrentState(ConversationStates.BUY_PRICE_OFFERED);
 						return;
 					}
@@ -106,9 +106,9 @@ public class AcceptOfferHandler extends OfferHandler {
 				// Trade failed for some reason. Check why, and inform the player
 				if (!m.contains(offer)) {
 					int quantity = getQuantity(offer.getItem());
-					npc.say("I'm sorry, but " + Grammar.thatthose(quantity) + " "
-							+ Grammar.quantityplnoun(quantity, offer.getItem().getName(), "the")
-							+ " " + Grammar.isare(quantity)
+					npc.say("I'm sorry, but " + quantity + " "
+							+ offer.getItem().getName()
+							+ " " + quantity
 							+ " no longer for sale.");
 				} else {
 					npc.say("Sorry, you don't have enough money!");

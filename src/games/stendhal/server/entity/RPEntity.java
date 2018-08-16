@@ -35,7 +35,7 @@ import games.stendhal.common.Rand;
 import games.stendhal.common.constants.Nature;
 import games.stendhal.common.constants.SoundLayer;
 import games.stendhal.common.constants.Testing;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.WordList;
 import games.stendhal.server.actions.equip.DropAction;
 import games.stendhal.server.core.engine.GameEvent;
@@ -1851,16 +1851,16 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 		rewardKillers(oldXP);
 		rewardKillerAnimals(oldXP);
 
-		if (!(killer instanceof Player) && !(killer instanceof Status) && !(killer instanceof Pet)) {
-			/*
-			 * Prettify the killer name for the corpse. Should be done only
-			 * after the more plain version has been used for the killer list.
-			 * Players are unique, so they should not get an article. Also
-			 * statuses should not, so that "killed by poison" does not become
-			 * "killed by a bottle of poison".
-			 */
-			killerName = Grammar.a_noun(killerName);
-		}
+//		if (!(killer instanceof Player) && !(killer instanceof Status) && !(killer instanceof Pet)) {
+//			/*
+//			 * Prettify the killer name for the corpse. Should be done only
+//			 * after the more plain version has been used for the killer list.
+//			 * Players are unique, so they should not get an article. Also
+//			 * statuses should not, so that "killed by poison" does not become
+//			 * "killed by a bottle of poison".
+//			 */
+//			killerName = Grammar.a_noun(killerName);
+//		}
 		// Add a corpse
 		final Corpse corpse = makeCorpse(killerName);
 		damageReceived.clear();
@@ -1868,9 +1868,9 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 
 		// Stats about dead
 		if (has("name")) {
-			stats.add("Killed " + get("name"), 1);
+			stats.add("杀了 " + get("name"), 1);
 		} else {
-			stats.add("Killed " + get("type"), 1);
+			stats.add("杀了 " + get("type"), 1);
 		}
 
 		// Add some reward inside the corpse
@@ -1885,10 +1885,11 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 		}
 
 		StringBuilder deathMessage = new StringBuilder(getName());
-		deathMessage.append(" has been killed");
+		deathMessage.append(" 被杀死");
 		if (!killers.isEmpty()) {
-			deathMessage.append(" by ");
-			deathMessage.append(Grammar.enumerateCollection(killers));
+			deathMessage.append(" 被 ");
+//			deathMessage.append(Grammar.enumerateCollection(killers));
+			deathMessage.append(killers);
 		}
 		corpse.addEvent(new TextEvent(deathMessage.toString()));
 
@@ -2158,7 +2159,7 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 		} else {
 			item.setPosition(getX(), getY());
 			getZone().add(item);
-			this.sendPrivateText("You dropped the new item onto the ground because your bag is full.");
+			this.sendPrivateText("因为背包已满，你把刚捡的物品丢在了地上.");
 			return false;
 		}
 	}
@@ -2766,7 +2767,7 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 	public String describe() {
 		String text = super.describe();
 		if (getLevel() > 0) {
-			text += " It is level " + getLevel() + ".";
+			text += " 等级是 " + getLevel() + ".";
 		}
 
 		return text;
@@ -3240,8 +3241,8 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 				// The attack was too weak, it was blocked
 
 				if (logger.isDebugEnabled() || Testing.DEBUG) {
-					logger.debug("attack from " + this.getID() + " to "
-							+ defender.getID() + ": Damage: " + 0);
+					logger.debug(" " + this.getID() + " 攻击 "
+							+ defender.getID() + ": 破坏: " + 0);
 				}
 			}
 			this.addEvent(new AttackEvent(true, damage, nature, weaponName, isRanged));
@@ -3254,7 +3255,7 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 		} else {
 			// Missed
 			if (logger.isDebugEnabled() || Testing.DEBUG) {
-				logger.debug("attack from " + this.getID() + " to "
+				logger.debug(" " + this.getID() + " 攻击了 "
 						+ defender.getID() + ": Missed");
 			}
 

@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
@@ -183,11 +183,11 @@ public class WeaponsCollector2 extends AbstractQuest {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 						final List<String> needed = missingWeapons(player, true);
 						raiser.say("There "
-								+ Grammar.isare(needed.size())
+								+ needed.size()
 								+ " "
-								+ Grammar.quantityplnoun(needed.size(), "weapon", "a")
+								+ "Weapon"
 								+ " still missing from my newest collection: "
-								+ Grammar.enumerateCollection(needed)
+								+ needed
 								+ ". Do you have anything like that with you?");
 					}
 				});
@@ -203,7 +203,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 						final List<String> missing = missingWeapons(player, false);
 						raiser.say("Let me know as soon as you find "
-								+ Grammar.itthem(missing.size())
+								+ missing.size()
 								+ ". Farewell.");
 					}
 				});
@@ -256,7 +256,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 								}
 							} else {
 								raiser.say("I may be old, but I'm not senile, and you clearly don't have "
-										+ Grammar.a_noun(itemName)
+										+ itemName
 										+ ". What do you really have for me?");
 							}
 						} else {
@@ -320,7 +320,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I'm collecting weapons for Balduin's collection. I still need " + Grammar.enumerateCollection(missingWeapons(player, false)) + ".");
+				res.add("I'm collecting weapons for Balduin's collection. I still need " + missingWeapons(player, false) + ".");
 			} else {
 				res.add("I found all the weapons Balduin asked for and he rewarded me with a pair of handed swords.");
 			}

@@ -15,7 +15,7 @@ package games.stendhal.server.maps.quests.houses;
 import java.util.LinkedList;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.mapstuff.portal.HousePortal;
@@ -82,20 +82,20 @@ public class HouseBuyingMain {
 	public LinkedList<String> getHistory(final Player player) {
 		LinkedList<String> hist = new LinkedList<String>();
 		if(!player.hasQuest("house")) {
-			hist.add("I've never bought a house.");
+			hist.add("我还没买过房子。");
 			return(hist);
 		}
-		hist.add("I bought " +  HouseUtilities.getHousePortal(MathHelper.parseInt(player.getQuest("house"))).getDoorId() + ".");
+		hist.add("我买 " +  HouseUtilities.getHousePortal(MathHelper.parseInt(player.getQuest("house"))).getDoorId() + ".");
 		HousePortal playerHousePortal = HouseUtilities.getPlayersHouse(player);
 		if(playerHousePortal!=null) {
 			int unpaidPeriods = houseTax.getUnpaidTaxPeriods(player);
 			if (unpaidPeriods>0) {
-				hist.add("I owe " + Grammar.quantityplnoun(unpaidPeriods, "month", "one") + " worth of tax.");
+				hist.add("我拥有 " + unpaidPeriods + "month" + " 的税款。");
 			} else {
-				hist.add("I am up to date with my house tax payments.");
+				hist.add("我交的房产税到期日期为.");
 			}
 		} else {
-			hist.add("I no longer own that house.");
+			hist.add("我不再拥有那个房屋了。");
 		}
 		return(hist);
 	}

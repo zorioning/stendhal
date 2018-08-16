@@ -15,7 +15,7 @@ package games.stendhal.server.entity.npc.behaviour.adder;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.constants.SoundLayer;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -58,7 +58,7 @@ public class BuyerAdder {
 					null,
 					false,
 					ConversationStates.ATTENDING,
-					"I buy " + Grammar.enumerateCollectionPlural(buyerBehaviour.dealtItems()) + ".",
+					"我要买 " + buyerBehaviour.dealtItems() + ".",
 					null);
 		}
 		engine.add(ConversationStates.ATTENDING, "sell", new SentenceHasErrorCondition(),
@@ -83,7 +83,7 @@ public class BuyerAdder {
 					public void fireRequestOK(final ItemParserResult res, final Player player, final Sentence sentence, final EventRaiser raiser) {
 						if (player.isBadBoy()) {
 							// don't buy from player killers at all
-							raiser.say("Sorry, but I just can't trust you. You look too dangerous to deal with. Please go away.");
+							raiser.say("抱歉，我不能相信你，你看起来太危险，走开!");
 							raiser.setCurrentState(ConversationStates.IDLE);
 							return;
 						}
@@ -91,23 +91,23 @@ public class BuyerAdder {
 						String chosenItemName = res.getChosenItemName();
 
 						if (res.getAmount() > 1000) {
-							logger.warn("Refusing to buy very large amount of "
+							logger.warn("拒绝购买如此巨量的 "
 									+ res.getAmount()
 									+ " " + chosenItemName
-									+ " from player "
-									+ player.getName() + " talking to "
-									+ raiser.getName() + " saying "
+									+ " "
+									+ player.getName() + " 对 "
+									+ raiser.getName() + " 讲 "
 									+ sentence);
-							raiser.say("Sorry, the maximum number of "
+							raiser.say("抱歉， 一次性购买"
 									+ chosenItemName
-									+ " which I can buy at once is 1000.");
+									+ " 的最大数量是 1000.");
 						} else if (res.getAmount() > 0) {
 							final String itemName = chosenItemName;
 							// will check if player have claimed amount of items
 							if (itemName.equals("sheep")) {
 								// player have no sheep...
 								if (!player.hasSheep()) {
-									raiser.say("You don't have any sheep, " + player.getTitle() + "! What are you trying to pull?");
+									raiser.say("你没有羊， " + player.getTitle() + "! What are you trying to pull?");
 									return;
 								}
 							} else {
@@ -117,21 +117,21 @@ public class BuyerAdder {
 							final int price = buyerBehaviour.getCharge(res, player);
 
 							if (price != 0) {
-    							raiser.say(Grammar.quantityplnoun(res.getAmount(), chosenItemName, "A")
-    									+ " " + Grammar.isare(res.getAmount()) + " worth "
+    							raiser.say(res.getAmount() + chosenItemName
+    									+ " " + res.getAmount() + " worth "
     									+ price + ". Do you want to sell "
-    									+ Grammar.itthem(res.getAmount()) + "?");
+    									+ res.getAmount() + "?");
 
     							currentBehavRes = res;
     							npc.setCurrentState(ConversationStates.SELL_PRICE_OFFERED); // success
 							} else {
 								raiser.say("Sorry, "
-										+ Grammar.thatthose(res.getAmount()) + " "
-										+ Grammar.plnoun(res.getAmount(), chosenItemName)
-    									+ " " + Grammar.isare(res.getAmount()) + " worth nothing.");
+										+ res.getAmount() + " "
+										+ chosenItemName
+    									+ " " + res.getAmount() + " worth nothing.");
 							}
 						} else {
-							raiser.say("Sorry, how many " + Grammar.plural(chosenItemName) + " do you want to sell?!");
+							raiser.say("Sorry, how many " + chosenItemName + " do you want to sell?!");
 						}
 					}
 				});

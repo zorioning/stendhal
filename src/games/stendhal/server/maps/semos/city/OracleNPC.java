@@ -16,7 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.pathfinder.FixedPath;
@@ -64,8 +64,8 @@ public class OracleNPC implements ZoneConfigurator {
 						null,
 						new SayUnstartedQuestDescriptionFromNPCNameAction(regions));
 
-				addQuest("Oh, there are so many others who may need #help in " + Grammar.enumerateCollection(regions) + ", I wouldn't ask you anything new.");
-				addJob("I have no real occupation, my skill is in guiding you in how to #help others, especially in " + Grammar.enumerateCollection(regions) + ".");
+				addQuest("Oh, there are so many others who may need #help in " + regions + ", I wouldn't ask you anything new.");
+				addJob("I have no real occupation, my skill is in guiding you in how to #help others, especially in " + regions + ".");
 				addOffer("*giggles* I don't sell anything. I can tell you about my #sisters or my #name, if you like.");
 				addReply("sisters", "My sisters live in other cities. Find them to learn how to #help those nearest them.");
 				addReply("name", "Me and my #sisters all have names of flowers. " +

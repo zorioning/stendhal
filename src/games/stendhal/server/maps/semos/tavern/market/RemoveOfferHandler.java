@@ -14,7 +14,7 @@ package games.stendhal.server.maps.semos.tavern.market;
 
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -66,7 +66,7 @@ public class RemoveOfferHandler extends OfferHandler {
 							if (o.hasItem()) {
 								quantity = getQuantity(o.getItem());
 							}
-							npc.say("Do you want to remove your offer of " + Grammar.quantityplnoun(quantity, o.getItemName(), "one") + "?");
+							npc.say("Do you want to remove your offer of " + o.getItemName() + "?");
 							npc.setCurrentState(ConversationStates.QUESTION_1);
 						} else {
 							removeOffer(player, npc);

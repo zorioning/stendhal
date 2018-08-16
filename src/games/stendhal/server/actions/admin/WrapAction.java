@@ -13,7 +13,7 @@ package games.stendhal.server.actions.admin;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.actions.ActionListener;
 import games.stendhal.server.actions.CommandCenter;
 import games.stendhal.server.core.engine.GameEvent;
@@ -54,7 +54,7 @@ public class WrapAction implements ActionListener {
 			itemName += args;
 		}
 
-		itemName = Grammar.singular(itemName);
+		itemName = itemName;
 
 		final Item item = player.getFirstEquipped(itemName);
 
@@ -69,7 +69,7 @@ public class WrapAction implements ActionListener {
 
 			player.updateItemAtkDef();
 		} else {
-			player.sendPrivateText("You don't have any " + itemName);
+			player.sendPrivateText("你身上没有 " + itemName);
 		}
 	}
 

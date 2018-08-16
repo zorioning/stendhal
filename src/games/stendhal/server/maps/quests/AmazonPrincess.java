@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -150,8 +150,8 @@ npc.add(ConversationStates.ATTENDING,
 								int pieAmount = Rand.roll1D6() + 1;
 								new EquipItemAction("fish pie", pieAmount, true).fire(player, sentence, npc);
 								npc.say("Thank you!! Take " +
-										Grammar.thisthese(pieAmount) + " " +
-										Grammar.quantityplnoun(pieAmount, "fish pie", "") +
+										pieAmount + " " +
+										 "fish pie" +
 										" from my cook, and this kiss, from me.");
 								new SetQuestAndModifyKarmaAction(getSlotName(), "drinking;"
 																 + System.currentTimeMillis(), 15.0).fire(player, sentence, npc);

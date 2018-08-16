@@ -15,7 +15,7 @@ package games.stendhal.common.parser;
 import java.util.Iterator;
 
 import games.stendhal.common.ErrorDrain;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * SentenceImplementation contains the implementation details of building Sentence objects.
@@ -161,27 +161,27 @@ public final class SentenceImplementation extends Sentence {
             }
 
             // handle unknown words
-            if (!wordFound) {
-                // recognise declined verbs, e.g. "swimming"
-                final WordList.Verb verb = wl.normalizeVerb(original);
-
-                if (verb != null) {
-                    if (verb.isGerund) {
-                        w.setType(new ExpressionType(verb.entry.getTypeString() + ExpressionType.SUFFIX_GERUND));
-                        wordFound = true;
-                    } else if ((verb.entry.getType() != null) && verb.entry.getType().isVerb()) {
-                        w.setType(verb.entry.getType());
-                        wordFound = true;
-                    } else if (!verb.isPast) { // avoid cases like "rounded"
-                    	w.setType(new ExpressionType(ExpressionType.VERB));
-                        wordFound = true;
-                    }
-
-                    if (wordFound) {
-                    	w.setNormalized(verb.entry.getNormalized());
-                    }
-                }
-            }
+//            if (!wordFound) {
+//                // recognise declined verbs, e.g. "swimming"
+//             //   final WordList.Verb verb = wl.normalizeVerb(original);
+//
+//                if (verb != null) {
+//                    if (verb.isGerund) {
+//                        w.setType(new ExpressionType(verb.entry.getTypeString() + ExpressionType.SUFFIX_GERUND));
+//                        wordFound = true;
+//                    } else if ((verb.entry.getType() != null) && verb.entry.getType().isVerb()) {
+//                        w.setType(verb.entry.getType());
+//                        wordFound = true;
+//                    } else if (!verb.isPast) { // avoid cases like "rounded"
+//                    	w.setType(new ExpressionType(ExpressionType.VERB));
+//                        wordFound = true;
+//                    }
+//
+//                    if (wordFound) {
+//                    	w.setNormalized(verb.entry.getNormalized());
+//                    }
+//                }
+//            }
 
             if (!wordFound) {
                 // recognise derived adjectives, e.g. "magical", "nomadic" or "rounded"
@@ -211,38 +211,38 @@ public final class SentenceImplementation extends Sentence {
     /**
      * Standardise sentence type.
      */
-    void standardizeSentenceType() {
-        // Look for a "me" without any preceding other subject.
-        Expression prevVerb = null;
-
-        for (final Expression w : expressions) {
-            if (w.getBreakFlag()) {
-                break;
-            }
-
-            if (w.getType() != null) {
-                if (w.getType().isVerb()) {
-                    if (prevVerb == null) {
-                        prevVerb = w;
-                    } else {
-                        break;
-                    }
-                } else if (w.getType().isSubject()) {
-                    if (w.getOriginal().equalsIgnoreCase("me")) {
-                        // If we already found a verb, we prepend "you" as
-                        // first subject and mark the sentence as imperative.
-                        if (prevVerb != null) {
-                            final Expression you = new Expression("you", ExpressionType.SUBJECT);
-                            expressions.add(0, you);
-                            sentenceType = SentenceType.IMPERATIVE;
-                        }
-                    }
-
-                    break;
-                }
-            }
-        }
-    }
+//    void standardizeSentenceType() {
+//        // Look for a "me" without any preceding other subject.
+//        Expression prevVerb = null;
+//
+//        for (final Expression w : expressions) {
+//            if (w.getBreakFlag()) {
+//                break;
+//            }
+//
+//            if (w.getType() != null) {
+//                if (w.getType().isVerb()) {
+//                    if (prevVerb == null) {
+//                        prevVerb = w;
+//                    } else {
+//                        break;
+//                    }
+//                } else if (w.getType().isSubject()) {
+//                    if (w.getOriginal().equalsIgnoreCase("me")) {
+//                        // If we already found a verb, we prepend "you" as
+//                        // first subject and mark the sentence as imperative.
+//                        if (prevVerb != null) {
+//                            final Expression you = new Expression("you", ExpressionType.SUBJECT);
+//                            expressions.add(0, you);
+//                            sentenceType = SentenceType.IMPERATIVE;
+//                        }
+//                    }
+//
+//                    break;
+//                }
+//            }
+//        }
+//    }
 
     /**
      * replace grammatical constructs with simpler ones with the same meaning, so that they can be understood by the FSM
@@ -541,59 +541,59 @@ public final class SentenceImplementation extends Sentence {
                         prevConditional = true;
                     }
 
-                    if ((curType != null) && (nextType != null)) {
+                 //   if ((curType != null) && (nextType != null)) {
                         // left-merge composite nouns and nouns with preceding adjectives or verbs
-                        if (isCompoundNoun(curType, nextType, precedingVerb)) {
-                        	if (Grammar.mergeCompoundNoun(curr, next) == curr) {
-                        		expressions.remove(next);
-                        	} else {
-                        		expressions.remove(curr);
-                        	}
-                            changed = true;
-                            break;
-                        }
+                       // if (isCompoundNoun(curType, nextType, precedingVerb)) {
+                       // 	if (Grammar.mergeCompoundNoun(curr, next) == curr) {
+                       // 		expressions.remove(next);
+                       // 	} else {
+                       // 		expressions.remove(curr);
+                       // 	}
+                       //     changed = true;
+                       //     break;
+                       // }
                         // left-merge nouns with preceding amounts, dropping the numerals from the
                         // merged normalized expression
-                        else if (curType.isNumeral() && (nextType.isObject() || nextType.isSubject())) {
-                            next.mergeLeft(curr, false);
-                            expressions.remove(curr);
-                            changed = true;
-                            break;
-                        }
+                     //   else if (curType.isNumeral() && (nextType.isObject() || nextType.isSubject())) {
+                     //       next.mergeLeft(curr, false);
+                     //       expressions.remove(curr);
+                     //       changed = true;
+                     //       break;
+                     //   }
                         // check consecutive verbs
-                        else if (curType.isVerb() && nextType.isVerb()) {
-                            // merge "do" and "don't" expressions with the following verb
-                            if (curr.getNormalized().equals("do")) {
-                            	next.mergeSimple(curr);
-                                expressions.remove(curr);
-                                changed = true;
-                                break;
-                            }
-                            // left-merge "would like", preserving only the main verb
-                            else if (prevConditional) {
-                                next.mergeLeft(curr, false);
-                                expressions.remove(curr);
-                                changed = true;
-                                break;
-                            }
-                        }
+                     //   else if (curType.isVerb() && nextType.isVerb()) {
+                     //       // merge "do" and "don't" expressions with the following verb
+                     //       if (curr.getNormalized().equals("do")) {
+                     //       	next.mergeSimple(curr);
+                     //           expressions.remove(curr);
+                     //           changed = true;
+                     //           break;
+                     //       }
+                     //       // left-merge "would like", preserving only the main verb
+                     //       else if (prevConditional) {
+                     //           next.mergeLeft(curr, false);
+                     //           expressions.remove(curr);
+                     //           changed = true;
+                     //           break;
+                     //       }
+                  //      }
                         // right-merge consecutive words of all other same main types,
                         // while merging the normalized expressions
-                        else if (curType.getMainType().equals(nextType.getMainType())) {
-                            curr.mergeRight(next, true);
-                            expressions.remove(next);
-                            changed = true;
-                            break;
-                        }
-                        // left-merge question words with following verbs and adjectives,
-                        // dropping question words from the normalized form
-                        else if (curType.isQuestion() && (nextType.isVerb() || nextType.isAdjective())) {
-                            next.mergeLeft(curr, false);
-                            expressions.remove(curr);
-                            changed = true;
-                            break;
-                        }
-                     }
+    //                    else if (curType.getMainType().equals(nextType.getMainType())) {
+    //                        curr.mergeRight(next, true);
+    //                        expressions.remove(next);
+    //                        changed = true;
+    //                        break;
+    //                    }
+    //                    // left-merge question words with following verbs and adjectives,
+    //                    // dropping question words from the normalized form
+    //                    else if (curType.isQuestion() && (nextType.isVerb() || nextType.isAdjective())) {
+    //                        next.mergeLeft(curr, false);
+    //                        expressions.remove(curr);
+    //                        changed = true;
+    //                        break;
+    //                    }
+    //                 }
 
                     // left-merge words to ignore
                     if (context.getIgnoreIgnorable()) {
@@ -712,14 +712,14 @@ public final class SentenceImplementation extends Sentence {
                             final String expr = first.getNormalized() + " of " + third.getNormalized();
 
                             // see if the expression has been normalized
-                            if (!Grammar.isNormalized(expr)) {
-                                first.mergeRight(second, false);
-                                expressions.remove(second);
-                                third.mergeLeft(first, false);
-                                expressions.remove(first);
-                                changed = true;
-                                break;
-                            }
+                           // if (!Grammar.isNormalized(expr)) {
+                           //     first.mergeRight(second, false);
+                           //     expressions.remove(second);
+                           //     third.mergeLeft(first, false);
+                           //     expressions.remove(first);
+                           //     changed = true;
+                           //     break;
+                           // }
                         }
                     }
                 }

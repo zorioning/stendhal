@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
 //
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.player.Player;
@@ -82,7 +82,7 @@ public class GoldSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "gold_source");
 		setMenu("Prospect");
-		setDescription("You see something golden glittering.");
+		setDescription("你看到一些东西泛着金光");
 	}
 
 	//
@@ -119,7 +119,7 @@ public class GoldSource extends PlayerActivityEntity {
 			return true;
 		}
 
-		player.sendPrivateText("You need a gold pan to prospect for gold.");
+		player.sendPrivateText("需要一个金盘 a gold pan 去淘金.");
 		return false;
 	}
 
@@ -154,13 +154,13 @@ public class GoldSource extends PlayerActivityEntity {
 			    player.equipOrPutOnGround(item);
 			    player.incMinedForItem(item.getName(), item.getQuantity());
 			    SingletonRepository.getAchievementNotifier().onObtain(player);
-			    player.sendPrivateText("You found "
-					+ Grammar.a_noun(item.getTitle()) + ".");
+			    player.sendPrivateText("你发现了 "
+					+ item.getTitle() + ".");
 			} else {
-				logger.error("could not find item: " + itemName);
+				logger.error("没有发现物品: " + itemName);
 			}
 		} else {
-			player.sendPrivateText("You didn't find anything.");
+			player.sendPrivateText("你没有发现任何东西.");
 		}
 	}
 
@@ -172,6 +172,6 @@ public class GoldSource extends PlayerActivityEntity {
 	 */
 	@Override
 	protected void onStarted(final Player player) {
-		player.sendPrivateText("You have started to prospect for gold.");
+		player.sendPrivateText("我已开始了淘金.");
 	}
 }

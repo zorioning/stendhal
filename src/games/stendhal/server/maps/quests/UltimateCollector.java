@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.SpeakerNPC;
@@ -112,18 +112,18 @@ public class UltimateCollector extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Balduin asked me for a last special ultimate weapon collector quest.");
+		res.add("Balduin 想要我帮他找到最新的终极武器.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
-			res.add("I don't want to bring him any more weapons at the moment.");
+			res.add("现在我不想给他任何武器");
 			return res;
 		}
-		res.add("I accepted his last ultimate quest and promised to bring him a special and rare weapon.");
+		res.add("我接受了他的终极武器收集请求，答应他找到一个特号而且罕见的武器.");
 		if (!isCompleted(player)) {
-			res.add("Balduin has asked me to bring him " + Grammar.a_noun(player.getRequiredItemName(QUEST_SLOT,0)) + ".");
+			res.add("Balduin 让我带给他 " + player.getRequiredItemName(QUEST_SLOT,0) + ".");
 		}
 		if (isCompleted(player)) {
-			res.add("Yay! I am *the* ultimate weapon collector now and I can sell black items to Balduin!");
+			res.add("Yay! 我乃终极武器收藏家，我卖各种黑武器给 Balduin!");
 		}
 		return res;
 	}
@@ -139,7 +139,7 @@ public class UltimateCollector extends AbstractQuest {
 					new QuestCompletedCondition(WEAPONSCOLLECTOR2_QUEST_SLOT),
 					new QuestNotStartedCondition(QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"Greetings old friend. I have another collecting #challenge for you.",
+			"老朋友你好，我给你准备了我的另一个藏品.",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -149,7 +149,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(CLUB_THORNS_QUEST_SLOT),
 							 new QuestNotCompletedCondition(IMMORTAL_SWORD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"There is still a quest in the Kotoch area which you have not completed. Explore thoroughly and you will be on your way to becoming the ultimate collector!",
+			"在 Kotoch 我还有一个请求你没有完成。要深入探究，你才能真正变成武器收藏家。!",
 			null);
 
 
@@ -160,7 +160,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(MITHRIL_CLOAK_QUEST_SLOT),
 							 new QuestNotCompletedCondition(MITHRIL_SHIELD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"You are missing a special mithril item which you can win if you help the right person, you cannot be an ultimate collector without it.",
+			"你错过了一个特别的密银装备，如果你帮助了正确的人就能赢得。没有这个武器你就不能成为收藏家。.",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -170,7 +170,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(OBSIDIAN_KNIFE_QUEST_SLOT),
 							 new QuestNotCompletedCondition(VAMPIRE_SWORD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"There is a dwarf blacksmith living alone deep underground who would forge a special weapon for you, you cannot be an ultimate collector without this.",
+			"在侏儒铁匠铺里的深深的地下室里独居着一个能给你打造特殊武器的人，没有这把武器你就不能成为武器收藏家。",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -180,7 +180,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(CLOAKSCOLLECTOR2_QUEST_SLOT),
 							 new QuestNotCompletedCondition(CLOAKS_FOR_BARIO_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"A special item will be yours if you collect many cloaks, whether to fulfil another's vanity or keep them warm, it's a task you must complete.",
+			"如果你收集了很多斗篷，那这把特别的武器就是你的。不论是为了你的虚荣心，或者为了你的热情，都是你必须完成的任务。",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -189,7 +189,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new QuestNotStartedCondition(QUEST_SLOT),
 					 new QuestNotCompletedCondition(ELVISH_ARMOR_QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"Another collector of items still needs your help. You'd find him in Fado Forest, and until you have completed that favour for him, you cannot be the ultimate collector.",
+			"另一个收藏家也需要你的帮助，你需去 Fado 森林中到到他，因为不找到他要的东西，就不能成为开武器收藏家。",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -198,7 +198,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new QuestNotStartedCondition(QUEST_SLOT),
 					 new QuestNotCompletedCondition(KANMARARN_QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"You've collected so many special items, but you have never helped those down in Kanmararn city. You should complete a task there.",
+			"你已收集了很多特殊装备，但你还从没有帮助过 Kanmararn 地下的这些人，你应该完成他们的要求.",
 			null);
 
 	}
@@ -238,8 +238,8 @@ public class UltimateCollector extends AbstractQuest {
 						new QuestCompletedCondition(IMMORTAL_SWORD_QUEST_SLOT)),
 				ConversationStates.ATTENDING,
 				null,
-				new StartRecordingRandomItemCollectionAction(QUEST_SLOT, items, "Well, you've certainly proved to the residents of Faiumoni " +
-						"that you could be the ultimate collector, but I have one more task for you. Please bring me [item]."));
+				new StartRecordingRandomItemCollectionAction(QUEST_SLOT, items, "好吧, 你已经向Faiumoni 的居民证明了自已，这样你就成成为武器收藏家，" +
+						"但我还有最后一个任务给你，请带给我  [item]."));
 	}
 
 	private void collectItem() {
@@ -251,7 +251,7 @@ public class UltimateCollector extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestActiveCondition(QUEST_SLOT)),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Did you bring me that very rare item I asked you for?",
+				"你把我要的稀有货带来了吗?",
 				null);
 
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION,
@@ -260,14 +260,14 @@ public class UltimateCollector extends AbstractQuest {
 								new NotCondition(new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayRequiredItemAction(QUEST_SLOT, "Hm, no, you don't have [item], don't try to fool me!"));
+				new SayRequiredItemAction(QUEST_SLOT, "Hm, 不, 你没有 [item], 不要愚弄我!"));
 
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.YES_MESSAGES,
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 								new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"Wow, it's incredible to see this close up! Many thanks. Now, perhaps we can #deal together.",
+				"Wow, 这东西能在我眼前简直难以至信，哇，或许我们可以一起处理 #deal .",
 				new MultipleActions(new DropRecordedItemAction(QUEST_SLOT),
 									new SetQuestAction(QUEST_SLOT, "done"),
 									new IncreaseXPAction(100000),
@@ -278,7 +278,7 @@ public class UltimateCollector extends AbstractQuest {
 				null,
 				ConversationStates.ATTENDING,
 				null,
-				new SayRequiredItemAction(QUEST_SLOT, "Very well, come back when you have [the item] with you."));
+				new SayRequiredItemAction(QUEST_SLOT, "很好，当你有了这东西后再回来 [the item] ."));
 	}
 
 	private void offerSteps() {
@@ -290,7 +290,7 @@ public class UltimateCollector extends AbstractQuest {
 				ConversationPhrases.OFFER_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I buy black items, but I can only afford to pay you modest prices.",
+				"我收购一些黑色装备，但我只会付给你合适的价钱.",
 				null);
 
 
@@ -299,7 +299,7 @@ public class UltimateCollector extends AbstractQuest {
 				ConversationPhrases.OFFER_MESSAGES,
 				new QuestNotCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I'll buy black items from you when you have completed each #challenge I set you.", null);
+				"我可以收购你的黑色装备，要在你完成我给你的所有收集任务后。", null);
 	}
 
 
@@ -307,7 +307,7 @@ public class UltimateCollector extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Ultimate Weapon Collector",
-				"Balduin, the hermit who is living on Ados rock, has a last and ultimate challenge for collectors.",
+				"Balduin, 是一个集在 Ados 山上的隐士，他要收集一个最终的装备才能成为收藏家。",
 				true);
 
 		checkCollectingQuests();

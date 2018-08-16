@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.common.parser.ExpressionType;
 import games.stendhal.common.parser.WordList;
@@ -145,7 +145,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		this.productBound = productBound;
 
 		// add the activity word as verb to the word list in case it is still missing there
-		WordList.getInstance().registerVerb(productionActivity);
+//		WordList.getInstance().registerVerb(productionActivity);
 
 		for (final String itemName : requiredResourcesPerItem.keySet()) {
 			WordList.getInstance().registerName(itemName, ExpressionType.OBJECT);
@@ -204,10 +204,10 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		// use sorted TreeSet instead of HashSet
 		final Set<String> requiredResourcesWithHashes = new TreeSet<String>();
 		for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerItem().entrySet()) {
-			requiredResourcesWithHashes.add(Grammar.quantityplnounWithHash(amount
-					* entry.getValue(), entry.getKey()));
+//			requiredResourcesWithHashes.add(amount	* entry.getValue() + entry.getKey());
+			requiredResourcesWithHashes.add( Integer.toString( amount * entry.getValue())+ "#" + entry.getKey() );
 		}
-		return Grammar.enumerateCollection(requiredResourcesWithHashes);
+		return requiredResourcesWithHashes.toString();
 	}
 
 	/**
@@ -223,10 +223,10 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		// use sorted TreeSet instead of HashSet
 		final Set<String> requiredResources = new TreeSet<String>();
 		for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerItem().entrySet()) {
-			requiredResources.add(Grammar.quantityplnoun(amount
-					* entry.getValue(), entry.getKey()));
+//			requiredResources.add(Grammar.quantityplnoun(amount	* entry.getValue(), entry.getKey()));
+			requiredResources.add(amount * entry.getValue()+ entry.getKey() );
 		}
-		return Grammar.enumerateCollection(requiredResources);
+		return requiredResources.toString();
 	}
 
 	/**
@@ -311,16 +311,16 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		int amount = res.getAmount();
 
 		if (getMaximalAmount(player) < amount) {
-			npc.say("I can only " + getProductionActivity() + " "
-					+ Grammar.quantityplnoun(amount, getProductName(), "a")
-					+ " if you bring me "
+			npc.say("我只能 " + getProductionActivity() + " "
+					+  getProductName()
+					+ " 如果你带来给我 "
 					+ getRequiredResourceNamesWithHashes(amount) + ".");
 			return false;
 		} else {
 			res.setAmount(amount);
-			npc.say("I need you to fetch me "
+			npc.say("我需要你带给我 "
 					+ getRequiredResourceNamesWithHashes(amount)
-					+ " for this job, which will take " + TimeUtil.approxTimeUntil(getProductionTime(amount)) + ". Do you have what I need?");
+					+ " for this job, which will take " + TimeUtil.approxTimeUntil(getProductionTime(amount)) + ". 你带来我需要的东西了吗?");
 			return true;
 		}
 	}
@@ -348,12 +348,12 @@ public class ProducerBehaviour extends TransactionBehaviour {
 			}
 			final long timeNow = new Date().getTime();
 			player.setQuest(questSlot, res.getAmount() + ";" + getProductName() + ";" + timeNow);
-			npc.say("OK, I will "
+			npc.say("OK, 我会 "
 					+ getProductionActivity()
 					+ " "
-					+ Grammar.quantityplnoun(res.getAmount(), getProductName(), "a")
-					+ " for you, but that will take some time. Please come back in "
-					+ getApproximateRemainingTime(player) + ".");
+					+  getProductName()
+					+ " 为你 , 但做好它需要花点时间，请等in "
+					+ getApproximateRemainingTime(player) + "后再来取.");
 			return true;
 		}
 	}
@@ -374,10 +374,10 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		// String productName = order[1];
 
 		if (!isOrderReady(player)) {
-			npc.say("Welcome back! I'm still busy with your order to "
-					+ getProductionActivity() + " " + Grammar.quantityplnoun(numberOfProductItems, getProductName(), "a")
-					+ " for you. Come back in "
-					+ getApproximateRemainingTime(player) + " to get it.");
+			npc.say("欢迎回来！我正在忙你的事 "
+					+ getProductionActivity() + " " + getProductName()
+					+ " for you. 你可以等 "
+					+ getApproximateRemainingTime(player) + " 再回来取.");
 		} else {
 			final StackableItem products = (StackableItem) SingletonRepository.getEntityManager().getItem(
 					getProductName());
@@ -389,9 +389,8 @@ public class ProducerBehaviour extends TransactionBehaviour {
 			}
 
 			if (player.equipToInventoryOnly(products)) {
-				npc.say("Welcome back! I'm done with your order. Here you have "
-					+ Grammar.quantityplnoun(numberOfProductItems,
-							getProductName(), "the") + ".");
+				npc.say("欢迎回来! 你的东西我做好了，把 "
+					+ getProductName() + " 拿走吧.");
 				player.setQuest(questSlot, "done");
 				// give some XP as a little bonus for industrious workers
 				player.addXP(numberOfProductItems);
@@ -399,9 +398,9 @@ public class ProducerBehaviour extends TransactionBehaviour {
 				player.incProducedCountForItem(getProductName(), products.getQuantity());
 				SingletonRepository.getAchievementNotifier().onProduction(player);
 			} else {
-				npc.say("Welcome back! I'm done with your order. But right now you cannot take the "
-						+ Grammar.plnoun(numberOfProductItems, getProductName())
-						+ ". Come back when you have space.");
+				npc.say("欢迎回来！你的东西我已做好，但你的背包满了，无法带走，知你背包空了时再来取 "
+						+ getProductName()
+						);
 			}
 		}
 	}

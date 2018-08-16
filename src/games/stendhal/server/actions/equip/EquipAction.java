@@ -12,7 +12,7 @@
 package games.stendhal.server.actions.equip;
 
 import games.stendhal.common.EquipActionConsts;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.actions.CommandCenter;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -43,9 +43,9 @@ public class EquipAction extends EquipmentAction {
 		if (entity instanceof Item) {
 			final Item item = (Item) entity;
 			if (item.isBound() && !player.isBoundTo(item)) {
-				player.sendPrivateText("This " + itemName
-						+ " is a special reward for " + item.getBoundTo()
-						+ ". You do not deserve to use it.");
+				player.sendPrivateText("这个 " + itemName
+						+ " 是 " + item.getBoundTo()
+						+ "的特殊奖励. 你不应该乱用.");
 				return;
 			}
 
@@ -73,7 +73,7 @@ public class EquipAction extends EquipmentAction {
 				if(entity instanceof Item) {
 					int minLevel = ((Item) entity).getMinLevel();
 					if (minLevel > player.getLevel()) {
-						player.sendPrivateText("You are not experienced enough to use this item to full benefit. You are probably better off by using an item appropriate for your level instead.");
+						player.sendPrivateText("你的经验不足以使出装备的全部功能, 最好还是使用一件符合你等级的装备");
 					}
 				}
 			}
@@ -82,9 +82,9 @@ public class EquipAction extends EquipmentAction {
 			// which aren't just a movement from one corpse to another.
 			// we could of course specifically preclude dropping into corpses, but that is undesirable.
 			if (dest.isContainerCorpse() && !source.isContainerCorpse()) {
-				player.sendPrivateText("For your information, you just dropped "
-						+ Grammar.quantityplnounWithMarker(amount,entity.getTitle(), '§')
-						+ " into a corpse next to you.");
+				player.sendPrivateText("根据你的信息, 你只是把 "
+						+ amount + entity.getTitle()
+						+ " 扔进了你身边的尸体.");
 			}
 
 			if(source.isLootingRewardable()) {

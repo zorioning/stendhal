@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.EventRaiser;
 import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.quests.IQuest;
@@ -66,7 +66,7 @@ public class BringOrderedListOfItemsQuestLogic {
 		StringBuilder all = new StringBuilder();
 		for (int i = 0; i < neededItemsWithAmounts.size(); i++) {
 			if (i != 0 && i == neededItemsWithAmounts.size() - 1) {
-				all.append(" and ");
+				all.append(" 和 ");
 			}
 			all.append(neededItemsWithAmounts.get(i));
 			if (i < neededItemsWithAmounts.size() - 2) {
@@ -124,9 +124,9 @@ public class BringOrderedListOfItemsQuestLogic {
 
 	private String neededItem(int neededAmount, String itemName, boolean withHash) {
 		if (!withHash) {
-			return Grammar.quantityplnoun(neededAmount, itemName, "a");
+			return  itemName;
 		} else {
-			return Grammar.quantityplnounWithHash(neededAmount, itemName);
+			return  itemName;
 		}
 	}
 

@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
@@ -188,10 +188,10 @@ public class Soup extends AbstractQuest {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final List<String> needed = missingFood(player, true);
 					npc.say("I need "
-							+ Grammar.quantityplnoun(needed.size(),
-									"ingredient", "one")
+							+ needed.size() +
+									"ingredient"
 							+ " before I make the soup: "
-							+ Grammar.enumerateCollection(needed)
+							+ needed
 							+ ". Will you collect them?");
 				}
 			});
@@ -261,9 +261,9 @@ public class Soup extends AbstractQuest {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final List<String> needed = missingFood(player, true);
 					npc.say("I still need "
-							+ Grammar.quantityplnoun(needed.size(),
-									"ingredient", "one") + ": "
-							+ Grammar.enumerateCollection(needed)
+							+ needed.size()+
+									"ingredient"+ ": "
+							+ needed
 							+ ". Did you bring anything I need?");
 				}
 			});
@@ -314,7 +314,7 @@ public class Soup extends AbstractQuest {
 								}
 							} else {
 								npc.say("Don't take me for a fool, traveller. You don't have "
-									+ Grammar.a_noun(itemName)
+									+ itemName
 									+ " with you.");
 							}
 						} else {
@@ -375,9 +375,9 @@ public class Soup extends AbstractQuest {
 		missing = missingFood(player, true);
 		if (!missing.isEmpty()) {
 			npc.say("You didn't have all the ingredients I need. I still need "
-							+ Grammar.quantityplnoun(missing.size(),
-									"ingredient", "one") + ": "
-							+ Grammar.enumerateCollection(missing)
+							+ missing.size() +
+									"ingredient" + ": "
+							+ missing
 							+ ". You'll get bad karma if you keep making mistakes like that!");
 			// to fix bug [ 2517439 ]
 			player.addKarma(-5.0);
@@ -414,7 +414,7 @@ public class Soup extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I'm collecting ingredients to make vegetable soup. I still need " + Grammar.enumerateCollection(missingFood(player, false)) + ".");
+				res.add("I'm collecting ingredients to make vegetable soup. I still need " + missingFood(player, false) + ".");
 			} else if(isRepeatable(player)){
 				res.add("Old Mother Helena is ready to make soup for me again!");
 			} else {

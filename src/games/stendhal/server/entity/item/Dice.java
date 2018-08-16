@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.npc.CroupierNPC;
 import games.stendhal.server.entity.player.Player;
@@ -85,7 +85,7 @@ public class Dice extends Item {
 		for (int i = 0; i < NUMBER_OF_DICE; i++) {
 			topFacesStrings.add(Integer.toString(topFaces[i]));
 		}
-		return Grammar.enumerateCollection(topFacesStrings);
+		return topFacesStrings.toString();
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class Dice extends Item {
 
 	@Override
 	public String describe() {
-		return "You see a set of dice. The top faces are "
+		return "你看到一套骰子，正面的是 "
 				+ getTopFacesString() + ".";
 	}
 }

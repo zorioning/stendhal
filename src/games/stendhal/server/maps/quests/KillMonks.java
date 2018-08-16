@@ -19,7 +19,7 @@ import java.util.List;
 
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.StackableItem;
@@ -103,7 +103,7 @@ public class KillMonks extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"My lovely wife was killed when she went to Wo'fol to order some freshmade pizza by Kroip. Some monks stepped into her way and she had no chance. Now I want revenge! May you help me?",
+				"我的爱妻去 Kroip 送新鲜 pizza时，被一些monk僧侣尾随，她没机会逃脱，最后在去Wo'fol的路上时被杀了。现在我要报仇，你能帮我吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -111,7 +111,7 @@ public class KillMonks extends AbstractQuest {
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT,"killed"),
 						 new TimePassedCondition(QUEST_SLOT, 1, MathHelper.MINUTES_IN_ONE_WEEK*2)),
 				ConversationStates.QUEST_OFFERED,
-				"Those monks are cruel and I still didn't get my revenge. May you help me again please?",
+				"这些僧侣太凶残，我无法复仇，你可能帮助我吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -119,7 +119,7 @@ public class KillMonks extends AbstractQuest {
 				new AndCondition(new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, MathHelper.MINUTES_IN_ONE_WEEK*2)), new QuestStateStartsWithCondition(QUEST_SLOT, "killed")),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, MathHelper.MINUTES_IN_ONE_WEEK*2, "These monks learned their lesson for now but I could need your help again in"));
+				new SayTimeRemainingAction(QUEST_SLOT, 1, MathHelper.MINUTES_IN_ONE_WEEK*2, "这些僧侣得到了教训，但我还需要你的再次帮助。in"));
 
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
@@ -132,14 +132,14 @@ public class KillMonks extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Thank you! Please kill 25 monks and 25 darkmonks in the name of my beloved wife.",
+				"谢谢你! 请新掉 25 monks 和 25 darkmonks 为了我已故的爱妻。",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"That is a pity... Maybe you'll change your mind soon and help a sad man then.",
+				"可怜...也许你试着改变想法，帮助这个悲伤的男人。",
 				new MultipleActions(
 				        new SetQuestAction(QUEST_SLOT, 0, "rejected"),
 				        new DecreaseKarmaAction(5)));
@@ -183,7 +183,7 @@ public class KillMonks extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new KilledForQuestCondition(QUEST_SLOT, 1)),
 				ConversationStates.ATTENDING,
-				"Thank you so much! Now I can sleep a bit better. Please take some soup.",
+				"非常感谢！现在我可以睡得安稳一点了，请拿着这些汤.",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.ATTENDING,
@@ -192,7 +192,7 @@ public class KillMonks extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new NotCondition(new KilledForQuestCondition(QUEST_SLOT, 1))),
 				ConversationStates.ATTENDING,
-				"Please help me with reaching my goal of taking revenge!",
+				"请帮我实现复仇的目标!",
 				null);
 	}
 
@@ -200,7 +200,7 @@ public class KillMonks extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Kill Monks",
-				"Andy's wife was killed by monks, now he wants revenge on them.",
+				"Andy 的妻子被僧侣杀了。现在他要为亡妻报仇。",
 				false);
 		step_1();
 		step_2();
@@ -222,16 +222,16 @@ public class KillMonks extends AbstractQuest {
 			if (!player.hasQuest(QUEST_SLOT)) {
 				return res;
 			}
-			res.add("I met Andy in Ados city. He asked me to get revenge for his wife.");
+			res.add("我在Ados城见到了Andy，他想让我为他的亡妻报仇。");
 			final String questStateFull = player.getQuest(QUEST_SLOT);
 			final String[] parts = questStateFull.split(";");
 			final String questState = parts[0];
 
 			if ("rejected".equals(questState)) {
-				res.add("I rejected his request.");
+				res.add("我拒绝了他的请求.");
 			}
 			if ("start".equals(questState)) {
-				res.add("I promised to kill 25 monks and 25 darkmonks to get revenge for Andy's wife.");
+				res.add("我答应为Andy的亡妻报仇，杀死 25 个 monks 和 25 darkmonks。");
 				if (formatted) {
 					res.addAll(howManyWereKilledFormatted(player, parts[1]));
 				} else {
@@ -240,15 +240,15 @@ public class KillMonks extends AbstractQuest {
 			}
 			if (isCompleted(player)) {
 				if(isRepeatable(player)){
-					res.add("Now, after more than two weeks, I should check on Andy again. Maybe he needs my help!");
+					res.add("现在已过了两周，我要为Andy的请求做出交待。也许他需要我的帮助!");
 				} else {
-					res.add("I've killed some monks and Andy finally can sleep a bit better!");
+					res.add("我已杀死了这些 monks ，Andy 最后也能睡得踏实了。!");
 				}
 			}
 			int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 			if (repetitions > 0) {
-				res.add("I have taken revenge for Andy "
-						+ Grammar.quantityplnoun(repetitions, "time") + " now.");
+				res.add("现在我已为Andy复仇 "
+						+ repetitions + "time 。" );
 			}
 			return res;
 	}
@@ -257,7 +257,7 @@ public class KillMonks extends AbstractQuest {
 		KillsForQuestCounter killsCounter = new KillsForQuestCounter(questState);
 		int killedMonks = 25 - killsCounter.remainingKills(player, "monk");
 		int killedDarkMonks = 25 - killsCounter.remainingKills(player, "darkmonk");
-		return "I have killed " + Grammar.quantityplnoun(killedMonks, "monk") + " and " + Grammar.quantityplnoun(killedDarkMonks, "darkmonk") + ".";
+		return "我已杀死了 " + killedMonks + "monk" + " 和 " + killedDarkMonks + "darkmonk" + ".";
 	}
 
 	private List<String> howManyWereKilledFormatted(final Player player, final String questState) {
