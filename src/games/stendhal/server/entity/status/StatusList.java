@@ -190,7 +190,7 @@ public class StatusList {
 			return;
 		}
 		immunities.remove(statusType);
-		entity.sendPrivateText("You are not immune to being " + statusType.getName() + " anymore.");
+		entity.sendPrivateText("你不再对 " + statusType.getName() + " 免疫.");
 	}
 
 	/**

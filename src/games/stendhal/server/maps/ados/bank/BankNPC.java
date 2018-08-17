@@ -51,10 +51,10 @@ public class BankNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Welcome to Ados Bank!");
-				addJob("I am the customer advisor of Ados Bank.");
-				addHelp("Our rooms contain 4 #chests of our bank and 4 chests of our affiliate in #Semos. They are available for your full use.");
-				addReply("chests", "You can find the chests in our two separated rooms. Two chests of our bank are accessible on the left side in these rooms and 2 of our affiliate in Semos at the right.");
+				addGreeting("欢迎来到 Ados 银行!");
+				addJob("我是这里的消费顾问.");
+				addHelp("我们的大厅有 4个我们自已的箱子 #chests ,和4个 #Semos 镇银行的箱子. 这些都对你开放.");
+				addReply("chests", "你可以在两个分开房间中找到我们的箱子. Two chests of our bank are accessible on the left side in these rooms and 2 of our affiliate in Semos at the right.");
 				addReply("Semos", "Our main affiliate is in Semos City. Maybe you met my chief advisor #Dagobert already. He is my personal mentor.");
 				addReply("Dagobert", "He can explain a lot about our banking system, but maybe I can explain #more to you as well if you want.");
 				addReply("more", "Visit one of our two rooms for reaching our magic chests. You can store your belongings in any of them, and nobody will be able to reach them. A number of spells have been cast on the chest areas to ensure #safety.");

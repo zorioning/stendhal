@@ -72,14 +72,14 @@ public class RingOfLife extends Item {
 	public String describe() {
 		String text;
 		if (isBroken()) {
-			text = "You see an §'emerald ring', known as the ring of life. The gleam is lost from the stone and it has no powers.";
+			text = "你看到 §'emerald ring', 看起来是生命戒指. 但上面宝石不再发光，已失去能量.";
 		} else {
-			text = "You see an §'emerald ring', known as the ring of life. Wear it, and you risk less from death.";
+			text = "你看到 §'emerald ring', 看起来是生命戒指. 戴着它，能提高生存机率。";
 		}
 
 		if (isBound()) {
-			text = text + " It is a special quest reward for " + getBoundTo()
-					+ ", and cannot be used by others.";
+			text = text + " 这是一件特殊任务中的 " + getBoundTo()
+					+ " 物品, 不能用在其它地方.";
 		}
 		return text;
 	}

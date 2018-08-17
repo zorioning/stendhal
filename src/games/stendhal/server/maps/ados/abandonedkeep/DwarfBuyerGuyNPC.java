@@ -53,23 +53,23 @@ public class DwarfBuyerGuyNPC implements ZoneConfigurator  {
 			@Override
 			public void createDialog() {
 
-				addGreeting("What do you want?");
-				addJob("I buy odds and ends. Somebody has to do it.");
-				addHelp("Look at me! I am reduced to buying trinkets! How can I help YOU?");
-				addOffer("Don't bother me unless you have something I want! Check the blackboard for prices.");
-				addQuest("Unless you want to #own this place, you cannot do anything for me.");
-				addGoodbye("Be off with you!");
-			    addReply("own", "What? Why you couldn't even begin to come up with enough money for that!");
+				addGreeting("你想要什么? #job");
+				addJob("我收购零星杂物，总要有人做这件事。#help ");
+				addHelp("看着我! 我收些小饰品! 你有吗? #offer");
+				addOffer("如果没有小东西卖给我就别烦我! 你可以看看黑板上的收购价格.");
+				addQuest("除非你想拥有 #own 这块地方, 要不然你不能对我怎么样.");
+				addGoodbye("离我远点!");
+			    addReply("own", "什么？那为什么刚开你不付钱就不能上来!");
 			    // see games.stendhal.server.maps.quests.mithrilcloak.GettingTools for further behaviour
-			    addReply("buy", "I don't sell anything but you can look at my blackboard for what I buy. Or ask about #specials.");
-			    addReply("YOU", "Yes, I am talking to YOU! Who else would I be talking to!");
+			    addReply("buy", "我不卖东西，但你可以看看黑板上我想收购的东西。或者问我特殊买卖 #specials.");
+			    addReply("YOU", "对，我在和你说话！我还能对认谁说!");
 
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buyoddsandends")), false);
 			}};
 
 			npc.setPosition(25, 32);
 			npc.setEntityClass("olddwarfnpc");
-			npc.setDescription("You see Ritati Dragontracker who buys odds end ends.");
+			npc.setDescription("你看见 Ritati Dragontracker ,他收购零星杂物.");
 			zone.add(npc);
 	}
 }

@@ -68,19 +68,19 @@ public class NineSwitchesGameBoard implements TurnListener {
 	 */
 	public void usedSwitch(RPEntity user, NineSwitchesGameSwitch gameSwitch) {
 		if (playerName == null) {
-			user.sendPrivateText(npc.getName() + ": " + user.getName() + ", please talk to me to start a game.");
+			user.sendPrivateText(npc.getName() + ": " + user.getName() + ", 请对我说开始游戏 start a game.");
 			return;
 		}
 
 		if (!user.getName().equals(playerName)) {
-			user.sendPrivateText(npc.getName() + ": Hey " + user.getName() + ", " + playerName + " is currently playing. Please wait a little.");
+			user.sendPrivateText(npc.getName() + ": Hey " + user.getName() + ", " + playerName + " 正没玩结束呢，请等一会.");
 			return;
 		}
 
 		switchGameSwitch(gameSwitch);
 		boolean completed = checkBoard();
 		if (completed) {
-			npc.say("Congratulations, " + user.getName() + " you won! Here take this balloon.");
+			npc.say("祝贺, " + user.getName() + " 你赢了! 拿走这些气球.");
 			// TODO: Remove when outfit testing finished
 			Outfit balloonOutfit;
 			balloonOutfit = new Outfit(1, null, null, null, null);
@@ -191,7 +191,7 @@ public class NineSwitchesGameBoard implements TurnListener {
 
 	@Override
 	public void onTurnReached(int currentTurn) {
-		npc.say("Sorry " + playerName + ", your time is up.");
+		npc.say("抱歉 " + playerName + ", 时间用完了.");
 		setPlayerName(null);
 		resetBoard();
 	}

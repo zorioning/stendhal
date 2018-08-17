@@ -76,7 +76,7 @@ public class ChangePlayerOutfitAction implements ChatAction {
 	@Override
 	public String toString() {
 		return "Outfit used for changing: " + outfitChange.toString()
-		+ " If false it should be romved, if true it should be added from/to the current outfit: "
+		+ " 如果 false 它将被移除，如果 true ,它会添加到当前装备,或从当前装备添加: "
 		+ addOutfit;
 	}
 

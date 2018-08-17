@@ -14,7 +14,7 @@ package games.stendhal.client.actions;
 
 import games.stendhal.client.ClientSingletonRepository;
 import games.stendhal.client.gui.chatlog.StandardEventLine;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import marauroa.common.game.RPAction;
 
 /**
@@ -59,7 +59,7 @@ class SummonAtAction implements SlashAction {
 			itemName = (params[2] + " " + remainder).trim();
 		}
 
-		final String singularName = Grammar.singular(itemName);
+		final String singularName = itemName;
 
 		summon.put("amount", amount);
 		summon.put("item", singularName);

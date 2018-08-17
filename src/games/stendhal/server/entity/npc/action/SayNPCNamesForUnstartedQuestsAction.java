@@ -65,7 +65,7 @@ public class SayNPCNamesForUnstartedQuestsAction implements ChatAction {
 	        	verb = "needs";
 	        }
 			if (npcs.size()>0) {
-	        	sb.append("In " + region + " ");
+	        	sb.append("在 " + region + " 的");
 	        	sb.append(npcs);
 	        	sb.append(" " + verb + " 你的帮助. ");
 	        } else {

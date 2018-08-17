@@ -194,12 +194,12 @@ public class Portal extends Entity implements UseListener {
 	 */
 	protected boolean usePortal(final Player player) {
 		if (!player.isZoneChangeAllowed()) {
-			player.sendPrivateText("For some reason you cannot get through right now.");
+			player.sendPrivateText("因为一些原因，你不现在不能通过.");
 			return false;
 		}
 
 		if (!nextTo(player) && has("use")) {
-			player.sendPrivateText("You must come closer before you can use this orb.");
+			player.sendPrivateText("在使用这个球之前你必须走近一点.");
 			return false;
 		}
 
@@ -208,9 +208,9 @@ public class Portal extends Entity implements UseListener {
 			// The pathfinder will do the rest of the work and make the player pass through the portal
 			// Check that mouse movement is allowed first
 			if (!player.getZone().isMoveToAllowed()) {
-				player.sendPrivateText("Mouse movement is not possible here. Use your keyboard.");
+				player.sendPrivateText("这里不能使用鼠标，请使用键盘.");
 			} else if (player.hasStatus(StatusType.POISONED)) {
-				player.sendPrivateText("Poison has disoriented you and you cannot move normally. You only seem able to walk backwards and cannot plan out any route in advance.");
+				player.sendPrivateText("中毒已让你神智混乱，你只能反向移动，而且不能用鼠标自动寻路了");
 			} else {
 				final List<Node> path = Path.searchPath(player, this.getX(), this.getY());
 				player.setPath(new FixedPath(path, false));
@@ -220,7 +220,7 @@ public class Portal extends Entity implements UseListener {
 
 		if (getDestinationZone() == null) {
 			// This portal is incomplete
-			logger.error(this + " has no destination.");
+			logger.error(this + " 没有目标.");
 			return false;
 		}
 
@@ -228,7 +228,7 @@ public class Portal extends Entity implements UseListener {
 				getDestinationZone());
 
 		if (destZone == null) {
-			logger.error(this + " has invalid destination zone: "
+			logger.error(this + " 无效的目标: "
 					+ getDestinationZone());
 			return false;
 		}
@@ -237,7 +237,7 @@ public class Portal extends Entity implements UseListener {
 
 		if (dest == null) {
 			// This portal is incomplete
-			logger.error(this + " has invalid destination identitifer: "
+			logger.error(this + " 无效的目标标识: "
 					+ getDestinationReference());
 			return false;
 		}

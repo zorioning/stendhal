@@ -58,7 +58,7 @@ public class BuyerAdder {
 					null,
 					false,
 					ConversationStates.ATTENDING,
-					"我要买 " + buyerBehaviour.dealtItems() + ".",
+					"我想买 " + buyerBehaviour.dealtItems() + ".",
 					null);
 		}
 		engine.add(ConversationStates.ATTENDING, "sell", new SentenceHasErrorCondition(),
@@ -107,7 +107,7 @@ public class BuyerAdder {
 							if (itemName.equals("sheep")) {
 								// player have no sheep...
 								if (!player.hasSheep()) {
-									raiser.say("你没有羊， " + player.getTitle() + "! What are you trying to pull?");
+									raiser.say("你没有羊， " + player.getTitle() + "! 你拉的是什么?");
 									return;
 								}
 							} else {
@@ -118,20 +118,20 @@ public class BuyerAdder {
 
 							if (price != 0) {
     							raiser.say(res.getAmount() + chosenItemName
-    									+ " " + res.getAmount() + " worth "
-    									+ price + ". Do you want to sell "
+    									+ " " + res.getAmount() + " 价值 "
+    									+ price + ". 你要卖出 "
     									+ res.getAmount() + "?");
 
     							currentBehavRes = res;
     							npc.setCurrentState(ConversationStates.SELL_PRICE_OFFERED); // success
 							} else {
-								raiser.say("Sorry, "
+								raiser.say("抱歉, "
 										+ res.getAmount() + " "
 										+ chosenItemName
-    									+ " " + res.getAmount() + " worth nothing.");
+    									+ " 不值钱worth nothing.");
 							}
 						} else {
-							raiser.say("Sorry, how many " + chosenItemName + " do you want to sell?!");
+							raiser.say("抱歉，你要卖出多少 " + chosenItemName + " ?");
 						}
 					}
 				});
@@ -156,7 +156,7 @@ public class BuyerAdder {
 		engine.add(ConversationStates.SELL_PRICE_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				false,
-				ConversationStates.ATTENDING, "Ok, then how else may I help you?", null);
+				ConversationStates.ATTENDING, "Ok, 还有什么事吗？", null);
 	}
 
 }

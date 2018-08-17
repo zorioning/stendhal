@@ -126,14 +126,14 @@ public class WeddingRing extends Item {
 	private boolean teleportToSpouse(final Player player) {
 		// check if pets and sheep are near
 		if (!player.isZoneChangeAllowed()) {
-			player.sendPrivateText("You were told to watch your pet, weren't you?");
+			player.sendPrivateText("你是在对着你的宠物说话，对吗？");
 			return false;
 		}
 
 		final String spouseName = getInfoString();
 
 		if (spouseName == null) {
-			player.sendPrivateText("This wedding ring hasn't been engraved yet.");
+			player.sendPrivateText("这个婚戒还没有刻上名字.");
 			logger.debug(player.getName()
 					+ "tried to use a wedding ring without a spouse name engraving.");
 			return false;
@@ -141,7 +141,7 @@ public class WeddingRing extends Item {
 
 		final Player spouse = SingletonRepository.getRuleProcessor().getPlayer(spouseName);
 		if (spouse == null) {
-			player.sendPrivateText(spouseName + " is not online.");
+			player.sendPrivateText(spouseName + " 不在线上.");
 			return false;
 		}
 
@@ -153,14 +153,14 @@ public class WeddingRing extends Item {
 
 			if (weddingRing.getInfoString() == null) {
 				// divorced with ring and engaged again
-				player.sendPrivateText("Sorry, "
+				player.sendPrivateText("抱歉, "
 						+ spouseName
-						+ " has divorced you and is now engaged to someone else.");
+						+ " 已和你离婚，并与其他人订了婚.");
 				return false;
 			} else if (!(weddingRing.getInfoString().equals(player.getName()))) {
 				// divorced and remarried
 				player.sendPrivateText("Sorry, " + spouseName
-						+ " has divorced you and is now remarried.");
+						+ " 已和你离婚，并且马上又再婚了.");
 
 				return false;
 			}
@@ -168,21 +168,21 @@ public class WeddingRing extends Item {
 		} else {
 			// This means trouble ;)
 			player.sendPrivateText(spouseName
-					+ " is not wearing the wedding ring.");
+					+ " 没有带着婚戒.");
 			return false;
 		}
 
 		final int secondsNeeded = getLastUsed() + getCoolingPeriod(player, spouse) - (int) (System.currentTimeMillis() / 1000);
 		if (secondsNeeded > 0) {
-			player.sendPrivateText("The ring has not yet regained its power. You think it might be ready in "
-					+ TimeUtil.approxTimeUntil(secondsNeeded) + ".");
+			player.sendPrivateText("戒指还没有恢复能量，你觉得它可能在 "
+					+ TimeUtil.approxTimeUntil(secondsNeeded) + "时间后恢复.");
 
 			return false;
 		}
 
 		final StendhalRPZone sourceZone = player.getZone();
 		if (!sourceZone.isTeleportOutAllowed(player.getX(), player.getY())) {
-			player.sendPrivateText("The strong anti magic aura in this area prevents the wedding ring from working!");
+			player.sendPrivateText("这个地区强列的反魔法环境阻止了婚戒的正常使用!");
 			return false;
 		}
 
@@ -190,15 +190,15 @@ public class WeddingRing extends Item {
 		final int x = spouse.getX();
 		final int y = spouse.getY();
 		if (!destinationZone.isTeleportInAllowed(x, y)) {
-			player.sendPrivateText("The strong anti magic aura in the destination area prevents the wedding ring from working!");
+			player.sendPrivateText("目的地的有强列的反魔法环境，阻止了婚戒的正常使用!");
 			return false;
 		}
 
 		final String zoneName =  destinationZone.getName();
 		// check if player has visited zone before
 		if (player.getKeyedSlot("!visited", zoneName) == null) {
-			player.sendPrivateText("Although you have heard a lot of rumors about the destination, "
-								+ "you cannot join " + spouseName + " there because it is still an unknown place for you.");
+			player.sendPrivateText("尽管你听说了那里的很多传闻, "
+								+ "但你不能在那里加入 " + spouseName + " ,因为对你来说那里是个未知的地方.");
 			return false;
 		}
 
@@ -218,10 +218,10 @@ public class WeddingRing extends Item {
 		final String spouseName = getInfoString();
 
 		if (spouseName != null) {
-			return "You see a §'wedding ring'. Its engraving says: \"In eternal love to "
-					+ spouseName + "\".";
+			return "你看到一个 §'wedding ring'. 上面雕刻着: \"致 "
+					+ spouseName + "\"永恒的爱.";
 		} else {
-			return "You see a §'wedding ring'.";
+			return "你看到 §'wedding ring'.";
 		}
 	}
 
@@ -290,7 +290,7 @@ public class WeddingRing extends Item {
 				for (final Player player : zone.getPlayers()) {
 					if (player.nextTo(container)) {
 						player.sendPrivateText(NotificationType.SCENE_SETTING,
-						"There's a flash of light when a wedding ring disintegrates in a magical conflict.");
+						"在婚戒分解成交织的魔法后出现一道闪光.");
 					}
 				}
 			}

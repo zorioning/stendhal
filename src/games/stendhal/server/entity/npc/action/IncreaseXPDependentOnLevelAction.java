@@ -57,7 +57,7 @@ public class IncreaseXPDependentOnLevelAction implements ChatAction {
 
 	@Override
 	public String toString() {
-		return "IncreaseXPDependentOnLevel <" + xpDiff + ","+karmabonus+">";
+		return "依等级增加经验 <" + xpDiff + ","+karmabonus+">";
 	}
 
 	@Override

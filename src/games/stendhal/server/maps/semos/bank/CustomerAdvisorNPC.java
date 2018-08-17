@@ -58,17 +58,17 @@ public class CustomerAdvisorNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Welcome to the bank of Semos! I am here to #help you manage your personal chest.");
-				addHelp("Follow the corridor to the right, and you will find the magic chests. You can store your belongings in any of them, and nobody else will be able to touch them! A number of spells have been cast on the chest areas to ensure #safety.");
-				addReply("safety", "When you are standing at a chest to organise your items, any other people or animals will not be able to come near you. A magical aura stops others from using scrolls to arrive near you. You will need to walk out. Lastly let me tell you about safe #trading.");
-				addReply("trading", "To start a trade with another player, right-click on them and select 'Trade'. If they also want to trade with you, you'll see a window pop up where you can drag items to offer, and see what is being offered to you. Both click Offer, and then you both need to Accept the offer to complete the trade.");
-				addJob("I'm the Customer Advisor here at Semos Bank.");
-				addOffer("If you wish to access your personal chest in solitude, I can give you access to a private #vault. A guidebook inside will explain how it works.");
-				addGoodbye("It was a pleasure to serve you.");
+				addGreeting("欢迎来到 Semos 银行! 我在这里为你服务。 #help 帮助管理你的个人物品箱.");
+				addHelp("顺着走廊向右走，你会发现特殊的物品箱。你可以把你的随身物品放进里面，其他人却不能碰！箱子区域布了阵法保障存取人的安全 #safety.");
+				addReply("safety", "当你站在箱子旁整理物品时，其他人或动物都不能走到你附近。一种魔法阵会阻止其他对你施法想靠近你的人。当你需要离开，下面我会告诉你关于一些安全交易的事 #trading.");
+				addReply("trading", "要和另一个玩家交易时，鼠标右键点击他，选择交易 'Trade'. 如果他们也想与你交易，你会看到一个弹出窗口，你可以把需要交易的物品拖进里面。也能看到对方给你的东西。双方点击 Offer ，这时需要你们双方同意 offer ,交易完成。");
+				addJob("我是 Semos 镇银行的客服经理.");
+				addOffer("如果你希望单独访问你的个人仓库，我能给你一个私人仓库 #vault. 里面的指南手册会解释它是如何工作的。");
+				addGoodbye("很荣幸人您服务.");
 				add(ConversationStates.ANY, "vault", new QuestCompletedCondition("armor_dagobert"), ConversationStates.IDLE, null,
 						new MultipleActions(new PlaySoundAction("keys-1", true), new VaultChatAction()));
 
-				add(ConversationStates.ANY, "vault", new QuestNotCompletedCondition("armor_dagobert"), ConversationStates.ATTENDING, "Perhaps you could do a #favour for me, and then I will tell you more about the private banking vaults.", null);
+				add(ConversationStates.ANY, "vault", new QuestNotCompletedCondition("armor_dagobert"), ConversationStates.ATTENDING, "或许你能够为我帮忙 #favour , 那时我会告诉你更多关于私人银行仓库的东西。", null);
 
 				// remaining behaviour defined in games.stendhal.server.maps.quests.ArmorForDagobert
 			}
@@ -81,7 +81,7 @@ public class CustomerAdvisorNPC implements ZoneConfigurator {
 		};
 		npc.setPosition(9, 23);
 		npc.setDirection(Direction.DOWN);
-		npc.setDescription("You see Dagobert. He looks like a safe, dependable type.");
+		npc.setDescription("你见到了 Dagobert. 他看起来是个值得信赖的类型.");
 		npc.setHP(95);
 		npc.setEntityClass("youngnpc");
 		zone.add(npc);

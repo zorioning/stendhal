@@ -79,14 +79,14 @@ public class BlacksmithAssistantNPC implements ZoneConfigurator  {
 						new AndCondition(new GreetingMatchesNameCondition(getName()),
 								new QuestNotStartedCondition("meet_hackim")),
 				        ConversationStates.ATTENDING,
-				        "Hi stranger, I'm Hackim Easso, the blacksmith's assistant. Have you come here to buy weapons?",
+				        "Hi 陌生人，我是 Hackim Easso, 铁匠铺的助理，你来这是想买些武器吗？",
 				        new SetQuestAction("meet_hackim","start"));
 
-				addGreeting(null, new SayTextAction("Hi again, [name]. How can I #help you this time?"));
+				addGreeting(null, new SayTextAction("Hi 又见面了, [name]. 现在能帮我个忙吗 #help ?"));
 
-				addHelp("I'm the blacksmith's assistant. Tell me... Have you come here to buy weapons?");
-				addJob("I help Xoderos the blacksmith to make weapons for Deniran's army. I mostly only bring the coal for the fire and put the weapons up on the shelves. Sometimes, when Xoderos isn't looking, I like to use one of the swords to pretend I'm a famous adventurer!");
-				addOffer("You might ask Xoderos. He sells some of his selfmade weapons.");
+				addHelp("我是铁匠铺的助理，告诉我...你来这是要买武器吗？");
+				addJob("我帮助 Xoderos 在铁匠铺为 Deniran 的军队制作武器. 我大部分工作是给火添煤，或者把武器放到架子上。偶尔当 Xoderos 不注意时，我喜欢用其中一把剑，假装是一个著名的冒险家!");
+				addOffer("你可以问问 Xoderos. 他销售一些自制武器.");
 				addGoodbye();
 			}
 
@@ -94,7 +94,7 @@ public class BlacksmithAssistantNPC implements ZoneConfigurator  {
 		npc.setPosition(5, 2);
 		npc.setCollisionAction(CollisionAction.REVERSE); // prevent trapping players
 		npc.setEntityClass("naughtyteennpc");
-		npc.setDescription("You see Hackim Easso, the blacksmiths assistant.");
+		npc.setDescription("你见到了 Hackim Easso, Semon 铁匠铺的助手");
 		zone.add(npc);
 	}
 }

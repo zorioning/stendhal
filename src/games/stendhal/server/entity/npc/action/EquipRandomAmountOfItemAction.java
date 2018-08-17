@@ -78,7 +78,7 @@ public class EquipRandomAmountOfItemAction implements ChatAction {
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 		if ( (increment <= 0) || ((increment > max) && ((increment > min)) ) ){
-			logger.error("Increment value '" + increment + "' is invalid when max is '" + max + "'.", new Throwable());
+			logger.error("增加值 '" + increment + "' 无效，因最大值是 '" + max + "'.", new Throwable());
 		} else if ((min <= 0) || (max <= 0)){
 			logger.error("Invalid min/max values '" + min + "', '" + max + "'.", new Throwable());
 		} else{
@@ -99,13 +99,13 @@ public class EquipRandomAmountOfItemAction implements ChatAction {
 	@Override
 	public String toString() {
 		final StringBuilder sb = new StringBuilder();
-		sb.append("equip stackable item: ");
+		sb.append("准备 stackable 物品: ");
 		sb.append(item);
-		sb.append(" in random quantity range <");
+		sb.append(" 在随机数<");
 		sb.append(min);
 		sb.append(", ");
 		sb.append(max);
-		sb.append(">");
+		sb.append(">范围内取值");
 		return sb.toString();
 	}
 

@@ -26,7 +26,7 @@ public class MovementSourceIsHomeValidator implements MoveValidator {
 	@Override
 	public boolean validate(GameBoard board, Player player, BoardToken token, int xIndex, int yIndex) {
 		if (!token.wasMovedFromHomeInLastMove()) {
-			player.sendPrivateText("You can only move tokens that are on the pile outside the game board.");
+			player.sendPrivateText("你只能移动游戏面板外在桩上的代币.");
 			return false;
 		}
 		return true;

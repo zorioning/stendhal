@@ -26,7 +26,7 @@ public class GameIsActiveValidator implements MoveValidator {
 	@Override
 	public boolean validate(GameBoard board, Player player, BoardToken token, int xIndex, int yIndex) {
 		if (!board.isGameActive()) {
-			player.sendPrivateText("Please start the game first by talking to " + board.getNPCName() + ".");
+			player.sendPrivateText("请先和 " + board.getNPCName() + " 说开始游戏 start the game .");
 			return false;
 		}
 		return true;

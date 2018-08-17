@@ -83,12 +83,12 @@ public class BakerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				// addGreeting("Hi, most of the people are out of town at the moment.");
-				addJob("I'm the local baker. Although we get most of our supplies from Semos City, there is still a lot of work to do.");
+				addJob("我是本地的面包师. 尽管我们得到 Semos 镇的很多支援，但还是有很多的工作要做。");
 				addReply(Arrays.asList("flour", "meat", "carrot"),
-				        "Ados is short on supplies. We get most of our food from Semos City which is west of here.");
+				        "Ados 供应短缺，我们要从西边的 Semos 镇取得大多数的食物.");
 				addReply(Arrays.asList("mushroom", "button mushroom"),
-					    "We got complaints that our pies are not filling enough, so we put more mushrooms in now. You can find them in woods.");
-				addHelp("If you have plenty of meat or cheese you can sell it to Siandra in Ados bar.");
+					    "我们抱怨我们的 pies 不够吃，所以我们现在只能吃点 mushroom 蘑菇充饥。你可以在森林中找到一些.");
+				addHelp("如果你有足够多的肉或干酪，可以云 Ados 酒吧找 Siandra 卖掉一些换钱.");
 				addGoodbye();
 
 				// Arlindo makes pies if you bring him flour, meat, carrot and a mushroom
@@ -103,7 +103,7 @@ public class BakerNPC implements ZoneConfigurator {
 				        requiredResources, 7 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Hi! I bet you've heard about my famous pie and want me to #make one for you, am I right?");
+				        "Hi! 我敢说你一定听过本店有名的馅饼 #pie ，想要我给你做一个吗？ #make ");
 			}
 		};
 
@@ -111,7 +111,7 @@ public class BakerNPC implements ZoneConfigurator {
 		baker.setDirection(Direction.DOWN);
 		baker.setPosition(15, 3);
 		baker.initHP(100);
-		baker.setDescription("Arlindo is the official Ados baker who is popular for his excellent pies.");
+		baker.setDescription("Arlindo 是 Ados 官方 面包师，他制作的馅饼 pies 远近闻名.");
 		zone.add(baker);
 	}
 

@@ -692,8 +692,8 @@ public class Item extends PassiveEntity implements TurnListener, EquipListener,
 		final String boundTo = getBoundTo();
 
 		if (boundTo != null) {
-			text = text + " 这是特别奖励,因为 " + boundTo
-					+ ", 它不能用于别处.";
+			text = text + " 这是 " + boundTo
+					+ "的任务用品, 不能用于别处.";
 		}
 
 		if (has("atk")) {

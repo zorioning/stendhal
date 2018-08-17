@@ -30,7 +30,7 @@ import games.stendhal.client.gui.SlotGrid;
 import games.stendhal.client.gui.layout.SBoxLayout;
 import games.stendhal.client.gui.layout.SLayout;
 import games.stendhal.common.TradeState;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * The trading window. Panels for each of the trader's trading slots and
@@ -160,7 +160,7 @@ class TradingWindow extends InternalManagedWindow {
 	 */
 	void setPartnerName(String name) {
 		setTitle("Trading with " + name);
-		partnersOfferLabel.setText(Grammar.suffix_s(name) + " offer");
+		partnersOfferLabel.setText(name + " offer");
 	}
 
 	/**

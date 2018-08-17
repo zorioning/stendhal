@@ -25,16 +25,16 @@ public class RepairingBehaviourAction extends AbstractBehaviourAction<RepairerBe
 			Sentence sentence, EventRaiser npc) {
 		String chosen = res.getChosenItemName();
 		if(behaviour.canDealWith(chosen)) {
-			npc.say("repairing will cost x money");
+			npc.say("修好要花些钱");
 		} else {
-			npc.say("I am sorry, but I am not able to repair your " + res.getChosenItemName() + ".");
+			npc.say("抱歉，我不能修好你的 " + res.getChosenItemName() + ".");
 		}
 	}
 
 	@Override
 	public void fireRequestError(ItemParserResult res, Player player,
 			Sentence sentence, EventRaiser npc) {
-		npc.say("I am sorry, I could not understand you.");
+		npc.say("抱歉，你说的我不太明白.");
 	}
 
 }

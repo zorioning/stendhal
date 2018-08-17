@@ -63,7 +63,7 @@ public class DropItemAction implements ChatAction {
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 		final boolean res = player.drop(itemName, amount);
 		if (!res) {
-			logger.error("Cannot drop " + amount + " " + itemName,
+			logger.error("不能扔掉 " + amount + " " + itemName,
 					new Throwable());
 		}
 		player.notifyWorldAboutChanges();
@@ -71,7 +71,7 @@ public class DropItemAction implements ChatAction {
 
 	@Override
 	public String toString() {
-		return "drop item <" + amount + " " + itemName + ">";
+		return "扔掉 <" + amount + "个" + itemName + ">";
 	}
 
 	@Override

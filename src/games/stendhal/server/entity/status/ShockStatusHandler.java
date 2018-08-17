@@ -35,9 +35,9 @@ public class ShockStatusHandler implements StatusHandler<ShockStatus> {
 			RPEntity entity = statusList.getEntity();
 			if (entity != null) {
 				if (attacker == null) {
-					entity.sendPrivateText(NotificationType.SCENE_SETTING, "You are shocked.");
+					entity.sendPrivateText(NotificationType.SCENE_SETTING, "你被震慑了.");
 				} else {
-					entity.sendPrivateText(NotificationType.SCENE_SETTING, "You have been shocked by " + attacker.getName() + ".");
+					entity.sendPrivateText(NotificationType.SCENE_SETTING, "你被 " + attacker.getName() + "震慑了.");
 				}
 			}
 		}
@@ -74,7 +74,7 @@ public class ShockStatusHandler implements StatusHandler<ShockStatus> {
 		if (nextStatus != null) {
 			TurnNotifier.get().notifyInSeconds(60, new StatusRemover(statusList, nextStatus));
 		} else {
-			entity.sendPrivateText(NotificationType.SCENE_SETTING, "You are no longer shocked.");
+			entity.sendPrivateText(NotificationType.SCENE_SETTING, "你已从震慑中恢复正常.");
 			entity.remove("status_" + status.getName());
 		}
 	}

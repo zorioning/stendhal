@@ -45,7 +45,7 @@ public class IncreaseXPAction implements ChatAction {
 
 	@Override
 	public String toString() {
-		return "IncreaseXP <" + xpDiff + ">";
+		return "增加经验 <" + xpDiff + ">";
 	}
 
 	@Override

@@ -320,7 +320,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 			res.setAmount(amount);
 			npc.say("我需要你带给我 "
 					+ getRequiredResourceNamesWithHashes(amount)
-					+ " for this job, which will take " + TimeUtil.approxTimeUntil(getProductionTime(amount)) + ". 你带来我需要的东西了吗?");
+					+ " ,这个事要花 " + TimeUtil.approxTimeUntil(getProductionTime(amount)) + "的时间. 你带来我需要的东西了吗?");
 			return true;
 		}
 	}
@@ -339,7 +339,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		if (getMaximalAmount(player) < res.getAmount()) {
 			// The player tried to cheat us by placing the resource
 			// onto the ground after saying "yes"
-			npc.say("Hey! I'm over here! You'd better not be trying to trick me...");
+			npc.say("Hey! 我在这边！你最好不要忽悠我...");
 			return false;
 		} else {
 			for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerItem().entrySet()) {

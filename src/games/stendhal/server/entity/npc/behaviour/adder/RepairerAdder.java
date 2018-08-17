@@ -70,7 +70,7 @@ public class RepairerAdder {
 
 		engine.add(ConversationStates.ATTENDING,
 				ConversationPhrases.OFFER_MESSAGES, null,
-				false, ConversationStates.ATTENDING, "I can #repair items for you.", null);
+				false, ConversationStates.ATTENDING, "我可以为你修好它.", null);
 
 		ChatAction behaviourAcceptedAction =new ChatAction() {
 			@Override
@@ -87,7 +87,7 @@ public class RepairerAdder {
 		engine.add(ConversationStates.REPAIR_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				false, ConversationStates.ATTENDING,
-				"OK, how else may I help you?", null);
+				"OK, 还有别的事吗?", null);
 	}
 
 }

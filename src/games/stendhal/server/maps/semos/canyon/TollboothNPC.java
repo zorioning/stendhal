@@ -51,11 +51,11 @@ public class TollboothNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-			    addGreeting("Hello, If you want to cross the bridge to #Antum you need to #pay " + REQUIRED_COINS + " gold coins?");
-				addHelp("If you want to cross the bridge to #Antum you need to #pay " + REQUIRED_COINS + " gold coins.");
-				addJob("I guard this bridge which connects Semos and Antum.");
+			    addGreeting("Hello, 如果你想过桥去对面的 #Antum ,你需要支付 #pay " + REQUIRED_COINS + " 金币.");
+				addHelp("如果你想过桥去对面的 #Antum ,你需要支付 #pay " + REQUIRED_COINS + " 金币.");
+				addJob("我守护这座连接着 Semos 和 Antum.");
 				addGoodbye("Farewell.");
-				addReply("antum", "Antum is awesome.");
+				addReply("antum", "Antum 是圣地.");
 
 			}
 
@@ -70,7 +70,7 @@ public class TollboothNPC implements ZoneConfigurator  {
                 Arrays.asList("pay"),
                 new PlayerHasItemWithHimCondition("money", 25),
                 ConversationStates.IDLE,
-                "There is no charge to return to Semos. Just use the gate.",
+                "返回 Smons 不用付费，只用走过大门就行.",
                 new MultipleActions(new DropItemAction("money", 25),
                         new TeleportAction("0_semos_canyon", 36, 29, Direction.UP))
                 );
@@ -80,14 +80,14 @@ public class TollboothNPC implements ZoneConfigurator  {
                 Arrays.asList("pay"),
                 new NotCondition(new PlayerHasItemWithHimCondition("money", 25)),
                 ConversationStates.ATTENDING,
-                "I'm sorry, you do not have enough money.",
+                "我很抱歉，你的钱不够.",
                 null
                 );
 
         npc.setPosition(37, 30);
         npc.setDirection(Direction.LEFT);
         npc.setEntityClass("youngsoldiernpc");
-        npc.setDescription("You see the tollbooth operator.");
+        npc.setDescription("你见到了 大桥收费站的人员 Toller .");
         zone.add(npc);
 	}
 }

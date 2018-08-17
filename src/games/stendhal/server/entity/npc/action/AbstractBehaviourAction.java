@@ -62,7 +62,7 @@ abstract class AbstractBehaviourAction<B extends Behaviour> implements ChatActio
 	 * @param npc
 	 */
 	public void fireSentenceError(Player player, Sentence sentence, EventRaiser npc) {
-		npc.say("Sorry, I did not understand you. " + sentence.getErrorString());
+		npc.say("抱歉，我不太明白 " + sentence.getErrorString());
 	}
 
 	/**

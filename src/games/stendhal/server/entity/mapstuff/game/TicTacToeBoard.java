@@ -37,7 +37,7 @@ public class TicTacToeBoard extends GameBoard implements TokenMoveListener<Board
 		put("class", "tictactoe");
 		board = new BoardToken[3][3];
 		tokenTypes = Arrays.asList("x board token", "o board token");
-		setDescription("You see a game board for Tic Tac Toe.");
+		setDescription("这是 Tic Tac Toe 的游戏面板");
 	}
 
 	public void addToWorld() {
@@ -73,13 +73,13 @@ public class TicTacToeBoard extends GameBoard implements TokenMoveListener<Board
 
 	private void checkBoardStatus() {
 		if (checkForWin()) {
-			npc.say("Congratulations! " + players.get(currentPlayerIndex) + " won this game.");
+			npc.say("祝贺! " + players.get(currentPlayerIndex) + " 赢了这场游戏.");
 			endGame();
 			return;
 		}
 
 		if (checkForTie()) {
-			npc.say("I am sorry, it looks like nobody won this round.");
+			npc.say("抱歉，这个回合无人胜出.");
 			endGame();
 			return;
 		}

@@ -88,7 +88,7 @@ public class RentedSign extends Sign implements StorableEntity {
 		// a fixed timestamp is meaningless for players from
 		// other timezones.
 		final int seconds = (int) ((System.currentTimeMillis() - getTimestamp()) / 1000);
-		text = text + "\nThis sign was rented by " + get(RENTER) + " " + TimeUtil.approxTimeUntil(seconds) + " ago.";
+		text = text + "\n上面标的是 "+ TimeUtil.approxTimeUntil(seconds) + " 之前 " + get(RENTER) + " 的收入 " ;
 		return text;
 	}
 
