@@ -156,10 +156,10 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 			@Override
 			public void createDialog() {
 				addGreeting();
-				addJob("I buy sheep here in Semos, then I send them up to Ados where they are exported.");
-				addHelp("I purchase sheep, at what I think is a fairly reasonable price. Just say if you want to #sell #sheep, and I will set up a deal!");
+				addJob("我在 Semos 收购羊，然后把羊出口到 Ados 城。");
+				addHelp("我收购羊,但要公平合理的价格。有羊的话，你只需要对我说卖羊 #sell #sheep, 我会马上处理!");
 				addGoodbye();
-				addQuest("Hmm I need a present for my friend. Maybe you can ask Nishiya for a nice idea...");
+				addQuest("Hmm 我要给我朋友引见一下，或许你问问 Nishiya ,他可以给你出点主意...");
 			}
 
 			@Override
@@ -181,7 +181,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 		npc.setPosition(40, 45);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.setEntityClass("buyernpc");
-		npc.setDescription("You see Sato. He loves sheep.");
+		npc.setDescription("你看到了 Sato. 他只喜爱羊.");
 		npc.setSounds(Arrays.asList("hiccup-1", "sneeze-1"));
 		zone.add(npc);
 	}
@@ -214,12 +214,12 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 
 			if (sheep != null) {
 				if (seller.getEntity().squaredDistance(sheep) > 5 * 5) {
-					seller.say("I can't see that sheep from here! Bring it over so I can assess it properly.");
+					seller.say("附近没有看到你的羊！把羊带过来，我好给你出个价.");
 				} else if (getValue(res, sheep) < SheepSellerNPC.BUYING_PRICE) {
 					// prevent newbies from selling their sheep too early
-					seller.say("Nah, that sheep looks too skinny. Feed it with red berries, and come back when it has become fatter.");
+					seller.say("Nah, 那只羊太瘦了。多给它喂点红树莓, 把它喂肥点再过来吧.");
 				} else {
-					seller.say("Thanks! Here is your money.");
+					seller.say("谢谢！这是你的钱.");
 					payPlayer(res, player);
 					player.removeSheep(sheep);
 
@@ -234,7 +234,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 					return true;
 				}
 			} else {
-				seller.say("You don't have any sheep, " + player.getTitle() + "! What are you trying to pull?");
+				seller.say("你根本没有羊，" + player.getTitle() + "! 你还在假装拉什么过来?");
 			}
 
 			return false;

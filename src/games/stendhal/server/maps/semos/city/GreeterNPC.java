@@ -39,8 +39,8 @@ public class GreeterNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Monogenes") {
 			@Override
 			public void createDialog() {
-				addJob("I'm Diogenes' older brother and I don't actually remember what I used to do... I'm retired now.");
-				addOffer("I give directions to #buildings in Semos, to help newcomers settle in. When I'm in a bad mood I sometimes give misleading directions to amuse myself... hee hee hee! Of course, sometimes I get my wrong directions wrong and they end up being right after all! Ha ha!");
+				addJob("我是 Diogenes 的大哥，我也不记得我以前是做什么的了...我现在退休了.");
+				addOffer("我在 Semos 镇做地标 #buildings 指引员。帮助新来的移民指路。当我心情不好时，也会故意指错路逗自已开心。。。呵呵呵！当然，有时我指的错路，他们最终还是找到正确的路，哈哈哈!");
 				// All further behaviour is defined in quest classes.
 			}
 
@@ -54,7 +54,7 @@ public class GreeterNPC implements ZoneConfigurator {
 		};
 		npc.setPosition(27, 43);
 		npc.setEntityClass("oldmannpc");
-		npc.setDescription("You see Monogenes. He looks really ancient, perhaps he knows a thing or two...");
+		npc.setDescription("你见到了 Monogenes. 他看起来很苍老。可能他还知道一两件事...");
 		npc.setDirection(Direction.LEFT);
 		zone.add(npc);
 	}

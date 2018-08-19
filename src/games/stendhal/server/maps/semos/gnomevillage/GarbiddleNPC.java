@@ -57,12 +57,12 @@ public class GarbiddleNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Welcome to our wonderful village.");
-				addJob("I'm here to buy supplies for a rainy day.");
-				addHelp("I buy several things. Please read the sign to see what we need.");
-				addOffer("Read the sign to see what we need.");
-				addQuest("Thanks for asking, but I am fine.");
-				addGoodbye("Bye now. So glad you stopped in to visit us.");
+				addGreeting("欢迎来到我们的精彩农庄.");
+				addJob("我在雨季时收购些物资.");
+				addHelp("我收购几种商品，请在标识牌中看看我的需求.");
+				addOffer("读这个标识，能看到我们的需求.");
+				addQuest("谢谢关心，但我很好.");
+				addGoodbye("再见，很高兴你停下拜访我们。");
  				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buy4gnomes")), false);
 			}
 		};
@@ -70,7 +70,7 @@ public class GarbiddleNPC implements ZoneConfigurator {
 		garbiddle.setEntityClass("gnomenpc");
 		garbiddle.setPosition(37, 112);
 		garbiddle.initHP(100);
-		garbiddle.setDescription("You see Garbiddle, the tiny gnome lady. She waits for customers.");
+		garbiddle.setDescription("你看见 Garbiddle, 长的很精致的侏儒女士. 她等着顾客上门");
 		zone.add(garbiddle);
 	}
 }

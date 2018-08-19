@@ -71,7 +71,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 						new AndCondition(new GreetingMatchesNameCondition(getName()),
 								new QuestNotStartedCondition(QUEST_SLOT)),
 						ConversationStates.ATTENDING,
-				        "Hi. I bet you've been sent here to learn about adventuring from me. First, lets see what you're made of. Go and kill a rat outside, you should be able to find one easily. Do you want to learn how to attack it, before you go?",
+				        "Hi. 我敢打赌，你曾经被送到这向我学过冒险课程，首先，让我看看你是什么做的，去杀了外面的老鼠，你应该可以轻松的找到一只；走之前，要学学如何攻击它吗？?",
 						new MultipleActions(actions));
 
 			   	add(ConversationStates.IDLE,
@@ -80,11 +80,11 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 								new QuestCompletedCondition(QUEST_SLOT),
 								new NotCondition(new QuestActiveCondition(BeerForHayunn.QUEST_SLOT))),
 						ConversationStates.ATTENDING,
-						"Hi again, how can I #help you this time?",
+						"又见面了，这次我能帮你点什么忙？ #help",
 						null);
 
-				addHelp("As I say, I'm a retired adventurer, and now I teach people. Do you want me to teach you what I know?");
-				addJob("My job was to guard the people of Semos from any creature that might escape from vile dungeons. I have now retired, and with all our young people away battling Blordrough's evil legions to the south, the monsters down there are getting more confident about coming to the surface. Semos will need help from people like your good self. Ask the Mayor for what task he needs doing.");
+				addHelp("像我说的，我是一个退休的冒险者，现在教新玩家，你想知道哪些?我可以教你");
+				addJob("我的工作是指导 Semos 镇的人们怎样从地牢中的怪物口中逃脱。我现在退休了。和我们所有的年轻人去南方和邪恶的 Blordrough 军团战斗。一些怪物野心膨胀，从下面跑出了地面。Semos 需要像你一样善良的人帮助. 你可以向城主问问有什么任务需要去做。");
 				addGoodbye();
 				// further behaviour is defined in quests.
 			}
@@ -104,7 +104,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 		npc.setPosition(4, 9);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.setEntityClass("oldheronpc");
-		npc.setDescription("You see Hayunn Naratha. Beneath his grey hair and tatty armor you see glinting clever eyes and wiry muscles.");
+		npc.setDescription("你见到 Hayunn Naratha. 在他灰色的头发和破旧的盔甲下面，有着锐利的目光和结实的肌肉");
 		npc.setBaseHP(100);
 		npc.setHP(85);
 		zone.add(npc);
