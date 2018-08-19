@@ -76,21 +76,21 @@ public class SignLessorNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Hi, I #rent signs and #remove outdated ones.");
-				addJob("I #rent signs for a day.");
-				addHelp("If you want to #rent a sign, just tell me what I should write on it.");
+				addGreeting("Hi, 我出租 #rent 标识，同时也移除 #remove 旧标识.");
+				addJob("一次出租 #rent 标识一天.");
+				addHelp("如果你想阻用 #rent 一个标识, 只用告诉我需要写的标识名字.");
 				setPlayerChatTimeout(CHAT_TIMEOUT);
 
 				add(ConversationStates.ATTENDING, "",
 					new AndCondition(getRentMatchCond(), new LevelLessThanCondition(6)),
 					ConversationStates.ATTENDING,
-					"Oh sorry, I don't rent signs to people who have so little experience as you.",
+					"Oh 抱歉，我不给经验像你一样少的人提供标识出租服务。",
 					null);
 
 				add(ConversationStates.ATTENDING, "",
 					new AndCondition(getRentMatchCond(), new LevelGreaterThanCondition(5), new NotCondition(new TextHasParameterCondition())),
 					ConversationStates.ATTENDING,
-					"Just tell me #rent followed by the text I should write on it.",
+					"只要告诉我你想租用 #rent ，接下来再告诉我需要写的标识名字。",
 					null);
 
 				add(ConversationStates.ATTENDING, "",
@@ -102,10 +102,10 @@ public class SignLessorNPC implements ZoneConfigurator {
 						public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 							text = sentence.getOriginalText().substring(5).trim();
 
-							String reply = "A sign costs " + MONEY + " money for 24 hours. Do you want to rent one?";
+							String reply = "标上标识24小时要花费 " + MONEY + " 钱，你想租吗？";
 
 							if (rentedSignList.getByName(player.getName()) != null) {
-								reply = reply + " Please note that I will replace the sign you already rented.";
+								reply = reply + " 请写下标识名称，我会替换掉你的旧标识.";
 							}
 
 							npc.say(reply);
@@ -121,7 +121,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 					ConversationPhrases.YES_MESSAGES,
 					new NotCondition(new PlayerHasItemWithHimCondition("money", MONEY)),
 					ConversationStates.ATTENDING,
-					"Sorry, you do not have enough money", null);
+					"抱歉，你没有足够的钱", null);
 
 				add(ConversationStates.BUY_PRICE_OFFERED,
 					ConversationPhrases.YES_MESSAGES,
@@ -132,18 +132,18 @@ public class SignLessorNPC implements ZoneConfigurator {
 				add(ConversationStates.BUY_PRICE_OFFERED,
 					ConversationPhrases.NO_MESSAGES, null,
 					ConversationStates.ATTENDING,
-					"If you change your mind, just talk to me again.", null);
+					"如果你改变主意，再告诉我就行。", null);
 
 				add(ConversationStates.ATTENDING, "remove",
 					new PlayerHasStorableEntityCondition(rentedSignList),
 					ConversationStates.ATTENDING,
-					"Ok, I am going to remove your sign.",
+					"Ok, 我马上移除你的标识.",
 					new RemoveStorableEntityAction(rentedSignList));
 
 				add(ConversationStates.ATTENDING, "remove",
 					new NotCondition(new PlayerHasStorableEntityCondition(rentedSignList)),
 					ConversationStates.ATTENDING,
-					"You did not rent any sign, so I cannot remove one.", null);
+					"你没有任何的标识，所以我不能移除.", null);
 
 				// admins may remove signs (even low level admins)
 				add(ConversationStates.ATTENDING, "delete",
@@ -158,11 +158,11 @@ public class SignLessorNPC implements ZoneConfigurator {
 							}
 							final String playerName = sentence.getOriginalText().substring("delete ".length()).trim();
 							if (rentedSignList.removeByName(playerName)) {
-								final String message = player.getName() + " deleted sign from " + playerName;
+								final String message = player.getName() + " 从 " + playerName + " 删除标识";
 								SingletonRepository.getRuleProcessor().sendMessageToSupporters("SignLessorNPC", message);
 								new GameEvent(player.getName(), "sign", "deleted", playerName).raise();
 							} else {
-								player.sendPrivateText("I could not find a sign by " + playerName);
+								player.sendPrivateText("找不到 " + playerName +" 的标识");
 							}
 						}
 
@@ -190,7 +190,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.setEntityClass("signguynpc");
 		zone.add(npc);
-		npc.setDescription("You see Gordon. He keeps an eye on the signs close to him.");
+		npc.setDescription("你见到了 Gordon. 他一直盯着经过他身边人们的标识看");
 	}
 
 	private static ChatCondition getRentMatchCond() {
@@ -232,18 +232,18 @@ public class SignLessorNPC implements ZoneConfigurator {
 			// confirm, log, tell postman
 			if (success) {
 				player.drop("money", MONEY);
-				npc.say("OK, let me put your sign up.");
+				npc.say("OK, 让我把你的标识放上.");
 
 				// inform IRC using postman
 				final Player postman = SingletonRepository.getRuleProcessor().getPlayer("postman");
-				String message = player.getName() + " rented a sign saying \"" + text + "\"";
+				String message = player.getName() + " 租用一个标识说 \"" + text + "\"";
 				if (postman != null) {
 					postman.sendPrivateText(message);
 				}
 				logger.log(Level.toLevel(System.getProperty("stendhal.support.loglevel"), Level.DEBUG), message);
 				new GameEvent(player.getName(), "sign", "rent", text).raise();
 			} else {
-				npc.say("Sorry, there are too many signs at the moment. I do not have a free spot left.");
+				npc.say("抱歉，现在没有更多的标识位了，我没有空间能写下了.");
 			}
 		}
 

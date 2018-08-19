@@ -76,15 +76,15 @@ public class MagicTeacherNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				add(ConversationStates.ATTENDING, "teach", null, ConversationStates.SERVICE_OFFERED, "Do you want to learn about magic?", null);
+				add(ConversationStates.ATTENDING, "teach", null, ConversationStates.SERVICE_OFFERED, "你想学习魔法吗?", null);
 				add(ConversationStates.SERVICE_OFFERED, ConversationPhrases.YES_MESSAGES, null, ConversationStates.ATTENDING, null, new TeachMagicAction());
 			}
 
 		};
-		npc.addGreeting("Hello, I am the magic teacher! I can #teach you about magic.");
-		npc.addJob("My job is to #teach you a bit about magic, so you can try it out here.");
-		npc.addHelp("If you need further help #https://stendhalgame.org/wiki/Ideas_for_Stendhal/Magic or you can ask in #'#arianne' for help.");
-		npc.addOffer("I can offer to #teach you about magic.");
+		npc.addGreeting("Hello, 我是这里的魔法老师！可以教 #teach 你给你一些魔法技能.");
+		npc.addJob("我的工作是教授 #teach 基础魔法, 所以你可以在这里学习.");
+		npc.addHelp("如果你需要更多的帮助，请查看 #https://stendhalgame.org/wiki/Ideas_for_Stendhal/Magic ，或者，你可以向 #'#arianne' 寻求帮助.");
+		npc.addOffer("我能教授 #teach 给你一些魔法知识.");
 		npc.addGoodbye("Stay magical!");
 		npc.setPosition(20, 26);
 		npc.setEntityClass("blueoldwizardnpc");

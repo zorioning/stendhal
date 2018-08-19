@@ -43,17 +43,17 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 					@Override
 					public boolean transactAgreedDeal(ItemParserResult res, final EventRaiser seller, final Player player) {
 						if (res.getAmount() > 1) {
-							seller.say("Hmm... I just don't think you're cut out for taking care of more than one dragon at a time.");
+							seller.say("Hmm... 我不认为你一次可以照看一只以上的龙 dragon.");
 							return false;
 						} else if (player.hasPet()) {
-							say("Well, you should look after that pet you already have first.");
+							say("好的，你应该首先照顾好已经有的那只.");
 							return false;
 						} else {
 							if (!player.drop("money", getCharge(res, player))) {
-								seller.say("You don't seem to have enough money.");
+								seller.say("你的钱好像不够.");
 								return false;
 							}
-							seller.say("Here give this dragon a work out! It should fight at your side and #grow with you.");
+							seller.say("要给龙锻炼的机会！你应该把它带在身边并和你一成长 #grow .");
 
 							final BabyDragon baby_dragon = new BabyDragon(player);
 
@@ -72,10 +72,10 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 				items.put("dragon", BUYING_PRICE);
 
 				addGreeting();
-				addJob("I fight demons with a dragon by my side. I might have one for you.");
-				addHelp("I sell dragons. To buy one, just tell me you want to #buy #dragon.");
+				addJob("我与这只龙并肩作战，或许也有一只适合你.");
+				addHelp("我销售龙。想买的话只用对我说我想买 #buy #dragon.");
 				addGoodbye();
-				addReply("grow","Take it into battle and it will gain experince and improve.");
+				addReply("grow","带着它战斗，龙也会获得经验并提级等级.");
 				new SellerAdder().addSeller(this, new DragonSellerBehaviour(items));
 			}
 		};
@@ -83,7 +83,7 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 		npc.setEntityClass("man_005_npc");
 		npc.setPosition(17, 7);
 		npc.initHP(85);
-		npc.setDescription("The Dragon Keeper just flew into town on the back of a mighty winged dragon.");
+		npc.setDescription("一个龙守卫乘坐强大的翼龙刚刚飞到城里.");
 		zone.add(npc);
 
 	}
