@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.ItemTools;
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.ItemLogger;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -400,26 +400,26 @@ public class Corpse extends PassiveEntity implements EquipListener {
 		final String[] stageText = { "new", "fresh", "cold", "slightly rotten",
 				"rotten", "very rotten" };
 
-		String text = "You see the " + stageText[stage] + " corpse of ";
+		String text = "你看到 " + stageText[stage] + " 尸体 ";
 
 		if (hasDescription()) {
 			text = getDescription();
 		} else if (creatureName != null) {
-			text += Grammar.a_noun(creatureName);
+			text += creatureName;
 		} else if (has(ATTR_NAME)) {
 			text += get(ATTR_NAME);
 
 			if (has(ATTR_KILLER)) {
 				// only display the killer if it is the corpse of a player
 				if (get("class").equals("player")) {
-					text += ", killed by " + get(ATTR_KILLER);
+					text += ", 被 " + get(ATTR_KILLER) + "杀死";
 				}
 			}
 		} else {
-			text += Grammar.a_noun(ItemTools.itemNameToDisplayName(get("class")));
+			text += ItemTools.itemNameToDisplayName(get("class"));
 		}
 
-		text += ". You can #inspect it to see its contents.";
+		text += ". 你可以用 #inspect 检查里面的东西.";
 
 		return (text);
 	}
@@ -448,7 +448,7 @@ public class Corpse extends PassiveEntity implements EquipListener {
 		final String name = getName();
 
 		if (name != null) {
-			return Grammar.article_noun(name, definite);
+			return name;
 		} else {
 			return super.getDescriptionName(definite);
 		}

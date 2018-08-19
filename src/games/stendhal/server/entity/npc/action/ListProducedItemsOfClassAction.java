@@ -17,7 +17,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import java.util.HashMap;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.annotations.Dev;
 import games.stendhal.server.core.config.annotations.Dev.Category;
@@ -58,8 +58,8 @@ public class ListProducedItemsOfClassAction implements ChatAction {
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 		Map<String, String> substitutes = new HashMap<String, String>();
-		substitutes.put("items", Grammar.enumerateCollection(producerRegister.getProducedItemNames(clazz)));
-		substitutes.put("#items", Grammar.enumerateCollectionWithHash(producerRegister.getProducedItemNames(clazz)));
+		substitutes.put("items", producerRegister.getProducedItemNames(clazz).toString());
+		substitutes.put("#items", producerRegister.getProducedItemNames(clazz).toString());
 		raiser.say(StringUtils.substitute(message, substitutes));
 	}
 

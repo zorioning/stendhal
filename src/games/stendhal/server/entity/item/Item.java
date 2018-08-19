@@ -23,7 +23,7 @@ import org.apache.log4j.Logger;
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
 import games.stendhal.common.constants.Nature;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.ItemLogger;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.events.EquipListener;
@@ -680,7 +680,7 @@ public class Item extends PassiveEntity implements TurnListener, EquipListener,
 
 	@Override
 	public String describe() {
-		String text = "You see " + Grammar.a_noun(getTitle()) + ".";
+		String text = "你看到 " + getTitle() + ".";
 		StringBuilder stats = new StringBuilder();
 		String levelwarning = "";
 		if (hasDescription()) {
@@ -692,8 +692,8 @@ public class Item extends PassiveEntity implements TurnListener, EquipListener,
 		final String boundTo = getBoundTo();
 
 		if (boundTo != null) {
-			text = text + " It is a special reward for " + boundTo
-					+ ", and cannot be used by others.";
+			text = text + " 这是 " + boundTo
+					+ "的任务用品, 不能用于别处.";
 		}
 
 		if (has("atk")) {

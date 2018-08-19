@@ -33,32 +33,32 @@ public class ConversationPhrases {
 	public static final List<String> EMPTY = Arrays.asList(new String[0]);
 
 	public static final List<String> GREETING_MESSAGES = Arrays.asList("hi",
-			"hello", "hallo", "greetings", "hola");
+			"hello", "喂", "嗨", "你好");
 
-	public static final List<String> JOB_MESSAGES = Arrays.asList("job", "work", "occupation");
+	public static final List<String> JOB_MESSAGES = Arrays.asList("job", "work", "工作");
 
 	public static final List<String> HELP_MESSAGES = Arrays.asList("help",
-			"ayuda");
+			"帮助");
 
 	public static final List<String> QUEST_MESSAGES = Arrays.asList("task",
-			"quest", "favor", "favour");
+			"quest", "favor", "favour","工作");
 
 	public static final List<String> FINISH_MESSAGES = Arrays.asList("done",
-			"finish", "complete");
+			"finish", "complete","完成","好了","已完成");
 
 	public static final List<String> QUEST_FINISH_MESSAGES = combine(QUEST_MESSAGES, FINISH_MESSAGES);
 
-	public static final List<String> ABORT_MESSAGES = Arrays.asList("another", "abort");
+	public static final List<String> ABORT_MESSAGES = Arrays.asList("another", "abort","其他","其它","取消","另外");
 
-	public static final List<String> OFFER_MESSAGES = Arrays.asList("offer", "deal", "trade");
+	public static final List<String> OFFER_MESSAGES = Arrays.asList("offer", "deal", "trade","买卖","交易");
 
-	public static final List<String> YES_MESSAGES = Arrays.asList("yes", "ok", "yep", "sure");
+	public static final List<String> YES_MESSAGES = Arrays.asList("yes", "ok", "好的", "可以","好");
 
 	public static final List<String> NO_MESSAGES = Arrays.asList(NO_EXPRESSION, "nope",
-			"nothing", "none");
+			"nothing", "none","不","不是","没有","不行","不好");
 
 	public static final List<String> GOODBYE_MESSAGES = Arrays.asList("bye", "goodbye",
-			"farewell", "cya", "adios");
+			"再见", "走了", "退出");
 
 	/**
 	 * Combine a string collection (list) with additional strings.

@@ -14,7 +14,7 @@ package games.stendhal.server.entity.item;
 
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * A key that matches if the identifier and lock number are the right.
@@ -56,9 +56,9 @@ public class HouseKey extends Item {
 	public String describe() {
 		final String[] info = getInfoString().split(";", -1);
 		if (info[2].length() > 0) {
-			return "You see a key to " + Grammar.suffix_s(info[2]) + " property, " + info[0] + ".";
+			return "你发现一把钥匙 to" + info[2] + " property, " + info[0] + ".";
 		} else {
-			return "You see a key to " + info[0] + ".";
+			return "你发现一把钥匙 to " + info[0] + ".";
 		}
 	}
 	/* useful so that the list of thems lost on death is more specific than just 'house key' */
@@ -66,9 +66,9 @@ public class HouseKey extends Item {
 	public String getName() {
 		final String[] info = getInfoString().split(";", -1);
 		if (info[2].length() > 0) {
-			return Grammar.suffix_s(info[2]) + " house key";
+			return info[2] + " 房间钥匙";
 		} else {
-			return  info[0] + " key";
+			return  info[0] + " 钥匙";
 		}
 	}
 

@@ -19,7 +19,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -302,7 +302,7 @@ public class FindRatChildren extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I have " + missingNames(player).size() + " " + Grammar.plnoun(missingNames(player).size(), "child") + " left to check on and tell Agnus about.");
+				res.add("I have " + missingNames(player).size() + " " + missingNames(player).size()+ "child" + " left to check on and tell Agnus about.");
 			} else {
 				res.add("Agnus was so relieved that I found her kids. Finding them earned me experience.");
 			}

@@ -21,7 +21,7 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.NotificationType;
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.ItemLogger;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -154,20 +154,20 @@ public class PlayerDieer {
 		}
 
 		String zoneinfo = player.getZone().describe();
-		String locationmsg = "You died " + zoneinfo;
+		String locationmsg = "你死在了 " + zoneinfo;
 		if(!player.getZone().isInterior()) {
 			// only tell the more precise location inside the zone if it's not an interior
 			int x = player.getZone().getWidth();
 			int y = player.getZone().getHeight();
 			int lastx = player.getX();
 			int lasty = player.getY();
-			String northsouth = (lasty < y/3) ? "north " : ( (lasty > 2*y/3) ? "south " : "");
-			String eastwest = (lastx < x/3) ? "west" : ( (lastx > 2*x/3) ? "east" : "");
+			String northsouth = (lasty < y/3) ? "北" : ( (lasty > 2*y/3) ? "南 " : "");
+			String eastwest = (lastx < x/3) ? "西" : ( (lastx > 2*x/3) ? "东 " : "");
 			String pos = (northsouth + eastwest);
 			if (pos.equals("")) {
 				pos = "center";
 			}
-			locationmsg += " in the " + pos + " part";
+			locationmsg += " 在 " + pos + " 部";
 		}
 		respawnInAfterLife();
 
@@ -181,19 +181,19 @@ public class PlayerDieer {
 						StringBuilder sb = new StringBuilder();
 						sb.append(si.getQuantity());
 						sb.append(" ");
-						sb.append(Grammar.plural(si.getName()));
+						sb.append(si.getName());
 						strings.add(sb.toString());
 					}
 					if (si.getQuantity() == 1) {
-						strings.add(Grammar.a_noun(si.getName()));
+						strings.add(si.getName());
 					}
 				} else {
-					strings.add(Grammar.a_noun(item.getName()));
+					strings.add(item.getName());
 				}
 			}
-			player.sendPrivateText(NotificationType.NEGATIVE, "Your corpse contains " + Grammar.enumerateCollection(strings) + ", but you may be able to retrieve " + Grammar.itthem(numberOfDrops) + ". Your skills are " + skillPercentage + "% of their old value.");
+			player.sendPrivateText(NotificationType.NEGATIVE, "你的尸体里还有 " + strings + ", 如果你想收回 " + numberOfDrops + ". 你的经验被减为死前的 " + skillPercentage + "% ");
 		} else {
-			player.sendPrivateText(NotificationType.POSITIVE, "You were lucky and dropped no items when you died. Your skills are " + skillPercentage + "% of their old value.");
+			player.sendPrivateText(NotificationType.POSITIVE, "你还算是幸运的，当你死时没掉物品。你的经验被减到死前的 " + skillPercentage + "% ");
 		}
 	}
 
@@ -208,11 +208,11 @@ public class PlayerDieer {
 		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone(DEFAULT_DEAD_AREA);
 
 		if (zone == null) {
-			logger.error("Unable to find dead area [" + DEFAULT_DEAD_AREA
-					+ "] for player: " + player.getName());
+			logger.error("不能查到死亡地点 [" + DEFAULT_DEAD_AREA
+					+ "] 玩家: " + player.getName());
 		} else {
 			if (!zone.placeObjectAtEntryPoint(player)) {
-				logger.error("Unable to place player in zone " + zone + ": "
+				logger.error("有能到达玩家所在的区域 " + zone + ": "
 						+ player.getName());
 			}
 		}

@@ -144,7 +144,7 @@ public class TextClientFramework extends StandardClientFramework {
 			}
 			if (!getConnectionState()) {
 				System.out.println();
-				System.out.println("Lost connection.");
+				System.out.println("失去连接.");
 				System.out.println();
 				System.exit(1);
 			}

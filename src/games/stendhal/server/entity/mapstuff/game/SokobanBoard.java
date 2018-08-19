@@ -52,7 +52,7 @@ public class SokobanBoard extends AreaEntity implements TurnListener, Availabili
 	 */
 	public SokobanBoard(SokobanListener sokobanListener) {
 		super(WIDTH, HEIGHT);
-		super.addBehaviour(new NoLoginAreaBehaviour(42, 126, "Talk to Hiro to play another game."));
+		super.addBehaviour(new NoLoginAreaBehaviour(42, 126, "想再玩一次就对 Hiro 说."));
 		super.addBehaviour(new NoTeleportInBehaviour());
 
 		try {
@@ -202,7 +202,7 @@ public class SokobanBoard extends AreaEntity implements TurnListener, Availabili
 		Block block = new Block(true, "pumpkin_halloween");
 		block.setPosition(this.getX() + x, this.getY() + y);
 		block.setResetBlock(false);
-		block.setDescription("You see a pumpkin, move it to a basket.");
+		block.setDescription("你看到一个南瓜，把它移到篮子里.");
 		this.getZone().add(block);
 		entitiesToCleanup.add(block);
 		boxes.add(block);

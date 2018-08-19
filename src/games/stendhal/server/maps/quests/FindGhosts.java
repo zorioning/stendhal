@@ -19,7 +19,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -113,28 +113,28 @@ public class FindGhosts extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new OrCondition(new QuestNotStartedCondition(QUEST_SLOT), new QuestInStateCondition(QUEST_SLOT, "rejected")),
 			ConversationStates.QUEST_OFFERED,
-			"I feel so lonely. I only ever see creatures and alive people. If I knew about #spirits like me, I would feel better.",
+			"我很孤单，我只能看到生物和活人，如果我见到有和我一样的 #spirits , 我会感觉好点.",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestActiveCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"I want help to find other spirits like me. Please find them, then come back and tell me their names.",
+			"我想你能帮忙找到像我一样的精灵，如果找到了，把他们的名字告诉我。",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Thank you! I feel better now that I know the names of other spirits on Faiumoni.",
+			"谢谢！我知道了在Faiumoni有像我一样的精灵，现在我觉得好多了。",
 			null);
 
 		npc.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"That's lovely of you. Good luck searching for them.",
+			"你真有爱，希望你能找到他们，祝好运。",
 			new SetQuestAction(QUEST_SLOT, "looking:said"));
 
 		npc.add(
@@ -142,7 +142,7 @@ public class FindGhosts extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Oh. Never mind. Perhaps since I'm only a ghost I couldn't offer you much reward anyway.",
+			"唉，没办法，我只是一只幽灵，也不能给你提供什么有用的。",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -15.0));
 
 		npc.add(
@@ -150,7 +150,7 @@ public class FindGhosts extends AbstractQuest {
 			Arrays.asList("spirits", "spirit"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"I sense that there are 4 other spirits, but if only I knew their names I could contact them. Will you find them, then come back and tell me their names?",
+			"我意思另外有4只精灵，如果我知道他们的名字，我自已就可以联系到他们。你能找到他们吗。找到的话请把他们的名字告诉我。",
 			null);
 	}
 
@@ -169,7 +169,7 @@ public class FindGhosts extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestActiveCondition(QUEST_SLOT)),
 			ConversationStates.QUESTION_1,
-			"If you found any #spirits, please tell me their name.", null);
+			"如果你找到任何 #spirits, 请告诉我他们的名字.", null);
 
 		for(final String spiritName : NEEDED_SPIRITS) {
 			npc.add(ConversationStates.QUESTION_1, spiritName, null,
@@ -191,9 +191,9 @@ public class FindGhosts extends AbstractQuest {
 							saidStr = npcDoneText[1];
 						} else {
 							// compatibility with broken quests
-							logger.warn("Player " + player.getTitle() + " found with find_ghosts quest slot in state " + player.getQuest(QUEST_SLOT) + " - now setting this to done.");
+							logger.warn("玩家 " + player.getTitle() + " 的找出幽灵任务已接受 " + player.getQuest(QUEST_SLOT) + " - 现在把它设置为完成。");
 							player.setQuest(QUEST_SLOT, "done");
-							npc.say("Sorry, it looks like you have already found them after all. I got confused");
+							npc.say("抱歉，看起来你已发现他们了，我有点乱.");
 							player.notifyWorldAboutChanges();
 							npc.setCurrentState(ConversationStates.ATTENDING);
 							return;
@@ -209,13 +209,13 @@ public class FindGhosts extends AbstractQuest {
 							// we haven't said the name yet so we add it to the list
 							player.setQuest(QUEST_SLOT, lookingStr
 									+ ":" + saidStr + ";" + name);
-							reply = "Thank you.";
+							reply = "谢谢你.";
 						} else if (!looking.contains(name)) {
 							// we have said it was a valid name but haven't met them
-							reply = "I don't believe you've spoken with any spirit of that name.";
+							reply = "我不相信你已经和那些名字中的精灵说过话。";
 						} else if (!isMissing && said.contains(name)) {
 							// we have said the name so we are stupid!
-							reply = "You've told me that name already, thanks.";
+							reply = "你已告诉我他们的名字了，谢谢.";
 						} else {
 							assert false;
 						}
@@ -224,14 +224,14 @@ public class FindGhosts extends AbstractQuest {
 						missing = missingNames(player);
 
 						if (!missing.isEmpty()) {
-							reply += " If you met any other spirits, please tell me their name.";
+							reply += " 如果你见到任何精灵，请告诉我他们的名字。";
 							npc.say(reply);
 						} else {
 							player.setBaseHP(50 + player.getBaseHP());
 							player.heal(50, true);
 							player.addXP(5000);
 							player.addKarma(15);
-							reply += " Now that I know those 4 names, perhaps I can even reach the spirits with my mind. I can't give you anything of material value, but I have given you a boost to your basic wellbeing, which will last forever. May you live long, and prosper.";
+							reply += " 现在我已知道了他们四人的名字，现在我已经可以把意念传递给他们。虽然不能给你什么有价值的东西,但我送你的基础健康a boost to your basic wellbeing。，会永远陪伴你，也许让你能活得更长，活得更有质量。 ";
 							npc.say(reply);
 							player.setQuest(QUEST_SLOT, "done");
 							player.notifyWorldAboutChanges();
@@ -245,7 +245,7 @@ public class FindGhosts extends AbstractQuest {
 		triggers.add(ConversationPhrases.NO_EXPRESSION);
 		triggers.addAll(ConversationPhrases.GOODBYE_MESSAGES);
 		npc.add(ConversationStates.QUESTION_1, triggers, null,
-				ConversationStates.IDLE, "No problem, come back later.", null);
+				ConversationStates.IDLE, "没关系，等会回来.", null);
 
 		// player says something which isn't in the needed spirits list.
 		npc.add(
@@ -253,7 +253,7 @@ public class FindGhosts extends AbstractQuest {
 			"",
 			new NotCondition(new TriggerInListCondition(NEEDED_SPIRITS)),
 			ConversationStates.QUESTION_1,
-			"Sorry, I don't understand you. What name are you trying to say?",
+			"抱歉，我没明白，你想说的是什么名字?",
 			null);
 
 		npc.add(
@@ -269,15 +269,15 @@ public class FindGhosts extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new NotCondition(new QuestActiveCondition(QUEST_SLOT))),
-				ConversationStates.ATTENDING, "Wooouhhhhhh!",
+				ConversationStates.ATTENDING, "哇aaaaa!",
 				null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Find Ghosts",
-				"Once upon a time, some travellers talked about some spirits which they visited on their way through Faiumoni. One of them, a young ghost called Carena, is hidden somewhere around Ados and needs some help...",
+				"寻找幽灵",
+				"从前，一些旅行者谈到他们普在去Faiumoni的路上见到一些精灵，其中的一个年轻精灵叫 Carena，归隐在Ados附近的某处，并等着好心人的帮助。..",
 				true);
 		askingStep();
 		findingStep();
@@ -290,15 +290,15 @@ public class FindGhosts extends AbstractQuest {
 			if (!player.hasQuest(QUEST_SLOT)) {
 				return res;
 			}
-			res.add("Carena is lonely and wants to know about other spirits in the world. I must find them all and tell her each name.");
+			res.add("Carena 很孤独，他想知道世界上的其他同类，我必须找到他的同类并把每个精灵的名字告诉他。");
 			if ("rejected".equals(player.getQuest(QUEST_SLOT))) {
-				res.add("Uh, no thanks, ghosts are creepy.");
+				res.add("恩, no thanks, ghosts are creepy.");
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I have " + missingNames(player).size() + " " + Grammar.plnoun(missingNames(player).size(), "ghost") + " left to tell Carena about.");
+				res.add("我还剩 " + missingNames(player).size() + " " + "个幽灵的名字要告诉Carena.");
 			} else {
-				res.add("Carena was comforted to hear the names of other spirits like her. She gave me a boost to my basic health which will last forever, like her.");
+				res.add("Carena听到其他同类的名字后感到一些安慰。他送给我 a boost to my basic health ,让我像他一样让永远存在.");
 			}
 			return res;
 	}

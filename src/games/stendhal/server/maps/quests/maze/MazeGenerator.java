@@ -27,7 +27,7 @@ import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
 import games.stendhal.common.color.ARGB;
 import games.stendhal.common.color.HSL;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.tiled.LayerDefinition;
 import games.stendhal.common.tiled.StendhalMapStructure;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -557,7 +557,7 @@ public class MazeGenerator {
 		new SetQuestAction("maze", 0, "done").fire(player, null, null);
 		new IncrementQuestAction("maze", 2, 1).fire(player, null, null);
 		player.sendPrivateText("You used " + TimeUtil.timeUntil((int) (timediff / 1000), true)
-				+ " to solve the maze. That was worth " + Grammar.quantityplnoun(points, "point") + ".");
+				+ " to solve the maze. That was worth " + points + "points.");
 		SingletonRepository.getAchievementNotifier().onFinishQuest(player);
 		player.addXP(REWARD_XP);
 	}

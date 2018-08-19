@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -152,9 +152,8 @@ public class CloaksForBario extends AbstractQuest {
 						raiser.say("Hi again! I still need "
 							+ player.getQuest(QUEST_SLOT)
 							+ " blue elven "
-							+ Grammar.plnoun(
-									MathHelper.parseInt(player.getQuest(QUEST_SLOT)),
-									"cloak") + ". Do you have any for me?");
+							+ MathHelper.parseInt(player.getQuest(QUEST_SLOT))
+								+	"cloak" + ". Do you have any for me?");
 					}
 				});
 
@@ -187,8 +186,8 @@ public class CloaksForBario extends AbstractQuest {
 								player.setQuest(QUEST_SLOT,
 										Integer.toString(toBring));
 								raiser.say("Thank you very much! Do you have another one? I still need "
-										+ Grammar.quantityplnoun(toBring,
-												"cloak", "one") + ".");
+										+ toBring +
+												"cloak"+ "one" + ".");
 
 							}
 						}));
@@ -238,7 +237,7 @@ public class CloaksForBario extends AbstractQuest {
 			res.add("I do not want to help Bario.");
 		} else if (!questState.equals("done")) {
 			int cloaks = MathHelper.parseIntDefault(player.getQuest(QUEST_SLOT),  REQUIRED_CLOAKS);
-			res.add("I need to bring Bario " + Grammar.quantityplnoun(cloaks, "blue elf cloak", "one") + "." );
+			res.add("I need to bring Bario " + cloaks + "blue elf cloak"+ "one" + "." );
 		} else {
 			res.add("Bario gave me a precious golden shield in return for the elf cloaks!");
 		}

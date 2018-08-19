@@ -14,7 +14,7 @@ package games.stendhal.server.entity.mapstuff.useable;
 
 import games.stendhal.common.Rand;
 import games.stendhal.common.constants.SoundLayer;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.player.Player;
@@ -61,7 +61,7 @@ public class WaterSpringSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "water_source");
 		setMenu("Fill|Use");
-		setDescription("You see some bubbles in the water. Seems like you found a spring.");
+		setDescription("你在水中看到一些朋友，就像你发现一口喷泉水。");
 		setResistance(0);
 	}
 
@@ -110,7 +110,7 @@ public class WaterSpringSource extends PlayerActivityEntity {
 		if (player.isEquipped("flask")) {
 			return true;
 		} else {
-			player.sendPrivateText("You need a flask to fill some water up.");
+			player.sendPrivateText("需要一个瓶子才能装水。");
 			return false;
 		}
 	}
@@ -168,14 +168,14 @@ public class WaterSpringSource extends PlayerActivityEntity {
 
 
 			player.equipOrPutOnGround(item);
-			player.sendPrivateText("You were lucky and filled "
-					+ Grammar.quantityplnoun(amount, itemName, "a")+ ".");
+			player.sendPrivateText("你很幸运地装满了水 "
+					+ amount + itemName+ ".");
 
 		} else {
             this.addEvent(new SoundEvent(failSound, SOUND_RADIUS, 100, SoundLayer.AMBIENT_SOUND));
     		this.notifyWorldAboutChanges();
 
-			player.sendPrivateText("Oh no! You spilled the water and let the flask fall into it. Now it's broken.");
+			player.sendPrivateText("Oh 不要! 你装满水后却不小心把瓶子掉了地上摔碎了。");
 		}
 		notifyWorldAboutChanges();
 	}
@@ -194,6 +194,6 @@ public class WaterSpringSource extends PlayerActivityEntity {
 
 		// remove flask from player as they try to fill it.
 		player.drop("flask");
-		player.sendPrivateText("You started to fill fresh spring water into an empty flask. It will hopefully not slip out of your hand!");
+		player.sendPrivateText("你把泉水装进了空瓶子，希望不要从手中滑落!");
 	}
 }

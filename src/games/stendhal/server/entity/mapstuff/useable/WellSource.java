@@ -13,7 +13,7 @@
 package games.stendhal.server.entity.mapstuff.useable;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.item.StackableItem;
@@ -57,7 +57,7 @@ public class WellSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "well_source");
 		setMenu("Make a wish|Use");
-		setDescription("You see a wishing well. Something in it catches your eye.");
+		setDescription("你看到一口许原井，里面有些东西吸引着你");
 		setResistance(0);
 	}
 
@@ -106,7 +106,7 @@ public class WellSource extends PlayerActivityEntity {
 		if (player.isEquipped("money", 30)) {
 			return true;
 		} else {
-			player.sendPrivateText("You need 30 coins to make a wish.");
+			player.sendPrivateText("许愿需要30金币");
 			return false;
 		}
 	}
@@ -167,10 +167,10 @@ public class WellSource extends PlayerActivityEntity {
 			player.equipOrPutOnGround(item);
 			player.incObtainedForItem(item.getName(), item.getQuantity());
 			SingletonRepository.getAchievementNotifier().onObtain(player);
-			player.sendPrivateText("You were lucky and found "
-					+ Grammar.quantityplnoun(amount, itemName, "a")+ ".");
+			player.sendPrivateText("你真走运，发现了 "
+					+ amount + itemName + ".");
 		} else {
-			player.sendPrivateText("Your wish didn't come true.");
+			player.sendPrivateText("你的许愿没有成真.");
 		}
 	}
 

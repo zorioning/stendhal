@@ -15,7 +15,7 @@ package games.stendhal.server.entity.item.timed;
 import java.lang.ref.WeakReference;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.events.TurnNotifier;
 import games.stendhal.server.entity.Entity;
@@ -81,7 +81,7 @@ public abstract class TimedStackableItem extends StackableItem {
 				}
 				result = true;
 			} else {
-				user.sendPrivateText(getTitle() + " is too far away");
+				user.sendPrivateText(getTitle() + " 离你太远");
 				logger.debug(getTitle() + " is too far away");
 			}
 		} else {
@@ -98,7 +98,7 @@ public abstract class TimedStackableItem extends StackableItem {
 
 	@Override
 	public String describe() {
-		String text = "You see " + Grammar.a_noun(getTitle()) + ".";
+		String text = "你看见 " + getTitle() + ".";
 		if (hasDescription()) {
 			text = getDescription();
 		}
@@ -106,8 +106,8 @@ public abstract class TimedStackableItem extends StackableItem {
 		final String boundTo = getBoundTo();
 
 		if (isBound()) {
-			text = text + " It is a special reward for " + boundTo
-					+ ", and cannot be used by others.";
+			text = text + " 这个特别奖励是为 " + boundTo
+					+ ", 且不能用在其他方面.";
 		}
 
 		return text;

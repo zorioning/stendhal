@@ -64,7 +64,7 @@ public class HealerAdder {
 
 		engine.add(ConversationStates.ATTENDING,
 				ConversationPhrases.OFFER_MESSAGES, null,
-				false, ConversationStates.ATTENDING, "I can #heal you.", null);
+				false, ConversationStates.ATTENDING, "我不能为你医疗 #heal.", null);
 
 		engine.add(ConversationStates.ATTENDING, "heal", null,
 				false, ConversationStates.ATTENDING,
@@ -80,12 +80,12 @@ public class HealerAdder {
 						if (player.isBadBoy()) {
 							cost = cost * 2;
 							currentBehavRes.setAmount(2);
-							badboymsg = " Healing costs more for those who slay others.";
+							badboymsg = " 杀人犯的医疗费要比正常人高.";
 						}
 
 						if (cost > 0) {
-							raiser.say("Healing costs " + cost
-									+ "." + badboymsg + " Do you have that much?");
+							raiser.say("医疗费用 " + cost
+									+ "." + badboymsg + " 你带够钱了吗?");
 
 							raiser.setCurrentState(ConversationStates.HEAL_OFFERED); // success
 						} else if (cost < 0) {
@@ -93,14 +93,14 @@ public class HealerAdder {
 							// where the factor is |cost| and we have a +1
 							// to avoid 0 charge.
 							cost = player.getLevel() * Math.abs(cost) + 1;
-							raiser.say("Healing someone of your abilities costs "
+							raiser.say("治好你的某项能力费用 "
 									+ cost
-									+ " money." + badboymsg + " Do you have that much?");
+									+ " money." + badboymsg + " 你带够钱职马？");
 
 							raiser.setCurrentState(ConversationStates.HEAL_OFFERED); // success
 						} else {
 							if ((player.getAtk() > 35) || (player.getDef() > 35)) {
-								raiser.say("Sorry, I cannot heal you because you are way too strong for my limited powers.");
+								raiser.say("抱歉，你太强壮，已超过我医疗的最大水平.");
 							} else if ((!player.isNew()
 									&& (player.getLastPVPActionTime() > System
 											.currentTimeMillis()
@@ -109,9 +109,9 @@ public class HealerAdder {
 								// ignore the PVP flag for very young
 								// characters
 								// (low atk, low def AND low level)
-								raiser.say("Sorry, but you have a bad aura, so that I am unable to heal you right now.");
+								raiser.say("抱歉，你身上都有股怪味，所以现在我不能为你治疗.");
 							} else {
-								raiser.say("There, you are healed. How else may I help you?");
+								raiser.say("好了，你已康复，还有别的事吗？");
 								healerBehaviour.heal(player);
 							}
 						}
@@ -132,9 +132,9 @@ public class HealerAdder {
 						if (player.drop("money",
 								cost)) {
 							healerBehaviour.heal(player);
-							raiser.say("There, you are healed. How else may I help you?");
+							raiser.say("好了，你已康复，还有别的事吗？");
 						} else {
-							raiser.say("I'm sorry, but it looks like you can't afford it.");
+							raiser.say("抱歉，你的钱不够啊.");
 						}
 
 						currentBehavRes = null;
@@ -144,7 +144,7 @@ public class HealerAdder {
 		engine.add(ConversationStates.HEAL_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				false, ConversationStates.ATTENDING,
-				"OK, how else may I help you?", null);
+				"OK, 还有别的事吗?", null);
 	}
 
 }

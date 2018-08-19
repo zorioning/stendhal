@@ -55,7 +55,7 @@ public abstract class Door extends AccessCheckingPortal implements TurnListener 
 	 *            The class. Responsible for how this door looks like.
 	 */
 	public Door(final String clazz) {
-		this(clazz, "This door is closed");
+		this(clazz, "门已关闭");
 	}
 
 	/**

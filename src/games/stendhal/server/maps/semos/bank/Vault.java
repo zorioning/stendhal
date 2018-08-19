@@ -15,7 +15,7 @@ package games.stendhal.server.maps.semos.bank;
 import java.awt.geom.Rectangle2D;
 import java.util.Set;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.ItemLogger;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -58,13 +58,13 @@ public class Vault extends StendhalRPZone {
 		WalkBlocker walkblocker = new WalkBlocker();
 		walkblocker.setPosition(2, 5);
 		walkblocker
-				.setDescription("You see a wastebin, handily placed for items you wish to dispose of.");
+				.setDescription("你看到一个垃圾桶。请把不用的垃圾扔到里面.");
 		add(walkblocker);
 		// Add a sign explaining about equipped items
 		final Sign book = new Sign();
 		book.setPosition(2, 2);
 		book
-				.setText("Items left on the ground will be returned to you when you leave the vault, as it is assumed they were equipped by mistake. There is a wastebin provided below for anything you want to throw away. It will be emptied automatically when you leave the vault.");
+				.setText("就像物品被装备错误了一样，物品扔到地面后会在你离开仓库时返回到你的背包。另外，垃圾箱提供了你想扔掉的存放地，它会在你离开仓库时被自动清空.");
 		book.setEntityClass("book_blue");
 		book.setResistance(0);
 		add(book);
@@ -102,9 +102,7 @@ public class Vault extends StendhalRPZone {
 						boolean equippedToBag = player.equip("bag", item);
 						if (equippedToBag) {
 
-							message = Grammar.quantityplnoun(item.getQuantity(), item.getName(), "A")
-												+ " which you left on the floor in the vault "+ Grammar.hashave(item.getQuantity())+" been automatically "
-												+ "returned to your bag.";
+							message = "你披在地面上的物品 "+item.getName() +  "已自动反回到你的背包.";
 
 							new GameEvent(player.getName(), "equip", item.getName(), "vault", "bag", Integer.toString(item.getQuantity())).raise();
 							// Make it look like a normal equip
@@ -112,19 +110,14 @@ public class Vault extends StendhalRPZone {
 						} else {
 							boolean equippedToBank = player.equip("bank", item);
 							if (equippedToBank) {
-								message =  Grammar.quantityplnoun(item.getQuantity(), item.getName(), "A")
-								+ " which you left on the floor in the vault "+ Grammar.hashave(item.getQuantity())+" been automatically "
-								+ "returned to your bank chest.";
+								message = "你在扔在仓库地面上的物品 " + item.getName() + "已自动回到你的银行箱子.";
 
 								new GameEvent(player.getName(), "equip", item.getName(), "vault", "bank", Integer.toString(item.getQuantity())).raise();
 								// Make it look like the player put it in the chest
 								new ItemLogger().equipAction(player, item, new String[] {"ground", zone.getName(), item.getX() + " " + item.getY()}, new String[] {"slot", "a bank chest", "content"});
 							} else {
 								// the player lost their items
-								message = Grammar.quantityplnoun(item.getQuantity(), item.getName(), "A")
-													+ " which you left on the floor in the vault "+ Grammar.hashave(item.getQuantity())+" been thrown into "
-													+ "the void, because there was no space to fit them into either your "
-													+ "bank chest or your bag.";
+								message = "你在扔在仓库地面上的物品 " + item.getName() + " 已被清空，因为你的背包和银行箱子里没有空间装下它们。";
 
 								// the timeout method enters the zone and coords of item, this is useful we will know it was in vault
 								new ItemLogger().timeout(item);

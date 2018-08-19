@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -88,7 +88,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I cannot use wood for this huge BBQ. To keep the heat I need some really old stone coal but there isn't much left. The problem is, that I can't fetch it myself because my steaks would burn then so I have to stay here. Can you bring me 25 pieces of #coal for my BBQ please?",
+				"我不能使用木头来做烘烤大餐，我需要一些真正的石煤炭保持高温，但剩下不多了，问题是我不能自已取，因为我的牛排会烤焦，所以我只能呆在这.你能带过来 25 块煤炭 #coal 吗?",
 				null);
 
 		npc.add(
@@ -96,7 +96,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				Arrays.asList("coal"),
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"Coal isn't easy to find. You normally can find it somewhere in the ground but perhaps you are lucky and find some in the old Semos Mine tunnels...",
+				"Coal 煤炭不易找到，通常可以在地下的某处找到，但也有可能在 Semos 的旧矿区通道内找到...",
 				null);
 
         // player has completed the quest (doesn't happen here)
@@ -104,7 +104,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I can go on with grilling my tasty steaks now! Thank you!",
+				"我能继续制作可口的烤牛排了，谢谢你!",
 				null);
 
 		// player asks about quest which he has done already and he is allowed to repeat it
@@ -112,7 +112,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES), new QuestStateStartsWithCondition(QUEST_SLOT, "waiting;")),
 				ConversationStates.QUEST_OFFERED,
-				"The last coal you brought me is mostly gone again. Will you bring me some more?",
+				"上次你带来的煤炭快要用过错了，你能再带一些来吗？",
 				null);
 
 		// player asks about quest which he has done already but it is not time to repeat it
@@ -121,19 +121,19 @@ public class CoalForHaunchy extends AbstractQuest {
 				new AndCondition(new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)), new QuestStateStartsWithCondition(QUEST_SLOT, "waiting;")),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "The coal amount behind my counter is still high enough. I will not need more for"));
+				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "这些煤炭起远远超过我的计划，我不需要更多了"));
 
 		// Player agrees to get the coal, increase 5 karma
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Thank you! If you have found 25 pieces, say #coal to me so I know you have it. I'll be sure to give you a nice and tasty reward.",
+				"谢谢你！如果你找到 25 块煤炭，请对我说 #coal 我就收到了，我会给你相当不错的奖励.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 5));
 
 		// Player says no, they've lost karma.
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null, ConversationStates.IDLE,
-				"Oh, never mind. I thought you love BBQs like I do. Bye then.",
+				"Oh, 没办法，我想你失去了一次吃烘烤大餐的机会. 再见了.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -10.0));
 	}
 
@@ -167,8 +167,8 @@ public class CoalForHaunchy extends AbstractQuest {
 									final EventRaiser npc) {
 								int grilledsteakAmount = Rand.rand(4) + 1;
 								new EquipItemAction("grilled steak", grilledsteakAmount, true).fire(player, sentence, npc);
-								npc.say("Thank you!! Take " + Grammar.thisthese(grilledsteakAmount) + " " +
-										Grammar.quantityNumberStrNoun(grilledsteakAmount, "grilled steak") + " from my grill!");
+								npc.say("Thank you!! Take " + grilledsteakAmount + " " +
+										 "grilled steak" + " from my grill!");
 								new SetQuestAndModifyKarmaAction(getSlotName(), "waiting;"
 										+ System.currentTimeMillis(), 10.0).fire(player, sentence, npc);
 							}

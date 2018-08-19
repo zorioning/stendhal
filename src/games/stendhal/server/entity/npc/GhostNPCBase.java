@@ -72,19 +72,19 @@ public abstract class GhostNPCBase extends SpeakerNPC {
 				final List<String> list = Arrays.asList(lookStr.split(";"));
 				String npcName = npc.getName().toLowerCase();
 				if (list.contains(npcName) || player.isQuestCompleted(QUEST_SLOT)) {
-					npc.say("Please, let the dead rest in peace.");
+					npc.say("请,让死者安息.");
 				} else {
 					player.setQuest(QUEST_SLOT, lookStr + ";" + npcName
 									+ ":" + saidStr);
-					npc.say("Remember my name ... " + npc.getName() + " ... "
+					npc.say("记着我的名字... " + npc.getName() + " ... "
 							+ npc.getName() + " ...");
 					player.addXP(100);
 				}
 			} else {
 				// compatibility with older broken quest slots. fix them.
-				logger.warn("Player " + player.getTitle() + " found with find_ghosts quest slot in state " + player.getQuest(QUEST_SLOT) + " - now setting this to done.");
+				logger.warn("玩家 " + player.getTitle() + " found with find_ghosts quest slot in state " + player.getQuest(QUEST_SLOT) + " - now setting this to done.");
 				player.setQuest(QUEST_SLOT, "done");
-				npc.say("Please, let the dead rest in peace.");
+				npc.say("请，请死者安息.");
 			}
 		}
 	}

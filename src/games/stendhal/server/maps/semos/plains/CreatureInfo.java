@@ -24,7 +24,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.rule.defaultruleset.DefaultCreature;
@@ -163,7 +163,7 @@ public class CreatureInfo {
 				result.append(getRandomString(locationTexts, locationInfo)).append(' ');
 			} else {
 				result.append(getRandomString(locationUnknownTexts,
-						Grammar.a_noun(creature.getCreatureName()))).append(' ');
+						creature.getCreatureName())).append(' ');
 			}
 		}
 		return result.toString();
@@ -208,7 +208,7 @@ public class CreatureInfo {
 			return "";
 		} else {
 			return prefix + " "
-					+ Grammar.enumerateCollection(places);
+					+ places;
 		}
 	}
 
@@ -254,9 +254,9 @@ public class CreatureInfo {
 		String result = lineStartTexts[(int) (Math.random() * lineStartTexts.length)];
 		result = result.replaceAll("%s", creature.getCreatureName());
 		result = result.replaceAll("%S",
-				Grammar.plural(creature.getCreatureName()));
+				creature.getCreatureName());
 		result = result.replaceAll("%a",
-				Grammar.a_noun(creature.getCreatureName()))
+				creature.getCreatureName())
 				+ " ";
 		result += getHowDangerous(player, creature, dangerLiterals) + " ";
 		return result;
@@ -280,7 +280,7 @@ public class CreatureInfo {
 				((double) creature.getLevel())
 						/ ((double) player.getLevel()), 0.0);
 		s = s.replaceAll("%s", creature.getCreatureName());
-		s = s.replaceAll("%S", Grammar.plural(creature.getCreatureName()));
+		s = s.replaceAll("%S", creature.getCreatureName());
 		return s.substring(0, 1).toUpperCase() + s.substring(1);
 	}
 
@@ -321,15 +321,15 @@ public class CreatureInfo {
 				}
 
 				prevProbability = prevProbability.replaceAll("%s",
-						Grammar.enumerateCollection(items));
+						item.name);
 				prevProbability = prevProbability.replaceAll("%a",
-						Grammar.a_noun(item.name));
+						item.name);
 				result.append(prevProbability);
 				items = new ArrayList<String>();
 			}
 			String s = getLiteral(amountLiterals, item.max, 1);
 			s = s.replaceAll("%s", item.name);
-			s = s.replaceAll("%a", Grammar.a_noun(item.name));
+			s = s.replaceAll("%a", item.name);
 			items.add(s);
 			prevProbability = probability;
 			if (++counter >= maxNumberOfItems) {
@@ -341,10 +341,10 @@ public class CreatureInfo {
 		if (result.length() > 0) {
 			result.append(", ");
 		}
-		if (prevProbability != null) {
-			result.append(prevProbability.replaceAll("%s",
-					Grammar.enumerateCollection(items)));
-		}
+//		if (prevProbability != null) {
+//			result.append(prevProbability.replaceAll("%s",
+//					item.name));
+//		}
 
 		return (prefix + result.toString()).replaceAll("_", " ");
 	}

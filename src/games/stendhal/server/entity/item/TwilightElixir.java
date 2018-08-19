@@ -15,7 +15,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.RPEntity;
@@ -59,7 +59,7 @@ public class TwilightElixir extends Drink {
 
 	@Override
 	public String describe() {
-		String text = "You see " + Grammar.a_noun(getTitle()) + ".";
+		String text = "你看到 " + getTitle() + ".";
 		String stats = "";
 		if (hasDescription()) {
 			text = getDescription();
@@ -68,8 +68,8 @@ public class TwilightElixir extends Drink {
 		final String boundTo = getBoundTo();
 
 		if (boundTo != null) {
-			text = text + " It is a special reward for " + boundTo
-					+ ", and cannot be used by others.";
+			text = text + " 这个特别奖是因为 " + boundTo
+					+ ", 所以不能用在别处.";
 		}
 		return (text + stats);
 	}
@@ -93,16 +93,16 @@ public class TwilightElixir extends Drink {
 				int y = 5;
 				if (zone == null) {
 					// invalid zone (shouldn't happen)
-					user.sendPrivateText("Oh oh. For some strange reason the scroll did not teleport me to the right place.");
+					user.sendPrivateText("Oh oh. 因为一些奇怪的原因，卷轴没有把我传送到正确的地点.");
 					logger.warn("twilight elixir to unknown zone hell,"
 								+ " teleported " + user.getName()
 								+ " to Semos instead");
 					zone = SingletonRepository.getRPWorld().getZone("0_semos_city");
 				}
 				((Player) user).teleport(zone, x, y, null, (Player) user);
-				extra = " Now you will go to hell, for thinking of yourself before you think of others.";
+				extra = " 现在你应该下地狱，因为你不想别的，只考虑你自己";
 			}
- 			user.sendPrivateText("Didn't you know, one man's drink is another man's poison? That elixir was meant for Ida in the twilight zone." + extra);
+ 			user.sendPrivateText("你不清楚一个人的饮料可能是另一个人的毒药？这个长生药对于 Ida 意味着她被带进了迷魂境地." + extra);
 			return super.onUsed(user);
 		} else {
 			// should never happen.

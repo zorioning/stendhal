@@ -129,7 +129,7 @@ public final class CharacterDialog extends JDialog implements Runnable {
 		SBoxLayout.addSpring(buttonBar);
 
 		// Action buttons. Should these be of uniform size?
-		JButton newCharButton = new JButton("新色色");
+		JButton newCharButton = new JButton("新角色");
 		newCharButton.setMnemonic(KeyEvent.VK_N);
 		newCharButton.addActionListener(new CreateCharacterAction(this));
 		// Disable creating unreasonable amounts of characters. Enough is enough.

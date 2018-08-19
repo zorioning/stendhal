@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 /**
  * Returns structure for Sentence.findMatchingName().
@@ -64,61 +64,61 @@ public final class NameSearch {
         }
 
     	// see if instead the plural matches
-        if (!found) {
-	        final String pluralName = Grammar.plural(itemName);
-	    	if (!pluralName.equals(itemName)) {
-	            for(Map.Entry<String, Sentence> e : parsedNames.entrySet()) {
-	            	if (e.getValue().matchesStartNormalized(pluralName)) {
-		                name = e.getKey();
-		        		found = true;
-		        		break;
-		        	}
-	            }
-            }
+//        if (!found) {
+//	        final String pluralName = Grammar.plural(itemName);
+//	    	if (!pluralName.equals(itemName)) {
+//	            for(Map.Entry<String, Sentence> e : parsedNames.entrySet()) {
+//	            	if (e.getValue().matchesStartNormalized(pluralName)) {
+//		                name = e.getKey();
+//		        		found = true;
+//		        		break;
+//		        	}
+//	            }
+//            }
+//
+//	    	// now check for end matches with the plural
+//	    	if (!found && !pluralName.equals(itemName)) {
+//	        	found = searchEndMatch(pluralName);
+//            }
+//        }
 
-	    	// now check for end matches with the plural
-	    	if (!found && !pluralName.equals(itemName)) {
-	        	found = searchEndMatch(pluralName);
-            }
-        }
-
-        if (!found) {
-        	// see if instead the singular matches
-	        final String singularName = Grammar.singular(itemName);
-	    	if (!singularName.equals(itemName)) {
-	            for(Map.Entry<String, Sentence> e : parsedNames.entrySet()) {
-	            	if (e.getValue().matchesStartNormalized(singularName)) {
-		                name = e.getKey();
-		        		found = true;
-		        		break;
-		        	}
-	        	}
-
-		    	// now check for end matches with the singular
-		    	if (!found && !singularName.equals(itemName)) {
-			        found = searchEndMatch(singularName);
-		    	}
-	    	}
-
-	        if (!found) {
-	        	// special case to handle misspelled "double" plurals
-		        final String singular2 = Grammar.singular(singularName);
-		    	if (!singular2.equals(singularName)) {
-		            for(Map.Entry<String, Sentence> e : parsedNames.entrySet()) {
-		            	if (e.getValue().matchesStartNormalized(singular2)) {
-			                name = e.getKey();
-			        		found = true;
-			        		break;
-			        	}
-		        	}
-		    	}
-
-		    	// now check for end matches with the "double singular"
-		    	if (!found && !singular2.equals(itemName)) {
-		        	found = searchEndMatch(singular2);
-		    	}
-	        }
-    	}
+//        if (!found) {
+//        	// see if instead the singular matches
+//	        final String singularName = Grammar.singular(itemName);
+//	    	if (!singularName.equals(itemName)) {
+//	            for(Map.Entry<String, Sentence> e : parsedNames.entrySet()) {
+//	            	if (e.getValue().matchesStartNormalized(singularName)) {
+//		                name = e.getKey();
+//		        		found = true;
+//		        		break;
+//		        	}
+//	        	}
+//
+//		    	// now check for end matches with the singular
+//		    	if (!found && !singularName.equals(itemName)) {
+//			        found = searchEndMatch(singularName);
+//		    	}
+//	    	}
+//
+//	        if (!found) {
+//	        	// special case to handle misspelled "double" plurals
+//		        final String singular2 = Grammar.singular(singularName);
+//		    	if (!singular2.equals(singularName)) {
+//		            for(Map.Entry<String, Sentence> e : parsedNames.entrySet()) {
+//		            	if (e.getValue().matchesStartNormalized(singular2)) {
+//			                name = e.getKey();
+//			        		found = true;
+//			        		break;
+//			        	}
+//		        	}
+//		    	}
+//
+//		    	// now check for end matches with the "double singular"
+//		    	if (!found && !singular2.equals(itemName)) {
+//		        	found = searchEndMatch(singular2);
+//		    	}
+//	        }
+//    	}
 
     	if (found) {
             amount = item.getAmount();

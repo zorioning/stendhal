@@ -16,7 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.pathfinder.FixedPath;
@@ -49,7 +49,7 @@ public class OracleNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Zinnia") {
 			@Override
 			public void createDialog() {
-				addGreeting("Hello. We better whisper, don't attract the elves.");
+				addGreeting("你好，我们最好小声说话，不要嗨到精灵们");
 
 				// use a standard action to list the names of NPCs for quests which haven't been started in this region
 				addReply(ConversationPhrases.HELP_MESSAGES, null, new SayNPCNamesForUnstartedQuestsAction(regions));
@@ -61,15 +61,15 @@ public class OracleNPC implements ZoneConfigurator {
 						ConversationStates.ATTENDING,
 						null,
 						new SayUnstartedQuestDescriptionFromNPCNameAction(regions));
-				addQuest("There are citizens nearby in " + Grammar.enumerateCollection(regions) + " who could need #help from adventurers.");
-				addJob("I'm just wandering around here. It feels somehow magical here.");
-				addOffer("Just like my #sisters, I can #help you #help others.");
-				addReply("sisters", "My sisters live far away. Find them to learn how to #help those nearest them. Like me they each have the #name of a flower.");
-				addReply("name", "Zinnia is a flower which can come in the same emerald green as my dress. I think that's why I like green forests so much, too");
+				addQuest("在 " + regions + " 附近有几个城镇，冒险者们可在那里得到帮助 #help ");
+				addJob("我只是在这闲逛，这里能感到些许魔力。");
+				addOffer("就像我的姐妹们 #sisters, 我能 #help 你知道怎么帮助 #help 其他人.");
+				addReply("sisters", "我的姐妹们住的很远，找到她们学会如何帮助 #help 附近的人们. 和我一样，她们每人都有一个花名 #name .");
+				addReply("name", "Zinnia 是一种颜色和我的衣服一样，像翡翠绿的花, 我觉得也像我喜欢绿色森林一样");
 
 				// just to be nice :)
 				addEmotionReply("hugs", "hugs");
-				addGoodbye("Thank you, remember to tread carefully in this magical place.");
+				addGoodbye("谢谢你，在这片魔法森林行走要小心.");
 			}
 
 			@Override
@@ -92,7 +92,7 @@ public class OracleNPC implements ZoneConfigurator {
 			}
 		};
 		npc.setPosition(75, 117);
-		npc.setDescription("You see Zinnia. She looks somehow special.");
+		npc.setDescription("你见到了 Zinnia. 她看起来很特别.");
 		npc.setEntityClass("oracle3npc");
 		zone.add(npc);
 	}

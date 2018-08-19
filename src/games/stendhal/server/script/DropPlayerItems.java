@@ -14,7 +14,7 @@ package games.stendhal.server.script;
 
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.scripting.ScriptImpl;
@@ -66,7 +66,7 @@ public class DropPlayerItems extends ScriptImpl {
 			itemName = args.get(1);
 		}
 
-		final String singularItemName = Grammar.singular(itemName);
+		final String singularItemName = itemName;
 
 		boolean result = player.drop(itemName, amount);
 
@@ -75,7 +75,7 @@ public class DropPlayerItems extends ScriptImpl {
 		}
 
 		final String msg = "Admin " + admin.getName() + " removed " + amount
-				+ " " + Grammar.plnoun(amount, singularItemName)
+				+ " " + singularItemName
 				+ " from player " + player.getName() + ": #" + result;
 
 		admin.sendPrivateText(msg);

@@ -26,7 +26,7 @@ public class PlayersTurnValidator implements MoveValidator {
 	@Override
 	public boolean validate(GameBoard board, Player player, BoardToken token, int xIndex, int yIndex) {
 		if (!player.getName().equals(board.getCurrentPlayer())) {
-			player.sendPrivateText("It is not your turn. Please wait for your opponent to complete his or her move.");
+			player.sendPrivateText("轮到你了，请等对方完成他的回合.");
 			return false;
 		}
 		return true;

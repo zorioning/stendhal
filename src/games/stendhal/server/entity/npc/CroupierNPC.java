@@ -84,15 +84,15 @@ public abstract class CroupierNPC extends SpeakerNPC {
 				prize.setBoundTo(player.getName());
 			}
 
-			say("Congratulations, " + player.getTitle() + ", you have "
-					+ sum + " points. " + text);
+			say("祝贺你, " + player.getTitle() + ", 你共有 "
+					+ sum + " 点. " + text);
 			player.equipOrPutOnGround(prize);
 		} else {
 			say("Sorry, "
 					+ player.getTitle()
-					+ ", you only have "
+					+ ", 你只有 "
 					+ sum
-					+ " points. You haven't won anything. Better luck next time!");
+					+ " 点. 什么都没赢到，祝下次好运!");
 		}
 	}
 

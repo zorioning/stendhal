@@ -35,7 +35,7 @@ public class Fire extends Entity implements UseListener {
 	 *            height in grid units
 	 */
 	public Fire(final int width, final int height) {
-		setDescription("You see a flickering light. You are tempted to touch it.");
+		setDescription("你看到一些光在闪烁，你好奇的摸了摸它.");
 		setRPClass("fire");
 		put("type", "fire");
 
@@ -45,7 +45,7 @@ public class Fire extends Entity implements UseListener {
 
 	@Override
 	public boolean onUsed(final RPEntity user) {
-		user.sendPrivateText("Not a good idea!");
+		user.sendPrivateText("这不是个好主意!");
 		return true;
 	}
 }

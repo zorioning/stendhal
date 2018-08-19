@@ -37,7 +37,7 @@ import games.stendhal.common.Direction;
 import games.stendhal.common.Line;
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.filter.FilterCriteria;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.tiled.LayerDefinition;
 import games.stendhal.common.tiled.TileSetDefinition;
 import games.stendhal.server.core.config.zone.TeleportationRules;
@@ -1656,7 +1656,7 @@ public class StendhalRPZone extends MarauroaRPZone {
 			final String level = m.group(1);
 			String remainder = m.group(2);
 			if ("int".equals(level)) {
-				return "inside a building in " + Grammar.makeUpperCaseWord(getInteriorName(zoneName));
+				return "在 " + getInteriorName(zoneName) + "的一个建筑物里面";
 			} else if (level.startsWith("-")) {
 				try {
 					levelValue = Integer.parseInt(level);
@@ -1664,9 +1664,9 @@ public class StendhalRPZone extends MarauroaRPZone {
 					levelValue = 0;
 				}
 				if (levelValue < -2) {
-					result = "deep below ground level at ";
+					result = "在深深的地下 ";
 				} else {
-					result = "below ground level at ";
+					result = "在地下 ";
 				}
 			} else if (level.matches("^\\d")) {
 				/* positive floor */
@@ -1677,9 +1677,9 @@ public class StendhalRPZone extends MarauroaRPZone {
 				}
 				if (levelValue != 0) {
 					if (levelValue > 1) {
-						result = "high above the ground level at ";
+						result = "在离地面很高的 ";
 					} else {
-						result = "above the ground level at ";
+						result = "在高于地面的 ";
 					}
 				}
 			}
@@ -1709,7 +1709,7 @@ public class StendhalRPZone extends MarauroaRPZone {
 				result =" in ";
 			}
 			// here we need to capitalise the city name
-			result += Grammar.makeUpperCaseWord(remainder.replaceAll("_", " "));
+			result += remainder.replaceAll("_", " ");
 		} else {
 			logger.warn("no match: " + zoneName);
 		}
@@ -1778,7 +1778,7 @@ public class StendhalRPZone extends MarauroaRPZone {
 			}
 
 			// here we need to capitalize the city name
-			result.append(Grammar.makeUpperCaseWord(remainder.replaceAll("_", " ")));
+			result.append(remainder.replaceAll("_", " "));
 			result.append(dirBuf);
 			if ("int".equals(level)) {
 				result.append(", interior");
@@ -1793,7 +1793,7 @@ public class StendhalRPZone extends MarauroaRPZone {
 			// As of this writing (2014-01-15), the few zone names that do not
 			// match produce good results with this.
 			logger.info("no match: " + zoneName);
-			return Grammar.makeUpperCaseWord(zoneName.replaceAll("_", " "));
+			return zoneName.replaceAll("_", " ");
 		}
 		if (result.length() == 0) {
 			return null;

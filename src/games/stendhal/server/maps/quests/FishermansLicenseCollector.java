@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -142,11 +142,11 @@ public class FishermansLicenseCollector extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					final List<String> needed = missingFish(player, true);
-					raiser.say("There " + Grammar.isare(needed.size())
+					raiser.say("There " + needed.size()
 							+ " "
-							+ Grammar.quantityplnoun(needed.size(), "fish", "one")
+							+  "fish"
 							+ " still missing: "
-							+ Grammar.enumerateCollection(needed)
+							+ needed
 							+ ". Do you have such fish with you?");
 				}
 			});
@@ -158,7 +158,7 @@ public class FishermansLicenseCollector extends AbstractQuest {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					final List<String> missing = missingFish(player, false);
 					raiser.say("Let me know as soon as you find "
-							+ Grammar.itthem(missing.size()) + ". Goodbye.");
+							+ missing.size() + ". Goodbye.");
 				}
 			});
 
@@ -200,7 +200,7 @@ public class FishermansLicenseCollector extends AbstractQuest {
 								}
 							} else {
 								raiser.say("Don't try to cheat! I know that you don't have "
-										+ Grammar.a_noun(itemName)
+										+ itemName
 										+ ". What do you really have for me?");
 							}
 						} else {
@@ -259,7 +259,7 @@ public class FishermansLicenseCollector extends AbstractQuest {
 			}
 			res.add("The second part of my fishing exam is to take Santiago many species of fish.");
 			if (!isCompleted(player)) {
-				res.add("I still need to bring " + Grammar.enumerateCollection(missingFish(player, false)) + " for Santiago to inspect.");
+				res.add("I still need to bring " + player + " for Santiago to inspect.");
 			} else {
 				res.add("I brought every fish Santiago wanted and now I'm a real fisherman! I will have more success when I fish.");
 			}

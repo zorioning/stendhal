@@ -34,7 +34,7 @@ import games.stendhal.common.NotificationType;
 import games.stendhal.common.constants.Nature;
 import games.stendhal.common.constants.SoundLayer;
 import games.stendhal.common.constants.Testing;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import marauroa.common.game.RPObject;
 import marauroa.common.game.RPObject.ID;
 
@@ -755,7 +755,6 @@ public abstract class RPEntity extends AudibleEntity {
 		if (stendhal.SHOW_EVERYONE_ATTACK_INFO || showAttackInfoForPlayer) {
 			ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(
 					getTitle() + " 受到 " + attacker.getTitle()
-							+ Grammar.quantityplnoun(damage, "点")
 							+ "的伤害" ,
 					NotificationType.NEGATIVE));
 		}
@@ -830,7 +829,7 @@ public abstract class RPEntity extends AudibleEntity {
 			ClientSingletonRepository.getUserInterface().addEventLine(
 					new HeaderLessEventLine(
 							getTitle() + " 已中毒, 失去了"
-							+ Grammar.quantityplnoun(amount, "生命值")
+							+ "生命值"
 							+ ".", NotificationType.POISON));
 		}
 	}
@@ -1398,18 +1397,16 @@ public abstract class RPEntity extends AudibleEntity {
 							NotificationType.SIGNIFICANT_POSITIVE);
 					ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(
 							getTitle()
-							+ " 挣到 "
-							+ Grammar.quantityplnoun(amount,
-									"经验值") + "。",
-									NotificationType.SIGNIFICANT_POSITIVE));
+							+ " 得到 "
+							+ amount + "经验值。",
+							NotificationType.SIGNIFICANT_POSITIVE));
 				} else if (amount < 0) {
 					addTextIndicator(Integer.toString(amount),
 							NotificationType.SIGNIFICANT_NEGATIVE);
 					ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(
 							getTitle()
 							+ " 失去 "
-							+ Grammar.quantityplnoun(-amount,
-									"经验值") + "。",
+							+ amount + "经验值。",
 									NotificationType.SIGNIFICANT_NEGATIVE));
 				}
 			}

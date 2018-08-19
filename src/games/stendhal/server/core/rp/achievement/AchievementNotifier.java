@@ -27,7 +27,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
 
 import games.stendhal.common.constants.SoundLayer;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.db.AchievementDAO;
@@ -269,9 +269,9 @@ public final class AchievementNotifier {
 		// only send notice if actually a new added achievement was reached by doing nothing
 		if(!reached.isEmpty()) {
 			StringBuilder sb = new StringBuilder();
-			sb.append("You have reached ");
+			sb.append("你已到达 ");
 			sb.append(Integer.valueOf(reached.size()));
-			sb.append(" new "+Grammar.plnoun(reached.size(), "achievement")+". Please check #https://stendhalgame.org for details.");
+			sb.append(" 新 "+"高度"+". Please check #https://stendhalgame.org for details.");
 			player.sendPrivateText(sb.toString());
 		}
 	}

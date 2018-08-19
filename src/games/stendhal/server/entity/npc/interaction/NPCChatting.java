@@ -47,8 +47,8 @@ public final class NPCChatting implements Observer, TurnListener {
 
 	private void setupDialog() {
 		if(second.isTalking()) {
-			second.say("Sorry, "+second.getAttending().getName()+
-					" but "+explainations);
+			second.say("抱歉, "+second.getAttending().getName()+
+					" 但是 "+explainations);
 			second.setCurrentState(ConversationStates.IDLE);
 		}
 		second.setCurrentState(ConversationStates.ATTENDING);

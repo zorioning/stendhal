@@ -18,7 +18,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.RPEntity;
 import marauroa.common.game.RPObject;
@@ -79,7 +79,7 @@ public class FoodMill extends Item {
 
     	/* is the mill equipped at all? */
     	if (!isContained()) {
-    		user.sendPrivateText("You should be carrying the " + tool + " in order to use it.");
+    		user.sendPrivateText("你应该带着 " + tool + " 以便使用.");
     		return false;
     	}
 
@@ -87,7 +87,7 @@ public class FoodMill extends Item {
 
     	/* is it in a hand? */
     	if (!slotName.endsWith("hand")) {
-    		user.sendPrivateText("You should hold the " + tool + " in either hand in order to use it.");
+    		user.sendPrivateText("你应该手拿 " + tool + " 才能用它.");
     		return false;
     	}
 
@@ -97,7 +97,7 @@ public class FoodMill extends Item {
 
     	/* is anything in the other hand? */
     	if (first == null) {
-    		user.sendPrivateText("Your other hand looks empty.");
+    		user.sendPrivateText("你的另一只手里没有拿东西.");
     		return false;
     	}
 
@@ -106,12 +106,12 @@ public class FoodMill extends Item {
     	 * and have the correct container in his inventory
     	 */
     	if (!input.equals(first.get("name"))) {
-    		user.sendPrivateText("You need to have at least " + Grammar.a_noun(input) + " in your other hand");
+    		user.sendPrivateText("你至少需要有 " + input + " 在你手中");
     		return false;
     	}
 
     	if (containerRequired && !user.isEquipped(container)) {
-    		user.sendPrivateText("You don't have " + Grammar.a_noun(container) + " with you");
+    		user.sendPrivateText("你没有带着 " + container + " .");
     		return false;
     	}
 

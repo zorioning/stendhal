@@ -14,7 +14,7 @@ package games.stendhal.server.entity.mapstuff.chest;
 
 import java.util.Iterator;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.events.UseListener;
 import games.stendhal.server.entity.Entity;
 import games.stendhal.server.entity.PassiveEntity;
@@ -86,7 +86,7 @@ public class Chest extends Entity implements UseListener {
 
 	@Override
     public String getDescriptionName(final boolean definite) {
-	    return Grammar.article_noun(CHEST_RPCLASS_NAME, definite);
+	    return CHEST_RPCLASS_NAME;
     }
 
 	@Override
@@ -170,7 +170,7 @@ public class Chest extends Entity implements UseListener {
 		}
 		if (user instanceof Player) {
 			final Player player = (Player) user;
-			player.sendPrivateText("You cannot reach the chest from there.");
+			player.sendPrivateText("你从那边够不到箱子.");
 		}
 		return false;
 	}
@@ -181,17 +181,17 @@ public class Chest extends Entity implements UseListener {
 
 	@Override
 	public String describe() {
-		String text = "You see a chest.";
+		String text = "你看到一个箱子.";
 
 		if (hasDescription()) {
 			text = getDescription();
 		}
 
 		if (isOpen()) {
-			text += " It is open.";
-			text += " You can right click and inspect this item to see its contents.";
+			text += " 打开箱子.";
+			text += " 你可鼠标右键点击，然后查看里面的物品.";
 		} else {
-			text += " It is closed.";
+			text += " 关闭箱子.";
 		}
 
 		return (text);

@@ -56,7 +56,7 @@ public abstract class RatKidsNPCBase extends SpeakerNPC {
 		@Override
 		public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 			if (!player.hasQuest(QUEST_SLOT) || player.isQuestInState(QUEST_SLOT, "rejected")) {
-				npc.say("Mother says I mustn't talk to strangers.");
+				npc.say("妈妈说一定不能和陌生人说话.");
 			} else {
 				final String npcQuestText = player.getQuest(QUEST_SLOT);
 				final String[] npcDoneText = npcQuestText.split(":");
@@ -70,14 +70,14 @@ public abstract class RatKidsNPCBase extends SpeakerNPC {
 					final List<String> list = Arrays.asList(lookStr.split(";"));
 					String npcName = npc.getName().toLowerCase();
 					if (list.contains(npcName) || player.isQuestCompleted(QUEST_SLOT)) {
-						npc.say("Oh hello again.");
+						npc.say("Oh 你好.");
 					} else if ( npcDoneText.length > 1) {
 						player.setQuest(QUEST_SLOT, lookStr + ";" + npcName
 								+ ":" + saidStr);//
-						npc.say("Hello my name is " + npc.getName() + ". Please tell mother that I am ok.");
+						npc.say("你好，我叫 " + npc.getName() + ". 请告诉我妈妈我很好.");
 						player.addXP(500);
 					} else {
-						npc.say("Mother says I mustn't talk to strangers.");
+						npc.say("妈妈说一定不要和陌生人说话.");
 					}
 				}
 			}

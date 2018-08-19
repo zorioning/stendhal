@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -160,9 +160,9 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 						@Override
 						public void fire(Player player, Sentence sentence, EventRaiser npc) {
 							List<String> allotments = rentHelper.getAvailableAllotments(zone.getName());
-							String reply = Grammar.enumerateCollection(allotments);
+							String reply = allotments.toString();
 
-							npc.say("Which one would you like? Let's see... " + Grammar.plnoun(allotments.size(), "allotment") + " "
+							npc.say("Which one would you like? Let's see... " +  "allotment" + " "
 									+ reply + " are available, or perhaps #none if you've changed your mind.");
 						}
 					});

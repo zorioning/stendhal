@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
@@ -59,7 +59,7 @@ public class BringListOfItemsQuestLogic {
 		final String npcName = concreteQuest.getNPC().getName();
 		final String questState = player.getQuest(concreteQuest.getSlotName());
 		if (!"done".equals(questState)) {
-			res.add("I need to collect " + Grammar.enumerateCollection(getListOfStillMissingItems(player, false)) +  " for " + npcName + ".");
+			res.add("I need to collect " + getListOfStillMissingItems(player, false) +  " for " + npcName + ".");
 		} else {
 			res.add("I collected everything that " +  npcName + " needed!");
 		}

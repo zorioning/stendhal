@@ -13,7 +13,7 @@ package games.stendhal.server.entity.item;
 
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 
 
 /**
@@ -43,7 +43,7 @@ public class NoStatsStackableItem extends StackableItem {
 
 	@Override
 	public String describe() {
-		String text = "You see " + Grammar.a_noun(getTitle()) + ".";
+		String text = "你看到 " + getTitle() + ".";
 		if (hasDescription()) {
 			text = getDescription();
 		}
@@ -51,8 +51,8 @@ public class NoStatsStackableItem extends StackableItem {
 		final String boundTo = getBoundTo();
 
 		if (boundTo != null) {
-			text = text + " It is a special reward for " + boundTo
-					+ ", and cannot be used by others.";
+			text = text + " 这是特别的奖品，因为 " + boundTo
+					+ ", 它不能被用于别处.";
 		}
 		return (text);
 	}

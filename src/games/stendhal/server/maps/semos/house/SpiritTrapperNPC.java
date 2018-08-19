@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.grammar.ItemParserResult;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -138,13 +138,13 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 
 				        if (getMaximalAmount(productName, player) < amount) {
 				            npc.say("I can only " + getProductionActivity() + " "
-				                    + Grammar.quantityplnoun(amount, productName, "a")
+				                    + productName
 				                    + " if you bring me "
 				                    + getRequiredResourceNamesWithHashes(productName, amount) + ".");
 				            return false;
 				        } else {
 							res.setAmount(amount);
-							npc.say(Grammar.quantityplnoun(amount, productName, "a")
+							npc.say( productName
 									+ " for "
 									+ getRequiredResourceNamesWithHashes(productName, amount) + ". "
 									+ " Correct?");
@@ -186,9 +186,9 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				    			}
 
 				    			if (player.equipToInventoryOnly(products)) {
-				    				npc.say("Here " + Grammar.isare(numberOfProductItems)
-									+ " your " + Grammar.quantityplnoun(numberOfProductItems,
-											productName, "") + ".");
+				    				npc.say("Here is "  
+									+ " your "  
+									+		productName + ".");
 
 				    				player.setQuest(getQuestSlot(), "done");
 				    				player.notifyWorldAboutChanges();
@@ -196,7 +196,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				    				SingletonRepository.getAchievementNotifier().onProduction(player);
 				    			} else {
 				    				npc.say("Welcome back! I'm done with your order. But right now you cannot take the "
-				    						+ Grammar.plnoun(numberOfProductItems, productName)
+				    						+  productName
 				    						+ ". Come back when you have space.");
 				    			}
 
@@ -205,7 +205,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				            		npc.say("OK, I will "
 				                    + getProductionActivity()
 				                    + " "
-				                    + Grammar.quantityplnoun(amount, productName, "a")
+				                    +  productName
 				                    + " for you, but that will take some time. Please come back in "
 				                    + getApproximateRemainingTime(player) + ".");
 				            		return true;

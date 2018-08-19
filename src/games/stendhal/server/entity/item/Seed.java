@@ -46,7 +46,7 @@ public class Seed extends StackableItem {
 		if (!this.isContained()) {
 			// the seed is on the ground, but not next to the player
 			if (!this.nextTo(user)) {
-				user.sendPrivateText("The " + this.getName() + " is too far away");
+				user.sendPrivateText(" " + this.getName() + " 离你太远");
 				return false;
 			}
 
@@ -69,7 +69,7 @@ public class Seed extends StackableItem {
 			return true;
 		}
 		// the seed was 'contained' in a slot and so it cannot be planted
-		user.sendPrivateText("You have to put the " + this.getName() + " on the ground to plant it, silly!");
+		user.sendPrivateText("你把 " + this.getName() + " 直接放在地面上，笨!");
 		return false;
 	}
 
@@ -78,10 +78,10 @@ public class Seed extends StackableItem {
 		final String flowerName = getInfoString();
 
 		if (flowerName != null) {
-			return "You see a " + flowerName + " " + this.getName() + "."
-                + "It can be planted anywhere, but it will only thrive on fertile ground.";
+			return "你看到 " + flowerName + " " + this.getName() + "."
+                + "可以把它种在其他地方，但它只能种在肥沃松软的土中.";
 		} else {
-			return "You see a seed. It can be planted anywhere, but it will only thrive on fertile ground.";
+			return "一粒种子. 可以把它种在其他地方，但它只能种在肥沃松软的土中.";
 		}
 	}
 }

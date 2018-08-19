@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.Item;
@@ -131,7 +131,7 @@ public class FishSoup extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestNotStartedCondition(QUEST_SLOT)),
 			ConversationStates.INFORMATION_1,
-			"Hello and welcome on Ados market! I have something really tasty and know what would #revive you.",
+			"你好，欢迎来到 Ados 市场! 我有一些好吃的，你要要点什么 #revive 。",
 			null);
 
 		// player returns after finishing the quest (it is repeatable) after the
@@ -143,7 +143,7 @@ public class FishSoup extends AbstractQuest {
 					new QuestCompletedCondition(QUEST_SLOT),
 					new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
 			ConversationStates.QUEST_OFFERED,
-			"Hello again. Have you returned for more of my special fish soup?",
+			"再次欢迎，你是因为我的鲜鱼汤而再次光临吗？",
 			null);
 
 		// player returns after finishing the quest (it is repeatable) before
@@ -155,7 +155,7 @@ public class FishSoup extends AbstractQuest {
 						new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES , "Oh I am sorry, I have to wash my cooking pots first before making more soup for you. Please come back in")
+				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES , "Oh 抱歉。再次做汤之前，我需要首先洗净炊具，请回来 在")
 			);
 
 		// player responds to word 'revive'
@@ -168,11 +168,11 @@ public class FishSoup extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					if (player.hasQuest(QUEST_SLOT) && player.isQuestCompleted(QUEST_SLOT)) {
-						npc.say("I have everything for the fish soup recipe now.");
+						npc.say("现在我已经弄清了做好鱼汤的密诀。");
 						npc.setCurrentState(ConversationStates.ATTENDING);
 					} else {
-						npc.say("My special fish soup has a magic touch. "
-								+ "I need you to bring me the #ingredients.");
+						npc.say("我的密制鱼汤有魔法伤。 "
+								+ "我需要你云带来一些 #ingredients.");
 					}
 				}
 			});
@@ -184,12 +184,12 @@ public class FishSoup extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final List<String> needed = missingFood(player, true);
-					npc.say("I need "
-							+ Grammar.quantityplnoun(needed.size(),
-									"ingredient", "one")
-							+ " before I make the soup: "
-							+ Grammar.enumerateCollection(needed)
-							+ ". Will you collect them?");
+					npc.say("做汤之前，我需要 "
+							+ needed.size() + 
+									"ingredient"
+							+ " : "
+							+ needed
+							+ ". 你已经弄到了?");
 				}
 			});
 
@@ -197,14 +197,14 @@ public class FishSoup extends AbstractQuest {
 		npc.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES, null,
 			ConversationStates.QUESTION_1,
-			"You made a good choice and I bet you'll not be disappointed. Do you have anything I need already?",
+			"虽然你有其他选择，但我求你不要让我失望。你还有其他我需要的东西吗？",
 			new SetQuestAction(QUEST_SLOT, ""));
 
 		// player is not willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Oh, I hope you will change your mind another time. You'd definitely miss out!", null);
+				"Oh, 我希望你能改变主意。太让人失望了！", null);
 
 		// players asks about the ingredients individually
 		npc.add(
@@ -212,8 +212,8 @@ public class FishSoup extends AbstractQuest {
 			Arrays.asList("surgeonfish","cod", "char", "roach", "clownfish", "mackerel", "perch"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"There are different fishing places all over Faiumoni. If you want to find out where you can find any kind of fish," +
-			" take a look in the library here in Ados. Will you fetch the ingredients?",
+			"在Faiumoni周围，遍布着可以钓鱼的地方。你可以找到适合你的很多地方，在那里你能钓到不同的鱼。" +
+			" 经过Ados时可以看看图书管，你得到了什么配方吗？",
 			null);
 
 		// players asks about the ingredients individually
@@ -222,7 +222,7 @@ public class FishSoup extends AbstractQuest {
 			Arrays.asList("leek", "onion"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"You will find that in allotments in Fado. So will you fetch the ingredients?",
+			"你在Fado能找到配料的一些成份。所以你可以去取一些配料吗？",
 			null);
 
 		// players asks about the ingredients individually
@@ -231,8 +231,8 @@ public class FishSoup extends AbstractQuest {
 			Arrays.asList("tomato", "garlic"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"There is a nice gardener, Sue, in the Kalavan City gardens who sells tomatoes and garlic. "
-			+ "So will you fetch the ingredients?", null);
+			"在 Kalavan 市的 Sue，那里有个漂亮的花园， 花园里出售 tomatoes 和 garlic. "
+			+ "所以你可以把配料取来吗？", null);
 	}
 
 	private void step_2() {
@@ -250,7 +250,7 @@ public class FishSoup extends AbstractQuest {
 					new QuestStartedCondition(QUEST_SLOT),
 					new NotCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "done"))),
 			ConversationStates.QUESTION_1,
-			"Welcome back! I hope you collected some #ingredients for the fish soup, or #everything.",
+			"欢迎回来! 我希望你能为鱼汤收集一些 #ingredients 配料, 或者是一些其他的东西 #everything.",
 			null);
 
 		// player asks what exactly is missing
@@ -261,18 +261,18 @@ public class FishSoup extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final List<String> needed = missingFood(player, true);
-					npc.say("I still need "
-							+ Grammar.quantityplnoun(needed.size(),
-									"ingredient", "one") + ": "
-							+ Grammar.enumerateCollection(needed)
-							+ ". Did you bring anything I need?");
+					npc.say("我还需要 "
+							+ needed.size() +
+									"ingredient" + ": "
+							+ needed
+							+ ". 你有带来吗?");
 				}
 			});
 
 		// player says he has a required ingredient with him
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES, null,
-				ConversationStates.QUESTION_1, "What did you bring?", null);
+				ConversationStates.QUESTION_1, "你带回什么了?", null);
 
 		for(final String itemName : NEEDED_FOOD) {
 			npc.add(ConversationStates.QUESTION_1, itemName, null,
@@ -292,26 +292,26 @@ public class FishSoup extends AbstractQuest {
 								missing = missingFood(player, true);
 
 								if (!missing.isEmpty()) {
-									npc.say("Thank you very much! What else did you bring?");
+									npc.say("十分感谢! 你还带回其他的材料吗?");
 								} else {
 									player.addKarma(10.0);
 									player.addXP(50);
 									placeSoupFor(player);
 									player.getStatusList().removeAll(PoisonStatus.class);
-									npc.say("The soup's on the market table for you. It will heal you. "
-											+ "My magical method in making the soup has given you a little karma too.");
+									npc.say("鱼汤已放在市场的桌子上了，喝了它可以让你健康。"
+											+ "我的密制鱼汤，也能带给你一点好运。");
 									player.setQuest(QUEST_SLOT, "done;"
 											+ System.currentTimeMillis());
 									player.notifyWorldAboutChanges();
 									npc.setCurrentState(ConversationStates.ATTENDING);
 								}
 							} else {
-								npc.say("Oh come on, I don't have time for jokes! You don't have "
-									+ Grammar.a_noun(itemName)
-									+ " with you.");
+								npc.say("Oh 快点, 我没时间开玩笑！你没有带来 "
+									+ itemName
+									+ " , 是吧.");
 							}
 						} else {
-							npc.say("You brought me that ingredient already.");
+							npc.say("你已经把材料给我了.");
 						}
 					}
 				});
@@ -366,9 +366,9 @@ public class FishSoup extends AbstractQuest {
 		missing = missingFood(player, true);
 		if (missing.size() > 0) {
 			npc.say("You didn't have all the ingredients I need. I still need "
-							+ Grammar.quantityplnoun(missing.size(),
-									"ingredient", "one") + ": "
-							+ Grammar.enumerateCollection(missing)
+							+ missing.size() +
+									"ingredient" + ": "
+							+ missing
 							+ ". You'll get bad karma if you keep making mistakes like that!");
 			// to fix bug [ 2517439 ]
 			player.addKarma(-5.0);
@@ -405,7 +405,7 @@ public class FishSoup extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I'm collecting ingredients to make fish soup. I still need " + Grammar.enumerateCollection(missingFood(player, false)) + ".");
+				res.add("I'm collecting ingredients to make fish soup. I still need " + missingFood(player, false) + ".");
 			} else if(isRepeatable(player)){
 				res.add("Florence is ready to make soup for me again!");
 			} else {

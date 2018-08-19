@@ -17,7 +17,7 @@ import java.util.List;
 
 import games.stendhal.common.Direction;
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
@@ -196,7 +196,7 @@ public class SokobanGame implements LoadableContent, SokobanListener {
 		player.setQuest(QUEST_SLOT, "done;" + level + ";" + totalTime + ";0");
 
 		npc.say("Congratulations " + playerName + ", you completed the "
-				+ Grammar.ordered(level) + " level in "
+				+ level + " level in "
 				+ TimeUtil.approxTimeUntil(timeDiff));
 
 		int points = level * 1000000 - totalTime;

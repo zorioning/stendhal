@@ -17,7 +17,7 @@ import games.stendhal.client.entity.User;
 import games.stendhal.client.gui.chatlog.StandardEventLine;
 import games.stendhal.common.Constants;
 import games.stendhal.common.EquipActionConsts;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import marauroa.common.game.RPAction;
 
 /**
@@ -55,7 +55,7 @@ class DropAction implements SlashAction {
 			itemName = (params[0] + " " + remainder).trim();
 		}
 
-		final String singularItemName = Grammar.singular(itemName);
+		final String singularItemName = itemName;
 
 		for (final String slotName : Constants.CARRYING_SLOTS) {
 			int itemID = User.get().findItem(slotName, itemName);
@@ -80,7 +80,7 @@ class DropAction implements SlashAction {
 				return true;
 			}
 		}
-		ClientSingletonRepository.getUserInterface().addEventLine(new StandardEventLine("You don't have any " + singularItemName));
+		ClientSingletonRepository.getUserInterface().addEventLine(new StandardEventLine("你还没有 " + singularItemName));
 		return true;
 	}
 

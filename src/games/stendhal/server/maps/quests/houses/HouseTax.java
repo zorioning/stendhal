@@ -19,7 +19,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.ChatMessage;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -166,7 +166,7 @@ class HouseTax implements TurnListener {
 							+ Integer.toString(MAX_UNPAID_TAXES + 1) + " months, your house will be repossessed.";
 					}
 					notifyIfNeeded(owner, "You owe " +  Integer.toString(getTaxDebt(payments)) + " money in house tax for "
-							+ Grammar.quantityplnoun(payments, "month", "one")
+							+ payments + "month"
 							+ ". You may come to Ados Townhall to pay your debt." + remainder);
 				}
 			}

@@ -81,7 +81,7 @@ public class IncrementQuestAction implements ChatAction {
 
 	@Override
 	public String toString() {
-		return "IncrementQuest<" + questname + "[" + index + "] + " + increment + ">";
+		return "添加任务<" + questname + "[" + index + "] + " + increment + ">";
 	}
 
 	@Override

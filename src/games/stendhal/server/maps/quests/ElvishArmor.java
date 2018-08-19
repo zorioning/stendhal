@@ -15,7 +15,7 @@ package games.stendhal.server.maps.quests;
 import java.util.Arrays;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.SpeakerNPC;
@@ -121,14 +121,14 @@ public class ElvishArmor extends AbstractQuest implements
 
 	@Override
 	public String welcomeBeforeStartingQuest() {
-		return "Greetings, traveller. I see that you have come far to be here. "
-			+ "I am interested in anyone who has encountered our kin, the green elves of Nalwor. They guard their #secrets closely.";
+		return "Greetings, traveller. 我明白你从远处到此。"
+			+ "我对遇到我们家族的人 感兴趣。I am interested in anyone who has encountered our kin, the green elves of Nalwor. They guard their #secrets closely.";
 	}
 
 	@Override
 	public String respondToQuest() {
-		return "They won't share knowledge of how to create the green armor, shields and the like. You would call them elvish items. "
-			+ "I wonder if a traveller like you could bring me any?";
+		return "他们不分享如何建立绿色盔甲、盾和与此类似装备的相关知识，你应该称他们 elvish 装备. "
+			+ "我想I wonder if a traveller like you could bring me any?";
 	}
 
 	@Override
@@ -149,19 +149,19 @@ public class ElvishArmor extends AbstractQuest implements
 	// this one not actually used here
 	@Override
 	public String firstAskForMissingItems(final List<String> missingItems) {
-		return "I have heard descriptions of "
-								+ Grammar.quantityplnoun(missingItems.size(), "item", "a")
-								+ " in all. They are: "
-								+ Grammar.enumerateCollection(missingItems)
-								+ ". Will you collect them?";
+		return "我听说了 "
+								+ missingItems.size()
+								+ " 的合计详细情况. 包括: "
+								+ missingItems
+								+ ". 你要收集他们吗Will you collect them?";
 	}
 
 	@Override
 	public String askForMissingItems(final List<String> missingItems) {
 		return "I have heard descriptions of "
-								+ Grammar.quantityplnoun(missingItems.size(), "item", "a")
+								+ missingItems.size()
 								+ " in all. They are: "
-								+ Grammar.enumerateCollection(missingItems)
+								+ missingItems
 								+ ". Have you looted any?";
 	}
 
@@ -184,7 +184,7 @@ public class ElvishArmor extends AbstractQuest implements
 	@Override
 	public String respondToOfferOfNotExistingItem(final String itemName) {
 		return "Liar! You don't really have "
-										+ Grammar.a_noun(itemName)
+										+ itemName
 										+ " with you.";
 	}
 	@Override

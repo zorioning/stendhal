@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.NotificationType;
 import games.stendhal.common.constants.Nature;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.events.EquipListener;
 import games.stendhal.server.entity.Entity;
@@ -112,21 +112,21 @@ public abstract class Spell extends PassiveEntity implements EquipListener, Date
 
 		//check for sufficient mana
 		if (!new PlayerManaGreaterThanCondition(getMana()-1).fire(caster, null, null)) {
-			throw new InsufficientManaException("You have not sufficent mana to cast your spell \""+getName()+"\".");
+			throw new InsufficientManaException("你没有足够的魔力施展 \""+getName()+"\"魔法.");
 		}
 
 		//check minimum level
 		if (new LevelLessThanCondition(getMinimumLevel()).fire(caster, null, null)) {
-			throw new LevelRequirementNotFulfilledException("You did not reach the minimum level for your spell \""+getName()+"\" yet.");
+			throw new LevelRequirementNotFulfilledException("你还没到施展 \""+getName()+"\" 魔法的级别.");
 		}
 
 		if(!isCooledDown()) {
-			throw new SpellNotCooledDownException("Your spell \""+getName()+"\" did not yet cool down.");
+			throw new SpellNotCooledDownException("你的 \""+getName()+"\" 魔法还没有冷却.");
 		}
 
 		//check if target is valid for spell?
 		if (!isTargetValid(caster, target)) {
-			throw new InvalidSpellTargetException("The target is not valid for your spell \""+getName()+"\".");
+			throw new InvalidSpellTargetException("你的魔法 \""+getName()+"\"施向的目标不存在.");
 		}
 		//check other preconditions like having learned that school?
 		//check for right equipment
@@ -156,7 +156,7 @@ public abstract class Spell extends PassiveEntity implements EquipListener, Date
 					new PlayerHasItemEquippedInSlot(item, "rhand"),
 					new PlayerHasItemEquippedInSlot(item, "lhand"));
 			if(!staffCondition.fire(caster, null, null)) {
-				caster.sendPrivateText(NotificationType.INFORMATION, "You must have "+Grammar.a_noun(item)+" in your hands to cast a spell.");
+				caster.sendPrivateText(NotificationType.INFORMATION, "你必须把 "+item+" 放在你的手中才可施展魔法.");
 				return false;
 			}
 		}

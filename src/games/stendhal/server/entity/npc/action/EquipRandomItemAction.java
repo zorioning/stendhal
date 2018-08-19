@@ -108,7 +108,7 @@ public class EquipRandomItemAction implements ChatAction {
 	@Override
 	public String toString() {
 		final StringBuilder sb = new StringBuilder();
-		sb.append("equip ones of items <");
+		sb.append("准备一个物品 <");
 		sb.append(" ");
 		sb.append(items.toString());
 		if (bind) {

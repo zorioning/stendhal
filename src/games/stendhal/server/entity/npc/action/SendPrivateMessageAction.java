@@ -65,7 +65,7 @@ public class SendPrivateMessageAction implements ChatAction {
 	@Override
 	public String toString() {
 		// would need to send the type toString also to include the type here
-		return "Send Private Message<" + type + ", " + text + ">";
+		return "发送私信<" + type + ", " + text + ">";
 	}
 
 	@Override

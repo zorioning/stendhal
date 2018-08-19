@@ -63,12 +63,12 @@ public class DwarfWeaponArmorGuyNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting();
-				addJob("I sell good quality armor and weapons.");
-				addHelp("Look at the blackboard for what I provide.");
+				addGreeting("欢迎光临本店 #help ");
+				addJob("本店销售高质量的盔甲和武器.");
+				addHelp("可以看看本店的盔甲和武器. #offer ");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellbetterstuff2")), false);
-				addOffer("Look at the blackboard to see my offer.");
-				addQuest("I thank you for offering to help, but I am fine.");
+				addOffer("黑板上可以看看我卖的好东西 #offer.");
+				addQuest("谢谢你的好意。但我很好.");
 				addGoodbye();
 			}
 		};
@@ -76,7 +76,7 @@ public class DwarfWeaponArmorGuyNPC implements ZoneConfigurator {
 		gulimo.setEntityClass("greendwarfnpc");
 		gulimo.setPosition(3, 24);
 		gulimo.initHP(100);
-		gulimo.setDescription("You see Gulimo. He sells good quality armor and weapons.");
+		gulimo.setDescription("你看见 Gulimo. 他销信高质量的盔甲和武器.");
 		zone.add(gulimo);
 	}
 }

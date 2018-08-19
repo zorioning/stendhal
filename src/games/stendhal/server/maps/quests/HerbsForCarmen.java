@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.entity.npc.ChatAction;
 import games.stendhal.server.entity.npc.ConversationPhrases;
 import games.stendhal.server.entity.npc.ConversationStates;
@@ -85,16 +85,16 @@ public class HerbsForCarmen extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Carmen asked me to fetch ingredients to help her continue to heal others.");
+		res.add("Carmen 向我索要冶病配方，以便可以治疗其他病人。");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("I don't want to help Carmen. I guess she'll find someone else to help her.");
+			res.add("我不想帮助 Carmen. 我猜她可以找别人帮助。");
 		} else if (!"done".equals(questState)) {
 			final ItemCollection missingItems = new ItemCollection();
 			missingItems.addFromQuestStateString(questState);
-			res.add("I still need to bring Carmen " + Grammar.enumerateCollection(missingItems.toStringList()) + ".");
+			res.add("我还需要把 " + missingItems.toStringList() + "带给 Carmen.");
 		} else {
-			res.add("I helped Carmen and she can now continue her healing work.");
+			res.add("我帮助了 Carmen ，现在她可以继续治病救人了。");
 		}
 		return res;
 	}
@@ -109,20 +109,20 @@ public class HerbsForCarmen extends AbstractQuest {
 					new QuestNotStartedCondition(QUEST_SLOT),
 					new NotCondition(new QuestInStateCondition(QUEST_SLOT,"rejected"))),
 			ConversationStates.QUESTION_1,
-			"Hm, Do you know what I do for a living?", null);
+			"Hm, 你知道我为何而生吗?", null);
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestInStateCondition(QUEST_SLOT,"rejected"),
 			ConversationStates.QUEST_OFFERED,
-			"Hey, are you going to help me yet?", null);
+			"嗨, 你还要帮我吗？?", null);
 
 		npc.add(
 			ConversationStates.QUESTION_1,
 			ConversationPhrases.YES_MESSAGES,
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Great, so you know my job. My supply of healing #ingredients is running low.",
+			"太好了, 你知道了我的工作，我用于治病的 #ingredients 配方原料不足。",
 			null);
 
 		npc.add(
@@ -130,7 +130,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"I am Carmen. I can heal you for free, until your powers become too strong. Many warriors ask for my help. Now my #ingredients are running out and I need to fill up my supplies.",
+			"我是 Carmen. 我能免费为你治病，直到你变得更强之前。很多勇者都向我寻求帮助。但现在我的 #ingredients 配方不够了，我需要补充我的药材",
 			null);
 
 		npc.add(
@@ -138,7 +138,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			"ingredients",
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"So many people are asking me to heal them. That uses many ingredients and now my inventories are near empty. Can you help me to fill them up?",
+			"所以很多人需要我的治疗。但那需要很多药材，现在我的存货几乎空了，你能帮我把原料补足吗？",
 			null);
 
 		npc.add(
@@ -148,14 +148,14 @@ public class HerbsForCarmen extends AbstractQuest {
 			ConversationStates.ATTENDING,
 			null,
 			new MultipleActions(new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS),
-								new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Oh how nice. Please bring me those ingredients: [items].")));
+								new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Oh 太好了. 请带给我这些药材: [items].")));
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Hargh, thats not good! But ok, its your choice. But remember, I will tell the others that I can't heal them much longer, because YOU didn't want to help me.",
+			"哈啊, 不行! 不过好吧，这是你的选择，但记住，我会对其他人说因为你没有帮我，我将不能继续治疗他们。",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		npc.add(
@@ -163,7 +163,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			"apple",
 			null,
 			ConversationStates.ATTENDING,
-			"Apples have many vitamins, I saw some apple trees on the east of semos.",
+			"苹果有很多维生素，我曾看到一些苹果树在 Semon 镇的东边。",
 			null);
 
 		npc.add(
@@ -171,7 +171,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			"wood",
 			null,
 			ConversationStates.ATTENDING,
-			"Wood is great resource with many different purposes. Of course you can find logs in a forest.",
+			"木头是个好东西，可以用在不同的地方，当然你可以在森林中找到一些。",
 			null);
 
 		npc.add(
@@ -179,7 +179,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			Arrays.asList("button mushroom","porcino","porcini","porcinis"),
 			null,
 			ConversationStates.ATTENDING,
-			"Someone told me there are many different mushrooms in the Semos forest, follow the path south from here.",
+			"有人告诉我在 Semos 森林中有一些不同种类的蘑菇，从这往南走就能到。",
 			null);
 
 		npc.add(
@@ -187,7 +187,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			"arandula",
 			null,
 			ConversationStates.ATTENDING,
-			"North of Semos, near the tree grove, grows a herb called arandula. Here is a picture so you know what to look for.",
+			"出了 Semos 向北, 在 grove 树的旁边，生着名叫 arnandula 的药草，给你看看它的图片，方但你找到它。",
 			new ExamineChatAction("arandula.png", "Carmen's drawing", "Arandula"));
 
 	}
@@ -199,29 +199,29 @@ public class HerbsForCarmen extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestActiveCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"Hi again. I can #heal you, or if you brought me #ingredients I'll happily take those!",
+				"又见面了，我可以为你 #heal 治疗, 但如果你带给我 #ingredients 药材我会更开心的给你治疗!",
 				null);
 
 		/* player asks what exactly is missing (says ingredients) */
 		npc.add(ConversationStates.ATTENDING, "ingredients", null,
 				ConversationStates.QUESTION_2, null,
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I need [items]. Did you bring something?"));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我需要 [items]. 你能带一些过来吗?"));
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 			ConversationStates.QUESTION_2,
-			null, new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "I need [items]. Did you bring something?"));
+			null, new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我需要 [items]. 你能带过来一些吗?"));
 
 		/* player says he has a required item with him (says yes) */
 		npc.add(ConversationStates.QUESTION_2,
 				ConversationPhrases.YES_MESSAGES, null,
-				ConversationStates.QUESTION_2, "Great, what did you bring?",
+				ConversationStates.QUESTION_2, "太好了, 我看看你带来了什么?",
 				null);
 
 		ChatAction completeAction = new  MultipleActions(
 				new SetQuestAction(QUEST_SLOT, "done"),
-				new SayTextAction("Great! Now I can heal many people for free. Thanks a lot. Take this for your work."),
+				new SayTextAction("太好了! 现在我能免费治好很多人了，非常感谢。你工作时可以带上这个。"),
 				new IncreaseXPAction(50),
 				new IncreaseKarmaAction(5),
 				new EquipItemAction("minor potion", 5)
@@ -233,7 +233,7 @@ public class HerbsForCarmen extends AbstractQuest {
 		for (final Map.Entry<String, Integer> entry : items.entrySet()) {
 			String itemName = entry.getKey();
 
-			String singular = Grammar.singular(itemName);
+			String singular = itemName;
 			List<String> sl = new ArrayList<String>();
 			sl.add(itemName);
 
@@ -250,8 +250,8 @@ public class HerbsForCarmen extends AbstractQuest {
 					ConversationStates.QUESTION_2, null,
 					new CollectRequestedItemsAction(
 							itemName, QUEST_SLOT,
-							"Good, do you have anything else?", "You have already brought " +
-								Grammar.quantityplnoun(entry.getValue(), itemName) + " for me but thank you anyway.",
+							"好的, 你还有其他事吗?", "你还为我带回来了 " +
+								entry.getValue()+ itemName + " ,谢谢。",
 							completeAction, ConversationStates.ATTENDING));
 		}
 
@@ -259,7 +259,7 @@ public class HerbsForCarmen extends AbstractQuest {
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.NO_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Ok, well just let me know if I can #help you with anything else.",
+				"Ok, 如果我能为你做点什么，就告诉我 #help 。",
 				null);
 
 		/* player says he didn't bring any items to different question */
@@ -267,14 +267,14 @@ public class HerbsForCarmen extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Ok, well just let me know if I can #help you with anything else.", null);
+				"Ok, 如果我能幚到你 #Help 的，一定告诉我。", null);
 
 		/* says quest and quest can't be started nor is active*/
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				null,
 			    ConversationStates.ATTENDING,
-			    "There's nothing I need right now, thank you.",
+			    "现在没有我需要的东西了，谢谢你。",
 			    null);
 	}
 
@@ -282,7 +282,7 @@ public class HerbsForCarmen extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Herbs for Carmen",
-				"The Semos healer, Carmen, searches for ingredients to make potions and other useful medicines with.",
+				"Semos 的医者, Carmen 为了做出足够的药济，正到处寻找药济的原料.",
 				true);
 		prepareRequestingStep();
 		prepareBringingStep();

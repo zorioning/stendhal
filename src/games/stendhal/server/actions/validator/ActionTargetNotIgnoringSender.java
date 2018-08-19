@@ -12,7 +12,7 @@
  ***************************************************************************/
 package games.stendhal.server.actions.validator;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.player.Player;
 import marauroa.common.game.RPAction;
@@ -55,9 +55,9 @@ public class ActionTargetNotIgnoringSender implements ActionValidator {
 
 		// sender is on ignore list
 		if (reply.length() == 0) {
-			return Grammar.suffix_s(playerName) + " mind is not attuned to yours, so you cannot reach them.";
+			return playerName + " 与你不合拍, 所以你不去他们那.";
 		} else {
-			return playerName + " is ignoring you: " + reply;
+			return playerName + " 屏闭了你: " + reply;
 		}
 	}
 }

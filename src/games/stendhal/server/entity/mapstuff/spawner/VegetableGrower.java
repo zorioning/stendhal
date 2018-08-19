@@ -12,7 +12,7 @@
  ***************************************************************************/
 package games.stendhal.server.entity.mapstuff.spawner;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.events.UseListener;
 import games.stendhal.server.entity.RPEntity;
@@ -59,8 +59,8 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 			final int maxRipeness, final int growthRate) {
 		super(object, "items/grower/" + name + "_grower", "items/grower/" + name + " grower", "Pick", maxRipeness, growthRate);
 		vegetableName = name;
-		setDescription("It looks like there's "
-				+ Grammar.a_noun(name) + " sprouting here.");
+		setDescription("好像有个 "
+				+ name + " 正在发芽.");
 		update();
 	}
 
@@ -72,8 +72,8 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 	public VegetableGrower(final String name) {
 		super("items/grower/" + name + "_grower", "items/grower/" + name + " grower", "Pick", 1, 1, 1);
 		vegetableName = name;
-		setDescription("It looks like there's "
-				+ Grammar.a_noun(name) + " sprouting here.");
+		setDescription("好像有个 "
+				+ name + " 正在发芽.");
 	}
 
 	/**
@@ -98,10 +98,10 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 			text = getDescription();
 			break;
 		case 1:
-			text = "You see " + Grammar.a_noun(vegetableName) + ".";
+			text = "你看 " + vegetableName + ".";
 			break;
 		default:
-			text = "You see an unripe " +  Grammar.fullForm(vegetableName) + ".";
+			text = "你看见一个不熟的 " +  vegetableName + ".";
 			break;
 		}
 		return text;
@@ -126,15 +126,15 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 				entity.equipOrPutOnGround(grain);
 				return true;
 			} else if (entity instanceof Player) {
-				String message = "This " + Grammar.fullForm(vegetableName)
-						+ " is not yet ripe enough to pick.";
+				String message = "这个 " + vegetableName
+						+ " 还不没成熟而不能采摘.";
 				if(notRipeEnoughMessage != null) {
 					message = notRipeEnoughMessage;
 				}
 				((Player) entity).sendPrivateText(message);
 			}
 		} else if (entity instanceof Player) {
-			((Player) entity).sendPrivateText("You are too far away.");
+			((Player) entity).sendPrivateText("你离得太远.");
 		}
 		return false;
 	}

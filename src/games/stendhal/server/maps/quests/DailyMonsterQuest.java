@@ -23,7 +23,7 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.MathHelper;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.creature.Creature;
@@ -134,15 +134,15 @@ public class DailyMonsterQuest extends AbstractQuest {
 
 			// shouldn't happen
 			if (pickedCreature == null) {
-				raiser.say("Thanks for asking, but there's nothing you can do for me now.");
+				raiser.say("感谢你的关心，但现在还没有需要你帮助的地方。");
 				return;
 			}
 
 			String creatureName = pickedCreature.getName();
 
 
-			raiser.say("Semos is in need of help. Go kill " + Grammar.a_nounCreature(creatureName)
-					+ " and say #complete, once you're done.");
+			raiser.say("Semos镇需要你的帮助，去杀掉 " + creatureName
+					+ " ，完成后回来说 #complete 就行了。");
 
 			questLast = "" + new Date().getTime();
 			player.setQuest(
@@ -260,24 +260,24 @@ public class DailyMonsterQuest extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Mayor Sakhs in Semos Townhall.");
+		res.add("我已在 Semos 城镇大厅见到了城主 Sakhs。");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("I do not want to help Semos.");
+			res.add("我不想帮助Semos城。");
 			return res;
 		}
 
-		res.add("I want to help Semos.");
+		res.add("我想帮助 Semos城。");
 		if (player.hasQuest(QUEST_SLOT) && !player.isQuestCompleted(QUEST_SLOT)) {
 			final boolean questDone = new KilledForQuestCondition(QUEST_SLOT, 0)
 					.fire(player, null, null);
 			final String creatureToKill = getCreatureToKillFromPlayer(player);
 			if (!questDone) {
-				res.add("I have been asked to kill " + Grammar.a_nounCreature(creatureToKill)
-						+ " to help Semos. I haven't killed it yet.");
+				res.add("我接受了帮助Semos镇杀死 " + creatureToKill
+						+ " 的任务. 但我还没杀掉它.");
 			} else {
-				res.add("I have killed the " + creatureToKill
-						+ " to help Semos.");
+				res.add("我帮助Semos镇杀死了 " + creatureToKill
+						+ "。");
 			}
 		}
 		if (player.isQuestCompleted(QUEST_SLOT)) {
@@ -287,16 +287,16 @@ public class DailyMonsterQuest extends AbstractQuest {
 					- System.currentTimeMillis();
 
 			if (timeRemaining > 0L) {
-				res.add("I killed the last creature the mayor asked me to kill and claimed my reward within the last 24 hours.");
+				res.add("我杀掉了城主想杀掉的怪物，并且要求我在24小时内回复情况。");
 			} else {
-				res.add("I killed the last creature the mayor asked me to kill and now Semos needs my help again.");
+				res.add("我杀掉了城主想杀掉的怪物，现在Semon城又向我寻求帮助了。");
 			}
 		}
 		// add to history how often player helped Semos so far
 		final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {
-			res.add("I helped and saved Semos "
-					+ Grammar.quantityplnounCreature(repetitions, "time") + " so far.");
+			res.add("目前，我已拯救了Semos镇 "
+					+ repetitions + " 次。");
 		}
 		return res;
 	}
@@ -330,9 +330,9 @@ public class DailyMonsterQuest extends AbstractQuest {
 				new ChatAction() {
 					@Override
 					public void fire(Player player, Sentence sentence, EventRaiser npc) {
-						npc.say("You're already on a quest to slay " +
-								Grammar.a_nounCreature(player.getQuest(QUEST_SLOT,0).split(",")[0]) +
-								". Say #complete if you're done with it!");
+						npc.say("你的任务是杀掉 " +
+								player.getQuest(QUEST_SLOT,0) +
+								". 完成后回复 #complete 完成它!");
 					}
 				});
 
@@ -351,10 +351,10 @@ public class DailyMonsterQuest extends AbstractQuest {
 					@Override
 					public void fire(Player player, Sentence sentence, EventRaiser npc) {
 						if(player.getQuest(QUEST_SLOT, 0)!=null) {
-								npc.say("You're already on a quest to slay " +
-										Grammar.a_nounCreature(player.getQuest(QUEST_SLOT, 0).split(",")[0]) +
-										". Say #complete if you're done with it!" +
-										" If you can't find one, perhaps it won't bother Semos either. You could kill #another creature if you like.");
+								npc.say("你的任务是杀掉 " +
+										player.getQuest(QUEST_SLOT, 0) +
+										". 完成后回复 #complete 完成它!" +
+										" 如果你没找到它，可能它没给Semon镇惹麻烦，如果你喜欢，还可以杀掉其它的 #another 怪物。");
 						}
 					}
 				});
@@ -368,7 +368,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 								new TimePassedCondition(QUEST_SLOT, 1, delay))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT,1, delay, "I can only give you a new quest once a day. Please check back in"));
+				new SayTimeRemainingAction(QUEST_SLOT,1, delay, "一日内我只能让你完成一件任务。请快完成它吧。"));
 
 		// player asked for quest first time or repeat it after passed proper time
 		npc.add(ConversationStates.ATTENDING,
@@ -399,7 +399,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 				ConversationPhrases.FINISH_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I'm afraid I didn't send you on a #quest yet.",
+				"可能我还没有向你发出任务 #quest ",
 				null);
 
 		// player already completed this quest
@@ -407,7 +407,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 				ConversationPhrases.FINISH_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"You already completed the last quest I had given to you.",
+				"你已完成我给你的最近的任务。",
 				null);
 
 		// player didn't killed creature
@@ -424,8 +424,8 @@ public class DailyMonsterQuest extends AbstractQuest {
 					@Override
 					public void fire(Player player, Sentence sentence, EventRaiser npc) {
 							final String questKill = player.getQuest(QUEST_SLOT, 0).split(",")[0];
-							npc.say("You didn't kill " + Grammar.a_nounCreature(questKill)
-									+ " yet. Go and do it and say #complete only after you're done.");
+							npc.say("你还没有杀掉 " + questKill
+									+ " 。完成后回来回复 #complete 就可以了.");
 					}
 				});
 
@@ -437,7 +437,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 						new QuestNotCompletedCondition(QUEST_SLOT),
 				        new KilledForQuestCondition(QUEST_SLOT, 0)),
 				ConversationStates.ATTENDING,
-				"Good work! Let me thank you in the name of the people of Semos!",
+				"干的好! 我代表Semons的人民感谢你!",
 				new MultipleActions(
 						new IncreaseXPDependentOnLevelAction(5, 95.0),
 						new IncreaseKarmaAction(5.0),
@@ -458,7 +458,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 						new QuestNotStartedCondition(QUEST_SLOT),
 						new QuestCompletedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"I'm afraid I didn't send you on a #quest yet.",
+				"可能我还没有给你发出任务 #quest 。",
 				null);
 
 		// player have no expired quest
@@ -467,7 +467,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 				new NotCondition(
 						new TimePassedCondition(QUEST_SLOT, 1, expireDelay)),
 				ConversationStates.ATTENDING,
-				"It hasn't been long since you've started your quest, I won't let you give up so soon.",
+				"我上次给你的任务还没有完成，我不会这么快让你放弃。",
 				null);
 
 		// player have expired quest
@@ -483,7 +483,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Daily Monster Quest",
-				"Mayor Sakhs needs warriors to keep Semos city safe.",
+				"Sakhs城需要勇士保卫Semos城的安全。",
 				true);
 		step_1();
 		step_2();

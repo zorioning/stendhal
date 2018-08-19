@@ -24,7 +24,7 @@ import org.apache.log4j.Logger;
 
 import games.stendhal.common.Rand;
 import games.stendhal.common.constants.Testing;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.DataProvider;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -236,12 +236,12 @@ public class StendhalRPAction {
 			final Player owner = ((DomesticAnimal) victim).getOwner();
 
 			if (owner != null) {
-				name = Grammar.suffix_s(owner.getTitle()) + " " + name;
+				name = owner.getTitle() + " " + name;
 			} else {
 				if (victim instanceof Sheep) {
-					name = "that " + name;
+					name = "那是 " + name;
 				} else {
-					name = "that poor little " + name;
+					name = "仅有一点 " + name;
 				}
 			}
 		}
@@ -263,9 +263,9 @@ public class StendhalRPAction {
 
 		final StendhalRPZone zone = player.getZone();
 		if (!zone.has(defender.getID()) || (defender.getHP() == 0)) {
-			logger.debug("Attack from " + player + " to " + defender
-					+ " stopped because target was lost("
-					+ zone.has(defender.getID()) + ") or dead.");
+			logger.debug("受到 " + player + " 攻击 " + defender
+					+ " 因失去目标而停止("
+					+ zone.has(defender.getID()) + ") 或者死亡.");
 			player.stopAttack();
 
 			return false;
@@ -277,8 +277,8 @@ public class StendhalRPAction {
 
 			// did the player or victim move into a protected area?
 			if(zone.isInProtectionArea(defender) || zone.isInProtectionArea(player)) {
-				logger.debug("Attack from " + player + " to " + defender
-						+ " stopped because " + player + " or " + defender + " moved into protected area.");
+				logger.debug("受到 " + player + " 的攻击 " + defender
+						+ " 因 " + player + " 移动到安全区 " + defender + " 而停止攻击。");
 				player.stopAttack();
 				return false;
 			}
@@ -297,8 +297,8 @@ public class StendhalRPAction {
 
 				isRanged = true;
 			} else {
-				logger.debug("Attack from " + player + " to " + defender
-						+ " failed because target is not near.");
+				logger.debug("受到 " + player + " 的攻击to " + defender
+						+ " 因目标较远而落空。");
 				return false;
 			}
 		}

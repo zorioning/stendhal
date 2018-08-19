@@ -26,7 +26,7 @@ public class MovementTargetEmptyValidator implements MoveValidator {
 	@Override
 	public boolean validate(GameBoard board, Player player, BoardToken token, int xIndex, int yIndex) {
 		if (board.getTokenAt(xIndex, yIndex) != null) {
-			player.sendPrivateText("Please drop the token onto an empty spot.");
+			player.sendPrivateText("请把代币放到空的地方.");
 			return false;
 		}
 		return true;

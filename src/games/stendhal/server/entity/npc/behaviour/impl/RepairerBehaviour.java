@@ -72,21 +72,21 @@ public class RepairerBehaviour extends TransactionBehaviour {
 					player.drop("money", price);
 					//tell player about result of repairing as for more than one found item the most damaged one is repaired
 					if(foundMoreThanOne) {
-						seller.say("You do carry more than one "+res.getChosenItemName()+" with you. So I repaired the most damaged one.");
+						seller.say("你带拿了不只一个 "+res.getChosenItemName()+" with you. 所我只能修了破坏最严重的那个.");
 					} else {
-						seller.say("I repaired your "+res.getChosenItemName());
+						seller.say("我修好了你的 "+res.getChosenItemName());
 					}
 					return true;
 				} else {
-					seller.say("You cannot afford to repair your "+res.getChosenItemName());
+					seller.say("修好 "+res.getChosenItemName()+" 的价格你付不起啊");
 					return false;
 				}
 			} else {
-				seller.say("Your "+res.getChosenItemName()+" is not damaged.");
+				seller.say("你的 "+res.getChosenItemName()+" 没有损坏.");
 				return false;
 			}
 		}
-		seller.say("You do not carry a "+res.getChosenItemName()+" with you.");
+		seller.say("你身上没有 "+res.getChosenItemName()+" 呀.");
 		return false;
 	}
 
@@ -103,7 +103,7 @@ public class RepairerBehaviour extends TransactionBehaviour {
 
 	@Override
 	public ChatAction getRejectedTransactionAction() {
-		return new SayTextAction("I am sorry, [name], but I cannot repair your item.");
+		return new SayTextAction("抱歉， [name], 我不能修好你的东西.");
 	}
 
 	/**

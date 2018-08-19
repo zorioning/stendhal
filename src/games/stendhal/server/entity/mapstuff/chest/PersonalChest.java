@@ -17,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.apache.log4j.Logger;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.events.TurnListener;
@@ -213,14 +213,15 @@ public class PersonalChest extends Chest {
 		}
 		if (user instanceof Player) {
 			final Player player = (Player) user;
-			player.sendPrivateText("You cannot reach the chest from there.");
+			player.sendPrivateText("你不能从屋子里够到存储箱.");
 		}
 		return false;
 	}
 
 	@Override
     public String getDescriptionName(final boolean definite) {
-	    return Grammar.article_noun(bankName + " chest", definite);
+	 //   return Grammar.article_noun(bankName + " chest", definite);
+	    return bankName + " 存储箱";
     }
 
 	/**

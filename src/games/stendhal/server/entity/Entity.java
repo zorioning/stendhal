@@ -12,7 +12,7 @@
  ***************************************************************************/
 package games.stendhal.server.entity;
 
-import static games.stendhal.server.core.engine.Translate._;
+import static games.stendhal.server.core.engine.Translate.getText;
 
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -26,7 +26,7 @@ import com.google.common.collect.Iterators;
 
 import games.stendhal.common.ItemTools;
 import games.stendhal.common.constants.Events;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.slot.EntitySlot;
 import games.stendhal.server.entity.slot.SlotNameInList;
@@ -220,7 +220,7 @@ public abstract class Entity extends RPObject implements Killer {
 		if (has("description")) {
 			description = get("description");
 		}
-		return _(description);
+		return getText(description);
 	}
 
 	/**
@@ -518,7 +518,7 @@ public abstract class Entity extends RPObject implements Killer {
 			return getDescription();
 		}
 
-		return "You see " + getDescriptionName(false) + ".";
+		return "你看到 " + getDescriptionName(false) + ".";
 	}
 
 	/**
@@ -533,11 +533,11 @@ public abstract class Entity extends RPObject implements Killer {
 	 */
 	public String getDescriptionName(final boolean definite) {
 		if (has("subclass")) {
-			return Grammar.article_noun(ItemTools.itemNameToDisplayName(get("subclass")), definite);
+			return ItemTools.itemNameToDisplayName(get("subclass"));
 		} else if (has("class")) {
-			return Grammar.article_noun(ItemTools.itemNameToDisplayName(get("class")), definite);
+			return ItemTools.itemNameToDisplayName(get("class"));
 		} else {
-			String ret = "something indescribably strange";
+			String ret = "一些不可思议的东西";
 			if (has("type")) {
 				ret += " of type " + ItemTools.itemNameToDisplayName(get("type"));
 			}

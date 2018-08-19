@@ -81,14 +81,14 @@ public class DropInfostringItemAction implements ChatAction {
 		}
 
 		if (!res) {
-			logger.error("Cannot drop " + itemName, new Throwable());
+			logger.error("不能扔掉 " + itemName, new Throwable());
 		}
 		player.notifyWorldAboutChanges();
 	}
 
 	@Override
 	public String toString() {
-		return "drop " + amount + " of item <" + itemName + "> with infostring <" + infostring + ">";
+		return "扔掉 " + amount + " 个 <" + itemName + "> with infostring <" + infostring + ">";
 	}
 
 	@Override

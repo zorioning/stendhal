@@ -13,7 +13,7 @@
 package games.stendhal.server.entity.mapstuff.spawner;
 
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.StendhalRPObjectFactory;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.Entity;
@@ -39,13 +39,13 @@ public class FlowerGrower extends VegetableGrower {
 	private static final String GROWER_NAME = "lilia";
     /** The description depends upon the ripeness of the flower grower */
 	private final String[] description = {
-			"You see something which has just been planted.",
-			"Something is sprouting from the ground.",
-			"A plant is growing here, and you can already see foliage.",
-			"You see a plant growing a " + Grammar.fullForm(getVegetableName())
-					+ ", it is nearly at full maturity.",
-			"You see a fully grown " + Grammar.fullForm(getVegetableName())
-					+ ", ready to pull from the ground." };
+			"你看见一些刚被种上的植物",
+			"土地里已经长出上些嫩芽.",
+			"一个植物种在这，你已经能看到叶子.",
+			"你看到这株植物长成一个 " + getVegetableName()
+					+ ", 它快要成熟了.",
+			"你看到一个完全成熟的 " + getVegetableName()
+					+ ", 准备从地里弄走." };
 
 	/**
 	 * Constructor for loading FlowerGrower from the stored zone used by

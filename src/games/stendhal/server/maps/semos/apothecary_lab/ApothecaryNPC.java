@@ -51,22 +51,22 @@ public class ApothecaryNPC implements ZoneConfigurator {
 
 	        @Override
 			protected void createDialog() {
-	            addGreeting("Hello, welcome to my lab.");
-	            addJob("I used to be an #apothecary, but now I have retired.");
-	            addHelp("I'm sorry, but I don't think there is anything I can help you with.");
-	            addOffer("I have nothing to offer.");
-	            addReply("Klaas", "Oh yes, my good old friend. I used to travel to #Athor quite often to gather the very rare #kokuda herb. I got to know Klaas very well as a result.");
-	            addReply("kokuda", "The kokuda is an herb that can only be found inside #Athor Island's labyrinth.");
-	            addReply("Athor", "You mean you haven't visited Athor? It is a beautiful island. A great place to get away. But stay away from the cannibals' territory. If they invite you for dinner you might never make it home.");
-	            addReply("Apothecary", "I was head researcher of a team that worked for one of Faimouni's most powerful leaders. However this leader became corrupt and demanded that I use my skills to make deadly weapons of war. Anyway, I escaped and have been hiding out here ever since.");
-	            addGoodbye("Please keep my lab a secret.");
+	            addGreeting("Hello, 欢迎来到我的试验室.");
+	            addJob("我以前是个药济师 #apothecary ，但现在我退休了");
+	            addHelp("抱歉，但我不认为我能帮到你什么.");
+	            addOffer("我什么都不卖.");
+	            addReply("Klaas", "Oh 是的，我的老朋友，我以前常去 #Athor 旅行，去采集很稀有的 #kokuda 草药，所以我对 Klaas 非常熟悉.");
+	            addReply("kokuda", "是一种草药，只在 #Athor 岛的迷宫内生长.");
+	            addReply("Athor", "你还没去过 Athor? 那是个很漂亮的岛，值得去的一个好地方。但要远离食人族领地. 如果他们请你吃饭，那你可能就再回不了家了.");
+	            addReply("Apothecary", "我听说有一队研究人员为 Faimouni 的一个有很能力的领队工作。然而，这个领队被收买腐蚀，我用我的技术制作了致命的战争武器，还好，我逃离了那里并在这里躲到现在。");
+	            addGoodbye("请不要把我的试验室的秘密告诉外人.");
 	        }
 	    };
 
 	    // The NPC sprite from data/sprites/npc/
 	    npc.setEntityClass("apothecarynpc");
 	    // set a description for when a player does 'Look'
-	    npc.setDescription("You see Jameson, he steadily works away.");
+	    npc.setDescription("你见到了 Jameson, 他仍在有序工作着.");
 	    // Set the initial position to be the first node on the Path you defined above.
 	    npc.setPosition(7, 9);
 	    npc.initHP(100);

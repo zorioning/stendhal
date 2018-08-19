@@ -21,7 +21,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import games.stendhal.common.Direction;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.Spot;
@@ -129,14 +129,14 @@ public class AdosDeathmatch extends AbstractQuest {
 						new AndCondition(new GreetingMatchesNameCondition(name),
 								new NotCondition(new PlayerInAreaCondition(arena))),
 						ConversationStates.INFORMATION_1,
-						"Welcome to Ados Deathmatch! Please talk to #Thonatus if you want to join.",
+						"欢迎来到 Ados Deathmatch! 如果你想加入，请和 #Thonatus 谈.",
 						null);
 				add(
 						ConversationStates.INFORMATION_1,
 						"Thonatus",
 						null,
 						ConversationStates.INFORMATION_1,
-						"Thonatus is the official #Deathmatch Recruitor. He is in the #swamp south west of Ados.",
+						"Thonatus 作为死亡比赛 #Deathmatch 官方招募人. 他在 Ados 西南的沼泽里 #swamp ",
 						null);
 
                 add(
@@ -144,7 +144,7 @@ public class AdosDeathmatch extends AbstractQuest {
 					"swamp",
 					null,
 					ConversationStates.INFORMATION_1,
-					"Yes, south west from here, as I said. Beware, as the swamp is populated with some evil creatures.",
+					"是的,这里的西南方向，就像我说的，要小心，沼泽地聚集了一些邪恶的生物.",
 					null);
 
 
@@ -153,7 +153,7 @@ public class AdosDeathmatch extends AbstractQuest {
 					"deathmatch",
 					null,
 					ConversationStates.INFORMATION_1,
-					"If you accept the #challenge from #Thonatus, you will arrive here. Strong enemies will surround you and you must kill them all to claim #victory.",
+					"如果你接受了 #Thonatus 说的比赛规则 #challenge , 你会到达那里，强太的敌人会包围你，你必须全部杀死他们才能宣布胜利 #victory.",
 					null);
 
                 add(
@@ -161,7 +161,7 @@ public class AdosDeathmatch extends AbstractQuest {
                     "challenge",
                     null,
                     ConversationStates.INFORMATION_1,
-                    "Remember the name death in #Deathmatch. Do not accept the challenge unless you think you can defend well. And be sure to check that there is not any elite warrior already inside, battling strong beasts!",
+                    "记住在 #Deathmatch 中的名字. 除非你觉得你有很高的防御才能不接受挑战. And be sure to check that there is not any elite warrior already inside, battling strong beasts!",
                     null);
 
 				add(
@@ -255,7 +255,7 @@ public class AdosDeathmatch extends AbstractQuest {
 						 }
 						 // List the players inside deathmatch
 						 npc.say("There are heroes battling right now in the deathmatch. If you want to go and join "
-								 + Grammar.enumerateCollection(dmplayernames) + ", then make the #challenge.");
+								 + dmplayernames + ", then make the #challenge.");
 					 }
 				 });
 
@@ -286,7 +286,7 @@ public class AdosDeathmatch extends AbstractQuest {
 						 }
 						 // List the players inside deathmatch
 						 npc.say("There are heroes battling right now in the deathmatch, so it may be dangerous there. Do you want to join "
-								 + Grammar.enumerateCollection(dmplayernames) + "?");
+								 + dmplayernames + "?");
 					 }
 				 });
 

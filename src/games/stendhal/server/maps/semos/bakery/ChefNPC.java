@@ -81,19 +81,19 @@ public class ChefNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-				addJob("I'm the local baker. I also run a #pizza delivery service. We used to get a lot of orders from Ados before the war broke out and they blocked the road. At least it gives me more time to #make sandwiches for our valuable customers; everybody says they're great!");
-				addHelp("If you want to earn some money, you could do me a #favor and help me with the #pizza deliveries. My daughter #Sally used to do it, but she's camping at the moment.");
-				addReply("bread", "Oh, Erna handles that side of the business; just go over and talk to her.");
+				addJob("我是这里的面包师，也做 #pizza 外卖服务。在战争破坏和路被封锁之前，有很多来自 Ados 城的订单: 但也给了我更多时间给重要的客户制作 #make sandwiches 三明治；他们都说很好吃!");
+				addHelp("如果你想挣钱，可以帮我送一披撒 #pizza 外卖. 本来以前由我女儿 #Sally 送，但他这会在外渡假去了");
+				addReply("bread", "Oh, Erna 管理对外的商务工作。你可以到外面房间跟她说.");
 				addReply("cheese",
-				"Cheese is pretty hard to find at the minute, we had a big rat infestation recently. I wonder where the little rodents took it all to? If you #'sell cheese' I'd be happy to buy some from you!");
+				"现在 Cheese 干酪相当难找，我们这最近闹鼠灾。我很奇怪这些老鼠把干酪藏哪了？如果你卖 #'sell cheese' ，我很乐意买一些!");
 				addReply("ham",
-				"Well, you look like a skilled hunter; why not go to the forest and hunt some up fresh? Don't bring me those little pieces of meat, though... I only make sandwiches from high quality ham!");
+				"很好，你好像一个专业猎人；为什么不去森林猎取一些上等肉呢？不要给我这些小片的肉，虽然。。。我只用高端火腿做三明治sandwiches !");
 				addReply("Sally",
-				"My daughter Sally might be able to help you get ham. She's a scout, you see; I think she's currently camped out south of Or'ril Castle.");
-				addReply("pizza", "I need someone who helps me delivering pizza. Maybe you could do that #task.");
+				"我女儿 Sally 可能会帮你弄到火腿 ham. 她是一个侦察员。你明白，我想她现在可能在 Or'ril 城堡的南面露营.");
+				addReply("pizza", "我需要某个能帮我送pizza外卖的人。你原意接受这个任务吗？ #task");
 				addReply(Arrays.asList("sandwich", "sandwiches"),
-				"My sandwiches are tasty and nutritious. If you want one, just tell me to #'make 1 sandwich'.");
-				addOffer("My #pizza needs cheese and we have no supplies. I'll buy cheese if you will #sell.");
+				"我的 sandwiches 三明治营养且可口，如果你想要，就对我说 #'make 1 sandwich'.");
+				addOffer("我的 #pizza 需要干酪 cheese ,我们也不供应，如果你有 cheese 干酪，可以卖给我 #sell.");
 				final Map<String, Integer> offers = new TreeMap<String, Integer>();
 				offers.put("cheese", 5);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(offers), false);
@@ -111,13 +111,13 @@ public class ChefNPC implements ZoneConfigurator  {
 						requiredResources, 3 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				"Hallo! Glad to see you in my kitchen where I make #pizza and #sandwiches.");
+				"你好! 很高兴在我制做 #pizza 和 #sandwiches 的烹饪间见到你.");
 
 
 			}};
 			npc.setPosition(15, 3);
 			npc.setEntityClass("chefnpc");
-			npc.setDescription("You see Leander. His job gives him a beautiful smell.");
+			npc.setDescription("你见到了 Leander. 他怕工作是做一些好吃的东西.");
 			zone.add(npc);
 	}
 }

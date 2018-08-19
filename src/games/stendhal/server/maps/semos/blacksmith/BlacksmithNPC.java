@@ -72,22 +72,22 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 			@Override
 			public void createDialog() {
 				addReply("wood",
-						"I need some wood to keep my furnace lit. You can find any amount of it just lying around in the forest.");
+						"我需要一些木头保持炉子的火力. 你可以在森林里的地上找到一些.");
 
 				addReply(Arrays.asList("ore", "iron", "iron ore"),
-				"You can find iron ore up in the mountains west of Or'ril, near the dwarf mines. Be careful up there!");
+				"你能到 Or'ril 西面的山上，矮人矿附近的地方找到铁矿，去那要小心!");
 
 				addReply("gold pan",
-				"With this tool you are able to prospect for gold. Along Or'ril river, south of the castle, is a lake near a waterfall. I once found a #'gold nugget' there. Maybe you would be lucky too.");
+				"带着这个工具，你才能够淘金. 顺着 Or'ril 河, 城堡的南边, 瀑布的旁边是一个湖。我以前在那里发现过金块 #'gold nugget' 。也许你也可以.");
 
 				addReply("gold nugget",
-				"My brother Joshua lives in Ados. He can cast gold nuggets to bars of pure gold.");
+				"我兄弟住在 Ados. 他能把金块重铸成纯金条.");
 
-				addReply("bobbin", "I do #trade in tools but I don't have any bobbins, sorry. They are too fiddly for me to make. Try a dwarf.");
-				addReply(Arrays.asList("oil", "can of oil"), "Oh, fishermen supply us with that.");
+				addReply("bobbin", "虽然我做工具生意 #trade ,但我不做线轴 bobbins, 抱歉。造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
+				addReply(Arrays.asList("oil", "can of oil"), "Oh, 这些是由渔夫 fishermen 给我们供应.");
 
-				addHelp("If you bring me #wood and #'iron ore', I can #cast the iron for you. Then you could sell it to the dwarves, to make yourself a little money.");
-				addJob("I am a blacksmith. I #cast iron, and #trade tools.");
+				addHelp("如果你给我带来木头 #wood 和铁矿 #'iron ore'，我能为你铸造 #cast 铁块. 然后把它卖给矮人, 就可以为自已赚些钱.");
+				addJob("我是一个铁匠，工作是鋳铁 #cast , 并且卖点 #trade 工具.");
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SellerBehaviour(SingletonRepository.getShopList().get("selltools")));
 
@@ -100,13 +100,11 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 						"cast", "iron", requiredResources, 5 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				"Greetings. I am sorry to tell you that, because of the war, I am not allowed to sell you any weapons. However, I can #cast iron for you. I can also #offer you tools.");
-
-
+				"欢迎，很抱歉，由于战争不允许我卖给你任何武器，不过我可以给你铸铁 #cast ，还能可以卖点 #offer 工具给你.");
 			}};
 			npc.setPosition(23, 12);
 			npc.setEntityClass("blacksmithnpc");
-			npc.setDescription("You see Xoderos, the strong Semos blacksmith.");
+			npc.setDescription("你见到了 Xoderos, 是 Semos 镇的强壮的铁匠.");
 			zone.add(npc);
 	}
 }

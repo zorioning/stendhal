@@ -16,7 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.pathfinder.FixedPath;
@@ -50,7 +50,7 @@ public class OracleNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("What power the little flower! What power have you? Ados people are looking for #help...");
+				addGreeting("这些小花多么顽强! 你也一样吗? Ados 的人们正等着你的帮助 #help...");
 
 				// use a standard action to list the names of NPCs for quests which haven't been started in this region
 				addReply(ConversationPhrases.HELP_MESSAGES, null, new SayNPCNamesForUnstartedQuestsAction(regions));
@@ -62,16 +62,16 @@ public class OracleNPC implements ZoneConfigurator {
 						ConversationStates.ATTENDING,
 						null,
 						new SayUnstartedQuestDescriptionFromNPCNameAction(regions));
-				addQuest("Oh, there are so many others in " + Grammar.enumerateCollection(regions) + " who might need #help, I wouldn't ask you anything new.");
-				addJob("I don't work, but I can show you how to #help others, particularly in " + Grammar.enumerateCollection(regions) + ".");
-				addOffer("*giggles* I don't sell anything. I can tell you about my #sisters or my #name, if you like.");
-				addReply("sisters", "My sisters live in other cities. Find them to learn how to #help those nearest them.");
-				addReply("name", "Me and my #sisters all have names of flowers. " +
-						"My name, Calla, is a kind of lily which can have the same colour as my dress. It's so pretty.");
+				addQuest("Oh, 在 " + regions + " 从来没有如此多需要帮助的人们，我不想再问你什么了.");
+				addJob("我不工件，但我会给你展示怎么帮助 #help 其他人, 特别是在 " + regions + ".");
+				addOffer("*giggles* 嘻嘻，我不卖东西，如果你喜欢，我可以告诉你我和我姐妹们 #sisters 的名字 #name。");
+				addReply("sisters", "我姐妹住在另一个城市，找到他们学会如何帮助 #help 这些附近的人.");
+				addReply("name", "我和我的姐妹 #sisters 们都有一个花名. " +
+						"我叫 Calla, 是一种百合花，花的颜色和我衣服一样，很可爱吧。");
 
 				// just to be nice :)
 				addEmotionReply("hugs", "hugs");
-				addGoodbye("Thank you, nice to see you.");
+				addGoodbye("谢谢你, 再见.");
 			}
 
 			@Override
@@ -115,7 +115,7 @@ public class OracleNPC implements ZoneConfigurator {
 			}
 		};
 		npc.setPosition(62, 86);
-		npc.setDescription("You see Calla. She smells faintly of lilies.");
+		npc.setDescription("你看到 Calla. 她身上有一股淡淡的百合花的香味.");
 		npc.setEntityClass("oracle2npc");
 		zone.add(npc);
 	}

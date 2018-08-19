@@ -71,7 +71,7 @@ public class TextClient {
 						System.out.print("\u001B[m");
 
 					}
-					System.out.println("Connecting");
+					System.out.println("正在连接");
 					new TextUI();
 					Thread thread = new Thread(new InputReader(), "TextClient InputReader");
 					thread.setDaemon(true);
@@ -84,7 +84,7 @@ public class TextClient {
 				}
 			}
 
-			System.out.println("Stendhal textClient");
+			System.out.println("Stendhal 客户端");
 			System.out.println();
 			System.out.println("  games.stendhal.textClient -u username -p pass -h host -P port -c character");
 			System.out.println();

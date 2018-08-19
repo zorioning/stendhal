@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
 import games.stendhal.common.NotificationType;
 import games.stendhal.common.Rand;
 import games.stendhal.common.constants.Testing;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.item.ConsumableItem;
@@ -91,7 +91,7 @@ public class PoisonAttacker extends StatusAttacker {
 		if (roll <= actualProbability) {
 			if (target.getStatusList().inflictStatus((Status) getStatus().clone(), attacker)) {
 				new GameEvent(attacker.getName(), "poison", target.getName()).raise();
-				target.sendPrivateText("You have been poisoned by " + Grammar.a_noun(attacker.getName()) + ".");
+				target.sendPrivateText("你已经中了 " + attacker.getName() + "的毒.");
 			}
 		}
 	}

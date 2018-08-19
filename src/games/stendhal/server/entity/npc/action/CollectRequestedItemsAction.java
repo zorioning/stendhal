@@ -16,7 +16,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.annotations.Dev;
 import games.stendhal.server.core.config.annotations.Dev.Category;
@@ -78,7 +78,7 @@ public final class CollectRequestedItemsAction implements ChatAction {
 					raiser.setCurrentState(this.stateAfterCompletion);
 				}
 			} else {
-				raiser.say("You don't have " + Grammar.a_noun(itemName) + " with you!");
+				raiser.say("你身上没有带着 " + itemName);
 			}
 		} else {
 			raiser.say(alreadyBrought);

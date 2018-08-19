@@ -33,7 +33,7 @@ import games.stendhal.client.gui.chatlog.HeaderLessEventLine;
 import games.stendhal.common.Direction;
 import games.stendhal.common.NotificationType;
 import games.stendhal.common.constants.Testing;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import marauroa.common.game.RPAction;
 import marauroa.common.game.RPObject;
 import marauroa.common.game.RPSlot;
@@ -180,7 +180,7 @@ public class User extends Player {
 		ClientSingletonRepository.getUserInterface().addEventLine(
 				new HeaderLessEventLine(
 						getTitle() + " 治愈 "
-						+ Grammar.quantityplnoun(amount, "生命值") + "。",
+						+ amount + "生命值。",
 						NotificationType.HEAL));
 	}
 

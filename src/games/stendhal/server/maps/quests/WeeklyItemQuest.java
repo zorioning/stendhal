@@ -20,7 +20,7 @@ import java.util.Map;
 
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.entity.item.StackableItem;
@@ -345,9 +345,9 @@ public class WeeklyItemQuest extends AbstractQuest {
 			String questItem = player.getRequiredItemName(QUEST_SLOT,0);
 			int amount = player.getRequiredItemQuantity(QUEST_SLOT,0);
 			if (!player.isEquipped(questItem, amount)) {
-				res.add(String.format("I have been asked to find " +Grammar.quantityplnoun(amount, questItem, "a") + " for Kirdneh museum."));
+				res.add(String.format("I have been asked to find " +amount + questItem + " for Kirdneh museum."));
 			} else {
-				res.add(String.format("I have " + Grammar.quantityplnoun(amount, questItem, "a") + " for Kirdneh museum and need to take it."));
+				res.add(String.format("I have " + amount + questItem + " for Kirdneh museum and need to take it."));
 			}
 		}
 		if (isRepeatable(player)) {
@@ -359,7 +359,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 		final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {
 			res.add("I've brought exhibits for the museum on "
-					+ Grammar.quantityplnoun(repetitions, "occasion") + " so far.");
+					+ repetitions + "occasion" + " so far.");
 		}
 
 		return res;

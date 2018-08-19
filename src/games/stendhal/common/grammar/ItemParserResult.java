@@ -70,5 +70,5 @@ public class ItemParserResult {
 			this.amount = amount;
 		}
 	}
-
 }
+

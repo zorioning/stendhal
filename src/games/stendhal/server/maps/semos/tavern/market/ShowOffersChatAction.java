@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Expression;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.entity.item.Item;
@@ -209,7 +209,7 @@ public class ShowOffersChatAction implements ChatAction {
 
 			message.append(counter);
 			message.append(": ");
-			message.append(Grammar.quantityplnoun(quantity, offer.getItemName(), "a"));
+			message.append(offer.getItemName());
 			message.append(" for ");
 			message.append(offer.getPrice());
 			message.append(" money");

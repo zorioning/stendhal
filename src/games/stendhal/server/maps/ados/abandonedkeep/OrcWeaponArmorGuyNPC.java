@@ -64,11 +64,11 @@ public class OrcWeaponArmorGuyNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addJob("I am Salesman. What you?");
-				addHelp("I sell nice items, look at blackboard on wall.");
+				addJob("我叫 Salesman. 你呢? #help");
+				addHelp("本店销售的都是好东西，可以去看看墙上的黑板.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellbetterstuff1")), false);
-				addOffer("Look at blackboard on wall to see my offer.");
-				addQuest("I am so happy as I am. I want nothing.");
+				addOffer("我销售的商品都写在墙上的黑板上 #offer.");
+				addQuest("谢谢你的好意，但我不需要.");
 				addGoodbye();
 			}
 		};
@@ -76,7 +76,7 @@ public class OrcWeaponArmorGuyNPC implements ZoneConfigurator {
 		hagnurk.setEntityClass("orcsalesmannpc");
 		hagnurk.setPosition(106, 5);
 		hagnurk.initHP(100);
-		hagnurk.setDescription("You see Hagnurk. He is an orcish salesman.");
+		hagnurk.setDescription("你看到了 Hagnurk. 他是兽人销售商.");
 		zone.add(hagnurk);
 	}
 }

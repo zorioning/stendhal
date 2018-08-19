@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.annotations.Dev;
 import games.stendhal.server.core.config.annotations.Dev.Category;
@@ -65,15 +65,15 @@ public class SayNPCNamesForUnstartedQuestsAction implements ChatAction {
 	        	verb = "needs";
 	        }
 			if (npcs.size()>0) {
-	        	sb.append("In " + region + " ");
-	        	sb.append(Grammar.enumerateCollectionWithHash(npcs));
-	        	sb.append(" " + verb + " your help. ");
+	        	sb.append("在 " + region + " 的");
+	        	sb.append(npcs);
+	        	sb.append(" " + verb + " 你的帮助. ");
 	        } else {
 	        	finishedregions.add(region);
 	        }
 		}
 		if (finishedregions.size() > 0) {
-			sb.append("There's noone in " + Grammar.enumerateCollection(finishedregions) + " who'd have a task you can handle, or that you haven't helped already.");
+			sb.append("There's noone in " + finishedregions + " who'd have a task you can handle, or that you haven't helped already.");
 		}
 		raiser.say(sb.toString().trim());
 

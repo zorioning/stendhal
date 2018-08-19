@@ -17,7 +17,7 @@ import java.util.List;
 
 import games.stendhal.common.MathHelper;
 import games.stendhal.common.Rand;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Expression;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -109,7 +109,7 @@ public class GuessKills extends AbstractQuest {
     public void addToWorld() {
         fillQuestInfo(
 				"The guessing game",
-				"Crearid plays a game where you guess how many creatures you have killed.",
+				"Crearid 玩的一个游戏. 猜猜你共杀了多少生物。",
 				true);
         prepareQuestStep();
     }
@@ -146,15 +146,15 @@ public class GuessKills extends AbstractQuest {
 		final String time = player.getQuest(QUEST_SLOT, 1);
 		final String creature = player.getQuest(QUEST_SLOT, 2);
 
-		res.add("I have met Crearid. She is an old lady in Nalwor city.");
-		res.add("She asked me to guess how many " + Grammar.pluralCreature(creature) + " I have killed.");
+		res.add("我见到了 Crearid. 她是 Nalwor 城的一个老妇。");
+		res.add("她让我猜猜我已杀了多用的 " + creature + "。");
 
 		if ("1".equals(state)) {
-			res.add("I have three guesses left.");
+			res.add("我有三次机会。");
 		} else if ("2".equals(state)) {
-			res.add("I have two guesses left.");
+			res.add("还有两次猜迷机会。");
 		} else if ("3".equals(state)) {
-			res.add("I have one guess left.");
+			res.add("还有一次猜迷机会。");
 		} else if ("done".equals(state)) {
 			final long timeRemaining = MathHelper.parseLong(time) + INTERVAL_BETWEEN_TRIES * MathHelper.MILLISECONDS_IN_ONE_MINUTE
 					- System.currentTimeMillis();
@@ -229,9 +229,9 @@ public class GuessKills extends AbstractQuest {
 
 				int guesses = 4 - MathHelper.parseIntDefault(player.getQuest(QUEST_SLOT, 0), 1);
 
-				npc.say("Let me see... you have " + Grammar.quantityplnounCreature(guesses, "guess") +
-						" left... and if I recall correctly I asked you..." +
-						" how many " + Grammar.pluralCreature(CREATURE) + " do think you have killed?");
+				npc.say("让我看看... 你还有 " + guesses  +
+						" 个问题... and if I recall correctly I asked you..." +
+						" 你想想你杀了多少 " + CREATURE + " ?");
 			}
         };
 
@@ -242,7 +242,7 @@ public class GuessKills extends AbstractQuest {
         		Arrays.asList(triggers),
                 new AndCondition(questNotDone, requirement),
                 ConversationStates.QUEST_STARTED,
-                "We did not finish our game last time would you like to continue?",
+                "我们上次没有完成我们的游戏, 你还想继续吗？",
                 null);
 
         //if quest not finished and player wants to continue
@@ -317,9 +317,9 @@ public class GuessKills extends AbstractQuest {
 	                        // This can't be in a SetQuestAction because CREATURE is dynamic
 	                        player.setQuest(QUEST_SLOT, 2, CREATURE);
 
-	                        npc.say("I've been counting how many creatures you have killed, now tell me, how many " +
-	                                Grammar.pluralCreature(CREATURE) + " do you think you've killed? You have three guesses and I'll accept " +
-	                                "guesses that are close to the correct answer.");
+	                        npc.say("我已计算出你已杀了多少的生物, 现在告诉我，是多少？ " +
+	                                CREATURE + " 你想想你已杀了多少？我给你三次猜迷机会。 " +
+	                                "你猜的跟答案很接近。");
 	                    }
 	                },
 	                new SetQuestAction(QUEST_SLOT, 0, "1")));
@@ -329,7 +329,7 @@ public class GuessKills extends AbstractQuest {
                 ConversationPhrases.NO_MESSAGES,
                 null,
                 ConversationStates.ATTENDING,
-                "Bah, you're no fun at all.",
+                "Bah, 你真无趣。",
                 null);
 
         //if invalid answer
@@ -337,21 +337,21 @@ public class GuessKills extends AbstractQuest {
                 "",
                 wrongAndNotBye,
                 ConversationStates.QUESTION_1,
-                "How could that possibly be an answer? Give me a proper number.",
+                "现在可以回答了？给我一个确切的数字。",
                 null);
 
         npc.add(ConversationStates.QUESTION_2,
                 "",
                 wrongAndNotBye,
                 ConversationStates.QUESTION_2,
-                "Is that even possible? Give me a valid answer.",
+                "这有可能吗? 给我一个告谱的回答。",
                 null);
 
         npc.add(ConversationStates.QUESTION_3,
                 "",
                 wrongAndNotBye,
                 ConversationStates.QUESTION_3,
-                "I've never heard of that number used to describe killings. Give me an explicable answer.",
+                "我从没听说用这个字表示杀死的数量。给我一个听懂的数字。",
                 null);
 
         //if goodbye while guessing
@@ -359,7 +359,7 @@ public class GuessKills extends AbstractQuest {
                 ConversationPhrases.GOODBYE_MESSAGES,
                 null,
                 ConversationStates.IDLE,
-                "Goodbye, come back when you want to continue.",
+                "再见，有空再来玩。",
                 null);
 
         //if exact answer
@@ -367,7 +367,7 @@ public class GuessKills extends AbstractQuest {
                 "",
                 new AndCondition(isNumber, exact, new NotCondition(close)),
                 ConversationStates.ATTENDING,
-                "Stupendous! That is the exact number! Either you're very lucky or you really pay attention.",
+                "厉害了! 就是这个数! 是你真的幸运，还是你一直在留意这个数字。",
                 new MultipleActions(
                     new SetQuestAction(QUEST_SLOT, 0, "done"),
                     new SetQuestToTimeStampAction(QUEST_SLOT, 1),
@@ -378,7 +378,7 @@ public class GuessKills extends AbstractQuest {
                 "",
                 new AndCondition(isNumber, close, new NotCondition(exact)),
                 ConversationStates.ATTENDING,
-                "Wow, that was pretty close. Well done!",
+                "哇, 真的很接近了. 不错!",
                 new MultipleActions(
                     new SetQuestAction(QUEST_SLOT, 0, "done"),
                     new SetQuestToTimeStampAction(QUEST_SLOT, 1),
@@ -389,14 +389,14 @@ public class GuessKills extends AbstractQuest {
                 "",
                 new AndCondition(isNumber, new NotCondition(close), new NotCondition(exact)),
                 ConversationStates.QUESTION_2,
-                "Nope, that is not right. Try again.",
+                "不, 不对，再试试.",
                 new SetQuestAction(QUEST_SLOT, 0, "2"));
 
         npc.add(ConversationStates.QUESTION_2,
                 "",
                 new AndCondition(isNumber, new NotCondition(close), new NotCondition(exact)),
                 ConversationStates.QUESTION_3,
-                "Wrong again. You have one more try.",
+                "又错了，再试一次.",
                 new SetQuestAction(QUEST_SLOT, 0, "3"));
 
         npc.add(ConversationStates.QUESTION_3,
@@ -409,10 +409,10 @@ public class GuessKills extends AbstractQuest {
                         @Override
 						public void fire(Player player, Sentence sentence, EventRaiser npc) {
                         	int exactNumber = player.getSoloKill(CREATURE) + player.getSharedKill(CREATURE);
-                        	npc.say("Unfortunately that is incorrect. The correct answer is in the region of "
+                        	npc.say("虽然你很努力, 但很不幸，回答错误。正确的答案在 "
                         	+ (int) Math.max(Math.floor(exactNumber - Math.max(exactNumber * 0.2, 10) + exactNumber * 0.1 * Rand.rand()), 0)
-                        	+ " and " + Math.round(exactNumber + Math.max(exactNumber * 0.2, 10) - exactNumber * 0.1 * Rand.rand())
-                        	+ ". Good effort though.");
+                        	+ " 和 " + Math.round(exactNumber + Math.max(exactNumber * 0.2, 10) - exactNumber * 0.1 * Rand.rand())
+                        	+ " 之间.");
                         }
                     },
                     new SetQuestAction(QUEST_SLOT, 0, "done"),

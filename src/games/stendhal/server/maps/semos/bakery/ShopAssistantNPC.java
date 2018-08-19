@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.Sentence;
 import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -91,10 +91,10 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-				addJob("I'm the shop assistant at this bakery.");
+				addJob("我是本面包店的助理.");
 				addReply("flour",
-				"We usually get our #flour from a mill northeast of here, but the wolves ate their delivery boy! If you help us out by bringing some, we can #bake delicious bread for you.");
-				addHelp("Bread is very good for you, especially for you adventurers who are always gulping down red meat. And my boss, Leander, happens to make the best sandwiches on the island!");
+				"我们用的面粉 #flour 是采用东北方的磨坊生产的,本地麦子磨的面粉。但狼群吃了他们的送货员！如果你能帮匀们带一些过来，我们能烘焙 #bake 些好吃的面包给你.");
+				addHelp("面包对你很好，尤其在你外出冒险时，不能总吞下红色的生肉。我的老板 Leander 是这个岛上做的三明治 sandwiches 最好的面包师!");
 				addGoodbye();
 
 				// Erna bakes bread if you bring her flour.
@@ -105,20 +105,20 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 						"bake", "bread", requiredResources, 10 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				"Welcome to the Semos bakery! We'll #bake fine bread for anyone who helps bring our #flour delivery from the mill.");
+				"欢迎来到 Semos 镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包。");
 
-				addOffer("Our pizza delivery team can #borrow some kitchen equipment from me.");
+				addOffer("我们的 pizza 外卖团队可以借 #borrow 一些厨师制服给你.");
 
 				add(ConversationStates.ATTENDING, "borrow",
 				    new LevelLessThanCondition(6),
 				    ConversationStates.ATTENDING,
-				    "Oh sorry, I don't lend equipment to people with so little experience as you.",
+				    "Oh 抱歉，我不能借给像你这样只有这么一点经验的新人.",
 				    null);
 
 				add(ConversationStates.ATTENDING, "borrow",
 				    new AndCondition(new LevelGreaterThanCondition(5), new QuestNotCompletedCondition("pizza_delivery")),
 				    ConversationStates.ATTENDING,
-				    "You'll have to speak to Leander and ask if you can help with the pizza before I'm allowed to lend you anything.",
+				    "你需要和 Leander 讲，问他如果你能帮送 pizza 外卖，然后我才可能会借给你.",
 				    null);
 
 				add(ConversationStates.ATTENDING, "borrow",
@@ -127,21 +127,21 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				        new QuestCompletedCondition("pizza_delivery"),
 				        new QuestNotActiveCondition(QUEST_SLOT)),
 				    ConversationStates.ATTENDING,
-				    "I lend out " + Grammar.enumerateCollectionWithHash(ITEMS) + ". If you're interested, please say which you want.",
+				    "我把 " + ITEMS + " 借给你. 如果你有兴趣，请对我说.",
 				    null);
 
 				// player already has borrowed something it didn't return and will pay for it
 				add(ConversationStates.ATTENDING, "borrow",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new NotCondition(new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT))),
 				    ConversationStates.QUESTION_1,
-				    "You didn't return what I last lent you! Do you want to pay for it at a cost of " + COST + " money?",
+				    "你没归还我上次借给你的东西！你想为此付 " + COST + " 给我吗?",
 				    null);
 
 				// player already has borrowed something it didn't return and will return it
 				add(ConversationStates.ATTENDING, "borrow",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT)),
 				    ConversationStates.QUESTION_2,
-				    "You didn't return what I last lent you! Do you want to return it now?",
+				    "你没有归还我上次借给你的东西！现在要归还吗？?",
 				    null);
 
 				// player wants to pay for previous item
@@ -153,7 +153,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    ConversationPhrases.YES_MESSAGES,
 				    new PlayerHasItemWithHimCondition("money", COST),
 				    ConversationStates.ATTENDING,
-				    "Thanks. Just let me know if you want to #borrow any tools again.",
+				    "谢谢，如果你想借 #borrow 任何工具，再跟我一声说就行",
 				    new MultipleActions(payment));
 
 				// player already has borrowed something and wants to return it
@@ -164,7 +164,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    ConversationPhrases.YES_MESSAGES,
 				    new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT),
 				    ConversationStates.ATTENDING,
-				    "Thank you! Just let me know if you want to #borrow any tools again.",
+				    "谢谢，如果你想借 #borrow 任何工具，再跟我一声说就行",
 				    new MultipleActions(returnitem));
 
 				// don't want to pay for it now
@@ -172,14 +172,14 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    ConversationPhrases.NO_MESSAGES,
 				    null,
 				    ConversationStates.ATTENDING,
-				    "No problem. Take as long as you need, but you can't borrow other tools till you return the last, or pay for it.",
+				    "没问题，你借用多久都可以，但一次只能借一件，再借要把上次的还回来。否则要付钱.",
 				    null);
 				// does want to pay for it now
 				add(ConversationStates.QUESTION_1,
 				    ConversationPhrases.YES_MESSAGES,
 				    new NotCondition(new PlayerHasItemWithHimCondition("money", COST)),
 				    ConversationStates.ATTENDING,
-				    "Sorry, but it seems you dont have enough money with you.",
+				    "抱歉，但是好像你的钱不够.",
 				    null);
 
 				// don't want to return it now
@@ -187,7 +187,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    ConversationPhrases.NO_MESSAGES,
 				    null,
 				    ConversationStates.ATTENDING,
-				    "No problem. Take as long as you need, but you can't borrow other tools till you return the last, or pay for it.",
+				    "没问题，你借用多久都可以，但一次只能借一件，再借要把上次的还回来。否则要付钱.",
 				    null);
 
 
@@ -206,11 +206,11 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 							public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 								final Item item =  SingletonRepository.getEntityManager().getItem(itemName);
 								if (item == null) {
-									npc.say("Sorry, something went wrong. Could you say correctly the item, please?");
+									npc.say("抱歉，好像错了，请你再说一次正确的物品名称。");
 								} else {
 									player.equipOrPutOnGround(item);
 									player.setQuest(QUEST_SLOT, itemName);
-									npc.say("Here you are! Don't forget to #return it or you have to pay!");
+									npc.say("给你！不要忘记归还 #return , 否则你将为些付钱!");
 								}
 							}
 						});
@@ -224,7 +224,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					        new QuestCompletedCondition("pizza_delivery"),
 					        new QuestNotActiveCondition(QUEST_SLOT)),
 					    ConversationStates.ATTENDING,
-					    "Sorry, I can't lend out sugar, only a #sugar #mill.",
+					    "抱歉，我不能借给你糖 sugar, 只有 #sugar #mill.",
 					    null);
 
 				// too low level
@@ -232,7 +232,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    ITEMS,
 					    new LevelLessThanCondition(6),
 					    ConversationStates.ATTENDING,
-					    "Sorry, as you have little experience in this world I can't trust you with my tools.",
+					    "抱歉，你在这里的经验太少，我还不能信任你.",
 					    null);
 
 				// currently has borrowed an item
@@ -240,7 +240,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    ITEMS,
 					    new QuestActiveCondition(QUEST_SLOT),
 					    ConversationStates.ATTENDING,
-					    "You can't borrow from me again till you #return the last tool I lent you.",
+					    "你把上次借的东西还给我，才能再借新的.",
 					    null);
 
 				// haven't done pizza
@@ -248,34 +248,34 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    ITEMS,
 					    new QuestNotCompletedCondition("pizza_delivery"),
 					    ConversationStates.ATTENDING,
-					    "Only pizza deliverers can borrow tools, please deliver one for Leander and then ask me again.",
+					    "只有 pizza 外卖人员才能借工具。请为 Leander 送一次外卖，再和我说.",
 					    null);
 
 				// player asks about pay from attending state
 				add(ConversationStates.ATTENDING, "pay",
 				    new QuestActiveCondition(QUEST_SLOT),
 				    ConversationStates.QUESTION_1,
-				    "If you lost what I lent you, you can pay " + COST + " money. Do you want to pay now?",
+				    "如果你弄丢了借我的东西，你可以赔付 " + COST + " 金币. 你现在想付钱吗?",
 				    null);
 
 				// player asks about return from attending state
 				add(ConversationStates.ATTENDING, "return",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT)),
 				    ConversationStates.QUESTION_2,
-				    "Do you want to return what you borrowed now?",
+				    "你现在要把借的工具归还吗？",
 				    null);
 
 				// player asks about return from attending state
 				add(ConversationStates.ATTENDING, "return",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new NotCondition(new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT))),
 				    ConversationStates.QUESTION_1,
-				    "You don't have it with you! Do you want to pay " + COST + " money for it now?",
+				    "你没带着借我的工具呀！要为此赔付 " + COST + " 金币我吗?",
 				    null);
 
 			}};
 			npc.setPosition(26, 9);
 			npc.setEntityClass("housewifenpc");
-			npc.setDescription("You see Erna. She's worked a long time for Leander and is his loyal assistant.");
+			npc.setDescription("你看到了 Erna. 她为 Leander 工作了很长时间，现在是他忠实的助理.");
 			zone.add(npc);
 	}
 }

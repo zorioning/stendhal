@@ -43,7 +43,7 @@ import games.stendhal.common.Version;
 import games.stendhal.common.constants.Nature;
 import games.stendhal.common.constants.SoundLayer;
 import games.stendhal.common.constants.Testing;
-import games.stendhal.common.grammar.Grammar;
+//import games.stendhal.common.grammar.Grammar;
 import games.stendhal.common.parser.WordList;
 import games.stendhal.server.core.engine.GameEvent;
 import games.stendhal.server.core.engine.SingletonRepository;
@@ -1541,18 +1541,18 @@ public class Player extends RPEntity implements UseListener {
 		final int hours = age / 60;
 		final int minutes = age % 60;
 		final String time = hours + " hours and " + minutes + " minutes";
-		final String text = "You see " + name + ".\n" + name + " is level "
-				+ getLevel() + " and has been playing " + time + ".";
+		final String text = "你看到 " + name + ".\n" + name + " 的等级是 "
+				+ getLevel() + " 已经玩了 " + time + ".";
 		final StringBuilder sb = new StringBuilder();
 		sb.append(text);
 		final String awayMessage = getAwayMessage();
 		if (awayMessage != null) {
-			sb.append("\n" + name + " is away and has left a message: ");
+			sb.append("\n" + name + " 离开游戏并留言: ");
 			sb.append(awayMessage);
 		}
 		final String grumpyMessage = getGrumpyMessage();
 		if (grumpyMessage != null) {
-			sb.append("\n" + name + " is grumpy and has left a message: ");
+			sb.append("\n" + name + " 生气了并留言: ");
 			sb.append(grumpyMessage);
 		}
 
@@ -1561,8 +1561,8 @@ public class Player extends RPEntity implements UseListener {
 			final String sentence = getSentence();
 			if (!sentence.isEmpty()) {
 				sb.append("\n");
-				sb.append(Grammar.suffix_s(name));
-				sb.append(" sentence is: \"" + sentence + "\"");
+				sb.append(name);
+				sb.append(" 判决是: \"" + sentence + "\"");
 			}
 		}
 
@@ -1596,7 +1596,7 @@ public class Player extends RPEntity implements UseListener {
 			notifyWorldAboutChanges();
 			return true;
 		} else {
-			final String text = "Position [" + x + "," + y + "] is occupied";
+			final String text = "位置 [" + x + "," + y + "] 被占领";
 			if (teleporter != null) {
 				teleporter.sendPrivateText(text);
 			} else {
