@@ -71,7 +71,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 						new AndCondition(new GreetingMatchesNameCondition(getName()),
 								new QuestNotStartedCondition(QUEST_SLOT)),
 						ConversationStates.ATTENDING,
-				        "Hi. 我敢打赌，你曾经被送到这向我学过冒险课程，首先，让我看看你是什么做的，去杀了外面的老鼠，你应该可以轻松的找到一只；走之前，要学学如何攻击它吗？?",
+				        "Hi. 我敢打赌，你曾经被送到这向我学过冒险课程。首先，让我验验你的成色，去杀了外面的老鼠，你应该可以轻易的找到一只；走之前，要学学如何攻击吗？",
 						new MultipleActions(actions));
 
 			   	add(ConversationStates.IDLE,
