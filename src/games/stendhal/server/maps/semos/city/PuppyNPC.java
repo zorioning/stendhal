@@ -41,7 +41,7 @@ public class PuppyNPC implements ZoneConfigurator {
 		// Not visible, but used for the emote action
 		dog.setName("Puppy");
 		dog.setPosition(23, 54);
-		dog.setDescription("You see a playful puppy.");
+		dog.setDescription("你看到一只欢脱的puppy小狗.");
 		dog.setEntityClass("animal/puppy");
 		dog.setBaseSpeed(0.5);
 		dog.moveRandomly();
@@ -69,7 +69,7 @@ public class PuppyNPC implements ZoneConfigurator {
 		@Override
 		public boolean onUsed(RPEntity user) {
 			if (nextTo(user)) {
-				say("!me wags tail.");
+				say("!me 摇尾巴.");
 				return true;
 			}
 			return false;

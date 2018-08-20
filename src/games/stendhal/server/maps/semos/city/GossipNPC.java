@@ -48,7 +48,7 @@ public class GossipNPC implements ZoneConfigurator {
 
             @Override
             public void createDialog() {
-                addGreeting(null,new SayTextAction("Hi again, [name]. How can I #help you this time?"));
+                addGreeting(null,new SayTextAction("又见面了, [name]. 现在需要我帮忙吗 #help ?"));
 
                 // A little trick to make NPC remember if it has met
                 // player before and react accordingly
@@ -59,55 +59,55 @@ public class GossipNPC implements ZoneConfigurator {
                     new AndCondition(new GreetingMatchesNameCondition(getName()),
                     		new QuestNotCompletedCondition("Nomyr")),
                     ConversationStates.INFORMATION_1,
-                    "Heh heh... Oh, hello stranger! You look a bit disoriented... d'you want to hear the latest gossip?",
+                    "呵呵... Oh, 你好陌生人！hello stranger! 你好像有点迷惑...想听听最近的小道消息吗？",
                     new SetQuestAction("Nomyr", "done"));
 
                 add(ConversationStates.ATTENDING,
                     ConversationPhrases.YES_MESSAGES,
                     null,
                     ConversationStates.INFORMATION_1,
-                    "The young people have joined the Imperial Deniran Army to fight in the south, so the city has been left almost unprotected against the hordes of monsters coming from the dungeons. Can you help us?",
+                    "年轻人都加入 Deniran 帝国军去了南方打仗。所以城内的防御几乎瘫痪，地牢时常跑出来一些怪兽，你能帮助我们吗？",
                     null);
 
                 add(ConversationStates.ATTENDING,
                     ConversationPhrases.NO_MESSAGES,
                     null,
                     ConversationStates.IDLE,
-                    "Huh. Well, you could help me by taking a peek through that other window, if you're not busy... I'm trying to figure out what's going on inside.",
+                    "嗯. 好的，你不忙的话，可以帮我到那边的窗口边瞄一眼，我正想弄清楚里面到底发生了什么，",
                     null);
 
                 add(ConversationStates.ATTENDING,
                     "sack",
                     null,
                     ConversationStates.ATTENDING,
-                    "Ah. You're not really curious about the contents of my sack. You can ask Karl for your own empty one to fill it with whatever you like. Even sugar!",
+                    "啊. 你不是真的好奇我麻袋里装了什么，你可以向 Karl 要一个空的，可以把一些你喜欢的东西放进去，甚至是糖!",
                     null);
 
                 add(ConversationStates.ATTENDING,
                     "karl",
                     null,
                     ConversationStates.ATTENDING,
-                    "Oh. He's an elderly friendly farmer that lives in a farm a bit east from here. Follow the road to Ados and I'm sure you'll find him.",
+                    "Oh. 他是一个平易近人的老农夫，住在离这不远的东面，顺着到 Ados 的路很容易就找到他",
                     null);
 
                 add(ConversationStates.INFORMATION_1,
                     ConversationPhrases.YES_MESSAGES,
                     null,
                     ConversationStates.IDLE,
-                    "First of all, you should go talk to Hayunn Naratha. He's a great old hero, and he's also pretty much our only defender here... I'm sure he will gladly give you some advice! Good luck.",
+                    "首先你应该和 Hayunn Naratha 谈谈. 他是个很棒的好英雄，也是这里留下不多的最好的守卫...我想他会乐意给你一些建议！祝好运.",
                     null);
 
                 add(ConversationStates.INFORMATION_1,
                     ConversationPhrases.NO_MESSAGES,
                     null,
                     ConversationStates.IDLE,
-                    "Awww... so you're a coward, then? Huh.",
+                    "Awww... 原因你是个胆心鬼？呼呼.",
                     null);
 
-                addHelp("I'm a... Let's call me an \"observer\". I can tell you about all the latest rumours. Do you want to hear?");
-                addJob("I know every rumour that exists in Semos, and I invented most of them! The one about Hackim smuggling in weapons for wandering adventurers like you is true, though.");
-                addQuest("Thanks for asking, but I don't need anything right now... Gee! I just wish this #sack wasn't so cumbersome.");
-                addOffer("Tz although I carry this #sack with me, it doesn't mean that I have anything for you...But I heard, that the old guy Monogenes over there needs some help...");
+                addHelp("我是... 他们都叫我万事通 \"observer\". 我可以告诉你最近的一些传言。你要听吗?");
+                addJob("我知道每个 Semos 的每个传言！也虚构了传言中的大部分。然而,其中一个关于 Hackim 把私武器走私给像你一样的冒险者的消息却是真的!");
+                addQuest("感谢你的提问，但现在不需要任何东西！... 咦! 我只希望这个布袋 #sack 不那么笨重.");
+                addOffer("Tz 尽管我背着这个麻袋 #sack, 也不意味着我能卖你什么东西...但我听说那边的老家货 hMonogenes 需要帮助");
                 addGoodbye();
             }
 
@@ -127,7 +127,7 @@ public class GossipNPC implements ZoneConfigurator {
         npc.setPosition(46, 20);
         npc.setEntityClass("thiefnpc");
         zone.add(npc);
-        npc.setDescription("This guy here, Nomyr Ahba, seems to be curious. His huge bag camouflages him.");
+        npc.setDescription("Nomyr Ahba 老是背着一个大包,看起来有点古怪。");
     }
 
 }
