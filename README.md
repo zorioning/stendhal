@@ -2,11 +2,11 @@
 [![Achievements](https://arianne-project.org/screens/stendhal/THM_Achievement_Stendhal98.jpg)](https://arianne-project.org/screens/stendhal/Achievement_Stendhal98.jpg)
 [![Party](https://arianne-project.org/screens/stendhal/THM_raid20110105.jpg)](https://arianne-project.org/screens/stendhal/raid20110105.jpg)&nbsp;&nbsp;&nbsp;[More Images >](https://stendhalgame.org/media/screenshots.html)
 
-Are you looking for adventure? Want to fight for riches?<br>
-Develop yourself and your social standing? Meet new people?<br>
-Do you want to be part of a brave new world?
+大兄弟，你是在寻求刺激不？ 是想一夜暴富不？<br>
+想不想狂砍十条街，当大哥使唤小弟？<br>
+有没有兴趣来这里一起建设新大陆？
 
-Stendhal is a fully fledged multiplayer online adventures game (MORPG). It is completely open source (client, server, everything).
+Stendhal是一款开发多年的RPG网游。这款游戏完全开源，客户端和服务端都开源。
 
 Stendhal features a new, rich and expanding world in which you can explore towns, buildings, plains, caves and dungeons.
 You will meet NPCs and acquire tasks and quests for valuable experience.
