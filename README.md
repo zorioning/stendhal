@@ -7,15 +7,11 @@
 有没有兴趣来这里一起建设新大陆？
 
 Stendhal是一款开发多年的RPG网游。这款游戏完全开源，客户端和服务端都开源。
+这款游戏的世界非常庞大，你可以探索城镇、建筑、平原、洞穴和地牢，并且会遇到NPC并获得任务。
 
-Stendhal features a new, rich and expanding world in which you can explore towns, buildings, plains, caves and dungeons.
-You will meet NPCs and acquire tasks and quests for valuable experience.
+你的角色慢慢成长，游戏也会越来越刺激。用你赚到的钱，去购买物品、改进武器和装备。我知道你的欲望已经饥渴难耐了，赶紧通过周游世界来实现你的血腥杀戮！
 
-Your character will develop and grow and with each new level up become stronger and better. With the money you acquire you can buy new items and improve your armour and weapons. And for the blood thirsty of you; satisfy your killing desires by roaming the world in search of evil monsters!
-
-Stendhal is platform independent, and completely open source.
-
-So what are you waiting for?! A whole new world awaits...
+还等啥呢?!赶紧来呀...
 
 
 ## How to play
