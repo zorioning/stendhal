@@ -69,19 +69,19 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 			}
 	        @Override
 			protected void createDialog() {
-	        	addGreeting("What do you want?");
-			    addJob("I prefer to keep that to myself.");
-			    addHelp("Look I must move on soon but, quickly, if you have any #black #pearls I will trade some of my magic #arrows for them. Care to #buy for some #arrows?");
-			    addOffer("Look I must move on soon but, quickly, if you have any #black #pearls I will trade some of my magic #arrows for them. Care to #buy for some #arrows?");
-			    addGoodbye("Then get going... I can't get any work done with you mucking around.");
+	        	addGreeting("你想要做什么?");
+			    addJob("我宁愿自已呆一会I prefer to keep that to myself.");
+			    addHelp("快点看，我必须马上走，如果你手上有黑色珍珠 #black #pearls ，我会用魔法箭 #arrows 和你交换。介意买 #buy 些箭吗 #arrows?");
+			    addOffer("快点看，我必须马上走，如果你手上有黑色珍珠 #black #pearls ，我可以魔法箭 #arrows 和你交换，介意买 #buy 些箭吗 #arrows?");
+			    addGoodbye("快走... 你这垃圾在这乱转我都不能干活了.");
 
-			    addReply("arrows","I enchant arrows with elemental power. I have #ice, #fire, and #light.");
+			    addReply("arrows","我把魔法能量注入到箭里，魔法能量有冰，火和电 #ice, #fire, 和 #light.");
 			    addReply(Arrays.asList("ice", "ice arrow", "fire", "fire arrow"),
-	                    "I can spare 1 of those arrows for every each black pearl.");
+	                    "一个黑色珍珠，可以换一只箭.");
 			    addReply(Arrays.asList("light", "light arrow"),
-	                    "Light arrows are tricky, I can only spare 1 for every 2 black pearls.");
+	                    "电箭最快，每两个黑色珍珠只能换一只箭.");
 			    addReply(Arrays.asList("black pearls", "pearls"),
-	                    "To me they make for decent talismans. I often find them on those assassin punks.");
+	                    "对我来说，他们制作了不错的法宝。我常可以在那些垃圾刺客中找到他们.");
 			    // the rest is in the MessageInABottle quest
 
 
@@ -137,17 +137,18 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				        String productName = res.getChosenItemName();
 
 				        if (getMaximalAmount(productName, player) < amount) {
-				            npc.say("I can only " + getProductionActivity() + " "
-				                    + productName
-				                    + " if you bring me "
-				                    + getRequiredResourceNamesWithHashes(productName, amount) + ".");
+				            npc.say(" 如果你带给我 "
+				                    + getRequiredResourceNamesWithHashes(productName, amount)
+									+ " ,我只能 " + getProductionActivity() + " "
+				                    + productName);
+				                    
 				            return false;
 				        } else {
 							res.setAmount(amount);
 							npc.say( productName
 									+ " for "
 									+ getRequiredResourceNamesWithHashes(productName, amount) + ". "
-									+ " Correct?");
+									+ " 对吧?");
 
 
 				            return true;
@@ -164,7 +165,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				        if (getMaximalAmount(productName, player) < amount) {
 				            // The player tried to cheat us by placing the resource
 				            // onto the ground after saying "yes"
-				            npc.say("Hey! I'm over here! You'd better not be trying to trick me...");
+				            npc.say("喂! 在这里! 你最好不要骗我...");
 				            return false;
 				        } else {
 				            for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerProduct(productName).entrySet()) {
@@ -186,28 +187,27 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				    			}
 
 				    			if (player.equipToInventoryOnly(products)) {
-				    				npc.say("Here is "  
-									+ " your "  
-									+		productName + ".");
+				    				npc.say("这是你的 " 
+									+ productName + ".");
 
 				    				player.setQuest(getQuestSlot(), "done");
 				    				player.notifyWorldAboutChanges();
 				    				player.incProducedCountForItem(productName, products.getQuantity());
 				    				SingletonRepository.getAchievementNotifier().onProduction(player);
 				    			} else {
-				    				npc.say("Welcome back! I'm done with your order. But right now you cannot take the "
+				    				npc.say("欢迎回来！你的事我完成了。但现在你还不能拿走 "
 				    						+  productName
-				    						+ ". Come back when you have space.");
+				    						+ ". 等你背包有空间时再回来拿.");
 				    			}
 
 				            	return true;
 				            } else {
-				            		npc.say("OK, I will "
+				            		npc.say("OK, 我会为你"
 				                    + getProductionActivity()
 				                    + " "
 				                    +  productName
-				                    + " for you, but that will take some time. Please come back in "
-				                    + getApproximateRemainingTime(player) + ".");
+				                    + " , 但要花些时间，请在 "
+				                    + getApproximateRemainingTime(player) + " 时间后回来.");
 				            		return true;
 				            	}
 				        }
@@ -225,7 +225,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
                         productsBound);
 
                     new MultiProducerAdder().addMultiProducer(this, behaviour,
-                        "What do you want?");
+                        "你想做什么?");
 			}
 		};
 
@@ -233,7 +233,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 		mizuno.initHP(100);
 		mizuno.setHP(80);
 		mizuno.setCollisionAction(CollisionAction.REVERSE);
-		mizuno.setDescription("You see Mizuno. Like a spirit he wanders the vacant haunts of Ados doing who knows what.");
+		mizuno.setDescription("你遇见 Mizuno. 他像一个灵魂游荡在 Ados 的无人地带，不知道他做些什么.");
 
 		// start in int_semos_house
 		final StendhalRPZone	zone = SingletonRepository.getRPWorld().getZone("int_semos_house");

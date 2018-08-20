@@ -67,15 +67,15 @@ public class LittleBoyNPC implements ZoneConfigurator {
 			public void createDialog() {
 				// NOTE: These texts are only available after finishing the quest.
 				addGreeting();
-				addJob("I play all day.");
-				addHelp("Be careful out east, there are wolves about!");
-				addOffer("Hey, I will not give you my teddy! It's mine! *hug*");
+				addJob("我玩了一整天.");
+				addHelp("小心东边，那里有很多狼!");
+				addOffer("Hey, 不给你我的teddy熊！它是我的！哼! *hug*");
 				addGoodbye();
 			}
 
 		};
 		npc.setEntityClass("plinknpc");
-		npc.setDescription("You see a young boy called Plink. He is crying and needs some help...");
+		npc.setDescription("你看到一个叫 Plink 的小男孩. 他正在哭可能需要帮助...");
 		npc.setPosition(38, 100);
 		npc.initHP(100);
 		zone.add(npc);

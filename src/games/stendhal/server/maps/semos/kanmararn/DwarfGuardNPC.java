@@ -53,8 +53,8 @@ public class DwarfGuardNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-			    addQuest("I'm too scared to leave here yet... I'm waiting for someone to #offer me some better equipment.");
-				addJob("I'm was the guard of this Prison. Until .. well you know the rest.");
+			    addQuest("我还是很害怕离开那，我要等一个能给我提供 #offer 一些好装备的人.");
+				addJob("我过去是这个监狱的守卫，直到...你懂的.");
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buychaos")), true);
 
 				addGoodbye("Bye .. be careful ..");
@@ -63,7 +63,7 @@ public class DwarfGuardNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("dwarfguardnpc");
-		npc.setDescription("Hunel is a friendly looking dwarf. How did he come in here and why is he scared?");
+		npc.setDescription("Hunel 是一个友善的矮人，他如何来这，为何他会害怕?");
 		npc.setPosition(10, 23);
 		npc.setPerceptionRange(7);
 		npc.initHP(100);

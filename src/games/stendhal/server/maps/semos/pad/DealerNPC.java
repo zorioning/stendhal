@@ -69,10 +69,10 @@ public class DealerNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addJob("I think you already know what I do.");
-				addHelp("To be honest mate I can't help you with much, you're better off in the city for that.");
-				addQuest("Haven't got anything for you, pal.");
-				addOffer("Ha! The sign on the door's a cover! This is no inn. If you want a drink, you better go back into town.");
+				addJob("我想你知道我是什么的.");
+				addHelp("说实话，我不能帮你什么，你可以在城镇里生活的更好.");
+				addQuest("朋友，没有你要的东西.");
+				addOffer("哈! 这个门上的标志是只个封面画！不是酒馆。如果你想喝一杯，最好回到镇上.");
 				addGoodbye("Bye.");
 			}
 		};
@@ -80,7 +80,7 @@ public class DealerNPC implements ZoneConfigurator {
 		dealerNPC.setEntityClass("drugsdealernpc");
 		dealerNPC.setPosition(4, 12);
 		dealerNPC.initHP(100);
-		dealerNPC.setDescription("You see Pdiddi. Seems like he is mentally in another world...");
+		dealerNPC.setDescription("你遇见了Pdiddi. 他的精神好像游离于另一个世界...");
 		zone.add(dealerNPC);
 	}
 }

@@ -65,7 +65,7 @@ public class HistorianGeographerNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting(null, new SayTextAction("Hi again, [name]. How can I #help you this time?"));
+				addGreeting(null, new SayTextAction("又见面了, [name]. 这次要我帮 #help 你点什么？"));
 				addGoodbye();
 
 				// A little trick to make NPC remember if it has met
@@ -77,30 +77,30 @@ public class HistorianGeographerNPC implements ZoneConfigurator {
 						new AndCondition(new GreetingMatchesNameCondition(getName()),
 								new QuestNotCompletedCondition("Zynn")),
 						ConversationStates.ATTENDING,
-						"Hi, potential reader! Here you can find records of the history of Semos, and lots of interesting facts about this island of Faiumoni. If you like, I can give you a quick introduction to its #geography and #history! I also keep up with the #news, so feel free to ask me about that.",
+						"Hi, 潜在读者！这里记录了Semos镇的历史，还有很多关于 Faiumoni 岛的有趣的真相. 如果你喜欢，我能为你提供此地的 #地理 和 #历史 的简短的介绍。 #geography and #history! 我还关注着本地的 #新闻 #news, 你可以随时问我有关此方面的知识.",
 						new SetQuestAction("Zynn", "done"));
 
-				addHelp("I can best help you by sharing my knowledge of Faiumoni's #geography and #history, as well as the latest #news.");
-				addJob("I'm a historian and geographer, committed to writing down every objective fact about Faiumoni. Did you know I wrote most of the books in this library? Well, apart from \"Know How To Kill Creatures\", of course... Hayunn Naratha wrote that.");
+				addHelp("我能为你提供最好的帮助，把我对于 Faiumoni 的 #地理 和 #历史 #geography and #history 的知识分享给你，还有最新的 #消息 #news 。");
+				addJob("我是一个历史和地理学家，我记录并保留了关于 Faiumoni 的每件事的真相，你知道在这个图书管写最多书的人是我吗？ 好吧，对于 \"明白如何杀死怪物\"  这一书, 当然...这是由 Hayunn Naratha 写的.");
 
-				addQuest("I don't think there's really anything you could do for me right now. But thanks for asking!");
+				addQuest("我不认为目前您还不能帮我做一些具体的事，但还是谢谢你的关心!");
 
 				add(ConversationStates.ATTENDING, Arrays.asList("offer", "buy", "trade", "deal", "scroll", "scrolls", "home", "empty",
 				        "marked", "summon", "magic", "wizard", "sorcerer"), null, ConversationStates.ATTENDING,
-				        "I don't sell scrolls anymore... I had a big argument with my supplier, #Haizen.", null);
+				        "我不再销售卷轴了... 我的供应商 #Haizen. 惹出了个大麻烦.", null);
 
 				add(
 				        ConversationStates.ATTENDING,
 				        Arrays.asList("haizen", "haizen."),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "Haizen? He's a wizard who lives in a small hut between Semos and Ados. I used to sell his scrolls here, but we had an argument... you'll have to go see him yourself, I'm afraid.",
+				        "Haizen? 他是一个住在 Semos 和 Ados之间的小房子的巫师。我以前常去那里卖卷轴给他，但他有个条件，恐怕你不得不一个人去找他.",
 				        null);
 			}
 		};
 
 		npc.setEntityClass("wisemannpc");
-		npc.setDescription("You see Zynn Iwuhos. He looks even older than some of his tattered maps lying around.");
+		npc.setDescription("你遇见了 Zynn Iwuhos. 他看起来比他家四周挂着的破旧地图还苍老");
 		npc.setPosition(15, 3);
 		npc.initHP(100);
 		zone.add(npc);

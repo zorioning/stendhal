@@ -54,17 +54,17 @@ public class HoeingManNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Well met, wayfarer!");
-				addJob("You see? I keep freeing the soil from weeds with my #hoe but those grow back every time...");
-				addHelp("Take your time and check the area around... There's a mill somewhat north and a really nice farm to the east... Nice and rich country, you could go hunting for food!");
+				addGreeting("你好，旅行者!");
+				addJob("看看? 我用锄头 #hoe 把长着杂草的硬士翻开，但这些杂草每次还能长出来...");
+				addHelp("可以花点时间了解下周围的地点...稍北边一点是个磨坊，东边是个不错的农场...很好很富饶的乡村，你也可以在这里打猎!");
 				addReply("hoe",
-                    "Oh well, there's nothing special about my hoe... If you need some good farming tools like a scythe, it might help visiting the nearby Semos city blacksmith shop!");
-				addGoodbye("Goodbye and may your path be clear of weeds!");
+                    "Oh 好吧,我的锄头没什么特殊的。。。如果你需要像镰刀这类的农具，你到 Semos 镇上的铁匠商店看看可能有帮助!");
+				addGoodbye("再见，你的脚印印在草上了!");
 			}
 
 		};
 		npc.setEntityClass("hoeingmannpc");
-		npc.setDescription("You see a man with a hoe, he's busy weeding the soil.");
+		npc.setDescription("你遇见了一个手拿锄头的农夫，他正忙着翻开板结的泥土.");
 		npc.setPosition(48,62);
 		npc.initHP(100);
 		zone.add(npc);

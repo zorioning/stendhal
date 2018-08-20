@@ -30,7 +30,7 @@ public class FlowerSellerNPC implements ZoneConfigurator {
 	@Override
 	public void configureZone(final StendhalRPZone zone, final Map<String, String> attributes) {
 
-        	new TeleporterBehaviour(buildSemosHouseArea(), null, "0", "Flowers! Get your fresh flowers here!");
+        	new TeleporterBehaviour(buildSemosHouseArea(), null, "0", "鲜花! 这儿有刚采的鲜花!");
 	}
 
 	private SpeakerNPC buildSemosHouseArea() {
@@ -43,7 +43,7 @@ public class FlowerSellerNPC implements ZoneConfigurator {
 			}
 	                @Override
 			protected void createDialog() {
-			    addJob("I'm a wandering flower woman.");
+			    addJob("我是流浪的卖花女.");
 			    addGoodbye("Everything's coming up roses ... bye ...");
 			    // the rest is in the ElfPrincess quest
 			}
@@ -52,7 +52,7 @@ public class FlowerSellerNPC implements ZoneConfigurator {
 		rose.setEntityClass("gypsywomannpc");
 		rose.initHP(100);
 		rose.setCollisionAction(CollisionAction.REVERSE);
-		rose.setDescription("You see Rose Leigh. She jumps from place to place with a basket filled with lovely rhosyds.");
+		rose.setDescription("你遇见 Rose Leigh. 她提着装满玫瑰的篮子跟踪蹦蹦跳跳.");
 
 		// start in int_semos_house
 		final StendhalRPZone	zone = SingletonRepository.getRPWorld().getZone("int_semos_house");

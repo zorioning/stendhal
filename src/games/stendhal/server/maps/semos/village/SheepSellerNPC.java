@@ -68,14 +68,14 @@ public class SheepSellerNPC implements ZoneConfigurator {
 					@Override
 					public boolean transactAgreedDeal(ItemParserResult res, final EventRaiser seller, final Player player) {
 						if (res.getAmount() > 1) {
-							seller.say("Hmm... I just don't think you're cut out for taking care of a whole flock of sheep at once.");
+							seller.say("Hmm... 我不认为你能立刻放弃照看整个羊群。");
 							return false;
 						} else if (!player.hasSheep()) {
 							if (!player.drop("money", getCharge(res, player))) {
-								seller.say("You don't seem to have enough money.");
+								seller.say("看来你的钱不够.");
 								return false;
 							}
-							seller.say("Here you go, a nice fluffy little sheep! Take good care of it, now...");
+							seller.say("你带走吧，一只毛绒绒的小羊！要照顾好它......");
 
 							final Sheep sheep = new Sheep(player);
 							StendhalRPAction.placeat(seller.getZone(), sheep, seller.getX(), seller.getY() + 1);
@@ -84,7 +84,7 @@ public class SheepSellerNPC implements ZoneConfigurator {
 
 							return true;
 						} else {
-							say("Well, why don't you make sure you can look after that sheep you already have first?");
+							say("好吧，为什么不确信你能看好你之前带走的羊？");
 							return false;
 						}
 					}
@@ -94,23 +94,23 @@ public class SheepSellerNPC implements ZoneConfigurator {
 				items.put("sheep", BUYING_PRICE);
 
 				addGreeting();
-				addJob("I work as a sheep seller.");
-				addHelp("I sell sheep. To buy one, just tell me you want to #buy #sheep. If you're new to this business, I can tell you how to #travel with her, take #care of her, and finally give you tips on when to #sell her. If you find any wild sheep, incidentally, you can make them your #own.");
+				addJob("我是牧羊人.");
+				addHelp("我销售羊只，要买的话，只要告诉我你想买羊 #buy #sheep. 如果你没做过这行，我能告诉你如何放羊 #travel , 只要小心照看 #care 它，最后可以卖出个好价钱。如果你在野外偶然发现羊，也可以使用拥有 #own 把羊牵走.");
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SheepSellerBehaviour(items));
 				addReply("care",
-						"My sheep especially love to eat the red berries that grow on these little bushes. Just stand near one and your sheep will walk over to start eating. You can right-click and choose LOOK at any time, to check up on her weight; she will gain one unit of weight for every cherry she eats.");
+						"羊儿特别喜爱吃这些长在矮树丛的红树莓，只要站在树莓附近，你的羊经过时会自已去吃它. 你可以随时鼠标右击羊，然后选择查看去了解羊的体重；每吃一颗树莓会增加1点体重。");
 				addReply("travel",
-						"You'll need your sheep to be close by in order for her to follow you when you change zones; you can say #sheep to call her if she's not paying attention. If you decide to abandon her instead, you can right-click on yourself and select LEAVE SHEEP; but frankly I think that sort of behaviour is disgraceful.");
+						"你需要把羊保持在离你不太远的地方，当你切换地区时，羊要在附近才行；你可以呼出 #sheep 去喊羊回来。如果你决定放生它，你可以鼠标右键，然后选择离开；但坦白的说，我认为这样的行为很不负责.");
 				addReply("sell",
-						"Once you've gotten your sheep up to a weight of 100, you can take her to Sato in Semos; he will buy her from you.");
+						"一旦你把羊放到100的体重，你可以把它给 Semos 镇上的 Sato；他会收购你的羊.");
 				addReply("own",
-						"If you find any wild or abandoned sheep, you can right-click on them and select OWN to tame them. Sheep need to be looked after!");
+						"如果你发现一只被放生的羊，可以点击鼠标右键，并选择 own 驯服它，羊需要人的照料!");
 			}
 		};
 
 		npc.setEntityClass("sellernpc");
-		npc.setDescription("Nishiya patrols the paths, watching his sheep. You can buy one from him.");
+		npc.setDescription("Nishiya 在路上巡逻并照料着他的羊，你可以从他那里买一只.");
 		npc.setPosition(33, 44);
 		npc.initHP(100);
 		npc.setSounds(Arrays.asList("cough-11", "cough-2", "cough-3"));

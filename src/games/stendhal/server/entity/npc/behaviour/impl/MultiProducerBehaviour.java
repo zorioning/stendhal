@@ -322,18 +322,18 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         String productName = res.getChosenItemName();
 
         if (getMaximalAmount(productName, player) < amount) {
-            npc.say("我只能 " + getProductionActivity() + " "
-                    +  productName
-                    + " 如果你带给我的话 "
-                    + getRequiredResourceNamesWithHashes(productName, amount) + ".");
+            npc.say("如果你把"
+                    + getRequiredResourceNamesWithHashes(productName, amount) + " 带给我."
+					+ "我会 " + getProductionActivity() + " "
+                    +  productName + " 给你" );
             return false;
         } else {
 			res.setAmount(amount);
-            npc.say("我需要你为这个工作 "
+            npc.say("我需要你去弄到 "
                     + getRequiredResourceNamesWithHashes(productName, amount)
-					+ " 给我, which will take "
+					+ " 给我, 然后做好要花 "
                     + TimeUtil.approxTimeUntil(getProductionTime(productName, amount))
-                    + ". 你找到我要的东西了吗?");
+                    + " 的时间. 你找到我要的东西了吗?");
 
             return true;
         }
@@ -357,7 +357,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         if (getMaximalAmount(productName, player) < amount) {
             // The player tried to cheat us by placing the resource
             // onto the ground after saying "yes"
-            npc.say("Hey! 我在这！你最好别哄我...");
+            npc.say("Hey! 在这儿！你最好别骗我...");
             return false;
         } else {
             for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerProduct(productName).entrySet()) {

@@ -67,14 +67,14 @@ public class BoyNPC implements ZoneConfigurator {
 								}),
 				        ConversationStates.ATTENDING,
 				        null,
-				        new SayTextAction("Ssshh! Come here, [name]! I have a #task for you."));
+				        new SayTextAction("嘘! 来这边, [name]! 我有个任务 #task 交给你."));
 
 				// this is the condition for any other case while the quest is active, not covered by the quest.
 				add(ConversationStates.IDLE,
 						ConversationPhrases.GREETING_MESSAGES,
 						new GreetingMatchesNameCondition(getName()), true,
 				        ConversationStates.ATTENDING,
-				        "*sniff* *sniff* I still feel ill, please hurry with that #favour for me.",
+				        "*sniff* *sniff* 我病了，快帮我把药 #favour 拿来.",
 				        null);
 
 				add(ConversationStates.IDLE,
@@ -83,7 +83,7 @@ public class BoyNPC implements ZoneConfigurator {
 								new QuestCompletedCondition("introduce_players")),
 				        ConversationStates.ATTENDING,
 				        null,
-				        new SayTextAction("Hi again, [name]! Thanks again, I'm feeling much better now."));
+				        new SayTextAction("又见面了, [name]! 再次感谢，现在我觉得好多了."));
 
 				addGoodbye();
 			}
@@ -110,7 +110,7 @@ public class BoyNPC implements ZoneConfigurator {
 		});
 
 		npc.setEntityClass("childnpc");
-		npc.setDescription("The young boy you see is Tad. He looks ill and his face is pale.");
+		npc.setDescription("这个年轻的男孩叫 Tad. 他的脸色苍白，看起来病得很重.");
 
 		npc.setPosition(18, 21);
 		npc.setDirection(Direction.LEFT);

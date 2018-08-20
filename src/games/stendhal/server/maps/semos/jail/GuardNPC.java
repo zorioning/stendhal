@@ -57,40 +57,40 @@ public class GuardNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Greetings! How may I #help you?");
+				addGreeting("你好！有什么我能帮忙 #help 的吗?");
 
 				add(ConversationStates.ATTENDING,
 						ConversationPhrases.JOB_MESSAGES,
 						new NotInJailCondition(),
 						ConversationStates.ATTENDING,
-						"I am the jail keeper.",
+						"我是监狱的看守.",
 						null);
 
 				add(ConversationStates.ATTENDING,
 						ConversationPhrases.JOB_MESSAGES,
 						new InJailCondition(),
 						ConversationStates.ATTENDING,
-						"I am the jail keeper. You have been confined here because of your bad behaviour.",
+						"我是这个监狱的看守，由于你的违法行为，你已被限制自由.",
 						null);
 
 				add(ConversationStates.ATTENDING,
 						ConversationPhrases.HELP_MESSAGES,
 						new InJailCondition(),
 						ConversationStates.ATTENDING,
-						"Please wait for an administrator to come here and decide what to do with you. In the meantime, there is no escape for you. If you logout, your jail sentence will simply be restarted.",
+						"请等管理员来这，给你出处理决定。在此期间不能逃跑。如果你下线，关押时间会从0重新计时。",
 						null);
 
 				add(ConversationStates.ATTENDING,
 						ConversationPhrases.HELP_MESSAGES,
 						new NotInJailCondition(),
 						ConversationStates.ATTENDING,
-						"Did you know that you can learn about local laws by typing /rules? Those criminals in the cells obviously did not.",
+						"你知道要学会本地法律吗？而这些号子里的罪犯明显没有",
 						null);
 
 				addGoodbye();
 			}};
 			npc.setPosition(9, 7);
-			npc.setDescription("You see one of the Semos jail keepers, Marcus.");
+			npc.setDescription("你遇到了 Semos 监狱的看守，Marcus.");
 			npc.setEntityClass("youngsoldiernpc");
 			zone.add(npc);
 	}

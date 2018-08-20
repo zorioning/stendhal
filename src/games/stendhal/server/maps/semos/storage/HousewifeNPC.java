@@ -55,15 +55,15 @@ public class HousewifeNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hi there, young hero.");
-				addJob("I'm just a regular housewife.");
-				addHelp("Oh I love the bakery products by Leander. His sandwiches are awesome! Did you know, that he is searching for a helping hand?");
+				addGreeting("Hi 看这里，年轻的英雄.");
+				addJob("我是一个平常的家庭主妇.");
+				addHelp("Oh 我爱吃 Leander 生产的面包. 他的三明治太帅了！你知道吗？他正需要个助手?");
 				addGoodbye();
 			}
 		};
 
 		npc.setEntityClass("welcomernpc");
-		npc.setDescription("You see Eonna. She is a lovely housewife and scared to death of rats!");
+		npc.setDescription("你遇见了 Eonna. 她是一个有爱的家庭主妇，害怕死老鼠!");
 		npc.setPosition(4, 13);
 		npc.initHP(100);
 		zone.add(npc);
