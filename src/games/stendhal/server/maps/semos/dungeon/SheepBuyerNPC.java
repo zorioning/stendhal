@@ -44,10 +44,10 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 				// TODO: The code is similar to Sato's SheepBuyerBehaviour.
 				// Only the phrasing is different, and Sato doesn't buy
 				// skinny sheep. Get rid of the code duplication.
-				addGreeting(getName() + " see hooman!");
-				addJob(getName() + " is buy real cheep from hoomans.");
-				addHelp(getName() + " buy sheep! Sell me sheep! "
-						+ getName()	+ " is hungry!");
+				addGreeting(getName() + " 来看看！人类!");
+				addJob(getName() + " 从人类那里买东西真便宜!");
+				addHelp(getName() + " 收购羊! 我要羊! "
+						+ getName()	+ " 很饿!");
 				addGoodbye("*grunt*");
 			}
 
@@ -71,7 +71,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 		npc.setPosition(67, 13);
 		npc.setEntityClass("orcbuyernpc");
 		zone.add(npc);
-		npc.setDescription("You see the stinky orc Tor'Koom. His stomach is making loud noises!");
+		npc.setDescription("你遇见了浑身臭味的兽人 Tor'Koom. 他的肚子咕咕响个不停!");
 	}
 
 	private static final class SheepBuyerBehaviour extends BuyerBehaviour {
@@ -96,9 +96,9 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 
 			if (sheep != null) {
 				if (seller.getEntity().squaredDistance(sheep) > 5 * 5) {
-					seller.say("*drool* Sheep flesh! Bring da sheep here!");
+					seller.say("*drool* 新鲜的羊！带到这儿!");
 				} else {
-					seller.say("Mmm... Is look yummy! Here, you take dis gold!");
+					seller.say("Mmm... 看着就好吃! 来，给你钱!");
 					payPlayer(res, player);
 
 					player.removeSheep(sheep);
@@ -109,7 +109,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 					return true;
 				}
 			} else {
-				seller.say("Whut? Is not unnerstand... Maybe I hit you until you make sense!");
+				seller.say("神马? 不明白...把你打醒你就明白了!");
 			}
 			return false;
 		}

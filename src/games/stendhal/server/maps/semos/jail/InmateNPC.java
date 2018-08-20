@@ -48,7 +48,7 @@ public class InmateNPC implements ZoneConfigurator  {
 			npc.setPosition(13, 3);
 			npc.setEntityClass("militiaelfnpc");
 			npc.setDirection(Direction.DOWN);
-			npc.setDescription("You see Conual. He is jailed for ages now. Seems like he really did something badly wrong!");
+			npc.setDescription("你遇见了 Conual. 到现在他已被关押在监狱好多年。他好像真的做了非常坏的事!");
 			zone.add(npc);
 	}
 }

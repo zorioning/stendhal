@@ -60,7 +60,7 @@ public class BoyGuardianNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 
-				String greetingBasis = "Hey you! Take care, you are leaving the city now! ";
+				String greetingBasis = "嗨，你站住! 要小心了，你已到了镇子外面! ";
 
 				// When the players level is below 15 AND (he has a shield equipped OR he completed the "meet_hayunn" quest)
 				add(
@@ -74,7 +74,7 @@ public class BoyGuardianNPC implements ZoneConfigurator {
 								)
 						),
 						ConversationStates.ATTENDING,
-						greetingBasis + "Look out for animals who might attack you and other enemies who walk around. Take some food or drinks with you! ",
+						greetingBasis + "小心那些可能攻击你动物，还有一些在附近活动的敌军. 路上记得带些吃的! ",
 						null);
 				// When the players level is below 15 AND he has NO shield AND he has NOT completed the "meet_hayunn" quest
 				add(
@@ -86,7 +86,7 @@ public class BoyGuardianNPC implements ZoneConfigurator {
 								new NotCondition(new QuestCompletedCondition("meet_hayunn"))
 						),
 						ConversationStates.ATTENDING,
-						greetingBasis + "Eaak! You don't even have a shield. You better go right back and talk to Hayunn in the old guard house in Semos Village before you get into danger out here in the wild.",
+						greetingBasis + "唉呀! 你还没有盾，在你外出到野外之前，现在最好回到 Semon 镇的旧房子里和 hayunn 谈谈.",
 						null);
 				// When the player is above level 15
 				add(
@@ -94,18 +94,18 @@ public class BoyGuardianNPC implements ZoneConfigurator {
 						ConversationPhrases.GREETING_MESSAGES,
 						new LevelGreaterThanCondition(15),
 						ConversationStates.ATTENDING,
-						greetingBasis + "Oh, I see you are mighty and brave already! Have fun :)",
+						greetingBasis + "Oh, 我看你已经够强大和勇敢了，玩的开心 :)",
 						null);
 
-				addJob("My job is to watch out for baaad creatures! My parents gave me that special #duty!");
-				addReply("duty", "Yes, a really special and important one!");
-				addHelp("My daddy always tells me to #sneak around in forests which aren't familiar to me... And he said that I should always take something to #eat #and #drink with me, to be on the safe side!");
-				addReply("sneak", "Yes, if you want to be a warrior like I want to be, you have to move quietly!");
-				addReply(Arrays.asList("eat","drink","eat and drink"), "Leander, the Semos baker, makes some really tasty sandwiches, mom always buys them there and his bread is yummi, too! I'm not sure about drinks, maybe you can ask #Carmen or #Margaret?");
-				addReply("Carmen", "Carmen is a famous healer in Semos city. Maybe you spotted her on your way from the village into the city :)");
-				addReply("Margaret", "Margaret works in the tavern but I am not allowed to go there without my parents...");
-				addQuest("I'm on a mission :) I watch out for bad bad guys and warn people, to #help them! But I don't need anything from you...");
-				addGoodbye("Shhhhh, don't talk too loud! Bye and take care!");
+				addJob("我的工作是警戒外面的野兽！我父母交给我这个特殊使命 #duty!");
+				addReply("duty", "是的，一个非常特殊和重要的使命!");
+				addHelp("我爸爸总是跟我说不要去陌生的森林里闲逛...他还说我应该记得带着一些吃的和喝的 #eat #and #drink ,以防不测!");
+				addReply("sneak", "是的，如果你想成为一个我所期望的勇士，你必须跑快点!");
+				addReply(Arrays.asList("eat","drink","eat and drink"), "Leander, Semos 的面包师, 他会制作的三明治非常可口, 妈妈总是在那儿买，他的面包也很好吃！我不知道饮料在哪里买，或许你可以问问 #Carmen 或者 #Margaret?");
+				addReply("Carmen", "Carmen 是 Semon 镇有名的医疗师，可能你见过她，她就在村庄到镇子上的路上 :)");
+				addReply("Margaret", "Margaret 在酒馆工作，但我父母不让我去那里..");
+				addQuest("我正在执行任务 :) 我警戒坏坏的家伙或警告并帮助 #help 过往的人们! 不过我还不需要你的帮助...");
+				addGoodbye("Shhhhh, 不在大声说话！要小心！再见!");
 			}
 
 			@Override
@@ -125,7 +125,7 @@ public class BoyGuardianNPC implements ZoneConfigurator {
 		});
 
 		npc.setEntityClass("boyguardnpc");
-		npc.setDescription("You see Will. He wants to be a professional city guard when he grows up.");
+		npc.setDescription("You 遇到了 Will. 他想长大后成为城镇警戒专家。");
 		npc.setPosition(6, 43);
 		npc.setDirection(Direction.DOWN);
 		npc.initHP(100);

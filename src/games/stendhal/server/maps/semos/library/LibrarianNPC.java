@@ -48,14 +48,14 @@ public class LibrarianNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addJob("I am the librarian.");
-				addHelp("Hey, read a book and help yourself! You're never too old to stop learning.");
+				addJob("我是图书管理员.");
+				addHelp("Hey, 要自已拿书看！年轻人要不断学习.");
 				addGoodbye();
 			}
 		};
 
 		npc.setEntityClass("investigatornpc");
-		npc.setDescription("You see Ceryl, a slightly crazed looking librarian.");
+		npc.setDescription("你见到了 Ceryl, 一个很削瘦的图书管理员.");
 		npc.setPosition(28, 12);
 		npc.initHP(100);
 		zone.add(npc);

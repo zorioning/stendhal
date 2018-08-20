@@ -138,7 +138,7 @@ public class GardenerNPC implements ZoneConfigurator {
 						if (getMaximalAmount(player) < amount) {
 							// The player tried to cheat us by placing the resource
 							// onto the ground after saying "yes"
-							npc.say("嗨! 我在这！你最好不要哄我...");
+							npc.say("喂! 在这儿！你最好不要骗我...");
 							return false;
 						} else {
 							for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerItem().entrySet()) {

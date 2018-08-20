@@ -205,7 +205,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		final Set<String> requiredResourcesWithHashes = new TreeSet<String>();
 		for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerItem().entrySet()) {
 //			requiredResourcesWithHashes.add(amount	* entry.getValue() + entry.getKey());
-			requiredResourcesWithHashes.add( Integer.toString( amount * entry.getValue())+ "#" + entry.getKey() );
+			requiredResourcesWithHashes.add( Integer.toString( amount * entry.getValue())+ " #" + entry.getKey() );
 		}
 		return requiredResourcesWithHashes.toString();
 	}
@@ -339,7 +339,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		if (getMaximalAmount(player) < res.getAmount()) {
 			// The player tried to cheat us by placing the resource
 			// onto the ground after saying "yes"
-			npc.say("Hey! 我在这边！你最好不要忽悠我...");
+			npc.say("Hey! 在这儿！你最好不要骗我...");
 			return false;
 		} else {
 			for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerItem().entrySet()) {
@@ -352,8 +352,8 @@ public class ProducerBehaviour extends TransactionBehaviour {
 					+ getProductionActivity()
 					+ " "
 					+  getProductName()
-					+ " 为你 , 但做好它需要花点时间，请等in "
-					+ getApproximateRemainingTime(player) + "后再来取.");
+					+ " 为你 , 但做好它需要花点时间，请等 "
+					+ getApproximateRemainingTime(player) + " 时间后再来取.");
 			return true;
 		}
 	}
@@ -374,10 +374,10 @@ public class ProducerBehaviour extends TransactionBehaviour {
 		// String productName = order[1];
 
 		if (!isOrderReady(player)) {
-			npc.say("欢迎回来！我正在忙你的事 "
+			npc.say("欢迎回来！我正在忙你 "
 					+ getProductionActivity() + " " + getProductName()
-					+ " for you. 你可以等 "
-					+ getApproximateRemainingTime(player) + " 再回来取.");
+					+ " 的事. 要等 "
+					+ getApproximateRemainingTime(player) + " 时间后再回来取.");
 		} else {
 			final StackableItem products = (StackableItem) SingletonRepository.getEntityManager().getItem(
 					getProductName());
@@ -398,7 +398,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 				player.incProducedCountForItem(getProductName(), products.getQuantity());
 				SingletonRepository.getAchievementNotifier().onProduction(player);
 			} else {
-				npc.say("欢迎回来！你的东西我已做好，但你的背包满了，无法带走，知你背包空了时再来取 "
+				npc.say("欢迎回来！你的东西我已做好，但你的背包满了，等你背包有空时再来取 "
 						+ getProductName()
 						);
 			}

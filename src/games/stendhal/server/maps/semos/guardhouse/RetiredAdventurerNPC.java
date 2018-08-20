@@ -104,7 +104,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 		npc.setPosition(4, 9);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.setEntityClass("oldheronpc");
-		npc.setDescription("你见到 Hayunn Naratha. 在他灰色的头发和破旧的盔甲下面，有着锐利的目光和结实的肌肉");
+		npc.setDescription("你遇见了 Hayunn Naratha. 在他灰白色的头发和破旧的盔甲下面，有着锐利的目光和结实的肌肉");
 		npc.setBaseHP(100);
 		npc.setHP(85);
 		zone.add(npc);

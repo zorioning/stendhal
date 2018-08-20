@@ -80,7 +80,7 @@ public class RudolphNPC implements ZoneConfigurator {
 		};
 		npc.setPosition(2, 3);
 		npc.setDirection(Direction.DOWN);
-		npc.setDescription("你见到红鼻子驯鹿 Reindeer. 他的鼻子很大，很闪亮.");
+		npc.setDescription("你见到红鼻子驯鹿 Reindeer. 他的鼻子很大，还闪着光.");
 		npc.setBaseSpeed(1);
 		npc.setEntityClass("rudolphnpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);

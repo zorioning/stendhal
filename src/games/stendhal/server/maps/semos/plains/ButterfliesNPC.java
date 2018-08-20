@@ -159,7 +159,7 @@ public class ButterfliesNPC implements ZoneConfigurator {
 
         // Add butterflies to zone
 		for (PassiveNPC insect : butterflies) {
-    		insect.setDescription("You see a butterfly.");
+    		insect.setDescription("你看见一只蝴蝶.");
     		insect.setEntityClass("animal/butterfly");
     		insect.setBaseSpeed(0.2);
     		insect.setResistance(0);

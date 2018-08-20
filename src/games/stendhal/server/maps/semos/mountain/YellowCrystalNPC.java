@@ -48,10 +48,10 @@ public class YellowCrystalNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hello, I hope you enjoy the nature here.");
-				addHelp("There is a beautiful looking tower around the mountains. It's huge!");
-				addJob("I am a crystal. What more can I say?");
-				addGoodbye("Farewell, return to me whenever you need my help.");
+				addGreeting("Hello, 希望你喜欢这里的自然风景.");
+				addHelp("这个漂亮的塔建在大山中，太壮观了!");
+				addJob("我是一个水晶. 我还能说什么呢?");
+				addGoodbye("再会，需要我帮忙时随时回来.");
 
 			}
 		};
@@ -60,7 +60,7 @@ public class YellowCrystalNPC implements ZoneConfigurator {
 		crystal.setAlternativeImage("crystalyellownpc");
 		crystal.setPosition(76, 16);
 		crystal.initHP(100);
-		crystal.setDescription("You see a yellow coloured crystal. What an energetic sight.");
+		crystal.setDescription("你看到了一个黄色的水晶 crystal. 多么让人振奋的景象.");
 		crystal.setResistance(0);
 
 		zone.add(crystal);

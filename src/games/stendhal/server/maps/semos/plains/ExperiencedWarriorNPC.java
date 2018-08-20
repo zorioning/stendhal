@@ -82,61 +82,61 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 	 * literals for line starts. %s is replaced with singular creature name, %S
 	 * plural.
 	 */
-	private static final String[] LINE_STARTS = new String[] { "Oh yes I know %s!",
-		"When I was your age, I killed many %S!",
-		"Those %S are one of my favorites!",
-		"Let me think...%s...now I remember!",
-		"I was almost killed by %a once!",
+	private static final String[] LINE_STARTS = new String[] { "Oh 是的,我知道 %s!",
+		"当我在你这个年纪，我杀了很多 %S!",
+		"这些 %S 是我喜欢的一种!",
+		"让我想想...%s...我想起来了!",
+		"上次我差点被 %a 杀死!",
 		"I've had some nice battles with %S!", };
 
 	static {
 		probabilityLiterals = new LinkedHashMap<Double, String>();
-		probabilityLiterals.put(100.0, "always %s");
-		probabilityLiterals.put(99.99, "almost always %s");
-		probabilityLiterals.put(75.0, "most of the time %s");
-		probabilityLiterals.put(55.0, "over half the time %s");
-		probabilityLiterals.put(40.0, "very often %s");
-		probabilityLiterals.put(20.0, "often %s");
-		probabilityLiterals.put(5.0, "sometimes %s");
-		probabilityLiterals.put(1.0, "rarely %s");
-		probabilityLiterals.put(0.1, "very rarely %s");
-		probabilityLiterals.put(0.001, "extremely rarely %s");
-		probabilityLiterals.put(0.0001, "very few of them carry %s");
+		probabilityLiterals.put(100.0, "一贯 %s");
+		probabilityLiterals.put(99.99, "几乎一贯 %s");
+		probabilityLiterals.put(75.0, "大多数情况 %s");
+		probabilityLiterals.put(55.0, "多数情况 %s");
+		probabilityLiterals.put(40.0, "经常 %s");
+		probabilityLiterals.put(20.0, "时常 %s");
+		probabilityLiterals.put(5.0, "有时 %s");
+		probabilityLiterals.put(1.0, "偶尔 %s");
+		probabilityLiterals.put(0.1, "很少 %s");
+		probabilityLiterals.put(0.001, "稀有 %s");
+		probabilityLiterals.put(0.0001, "非常稀有 %s");
 		probabilityLiterals.put(0.00000001,
-		"maybe %s too, but I've only heard about that");
-		probabilityLiterals.put(0.0, "never %s");
+		"也许 %s too, 但我只是听说");
+		probabilityLiterals.put(0.0, "不可能 %s");
 
 		amountLiterals = new LinkedHashMap<Integer, String>();
-		amountLiterals.put(2000, "thousands of %s");
-		amountLiterals.put(200, "hundreds of %s");
-		amountLiterals.put(100, "lots of %s");
-		amountLiterals.put(10, "some %s");
-		amountLiterals.put(2, "few %s");
-		amountLiterals.put(1, "%a");
+		amountLiterals.put(2000, "数千 %s");
+		amountLiterals.put(200, "数百 %s");
+		amountLiterals.put(100, "许多 %s");
+		amountLiterals.put(10, "一些 %s");
+		amountLiterals.put(2, "几个 %s");
+		amountLiterals.put(1, "一个 %a");
 
 		dangerLiterals = new LinkedHashMap<Double, String>();
-		dangerLiterals.put(40.0, "%s would kill you in a second!");
+		dangerLiterals.put(40.0, "%s 会秒杀你!");
 		dangerLiterals.put(15.0,
-		"%s is probably lethal for you, don't try to kill one!");
-		dangerLiterals.put(2.0, "%s is extremely dangerous for you, beware!");
-		dangerLiterals.put(1.8, "%S are very dangerous for you, be careful!");
+		"%s 对你是致命的, 不要去招惹!");
+		dangerLiterals.put(2.0, "%s 对你绝对危险, 提高警戒!");
+		dangerLiterals.put(1.8, "%S 对你非常危险, 小心!");
 		dangerLiterals.put(1.7,
-		"%S are dangerous for you, keep potions with you!");
+		"%S 对你有危险, 记得及时补血!");
 		dangerLiterals.put(1.2,
-		"It is possibly dangerous for you, keep an eye on your health!");
+		"它对你有点危险，注意血量!");
 		dangerLiterals.put(0.8,
-		"It may be a nice challenge for you to kill one!");
-		dangerLiterals.put(0.5, "Killing %s should be trivial for you.");
-		dangerLiterals.put(0.3, "Killing %s should be easy for you.");
-		dangerLiterals.put(0.0, "%s is probably not enough challenge for you.");
+		"要杀死它，很有挑战性!");
+		dangerLiterals.put(0.5, "杀死 %s 对你来说很平常.");
+		dangerLiterals.put(0.3, "杀死 %s 应该很容易.");
+		dangerLiterals.put(0.0, "%s 不对你构成危协.");
 	}
 
 	/**
 	 * %1 = time to respawn.
 	 */
 	private static final String[] RESPAWN_TEXTS = new String[] {
-		"If you waited in the right place for %1, you would be likely to see one.",
-		"It can take %1 to find one.", "Hunting them for %1 gives you a good chance of finding one." };
+		"如果你在正确的地点等待 %1, 应该可能见到一只.",
+		"可能只有 %1 的机会能发现一只.", "猎杀它们能达到 %1 ，对你来说就是个好机会." };
 
 	/**
 	 * %1 = list of items dropped.
