@@ -49,13 +49,13 @@ public class PlayerVsPlayerChallengeManager  implements TurnListener, LogoutList
 	public void createChallenge(Player challenger, Player challenged, int currentTurn) {
 		PlayerVsPlayerChallenge newChallenge = new PlayerVsPlayerChallenge(currentTurn, challenger, challenged);
 		if(this.currentChallenges.contains(newChallenge)) {
-			challenger.sendPrivateText(String.format("You alread have a challenge with %s", challenged.getName()));
+			challenger.sendPrivateText(String.format("你和 %s 已经有一场比赛", challenged.getName()));
 			return;
 		}
 		this.currentChallenges.add(newChallenge);
 		raiseGameEvent(newChallenge, "challenge-create");
-		challenger.sendPrivateText(String.format("You successfully challenged %s!", challenged.getName()));
-		challenged.sendPrivateText(String.format("%s send you a challenge. If you accept you can fight a duel.", challenger.getName()));
+		challenger.sendPrivateText(String.format("你在比赛中战胜了 %s!", challenged.getName()));
+		challenged.sendPrivateText(String.format("%s 给你发出了挑战. 如果接受，你们将进行决斗.", challenger.getName()));
 	}
 
 	/**
@@ -70,9 +70,9 @@ public class PlayerVsPlayerChallengeManager  implements TurnListener, LogoutList
 		if(openChallenge != null) {
 			openChallenge.accept(currentTurn, challenged);
 			raiseGameEvent(openChallenge, "challenge-accept");
-			logger.debug(String.format("%s accepted a challenge from %s.", challenged.getName(), challenger.getName()));
+			logger.debug(String.format("%s 接受了 %s 的挑战.", challenged.getName(), challenger.getName()));
 		} else {
-			logger.debug(String.format("%s is trying to accept a challenge with %s but no such challenge exists.", challenged.getName(), challenger.getName()));
+			logger.debug(String.format("%s 试着接受一场与 %s 的决斗，但这场比赛不存在.", challenged.getName(), challenger.getName()));
 		}
 	}
 
@@ -117,7 +117,7 @@ public class PlayerVsPlayerChallengeManager  implements TurnListener, LogoutList
 		});
 		logger.debug(String.format("Challenges ran into time out: %s", timeouts.toString()));
 		for (PlayerVsPlayerChallenge timeout : timeouts) {
-			raiseGameEvent(timeout, "challenge-timeout");
+			raiseGameEvent(timeout, "比赛-计时");
 		}
 		this.currentChallenges.removeAll(timeouts);
 	}
@@ -135,7 +135,7 @@ public class PlayerVsPlayerChallengeManager  implements TurnListener, LogoutList
 			}
 		}
 		for (PlayerVsPlayerChallenge removal : removals) {
-			raiseGameEvent(removal, "challenge-removal-logout");
+			raiseGameEvent(removal, "决斗-取消-注销");
 		}
 		this.currentChallenges.removeAll(removals);
 	}

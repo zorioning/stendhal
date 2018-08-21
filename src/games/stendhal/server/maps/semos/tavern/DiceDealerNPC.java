@@ -46,12 +46,12 @@ public class DiceDealerNPC implements ZoneConfigurator {
 
 		@Override
 		protected void createDialog() {
-			addGreeting("Welcome to the #gambling table, where dreams can come true.");
-			addJob("I'm the only person in Semos who is licensed to offer gambling activities.");
+			addGreeting("欢迎来到牌桌 #gambling ,这里是梦想成真的地方.");
+			addJob("本店是 Semos 镇唯一官方授权的赌场.");
 			addReply(
 			        "gambling",
-			        "The rules are simple: just tell me if you want to #play, pay the stake, and throw the dice on the table. The higher the sum of the upper faces is, the nicer will be your prize. Take a look at the blackboards on the wall!");
-			addHelp("If you are looking for Ouchit: he's upstairs.");
+			        "规则很简单：如果你要加入只要对我说 #play, 然后下注，把骰子扔到桌上，正面数值总值越大，你的赢得的奖金越多。奖金计算请看后面的黑板!");
+			addHelp("如果你在找 Ouchit: 他在楼上.");
 			addGoodbye();
 		}
 

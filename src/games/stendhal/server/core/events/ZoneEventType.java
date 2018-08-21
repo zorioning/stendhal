@@ -20,23 +20,23 @@ package games.stendhal.server.core.events;
 public enum ZoneEventType {
 
 	VISIT_SUB1_SEMOS_CATACOMBS(
-			"Screams and wails fill the air of these ghastly catacombs ..."),
+			"尖叫和哀号声充斥在这些恐怖的墓室之中..."),
 	VISIT_SUB2_SEMOS_CATACOMBS(
-			"Your sense of foreboding grows as you enter deeper to the catacombs. You spy some lethal looking spikes and vow to be careful of them."),
+			"随着深入这个地下古墓，你的神经越发紧崩，你侦测到一些致命的长钉，决心不能触动这些陷阱!"),
 	VISIT_KIKAREUKIN_CAVE(
-			"Your head spins as the portal lifts you high into the air, past clouds and birds. You're sucked towards a floating group of islands. You're pulled through layers of rock and finally you land in a vast network of caves."),
+			"随着传门把你抛向高空，穿过小鸟和白云，你晕头转向，然后被吸进一座空中群岛，你被拉进层层的山石之中，最终到达了网状的巨大石洞中。"),
 	VISIT_KANMARARN_PRISON(
-			"PRISON BREAKOUT! You've stumbled into a heist. It looks like the duergars have come to break their leaders and heroes free from their imprisonment by the dwarves."),
+			"脱狱！你被暗算并遭到抢劫，而这些 duergars 却从矮人看管的监狱中救出了他们的领袖和英雄。"),
 	VISIT_IMPERIAL_CAVES(
-			"Commands and orders are heard from afar. You can only imagine you must be approaching an army of some sort. Worryingly, you can also hear some very very heavy footsteps."),
+			"远处传来了号令声和列队的声音。你知道这肯定是很接近某一支部队，你还听到一些重重的脚步声，这真让人头疼."),
 	VISIT_MAGIC_CITY_N(
-			"Your skin prickles as you explore further. There is definitely magic here."),
+			"随着冒险更进一步，你的肌肤刺痛感硬强，一定是魔法结界的作用。"),
 	VISIT_MAGIC_CITY(
-			"You now sense a strong magical presence. Perhaps sorcerers are nearby, or some strong enchantments?"),
+			"你现在感到强烈的魔力波动，可能有魔法师或一些强力的魔法装置在附近。"),
 	VISIT_SEMOS_CAVES(
-			"The ground in this cave trembles from the footfalls of GIANTS! The weak should explore no further here. Turn around and run away!"),
+			"巨兽的脚步造成了山洞地面的强列摇动！洞穴可能要塌，不能再深入下去了，撤退！快跑！"),
 	VISIT_ADOS_CASTLE(
-			  "You sense that great atrocities have happened here. The castle must be overrun with evil creatures, as the sounds of their last victims ring in your ears. It may be wise to stay away.");
+			  "你感觉这里发生过暴行，这个城堡一定遭到了邪物的洗劫。你耳中好像听到了他们临终前的哀号。也许远离是非才是上策.");
 
 	private String message;
 

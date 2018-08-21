@@ -61,8 +61,8 @@ public class BowAndArrowSellerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addJob("I sell bows and arrows.");
-				addHelp("I sell several items, ask me for my #offer.");
+				addJob("我有一些弓和箭要卖");
+				addHelp("本人只销售几种物品，要问详细请讲 #offer.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellrangedstuff")));
 				addGoodbye();
 			}
@@ -71,7 +71,7 @@ public class BowAndArrowSellerNPC implements ZoneConfigurator {
 		ouchit.setEntityClass("weaponsellernpc");
 		ouchit.setPosition(21, 3);
 		ouchit.initHP(100);
-		ouchit.setDescription("You see Ouchit. He loves wooden weapons...");
+		ouchit.setDescription("你遇见了 Ouchit. 他喜欢木制武器...");
 		zone.add(ouchit);
 	}
 }

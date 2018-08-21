@@ -99,7 +99,7 @@ public class StendhalRPAction {
 		// Disable attacking NPCS that are created as not attackable.
 		if (!victim.isAttackable()) {
 			if ((victim instanceof SpeakerNPC)) {
-				((SpeakerNPC) victim).say(player.getName() + ", 如果想让我注意你，请对我说 #hi 或 #你好.");
+				((SpeakerNPC) victim).say(player.getName() + ", 想让我注意到你，请对我说 #hi 或 #你好.");
 			}
 			logger.info("REJECTED. " + player.getName() + " is attacking " + victim.getName());
 			return;
@@ -147,8 +147,7 @@ public class StendhalRPAction {
 				// Only allow owners, if there is one, to attack the pet
 				final Player owner = ((DomesticAnimal) victim).getOwner();
 				if ((owner != null) && (owner != player)) {
-				//	player.sendPrivateText("You pity " + getNiceVictimName(victim) + " too much to kill it.");
-					player.sendPrivateText("你太同情 " + getNiceVictimName(victim) + " 而杀了它.");
+					player.sendPrivateText("你可怜的 " + getNiceVictimName(victim) + " 被杀了.");
 
 					return;
 				}

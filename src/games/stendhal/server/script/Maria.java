@@ -98,15 +98,15 @@ public class Maria extends ScriptImpl {
 		sandbox.add(npc);
 
 		// Create Dialog
-		npc.behave("greet", "Hi, how can I help you?");
+		npc.behave("greet", "Hi, 我能帮你做些什么?");
 		npc.behave(
 				"job",
-				"I am one of the bar maids at Semos' #tavern and doing outside services. We sell fine beers and food.");
-		npc.behave("tavern",
+				"我 Semos #酒吧 的酒娘，现任大厅经理. 本店销售 #sell 上等啤酒和食品.");
+		npc.behave("酒吧",
 //			"I have a #coupon for a free beer in Semos' tavern. "+
-			"It is on the left side of the temple.");
+			"酒吧就在神庙隔壁的左边.");
 		npc.behave("help",
-				"You can see what I #offer and take a break to meet new people!");
+				"你可以看看本店的服务 #offer ,或者住宿，或者交结新朋友!");
 		npc.behave("bye", "Bye bye!");
 		try {
 			npc.behave("sell", SingletonRepository.getShopList().get(shop));
@@ -145,7 +145,7 @@ public class Maria extends ScriptImpl {
 							new NakedCondition(),
 							new QuestNotInStateCondition(QUEST_SLOT, 0,"seen_naked")),
 					ConversationStates.ATTENDING,
-					"Who are you? Aiiieeeee!!! You're naked! Quickly, right-click on yourself and choose SET OUTFIT! If you don't I'll call the guards!",
+					"你是? 啊啊iiieeeee!!! 你怎么在祼奔! 快点, 鼠标右键自已选件衣服穿上！ 如果你再这样，我叫警察了！",
 					new MultipleActions(
 							new SetQuestAction(QUEST_SLOT,0, "seen_naked"),
 							new SetQuestToTimeStampAction(QUEST_SLOT,1)));
@@ -159,12 +159,12 @@ public class Maria extends ScriptImpl {
 							new QuestInStateCondition(QUEST_SLOT, 0, "seen_naked")),
 					ConversationStates.ATTENDING,
 					// this message doesn't get seen by the player himself as he gets sent to jail, but it would explain to bystanders why he is gone
-					"Ugh, you STILL haven't put any clothes on. To jail for you!",
+					"呸！你还是光着，等着警察吧!",
 					// Jail the player
 					new MultipleActions(
 							new SetQuestAction(QUEST_SLOT,0, "seen_naked"),
 							new SetQuestToTimeStampAction(QUEST_SLOT,1),
-							new JailAction(JAIL_TIME, "Maria jailed you for being naked in public!")));
+							new JailAction(JAIL_TIME, "Maria 举报了你，因为你是暴露狂!")));
 	}
 
 }
