@@ -13,7 +13,14 @@ Stendhal是一款开发多年的RPG网游。这款游戏完全开源，客户端
 
 赶紧...来啊，快活啊~
 
+## 如何参与汉化
 
+1、直接Pull request
+2、加入到qq群603830308或tg群linuxgamedotcn，参与汉化
+汉化内容：
+1、data/languages/zh_Cn.txt
+2、src/games/stendhal/server/maps/ 文件夹下，里面文件夹是每个城镇名字，再里面是每个npc的对话
+查看汉化进度：https://github.com/Gamuxorg/stendhal-cn/projects/1
 ## How to play
 
 [![Play now](https://arianne-project.org/images/playbutton.png)](https://stendhalgame.org/account/mycharacters.html) &nbsp; &nbsp; &nbsp; &nbsp;
