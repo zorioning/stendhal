@@ -20,47 +20,47 @@ package games.stendhal.server.core.events;
 public enum TutorialEventType {
 
 	FIRST_LOGIN(
-			"Hi, welcome to Stendhal. You can move around using the arrow keys or by clicking the mouse."),
+			"嗨，欢迎来到 Stendhal 游戏世界。您可以使用键盘方向键或点击鼠标移动角色."),
 	FIRST_MOVE(
-			"You can talk to Hayunn Naratha by saying \"hi\"."),
+			"想和 Hayunn Naratha 说话，请输入 \"hi\" 或者 \"嗨\" , \"你好\" , \"喂\" ."),
 	RETURN_GUARDHOUSE(
-			"Talk to Hayunn Naratha again by saying \"hi\"."),
+			"再次与 Hayunn Naratha 再次对话，请接着说 \"hi\" 或者 \"嗨\" , \"你好\" , \"喂\" ."),
 	VISIT_SEMOS_CITY(
-			"You can get a map of Semos from Monogenes. Start by saying \"hi\". Or you can go down the steps to the dungeons and fight some creatures."),
+			"你可以去 Semos 镇的 Monogenes 要一份地图. 同样也是对着他说 \"hi\" 或者 \"嗨\" , \"你好\" , \"喂\" 。或者你也可以下到地牢中消灭怪兽."),
 	VISIT_SEMOS_DUNGEON(
-			"Remember to eat regularly while you fight creatures. Double click on any cheese, meat or other food you have."),
+			"记得在你消灭怪兽时要吃正餐，双点干酪、肉或者你背包中的其它的食物。"),
 	VISIT_SEMOS_DUNGEON_2(
-			"Be careful. If you walk deeper and deeper, the creatures will get more powerful. You can run back to Semos to get healed by Carmen."),
+			"要小心。如果你去地下的层次越深，怪物就越强。你还可以回到 Semos 镇上找 Carmen 为你治疗."),
 	VISIT_SEMOS_TAVERN(
-			"You can trade with an NPC by saying \"hi\" then asking for their \"offer\". If you want to buy a flask, say \"buy flask\"."),
+			"你可以对着 NPC 说 \"hi\" ，然后问他们能提供什么 \"offer\" 。如果你想买一个生命药水，就对他说 \"buy flask\"."),
 	VISIT_SEMOS_PLAINS(
-			"Eating regularly is essential to restore your health. If you are short of food, visit the farm east and then north of here."),
+			"吃正餐是回复生命的基本方式，如果你的食物不够，可以去东北方向的农场找些吃的。"),
 	FIRST_ATTACKED(
-			"That creature with the yellow circle is attacking you! Click on it to fight back."),
+			"那个带着黄色光环的怪兽向你发起进攻！鼠标点击即可攻击它."),
 	FIRST_KILL(
-			"Click on items in corpses to transfer them to your bag."),
+			"点击尸体中的物品，把它们放进你的背包."),
     FIRST_PLAYER_KILL(
-			"You have been marked with the red skull of a player killer. You may find that people are wary of you now. To get it removed, you may speak to Io Flotto in Semos temple."),
+			"你已被某个玩家打上红色骷髅的标记，意思是玩家杀手。然后你会发现其他玩家开始警惕你。要去除这个标记，你可以找 Semos 神庙的 Io Flotto 谈谈"),
 	FIRST_POISONED(
-			"You've just been poisoned. If you didn't drink poison, it was probably a poisonous creature attacking you. Kill poisonous creatures quickly, as you lose more HP each time you are poisoned."),
+			"你已中毒。或许你没有喝毒药，也可能是野外的带毒生物攻击你造成的。快杀了这个毒物。在中毒期间，你会慢慢失去生命值。"),
 	FIRST_PLAYER(
-			"Have you noticed that this name is printed in white? It is another real human player."),
+			"你注意到那个带白色名字的人吗? 这是其他真实玩家."),
 	FIRST_DEATH(
-			"Oh, you have just died. But fortunately death is not permanent in this world."),
+			"Oh, 你死了。但很幸运，在这个世界上死亡只是暂时的。"),
 	FIRST_PRIVATE_MESSAGE(
-			"You received a private message. To reply, Use #/msg #name #message."),
+			"你收到一条私信。回复请打 #/msg #name #message."),
 	FIRST_EQUIPPED(
-			"You just got given something! Check your bag and hands."),
+			"你得到某些物品！请检查你的背包和装备。"),
 	TIMED_HELP(
-			"Press F1 to read the manual with many pictures."),
+			"按 F1 查看图文手册。"),
 	TIMED_NAKED(
-			"Oh, aren't you feeling cold? Right click on yourself and choose \"Set Outfit\" to get dressed."),
+			"Oh, 你不冷吗？对自已按鼠标右键，然后选择 \"打扮\" 可以换装."),
 	TIMED_PASSWORD(
-			"Remember to keep your password completely secret, never tell it to another friend, player, or even admin."),
+			"记得可保证你的密码安全。不要把密码告诉其他的朋友、玩家甚至管理员。"),
 	TIMED_OUTFIT(
-			"Do you like your outfit? If not, you can change it. Right click on yourself and choose \"Set Outfit\" to experiment with new hair, face, clothes and body."),
+			"不喜欢你的外形？想改变一下，对自已按鼠标右键，然后选择 \"打扮\" 可以换装，还可以换脸，头发等等。"),
 	TIMED_RULES(
-			"Thank you for continuing to play Stendhal. Now that you have played for some time, it's important that you read the rules, please type #/rules and they will open in a browser.");
+			"感谢你继续支持本游戏。现在你已玩有些时间，了解玩法很重要，请输入 #/rules 在浏览器中查看详细规则！.");
 	private String message;
 
 	/**

@@ -109,7 +109,7 @@ public class MeetHayunn extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 				ConversationStates.ATTENDING,
-				"Well, back when I was a young adventurer, I clicked on my enemies to attack them. I'm sure that will work for you, too. Good luck, and come back once you are done.",
+				"好吧，当我还是年轻的冒险家的时候，我轻点敌人打败他们，我相信这也是人要做的，祝好运，完成后回来见我",
 				null);
 
 		//player doesn't want to learn how to attack
@@ -118,7 +118,7 @@ public class MeetHayunn extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 				ConversationStates.ATTENDING,
-				"Fine, you seem like an intelligent type. I'm sure you'll work it out!",
+				"好的, 你挺聪明，我相信你一定能完成!",
 				null);
 
 		//player returns to Hayunn not having killed a rat
@@ -128,7 +128,7 @@ public class MeetHayunn extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new NotCondition(new KilledForQuestCondition(QUEST_SLOT,1))),
 				ConversationStates.ATTENDING,
-				"I see you haven't managed to kill a rat yet. Do you need me to tell you how to fight them?",
+				"我看你还没有完成杀老鼠的任务，还需要我告诉你怎么杀死它吗？",
 				null);
 
 		//player returns to Hayunn having killed a rat
@@ -143,7 +143,7 @@ public class MeetHayunn extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new KilledForQuestCondition(QUEST_SLOT, 1)),
 				ConversationStates.INFORMATION_1,
-				"You killed the rat! Now, I guess you want to explore. Do you want to know the way to Semos?",
+				"你杀死了老鼠！现在，我猜你想去游历一翻，那你知道去 Semos 的路吗？",
 				new MultipleActions(actions));
 
 
@@ -160,7 +160,7 @@ public class MeetHayunn extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"Follow the path through this village to the east, and you can't miss Semos. If you go and speak to Monogenes, the old man in this picture, he will give you a map. Here's 5 money to get you started. Bye bye!",
+			"出门顺着路向东走，你不会错过 Semos 镇，如果你和 Monogenes 说话, 就是图片上的这个老人，他会给你一张地图，另外再给你5元钱做路费，拜拜！",
 			new MultipleActions(reward));
 
 	   	// incase player didn't finish learning everything when he came after killing the rat, he must have another chance. Here it is.
@@ -179,7 +179,7 @@ public class MeetHayunn extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "taught")),
 				ConversationStates.INFORMATION_2,
-		        "Hello again. Have you come to learn more from me?",
+		        "又见面了，你有向我学过东西吗？",
 				null);
 
 		npc.add(
@@ -187,7 +187,7 @@ public class MeetHayunn extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_3,
-			"Perhaps you have found Semos dungeons by now. The corridors are pretty narrow down there, so there's a trick to moving quickly and accurately, if you'd like to hear it. #Yes?",
+			"也许现在你已经发现了 Semos 的地牢. 那里的地下走廊很狭窄，因此快速准确的移动会很有效, 你想详细了解,对吧? #Yes?",
 			null);
 
 		npc.add(
@@ -195,16 +195,16 @@ public class MeetHayunn extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_4,
-			"Simple, really; just click the place you want to move to. There's a lot more information than I can relate just off the top of my head... do you want to know where to read more?",
+			"很简单，真的，只用点击你想移动的地方。另外还有比我讲给你的信息多得多的地方，你想知道去哪里找吗？",
 			null);
 
-		final String epilog = "You can find answers to frequently asked questions by typing #/faq \nYou can read about some of the currently most powerful and successful warriors at #https://stendhalgame.org\n ";
+		final String epilog = "经常打 #/faq 问一些问题，你就能找到答案.  \n还可以读到一些当前最勇猛、最成功的勇士排行在 #https://stendhalgame.org\n ";
 
 			//This is used if the player returns, asks for #help and then say #yes
 			npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.YES_MESSAGES, new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			epilog + "You know, you remind me of my younger self...",
+			epilog + "你可知道，你让我想起了年轻时的自己...",
 			null);
 
 		final List<ChatAction> reward2 = new LinkedList<ChatAction>();
@@ -215,7 +215,7 @@ public class MeetHayunn extends AbstractQuest {
 		npc.add(ConversationStates.INFORMATION_4,
 				ConversationPhrases.YES_MESSAGES, new QuestNotCompletedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
-				epilog + "Well, good luck in the dungeons! This shield should help you. Here's hoping you find fame and glory, and keep watch for monsters!",
+				epilog + "好的，祝你在地牢中好运！这个盾可以帮助你。希望你能得到名望与荣耀。保持警惕！",
 				new MultipleActions(reward2));
 
 		npc.add(new ConversationStates[] { ConversationStates.ATTENDING,
@@ -224,7 +224,7 @@ public class MeetHayunn extends AbstractQuest {
 					ConversationStates.INFORMATION_3,
 					ConversationStates.INFORMATION_4},
 				ConversationPhrases.NO_MESSAGES, new NotCondition(new QuestInStateCondition(QUEST_SLOT, "start")), ConversationStates.IDLE,
-				"Oh well, I'm sure someone else will stop by for a chat soon. Bye...",
+				"Oh , 我觉得其他人在等着我们结束谈话，再见...",
 				null);
 
 		npc.setPlayerChatTimeout(TIME_OUT);

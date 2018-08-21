@@ -44,7 +44,7 @@ public class NameChange extends ScriptImpl {
 			return;
 		}
 		if (args.size() < 1) {
-			admin.sendPrivateText("Usage: /script NameChange.class {newname|remove}\nSets your display name to newname, or removes the name change effect.\nWarning: Not supported for normal characters. Bound items and spouses will be broken and there may be other unexpected effects.");
+			admin.sendPrivateText("Usage: /script NameChange.class {newname|remove}\n设置你的名字显示为新名字，或者删除改名效果.\nWarning: Not supported for normal characters. Bound items and spouses will be broken and there may be other unexpected effects.");
 		} else {
 			// do title change
 			if (args.get(0).equals("remove")) {

@@ -1868,9 +1868,9 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 
 		// Stats about dead
 		if (has("name")) {
-			stats.add("杀了 " + get("name"), 1);
+			stats.add("杀死了 " + get("name"), 1);
 		} else {
-			stats.add("杀了 " + get("type"), 1);
+			stats.add("杀死了 " + get("type"), 1);
 		}
 
 		// Add some reward inside the corpse
@@ -1885,12 +1885,11 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 		}
 
 		StringBuilder deathMessage = new StringBuilder(getName());
-		deathMessage.append(" 被杀死");
 		if (!killers.isEmpty()) {
 			deathMessage.append(" 被 ");
-//			deathMessage.append(Grammar.enumerateCollection(killers));
 			deathMessage.append(killers);
 		}
+		deathMessage.append(" 杀死了");
 		corpse.addEvent(new TextEvent(deathMessage.toString()));
 
 		// Corpse may want to know who this entity was attacking (RaidCreatureCorpse does),

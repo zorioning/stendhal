@@ -166,7 +166,7 @@ public class textClient extends Thread {
 
 			@Override
 			protected void onTransfer(final List<TransferContent> items) {
-				System.out.println("Transfering ----");
+				System.out.println("数据传输中----");
 				for (final TransferContent item : items) {
 					System.out.println(item);
 				}
@@ -174,7 +174,7 @@ public class textClient extends Thread {
 
 			@Override
 			protected void onAvailableCharacters(final String[] characters) {
-				System.out.println("Characters available");
+				System.out.println("可用角色");
 				for (final String characterAvail : characters) {
 					System.out.println(characterAvail);
 				}
@@ -188,7 +188,7 @@ public class textClient extends Thread {
 
 			@Override
 			protected void onServerInfo(final String[] info) {
-				System.out.println("Server info");
+				System.out.println("服务器信息：");
 				for (final String info_string : info) {
 					System.out.println(info_string);
 				}
@@ -196,7 +196,7 @@ public class textClient extends Thread {
 
 			@Override
 			protected void onPreviousLogins(final List<String> previousLogins) {
-				System.out.println("Previous logins");
+				System.out.println("上次登陆:");
 				for (final String info_string : previousLogins) {
 					System.out.println(info_string);
 				}
@@ -268,7 +268,7 @@ public class textClient extends Thread {
 				}
 			}
 
-			System.out.println("Stendhal textClient");
+			System.out.println("Stendhal 游戏客户端");
 			System.out.println();
 			System.out.println("  games.stendhal.textClient -u username -p pass -h host -P port -c character");
 			System.out.println();

@@ -67,10 +67,10 @@ public class BarMaidNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addReply("flask", "If you wish to buy a flask please just tell me: #buy #flask. Or, you can ask what else I #offer.");
-				addQuest("Oh nice that you ask me. Unfortunately I have nothing to do for you.");
-				addJob("I am the bar maid for this fair tavern. You can #buy both imported and local beers, and fine food.");
-				addHelp("This tavern is a great place to take a break and meet new people! Just ask if you want me to #offer you a drink.");
+				addReply("flask", "如果你想买一个烧瓶，请对我说: #buy #flask. 或者你还可以问我买其它的东西 #offer.");
+				addQuest("Oh 很高兴为你服务，但很不幸，我帮不了你.");
+				addJob("这是这个正规洒吧的坐台小姐姐，你想要一些 #buy 国产或进口的啤酒, 还有好吃的小吃.");
+				addHelp("本酒吧为客人提供住宿和餐饮服务！需要点什么酒水饮料请对我说 #offer .");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("food&drinks")));
 
 				addGoodbye();
@@ -83,7 +83,7 @@ public class BarMaidNPC implements ZoneConfigurator {
                 (Arrays.asList("coupon", "coupons", "beer coupon", "free beer")),
                 new PlayerHasItemWithHimCondition("coupon"),
                 ConversationStates.ATTENDING,
-                "Oh you found one of the coupons which I spread around some time ago. Enjoy the beer!",
+                "Oh 你发现一个赠券，这是我以前发放的，喝得开心!",
                 new MultipleActions(new DropItemAction("coupon"),
                 					new EquipItemAction("beer"))
                 );
@@ -92,12 +92,12 @@ public class BarMaidNPC implements ZoneConfigurator {
         		(Arrays.asList("coupon", "coupons", "beer coupon", "free beer")),
                 new NotCondition(new PlayerHasItemWithHimCondition("coupon")),
                 ConversationStates.ATTENDING,
-                "Don't lie, you don't own one of the rare coupons. It's hard to run a tavern nowadays, don't lie to me!",
+                "别撒谎！你并没有任何赠券。时下酒吧生意不好，请别骗我！!",
                 null
                 );
 
 		margaret.setEntityClass("tavernbarmaidnpc");
-		margaret.setDescription("Margaret looks so warm and welcoming that you can't help but want to buy something from her.");
+		margaret.setDescription("Margaret 看着很火辣，你虽不能帮她，但总可以在那买点东西.");
 		margaret.setPosition(11, 4);
 		margaret.initHP(100);
 		margaret.setSounds(Arrays.asList("hiccup-1", "hiccup-2", "hiccup-3"));

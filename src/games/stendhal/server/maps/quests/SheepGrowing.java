@@ -162,10 +162,10 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestNotInStateCondition(QUEST_SLOT, "handed_over"),
                         new QuestNotInStateCondition(QUEST_SLOT, "done")),
                 ConversationStates.QUEST_OFFERED,
-                "Lately I am very busy with all my sheep. " +
-                "Would you be willing to take care of one of my sheep and hand it over to #Sato? " +
-                "You only have to let it eat some red berries until it reaches a weight of " + Sheep.MAX_WEIGHT + ". " +
-                "Would you do that?",
+                "最近因为我的羊的事情一直非常忙. " +
+                "你想带走一只羊并照料它，然后再转手给 #Sato 吗? " +
+                "你只需带着羊走到红色树莓附近，直到羊的体重达到 " + Sheep.MAX_WEIGHT + " . " +
+                "你做的到吗?",
                 new SetQuestAction(QUEST_SLOT, "asked"));
 
         // If quest is offered and player says no reject the quest
@@ -175,7 +175,7 @@ public class SheepGrowing extends AbstractQuest {
                 new AndCondition(playerHasNoSheep,
                         new QuestInStateCondition(QUEST_SLOT, "asked")),
                 ConversationStates.IDLE,
-                "Ok... then I have to work twice as hard these days...",
+                "好吧... 这些天我不得不加倍努力...",
                 new SetQuestAction(QUEST_SLOT, "rejected"));
 
         // If quest is still active but not handed over do not give an other sheep to the player
@@ -187,8 +187,8 @@ public class SheepGrowing extends AbstractQuest {
                     new NotCondition(new QuestInStateCondition(QUEST_SLOT, "asked")),
                     new NotCondition(new QuestInStateCondition(QUEST_SLOT, "handed_over"))),
                 ConversationStates.ATTENDING,
-                "I already gave you one of my sheep. " +
-                "If you left it on its own I can sell you a new one. Just say #buy #sheep.",
+                "我已经给了你一只羊. " +
+                "如果你把它丢弃了，我可以卖你一只新的. 只用对我说 #buy #sheep.",
                 null);
 
         // If quest is offered and player says yes, give a sheep to him.
@@ -207,9 +207,9 @@ public class SheepGrowing extends AbstractQuest {
                 new AndCondition(playerHasNoSheep,
                         new QuestInStateCondition(QUEST_SLOT, "asked")),
                 ConversationStates.IDLE,
-                "Thanks! *smiles* Here is your fluffy fosterling. Be careful with her. " +
-                "If she dies or if you leave her behind you have to buy the next sheep on your own. " +
-                "Oh... and don't accidentally sell the sheep to Sato. Just talk to him when the sheep has grown up.",
+                "谢谢! *smiles* 这是你的毛绒绒的养女，要好好待她. " +
+                "如果她死了，或者你丢弃了她，还想再弄一只的话，只能向我重新购买. " +
+                "Oh... 不出意外的话，羊长大后可以卖给 Sato. 只要向他说话就行了.",
                 new MultipleActions(sheepActions));
     }
     /**
@@ -234,7 +234,7 @@ public class SheepGrowing extends AbstractQuest {
                     }
                 } else {
                     // should not happen
-                    npc.say("What? What sheep? Did I miss something?");
+                    npc.say("什么? 什么羊? 你丢了什么东西吗?");
                     npc.setCurrentState(ConversationStates.IDLE);
                     return;
                 }
@@ -260,7 +260,7 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestInStateCondition(QUEST_SLOT,"start"),
                         playerHasFullWeightSheep),
                 ConversationStates.QUEST_ITEM_BROUGHT,
-                "Hello. What a nice and healthy sheep is following you there! Is that one for me?",
+                "Hello. 你后面的羊很好很健康的样子! 这是给我的吗?",
                 null);
 
         npc.add(
@@ -270,7 +270,7 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestInStateCondition(QUEST_SLOT,"start"),
                         new NotCondition(playerHasFullWeightSheep)),
                 ConversationStates.IDLE,
-                "Hello. You should have a sheep from Nishiya for me, he owes me one! But I want a full weight one, so come back when you have one. Bye!",
+                "Hello. 你应该从 Nishiya 处弄一只羊给我, 他欠我一个！但我想要一只足量的。你弄到一只时再回来。再见!",
                 null);
 
         // Player answers yes - Sheep is given to Sato
@@ -281,9 +281,9 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestInStateCondition(QUEST_SLOT,"start"),
                         playerHasFullWeightSheep),
                 ConversationStates.IDLE,
-                "I knew it! It is Nishiya's, right? I was already waiting for it. " +
-                "It is a gift for a friend of mine and it would be a shame if I had no birthday present. " +
-                "Give thanks to Nishiya.",
+                "我知道它是 Nishiya 的，对吧? 我就等它了. " +
+                "这是给朋友的朋友的礼物，如果我没有送生日礼物，我会不好意思. " +
+                "向 Nishiya 说声谢谢.",
                 new MultipleActions(removeSheepAction));
 
         // Player answers no - Sheep stays at player
@@ -294,7 +294,7 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestInStateCondition(QUEST_SLOT,"start"),
                         playerHasFullWeightSheep),
                 ConversationStates.IDLE,
-                "He wanted to send me one a while ago...",
+                "刚才他想送给我一个...",
                 null);
 
 
@@ -303,7 +303,7 @@ public class SheepGrowing extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 						new QuestInStateCondition(QUEST_SLOT, "handed_over"),
 				ConversationStates.ATTENDING,
-				"Thank you for bringing me Nishiyas sheep! My friend was really happy about it.", null);
+				"谢谢你给我带来了 Nishiyas 的羊! 我的朋友真的很喜欢它.", null);
     }
 
     /**
@@ -334,7 +334,7 @@ public class SheepGrowing extends AbstractQuest {
                 ConversationPhrases.GREETING_MESSAGES,
                 new QuestInStateCondition(QUEST_SLOT, "handed_over"),
                 ConversationStates.QUEST_ITEM_QUESTION,
-                "Did you already give the sheep to Sato?",
+                "你已经把羊给 Sato 了吗?",
                 null);
         // Player answers yes - give reward
         npc.add(
@@ -342,7 +342,7 @@ public class SheepGrowing extends AbstractQuest {
                 ConversationPhrases.YES_MESSAGES,
                 new QuestInStateCondition(QUEST_SLOT, "handed_over"),
                 ConversationStates.IDLE,
-                "Thank you! You don't know how much I have to do these days. " +
+                "谢谢你！你不知道这几天我有多少事要做. " +
                 "You really helped me out.",
                 new MultipleActions(reward));
         // Player answers no -
@@ -351,7 +351,7 @@ public class SheepGrowing extends AbstractQuest {
                 ConversationPhrases.NO_MESSAGES,
                 new QuestInStateCondition(QUEST_SLOT, "handed_over"),
                 ConversationStates.IDLE,
-                "Well... ok. But don't forget it. Sato needs the sheep very soon.",
+                "好吧...ok，但不要忘了。. Sato 需要马上弄到羊.",
                 null);
 
         // Player asks for quest after solving the quest
@@ -359,7 +359,7 @@ public class SheepGrowing extends AbstractQuest {
                 ConversationPhrases.QUEST_MESSAGES,
                 new QuestCompletedCondition(QUEST_SLOT),
                 ConversationStates.ATTENDING,
-                "Sorry. I have nothing to do for you at the moment. But thank you again for your help.",
+                "抱歉，现在我什么都为你做不了，不过还是谢谢你的帮助Sorry.",
                 null);
     }
 

@@ -60,7 +60,7 @@ public class PlayerVsPlayerChallenge {
 
 	public void accept(long acceptanceTurn, Player challenged) {
 		if(this.challenged != challenged) {
-			throw new IllegalStateException("Illegal Challenged Player tries to accept challenge " + this.toString());
+			throw new IllegalStateException("不合法的比赛玩家试图接受挑战 " + this.toString());
 		}
 		this.accepted = acceptanceTurn;
 	}

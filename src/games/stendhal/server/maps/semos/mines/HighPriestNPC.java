@@ -52,19 +52,19 @@ public class HighPriestNPC implements ZoneConfigurator {
 				addGreeting(null, new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						String reply = "I am summoning a barrier to keep the #balrog away.";
+						String reply = "我正架起一排栅栏，不让 #balrog 靠近.";
 
 						if (player.getLevel() < 150) {
-							reply += " The balrog will kill you instantly. Run away!.";
+							reply += " balrog 可能会秒杀你，快跑!";
 						} else {
-							reply += " I will keep the barrier to protect Faiumoni. Kill it.";
+							reply += " 我会尽量维持栅栏的防护力，用以保卫 Faiumoni. 杀了它.";
 						}
 						raiser.say(reply);
 					}
 				});
 
 				addReply("balrog",
-						"The fearest creature that Bolrogh army has.");
+						"Bolrogh 军团是最恐怖的野兽.");
 				addGoodbye();
 			}
 
@@ -100,7 +100,7 @@ public class HighPriestNPC implements ZoneConfigurator {
 			});
 
 		npc.setEntityClass("highpriestnpc");
-		npc.setDescription("You see Aenihata. He is a high priest and tries to protect Faiumoni with his magical skills.");
+		npc.setDescription("你遇见 Aenihata. 他是个高级牧师，他用他的魔法技能尽力保护着。");
 		npc.setPosition(23, 44);
 		npc.setDirection(Direction.LEFT);
 		npc.initHP(85);

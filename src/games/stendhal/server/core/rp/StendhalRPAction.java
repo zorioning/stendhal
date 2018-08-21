@@ -99,7 +99,7 @@ public class StendhalRPAction {
 		// Disable attacking NPCS that are created as not attackable.
 		if (!victim.isAttackable()) {
 			if ((victim instanceof SpeakerNPC)) {
-				((SpeakerNPC) victim).say(player.getName() + ", if you want my attention, just say #hi.");
+				((SpeakerNPC) victim).say(player.getName() + ", 想让我注意到你，请对我说 #hi 或 #你好.");
 			}
 			logger.info("REJECTED. " + player.getName() + " is attacking " + victim.getName());
 			return;
@@ -114,11 +114,11 @@ public class StendhalRPAction {
 			// from such an area, in name of fairness
 			if (zone.isInProtectionArea(victim) || (zone.isInProtectionArea(player))) {
 				logger.info("REJECTED. " + victim.getName()
-						+ " is protected by zone");
+						+ " 被本区域规则保护");
 
 				final String name = getNiceVictimName(victim);
 
-				player.sendPrivateText("The powerful protective aura in this place prevents you from attacking "
+				player.sendPrivateText("这里强大的区域保护法则使你免受攻击 "
 						+ name + ".");
 				return;
 			}
@@ -130,24 +130,24 @@ public class StendhalRPAction {
 					boolean activeChallenge = cm.playersHaveActiveChallenge(player, (Player) victim);
 					if(!activeChallenge) {
 						StringBuilder msgBuilder = new StringBuilder();
-						msgBuilder.append("You cannot attack ");
+						msgBuilder.append("你不能攻击 ");
 						msgBuilder.append("unless ");
 						msgBuilder.append(victim.getName());
-						msgBuilder.append(" has accepted a challenge from you.");
+						msgBuilder.append(" 接受了你的挑战.");
 						player.sendPrivateText(msgBuilder.toString());
 						return;
 					}
 				}
 				// disable attacking much weaker players, except in/ self defense
 				if (!mayAttackPlayer(player, (Player) victim)) {
-					player.sendPrivateText("Your conscience would trouble you if you carried out this attack.");
+					player.sendPrivateText("你想进行攻击，但你的正义感阻止了进攻.");
 					return;
 				}
 			} else {
 				// Only allow owners, if there is one, to attack the pet
 				final Player owner = ((DomesticAnimal) victim).getOwner();
 				if ((owner != null) && (owner != player)) {
-					player.sendPrivateText("You pity " + getNiceVictimName(victim) + " too much to kill it.");
+					player.sendPrivateText("你可怜的 " + getNiceVictimName(victim) + " 被杀了.");
 
 					return;
 				}
@@ -647,7 +647,7 @@ public class StendhalRPAction {
 					sheep.setOwner(player);
 				} else {
 					// Didn't fit?
-					player.sendPrivateText("You seemed to have lost your sheep while trying to squeeze in.");
+					player.sendPrivateText("你拼命挤进来的时候好像把羊弄丢了.");
 				}
 			}
 
@@ -657,7 +657,7 @@ public class StendhalRPAction {
 					pet.setOwner(player);
 				} else {
 					// Didn't fit?
-					player.sendPrivateText("You seemed to have lost your pet while trying to squeeze in.");
+					player.sendPrivateText("你拼命挤进来的时候好像把你的宠物弄丢了.");
 				}
 			}
 

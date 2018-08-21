@@ -53,18 +53,18 @@ public class DwarfGuardianNPC implements ZoneConfigurator {
 				addGreeting(null, new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						String reply = "There is something huge there! Everyone is very nervous. ";
+						String reply = "有个大家伙在那！很个人都害怕。";
 						if (player.getLevel() < 60) {
-							reply += "You are too weak to enter there. Once you feel strong enough, push these #stones beside and enter the dark parts of the mines...";
+							reply += "要进入里面但你还太弱了。当你再强壮一些的时候，把那个石头 #stones 推到边上，就能看到进入矿山的黑暗通道...";
 						} else {
-							reply += "Be careful! For entering the dark parts of the mines, push the #stones away which are laying infront of the entrance...";
+							reply += "小心! 要进入矿山的黑暗通道，需把设置在矿山入口的石头 #stones 推开...";
 						}
 						raiser.say(reply);
 					}
 				});
-				addReply(Arrays.asList("stone", "stones"), "You can find tons of them around Faiumoni. Some aren't that huge so you can take all of your power and push them away...but I guess anyway that a great warrior like you wouldn't have any problems with that.");
-				addJob("I am a dwarf Guardian and try to abandon adventurers to their fate.");
-				addHelp("Take care when you are running through the tunnels of the Semos mines. There are some strong creatures waiting! If you need a better equipment, you can ask Harold in the Semos Tavern for some offers, maybe he can help you out...");
+				addReply(Arrays.asList("stone", "stones"), "在 Faiumoni 周围，你可以找到成吨的石头，一些石头不算大，依你的力量应该能推开它...我觉得像你这样的大英雄，推开它们都不是问题.");
+				addJob("我是一个矮人守卫，尽力让冒险者们放弃他们的使命.");
+				addHelp("当你在 Semos 矿山时要格外小心，那里有凶猛的野兽！如果你需要好一些的装备，可以向 Semos 酒馆的 Harold 买一些，也许他能帮到你...");
 				addGoodbye();
 			}
 
@@ -86,7 +86,7 @@ public class DwarfGuardianNPC implements ZoneConfigurator {
 		});
 
 		npc.setEntityClass("dwarf_guardiannpc");
-		npc.setDescription("You see Phalk. He is a soldier who doesn't want to abandon adventurers to their fate.");
+		npc.setDescription("你遇见了 Phalk. 他不想放任冒险者完成他们的使命.");
 		npc.setPosition(118, 26);
 		npc.setDirection(Direction.LEFT);
 		npc.initHP(25);
