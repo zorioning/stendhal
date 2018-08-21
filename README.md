@@ -1,22 +1,26 @@
 [![Stendhal Tower](https://arianne-project.org/screens/stendhal/THM_MagicTower98small.jpeg)](https://arianne-project.org/screens/stendhal/MagicTower98.jpg)
 [![Achievements](https://arianne-project.org/screens/stendhal/THM_Achievement_Stendhal98.jpg)](https://arianne-project.org/screens/stendhal/Achievement_Stendhal98.jpg)
-[![Party](https://arianne-project.org/screens/stendhal/THM_raid20110105.jpg)](https://arianne-project.org/screens/stendhal/raid20110105.jpg)&nbsp;&nbsp;&nbsp;[More Images >](https://stendhalgame.org/media/screenshots.html)
+[![Party](https://arianne-project.org/screens/stendhal/THM_raid20110105.jpg)](https://arianne-project.org/screens/stendhal/raid20110105.jpg)&nbsp;&nbsp;&nbsp;[更多图片 >](https://stendhalgame.org/media/screenshots.html)
 
-Are you looking for adventure? Want to fight for riches?<br>
-Develop yourself and your social standing? Meet new people?<br>
-Do you want to be part of a brave new world?
+大兄弟，你是在寻求刺激不？ 是想一夜暴富不？<br>
+想不想狂砍十条街，当大哥使唤小弟？<br>
+有没有兴趣来这里一起建设新大陆？
 
-Stendhal is a fully fledged multiplayer online adventures game (MORPG). It is completely open source (client, server, everything).
+Stendhal是一款开发多年的RPG网游。这款游戏完全开源，客户端和服务端都开源。
+这款游戏的世界非常庞大，你可以探索城镇、建筑、平原、洞穴和地牢，并且会遇到NPC并获得任务。
 
-Stendhal features a new, rich and expanding world in which you can explore towns, buildings, plains, caves and dungeons.
-You will meet NPCs and acquire tasks and quests for valuable experience.
+你的角色慢慢成长，游戏也会越来越刺激。用你赚到的钱，去购买物品、改进武器和装备。我知道你的欲望已经饥渴难耐了，赶紧通过周游世界来实现你的血腥杀戮！
 
-Your character will develop and grow and with each new level up become stronger and better. With the money you acquire you can buy new items and improve your armour and weapons. And for the blood thirsty of you; satisfy your killing desires by roaming the world in search of evil monsters!
+赶紧...来啊，快活啊~
 
-Stendhal is platform independent, and completely open source.
+## 如何参与汉化
 
-So what are you waiting for?! A whole new world awaits...
-
+1、直接Pull request<br/>
+2、加入到qq群603830308或tg群linuxgamedotcn，参与汉化<br/>
+汉化内容：<br/>
+1、data/languages/zh_Cn.txt<br/>
+2、src/games/stendhal/server/maps/ 文件夹下，里面文件夹是每个城镇名字，再里面是每个npc的对话<br/>
+查看汉化进度：https://github.com/Gamuxorg/stendhal-cn/projects/1
 
 ## How to play
 
