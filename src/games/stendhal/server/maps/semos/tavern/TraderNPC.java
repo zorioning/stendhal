@@ -63,18 +63,18 @@ public class TraderNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addJob("Shhh! I sell stuff to adventurers.");
-				addHelp("I buy and sell several items, ask me for my #offer.");
+				addJob("Shhh! 我销售一些材料给顾客.");
+				addHelp("我只做几种买卖，具体清单可以问我 #offer.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellstuff")), false);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buystuff")), false);
-				addOffer("Have a look at the blackboards on the wall to see my offers.");
-				addQuest("Talk to Hackim Easso in the smithy, he might want you.");
+				addOffer("那边墙上有块黑板，上面写着价目表.");
+				addQuest("你到铁匠铺找 Hackim Easso 谈谈，他找你有点事.");
 				addGoodbye();
 			}
 		};
 
 		xinBlanca.setEntityClass("weaponsellernpc");
-		xinBlanca.setDescription("You see Xin Blanca. He is popular for equipping young adventurers...");
+		xinBlanca.setDescription("你遇见了 Xin Blanca. 他卖给新手冒险者一些基本装备...");
 		xinBlanca.setPosition(2, 15);
 		xinBlanca.initHP(100);
 		zone.add(xinBlanca);

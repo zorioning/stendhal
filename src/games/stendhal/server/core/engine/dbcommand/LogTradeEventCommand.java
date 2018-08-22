@@ -56,7 +56,7 @@ public class LogTradeEventCommand extends AbstractDBCommand {
 		StendhalWebsiteDAO stendhalWebsiteDao = DAORegister.get().get(StendhalWebsiteDAO.class);
 		String description = item.describe();
 		String stats = "";
-		int start = description.indexOf("Stats are (");
+		int start = description.indexOf("属性 (");
 		if(start > -1) {
 			stats = description.substring(start);
 		}

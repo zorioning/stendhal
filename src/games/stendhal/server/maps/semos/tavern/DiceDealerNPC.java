@@ -65,7 +65,7 @@ public class DiceDealerNPC implements ZoneConfigurator {
 		ricardo.setEntityClass("naughtyteen2npc");
 		ricardo.setPosition(26, 2);
 		ricardo.setDirection(Direction.DOWN);
-		ricardo.setDescription("Ricardo is jingling loose change in his pockets. He looks quite young to have a business in a tavern.");
+		ricardo.setDescription("Ricardo 的口袋总是叮叮铛铛的响，作为酒保来说他有点太年轻。");
 		ricardo.initHP(100);
 		final Rectangle tableArea = new Rectangle(25, 4, 2, 3);
 

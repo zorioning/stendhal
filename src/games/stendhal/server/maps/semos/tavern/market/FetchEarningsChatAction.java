@@ -32,7 +32,7 @@ public class FetchEarningsChatAction implements ChatAction {
 	@Override
 	public void fire(Player player, Sentence sentence, EventRaiser npc) {
 		if (sentence.hasError()) {
-			npc.say("Sorry, I did not understand you. "
+			npc.say("抱歉，我听不懂你说的话. "
 					+ sentence.getErrorString());
 			npc.setCurrentState(ConversationStates.ATTENDING);
 		} else {
@@ -48,11 +48,11 @@ public class FetchEarningsChatAction implements ChatAction {
 			collectedSum += earning.getValue().intValue();
 		}
 		if (collectedSum > 0) {
-			player.sendPrivateText("You collected "+Integer.valueOf(collectedSum).toString()+" money.");
-			npc.say("Welcome to Semos trading center. I gave your pending earnings to you. What else can I do?");
+			player.sendPrivateText("你的销售总额为 "+Integer.valueOf(collectedSum).toString()+" 钱.");
+			npc.say("欢迎来到 Semos 交易中心，我已把你代销的货款给你，还有其它事吗?");
 		} else {
 			//either you have no space in your bag or there isn't anything to collect
-			npc.say("Welcome to Semos trading center. How can I #help you?");
+			npc.say("欢迎来到 Semos 交易中心. 需要什么服务吗 #help ?");
 		}
 		npc.setCurrentState(ConversationStates.ATTENDING);
 	}

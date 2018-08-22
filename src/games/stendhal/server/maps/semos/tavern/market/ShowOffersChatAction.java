@@ -43,7 +43,7 @@ public class ShowOffersChatAction implements ChatAction {
 	@Override
 	public void fire(Player player, Sentence sentence, EventRaiser npc) {
 		if (sentence.hasError()) {
-			npc.say("Sorry, I did not understand you. "
+			npc.say("抱歉，我听不懂你说什么. "
 					+ sentence.getErrorString());
 			npc.setCurrentState(ConversationStates.ATTENDING);
 		} else if (sentence.getExpressions().iterator().next().toString().equals("show")){
@@ -99,7 +99,7 @@ public class ShowOffersChatAction implements ChatAction {
 		}
 		if (counter == 0) {
 			String expiredAddition = onlyMyExpiredOffers ? "expired " : "";
-			player.sendPrivateText("There are currently no " + expiredAddition + "offers in the market.");
+			player.sendPrivateText("目前市场没有 " + expiredAddition + " 这种商品.");
 		}
 	}
 
@@ -194,9 +194,9 @@ public class ShowOffersChatAction implements ChatAction {
 		for (Offer offer : offers) {
 			counter++;
 			if (counter > MAX_SHOWN_OFFERS) {
-				message.append("Only " + MAX_SHOWN_OFFERS + " first offers shown.");
+				message.append("一页只显示 " + MAX_SHOWN_OFFERS + " 种代销商品.");
 				if (!usingFilter) {
-					message.append(" You can filter the offer list. For example #show #meat will only show meat related offers.");
+					message.append(" 你可以分类显示代销列表，比如 #show #肉块 就会只显示肉块类商品.");
 				}
 				return counter;
 			}
@@ -210,9 +210,9 @@ public class ShowOffersChatAction implements ChatAction {
 			message.append(counter);
 			message.append(": ");
 			message.append(offer.getItemName());
-			message.append(" for ");
+			message.append(" 售价 ");
 			message.append(offer.getPrice());
-			message.append(" money");
+			message.append(" 钱 ");
 			message.append("\n");
 			map.put(Integer.toString(counter), offer);
 		}

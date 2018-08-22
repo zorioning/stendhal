@@ -34,7 +34,7 @@ import marauroa.server.db.command.DBCommandQueue;
 public class AcceptOfferHandler extends OfferHandler {
 	/** the logger instance. */
 	private static final Logger logger = Logger.getLogger(AcceptOfferChatAction.class);
-	private static final List<String> TRIGGERS = Arrays.asList("buy", "accept");
+	private static final List<String> TRIGGERS = Arrays.asList("buy", "accept", "买" );
 
 	@Override
 	public void add(SpeakerNPC npc) {
@@ -43,14 +43,14 @@ public class AcceptOfferHandler extends OfferHandler {
 		npc.add(ConversationStates.BUY_PRICE_OFFERED, ConversationPhrases.YES_MESSAGES,
 				ConversationStates.ATTENDING, null, new ConfirmAcceptOfferChatAction());
 		npc.add(ConversationStates.BUY_PRICE_OFFERED, ConversationPhrases.NO_MESSAGES, null,
-				ConversationStates.ATTENDING, "Ok, how else may I help you?", null);
+				ConversationStates.ATTENDING, "Ok, 还要点别的吗？", null);
 	}
 
 	class AcceptOfferChatAction extends KnownOffersChatAction {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (sentence.hasError()) {
-				npc.say("Sorry, I did not understand you. "
+				npc.say("抱歉，我没听明白. "
 						+ sentence.getErrorString());
 			} else {
 				handleSentence(sentence, npc);
@@ -63,7 +63,7 @@ public class AcceptOfferHandler extends OfferHandler {
 				String offerNumber = getOfferNumberFromSentence(sentence).toString();
 				Map<String,Offer> offerMap = manager.getOfferMap();
 				if (offerMap == null) {
-					npc.say("Please take a look at the list of offers first.");
+					npc.say("请先查下价目表.");
 					return;
 				}
 				if(offerMap.containsKey(offerNumber)) {
@@ -71,14 +71,14 @@ public class AcceptOfferHandler extends OfferHandler {
 					if (o.hasItem()) {
 						setOffer(o);
 						int quantity = getQuantity(o.getItem());
-						npc.say("Do you want to buy " + o.getItem().getName() + " for " + o.getPrice() + " money?");
+						npc.say("你是想用 " + o.getPrice() + " 钱的价格购买 " + o.getItem().getName() + " 吗？");
 						npc.setCurrentState(ConversationStates.BUY_PRICE_OFFERED);
 						return;
 					}
 				}
-				npc.say("Sorry, please choose a number from those I told you to accept an offer.");
+				npc.say("抱歉，请在我给出的价目表中选择一个序号。");
 			} catch (NumberFormatException e) {
-				npc.say("Sorry, please say #accept #number");
+				npc.say("抱歉，请说 #买 #数量  或者  #accept #number");
 			}
 		}
 	}
@@ -92,26 +92,25 @@ public class AcceptOfferHandler extends OfferHandler {
 			if (m.acceptOffer(offer,player)) {
 				// Successful trade. Tell the offerer
 				StringBuilder earningToFetchMessage = new StringBuilder();
-				earningToFetchMessage.append("Your ");
+				earningToFetchMessage.append("你卖了 ");
 				earningToFetchMessage.append(itemname);
-				earningToFetchMessage.append(" was sold. You can now fetch your earnings from me.");
+				earningToFetchMessage.append(" . 现在我把回款付给你.");
 
 				logger.debug("sending a notice to '" + offer.getOfferer() + "': " + earningToFetchMessage.toString());
 				DBCommandQueue.get().enqueue(new StoreMessageCommand("Harold", offer.getOfferer(), earningToFetchMessage.toString(), "N"));
 
-				npc.say("Thanks.");
+				npc.say("谢谢.");
 				// Obsolete the offers, since the list has changed
 				((MarketManagerNPC) npc.getEntity()).getOfferMap().clear();
 			} else {
 				// Trade failed for some reason. Check why, and inform the player
 				if (!m.contains(offer)) {
 					int quantity = getQuantity(offer.getItem());
-					npc.say("I'm sorry, but " + quantity + " "
+					npc.say("抱歉，但 " + quantity + " 个 "
 							+ offer.getItem().getName()
-							+ " " + quantity
-							+ " no longer for sale.");
+							+ " 已下架.");
 				} else {
-					npc.say("Sorry, you don't have enough money!");
+					npc.say("抱歉，你的钱不够!");
 				}
 			}
 		}

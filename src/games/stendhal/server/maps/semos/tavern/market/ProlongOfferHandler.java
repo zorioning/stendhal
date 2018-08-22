@@ -80,28 +80,28 @@ public class ProlongOfferHandler extends OfferHandler {
 						StringBuilder message = new StringBuilder();
 
 						if (TradeCenterZoneConfigurator.getShopFromZone(player.getZone()).contains(o)) {
-							message.append("你上架的物品 ");
+							message.append("你代销的物品 ");
 							message.append( o.getItemName());
-							message.append(" 你希望在 ");
+							message.append(" 你希望延长 ");
 							message.append(TimeUtil.approxTimeUntil((int) ((o.getTimestamp() - System.currentTimeMillis() + 1000 * OfferExpirer.TIME_TO_EXPIRING) / 1000)));
-							message.append(". 要延长它的上架销售时间 ");
+							message.append(". 的上架销售时间 ");
 							message.append(TimeUtil.timeUntil(OfferExpirer.TIME_TO_EXPIRING));
-							message.append(" 需要 ");
+							message.append(" 需要支付 ");
 							message.append(TradingUtility.calculateFee(player, o.getPrice()).intValue());
 							message.append(" 钱?");
 						} else {
-							message.append("你想延长你的供货 ");
+							message.append("你要延长代销商品 ");
 							message.append(o.getItemName());
-							message.append(" 价格 ");
+							message.append(" 的价格为 ");
 							message.append(o.getPrice());
-							message.append(" 支付小费 ");
+							message.append(" ，要支付手续费 ");
 							message.append(TradingUtility.calculateFee(player, o.getPrice()).intValue());
 							message.append(" 钱?");
 						}
 						npc.say(message.toString());
 						npc.setCurrentState(ConversationStates.SERVICE_OFFERED);
 					} else {
-						npc.say("你只能延长自已的供货，请说 #show #mine 查看你供应的商品.");
+						npc.say("你只能延长自已的代销商品，请说 #show #mine 查看你供应的商品.");
 					}
 				} else {
 					npc.say("抱歉，请选择一个数量给你要延长的商品.");
@@ -122,7 +122,7 @@ public class ProlongOfferHandler extends OfferHandler {
 				if ("all".equals(expr.toString())) {
 					Collection<Offer> offers = manager.getOfferMap().values();
 					if (offers.isEmpty()) {
-						npc.say("Sorry, you have to specify a list of offers to prolong.");
+						npc.say("抱歉，你必须指定需要延长的代销商品的序号.");
 						return true;
 					}
 					int price = 0;
@@ -130,7 +130,7 @@ public class ProlongOfferHandler extends OfferHandler {
 					List<String> offerDesc = new ArrayList<>(numOffers);
 					for (Offer o : offers) {
 						if (!o.getOfferer().equals(player.getName())) {
-							npc.say("你只能延长你自已的供货，请说 #show #mine 或者 #show #expired 查看你供的货.");
+							npc.say("你只能延长你自已的代销商品，请说 #show #mine 或者 #show #expired 查看你的代销商品.");
 							return true;
 						}
 						int quantity = 1;
@@ -139,13 +139,13 @@ public class ProlongOfferHandler extends OfferHandler {
 						}
 						price += TradingUtility.calculateFee(player, o.getPrice()).intValue();
 						offerDesc.add(o.getItemName()
-								+ " at price of " + o.getPrice());
+								+ " 的定价 " + o.getPrice());
 					}
 					String total = numOffers > 1 ? "total" : "";
 					npc.say("你想延长你的 "
-							+ "offer" + " of "
+							+ "代销商品" + " of "
 							+ offerDesc
-							+ " for a " + total + " 支付小费 " + price + " 钱?");
+							+ " for a " + total + " 支付手续费 " + price + " 钱?");
 					npc.setCurrentState(ConversationStates.PRODUCTION_OFFERED);
 					return true;
 				}
@@ -164,14 +164,14 @@ public class ProlongOfferHandler extends OfferHandler {
 				if (player.isEquipped("money", fee)) {
 					if (prolongOffer(player, offer)) {
 						TradingUtility.substractTradingFee(player, offer.getPrice());
-						npc.say("我已延长了你的供货时间，收取了 "+fee.toString()+" 的小费.");
+						npc.say("我已延长了你的上架时间，收取了 "+fee.toString()+" 的手续费.");
 					} else {
 						npc.say("抱歉，你供的货物已从市场下架.");
 					}
 					// Changed the status, or it has been changed by expiration. Obsolete the offers
 					((MarketManagerNPC) npc.getEntity()).getOfferMap().clear();
 				} else {
-					npc.say("你不能负担起这些小费 "+fee.toString());
+					npc.say("你不能负担起这些手续费 "+fee.toString());
 				}
 			} else {
 				npc.say("抱歉，你最多只能同时上架 " + TradingUtility.MAX_NUMBER_OFF_OFFERS
@@ -241,18 +241,18 @@ public class ProlongOfferHandler extends OfferHandler {
 
 						if (prolongOffer(player, offer)) {
 							TradingUtility.substractTradingFee(player, offer.getPrice());
-							npc.say("我延长了你的供货 " + offerDesc
-									+ " ，并收取小费" + fee.toString() + ".");
+							npc.say("我延长了你的代销商品 " + offerDesc
+									+ " ，并收取手续费" + fee.toString() + ".");
 						} else {
 							npc.say("抱歉，商品 " + offerDesc + " 已从市场下架.");
 						}
 						clear = true;
 					} else {
-						npc.say("你不能付起交易费用 " + fee.toString());
+						npc.say("你不能付起手续费 " + fee.toString());
 					}
 				} else {
-					npc.say("Sorry, 你仅能 " + TradingUtility.MAX_NUMBER_OFF_OFFERS
-							+ " 种可同时上架的商品.");
+					npc.say("Sorry, 你最多只能有 " + TradingUtility.MAX_NUMBER_OFF_OFFERS
+							+ " 种可同时代销的商品.");
 					// Avoid complaining about the offer limit multiple times
 					break;
 				}

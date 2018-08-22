@@ -40,7 +40,7 @@ public class ShowOfferItemsChatAction implements ChatAction {
 		RPSlot offersSlot = market.getSlot(Market.OFFERS_SLOT_NAME);
 		List<Offer> offers = getOffers(offersSlot);
 		if (offers.isEmpty()) {
-			npc.say("Sorry, there are currently no offers.");
+			npc.say("抱歉，目前还没有代销商品.");
 		} else {
 			String text = buildItemListText(buildItemList(offers));
 			npc.say(text);
@@ -83,7 +83,7 @@ public class ShowOfferItemsChatAction implements ChatAction {
 	 */
 	private String buildItemListText(Set<String> items) {
 		StringBuilder sb = new StringBuilder();
-		sb.append("I have offers for the following items: ");
+		sb.append("目前我代销的商品有： ");
 		boolean first = true;
 		for (String item : items) {
 			if (first) {
