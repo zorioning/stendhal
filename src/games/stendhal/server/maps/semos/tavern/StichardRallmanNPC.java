@@ -47,13 +47,13 @@ public class StichardRallmanNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Welcome to Stendhal! True #free software!");
-				addJob("I am the #free software evangelizer!");
-				addHelp("Help #Stendhal to be even better. Donate your time, tell your friends to play, create maps.");
-				addReply("free",
-					"''Free software'' is a matter of liberty, not price. To understand the concept, you should think of ''free'' as in ''free speech,'' not as in ''free beer''.");
+				addGreeting("欢迎来到 Stendhal! 真正的 #自由 软件!");
+				addJob("我是 #自由 软件 (free software) 传道者!");
+				addHelp("帮助 #Stendhal 更好玩，花点你的时间，告诉朋友们来玩或是制作地图.");
+				addReply("自由",
+					"''自由软件'' 不是价格问题，而是权责问题，要理解这个概念，你应该想把 ''free'' 当作 ''自由言论,'' 而不是 ''免费啤酒''.");
 				addReply("stendhal",
-					"Stendhal is completely #free software (client, server, graphics, everything) under #GNU #GPL. You can run, copy, distribute, study, change and improve this software.");
+					"Stendhal 是真正的自由 #free 软件 (客户端，服务端，图片，所有的) 版权都是 #GNU #GPL. 你可以运行，复制，发布，学习，修改并升级此软件.");
 				addReply("gnu", "https://www.gnu.org/");
 				addReply("gpl", "https://www.gnu.org/licenses/gpl.html");
 
@@ -62,7 +62,7 @@ public class StichardRallmanNPC implements ZoneConfigurator {
 		};
 
 		stallman.setEntityClass("richardstallmannpc");
-		stallman.setDescription("Stichard Rallman knows everything about free software and licences.");
+		stallman.setDescription("Stichard Rallman 懂得很多有关软件版权的问题.");
 		stallman.setPosition(24, 19);
 		stallman.setDirection(Direction.DOWN);
 		stallman.initHP(100);

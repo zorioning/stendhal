@@ -166,11 +166,11 @@ public class OfferExpirer implements TurnListener{
 			}
 
 			StringBuilder builder = new StringBuilder();
-			builder.append("你供应的 ");
+			builder.append("你代销的 ");
 			builder.append(offer.getItemName());
-			builder.append(" 到期时间在 ");
+			builder.append(" 还有 ");
 			builder.append(TimeUtil.approxTimeUntil((int) ((offer.getTimestamp() - time) / 1000 + TIME_TO_EXPIRING)));
-			builder.append(".");
+			builder.append("时间到期.");
 			sendMessage(offer.getOfferer(), builder);
 		}
 

@@ -33,14 +33,14 @@ public class RemoveOfferHandler extends OfferHandler {
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.YES_MESSAGES,
 				ConversationStates.ATTENDING, null, new ConfirmRemoveOfferChatAction());
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.NO_MESSAGES, null,
-				ConversationStates.ATTENDING, "Ok, how else may I help you?", null);
+				ConversationStates.ATTENDING, "Ok, 还有需要我帮忙的吗?", null);
 	}
 
 	protected class RemoveOfferChatAction extends KnownOffersChatAction {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (sentence.hasError()) {
-				npc.say("Sorry, I did not understand you. "
+				npc.say("抱歉，我不明白你的话. "
 						+ sentence.getErrorString());
 			} else if (sentence.getExpressions().iterator().next().toString().equals("remove")){
 				handleSentence(player, sentence, npc);
@@ -53,7 +53,7 @@ public class RemoveOfferHandler extends OfferHandler {
 				String offerNumber = getOfferNumberFromSentence(sentence).toString();
 				Map<String,Offer> offerMap = manager.getOfferMap();
 				if (offerMap.isEmpty()) {
-					npc.say("Please check your offers first.");
+					npc.say("请先检查你的代销商品.");
 					return;
 				}
 				if(offerMap.containsKey(offerNumber)) {
@@ -66,7 +66,7 @@ public class RemoveOfferHandler extends OfferHandler {
 							if (o.hasItem()) {
 								quantity = getQuantity(o.getItem());
 							}
-							npc.say("Do you want to remove your offer of " + o.getItemName() + "?");
+							npc.say("要删除你的代销货物 " + o.getItemName() + " 吗?");
 							npc.setCurrentState(ConversationStates.QUESTION_1);
 						} else {
 							removeOffer(player, npc);
@@ -75,12 +75,12 @@ public class RemoveOfferHandler extends OfferHandler {
 						}
 						return;
 					}
-					npc.say("You can only remove your own offers. Please say #show #mine to see only your offers.");
+					npc.say("你只能删除自已的商品，请对我说 #show #mine 查看自已的代销货物.");
 					return;
 				}
-				npc.say("Sorry, please choose a number from those I told you to remove your offer.");
+				npc.say("抱歉，请在以上列表中选择要删除商品的序号。.");
 			} catch (NumberFormatException e) {
-				npc.say("Sorry, please say #remove #number");
+				npc.say("抱歉，请对我说 #remove #number");
 			}
 		}
 	}

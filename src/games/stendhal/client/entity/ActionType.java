@@ -49,7 +49,7 @@ public enum ActionType {
 			return fillTargetPath(super.fillTargetInfo(entity), entity);
 		}
 	},
-	OWN("own", "Own"),
+	OWN("own", "支配"),
 	USE("use", "Use") {
 		@Override
 		public RPAction fillTargetInfo(final IEntity entity) {
@@ -61,7 +61,7 @@ public enum ActionType {
 	PROSPECT("use", "勘察"),
 	FISH("use", "钓鱼"),
 	WISH("use", "许愿"),
-	LEAVE_SHEEP("forsake", "Leave sheep") {
+	LEAVE_SHEEP("forsake", "丢弃羊") {
 		@Override
 		public RPAction fillTargetInfo(final IEntity entity) {
 			RPAction rpaction = super.fillTargetInfo(entity);
@@ -170,7 +170,7 @@ public enum ActionType {
 		public RPAction fillTargetInfo(IEntity entity) {
 			RPAction a = super.fillTargetInfo(entity);
 			a.put("type", "challenge");
-			a.put("action", "accept");
+			a.put("action", "同意");
 			a.put("target", entity.getName());
 			return a;
 		}

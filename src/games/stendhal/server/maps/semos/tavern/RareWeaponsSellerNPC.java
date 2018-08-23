@@ -55,19 +55,19 @@ public class RareWeaponsSellerNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Yo matey! You look like you need #help.");
-				addJob("I'm a trader of ... let's say ... #rare things.");
-				addHelp("Not sure if I can trust you .... a #pirate with a bandy #leg has got to keep his #eye on new people.");
-				addQuest("Perhaps if you find some #rare #armor or #weapon ...");
-				addGoodbye("I see you!");
+				addGreeting("哟！朋友! 看起来你需要我的帮忙 #help.");
+				addJob("我是一个商人...过来说...收点稀罕货... #rare.");
+				addHelp("我也不确定你是否值得相信.... 一个瘸腿 #leg 海盗 #pirate ，总是打量着新来的客人.");
+				addQuest("或许你找到一些稀罕的 #rare 盔甲 #armor 或者武器 #weapon ...");
+				addGoodbye("不送!");
 				add(ConversationStates.ATTENDING, Arrays.asList("weapon", "armor", "rare", "rare armor"),
 				        ConversationStates.ATTENDING,
-				        "Ssshh! I'm occasionally buying rare weapons and armor. Got any? Ask for my #offer", null);
-				addOffer("Have a look at the blackboard on the wall to see my offers.");
+				        "Ssshh! 我偶尔买点稀有武器和盔甲，你有吗？看看我的出价 #offer", null);
+				addOffer("看下墙上的黑板，上面有我的出价.");
 				add(ConversationStates.ATTENDING, Arrays.asList("eye", "leg", "wood", "patch"),
-				        ConversationStates.ATTENDING, "Not every day is a lucky day ...", null);
+				        ConversationStates.ATTENDING, "不是每天都这么走运 ...", null);
 				add(ConversationStates.ATTENDING, "pirate", null, ConversationStates.ATTENDING,
-				        "That's none of your business!", null);
+				        "那跟你没关系!", null);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buyrare")), false);
 			}
 
@@ -78,7 +78,7 @@ public class RareWeaponsSellerNPC implements ZoneConfigurator {
 		};
 
 		// Add some atmosphere
-		mcpegleg.setDescription("You see a dubious man with a patched eye and a wooden leg.");
+		mcpegleg.setDescription("你遇见一下可疑的家伙，他有一只假眼和一条假腿.");
 
 		// Add our new NPC to the game world
 		mcpegleg.setEntityClass("pirate_sailornpc");

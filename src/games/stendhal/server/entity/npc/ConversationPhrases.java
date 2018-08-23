@@ -52,7 +52,7 @@ public class ConversationPhrases {
 
 	public static final List<String> OFFER_MESSAGES = Arrays.asList("offer", "deal", "trade","买卖","交易","价格","报价");
 
-	public static final List<String> YES_MESSAGES = Arrays.asList("yes", "ok", "好的", "可以","好","是");
+	public static final List<String> YES_MESSAGES = Arrays.asList("yes", "ok", "好的", "可以","好","是","中","行","要");
 
 	public static final List<String> NO_MESSAGES = Arrays.asList(NO_EXPRESSION, "nope",
 			"nothing", "none","不","不是","没有","不行","不好");
