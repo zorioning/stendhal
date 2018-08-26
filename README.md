@@ -51,7 +51,13 @@ Stendhal是一款开发多年的RPG网游。这款游戏完全开源，客户端
     （二）夹杂在程序中的句子翻译
     因为大量NPC对话和客户端发送的命令都在程序中混着，所以汉化这些需要编程基础。翻译时要注意句子里面的特殊符号，常用的符号如下
     
-     ＃ ，命令前缀。 比如 ＃帮助 ，要注意加＃的词会在客户端加亮显示，客户输入这个词会触发事件，所以 #命令 的前后要有半角空格， 比如 ＃gold 命令本来是英文的，汉化中文时，同时要替换和 ＃gold 同一文件 addReply("gold",...) 中的 “gold” .  一些常用命令我已做好，比如 #help , 我已替换为 #帮助，＃帮忙 ， ＃帮我  这些词都可用, 具体添加方法是修改  src/games/stendhal/server/entity/npc/ConversationPhrases.java  这个文件中的	
+     ＃ ，命令前缀。 比如 ＃帮助 ，要注意加＃的词会在客户端加亮显示，客户输入这个词会触发事件，所以 #命令 的前后要有半角空格， 
+     
+     比如 ＃gold 命令本来是英文的，汉化中文时，同时要替换和 ＃gold 同一文件 addReply("gold",...) 中的 “gold” .  
+     
+     一些常用命令我已做好，比如 #help , 我已替换为 #帮助，＃帮忙 ， ＃帮我  这些词都可用, 具体添加方法是修改  
+     
+     src/games/stendhal/server/entity/npc/ConversationPhrases.java  这个文件中的	
      
           public static final List<String> GREETING_MESSAGES = Arrays.asList("hi","hello", "喂", "嗨", "你好","您好"）
           
