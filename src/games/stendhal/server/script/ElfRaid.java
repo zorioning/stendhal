@@ -25,13 +25,13 @@ public class ElfRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("elf", 7);
-		attackArmy.put("militia elf", 4);
-		attackArmy.put("soldier elf", 3);
-		attackArmy.put("commander elf", 4);
-		attackArmy.put("archmage elf", 3);
-		attackArmy.put("mage elf", 6);
-		attackArmy.put("archer elf", 6);
+		attackArmy.put("精灵", 7);
+		attackArmy.put("民兵精灵", 4);
+		attackArmy.put("士兵精灵", 3);
+		attackArmy.put("精灵指挥官", 4);
+		attackArmy.put("精灵大法师", 3);
+		attackArmy.put("精灵法师", 6);
+		attackArmy.put("精灵弓箭手", 6);
 		attackArmy.put("nymph", 5);
 		attackArmy.put("ent", 3);
 
@@ -39,6 +39,6 @@ public class ElfRaid extends CreateRaid {
 	}
 	@Override
 	protected String getInfo() {
-		return "Less safe for players below level 30.";
+		return "对于30级以下的玩家不安全。";
 	}
 }

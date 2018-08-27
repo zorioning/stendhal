@@ -34,7 +34,7 @@ public class ImperialRaid extends CreateRaid {
 		attackArmy.put("imperial defender", 5);
 		attackArmy.put("imperial experiment", 2);
 		attackArmy.put("imperial mutant", 2);
-		attackArmy.put("imperial general giant", 2);
+		attackArmy.put("帝国巨人将军", 2);
 		return attackArmy;
 	}
 

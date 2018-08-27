@@ -52,7 +52,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li> Maerion asks you fix his dark elf problem
- * <li> You go kill at least a dark elf archer, captain, and thing
+ * <li> You go kill at least a 黑暗精灵弓箭手, captain, and thing
  * <li> The thing drops an amulet
  * <li> Maerion checks your kills, takes the amulet and gives you a ring of life
  * as reward
@@ -65,15 +65,15 @@ import games.stendhal.server.maps.Region;
 public class KillDarkElves extends AbstractQuest {
 	private static final String QUEST_SLOT = "kill_dark_elves";
 	protected final List<String> creatures =
-		Arrays.asList("dark elf captain",
-				      "dark elf general",
-				      "dark elf knight",
-				      "dark elf wizard",
-				      "dark elf sacerdotist",
-				      "dark elf viceroy",
-				      "dark elf matronmother",
-					  "dark elf elite archer",
-				      "dark elf archer");
+		Arrays.asList("黑暗精灵队长",
+				      "黑暗精灵将军",
+				      "黑暗精灵骑士",
+				      "黑暗精灵巫师",
+				      "黑暗精灵僧侣",
+				      "黑暗精灵总督",
+				      "黑暗精灵妈妈",
+					  "黑暗精灵精英弓箭手",
+				      "黑暗精灵弓箭手");
 
 	@Override
 	public String getSlotName() {
@@ -106,7 +106,7 @@ public class KillDarkElves extends AbstractQuest {
 				null);
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
-		//actions.add(new StartRecordingKillsAction("dark elf archer", "dark elf captain", "thing"));
+		//actions.add(new StartRecordingKillsAction("黑暗精灵弓箭手", "黑暗精灵队长", "thing"));
 		actions.add(new SetQuestAction(QUEST_SLOT, "started"));
 		actions.add(new ExamineChatAction("dark-elves-wanted.png", "Wanted!", ""));
 
@@ -149,16 +149,16 @@ public class KillDarkElves extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new NotCondition(new KilledCondition("dark elf archer", "dark elf captain", "thing"))),
+						new NotCondition(new KilledCondition("黑暗精灵弓箭手", "黑暗精灵队长", "thing"))),
 				ConversationStates.QUEST_STARTED,
-				"Don't you remember promising to sort out my dark elf problem? Kill every dark elf in the #secret room below - especially the snivelling dark elf captain and any evil dark elf archers you find! And bring me the amulet from the mutant thing.",
+				"Don't you remember promising to sort out my dark elf problem? Kill every dark elf in the #secret room below - especially the snivelling 黑暗精灵队长 and any evil dark elf archers you find! And bring me the amulet from the mutant thing.",
 				null);
 
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new KilledCondition("dark elf archer", "dark elf captain", "thing"),
+						new KilledCondition("黑暗精灵弓箭手", "黑暗精灵队长", "thing"),
 						new NotCondition(new PlayerHasItemWithHimCondition("amulet")))
 				, ConversationStates.QUEST_STARTED
 				, "What happened to the amulet? Remember I need it back!"
@@ -168,7 +168,7 @@ public class KillDarkElves extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new KilledCondition("dark elf archer", "dark elf captain", "thing"),
+						new KilledCondition("黑暗精灵弓箭手", "黑暗精灵队长", "thing"),
 						new PlayerHasItemWithHimCondition("amulet"))
 				, ConversationStates.ATTENDING
 				, "Many, many thanks. I am relieved to have that back. Here, take this ring. It can revive the powers of the dead.",
@@ -312,15 +312,15 @@ public class KillDarkElves extends AbstractQuest {
 
 		// here is support for old-style quest
 		if ("start".equals(player.getQuest(QUEST_SLOT, 0))) {
-			final boolean osp1 = player.hasKilled("dark elf captain");
-			final boolean osp2 = player.hasKilled("dark elf archer");
+			final boolean osp1 = player.hasKilled("黑暗精灵队长");
+			final boolean osp2 = player.hasKilled("黑暗精灵弓箭手");
 			final boolean osp3 = player.hasKilled("thing");
 			// first add killed creatures
 			if (osp1) {
-				history.add("I have killed the dark elf captain in the secret room.");
+				history.add("I have killed the 黑暗精灵队长 in the secret room.");
 			}
 			if (osp2) {
-				history.add("I have killed the dark elf archer in the secret room.");
+				history.add("I have killed the 黑暗精灵弓箭手 in the secret room.");
 			}
 			if (osp3) {
 				history.add("I have killed the thing.");
@@ -328,10 +328,10 @@ public class KillDarkElves extends AbstractQuest {
 
 			// now add non-killed
 			if (!osp1) {
-				history.add("I have not yet killed the dark elf captain in the secret room.");
+				history.add("I have not yet killed the 黑暗精灵队长 in the secret room.");
 			}
 			if (!osp2) {
-				history.add("I have not yet killed the dark elf archer in the secret room.");
+				history.add("I have not yet killed the 黑暗精灵弓箭手 in the secret room.");
 			}
 			if (!osp3) {
 				history.add("I have not yet killed the thing.");

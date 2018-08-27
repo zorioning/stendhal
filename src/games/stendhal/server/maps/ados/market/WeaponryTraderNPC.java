@@ -70,7 +70,7 @@ public class WeaponryTraderNPC implements ZoneConfigurator {
 				addGreeting("Hello, may i #help you?");
 				addHelp("I would glad to help you by buying your items, it would help to us both.");
 
-				// this is a hint that one of the items Anna wants is a dress (goblin dress)
+				// this is a hint that one of the items Anna wants is a dress (小妖精 dress)
 				addQuest("I have no tasks for you.");
 				addJob("I am a weaponry trader. I prefer to do my work alone.");
 				//addReply("offer", "Look at the blackboard to see my offers.");

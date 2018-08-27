@@ -25,12 +25,12 @@ public class BlordroughRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("elder giant", 5);
-		attackArmy.put("imperial general giant", 5);
-		attackArmy.put("blordrough quartermaster", 9);
-		attackArmy.put("blordrough corporal", 6);
-		attackArmy.put("blordrough storm trooper", 8);
-		attackArmy.put("master giant", 2);
+		attackArmy.put("大巨头", 5);
+		attackArmy.put("帝国巨人将军", 5);
+		attackArmy.put("布拉德鲁军队", 9);
+		attackArmy.put("布拉德鲁下士", 6);
+		attackArmy.put("布拉德鲁风暴骑兵", 8);
+		attackArmy.put("巨人之主", 2);
 		return attackArmy;
 	}
 	@Override

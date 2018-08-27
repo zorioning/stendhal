@@ -326,7 +326,7 @@ public class AllotmentUtilities implements TurnListener {
 								for (Player player : getPlayers(zoneName)) {
 									if (player.getArea().intersects(allotment.getArea())) {
 										player.teleport(getZone(zoneName), tracker.getX(), tracker.getY(), null, null);
-										player.sendPrivateText("The rental time has expired. You will now be excorted out of the allotment. Thank you for your cooperation.");
+										player.sendPrivateText("房屋租时已到期。现在你将被赶出去。谢谢你的合作。");
 									}
 
 									if (player.getName().equals(tracker.getPlayerName())) {
@@ -341,7 +341,7 @@ public class AllotmentUtilities implements TurnListener {
 							Player player = SingletonRepository.getRuleProcessor().getPlayer(tracker.getPlayerName());
 
 							if (player != null) {
-								player.sendPrivateText("This is just to notify you that the allotment that you rented has expired.");
+								player.sendPrivateText("这条消息只是通知你，房租已到期。");
 							} else {
 								//TODO: schedule a message at login
 							}
@@ -374,7 +374,7 @@ public class AllotmentUtilities implements TurnListener {
 							if (allotment.has("name") && name.equals(allotment.getName())) {
 								for (Player player : getPlayers(zoneName)) {
 									if (player.getArea().intersects(allotment.getArea())) {
-										player.sendPrivateText("You have " + WARN_TIME + " minutes left before your rental time expires. You are kindly asked to finish up and exit in an orderly fashion. Kind regards, Semos Allotment Rentals Staff.");
+										player.sendPrivateText("你的租房到期时间还有 " + WARN_TIME + " 分钟。恭请您完成并以有序的方式退出。 亲切的问候，Semos Allotment Rentals员工。");
 									}
 
 									if (player.getName().equals(tracker.getPlayerName())) {
@@ -389,7 +389,7 @@ public class AllotmentUtilities implements TurnListener {
 							Player player = SingletonRepository.getRuleProcessor().getPlayer(tracker.getPlayerName());
 
 							if (player != null) {
-								player.sendPrivateText("This is just to notify you that the allotment that you rented is going to expire in " + WARN_TIME + "minutes.");
+								player.sendPrivateText("此通知仅提醒你租用的房屋到期时间还有 " + WARN_TIME + " 分钟");
 							}
 						}
 					}

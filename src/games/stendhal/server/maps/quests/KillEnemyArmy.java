@@ -118,7 +118,7 @@ import marauroa.common.Pair;
 				new Pair<Integer, String>(300,""));
 		enemyForces.put("skeleton",
 				new Pair<Integer, String>(500,""));
-		enemyForces.put("gnome",
+		enemyForces.put("侏儒",
 				new Pair<Integer, String>(1000,""));
 		*/
 
@@ -127,23 +127,23 @@ import marauroa.common.Pair;
 		 */
 
 		enemys.put("blordrough",
-				Arrays.asList("blordrough quartermaster",
-							  "blordrough corporal",
-							  "blordrough storm trooper"));
+				Arrays.asList("布拉德鲁军队",
+							  "布拉德鲁下士",
+							  "布拉德鲁风暴骑兵"));
 		enemys.put("dark elf",
-				Arrays.asList("child dark elf",
-							  "dark elf archer",
+				Arrays.asList("幼齿黑暗精灵",
+							  "黑暗精灵弓箭手",
 							  "dark elf",
-							  "dark elf elite archer",
-							  "dark elf captain",
-							  "dark elf knight",
-							  "dark elf general",
-							  "dark elf wizard",
-							  "dark elf viceroy",
-							  "dark elf sacerdotist",
-							  "dark elf admiral",
-							  "dark elf master",
-							  "dark elf matronmother"));
+							  "黑暗精灵精英弓箭手",
+							  "黑暗精灵队长",
+							  "黑暗精灵骑士",
+							  "黑暗精灵将军",
+							  "黑暗精灵巫师",
+							  "黑暗精灵总督",
+							  "黑暗精灵僧侣",
+							  "黑暗精灵海军上将",
+							  "黑暗精灵大师",
+							  "黑暗精灵妈妈"));
 		enemys.put("chaos",
 				Arrays.asList("chaos soldier",
 							  "chaos warrior",
@@ -188,7 +188,7 @@ import marauroa.common.Pair;
 							  "imperial general",
 							  "imperial demon lord",
 							  "emperor dalmung",
-							  "imperial general giant"));
+							  "帝国巨人将军"));
 		enemys.put("madaram",
 				Arrays.asList("madaram peasant",
 							  "madaram trooper",
@@ -202,21 +202,21 @@ import marauroa.common.Pair;
 							  "madaram buster blader",
 							  "madaram archer",
 							  "madaram windwalker",
-							  "kasarkutominubat"));
+							  "卡萨库木蝠"));
 		/*
 		 * exclude amazoness ( because they dont want to leave their island? )
 		enemys.put("amazoness",
 				Arrays.asList("amazoness archer",
-						      "amazoness hunter",
-						      "amazoness coastguard",
-						      "amazoness archer commander",
-						      "amazoness elite coastguard",
-						      "amazoness bodyguard",
-						      "amazoness coastguard mistress",
-						      "amazoness commander",
-						      "amazoness vigilance",
-						      "amazoness imperator",
-						      "amazoness giant"));
+						      "亚马逊猎人",
+						      "亚马逊海岸警卫队",
+						      "亚马逊阿彻指挥官",
+						      "亚马逊精英海岸警卫队",
+						      "亚马逊保镖",
+						      "亚马逊海岸警卫队的情妇",
+						      "亚马逊指挥官",
+						      "亚马逊警卫",
+						      "亚马逊最高统治者",
+						      "亚马逊巨人"));
 		 */
 		enemys.put("oni",
 				Arrays.asList("oni warrior",
@@ -227,11 +227,11 @@ import marauroa.common.Pair;
 		enemys.put("barbarian",
 				Arrays.asList("barbarian",
 						      "蛮族人狼",
-						      "barbarian elite",
-						      "barbarian priest",
-						      "barbarian chaman",
-						      "barbarian leader",
-						      "barbarian king"));
+						      "蛮族精英",
+						      "蛮族牧师",
+						      "野蛮夏曼人",
+						      "蛮族首领",
+						      "野蛮人王"));
 	}
 
 	/**

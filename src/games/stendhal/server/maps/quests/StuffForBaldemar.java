@@ -49,7 +49,7 @@ import games.stendhal.server.util.TimeUtil;
  * <li> He offers to forge a mithril shield for you if you bring him what he
  * needs.
  * <li> You give him all he asks for.
- * <li> Baldemar checks if you have ever killed a black giant alone, or not
+ * <li> Baldemar checks if you have ever killed a 黑巨人 alone, or not
  * <li> Baldemar forges the shield for you
  * </ul>
  *
@@ -68,7 +68,7 @@ import games.stendhal.server.util.TimeUtil;
  */
 public class StuffForBaldemar extends AbstractQuest {
 
-	static final String TALK_NEED_KILL_GIANT = "This shield can only be given to those who have killed a black giant, and without the help of others.";
+	static final String TALK_NEED_KILL_GIANT = "This shield can only be given to those who have killed a 黑巨人, and without the help of others.";
 
 	private static final String I_WILL_NEED_MANY_THINGS = "I will need many, many things: ";
 
@@ -179,13 +179,13 @@ public class StuffForBaldemar extends AbstractQuest {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					boolean missingSomething = questLogic.proceedItems(player, raiser);
 
-					if (player.hasKilledSolo("black giant") && !missingSomething) {
+					if (player.hasKilledSolo("黑巨人") && !missingSomething) {
 						raiser.say("You've brought everything I need to forge the shield. Come back in "
 							+ REQUIRED_MINUTES
 							+ " minutes and it will be ready.");
 						player.setQuest(QUEST_SLOT, "forging;" + System.currentTimeMillis());
 					} else {
-						if (!player.hasKilledSolo("black giant") && !missingSomething) {
+						if (!player.hasKilledSolo("黑巨人") && !missingSomething) {
 							raiser.say(TALK_NEED_KILL_GIANT);
 						}
 
@@ -237,7 +237,7 @@ public class StuffForBaldemar extends AbstractQuest {
 					if (!broughtAllItems(questState)) {
 						raiser.say("I need " + questLogic.itemsStillNeeded(player) + ".");
 					} else {
-						if(!player.hasKilledSolo("black giant")) {
+						if(!player.hasKilledSolo("黑巨人")) {
 							raiser.say(TALK_NEED_KILL_GIANT);
 						}
 					}
@@ -283,14 +283,14 @@ public class StuffForBaldemar extends AbstractQuest {
 		} else if (broughtAllItems(questState) || !questState.startsWith("start")) {
 			res.add("I took all the special items to Baldemar.");
 		}
-		if (broughtAllItems(questState) && !player.hasKilledSolo("black giant")) {
-			res.add("I will need to bravely face a black giant alone, before I am worthy of this shield.");
+		if (broughtAllItems(questState) && !player.hasKilledSolo("黑巨人")) {
+			res.add("I will need to bravely face a 黑巨人 alone, before I am worthy of this shield.");
 		}
 		if (questState.startsWith("forging")) {
 			res.add("Baldemar is forging my mithril shield!");
 		}
 		if (isCompleted(player)) {
-			res.add("I brought Baldemar many items, killed a black giant solo, and he forged me a mithril shield.");
+			res.add("I brought Baldemar many items, killed a 黑巨人 solo, and he forged me a mithril shield.");
 		}
 		return res;
 	}

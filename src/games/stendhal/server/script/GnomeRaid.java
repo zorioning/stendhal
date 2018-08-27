@@ -25,10 +25,10 @@ public class GnomeRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("gnome", 12);
-		attackArmy.put("mage gnome", 7);
-		attackArmy.put("infantry gnome", 10);
-		attackArmy.put("cavalryman gnome", 10);
+		attackArmy.put("侏儒", 12);
+		attackArmy.put("法师侏儒", 7);
+		attackArmy.put("步兵侏儒", 10);
+		attackArmy.put("骑兵侏儒", 10);
 		attackArmy.put("dark gargoyle", 2);
 
 		return attackArmy;

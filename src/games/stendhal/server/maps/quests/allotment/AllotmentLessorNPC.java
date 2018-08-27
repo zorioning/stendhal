@@ -97,36 +97,36 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				// TODO: this was copy pasted change as needed
-				addGreeting("Heya!");
-				addJob("Um, not sure what you mean. Right now I'm waiting for my mum to get back from the #shops.");
-				addHelp("I have some #news about the bazaar over there.");
-				addOffer("I don't sell stuff, I'm just waiting for my mum. But I have some #news if you wanna hear it.");
+				addGreeting("唉呀!");
+				addJob("嗯，我不确信你的意思，现在我在等我妈妈从 #商店 买东西回来。");
+				addHelp("我有一些关于市场那边的 #消息。");
+				addOffer("我不卖东西，我只等妈妈回来。如果你想听，我可以告诉你一些 #消息 。");
 				// quest: FindJefsMom , quest sentence given there
-				addReply("news", "Some more shopkeepers will be at the market soon! It'll be cool, it's kind of empty round here at the moment.");
-				addReply("shops", "Yeah she's had to go out of town. All we have here is that flower seller! There's #news about our bazaar, though ...");
-				addGoodbye("See you around.");
+				addReply("消息", "有一些商人马上要来市场开店了！这太棒了，目前太多商铺空着，太可惜了.");
+				addReply("商店", "是的，她必须去镇上。我们种的花都在销往那里。还有，那边的市场有些 #消息...");
+				addGoodbye("再会.");
 
 				// if player already has one rented ask how may help
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("rent", "allotment"),
+					Arrays.asList("rent", "allotment","租房"),
 					questActive,
 					ConversationStates.QUEST_STARTED,
-					"So what can I do you for? Did you lose your #key or want another one or would you like to know how much #time is left until your allotment expires?",
+					"需要什么服务吗？把钥匙弄丢了？再租个新房？或是咨询房租到期的时间？",
 					null);
 
 				// if allotment not rented and there are available then ask if player wants to rent
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("rent", "allotment"),
+					Arrays.asList("rent", "allotment","租房"),
 					new AndCondition(
 							new NotCondition(questActive),
 							hasAllotments),
 					ConversationStates.QUEST_OFFERED,
-					"Would you like to rent an allotment?",
+					"你想租房吗 Would you like to rent an allotment?",
 					null);
 
 				// if allotment not rented and there are none available then tell player
 				add(ConversationStates.ATTENDING,
-					Arrays.asList("rent", "allotment"),
+					Arrays.asList("rent", "allotment","租房"),
 					new AndCondition(
 							new NotCondition(questActive),
 							new NotCondition(hasAllotments)),
@@ -137,7 +137,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 						public void fire(Player player, Sentence sentence, EventRaiser npc) {
 							long diff = rentHelper.getNextExpiryTime(zone.getName()) - System.currentTimeMillis();
 
-							npc.say("I'm sorry, there aren't any available at the moment. Please come back in about " + TimeUtil.approxTimeUntil((int) (diff / 1000L)) + ".");
+							npc.say("抱歉，现在没有空房了，请在 " + TimeUtil.approxTimeUntil((int) (diff / 1000L)) + " 时间后再来咨询.");
 						}
 				});
 
@@ -146,7 +146,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 					ConversationPhrases.NO_MESSAGES,
 					null,
 					ConversationStates.ATTENDING,
-					"Ok, how else may I help you?",
+					"Ok, 还没别的需要服务的事吗?",
 					new SetQuestAction(QUEST_SLOT, 1, "0"));
 
 				// if accepts to rent allotment
@@ -162,14 +162,14 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 							List<String> allotments = rentHelper.getAvailableAllotments(zone.getName());
 							String reply = allotments.toString();
 
-							npc.say("Which one would you like? Let's see... " +  "allotment" + " "
-									+ reply + " are available, or perhaps #none if you've changed your mind.");
+							npc.say("你喜欢哪一间? 我看看... " +  "还有" + " "
+									+ reply + " 是可以租的空房，你再犹豫可能就 没了。");
 						}
 					});
 
 				// to exit renting/choosing an allotment
 				add(ConversationStates.ANY,
-					"none",
+					"没了",
 					null,
 					ConversationStates.ATTENDING,
 					"Ok.",
@@ -190,24 +190,24 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 							//TODO: get payment
 							if (!rentHelper.isValidAllotment(zone.getName(), allotmentNumber)) {
-								npc.say("I'm afraid that allotment does not exist.");
+								npc.say("恐怕你选的房间不存在。");
 							} else {
 								if (rentHelper.getAvailableAllotments(zone.getName()).contains(allotmentNumber)) {
 									if(rentHelper.setExpirationTime(zone.getName(), allotmentNumber, player.getName())) {
-										npc.say("Here's your key to allotment " + allotmentNumber + ". You are allowed to use the allotment for the next "
-												+ TimeUtil.approxTimeUntil((int) (AllotmentUtilities.RENTAL_TIME / 1000L)) + ".");
+										npc.say("这是你的 " + allotmentNumber + " 号房间的钥匙。以后就使用房间至 "
+												+ TimeUtil.approxTimeUntil((int) (AllotmentUtilities.RENTAL_TIME / 1000L)) + " 的时间.");
 
 										if (!player.equipToInventoryOnly(rentHelper.getKey(zone.getName(), player.getName()))) {
-											npc.say("Oh, you look a bit overloaded there. I'll keep it safe here until you come back. Just ask about your #allotment.");
+											npc.say("Oh, 你好像放的东西太多了，在你回来前，我会保证东西的安全。只用问下你租的房间. Just ask about your #allotment.");
 										}
 
 										new SetQuestAction(QUEST_SLOT, 1, Long.toString(AllotmentUtilities.RENTAL_TIME + System.currentTimeMillis())).fire(player, sentence, npc);
 									} else {
 										// error? shouldn't happen
-										npc.say("Uh oh! There appears to be a problem in the paperwork. Please give me some time to sort it out.");
+										npc.say("Uh oh! 有些你的记录有些问题，请再等一会。");
 									}
 								} else {
-									npc.say("I'm sorry, that allotment is already taken.");
+									npc.say("抱歉，分配房子的已被取走, that allotment is already taken.");
 								}
 							}
 						}
@@ -227,12 +227,12 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 							if (key != null) {
 								if (player.equipToInventoryOnly(key)) {
-									npc.say("Here's your key, happy planting.");
+									npc.say("这是你的钥匙，happy planting.");
 								} else {
-									npc.say("You can't carry that right now. Ask me again when you're not carrying so much.");
+									npc.say("在你能带更多钥匙多前，你不能再拿走这把了。");
 								}
 							} else {
-								npc.say("There must have been a mixup in the paperwork. It appears you haven't rented out an allotment.");
+								npc.say("文件太多不好整理，它提示你没有租用过房子. It appears you haven't rented out an allotment.");
 							}
 						}
 					});
@@ -247,7 +247,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 					new ChatAction() {
 						@Override
 						public void fire(Player player, Sentence sentence, EventRaiser npc) {
-							npc.say("The time remaining on your rent is " + rentHelper.getTimeLeftPlayer(zone.getName(), player.getName()) + ".");
+							npc.say("你租房剩余时间还有 " + rentHelper.getTimeLeftPlayer(zone.getName(), player.getName()) + ".");
 						}
 					});
 
@@ -258,7 +258,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 		npc.setEntityClass("kid6npc");
 		npc.setPosition(85, 11);
 		npc.initHP(100);
-		npc.setDescription("You see jefs clone. He seems like waiting for someone.");
+		npc.setDescription("你遇见了 jefs clone. 他好像在等某个人.");
 		zone.add(npc);
 	}
 }

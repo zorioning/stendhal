@@ -26,18 +26,18 @@ public class DrowRaid extends CreateRaid {
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
 		attackArmy.put("dark elf", 10);
-		attackArmy.put("dark elf archer", 2);
-		attackArmy.put("dark elf elite archer", 2);
-		attackArmy.put("dark elf captain", 5);
-		attackArmy.put("dark elf knight", 3);
-		attackArmy.put("dark elf general", 1);
-		attackArmy.put("dark elf wizard", 2);
-		attackArmy.put("dark elf viceroy", 1);
-		attackArmy.put("dark elf sacerdotist", 3);
-		attackArmy.put("dark elf matronmother", 1);
-		attackArmy.put("dark elf master", 1);
-		attackArmy.put("dark elf ranger", 3);
-		attackArmy.put("dark elf admiral", 3);
+		attackArmy.put("黑暗精灵弓箭手", 2);
+		attackArmy.put("黑暗精灵精英弓箭手", 2);
+		attackArmy.put("黑暗精灵队长", 5);
+		attackArmy.put("黑暗精灵骑士", 3);
+		attackArmy.put("黑暗精灵将军", 1);
+		attackArmy.put("黑暗精灵巫师", 2);
+		attackArmy.put("黑暗精灵总督", 1);
+		attackArmy.put("黑暗精灵僧侣", 3);
+		attackArmy.put("黑暗精灵妈妈", 1);
+		attackArmy.put("黑暗精灵大师", 1);
+		attackArmy.put("黑暗精灵游侠", 3);
+		attackArmy.put("黑暗精灵海军上将", 3);
 		return attackArmy;
 	}
 	@Override

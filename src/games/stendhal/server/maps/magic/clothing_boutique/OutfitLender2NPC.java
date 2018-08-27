@@ -174,7 +174,7 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 					ConversationPhrases.OFFER_MESSAGES,
 					null,
 					ConversationStates.ATTENDING,
-					"Please tell me which outfit you would like, ask to #hire #glasses, #hire a #goblin #face, #hire a #thing #face, #hire a #umbrella, #hire a #purple #slime outfit, #hire a #green #slime, #hire a #red #slime, #hire a #blue #slime, or #hire a #gingerbread #man outfit.",
+					"Please tell me which outfit you would like, ask to #hire #glasses, #hire a #小妖精 #face, #hire a #thing #face, #hire a #umbrella, #hire a #purple #slime outfit, #hire a #green #slime, #hire a #red #slime, #hire a #blue #slime, or #hire a #gingerbread #man outfit.",
 					new ExamineChatAction("outfits2.png", "Outfits", "Price varies"));
 				addJob("I work with magic in a fun way! Ask about the #offer.");
 				addHelp("I can cast a spell to dress you in a magical outfit. They wear off after some time. I hope I can #offer you something you like. If not Liliana also rents out from a different range.");

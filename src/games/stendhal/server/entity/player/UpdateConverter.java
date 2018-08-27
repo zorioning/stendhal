@@ -63,7 +63,7 @@ public abstract class UpdateConverter {
 	);
 	private static final List<String> ITEM_NAMES_NEW_0_66 = Arrays.asList(
 			"golden key", "silver key", "黑色的书", "蓝色的书",
-			"elder duergar", "black duergar", "elder giant",
+			"elder duergar", "black duergar", "大巨头",
 			"chaos sorcerer"
 	);
 	/**
@@ -95,9 +95,9 @@ public abstract class UpdateConverter {
 
 		KILL_QUEST_NAMES.put("kill_gnomes",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
-					"gnome",
-					"infantry gnome",
-					"cavalryman gnome")));
+					"侏儒",
+					"步兵侏儒",
+					"骑兵侏儒")));
 
 		KILL_QUEST_NAMES.put("sad_scientist",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
