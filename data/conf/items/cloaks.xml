@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
 	
-  <item name="black cloak">
+  <item name="黑斗篷">
     <type class="cloak" subclass="black_cloak" tileid="-1"/>
-    <description>You see a black cloak. The last owner had black thoughts. Will you?</description>
+    <description>这是一件黑斗篷。它最后的主人有着黑色的想法。你会吗？</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="25"/>
@@ -23,9 +23,9 @@
     </equipable>
   </item>
   
- <item name="black dragon cloak">
+ <item name="黑龙斗篷">
     <type class="cloak" subclass="black_dragon_cloak" tileid="-1"/>
-    <description>You see a torn section from an enormous black dragon cloak. You're very lucky: the piece is just the right size for a human to wear.</description>
+    <description>这是一件黑龙斗篷的一块碎片。你很幸运，这块碎片的大小适合人类穿着。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>
@@ -42,9 +42,9 @@
     </equipable>
   </item>
   
- <item name="blue dragon cloak">
+ <item name="蓝龙斗篷">
     <type class="cloak" subclass="blue_dragon_cloak" tileid="-1"/>
-    <description>You see a blue dragon cloak. The weave is tight and strong, though you wish the colour drew less attention.</description>
+    <description>这是一顶蓝龙斗篷。编织紧密结实，尽管你希望颜色不要那么鲜艳。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="13"/>
@@ -61,9 +61,9 @@
     </equipable>
   </item>
   
- <item name="blue elf cloak">
+ <item name="蓝灵斗篷">
     <type class="cloak" subclass="blue_elf_cloak" tileid="-1"/>
-    <description>You see a blue elf cloak. The material is thick and warm.</description>
+    <description>这是一顶蓝灵斗篷，又厚实又暖和。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="8"/>
@@ -80,9 +80,9 @@
     </equipable>
   </item>
   
-  <item name="blue striped cloak">
+  <item name="蓝色条纹斗篷">
     <type class="cloak" subclass="blue_striped_cloak" tileid="-1"/>
-    <description>You see a fashionable blue striped cloak.</description>
+    <description>这是一件时髦的蓝色条纹斗篷。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -99,9 +99,9 @@
     </equipable>
   </item>
   
-   <item name="bone dragon cloak">
+   <item name="骨龙斗篷">
     <type class="cloak" subclass="bone_dragon_cloak" tileid="-1"/>
-    <description>You see a bone dragon cloak. It's incredibly old, like its last owner.</description>
+    <description>这是一件骨龙斗篷（不是「古龙」！），年代久远，就像它之前的主人一样。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>
@@ -118,9 +118,9 @@
     </equipable>
   </item>
   
-  <item name="chaos cloak">
+  <item name="混沌斗篷">
     <type class="cloak" subclass="chaos_cloak" tileid="-1"/>
-    <description>You see a chaos cloak. The colours look like oil shimmering on a puddle.</description>
+    <description>混沌这是一件混沌斗篷，颜色就像水面上闪闪发光的油一样。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="20"/>
@@ -155,9 +155,9 @@
     </equipable>
   </item>
 
-  <item name="dwarf cloak">
+  <item name="矮人斗篷">
     <type class="cloak" subclass="dwarf_cloak" tileid="-1"/>
-    <description>You see a dwarf cloak. Apparently this passes for fashion in some parts, but to you it looks more functional than fashionable.</description>
+    <description>这是一件矮人斗篷，显然有点过时了，但是看起来还算有用。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -173,9 +173,9 @@
     </equipable>
   </item>
   
-    <item name="elf cloak">
+    <item name="精灵斗篷">
     <type class="cloak" subclass="elf_cloak" tileid="-1"/>
-    <description>You see a white elf cloak. It doesn't look very warm.</description>
+    <description>这是一件精灵斗篷，看起来不怎么保暖。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="3"/>
@@ -191,9 +191,9 @@
     </equipable>
   </item>
   
-   <item name="elvish cloak">
+   <item name="像小精灵的斗篷">
     <type class="cloak" subclass="elvish_cloak" tileid="-1"/>
-    <description>You see an elvish cloak. The material is dark, but thick and warm.</description>
+    <description>这是一件像小精灵的斗篷。颜色灰暗，但是又厚实又保暖。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -210,9 +210,9 @@
     </equipable>
   </item>
   
-  <item name="golden cloak">
+  <item name="金斗篷">
     <type class="cloak" subclass="golden_cloak" tileid="-1"/>
-    <description>You see a golden cloak. See how the light glistens off the gold, it is a prized possession.</description>
+    <description>这是一件金斗篷，看看那闪闪的金色，可是一件珍贵的财产呢。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="19"/>
@@ -229,9 +229,9 @@
     </equipable>
   </item>
   
-   <item name="green dragon cloak">
+   <item name="绿龙斗篷">
     <type class="cloak" subclass="green_dragon_cloak" tileid="-1"/>
-    <description>You see a huge green dragon cloak. It's probably too big for you but, even dragging on the floor it will provide excellent protection.</description>
+    <description>绿龙斗篷这是一件绿龙斗篷，可能有些太大了，但是，就算拖在地上也能为你提供优秀的保护。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>
@@ -248,9 +248,9 @@
     </equipable>
   </item>
 
-  <item name="lich cloak">
+  <item name="巫妖斗篷">
     <type class="cloak" subclass="lich_cloak" tileid="-1"/>
-    <description>You see a purple lich cloak. It's stained with blood - yours, from the previous undead owner, or perhaps the blood of his enemies...</description>
+    <description>这是一件紫色的巫妖斗篷。它沾满鲜血——你的，未死的前主人的，或者也许是他的敌人的鲜血……</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>
@@ -267,9 +267,9 @@
     </equipable>
   </item>
   
-  <item name="mainio cloak">
+  <item name="华丽的斗篷">
     <type class="cloak" subclass="mainio_cloak" tileid="-1"/>
-    <description>You see a mainio cloak. Its flashing colours are absurd! But you wear it because it's very well made.</description>
+    <description>这是一件华丽的斗篷。闪闪发光，令人晕眩！但是因为它制造精良，所以现在你穿着它。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="21"/>
@@ -286,9 +286,9 @@
     </equipable>
   </item>
   
-  <item name="mithril cloak">
+  <item name="黑曜石斗篷">
     <type class="cloak" subclass="mithril_cloak" tileid="-1"/>
-    <description>You see a mithril cloak. Its weave is so fine and its looks are breathtaking.</description>
+    <description>这是一件黑曜石斗篷，它的编织非常精细，外观令人叹为观止。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="28"/>
@@ -306,9 +306,9 @@
     </equipable>
   </item>
 
-  <item name="red cloak">
+  <item name="红斗篷">
     <type class="cloak" subclass="red_cloak" tileid="-1"/>
-    <description>You see a red cloak covered in polka dots. It's terribly snazzy.</description>
+    <description>这是一件覆盖着波尔卡圆点的红斗篷，非常时髦。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -324,9 +324,9 @@
     </equipable>
   </item>
   
-  <item name="red dragon cloak">
+  <item name="红龙斗篷">
     <type class="cloak" subclass="red_dragon_cloak" tileid="-1"/>
-    <description>You see a red dragon cloak. He didn't have one for a long time but finally caved in to peer pressure and got one.</description>
+    <description>这是一件红龙斗篷。他很长一段时间都没有，但屈服于同伴的压力，终于得到了一个。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -343,9 +343,9 @@
     </equipable>
   </item>
   
-  <item name="rift cloak">
+  <item name="裂缝斗篷">
     <type class="cloak" subclass="rift_cloak" tileid="-1"/>
-    <description>You see a rift cloak. Almost useless in the battle, but saves your life when you enter a magical rift.</description>
+    <description>这是一件裂缝斗篷，在战斗中几乎无用，但是当你进入魔法裂缝时可以拯救你的生命。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="1"/>
@@ -361,9 +361,9 @@
     </equipable>
   </item>
   
-  <item name="shadow cloak">
+  <item name="影子斗篷">
     <type class="cloak" subclass="shadow_cloak" tileid="-1"/>
-    <description>You see a shadow cloak, in colours of the shadow armor.</description>
+    <description>这是一件影子斗篷，颜色和影子铠甲一样。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="13"/>
@@ -382,9 +382,9 @@
     </equipable>
   </item>
   
-  <item name="stone cloak">
+  <item name="石斗篷">
     <type class="cloak" subclass="stone_cloak" tileid="-1"/>
-    <description>You see a stone cloak. It's hard to tell how it was made, as the fibres look like narrow threads of mineral.</description>
+    <description>这是一件石斗篷，很难分辨它是由什么制成的，依稀可见细矿物纤维。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -403,9 +403,9 @@
     </equipable>
   </item>
   
-  <item name="vampire cloak">
+  <item name="吸血鬼斗篷">
     <type class="cloak" subclass="vampire_cloak" tileid="-1"/>
-    <description>You see a vibrant red vampire cloak. Wearing it sends a shiver down your spine.</description>
+    <description>这是一件充满活力的吸血鬼斗篷。穿着它会让你脊柱发凉。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="12"/>
@@ -422,9 +422,9 @@
     </equipable>
   </item>
 
-  <item name="xeno cloak">
+  <item name="异种元素斗篷">
     <type class="cloak" subclass="xeno_cloak" tileid="-1"/>
-    <description>You see a xeno cloak. It's heavy and thick, giving you a good protection.</description>
+    <description>这是一件异种元素斗篷，非常厚实，可以为你提供很好的保护。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="22"/>

@@ -57,7 +57,7 @@ import games.stendhal.server.entity.status.PoisonStatus;
  * <ul>
  * <li> 2,000 XP </li>
  * <li> some karma (35) </li>
- * <li> either fire sword, golden boots, golden armor, or golden helmet </li>
+ * <li> either fire sword, 金靴子, 黄金铠甲, or golden helmet </li>
  * </ul>
  *
  * REPETITIONS: - Just once.
@@ -203,12 +203,12 @@ public class SevenCherubs extends AbstractQuest {
 								 * other quest and through fighting.
 								 *
 								 * Once enough quests exist, this quest
-								 * should always give you golden boots
+								 * should always give you 金靴子
 								 * (because you have to walk much to fulfil
 								 * it).
 								 *
 								 */
-								final String[] items = { "golden boots", "golden armor", "golden helmet" };
+								final String[] items = { "金靴子", "黄金铠甲", "golden helmet" };
 								final Item item = SingletonRepository.getEntityManager()
 									.getItem(items[Rand.rand(items.length)]);
 								item.setBoundTo(player.getName());

@@ -138,8 +138,8 @@ public class DiceGambling extends AbstractQuest {
 				"You have won a greater potion, but with your luck you'll probably never have to use it!"));
 		map.put(16,	new Pair<String, String>("longbow",
 		"You could be a formidable archer with this prize of a longbow!"));
-		map.put(17,	new Pair<String, String>("red cloak",
-		"You're going to look great in this fashionable red cloak!"));
+		map.put(17,	new Pair<String, String>("红斗篷",
+		"You're going to look great in this fashionable 红斗篷!"));
 		map.put(18, new Pair<String, String>("magic chain helmet",
 				"You have hit the JACKPOT! A magic chain helmet!"));
 

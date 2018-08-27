@@ -81,7 +81,7 @@ public class WhoAction implements ActionListener {
 		}
 
 		final StringBuilder online = new StringBuilder();
-		online.append(players.size() + " Players online: ");
+		online.append(players.size() + " 用户在线: ");
 		for (final String name : players) {
 			online.append(name);
 		}

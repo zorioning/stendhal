@@ -21,7 +21,7 @@ public class BarbarianRaid extends CreateRaid {
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
 		attackArmy.put("barbarian", 30);
-		attackArmy.put("barbarian wolf", 15);
+		attackArmy.put("蛮族人狼", 15);
 		attackArmy.put("barbarian elite", 12);
 		attackArmy.put("barbarian priest", 7);
 		attackArmy.put("barbarian chaman", 5);

@@ -24,7 +24,7 @@ import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Provides Eheneumniranin, the sickle wielding NPC.
+ * Provides Eheneumniranin, the 镰刀 wielding NPC.
  * A Halfelf who lost his memory and now works in the grain fields at the farm
  * He will possibly offer a quest to help him find his past.
  *
@@ -64,10 +64,10 @@ public class SickleingHalfelfNPC implements ZoneConfigurator {
 			@Override
 			public void createDialog() {
 				addGreeting("Salve straniero...");
-				addJob("To gather the sheaves of grain with my #sickle before taking them to the mill I must... How did I get here?... If I only could remember...");
+				addJob("To gather the sheaves of grain with my #镰刀 before taking them to the mill I must... How did I get here?... If I only could remember...");
 				addHelp("Ha! Asking for such only reveals how unworthy and undeserving one is... Who am I?... A fog obfuscates my thoughts...");
 				addOffer("Oh?! Given I had anything valuable I would offer it willingly for a glimpse of truth...");
-				addReply("sickle","A usefull farming tool indeed, like a scythe also is. To some blacksmith you should ask to if he offers any such sharp utensil.");
+				addReply("镰刀","A usefull farming tool indeed, like a 大斧头 also is. To some blacksmith you should ask to if he offers any such sharp utensil.");
 				addGoodbye("In bocca al lupo...");
 			}
 

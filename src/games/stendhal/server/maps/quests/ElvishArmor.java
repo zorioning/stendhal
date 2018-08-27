@@ -59,8 +59,8 @@ public class ElvishArmor extends AbstractQuest implements
 	private BringListOfItemsQuestLogic bringItems;
 
 	private static final List<String> NEEDEDITEMS = Arrays.asList(
-			"elvish armor", "elvish legs", "elvish boots", "elvish sword",
-			"elvish cloak", "elvish shield");
+			"精灵护甲", "elvish legs", "精灵靴", "elvish sword",
+			"像小精灵的斗篷", "elvish shield");
 
 	@Override
 	public String getSlotName() {
@@ -82,8 +82,8 @@ public class ElvishArmor extends AbstractQuest implements
   	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Elvish Armor",
-				"Lupos, an Albino elf, wants to get the knowledge of how he can make elvish armor parts himself. Therefore he asks young travellers to bring him some examples.",
+				"精灵护甲",
+				"Lupos, an Albino elf, wants to get the knowledge of how he can make 精灵护甲 parts himself. Therefore he asks young travellers to bring him some examples.",
 				true);
 		offerSteps();
 		setupAbstractQuest();
@@ -194,7 +194,7 @@ public class ElvishArmor extends AbstractQuest implements
 
 	@Override
 	public String respondToOfferOfNotNeededItem() {
-		return	"I don't think that's a piece of elvish armor...";
+		return	"I don't think that's a piece of 精灵护甲...";
 	}
 
 	@Override
@@ -204,7 +204,7 @@ public class ElvishArmor extends AbstractQuest implements
 
 	@Override
 	public String respondToQuestAfterItHasAlreadyBeenCompleted() {
-		return "I'm now busy studying the properties of the elvish armor you brought me. It really is intriguing. Until I can reproduce it, I would buy similar items from you.";
+		return "I'm now busy studying the properties of the 精灵护甲 you brought me. It really is intriguing. Until I can reproduce it, I would buy similar items from you.";
 	}
 
 	@Override
@@ -232,7 +232,7 @@ public class ElvishArmor extends AbstractQuest implements
 				ConversationPhrases.OFFER_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"If you have found any more elvish items, I'd be glad if you would #sell them to me. I would buy elvish armor, shield, legs, boots, cloak or sword. I would also buy a drow sword if you have one.",
+				"If you have found any more elvish items, I'd be glad if you would #sell them to me. I would buy 精灵护甲, shield, legs, boots, cloak or sword. I would also buy a drow sword if you have one.",
 				null);
 
 

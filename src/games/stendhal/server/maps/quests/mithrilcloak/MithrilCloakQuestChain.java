@@ -13,7 +13,7 @@
 package games.stendhal.server.maps.quests.mithrilcloak;
 
 /**
- * QUEST: Mithril Cloak
+ * QUEST: 黑曜石斗篷
  * <p>
  * PARTICIPANTS:
  * <ul>
@@ -46,7 +46,7 @@ package games.stendhal.server.maps.quests.mithrilcloak;
  * <li>Ida pricks her finger on the last needle and goes to twilight zone</li>
  * <li>Pdiddi sells the moss to get to twilight zone</li>
  * <li>A creature in the twilight zone drops the elixir to heal lda</li>
- * <li>After being ill Ida asks you to take a blue striped cloak to Josephine</li>
+ * <li>After being ill Ida asks you to take a 蓝色条纹斗篷 to Josephine</li>
  * <li>After taking cloak to Josephine and telling Ida she asks for mithril clasp</li>
  * <li>Pedinghaus makes mithril clasp</li>
  * <li>The clasp completes the cloak</li>
@@ -54,7 +54,7 @@ package games.stendhal.server.maps.quests.mithrilcloak;
  * <p>
  * REWARD:
  * <ul>
- * <li>Mithril Cloak</li>
+ * <li>黑曜石斗篷</li>
  * <li> XP</li>
  * <li> Karma</li>
  * </ul>

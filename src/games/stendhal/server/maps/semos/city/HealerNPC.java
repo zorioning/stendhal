@@ -43,9 +43,9 @@ public class HealerNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Carmen") {
 			@Override
 			public void createDialog() {
-				addGreeting("Hi, 如果需要帮助 #help ，只要跟我说一声.");
+				addGreeting("Hi, 如果需要 #帮助 #help ，只要跟我说一声.");
 				addJob("我的特殊能力可以让我给受伤的人们治疗伤口。我也销售药济和解毒济.");
-				addHelp("我能在免费为治好 #heal 你的伤。或者出去冒险时,你可以取走一瓶我配好的药，当然要付一点钱 #offer.");
+				addHelp("我能在免费 #治疗 #heal 你的伤(#救命 #奶我 #医疗 #医治)。或者出去探险前买点我的药，当然要 #支付 一点钱.");
 				addEmotionReply("hugs", "hugs");
 				addGoodbye();
 			}

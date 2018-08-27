@@ -152,7 +152,7 @@ public class LookBookforCeryl extends AbstractQuest {
 					new QuestInStateCondition(QUEST_SLOT, "start")),
 			ConversationStates.ATTENDING,
 			"Oh, Ceryl's looking for that book back? My goodness! I completely forgot about it... here you go!",
-			new MultipleActions(new EquipItemAction("black book", 1, true), new SetQuestAction(QUEST_SLOT, "jynath")));
+			new MultipleActions(new EquipItemAction("黑色的书", 1, true), new SetQuestAction(QUEST_SLOT, "jynath")));
 
 		/** If player keeps asking for the book, just tell him to hurry up */
 		npc.add(
@@ -183,7 +183,7 @@ public class LookBookforCeryl extends AbstractQuest {
 
 		/** Complete the quest */
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("black book"));
+		reward.add(new DropItemAction("黑色的书"));
 		reward.add(new EquipItemAction("money", 50));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new IncreaseKarmaAction(10.0));
@@ -194,7 +194,7 @@ public class LookBookforCeryl extends AbstractQuest {
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT, "jynath"),
-					new PlayerHasItemWithHimCondition("black book")),
+					new PlayerHasItemWithHimCondition("黑色的书")),
 			ConversationStates.ATTENDING,
 			"Oh, you got the book back! Phew, thanks!",
 			new MultipleActions(reward));
@@ -209,7 +209,7 @@ public class LookBookforCeryl extends AbstractQuest {
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT, "jynath"),
-					new NotCondition(new PlayerHasItemWithHimCondition("black book"))),
+					new NotCondition(new PlayerHasItemWithHimCondition("黑色的书"))),
 			ConversationStates.ATTENDING,
 			"Haven't you got that #book back from #Jynath? Please go look for it, quickly!",
 			new SetQuestAction(QUEST_SLOT, "start"));
@@ -228,14 +228,14 @@ public class LookBookforCeryl extends AbstractQuest {
 			res.add("I do not want to find the book.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "jynath", "done")) {
-			res.add("I promised to fetch the black book from Jynath.");
+			res.add("I promised to fetch the 黑色的书 from Jynath.");
 		}
-		if (questState.equals("jynath") && player.isEquipped("black book")
+		if (questState.equals("jynath") && player.isEquipped("黑色的书")
 				|| questState.equals("done")) {
 			res.add("I have talked to Jynath, and have the book.");
 		}
-		if (questState.equals("jynath") && !player.isEquipped("black book")) {
-			res.add("I do not have the black book Jynath has.");
+		if (questState.equals("jynath") && !player.isEquipped("黑色的书")) {
+			res.add("I do not have the 黑色的书 Jynath has.");
 		}
 		if (questState.equals("done")) {
 			res.add("I have returned the book to Ceryl and got a little reward.");

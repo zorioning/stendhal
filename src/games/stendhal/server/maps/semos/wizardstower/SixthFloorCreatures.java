@@ -40,8 +40,8 @@ public class SixthFloorCreatures implements ZoneConfigurator {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
 		final Creature creature = manager.getCreature("littlefairy");
-		final Creature creature1 = manager.getCreature("pegasus");
-		final Creature creature2 = manager.getCreature("unicorn");
+		final Creature creature1 = manager.getCreature("飞马");
+		final Creature creature2 = manager.getCreature("独角兽");
 		final Creature creature3 = manager.getCreature("archangel");
 
 		creature.setAIProfiles(new HashMap<String, String>());

@@ -49,7 +49,7 @@ public class HotelGuestNPC implements ZoneConfigurator {
 				addReply("hidden inside", "Well unfortunetly I promised to my brother to visit him so soon as possible and I straight went to Fado then... too bad.");
 				addQuest("A task for you? Me? Oh no.. You got to be #kidding me.");
 				addReply("kidding", "Do I really look like someone who needs help? Well I don't! At least not at the moment.");
-				addJob("Sometimes I'm here, sometimes I'm there. Fast like the #wind and smooth as a tiger.");
+				addJob("Sometimes I'm here, sometimes I'm there. Fast like the #wind and smooth as a 老虎.");
 				addReply("wind", "No I'm not the storm #everyone talks about in Ados.");
 				addReply("everyone", "My hysterical girlfriend Caroline and her father saw it somewhere far away on the sea. Well, I didn't even get a breeze of it.");
 				addOffer("Well you don't offer me anything so I don't offer anything to you. That is life.");

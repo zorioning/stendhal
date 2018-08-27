@@ -289,13 +289,13 @@ public final class CharacterDialog extends JDialog implements Runnable {
 			dispose();
 		} catch (TimeoutException e) {
 			logger.error(e, e);
-			handleError("登陆超时，请重新登陆", "Choose Character");
+			handleError("登陆超时，请重新登陆", "选择角色");
 		} catch (InvalidVersionException e) {
 			logger.error(e, e);
-			handleError("你的客户端与服务器不匹配.", "Choose Character");
+			handleError("你的客户端与服务器不匹配.", "选择角色");
 		} catch (BannedAddressException e) {
 			logger.error(e, e);
-			handleError("请重新登陆", "Choose Character");
+			handleError("请重新登陆", "选择角色");
 		}
 	}
 
@@ -348,13 +348,13 @@ public final class CharacterDialog extends JDialog implements Runnable {
 				}
 			} catch (TimeoutException e) {
 				logger.error(e, e);
-				parent.handleError("连接超时，请重新登陆", "Choose Character");
+				parent.handleError("连接超时，请重新登陆", "选择角色");
 			} catch (InvalidVersionException e) {
 				logger.error(e, e);
-				parent.handleError("客户端与服务器版本不一致", "Choose Character");
+				parent.handleError("客户端与服务器版本不一致", "选择角色");
 			} catch (BannedAddressException e) {
 				logger.error(e, e);
-				parent.handleError("请重新登陆", "Choose Character");
+				parent.handleError("请重新登陆", "选择角色");
 			}
 		}
 	}

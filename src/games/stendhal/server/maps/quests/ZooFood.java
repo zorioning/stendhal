@@ -159,13 +159,13 @@ public class ZooFood extends AbstractQuest {
 	    items.put("bread",3);
 	    items.put("button mushroom",5);
 	    items.put("carrot",5);
-	    items.put("cheese",10);
+	    items.put("干酪",10);
 	    items.put("cherry",5);
 	    items.put("egg",5);
 		items.put("grain",20);
 	    items.put("ham",10);
 	    items.put("honey",5);
-		items.put("meat",15);
+		items.put("肉",15);
 		items.put("porcini",5);
 		items.put("roach",3);
 		items.put("salad",10);
@@ -186,7 +186,7 @@ public class ZooFood extends AbstractQuest {
 		// player is not willing to help
 		npc.add(ConversationStates.QUEST_OFFERED, ConversationPhrases.NO_MESSAGES,
 				null,
-				ConversationStates.ATTENDING, "Oh dear... I guess we're going to have to feed them with the deer...",
+				ConversationStates.ATTENDING, "Oh dear... I guess we're going to have to feed them with the 鹿...",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0)
 		);
 

@@ -105,7 +105,7 @@ public class KillSpiders extends AbstractQuest {
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new SetQuestAction(QUEST_SLOT, "started"));
-		//actions.add(new StartRecordingKillsAction(QUEST_SLOT,1,"spider", "poisonous spider", "giant spider"));
+		//actions.add(new StartRecordingKillsAction(QUEST_SLOT,1,"蜘蛛", "毒蜘蛛", "巨型蜘蛛"));
 
 
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -138,9 +138,9 @@ public class KillSpiders extends AbstractQuest {
 				new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						if (player.hasKilled("spider")
-								&& player.hasKilled("poisonous spider")
-								&& player.hasKilled("giant spider")) {
+						if (player.hasKilled("蜘蛛")
+								&& player.hasKilled("毒蜘蛛")
+								&& player.hasKilled("巨型蜘蛛")) {
 							raiser.say("Oh thank you my friend. Here you have something special, I got it from a Magican. Who he was I do not know. What the egg's good for, I do not know. I only know, it could be useful for you.");
 							final Item mythegg = SingletonRepository.getEntityManager()
 									.getItem("mythical egg");
@@ -164,9 +164,9 @@ public class KillSpiders extends AbstractQuest {
 				new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						if (player.getQuest(QUEST_SLOT, 1).equals("spider") &&
-							player.getQuest(QUEST_SLOT, 2).equals("poisonous spider") &&
-							player.getQuest(QUEST_SLOT, 3).equals("giant spider")
+						if (player.getQuest(QUEST_SLOT, 1).equals("蜘蛛") &&
+							player.getQuest(QUEST_SLOT, 2).equals("毒蜘蛛") &&
+							player.getQuest(QUEST_SLOT, 3).equals("巨型蜘蛛")
 							) {
 							raiser.say("Oh thank you my friend. Here you have something special, I got it from a Magican. Who he was I do not know. What the egg's good for, I do not know. I only know, it could be useful for you.");
 							final Item mythegg = SingletonRepository.getEntityManager()
@@ -224,18 +224,18 @@ public class KillSpiders extends AbstractQuest {
 		// we can be here only if player accepted this quest.
 		history.add("I do agree to help Morgrin.");
 		// checking which spiders player killed.
-		final boolean sp1 = "spider".equals(player.getQuest(QUEST_SLOT, 1));
-		final boolean sp2 = "poisonous spider".equals(player.getQuest(QUEST_SLOT, 2));
-		final boolean sp3 = "giant spider".equals(player.getQuest(QUEST_SLOT, 3));
+		final boolean sp1 = "蜘蛛".equals(player.getQuest(QUEST_SLOT, 1));
+		final boolean sp2 = "毒蜘蛛".equals(player.getQuest(QUEST_SLOT, 2));
+		final boolean sp3 = "巨型蜘蛛".equals(player.getQuest(QUEST_SLOT, 3));
 		final boolean sp = "start".equals(player.getQuest(QUEST_SLOT, 0));
 		if (sp1) {
 			history.add("I have killed a spider in the basement.");
 		}
 		if (sp2) {
-			history.add("I have killed a poisonous spider in the basement.");
+			history.add("I have killed a 毒蜘蛛 in the basement.");
 		}
 		if (sp3) {
-			history.add("I have killed a giant spider in the basement.");
+			history.add("I have killed a 巨型蜘蛛 in the basement.");
 		}
 		if (sp1 && sp2 && sp3) {
 			history.add("I have killed all 3 spiders in the basement. Now I go back to Morgrin to fetch my reward.");
@@ -243,17 +243,17 @@ public class KillSpiders extends AbstractQuest {
 
 		// here is support for old-style quest
 		if (sp) {
-			final boolean osp1 = player.hasKilled("spider");
-			final boolean osp2 = player.hasKilled("poisonous spider");
-			final boolean osp3 = player.hasKilled("giant spider");
+			final boolean osp1 = player.hasKilled("蜘蛛");
+			final boolean osp2 = player.hasKilled("毒蜘蛛");
+			final boolean osp3 = player.hasKilled("巨型蜘蛛");
 			if (osp1) {
 				history.add("I have killed a spider in the basement.");
 			}
 			if (osp2) {
-				history.add("I have killed a poisonous spider in the basement.");
+				history.add("I have killed a 毒蜘蛛 in the basement.");
 			}
 			if (osp3) {
-				history.add("I have killed a giant spider in the basement.");
+				history.add("I have killed a 巨型蜘蛛 in the basement.");
 			}
 			if (osp1 && osp2 && osp3) {
 				history.add("I have killed all 3 spiders in the basement. Now I go back to Morgrin to fetch my reward.");

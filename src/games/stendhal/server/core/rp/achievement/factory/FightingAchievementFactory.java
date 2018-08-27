@@ -34,22 +34,22 @@ public class FightingAchievementFactory extends AbstractAchievementFactory {
 	public Collection<Achievement> createAchievements() {
 		List<Achievement> fightingAchievements = new LinkedList<Achievement>();
 		fightingAchievements.add(createAchievement("fight.general.rats", "Rat Hunter", "Kill 15 rats", Achievement.EASY_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition("rat", 15)));
+													new PlayerHasKilledNumberOfCreaturesCondition("老鼠", 15)));
 		fightingAchievements.add(createAchievement("fight.general.exterminator", "Exterminator", "Kill 10 rats of each kind", Achievement.MEDIUM_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition(10, "rat", "caverat", "razorrat", "venomrat", "zombie rat", "giantrat", "ratman", "ratwoman", "archrat")));
-		fightingAchievements.add(createAchievement("fight.general.deer", "Deer Hunter", "Kill 25 deer", Achievement.EASY_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition("deer", 25)));
+													new PlayerHasKilledNumberOfCreaturesCondition(10, "老鼠", "洞穴老鼠", "利齿鼠", "毒液鼠", "zombie rat", "巨型鼠", "ratman", "ratwoman", "archrat")));
+		fightingAchievements.add(createAchievement("fight.general.deer", "Deer Hunter", "Kill 25 鹿", Achievement.EASY_BASE_SCORE, true,
+													new PlayerHasKilledNumberOfCreaturesCondition("鹿", 25)));
 		fightingAchievements.add(createAchievement("fight.general.boars", "Boar Hunter", "Kill 20 boar", Achievement.EASY_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition("boar", 20)));
-		fightingAchievements.add(createAchievement("fight.general.bears", "Bear Hunter", "Kill 10 black bears, 10 bears and 10 babybears", Achievement.EASY_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition(10, "bear", "black bear", "babybear")));
-		fightingAchievements.add(createAchievement("fight.general.foxes", "Fox Hunter", "Kill 20 foxes", Achievement.EASY_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition("fox", 20)));
+													new PlayerHasKilledNumberOfCreaturesCondition("野猪", 20)));
+		fightingAchievements.add(createAchievement("fight.general.bears", "Bear Hunter", "Kill 10 black bears, 10 bears and 10 幼熊s", Achievement.EASY_BASE_SCORE, true,
+													new PlayerHasKilledNumberOfCreaturesCondition(10, "熊", "黑熊", "幼熊")));
+		fightingAchievements.add(createAchievement("fight.general.狐狸es", "Fox Hunter", "Kill 20 狐狸es", Achievement.EASY_BASE_SCORE, true,
+													new PlayerHasKilledNumberOfCreaturesCondition("狐狸", 20)));
 		fightingAchievements.add(createAchievement("fight.general.safari", "Safari", "Kill 30 tigers, 30 lions and 50 elephants", Achievement.EASY_BASE_SCORE, true,
 													new AndCondition(
-															new PlayerHasKilledNumberOfCreaturesCondition("tiger", 30),
-															new PlayerHasKilledNumberOfCreaturesCondition("lion", 30),
-															new PlayerHasKilledNumberOfCreaturesCondition("elephant", 50)
+															new PlayerHasKilledNumberOfCreaturesCondition("老虎", 30),
+															new PlayerHasKilledNumberOfCreaturesCondition("狮子", 30),
+															new PlayerHasKilledNumberOfCreaturesCondition("大象", 50)
 															)));
 		fightingAchievements.add(createAchievement("fight.general.ents", "Wood Cutter", "Kill 10 ents, 10 entwifes and 10 old ents", Achievement.MEDIUM_BASE_SCORE, true,
 													new PlayerHasKilledNumberOfCreaturesCondition(10, "ent", "entwife", "old ent")));

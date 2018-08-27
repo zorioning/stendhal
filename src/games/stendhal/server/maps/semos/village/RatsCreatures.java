@@ -40,7 +40,7 @@ public class RatsCreatures implements ZoneConfigurator {
 
 		for(CreatureRespawnPoint p:zone.getRespawnPointList()) {
 			if(p!=null) {
-				if("rat".equals(p.getPrototypeCreature().getName())) {
+				if("老鼠".equals(p.getPrototypeCreature().getName())) {
 					// it is a rat, we will remove ai profile of stupid coward
 					final Creature creature = p.getPrototypeCreature();
 					final Map<String, String> aiProfiles = new HashMap<String, String>(creature.getAIProfiles());

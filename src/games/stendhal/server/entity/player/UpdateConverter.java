@@ -49,9 +49,9 @@ public abstract class UpdateConverter {
 			"longbow_+1", "lion_shield_+1"
 	);
 	private static final List<String> ITEM_NAMES_NEW = Arrays.asList(
-			"morning star", "leather scale armor", "pauldroned leather cuirass",
-			"enhanced chainmail", "iron scale armor", "golden chainmail",
-			"pauldroned iron cuirass", "golden twoside axe", "blue elf cloak", "enhanced mace",
+			"morning star", "鳞甲", "护肩皮胸甲",
+			"加固锁子甲", "铁鳞甲", "黄金锁子甲",
+			"护肩铁胸甲", "黄金双刃斧", "蓝灵斗篷", "enhanced mace",
 			"golden mace", "golden hammer", "aventail", "horned golden helmet",
 			"composite bow", "enhanced lion shield"
 	);
@@ -62,7 +62,7 @@ public abstract class UpdateConverter {
 			"chaos sorceror"
 	);
 	private static final List<String> ITEM_NAMES_NEW_0_66 = Arrays.asList(
-			"golden key", "silver key", "black book", "blue book",
+			"golden key", "silver key", "黑色的书", "蓝色的书",
 			"elder duergar", "black duergar", "elder giant",
 			"chaos sorcerer"
 	);
@@ -74,12 +74,12 @@ public abstract class UpdateConverter {
 		KILL_QUEST_NAMES = new HashMap<String, Pair<Integer, List<String>>>();
 		KILL_QUEST_NAMES.put("meet_hayunn",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
-					"rat")));
+					"老鼠")));
 
 		KILL_QUEST_NAMES.put("clean_storage",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
-					"rat",
-					"caverat","snake")));
+					"老鼠",
+					"洞穴老鼠","蛇")));
 
 		KILL_QUEST_NAMES.put("club_thorns",
 				new Pair<Integer, List<String>>(1, Arrays.asList(

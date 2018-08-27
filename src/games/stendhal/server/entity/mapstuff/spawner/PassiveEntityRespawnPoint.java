@@ -61,8 +61,8 @@ public class PassiveEntityRespawnPoint extends Entity implements TurnListener {
 		super(object);
 		this.growingItemName = growingItemName;
 		this.meanTurnsForRegrow = meanTurnsForRegrow;
-		setDescription("好像这个 "
-				+ growingItemName + " 正在发芽.");
+		setDescription("这些 "
+				+ growingItemName + " 好像正在发芽.");
 
 		setRPClass("plant_grower");
 		put("type", "plant_grower");
@@ -75,7 +75,7 @@ public class PassiveEntityRespawnPoint extends Entity implements TurnListener {
 			final int meanTurnsForRegrow) {
 		this.growingItemName = growingItemName;
 		this.meanTurnsForRegrow = meanTurnsForRegrow;
-		setDescription("好像这个 "
+		setDescription("好像这些 "
 				+ growingItemName + " 正在发芽.");
 
 		setRPClass("plant_grower");

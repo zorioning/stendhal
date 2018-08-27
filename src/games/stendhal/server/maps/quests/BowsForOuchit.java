@@ -54,7 +54,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li> 1 XP<li>
- * <li> Scale armor</li>
+ * <li> 鳞甲</li>
  * <li> Chain legs</li>
  * <li> Karma: 14<li>
  * </ul>
@@ -228,7 +228,7 @@ ask for horse hair.
 		 * Player asks about horse hair, but hasn't collected any - remind them.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("hair", "horse", "horse hairs"),
+				Arrays.asList("hair", "马尾", "horse hairs"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
 								new NotCondition (new PlayerHasItemWithHimCondition("horse hair"))),
 				ConversationStates.ATTENDING,
@@ -240,7 +240,7 @@ ask for horse hair.
 		 */
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("horse hair"));
-		reward.add(new EquipItemAction("scale armor", 1, true));
+		reward.add(new EquipItemAction("鳞甲", 1, true));
 		reward.add(new EquipItemAction("chain legs", 1, true));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 10.0));
@@ -250,7 +250,7 @@ ask for horse hair.
 and ask for horse hair.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("hair", "horse", "horse hairs"),
+				Arrays.asList("hair", "马尾", "horse hairs"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
 								new PlayerHasItemWithHimCondition("horse hair")),
 				ConversationStates.ATTENDING,

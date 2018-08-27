@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <creatures xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../creatures.xsd ">
   
@@ -20,8 +20,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[3,33]" probability="90.0"/>
-      <item value="dwarvish armor" quantity="[1,1]" probability="0.025"/>
-      <item value="twoside axe" quantity="[1,1]" probability="3.0"/>
+      <item value="矮人护甲" quantity="[1,1]" probability="0.025"/>
+      <item value="双刃斧" quantity="[1,1]" probability="3.0"/>
       <item value="golden hammer" quantity="[1,1]" probability="1.5"/>
     </drops>
     <equips>
@@ -49,9 +49,9 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>
-      <item value="plate armor" quantity="[1,1]" probability="7.0"/>
-      <item value="golden armor" quantity="[1,1]" probability="0.25"/>
-      <item value="battle axe" quantity="[1,1]" probability="4.5"/>
+      <item value="板甲" quantity="[1,1]" probability="7.0"/>
+      <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
+      <item value="战斧" quantity="[1,1]" probability="4.5"/>
       <item value="potion" quantity="[1,2]" probability="1.5"/>
       <item value="crown shield" quantity="[1,1]" probability="4.5"/>
     </drops>
@@ -108,8 +108,8 @@
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>      
       <item value="enhanced mace" quantity="[1,1]" probability="15.5"/>
-      <item value="stone boots" quantity="[1,1]" probability="1.5"/>
-      <item value="stone armor" quantity="[1,1]" probability="0.5"/>
+      <item value="石靴" quantity="[1,1]" probability="1.5"/>
+      <item value="石甲" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -136,9 +136,9 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>
-      <item value="golden boots" quantity="[1,1]" probability="0.9"/>
-      <item value="twoside axe" quantity="[1,1]" probability="3.0"/>
-      <item value="durin axe" quantity="[1,1]" probability="0.0010"/>
+      <item value="金靴子" quantity="[1,1]" probability="0.9"/>
+      <item value="双刃斧" quantity="[1,1]" probability="3.0"/>
+      <item value="都灵之斧" quantity="[1,1]" probability="0.0010"/>
     </drops>
     <equips>
     </equips>
@@ -196,11 +196,11 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>      
-      <item value="dwarvish armor" quantity="[1,1]" probability="0.5"/>
+      <item value="矮人护甲" quantity="[1,1]" probability="0.5"/>
       <item value="black legs" quantity="[1,1]" probability="0.0010"/>
-      <item value="halberd" quantity="[1,1]" probability="0.5"/>
-      <item value="golden twoside axe" quantity="[1,1]" probability="0.01"/>
-      <item value="black boots" quantity="[1,1]" probability="0.0010"/>
+      <item value="战戟" quantity="[1,1]" probability="0.5"/>
+      <item value="黄金双刃斧" quantity="[1,1]" probability="0.01"/>
+      <item value="黑靴子" quantity="[1,1]" probability="0.0010"/>
     </drops>
     <equips>
     </equips>
@@ -230,8 +230,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[30,97]" probability="90.0"/>      
-      <item value="stone armor" quantity="[1,1]" probability="0.1"/>
-      <item value="black armor" quantity="[1,1]" probability="0.0001"/>
+      <item value="石甲" quantity="[1,1]" probability="0.1"/>
+      <item value="黑色盔甲" quantity="[1,1]" probability="0.0001"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="0.5"/>
       <item value="dwarvish legs" quantity="[1,1]" probability="1.0" />
     </drops>
@@ -264,12 +264,12 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[9,22]" probability="100.0"/>
-      <item value="enhanced chainmail" quantity="[1,1]" probability="10.0"/>
-      <item value="scale armor" quantity="[1,1]" probability="2.0"/>
-      <item value="iron scale armor" quantity="[1,1]" probability="0.5"/>
-      <item value="axe" quantity="[1,1]" probability="3.0"/>
+      <item value="加固锁子甲" quantity="[1,1]" probability="10.0"/>
+      <item value="鳞甲" quantity="[1,1]" probability="2.0"/>
+      <item value="铁鳞甲" quantity="[1,1]" probability="0.5"/>
+      <item value="重斧" quantity="[1,1]" probability="3.0"/>
       <item value="enhanced mace" quantity="[1,1]" probability="0.5"/>
-      <item value="steel boots" quantity="[1,1]" probability="0.5"/>
+      <item value="铁靴" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -297,12 +297,12 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[9,25]" probability="100.0"/>
-      <item value="scale armor" quantity="[1,1]" probability="7.0"/>
-      <item value="iron scale armor" quantity="[1,1]" probability="2.5"/>
-      <item value="pauldroned iron cuirass" quantity="[1,1]" probability="0.35"/>
-      <item value="battle axe" quantity="[1,1]" probability="3.0"/>
+      <item value="鳞甲" quantity="[1,1]" probability="7.0"/>
+      <item value="铁鳞甲" quantity="[1,1]" probability="2.5"/>
+      <item value="护肩铁胸甲" quantity="[1,1]" probability="0.35"/>
+      <item value="战斧" quantity="[1,1]" probability="3.0"/>
       <item value="golden mace" quantity="[1,1]" probability="0.5"/>
-      <item value="steel boots" quantity="[1,1]" probability="1.0"/>
+      <item value="铁靴" quantity="[1,1]" probability="1.0"/>
       <item value="viking helmet" quantity="[1,1]" probability="3.0"/>
     </drops>
     <equips>
@@ -331,14 +331,14 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[9,30]" probability="100.0"/>
-      <item value="iron scale armor" quantity="[1,1]" probability="5.0"/>
-      <item value="golden chainmail" quantity="[1,1]" probability="1.0"/>
-      <item value="twoside axe" quantity="[1,1]" probability="2.5"/>
+      <item value="铁鳞甲" quantity="[1,1]" probability="5.0"/>
+      <item value="黄金锁子甲" quantity="[1,1]" probability="1.0"/>
+      <item value="双刃斧" quantity="[1,1]" probability="2.5"/>
       <item value="hammer" quantity="[1,1]" probability="0.5"/>
-      <item value="steel boots" quantity="[1,1]" probability="1.0"/>
-      <item value="dwarf cloak" quantity="[1,1]" probability="0.5"/>
+      <item value="铁靴" quantity="[1,1]" probability="1.0"/>
+      <item value="矮人斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="lion shield" quantity="[1,1]" probability="3.5"/>
-      <item value="halberd" quantity="[1,1]" probability="0.5"/>
+      <item value="战戟" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips/>
     <ai>
@@ -365,11 +365,11 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,33]" probability="100.0"/>
-      <item value="pauldroned iron cuirass" quantity="[1,1]" probability="4.5"/>
-      <item value="plate armor" quantity="[1,1]" probability="0.05"/>
-      <item value="twoside axe" quantity="[1,1]" probability="3.0"/>
-      <item value="bardiche" quantity="[1,1]" probability="0.05"/>
-      <item value="golden boots" quantity="[1,1]" probability="0.1"/>
+      <item value="护肩铁胸甲" quantity="[1,1]" probability="4.5"/>
+      <item value="板甲" quantity="[1,1]" probability="0.05"/>
+      <item value="双刃斧" quantity="[1,1]" probability="3.0"/>
+      <item value="大砍刀" quantity="[1,1]" probability="0.05"/>
+      <item value="金靴子" quantity="[1,1]" probability="0.1"/>
       <item value="golden hammer" quantity="[1,1]" probability="3.0"/>
     </drops>
     <equips>
@@ -398,12 +398,12 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,40]" probability="100.0"/>
-      <item value="plate armor" quantity="[1,1]" probability="8.0"/>
-      <item value="golden armor" quantity="[1,1]" probability="0.25"/>
-      <item value="bardiche" quantity="[1,1]" probability="0.45"/>
+      <item value="板甲" quantity="[1,1]" probability="8.0"/>
+      <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
+      <item value="大砍刀" quantity="[1,1]" probability="0.45"/>
       <item value="war hammer" quantity="[1,1]" probability="5.25"/>
-      <item value="stone boots" quantity="[1,1]" probability="0.0050"/>
-      <item value="stone cloak" quantity="[1,1]" probability="0.5"/>
+      <item value="石靴" quantity="[1,1]" probability="0.0050"/>
+      <item value="石斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="potion" quantity="[1,2]" probability="1.5"/>
       <item value="crown shield" quantity="[1,1]" probability="4.5"/>
     </drops>
@@ -437,10 +437,10 @@
     <corpse name="humanoid_2x2" harmless="bag_2x2" width="2" height="2"/>
     <drops>
       <item value="money" quantity="[50,200]" probability="100.0"/>
-      <item value="stone armor" quantity="[1,1]" probability="1.0"/>
-      <item value="magic plate armor" quantity="[1,1]" probability="0.0010"/>
-      <item value="magic twoside axe" quantity="[1,1]" probability="0.2"/>
-      <item value="durin axe" quantity="[1,1]" probability="0.01"/>
+      <item value="石甲" quantity="[1,1]" probability="1.0"/>
+      <item value="附魔甲" quantity="[1,1]" probability="0.0010"/>
+      <item value="魔法双刃斧" quantity="[1,1]" probability="0.2"/>
+      <item value="都灵之斧" quantity="[1,1]" probability="0.01"/>
       <item value="golden mace" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
@@ -471,7 +471,7 @@
     <drops>
       <item value="money" quantity="[50,200]" probability="100.0"/>
       <item value="mithril bar" quantity="[1,1]" probability="0.0010"/>
-      <item value="magic plate armor" quantity="[1,1]" probability="0.0010"/>
+      <item value="附魔甲" quantity="[1,1]" probability="0.0010"/>
       <item value="mithril nugget" quantity="[1,1]" probability="0.2"/>
       <item value="greater potion" quantity="[1,2]" probability="30.0"/>
       <item value="snowglobe" quantity="[1,1]" probability="15.0"/>
@@ -503,13 +503,13 @@
     <corpse name="humanoid_2x2" harmless="cloaked_brown_2x2" width="2" height="2"/>
     <drops>
       <item value="mega potion" quantity="[1,4]" probability="20.0"/>
-      <item value="black halberd" quantity="[1,1]" probability="0.25"/>
-      <item value="durin axe" quantity="[1,1]" probability="1.0"/>
+      <item value="黑戟" quantity="[1,1]" probability="0.25"/>
+      <item value="都灵之斧" quantity="[1,1]" probability="1.0"/>
       <item value="pie" quantity="[2,4]" probability="10.0"/>
       <item value="money" quantity="[3000,8000]" probability="100.0"/>
     </drops>
     <equips>
-      <slot name="lhand" item="durin axe" quantity="1"/>
+      <slot name="lhand" item="都灵之斧" quantity="1"/>
     </equips>
     <ai>
       <says>
@@ -541,11 +541,11 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[20,52]" probability="100.0"/>
-      <item value="golden armor" quantity="[1,1]" probability="1.5"/>
-      <item value="dwarvish armor" quantity="[1,1]" probability="0.25"/>
-      <item value="twoside axe" quantity="[1,1]" probability="5.0"/>
+      <item value="黄金铠甲" quantity="[1,1]" probability="1.5"/>
+      <item value="矮人护甲" quantity="[1,1]" probability="0.25"/>
+      <item value="双刃斧" quantity="[1,1]" probability="5.0"/>
       <item value="golden hammer" quantity="[1,1]" probability="5.5"/>
-      <item value="stone boots" quantity="[1,1]" probability="0.5"/>
+      <item value="石靴" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -573,10 +573,10 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[9,31]" probability="100.0"/>
-      <item value="dwarvish armor" quantity="[1,1]" probability="0.5"/>
-      <item value="bardiche" quantity="[1,1]" probability="1.0"/>
-      <item value="halberd" quantity="[1,1]" probability="0.05"/>
-      <item value="stone boots" quantity="[1,1]" probability="2.5"/>
+      <item value="矮人护甲" quantity="[1,1]" probability="0.5"/>
+      <item value="大砍刀" quantity="[1,1]" probability="1.0"/>
+      <item value="战戟" quantity="[1,1]" probability="0.05"/>
+      <item value="石靴" quantity="[1,1]" probability="2.5"/>
       <item value="golden helmet" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -605,12 +605,12 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[9,55]" probability="100.0"/>
-      <item value="dwarvish armor" quantity="[1,1]" probability="1.0"/>
-      <item value="unicorn shield" quantity="[1,1]" probability="3.5"/>
-      <item value="bardiche" quantity="[1,1]" probability="2.0"/>
-      <item value="halberd" quantity="[1,1]" probability="0.5"/>
-      <item value="stone boots" quantity="[1,1]" probability="1.5"/>
-      <item value="shadow cloak" quantity="[1,1]" probability="0.5"/>
+      <item value="矮人护甲" quantity="[1,1]" probability="1.0"/>
+      <item value="独角盾" quantity="[1,1]" probability="3.5"/>
+      <item value="大砍刀" quantity="[1,1]" probability="2.0"/>
+      <item value="战戟" quantity="[1,1]" probability="0.5"/>
+      <item value="石靴" quantity="[1,1]" probability="1.5"/>
+      <item value="影子斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="golden shield" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
@@ -639,12 +639,12 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
-      <item value="dwarvish armor" quantity="[1,1]" probability="1.2"/>
-      <item value="stone armor" quantity="[1,1]" probability="0.05"/>
+      <item value="矮人护甲" quantity="[1,1]" probability="1.2"/>
+      <item value="石甲" quantity="[1,1]" probability="0.05"/>
       <item value="black legs" quantity="[1,1]" probability="0.0050"/>
-      <item value="halberd" quantity="[1,1]" probability="1.5"/>
-      <item value="golden twoside axe" quantity="[1,1]" probability="0.05"/>
-      <item value="black boots" quantity="[1,1]" probability="0.0050"/>
+      <item value="战戟" quantity="[1,1]" probability="1.5"/>
+      <item value="黄金双刃斧" quantity="[1,1]" probability="0.05"/>
+      <item value="黑靴子" quantity="[1,1]" probability="0.0050"/>
       <item value="dwarvish legs" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
@@ -673,12 +673,12 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,45]" probability="100.0"/>
-      <item value="dwarvish armor" quantity="[1,1]" probability="2.0"/>
-      <item value="stone armor" quantity="[1,1]" probability="0.25"/>
-      <item value="golden twoside axe" quantity="[1,1]" probability="0.5"/>
-      <item value="magic twoside axe" quantity="[1,1]" probability="0.0050"/>
+      <item value="矮人护甲" quantity="[1,1]" probability="2.0"/>
+      <item value="石甲" quantity="[1,1]" probability="0.25"/>
+      <item value="黄金双刃斧" quantity="[1,1]" probability="0.5"/>
+      <item value="魔法双刃斧" quantity="[1,1]" probability="0.0050"/>
       <item value="vulcano hammer" quantity="[1,1]" probability="0.0050"/>
-      <item value="black boots" quantity="[1,1]" probability="0.035"/>
+      <item value="黑靴子" quantity="[1,1]" probability="0.035"/>
       <item value="greater potion" quantity="[2,4]" probability="3.0"/>
       <item value="magic plate shield" quantity="[1,1]" probability="0.5"/>
       <item value="dwarvish legs" quantity="[1,1]" probability="0.1"/>

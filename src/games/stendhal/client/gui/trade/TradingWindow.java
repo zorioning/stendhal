@@ -60,7 +60,8 @@ class TradingWindow extends InternalManagedWindow {
 	 * @param controller controller to use for the trade operations
 	 */
 	public TradingWindow(final TradingController controller) {
-		super("trade", "Trading");
+//		super("trade", "Trading");
+		super("trade", "交易中");
 		this.controller = controller;
 
 		final int padding = SBoxLayout.COMMON_PADDING;
@@ -73,17 +74,18 @@ class TradingWindow extends InternalManagedWindow {
 		 * Create the trading partner's side
 		 */
 		JComponent partnerColumn = SBoxLayout.createContainer(SBoxLayout.VERTICAL, padding);
-		partnersOfferLabel = new JLabel("Partner's offer");
+//		partnersOfferLabel = new JLabel("Partner's offer");
+		partnersOfferLabel = new JLabel("对方出价");
 		partnersOfferLabel.setAlignmentX(CENTER_ALIGNMENT);
 		partnerColumn.add(partnersOfferLabel);
 		partnerSlots = new SlotGrid(2, 2);
 		partnerColumn.add(partnerSlots);
 
-		partnerOfferStatus = new JLabel("Changing");
+		partnerOfferStatus = new JLabel("修改");
 		partnerOfferStatus.setAlignmentX(CENTER_ALIGNMENT);
 		partnerColumn.add(partnerOfferStatus);
 
-		acceptButton = new JButton("Accept");
+		acceptButton = new JButton("同意");
 		acceptButton.setEnabled(false);
 		acceptButton.addActionListener(new ActionListener() {
 			@Override
@@ -102,7 +104,7 @@ class TradingWindow extends InternalManagedWindow {
 		 * Create user offer's side
 		 */
 		JComponent myColumn = SBoxLayout.createContainer(SBoxLayout.VERTICAL, SBoxLayout.COMMON_PADDING);
-		JLabel myOfferLabel = new JLabel("My offer");
+		JLabel myOfferLabel = new JLabel("已方出价");
 		myOfferLabel.setAlignmentX(CENTER_ALIGNMENT);
 		myColumn.add(myOfferLabel);
 
@@ -111,11 +113,11 @@ class TradingWindow extends InternalManagedWindow {
 		myColumn.add(mySlots);
 		slotRow.add(myColumn);
 
-		myOfferStatus = new JLabel("Changing");
+		myOfferStatus = new JLabel("修改");
 		myOfferStatus.setAlignmentX(CENTER_ALIGNMENT);
 		myColumn.add(myOfferStatus);
 
-		offerButton = new JButton("Offer");
+		offerButton = new JButton("出价");
 		offerButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -132,7 +134,7 @@ class TradingWindow extends InternalManagedWindow {
 		content.add(new JSeparator(SwingConstants.HORIZONTAL), SLayout.EXPAND_X);
 
 		// Cancel button
-		cancelButton = new JButton("Cancel");
+		cancelButton = new JButton("取消");
 		cancelButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -159,8 +161,8 @@ class TradingWindow extends InternalManagedWindow {
 	 * @param name
 	 */
 	void setPartnerName(String name) {
-		setTitle("Trading with " + name);
-		partnersOfferLabel.setText(name + " offer");
+		setTitle("交易人： " + name);
+		partnersOfferLabel.setText(name + " 出价");
 	}
 
 	/**
@@ -191,19 +193,19 @@ class TradingWindow extends InternalManagedWindow {
 		switch (state) {
 		case NO_ACTIVE_TRADE:
 			indicator.setForeground(Color.GRAY);
-			indicator.setText("Inactive");
+			indicator.setText("等待");
 			break;
 		case MAKING_OFFERS:
 			indicator.setForeground(Color.GRAY);
-			indicator.setText("Changing");
+			indicator.setText("修改");
 			break;
 		case LOCKED:
 			indicator.setForeground(Color.WHITE);
-			indicator.setText("Offered");
+			indicator.setText("出价");
 			break;
 		case DEAL_WAITING_FOR_OTHER_DEAL:
 			indicator.setForeground(Color.GREEN);
-			indicator.setText("ACCEPTED");
+			indicator.setText("同意");
 			break;
 		default:
 

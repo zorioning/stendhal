@@ -79,7 +79,7 @@ public class BarmanNPC implements ZoneConfigurator {
 				offerings.put("wine", 15);
 				// more expensive than in normal taverns
 				offerings.put("bread", 50);
-				offerings.put("cheese", 20);
+				offerings.put("干酪", 20);
 				offerings.put("pie", 160);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 				addGoodbye("Goodbye.");

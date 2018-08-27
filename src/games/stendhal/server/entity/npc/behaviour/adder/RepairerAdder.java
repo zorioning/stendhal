@@ -70,7 +70,7 @@ public class RepairerAdder {
 
 		engine.add(ConversationStates.ATTENDING,
 				ConversationPhrases.OFFER_MESSAGES, null,
-				false, ConversationStates.ATTENDING, "我可以为你修好它.", null);
+				false, ConversationStates.ATTENDING, "马上为您修好它.", null);
 
 		ChatAction behaviourAcceptedAction =new ChatAction() {
 			@Override

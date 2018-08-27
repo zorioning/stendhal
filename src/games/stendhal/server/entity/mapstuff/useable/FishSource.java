@@ -69,8 +69,8 @@ public class FishSource extends PlayerActivityEntity {
 		this.itemName = itemName;
 		put("class", "source");
 		put("name", "fish_source");
-		setMenu("Fish");
-		setDescription("There is something in the water.");
+		setMenu("钓鱼");
+		setDescription("这里水中有些东西。");
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class FishSource extends PlayerActivityEntity {
 	 */
 	@Override
 	public String getName() {
-		return("fish in the water");
+		return("鱼在水中");
 	}
 
 	//
@@ -137,7 +137,7 @@ public class FishSource extends PlayerActivityEntity {
 			return true;
 		}
 
-		player.sendPrivateText("You need a fishing rod for fishing.");
+		player.sendPrivateText("需要一根钓具。");
 		return false;
 	}
 
@@ -173,13 +173,13 @@ public class FishSource extends PlayerActivityEntity {
 			player.equipOrPutOnGround(item);
 			player.incHarvestedForItem(itemName, 1);
 		    SingletonRepository.getAchievementNotifier().onObtain(player);
-			player.sendPrivateText("You caught a fish.");
+			player.sendPrivateText("你钓到一条鱼。");
 		} else {
 		    // TODO: find a sound for failure
             //this.addEvent(new SoundEvent(failSound, SOUND_RADIUS, 100, SoundLayer.AMBIENT_SOUND));
 			this.notifyWorldAboutChanges();
 
-			player.sendPrivateText("You didn't get a fish.");
+			player.sendPrivateText("没有钓到鱼。");
 		}
 		notifyWorldAboutChanges();
 	}
@@ -197,7 +197,7 @@ public class FishSource extends PlayerActivityEntity {
         notifyWorldAboutChanges();
 
 		// some feedback is needed.
-		player.sendPrivateText("You have started fishing.");
+		player.sendPrivateText("正在钓鱼中。");
 		addEvent(new ImageEffectEvent("water_splash", true));
 		notifyWorldAboutChanges();
 	}

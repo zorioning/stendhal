@@ -77,9 +77,9 @@
     </equipable>
   </item>
 
-  <item name="gold pan">
+  <item name="金盘子">
     <type class="tool" subclass="gold_pan" tileid="-1"/>
-    <description>You see a gold pan. It is the traditional tool to prospect for gold.</description>
+    <description>这是一个金盘子，它是个淘金工具， 有了它才能淘出金子。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

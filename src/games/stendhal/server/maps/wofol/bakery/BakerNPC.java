@@ -84,7 +84,7 @@ public class BakerNPC implements ZoneConfigurator {
 				addReply(Arrays.asList("button mushroom", "porcini"),
 				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
 				addReply("flour", "Mill near Semos produce from grain.");
-				addReply("cheese", "Cheese? I know not.");
+				addReply("干酪", "Cheese? I know not.");
 				addReply("tomato", "This grow in glass houses.");
 				addReply("ham", "The pig animal have ham.");
 				addHelp("I have work with #Leander, I #make #pizza.");
@@ -96,7 +96,7 @@ public class BakerNPC implements ZoneConfigurator {
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("flour", 2);
-				requiredResources.put("cheese", 1);
+				requiredResources.put("干酪", 1);
 				requiredResources.put("tomato", 1);
 				requiredResources.put("button mushroom", 2);
 				requiredResources.put("porcini", 1);

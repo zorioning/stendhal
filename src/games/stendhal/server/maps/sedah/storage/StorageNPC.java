@@ -80,7 +80,7 @@ public class StorageNPC implements ZoneConfigurator {
 				addJob("My job is to serve the #Scarlet Army.");
 				addReply(
 						"scarlet",
-						"The Scarlet Army is a special division of Kalavan's Army. They all wear a red armor.");
+						"The Scarlet Army is a special division of Kalavan's Army. They all wear a 红铠甲.");
 				addHelp("Have you seen this, no armor left here. At the moment I'm not able to serve the #Scarlet Army!");
 				addOffer("Bring me some armor and I pay you out!");
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(SingletonRepository.getShopList().get("buyred")), false);

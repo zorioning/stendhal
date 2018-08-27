@@ -69,14 +69,16 @@ public class SellerAdder {
 									+ ".", null);
 		}
 
-		engine.add(ConversationStates.ATTENDING, "buy", new SentenceHasErrorCondition(),
+//		engine.add(ConversationStates.ATTENDING, "buy", new SentenceHasErrorCondition(),
+		engine.add(ConversationStates.ATTENDING, ConversationPhrases.BUY_MESSAGES, new SentenceHasErrorCondition(),
 				false, ConversationStates.ATTENDING,
 				null, new ComplainAboutSentenceErrorAction());
 
 		ChatCondition condition = new AndCondition(
 			new NotCondition(new SentenceHasErrorCondition()),
 			new NotCondition(sellerBehaviour.getTransactionCondition()));
-		engine.add(ConversationStates.ATTENDING, "buy", condition,
+//		engine.add(ConversationStates.ATTENDING, "buy", condition,
+		engine.add(ConversationStates.ATTENDING, ConversationPhrases.BUY_MESSAGES, condition,
 			false, ConversationStates.ATTENDING,
 			null, sellerBehaviour.getRejectedTransactionAction());
 
@@ -84,9 +86,11 @@ public class SellerAdder {
 			new NotCondition(new SentenceHasErrorCondition()),
 			sellerBehaviour.getTransactionCondition());
 
-		engine.add(ConversationStates.ATTENDING, "buy", condition, false,
+//		engine.add(ConversationStates.ATTENDING, "buy", condition, false,
+		engine.add(ConversationStates.ATTENDING, ConversationPhrases.BUY_MESSAGES, condition, false,
 				ConversationStates.ATTENDING, null,
 				new BehaviourAction(sellerBehaviour, "buy", "sell") {
+//				new BehaviourAction(sellerBehaviour, ConversationPhrases.BUY_MESSAGES, ConversationPhrases.SELL_MESSAGES) {
 					@Override
 					public void fireRequestOK(final ItemParserResult res, final Player player, final Sentence sentence, final EventRaiser raiser) {
 						String chosenItemName = res.getChosenItemName();
@@ -124,17 +128,17 @@ public class SellerAdder {
 							if (player.isBadBoy()) {
 								price = (int) (SellerBehaviour.BAD_BOY_BUYING_PENALTY * price);
 
-								builder.append("朋友，我是小本买卖，但你也不能太欺负人，所以,  ");
+								builder.append("朋友，我是小本买卖，但你也不能欺人太甚，所以, ");
+								builder.append(res.getAmount()+" 件 ");
 								builder.append( chosenItemName);
 							} else {
+								builder.append(res.getAmount()+" 件 ");
 								builder.append( chosenItemName);
 							}
 
-							builder.append(" 最少要给 ");
+							builder.append(" 最少要付 ");
 							builder.append(price);
-							builder.append(". 你看 ");
-							builder.append(res.getAmount());
-							builder.append("的这个价格可以吧 ?");
+							builder.append(". 你觉得如何？");
 
 							raiser.say(builder.toString());
 
@@ -167,7 +171,7 @@ public class SellerAdder {
 		engine.add(ConversationStates.BUY_PRICE_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				false, ConversationStates.ATTENDING,
-				"Ok, 还需要其他东西吗?", null);
+				"Ok, 还有其他事吗?", null);
 	}
 
 }

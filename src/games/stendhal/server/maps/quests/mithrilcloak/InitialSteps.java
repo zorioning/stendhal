@@ -65,7 +65,7 @@ class InitialSteps {
 				null);
 
 		final Map<String,Integer> items = new HashMap<String, Integer>();
-		items.put("leather armor",1);
+		items.put("皮甲",1);
 		items.put("oil",1);
 		items.put("bobbin",1);
 
@@ -124,7 +124,7 @@ class InitialSteps {
 		npc.addReply(Arrays.asList("oil", "can of oil", "can"), "The only oil I have ever had is very fishy smelling. I expect a fisherman made it.");
 		npc.addReply("bobbin", "Only dwarf smiths make bobbins, no-one else has nimble enough fingers. Try #Alrak.");
 		npc.addReply("Alrak", "I thought you kids all knew Alrak, the only dwarf that kobolds have ever liked. Or maybe he's the only dwarf to ever like kobolds, I've never been sure which ...");
-		npc.addReply(Arrays.asList("leather armor", "suit of leather armor", "suit"), "Yes, well, it needs a piece of leather for the mechanism, so I can cut a piece from that.");
+		npc.addReply(Arrays.asList("皮甲", "suit of 皮甲", "suit"), "Yes, well, it needs a piece of leather for the mechanism, so I can cut a piece from that.");
 	}
 
 
@@ -184,7 +184,7 @@ class InitialSteps {
 								 new QuestStartedCondition(mithrilcloak.getShieldQuestSlot())
 								 ),
 				ConversationStates.ATTENDING,
-				"Oh, I see you are already on a quest to obtain a mithril shield. You see, I was going to offer you a mithril cloak. But you should finish that first. Come back when you've finished the mithril shield quest and we will speak again.",
+				"Oh, I see you are already on a quest to obtain a mithril shield. You see, I was going to offer you a 黑曜石斗篷. But you should finish that first. Come back when you've finished the mithril shield quest and we will speak again.",
 				new SetQuestAction(mithrilcloak.getQuestSlot(), "need_mithril_shield"));
 
 			// player asks for quest but they haven't completed mithril shield quest

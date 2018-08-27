@@ -117,16 +117,16 @@ public class ContMoveAndStrengthenOnlinePlayers extends ScriptImpl {
 				Item legs = SingletonRepository.getEntityManager().getItem("elvish legs");
 				player.equip("legs", legs);
 			}
-			if(!player.isEquipped("killer boots")) {
+			if(!player.isEquipped("杀手之靴")) {
 				Item first = (Item) player.getSlot("feet").getFirst();
 				player.drop(first);
-				Item boots = SingletonRepository.getEntityManager().getItem("killer boots");
+				Item boots = SingletonRepository.getEntityManager().getItem("杀手之靴");
 				player.equip("feet", boots);
 			}
-			if(!player.isEquipped("green dragon cloak")) {
+			if(!player.isEquipped("绿龙斗篷")) {
 				Item first = (Item) player.getSlot("cloak").getFirst();
 				player.drop(first);
-				Item cloak = SingletonRepository.getEntityManager().getItem("green dragon cloak");
+				Item cloak = SingletonRepository.getEntityManager().getItem("绿龙斗篷");
 				player.equip("cloak", cloak);
 			}
 		}

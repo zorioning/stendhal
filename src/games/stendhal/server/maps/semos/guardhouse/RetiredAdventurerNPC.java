@@ -64,7 +64,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 
 				final List<ChatAction> actions = new LinkedList<ChatAction>();
 				actions.add(new SetQuestAction(QUEST_SLOT, 0, "start"));
-				actions.add(new StartRecordingKillsAction(QUEST_SLOT, 1, "rat", 0, 1));
+				actions.add(new StartRecordingKillsAction(QUEST_SLOT, 1, "老鼠", 0, 1));
 
 				add(ConversationStates.IDLE,
 						ConversationPhrases.GREETING_MESSAGES,

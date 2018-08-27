@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <creatures xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../creatures.xsd ">
   
@@ -81,9 +81,9 @@
 
   <!-- START: arachnid -->
   
-  <creature name="spider">
+  <creature name="蜘蛛">
     <type class="animal" subclass="spider" tileid="animal.png:18"/>
-    <description>You see a spider. It makes a giant spider web to trap you!</description>
+    <description>一只蜘蛛，它织了一张大网正等着你</description>
     <attributes>
       <atk value="213"/>
       <def value="56"/>
@@ -106,9 +106,9 @@
     </ai>
   </creature>
   
-  <creature name="poisonous spider">
+  <creature name="毒蜘蛛">
     <type class="animal" subclass="poisonous_spider" tileid="animal.png:17"/>
-    <description>You see a poisonous spider. Be careful! Its poison is very strong! It will make you very weak and can probably kill you!</description>
+    <description>一只毒蜘蛛，它毒性很强，一量中毒有可能要了你的小命</description>
     <attributes>
       <atk value="244"/>
       <def value="61"/>
@@ -136,9 +136,9 @@
     </ai>
   </creature>
   
-  <creature name="giant spider">
+  <creature name="巨型蜘蛛">
     <type class="huge_animal" subclass="giant_spider" tileid="huge_animal.png:5"/>
-    <description>You see a giant spider. It has very long legs which are quite dangerous.</description>
+    <description>一只巨型蜘蛛，长着八只大长腿，非常危险。</description>
     <attributes>
       <atk value="709"/>
       <def value="94"/>
@@ -172,9 +172,9 @@
   
   <!-- START: crustacean -->
   
-  <creature name="crab">
+  <creature name="螃蟹">
     <type class="animal" subclass="crab" tileid="animal.png:8"/>
-    <description>You see a little crab that comes from the beach, be careful of its pincers.</description>
+    <description>一只生活在海滩的螃蟹，小心它的螯</description>
     <attributes>
       <atk value="8"/>
       <def value="4"/>
@@ -187,13 +187,13 @@
     <respawn value="900"/>
     <corpse name="small_animal"/>
     <drops>
-      <item value="meat" quantity="[1,1]" probability="60.0"/>
+      <item value="肉" quantity="[1,1]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="click-clack-click"/>
+        <noise state="idle follow fight" value="咯-咯-咯"/>
         <sound value="click-clack-1" />
         <sound value="click-1" />
       </says>
@@ -222,7 +222,7 @@
     <respawn value="900"/>
     <corpse name="small_winged" harmless="feathered" />
     <drops>
-      <item value="chicken" quantity="[1,1]" probability="70.0"/>
+      <item value="鸡腿" quantity="[1,1]" probability="70.0"/>
     </drops>
     <equips>
     </equips>
@@ -240,9 +240,9 @@
     </ai>
   </creature>
   
-  <creature name="chicken">
+  <creature name="鸡">
     <type class="animal" subclass="chicken" tileid="animal.png:25"/>
-    <description>You see a chicken, isn't it nice?</description>
+    <description>一只鸡，不好看吗？</description>
     <attributes>
       <atk value="32"/>
       <def value="7"/>
@@ -255,14 +255,14 @@
     <respawn value="900"/>
 	<corpse name="small_winged" harmless="feathered" />    
     <drops>
-      <item value="chicken" quantity="[1,2]" probability="50.0"/>
+      <item value="鸡腿" quantity="[1,2]" probability="50.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="cluck cluck cluck"/>
-        <noise state="idle follow fight" value="cluck cluck"/>
+        <noise state="idle follow fight" value="咯 咯 咯"/>
+        <noise state="idle follow fight" value="咯 咯"/>
         <sound value="chicken-2"/>
       </says>
       <profile name="animal"/>
@@ -303,9 +303,9 @@
     </ai>
   </creature>
   
-  <creature name="mother hen">
+  <creature name="老母鸡">
     <type class="farm_animal" subclass="hen" tileid="farm_animal.png:6"/>
-    <description>You see a mother hen, she will probably hurt you if you touch her sons.</description>
+    <description>一只母鸡,只要你不动小鸡，它不会伤害你</description>
     <attributes>
       <atk value="29"/>
       <def value="6"/>
@@ -318,7 +318,7 @@
     <respawn value="900"/>
     <corpse name="small_winged" harmless="feathered" />
     <drops>
-      <item value="chicken" quantity="[1,2]" probability="70.0"/>
+      <item value="鸡腿" quantity="[1,2]" probability="70.0"/>
     </drops>
     <equips>
     </equips>
@@ -349,14 +349,14 @@
     <respawn value="900"/>
     <corpse name="small_animal" harmless="feathered"/>
     <drops>
-      <item value="meat" quantity="[2,4]" probability="60.0"/>
+      <item value="肉" quantity="[2,4]" probability="60.0"/>
       <item value="cod" quantity="[2,3]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Oou! Oou!"/>
+        <noise state="idle follow fight" value="欧! 欧!"/>
         <noise state="idle follow fight" value="*flap* *flap*"/>
         <sound value="penguin-1" />
         <sound value="penguin-2" />
@@ -367,9 +367,9 @@
     </ai>
   </creature>
   
-  <creature name="pigeon">
+  <creature name="鸽子">
     <type class="animal" subclass="pigeon" tileid="animal.png:23"/>
-    <description>You see a pigeon, it loves the little seeds.</description>
+    <description>一只鸽子，它喜欢吃种子</description>
     <attributes>
       <atk value="36"/>
       <def value="7"/>
@@ -382,7 +382,7 @@
     <respawn value="900"/>
     <corpse name="small_winged" harmless="feathered" />
     <drops>
-      <item value="chicken" quantity="[1,2]" probability="40.0"/>
+      <item value="鸡腿" quantity="[1,2]" probability="40.0"/>
     </drops>
     <equips>
     </equips>
@@ -402,9 +402,9 @@
   
   <!-- START: insect -->
   
-  <creature name="killer bee">
+  <creature name="杀人蜂">
     <type class="animal" subclass="killer_bee" tileid="animal.png:27"/>
-    <description>You see a killer bee which will sting you to death!</description>
+    <description>一只杀人蜂，惹了它会被叮</description>
     <attributes>
       <atk value="170"/>
       <def value="25"/>
@@ -421,12 +421,12 @@
       <item value="poison" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
-      <slot name="lhand" item="steel arrow" quantity="10000"/>
+      <slot name="lhand" item="s铁箭" quantity="10000"/>
       <slot name="rhand" item="dummy_ranged" quantity="1"/>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="BbzzZZzzz!"/>
+        <noise state="idle follow fight" value="嗡嗡"/>
         <sound value="bee-1"/>
       </says>
       <profile name="poisonous" params="10,poison"/>
@@ -441,9 +441,9 @@
   
   <!-- START: mammal -->
   
-  <creature name="deer" condition="!stendhal.christmas">
+  <creature name="鹿" condition="!stendhal.christmas">
     <type class="animal" subclass="deer" tileid="animal.png:9"/>
-    <description>You see a defenseless deer, do not have fear of it.</description>
+    <description>一只不设防的鹿，不用害怕它们。</description>
     <attributes>
       <atk value="8"/>
       <def value="3"/>
@@ -456,7 +456,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,3]" probability="60.0"/>
+      <item value="肉" quantity="[1,3]" probability="60.0"/>
       <item value="ham" quantity="[1,2]" probability="30.0"/>
       <item value="antidote" quantity="[1,1]" probability="5.0"/>
     </drops>
@@ -470,9 +470,9 @@
     </ai>
   </creature>
   
-  <creature name="deer" condition="stendhal.christmas">
+  <creature name="驯鹿" condition="stendhal.christmas">
     <type class="animal" subclass="reindeer" tileid="animal.png:9"/>
-    <description>You see a reindeer running freely, and wonder if he is one of Santa's special helpers.</description>
+    <description>一匹自由自在的鹿，它是圣诞老人的好帮手。</description>
     <attributes>
       <atk value="8"/>
       <def value="3"/>
@@ -485,7 +485,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,3]" probability="60.0"/>
+      <item value="肉" quantity="[1,3]" probability="60.0"/>
       <item value="ham" quantity="[1,2]" probability="30.0"/>
       <item value="antidote" quantity="[1,1]" probability="5.0"/>
     </drops>
@@ -499,9 +499,9 @@
     </ai>
   </creature>
   
-  <creature name="mouse">
+  <creature name="小老鼠">
     <type class="small_animal" subclass="mouse" tileid="farm_animal.png:8"/>
-    <description>You see a small mouse that seems to be very hungry.</description>
+    <description>一只饥饿的小老鼠</description>
     <attributes>
       <atk value="8"/>
       <def value="3"/>
@@ -514,13 +514,13 @@
     <respawn value="900"/>
     <corpse name="small_animal" harmless="tail_rodent" />
     <drops>
-      <item value="cheese" quantity="[1,2]" probability="100.0"/>
+      <item value="干酪" quantity="[1,2]" probability="100.0"/>
      </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="squeak ... squeak!"/>
+        <noise state="idle follow fight" value="吱...吱..."/>
         <sound value="mouse-2"/>
       </says>
       <profile name="animal"/>
@@ -530,9 +530,9 @@
     </ai>
   </creature>
   
-  <creature name="rat">
+  <creature name="老鼠">
     <type class="small_animal" subclass="rat" tileid="small_animal.png:1"/>
-    <description>You see a small rat that seems to be extremely hungry.</description>
+    <description>一只老鼠，它看起来饿极了</description>
     <attributes>
       <atk value="8"/>
       <def value="3"/>
@@ -545,15 +545,15 @@
     <respawn value="900"/>
     <corpse name="small_animal" harmless="tail_rodent"/>
     <drops>
-      <item value="cheese" quantity="[1,1]" probability="50.0"/>
+      <item value="干酪" quantity="[1,1]" probability="50.0"/>
       <item value="money" quantity="[1,3]" probability="70.0"/>
-      <item value="club" quantity="[1,1]" probability="5.0"/>
+      <item value="木棍" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Squeak! Squeak!"/>
+        <noise state="idle follow fight" value="吱!... 吱!..."/>
         <sound value="rats-2"/>
         <sound value="rats-41"/>
       </says>
@@ -564,9 +564,9 @@
     </ai>
   </creature>
   
-  <creature name="bat">
+  <creature name="蝙蝠">
     <type class="animal" subclass="bat" tileid="animal.png:0"/>
-    <description>You see a bat, it will seek your blood, don't be distracted...</description>
+    <description>一只蝙蝠,它正窥视你的鲜血，小心点。</description>
     <attributes>
       <atk value="36"/>
       <def value="7"/>
@@ -579,7 +579,7 @@
     <respawn value="900"/>
    	<corpse name="small_winged" harmless="winged_bat" />
     <drops>
-      <item value="meat" quantity="[1,2]" probability="50.0"/>
+      <item value="肉" quantity="[1,2]" probability="50.0"/>
     </drops>
     <equips>
     </equips>
@@ -595,9 +595,9 @@
     </ai>
   </creature>
   
-  <creature name="caverat">
+  <creature name="洞穴老鼠">
     <type class="small_animal" subclass="caverat" tileid="small_animal.png:0"/>
-    <description>You see a caverat which is dirty and loves the dungeons.</description>
+    <description>一只洞穴老鼠，浑身脏臭喜欢呆在地牢中。</description>
     <attributes>
       <atk value="34"/>
       <def value="6"/>
@@ -611,7 +611,7 @@
     <corpse name="small_animal" harmless="tail_rodent" />
     <drops>
       <item value="money" quantity="[1,6]" probability="90.0"/>
-      <item value="cheese" quantity="[1,2]" probability="60.0"/>
+      <item value="干酪" quantity="[1,2]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
@@ -627,9 +627,9 @@
     </ai>
   </creature>
   
-  <creature name="piglet">
+  <creature name="小猪">
     <type class="farm_animal" subclass="piglet" tileid="farm_animal.png:9"/>
-    <description>You see a piglet, a bit dirty.</description>
+    <description>一只小猪, 身上有点脏</description>
     <attributes>
       <atk value="31"/>
       <def value="7"/>
@@ -648,9 +648,9 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="oink"/>
-        <noise state="idle follow fight" value="oink oink"/>
-        <noise state="idle follow fight" value="shnuffle"/>
+        <noise state="idle follow fight" value="呼噜"/>
+        <noise state="idle follow fight" value="哼nnnn哼nnnn"/>
+        <noise state="idle follow fight" value="哼～哼"/>
         <sound value="pig-3" />
       </says>
       <profile name="animal"/>
@@ -658,9 +658,9 @@
     </ai>
   </creature>
   
-  <creature name="babybear">
+  <creature name="幼熊">
     <type class="animal" subclass="babybear" tileid="animal.png:21"/>
-    <description>You see a babybear, isn't it sweet?</description>
+    <description>一只幼熊, 它不是很乖吗??</description>
     <attributes>
       <atk value="48"/>
       <def value="7"/>
@@ -673,14 +673,14 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,2]" probability="50.0"/>
+      <item value="肉" quantity="[1,2]" probability="50.0"/>
       <item value="ham" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Roar!"/>
+        <noise state="idle follow fight" value="吼!"/>
       </says>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -688,9 +688,9 @@
     </ai>
   </creature>
   
-  <creature name="beaver">
+  <creature name="海狸">
     <type class="farm_animal" subclass="beaver" tileid="farm_animal.png:0"/>
-    <description>You see a beaver. It likes to build dams in the river.</description>
+    <description>You see a 海狸. It likes to build dams in the river.</description>
     <attributes>
       <atk value="53"/>
       <def value="8"/>
@@ -703,7 +703,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,2]" probability="80.0"/>
+      <item value="肉" quantity="[1,2]" probability="80.0"/>
       <item value="wood" quantity="[1,2]" probability="20.0"/>
     </drops>
     <equips>
@@ -715,9 +715,9 @@
     </ai>
   </creature>
   
-  <creature name="big bad wolf">
+  <creature name="大灰狼">
     <type class="animal" subclass="wolf" tileid="animal.png:26"/>
-	<description>You see a big bad wolf. It is really wild, hungry and really dangerous!</description>
+	<description>一只大灰狼. 还是头饿狼，相当危险！</description>
     <attributes>
       <atk value="46"/>
       <def value="9"/>
@@ -732,13 +732,13 @@
     <corpse name="animal"/>
     <drops>
       <item value="money" quantity="[2,5]" probability="70.0"/>
-      <item value="meat" quantity="[1,4]" probability="60.0"/>
+      <item value="肉" quantity="[1,4]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Aooooooouuhhh!!"/>
+        <noise state="idle follow fight" value="呦oooooo呜uuhhh!!"/>
         <sound value="howl-1"/>
         <sound value="howl-5"/>
         <sound value="howl-2"/>
@@ -751,9 +751,9 @@
     </ai>
   </creature>
   
-  <creature name="boar">
+  <creature name="野猪">
     <type class="animal" subclass="boar" tileid="animal.png:4"/>
-    <description>You see a boar, they are pretty wild!</description>
+    <description>一只野猪，相当的野</description>
     <attributes>
       <atk value="53"/>
       <def value="7"/>
@@ -782,9 +782,9 @@
     </ai>
   </creature>
   
-  <creature name="bull">
+  <creature name="公牛">
     <type class="farm_animal" subclass="bull" tileid="farm_animal.png:1"/>
-    <description>You see a bull, run away!!!</description>
+    <description>一头公年，快跑！</description>
     <attributes>
       <atk value="47"/>
       <def value="9"/>
@@ -797,13 +797,13 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,3]" probability="80.0"/>
+      <item value="肉" quantity="[1,3]" probability="80.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="MOOOOO!!!"/>
+        <noise state="idle follow fight" value="哞OOOO!!!"/>
         <sound value="cow-2" />
       </says>
       <profile name="animal"/>
@@ -812,9 +812,9 @@
     </ai>
   </creature>
   
-  <creature name="cow">
+  <creature name="母牛">
     <type class="farm_animal" subclass="cow" tileid="farm_animal.png:3"/>
-    <description>You see a cow, taste her delicious milk.</description>
+    <description>一头母牛，尝尝它的牛奶</description>
     <attributes>
       <atk value="51"/>
       <def value="9"/>
@@ -827,14 +827,14 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,2]" probability="80.0"/>
+      <item value="肉" quantity="[1,2]" probability="80.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Moooo       moooo           mooooooo"/>
-        <noise state="idle follow fight" value="mooooo"/>
+        <noise state="idle follow fight" value="Moooo       moooo           哞ooooooo"/>
+        <noise state="idle follow fight" value="哞ooooo"/>
         <sound value="cow-1" />
         <sound value="cowbell-1" />
       </says>
@@ -842,9 +842,9 @@
     </ai>
   </creature>
   
-  <creature name="fox">
+  <creature name="狐狸">
     <type class="animal" subclass="fox" tileid="animal.png:24"/>
-	<description>You see a fox, it becomes extinct!</description>
+	<description>一只狐狸，很少见，快灭绝了</description>
     <attributes>
       <atk value="55"/>
       <def value="8"/>
@@ -857,7 +857,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,4]" probability="60.0"/>
+      <item value="肉" quantity="[1,4]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
@@ -868,9 +868,9 @@
     </ai>
   </creature>
   
-  <creature name="goat">
+  <creature name="山羊">
     <type class="farm_animal" subclass="goat" tileid="farm_animal.png:4"/>
-    <description>You see a goat, which is wild and lives in the mountain.</description>
+    <description>一只生活在山林中的山羊。</description>
     <attributes>
       <atk value="52"/>
       <def value="9"/>
@@ -883,7 +883,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,2]" probability="80.0"/>
+      <item value="肉" quantity="[1,2]" probability="80.0"/>
     </drops>
     <equips>
     </equips>
@@ -898,9 +898,9 @@
     </ai>
   </creature>
   
-  <creature name="horse">
+  <creature name="马">
     <type class="farm_animal" subclass="horse" tileid="farm_animal.png:7"/>
-    <description>You see a horse, don't slap it or it will run away!</description>
+    <description>一匹马，不要乱拍，它可能乱跑！</description>
     <attributes>
       <atk value="48"/>
       <def value="10"/>
@@ -913,7 +913,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,2]" probability="80.0"/>
+      <item value="肉" quantity="[1,2]" probability="80.0"/>
     </drops>
     <equips>
     </equips>
@@ -929,9 +929,9 @@
     </ai>
   </creature>
   
-  <creature name="monkey">
+  <creature name="猴子">
     <type class="animal" subclass="monkey" tileid="animal.png:15"/>
-    <description>You see a monkey, would you like to offer it a banana?</description>
+    <description>一只猴子，要给他根香蕉吗？?</description>
     <attributes>
       <atk value="55"/>
       <def value="9"/>
@@ -945,14 +945,14 @@
     <corpse name="tiny_humanoid"/>
     <drops>
       <item value="money" quantity="[2,5]" probability="70.0"/>
-      <item value="meat" quantity="[1,4]" probability="60.0"/>
+      <item value="肉" quantity="[1,4]" probability="60.0"/>
       <item value="ham" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Aooooooouuhhh!!"/>
+        <noise state="idle follow fight" value="噢呜ooooooouu!!"/>
         <sound value="monkey-1" />
         <sound value="monkey-2" />
         <sound value="monkey-3" />
@@ -963,9 +963,9 @@
     </ai>
   </creature>
   
-  <creature name="panda">
+  <creature name="大熊猫">
     <type class="animal" subclass="pandabear" tileid="animal.png:22"/>
-    <description>You see a panda which comes from an exotic land.</description>
+    <description>一只大熊猫，这是国宝，不要伤害它！</description>
     <attributes>
       <atk value="48"/>
       <def value="7"/>
@@ -978,14 +978,14 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,3]" probability="50.0"/>
+      <item value="肉" quantity="[1,3]" probability="50.0"/>
       <item value="ham" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Roar!"/>
+        <noise state="idle follow fight" value="吼!"/>
       </says>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -993,9 +993,9 @@
     </ai>
   </creature>
   
-  <creature name="ram">
+  <creature name="公羊">
     <type class="farm_animal" subclass="ram" tileid="farm_animal.png:10"/>
-    <description>You see a ram, maybe you are able to shear it?</description>
+    <description>一只公羊，也许你可以剪羊毛？?</description>
     <attributes>
       <atk value="52"/>
       <def value="7"/>
@@ -1008,7 +1008,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,1]" probability="40.0"/>
+      <item value="肉" quantity="[1,1]" probability="40.0"/>
     </drops>
     <equips>
     </equips>
@@ -1023,9 +1023,9 @@
     </ai>
   </creature>
   
-  <creature name="white horse">
+  <creature name="白马">
     <type class="farm_animal" subclass="white_horse" tileid="farm_animal.png:11"/>
-    <description>You see a white horse, they love to stay with their brown friends.</description>
+    <description>一匹白马，它们喜欢和棕马呆在一起。</description>
     <attributes>
       <atk value="50"/>
       <def value="9"/>
@@ -1038,7 +1038,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,2]" probability="80.0"/>
+      <item value="肉" quantity="[1,2]" probability="80.0"/>
     </drops>
     <equips>
     </equips>
@@ -1054,9 +1054,9 @@
     </ai>
   </creature>
   
-  <creature name="wolf">
+  <creature name="狼">
     <type class="animal" subclass="wolf" tileid="animal.png:20"/>
-	<description>You see a wolf. It is wild and very hungry!</description>
+	<description>这是一只狼. 它这么疯狂一定很饿!</description>
     <attributes>
       <atk value="46"/>
       <def value="9"/>
@@ -1070,13 +1070,13 @@
     <corpse name="animal"/>
     <drops>
       <item value="money" quantity="[2,5]" probability="70.0"/>
-      <item value="meat" quantity="[1,4]" probability="60.0"/>
+      <item value="肉" quantity="[1,4]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Aooooooouuhhh!!"/>
+        <noise state="idle follow fight" value="呦呜oooooouuhhh!!"/>
         <sound value="howl-1"/>
         <sound value="howl-5"/>
         <sound value="howl-2"/>
@@ -1088,9 +1088,9 @@
     </ai>
   </creature>
   
-  <creature name="bear">
+  <creature name="熊">
     <type class="animal" subclass="bear" tileid="animal.png:1"/>
-    <description>You see a bear. You are lucky and found it awake.</description>
+    <description>这是了一只熊，幸运的是它睡着了。</description>
     <attributes>
       <atk value="80"/>
       <def value="14"/>
@@ -1103,14 +1103,14 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[3,7]" probability="50.0"/>
+      <item value="肉" quantity="[3,7]" probability="50.0"/>
       <item value="ham" quantity="[1,3]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Roar!"/>
+        <noise state="idle follow fight" value="吼!"/>
         <sound value="bear-1"/>
         <sound value="bear-2"/>
         <sound value="bear-3"/>
@@ -1121,7 +1121,7 @@
     </ai>
   </creature>
   
-  <creature name="lion">
+  <creature name="狮子">
     <type class="animal" subclass="lion" tileid="animal.png:14"/>
     <description>You see a lion, dangerous and hungry...</description>
     <attributes>
@@ -1136,7 +1136,7 @@
     <respawn value="900"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[2,6]" probability="60.0"/>
+      <item value="肉" quantity="[2,6]" probability="60.0"/>
       <item value="ham" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
@@ -1153,9 +1153,9 @@
     </ai>
   </creature>
   
-  <creature name="elephant">
+  <creature name="大象">
     <type class="animal" subclass="elephant" tileid="animal.png:11"/>
-    <description>You see an elephant, a huge animal with lots of ham and meat. Are you sure that you want to attack it?</description>
+    <description>这是了一只大象，这只巨型生物大腿很粗壮。?</description>
     <attributes>
       <atk value="73"/>
       <def value="6"/>
@@ -1168,7 +1168,7 @@
     <respawn value="1200"/>
     <corpse name="animal_2x2" harmless="bag_2x2" width="3" height="2" />
     <drops>
-      <item value="meat" quantity="[1,10]" probability="100.0"/>
+      <item value="肉" quantity="[1,10]" probability="100.0"/>
       <item value="ham" quantity="[2,8]" probability="70.0"/>
     </drops>
     <equips>
@@ -1187,9 +1187,9 @@
     </ai>
   </creature>
   
-  <creature name="tiger">
+  <creature name="老虎">
     <type class="animal" subclass="tiger" tileid="animal.png:19"/>
-    <description>You see a tiger, which likes deer and human meat.</description>
+    <description>这是一只老虎，它喜欢吃鹿和人类。</description>
     <attributes>
       <atk value="88"/>
       <def value="15"/>
@@ -1202,7 +1202,7 @@
     <respawn value="1200"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[1,6]" probability="60.0"/>
+      <item value="肉" quantity="[1,6]" probability="60.0"/>
       <item value="ham" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
@@ -1219,9 +1219,9 @@
     </ai>
   </creature>
   
-  <creature name="venomrat">
+  <creature name="毒液鼠">
     <type class="small_animal" subclass="venomrat" tileid="small_animal.png:3"/>
-    <description>You see a venomrat, extremely poisonous.</description>
+    <description>Y这是一只毒液鼠，它有剧毒。</description>
     <attributes>
       <atk value="89"/>
       <def value="14"/>
@@ -1235,7 +1235,7 @@
     <corpse name="small_animal" harmless="tail_rodent" />
     <drops>
       <item value="money" quantity="[3,7]" probability="100.0"/>
-      <item value="cheese" quantity="[1,3]" probability="50.0"/>
+      <item value="干酪" quantity="[1,3]" probability="50.0"/>
       <item value="greater poison" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
@@ -1253,9 +1253,9 @@
     </ai>
   </creature>
   
-  <creature name="killer bat">
+  <creature name="食人蝙蝠">
     <type class="animal" subclass="killer_bat" tileid="animal.png:13"/>
-    <description>You see a killer bat which will suck your blood!</description>
+    <description>这是一只食人蝙蝠，它会吸干你的血！</description>
     <attributes>
       <atk value="104"/>
       <def value="19"/>
@@ -1268,7 +1268,7 @@
     <respawn value="1200"/>
     <corpse name="small_winged" harmless="winged_bat" />
     <drops>
-      <item value="meat" quantity="[1,2]" probability="80.0"/>
+      <item value="肉" quantity="[1,2]" probability="80.0"/>
       <item value="bat entrails" quantity="[1,1]" probability="60.0"/>
     </drops>
     <equips>
@@ -1285,9 +1285,9 @@
     </ai>
   </creature>
   
-  <creature name="black bear">
+  <creature name="黑熊">
     <type class="animal" subclass="black_bear" tileid="animal.png:2"/>
-    <description>You see a strong black bear which hibernates in winter.</description>
+    <description>这是一只强壮的黑熊，他正在冬眠。</description>
     <attributes>
       <atk value="119"/>
       <def value="16"/>
@@ -1300,7 +1300,7 @@
     <respawn value="1200"/>
     <corpse name="animal"/>
     <drops>
-      <item value="meat" quantity="[3,12]" probability="60.0"/>
+      <item value="肉" quantity="[3,12]" probability="60.0"/>
       <item value="ham" quantity="[2,4]" probability="40.0"/>
     </drops>
     <equips>
@@ -1318,9 +1318,9 @@
     </ai>
   </creature>
   
-  <creature name="razorrat">
+  <creature name="利齿鼠">
     <type class="small_animal" subclass="razorrat" tileid="small_animal.png:2"/>
-    <description>You see a razorrat, its noise will make you crazy!</description>
+    <description>这是一只利齿鼠，它发出的噪音会让人发疯！</description>
     <attributes>
       <atk value="119"/>
       <def value="28"/>
@@ -1334,7 +1334,7 @@
     <corpse name="small_animal" harmless="tail_rodent" />
     <drops>
       <item value="money" quantity="[5,10]" probability="100.0"/>
-      <item value="cheese" quantity="[1,3]" probability="50.0"/>
+      <item value="干酪" quantity="[1,3]" probability="50.0"/>
     </drops>
     <equips>
     </equips>
@@ -1349,9 +1349,9 @@
     </ai>
   </creature>
   
-  <creature name="giantrat">
+  <creature name="巨型鼠">
     <type class="giant_animal" subclass="giantrat" tileid="giant_animal.png:1"/>
-    <description>You see a giant rat. It seems like it survived from an experiment which went wrong.</description>
+    <description>这是一只巨型鼠。看起来它从一个失败的实验中活了下来。</description>
     <attributes>
       <atk value="173"/>
       <def value="30"/>
@@ -1365,7 +1365,7 @@
     <corpse name="animal_2x2" harmless="tail_rodent_2x2" width="2" height="2" />
     <drops>
       <item value="money" quantity="[7,20]" probability="100.0"/>
-      <item value="cheese" quantity="[3,7]" probability="80.0"/>
+      <item value="干酪" quantity="[3,7]" probability="80.0"/>
       <item value="rodent trap" quantity="[1,1]" probability="15.0" />
     </drops>
     <equips>
@@ -1387,9 +1387,9 @@
   
   <!-- START: mythical -->
   
-  <creature name="unicorn">
+  <creature name="独角兽">
     <type class="mythical_being" subclass="unicorn" tileid="mythical_being.png:1"/>
-    <description>You see a rare unicorn. It is widely believed to be only a myth.</description>
+    <description>这是一只独角兽，以前只出现在神话中。</description>
     <attributes>
       <atk value="308"/>
       <def value="108"/>
@@ -1403,7 +1403,7 @@
     <respawn value="17280000"/>
     <corpse name="animal"/>
     <drops>
-      <item value="unicorn shield" quantity="[1,1]" probability="80.0"/>
+      <item value="独角盾" quantity="[1,1]" probability="80.0"/>
       <item value="lucky charm" quantity="[1,1]" probability="80.0"/>
       <item value="diamond" quantity="[1,1]" probability="20.0"/>
     </drops>
@@ -1417,9 +1417,9 @@
     </ai>
   </creature>   
   
-  <creature name="centaur">
+  <creature name="半人马">
     <type class="mythical_being" subclass="centaur" tileid="mythical_being.png:0"/>
-    <description> You see a noble centaur, half man, half horse. He looks capable of great damage but thankfully seems to mean you no harm.</description>
+    <description> 这是一只半人马，上半身是人，下半身是马。他看起来破坏力很大，但似乎对你没有恶意。</description>
     <attributes>
       <atk value="449"/>
       <def value="76"/>
@@ -1449,9 +1449,9 @@
     </ai>
   </creature>
   
-  <creature name="pegasus">
+  <creature name="飞马">
     <type class="mythical_being" subclass="pegasus" tileid="mythical_being.png:2"/>
-    <description>You see Pegasus, the winged horse. His name means Lightning and he carries bolts of Thunder.</description>
+    <description>这是一只天马，长了双翅的马。他的名字意味着迅雷不及掩耳的速度。</description>
     <attributes>
       <atk value="1590"/>
       <def value="214"/>
@@ -1483,9 +1483,9 @@
   
   <!-- START: reptile -->
   
-  <creature name="caiman">
+  <creature name="凯门鳄">
     <type class="animal" subclass="caiman" tileid="animal.png:6"/>
-    <description>You see a caiman, which is hidden in the water.</description>
+    <description>这是一只凯门鳄，它藏在水里。</description>
     <attributes>
       <atk value="49"/>
       <def value="9"/>
@@ -1513,9 +1513,9 @@
     </ai>
   </creature>
   
-  <creature name="grass snake">
+  <creature name="草蛇">
     <type class="farm_animal" subclass="grass_snake" tileid="farm_animal.png:5"/>
-    <description>You see a grass snake which is quite dangerous.</description>
+    <description>这是一只危险的草蛇。</description>
     <attributes>
       <atk value="68"/>
       <def value="15"/>
@@ -1535,7 +1535,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="sssSSSsssss..."/>
+        <noise state="idle follow fight" value="咝...咝..."/>
         <sound value="snake-1"/>
       </says>
       <profile name="poisonous" params="5,poison"/>
@@ -1545,9 +1545,9 @@
     </ai>
   </creature>
   
-  <creature name="snake">
+  <creature name="蛇">
     <type class="animal" subclass="snake" tileid="animal.png:7"/>
-    <description>You see a snake, it came from the forest to poison you!</description>
+    <description>这是一只蛇，来自森林，有毒。</description>
     <attributes>
       <atk value="67"/>
       <def value="13"/>
@@ -1567,7 +1567,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="SsSssSsssssss!"/>
+        <noise state="idle follow fight" value="咝sss咝sss咝sss!"/>
         <sound value="snake-1"/>
       </says>
       <profile name="poisonous" params="5,poison"/>
@@ -1577,9 +1577,9 @@
     </ai>
   </creature>
   
-  <creature name="crocodile">
+  <creature name="鳄鱼">
     <type class="giant_animal" subclass="crocodile" tileid="giant_animal.png:0"/>
-    <description>You see a crocodile, it arises from the deep waters in the rivers.</description>
+    <description>这是一只鳄鱼，它出现在河水的深处。</description>
     <attributes>
       <atk value="172"/>
       <def value="30"/>
@@ -1593,7 +1593,7 @@
     <corpse name="animal_2x2" harmless="bag_2x2" width="2" height="2"/>
     <drops>
       <item value="money" quantity="[3,12]" probability="100.0"/>
-      <item value="meat" quantity="[3,7]" probability="80.0"/>
+      <item value="肉" quantity="[3,7]" probability="80.0"/>
       <item value="ham" quantity="[2,5]" probability="50.0"/>
     </drops>
     <equips>
@@ -1611,7 +1611,7 @@
     </ai>
   </creature>  
   
-  <creature name="cobra">
+  <creature name="眼镜蛇">
     <type class="animal" subclass="cobra" tileid="animal.png:28"/>
     <description></description>
     <attributes>
@@ -1641,9 +1641,9 @@
     </ai>
   </creature>
   
-  <creature name="king cobra">
+  <creature name="眼镜蛇王">
     <type class="huge_animal" subclass="king_cobra" tileid="huge_animal.png:9"/>
-    <description>You see a king cobra. It is extremely venomous.</description>
+    <description>这是一只眼镜蛇王，他的剧毒让人不寒而栗。</description>
     <attributes>
       <atk value="750"/>
       <def value="102"/>

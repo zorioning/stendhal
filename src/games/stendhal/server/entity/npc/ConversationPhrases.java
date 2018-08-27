@@ -41,7 +41,7 @@ public class ConversationPhrases {
 			"帮助","求助","帮忙","帮我");
 
 	public static final List<String> QUEST_MESSAGES = Arrays.asList("task",
-			"quest", "favor", "favour", "任务","需要","需求");
+			"quest", "favor", "favour", "任务","调查","需求","好感","喜好");
 
 	public static final List<String> FINISH_MESSAGES = Arrays.asList("done",
 			"finish", "complete","完成","好了","已完成");
@@ -50,7 +50,7 @@ public class ConversationPhrases {
 
 	public static final List<String> ABORT_MESSAGES = Arrays.asList("another", "abort","其他","其它","取消","另外");
 
-	public static final List<String> OFFER_MESSAGES = Arrays.asList("offer", "deal", "trade","买卖","交易","价格","报价");
+	public static final List<String> OFFER_MESSAGES = Arrays.asList("offer", "deal", "trade","生意","交易","价格","报价","支付");
 
 	public static final List<String> YES_MESSAGES = Arrays.asList("yes", "ok", "好的", "可以","好","是","中","行","要");
 
@@ -59,6 +59,12 @@ public class ConversationPhrases {
 
 	public static final List<String> GOODBYE_MESSAGES = Arrays.asList("bye", "goodbye",
 			"再见", "走了", "退出","拜拜");
+
+	public static final List<String> BUY_MESSAGES = Arrays.asList("buy", "买","购买","买入","买进","我买", "我要","我要买");
+	public static final List<String> SELL_MESSAGES = Arrays.asList("sell", "卖","我卖", "我要卖", "卖出");
+	public static final List<String> HEAL_MESSAGES = Arrays.asList("heal", "治疗","医疗", "加血", "奶我","救命");
+
+
 
 	/**
 	 * Combine a string collection (list) with additional strings.

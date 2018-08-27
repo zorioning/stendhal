@@ -25,18 +25,18 @@ public class AnimalRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("monkey", 2);
-		attackArmy.put("grass snake", 2);
-		attackArmy.put("beaver", 2);
-		attackArmy.put("tiger", 2);
-		attackArmy.put("lion", 3);
-		attackArmy.put("panda", 2);
+		attackArmy.put("猴子", 2);
+		attackArmy.put("草蛇", 2);
+		attackArmy.put("海狸", 2);
+		attackArmy.put("老虎", 2);
+		attackArmy.put("狮子", 3);
+		attackArmy.put("大熊猫", 2);
 		attackArmy.put("penguin", 4);
-		attackArmy.put("caiman", 3);
-		attackArmy.put("babybear", 2);
-		attackArmy.put("black bear", 1);
-		attackArmy.put("elephant", 3);
-		attackArmy.put("crocodile", 2);
+		attackArmy.put("凯门鳄", 3);
+		attackArmy.put("幼熊", 2);
+		attackArmy.put("黑熊", 1);
+		attackArmy.put("大象", 3);
+		attackArmy.put("鳄鱼", 2);
 
 		return attackArmy;
 	}

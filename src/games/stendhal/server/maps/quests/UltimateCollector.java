@@ -77,7 +77,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** Immortal Sword Quest in Kotoch: Vulcanus is the NPC */
 	private static final String IMMORTAL_SWORD_QUEST_SLOT = "immortalsword_quest"; // kotoch
 
-	/** Mithril Cloak quest: Ida is the NPC */
+	/** 黑曜石斗篷 quest: Ida is the NPC */
 	private static final String MITHRIL_CLOAK_QUEST_SLOT = "mithril_cloak"; // mithril
 
 	/** Mithril Shield quest: Baldemar is the NPC */
@@ -91,7 +91,7 @@ public class UltimateCollector extends AbstractQuest {
 
 	// private static final String HELP_TOMI_QUEST_SLOT = "help_tomi"; don't require
 
-	/** Elvish Armor quest: Lupos is the NPC */
+	/** 精灵护甲 quest: Lupos is the NPC */
 	private static final String ELVISH_ARMOR_QUEST_SLOT = "elvish_armor"; // specific for this one
 
 	/** Kanmararn Soldiers quest: Henry is the NPC  */
@@ -211,12 +211,12 @@ public class UltimateCollector extends AbstractQuest {
 		// the numbers are based on depo's metric for rarity (bigger number = more rare) which may be out of date https://sourceforge.net/tracker/?func=detail&aid=2066597&group_id=1111&atid=973767
 		// nothing rarer than a demon fire sword, and not included items which are quest rewards elsewhere
 		items.put("nihonto",1); // 5169
-		items.put("magic twoside axe",1); // 1010
+		items.put("魔法双刃斧",1); // 1010
 		items.put("imperator sword",1); // 2393
-		items.put("durin axe",1); // 4331
+		items.put("都灵之斧",1); // 4331
 		items.put("vulcano hammer",1); // 4474
 		items.put("xeno sword",1); // 1347
-		items.put("black scythe",1); // 3918 (pretty sure this is rarer now but a lot of old ones about to buy)
+		items.put("黑镰刀",1); // 3918 (pretty sure this is rarer now but a lot of old ones about to buy)
 		items.put("chaos dagger",1); // 1691
 		items.put("black sword",1); // 6285
 

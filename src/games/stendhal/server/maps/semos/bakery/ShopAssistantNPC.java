@@ -107,21 +107,21 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				new ProducerAdder().addProducer(this, behaviour,
 				"欢迎来到 Semos 镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包。");
 
-				addOffer("我们的 pizza 外卖团队可以借 #borrow 一些厨师制服给你.");
+				addOffer("我们的 pizza 外卖团队可以 #借 一些厨师制服给你.");
 
-				add(ConversationStates.ATTENDING, "borrow",
+				add(ConversationStates.ATTENDING, "借",
 				    new LevelLessThanCondition(6),
 				    ConversationStates.ATTENDING,
 				    "Oh 抱歉，我不能借给像你这样只有这么一点经验的新人.",
 				    null);
 
-				add(ConversationStates.ATTENDING, "borrow",
+				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(new LevelGreaterThanCondition(5), new QuestNotCompletedCondition("pizza_delivery")),
 				    ConversationStates.ATTENDING,
 				    "你需要和 Leander 讲，问他如果你能帮送 pizza 外卖，然后我才可能会借给你.",
 				    null);
 
-				add(ConversationStates.ATTENDING, "borrow",
+				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(
 				        new LevelGreaterThanCondition(5),
 				        new QuestCompletedCondition("pizza_delivery"),
@@ -130,15 +130,15 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    "我把 " + ITEMS + " 借给你. 如果你有兴趣，请对我说.",
 				    null);
 
-				// player already has borrowed something it didn't return and will pay for it
-				add(ConversationStates.ATTENDING, "borrow",
+				// player already has 借ed something it didn't return and will pay for it
+				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new NotCondition(new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT))),
 				    ConversationStates.QUESTION_1,
 				    "你没归还我上次借给你的东西！你想为此付 " + COST + " 给我吗?",
 				    null);
 
-				// player already has borrowed something it didn't return and will return it
-				add(ConversationStates.ATTENDING, "borrow",
+				// player already has 借ed something it didn't return and will return it
+				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(new QuestActiveCondition(QUEST_SLOT), new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT)),
 				    ConversationStates.QUESTION_2,
 				    "你没有归还我上次借给你的东西！现在要归还吗？?",
@@ -153,10 +153,10 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    ConversationPhrases.YES_MESSAGES,
 				    new PlayerHasItemWithHimCondition("money", COST),
 				    ConversationStates.ATTENDING,
-				    "谢谢，如果你想借 #borrow 任何工具，再跟我一声说就行",
+				    "谢谢，如果你想 #借 任何工具，再跟我一声说就行",
 				    new MultipleActions(payment));
 
-				// player already has borrowed something and wants to return it
+				// player already has 借ed something and wants to return it
 				final List<ChatAction> returnitem = new LinkedList<ChatAction>();
 				returnitem.add(new DropRecordedItemAction(QUEST_SLOT));
 				returnitem.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -164,7 +164,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				    ConversationPhrases.YES_MESSAGES,
 				    new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT),
 				    ConversationStates.ATTENDING,
-				    "谢谢，如果你想借 #borrow 任何工具，再跟我一声说就行",
+				    "谢谢，如果你想 #借 任何工具，再跟我一声说就行",
 				    new MultipleActions(returnitem));
 
 				// don't want to pay for it now
@@ -235,7 +235,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    "抱歉，你在这里的经验太少，我还不能信任你.",
 					    null);
 
-				// currently has borrowed an item
+				// currently has 借ed an item
 				add(ConversationStates.ATTENDING,
 					    ITEMS,
 					    new QuestActiveCondition(QUEST_SLOT),
@@ -248,7 +248,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    ITEMS,
 					    new QuestNotCompletedCondition("pizza_delivery"),
 					    ConversationStates.ATTENDING,
-					    "只有 pizza 外卖人员才能借工具。请为 Leander 送一次外卖，再和我说.",
+					    "只有 pizza 外卖人员才能借工具。请为 Leander 送一次外卖，再说借的事.",
 					    null);
 
 				// player asks about pay from attending state

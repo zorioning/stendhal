@@ -57,7 +57,7 @@ public class FeaturesTestArea implements ZoneConfigurator {
 		item.setEquipableSlots(slots);
 		manager.addItem(item);
 
-		final Creature creature = new ItemGuardCreature(manager.getCreature("rat"), "golden key");
+		final Creature creature = new ItemGuardCreature(manager.getCreature("老鼠"), "golden key");
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 40, 5, creature, 1);
 		zone.add(point);
 	}
@@ -68,7 +68,7 @@ public class FeaturesTestArea implements ZoneConfigurator {
 		point.setRespawnTime(60 * 60 * 3);
 		zone.add(point);
 
-		creature = manager.getCreature("deer");
+		creature = manager.getCreature("鹿");
 		point = new CreatureRespawnPoint(zone, 14, 56, creature, 1);
 		point.setRespawnTime(60 * 60 * 3);
 		zone.add(point);

@@ -74,7 +74,7 @@ public class MinTotalCreaturesKilledCondition implements ChatCondition {
 
 	@Override
 	public String toString() {
-		return "total kills >= " + total;
+		return "杀死总数 >= " + total;
 	}
 
 	@Override

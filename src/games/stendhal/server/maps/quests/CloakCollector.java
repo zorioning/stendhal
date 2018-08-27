@@ -48,7 +48,7 @@ import games.stendhal.server.maps.quests.logic.BringListOfItemsQuestLogic;
  * <p>
  * REWARD:
  * <ul>
- * <li> black cloak </li>
+ * <li> 黑斗篷 </li>
  * <li> 10,000 XP </li>
  * <li> 5 karma (+5 for accepting, -5 for rejecting) </li>
  * </ul>
@@ -58,9 +58,9 @@ import games.stendhal.server.maps.quests.logic.BringListOfItemsQuestLogic;
 public class CloakCollector extends AbstractQuest implements BringListOfItemsQuest {
 
 	private static final List<String> NEEDED_CLOAKS = Arrays.asList("cloak",
-			"elf cloak", "dwarf cloak", "blue elf cloak", "stone cloak",
-			"green dragon cloak", "bone dragon cloak", "lich cloak",
-			"vampire cloak", "blue dragon cloak");
+			"精灵斗篷", "矮人斗篷", "蓝灵斗篷", "石斗篷",
+			"绿龙斗篷", "骨龙斗篷", "巫妖斗篷",
+			"吸血鬼斗篷", "蓝龙斗篷");
 
 	private static final String QUEST_SLOT = "cloaks_collector";
 
@@ -222,7 +222,7 @@ public class CloakCollector extends AbstractQuest implements BringListOfItemsQue
 
 	@Override
 	public String respondToLastItemBrought() {
-		return "Oh, they look so beautiful all together, thank you. Please take this black cloak in return, I don't like the colour.";
+		return "Oh, they look so beautiful all together, thank you. Please take this 黑斗篷 in return, I don't like the colour.";
 	}
 
 	@Override
@@ -247,7 +247,7 @@ public class CloakCollector extends AbstractQuest implements BringListOfItemsQue
 
 	@Override
 	public void rewardPlayer(final Player player) {
-		final Item blackcloak = SingletonRepository.getEntityManager().getItem("black cloak");
+		final Item blackcloak = SingletonRepository.getEntityManager().getItem("黑斗篷");
 		blackcloak.setBoundTo(player.getName());
 		player.equipOrPutOnGround(blackcloak);
 		player.addKarma(5.0);

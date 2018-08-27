@@ -49,9 +49,9 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li>Dagobert asks you to find a leather cuirass.</li>
- * <li>You get a leather cuirass, e.g. by killing a cyclops.</li>
- * <li>Dagobert sees your leather cuirass and asks for it and then thanks you.</li>
+ * <li>Dagobert asks you to find a 皮胸甲.</li>
+ * <li>You get a 皮胸甲, e.g. by killing a cyclops.</li>
+ * <li>Dagobert sees your 皮胸甲 and asks for it and then thanks you.</li>
  * </ul>
  *
  * REWARD:
@@ -82,16 +82,16 @@ public class ArmorForDagobert extends AbstractQuest {
 		res.add("I have met Dagobert. He is the consultant at the bank in Semos.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("He asked me to find a leather cuirass but I rejected his request.");
+			res.add("He asked me to find a 皮胸甲 but I rejected his request.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("I promised to find a leather cuirass for him because he has been robbed.");
+			res.add("I promised to find a 皮胸甲 for him because he has been robbed.");
 		}
-		if ("start".equals(questState) && (player.isEquipped("leather cuirass") || player.isEquipped("pauldroned leather cuirass")) || "done".equals(questState)) {
-			res.add("I found a leather cuirass and will take it to Dagobert.");
+		if ("start".equals(questState) && (player.isEquipped("皮胸甲") || player.isEquipped("护肩皮胸甲")) || "done".equals(questState)) {
+			res.add("I found a 皮胸甲 and will take it to Dagobert.");
 		}
 		if ("done".equals(questState)) {
-			res.add("I took the leather cuirass to Dagobert. As a little thank you, he will allow me to use a private vault.");
+			res.add("I took the 皮胸甲 to Dagobert. As a little thank you, he will allow me to use a private vault.");
 		}
 		return res;
 	}
@@ -121,7 +121,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Once I had a nice #'leather cuirass', but it was destroyed during the last robbery. If you find a new one, I'll give you a reward.",
+			"Once I had a nice #'皮胸甲', but it was destroyed during the last robbery. If you find a new one, I'll give you a reward.",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		// player is not willing to help
@@ -132,13 +132,13 @@ public class ArmorForDagobert extends AbstractQuest {
 			"Well, then I guess I'll just duck and cover.",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
-		// player wants to know what a leather cuirass is
+		// player wants to know what a 皮胸甲 is
 		npc.add(
 			ConversationStates.ATTENDING,
-			Arrays.asList("leather cuirass", "leather", "cuirass"),
+			Arrays.asList("皮胸甲", "leather", "cuirass"),
 			null,
 			ConversationStates.ATTENDING,
-			"A leather cuirass is the traditional cyclops armor. Some cyclopes are living in the dungeon deep under the city.",
+			"A 皮胸甲 is the traditional cyclops armor. Some cyclopes are living in the dungeon deep under the city.",
 			null);
 	}
 
@@ -150,20 +150,20 @@ public class ArmorForDagobert extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new OrCondition(
-					new PlayerHasItemWithHimCondition("leather cuirass"),
-					new PlayerHasItemWithHimCondition("pauldroned leather cuirass"))),
+					new PlayerHasItemWithHimCondition("皮胸甲"),
+					new PlayerHasItemWithHimCondition("护肩皮胸甲"))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Excuse me, please! I have noticed the leather cuirass you're carrying. Is it for me?",
+			"Excuse me, please! I have noticed the 皮胸甲 you're carrying. Is it for me?",
 			null);
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new NotCondition(new OrCondition(
-					new PlayerHasItemWithHimCondition("leather cuirass"),
-					new PlayerHasItemWithHimCondition("pauldroned leather cuirass")))),
+					new PlayerHasItemWithHimCondition("皮胸甲"),
+					new PlayerHasItemWithHimCondition("护肩皮胸甲")))),
 			ConversationStates.ATTENDING,
-			"Luckily I haven't been robbed while you were away. I would be glad to receive a leather cuirass. Anyway, how can I #help you?",
+			"Luckily I haven't been robbed while you were away. I would be glad to receive a 皮胸甲. Anyway, how can I #help you?",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
@@ -173,27 +173,27 @@ public class ArmorForDagobert extends AbstractQuest {
 		reward.add(new IncreaseKarmaAction(10));
 
 		final List<ChatAction> reward1 = new LinkedList<ChatAction>(reward);
-		reward1.add(new DropItemAction("leather cuirass"));
+		reward1.add(new DropItemAction("皮胸甲"));
 
 		npc.add(
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
 			// make sure the player isn't cheating by putting the armor
 			// away and then saying "yes"
-			new PlayerHasItemWithHimCondition("leather cuirass"),
+			new PlayerHasItemWithHimCondition("皮胸甲"),
 			ConversationStates.ATTENDING, "Oh, I am so thankful! Here is some gold I found ... ehm ... somewhere. Now that you have proven yourself a trusted customer, you may have access to your own private banking #vault any time you like.",
 			new MultipleActions(reward1));
 
 		final List<ChatAction> reward2 = new LinkedList<ChatAction>(reward);
-		reward2.add(new DropItemAction("pauldroned leather cuirass"));
+		reward2.add(new DropItemAction("护肩皮胸甲"));
 		npc.add(
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
 			// make sure the player isn't cheating by putting the armor
 			// away and then saying "yes"
 			new AndCondition(
-				new NotCondition(new PlayerHasItemWithHimCondition("leather cuirass")),
-				new PlayerHasItemWithHimCondition("pauldroned leather cuirass")),
+				new NotCondition(new PlayerHasItemWithHimCondition("皮胸甲")),
+				new PlayerHasItemWithHimCondition("护肩皮胸甲")),
 			ConversationStates.ATTENDING, "Oh, I am so thankful! Here is some gold I found ... ehm ... somewhere. Now that you have proven yourself a trusted customer, you may have access to your own private banking #vault any time you like.",
 			new MultipleActions(reward2));
 

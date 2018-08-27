@@ -226,7 +226,7 @@ import marauroa.common.Pair;
 							  "oni queen"));
 		enemys.put("barbarian",
 				Arrays.asList("barbarian",
-						      "barbarian wolf",
+						      "蛮族人狼",
 						      "barbarian elite",
 						      "barbarian priest",
 						      "barbarian chaman",

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
-  <item name="wooden arrow">
+  <item name="木箭">
     <type class="ammunition" subclass="wooden_arrow" tileid="-1"/>
-    <description>You see a wooden arrow. With a supply of arrows in one hand and a bow in the other you can attack from a distance.</description>
+    <description>木箭这是一支木箭，两只手分别装备弓和箭的话，就可以使用远程攻击了。</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="1"/>
@@ -23,9 +23,9 @@
     </equipable>
   </item>
 
-  <item name="steel arrow">
+  <item name="铁箭">
     <type class="ammunition" subclass="steel_arrow" tileid="-1"/>
-    <description>You see a shining steel arrow. With plenty of these, and a good bow, you'll be a formidable archer.</description>
+    <description>木箭这是一支铁箭，如再弄个好弓，就可以成为一个优秀的弓箭手了。</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="3"/>
@@ -45,9 +45,9 @@
     </equipable>
   </item>
 
-  <item name="golden arrow">
+  <item name="金箭">
     <type class="ammunition" subclass="golden_arrow" tileid="-1"/>
-    <description>You see a golden arrow.  With a fist full of these and a good bow, you will surely take down your enemies quicker.</description>
+    <description>这是一支黄金箭，再找个配套的弓，就能迅速放倒敌人。.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="4"/>
@@ -159,9 +159,9 @@
     </equipable>
   </item>
 
-  <item name="power arrow">
+  <item name="加强箭">
     <type class="ammunition" subclass="power_arrow" tileid="-1"/>
-    <description>You see a power arrow.  The sting of this arrow will surely defeat your enemies, when equipped with a bow.</description>
+    <description>这是一支加强箭，配上弓可以准确的打击敌人。</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>

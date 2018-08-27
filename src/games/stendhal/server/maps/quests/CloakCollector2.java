@@ -66,9 +66,9 @@ import games.stendhal.server.maps.Region;
  */
 public class CloakCollector2 extends AbstractQuest {
 
-    private static final List<String> NEEDEDCLOAKS2 = Arrays.asList("red cloak", "shadow cloak", "xeno cloak",
-								       "elvish cloak", "chaos cloak", "mainio cloak",
-								       "golden cloak", "black dragon cloak");
+    private static final List<String> NEEDEDCLOAKS2 = Arrays.asList("红斗篷", "影子斗篷", "异种元素斗篷",
+								       "像小精灵的斗篷", "混沌斗篷", "华丽的斗篷",
+								       "金斗篷", "黑龙斗篷");
     private static final String OLD_QUEST = "cloaks_collector";
     private static final String QUEST_SLOT = "cloaks_collector_2";
 
@@ -187,8 +187,8 @@ public class CloakCollector2 extends AbstractQuest {
 		// player asks about an individual cloak. We used the trick before that all cloaks were named by colour
 		// (their subclass) - so she would tell them what colour it was. In this case it fails for elvish,
 		// xeno and shadow which are not named by colour. So, this time she'll say, e.g.
-		// It's a shadow cloak, sorry if that's not much help, so will you find them all?
-		// rather than say for elf cloak she'd said 'It's a white cloak, so will you find them all?'
+		// It's a 影子斗篷, sorry if that's not much help, so will you find them all?
+		// rather than say for 精灵斗篷 she'd said 'It's a white cloak, so will you find them all?'
 		// it will still work for red (red_spotted is the subclass), black dragon (black),
 		// golden, mainio (primary coloured), chaos (multicoloured).
 		for(final String itemName : NEEDEDCLOAKS2) {
@@ -270,7 +270,7 @@ public class CloakCollector2 extends AbstractQuest {
 						return "enumerate missingcloaks2";
 					}
 				});
-		// player says he has a required cloak with him
+		// player says he has a requi红斗篷 with him
 		npc.add(ConversationStates.QUESTION_2,
 				ConversationPhrases.YES_MESSAGES,
 				null,
@@ -300,9 +300,9 @@ public class CloakCollector2 extends AbstractQuest {
 
 								if (missing.isEmpty()) {
 									rewardPlayer(player);
-									entity.say("Oh, yay! You're so kind, I bet you'll have great Karma now! Here, take these killer boots. I think they're gorgeous but they don't fit me!");
+									entity.say("Oh, yay! You're so kind, I bet you'll have great Karma now! Here, take these 杀手之靴. I think they're gorgeous but they don't fit me!");
 									player.setQuest(QUEST_SLOT, "done;rewarded");
-									final Item boots = SingletonRepository.getEntityManager().getItem("killer boots");
+									final Item boots = SingletonRepository.getEntityManager().getItem("杀手之靴");
 									boots.setBoundTo(player.getName());
 									player.equipOrPutOnGround(boots);
 									player.notifyWorldAboutChanges();
@@ -357,7 +357,7 @@ public class CloakCollector2 extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, "done")),
 				ConversationStates.ATTENDING,
 				"Oh! I didn't reward you for helping me again! Here, take these boots. I think they're gorgeous but they don't fit me :(",
-				new MultipleActions(new EquipItemAction("killer boots", 1, true), new SetQuestAction(QUEST_SLOT, "done;rewarded")));
+				new MultipleActions(new EquipItemAction("杀手之靴", 1, true), new SetQuestAction(QUEST_SLOT, "done;rewarded")));
 
 		//		 player returns after finishing the quest and was rewarded
 		npc.add(ConversationStates.IDLE,
@@ -399,7 +399,7 @@ public class CloakCollector2 extends AbstractQuest {
 			if (!isCompleted(player)) {
 				res.add("I'm collecting more cloaks for Josephine. I still need " + missingcloaks2(player, false) + ".");
 			} else {
-				res.add("I got all the other cloaks Josephine wanted and she gave me some fabulous killer boots.");
+				res.add("I got all the other cloaks Josephine wanted and she gave me some fabulous 杀手之靴.");
 			}
 			return res;
 	}

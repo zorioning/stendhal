@@ -1355,9 +1355,9 @@ If everybody would think so, we were on the way to a better world...
     <entity x="82" y="63">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-North: Old mine
-East: Mill
-South: Semos city
+北: Old mine
+东: Mill
+南: Semos city
     </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
@@ -1386,9 +1386,9 @@ South: Semos city
     <entity x="25" y="46">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-Southwest: Semos city
-East: Ados (road destroyed)
-Southeast: Farmhouse
+西南: Semos city
+东: Ados (road destroyed)
+东南: Farmhouse
     </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
@@ -1494,7 +1494,7 @@ The sharper minded amongst you might prefer to click directly on the creature. I
     <entity x="4" y="14">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a strange kind of plate armor, made from some rare metal you do not recognise.</attribute>
+      <attribute name="text">You see a strange kind of 板甲, made from some rare metal you do not recognise.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
     </entity>
@@ -1631,7 +1631,7 @@ Mature sheep wanted: please speak to Sato.
 
   <zone name="0_semos_city" level="0" x="500064" y="500000"
     file="Level 0/semos/city.tmx">
-    <title>The City of Semos</title>
+    <title>Semos 镇</title>
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather" condition="!stendhal.christmas">varying</parameter>
@@ -1697,21 +1697,21 @@ Mature sheep wanted: please speak to Sato.
 
     <entity x="3" y="42">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">欢迎光临 Semos 镇</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>
 
     <entity x="3" y="43">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">Semos 镇欢迎您</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>
 
     <entity x="3" y="44">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">Semos 镇欢迎您</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>
@@ -1719,7 +1719,7 @@ Mature sheep wanted: please speak to Sato.
     <!-- writing on the wooden arch -->
     <entity x="3" y="45">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">欢迎光临 Semos 镇</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>
@@ -1727,7 +1727,7 @@ Mature sheep wanted: please speak to Sato.
     <!-- writing on sign east -->
     <entity x="61" y="43">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">欢迎光临 Semos 镇</attribute>
     </entity>
 
 
@@ -1735,7 +1735,7 @@ Mature sheep wanted: please speak to Sato.
 
     <entity x="10" y="57">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">欢迎光临 Semos 镇</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>
@@ -1744,7 +1744,7 @@ Mature sheep wanted: please speak to Sato.
 
     <entity x="9" y="57">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">欢迎光临 Semos 镇</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>
@@ -1753,7 +1753,7 @@ Mature sheep wanted: please speak to Sato.
 
     <entity x="8" y="57">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Welcome to Semos</attribute>
+      <attribute name="text">欢迎光临 Semos 镇</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>
     </entity>
@@ -1796,9 +1796,9 @@ Mature sheep wanted: please speak to Sato.
     </portal>
 
     <point-of-interest x="18" y="21">
-      <name>Semos Bank</name>
+      <name>Semos 银行</name>
       <type>bank</type>
-      <description>A place to store your possessions.</description>
+      <description>自由存取物品处</description>
       <url>https://stendhalgame.org/player-guide/faq.html#Banking</url>
     </point-of-interest>
 

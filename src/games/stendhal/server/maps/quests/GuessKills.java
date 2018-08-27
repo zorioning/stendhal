@@ -92,7 +92,7 @@ public class GuessKills extends AbstractQuest {
 	/** List of existing creatures that may be asked about. */
 	private static final List<Creature> POSSIBLE_CREATURES = new ArrayList<Creature>();
 
-	private String CREATURE = "rat";
+	private String CREATURE = "老鼠";
 
 	/**
 	 * Create new quest instance.

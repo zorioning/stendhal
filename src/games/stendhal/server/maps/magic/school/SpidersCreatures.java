@@ -32,7 +32,7 @@ import games.stendhal.server.entity.player.Player;
  */
 public class SpidersCreatures implements ZoneConfigurator {
 	private final List<String> creatures =
-		Arrays.asList("spider","poisonous spider","giant spider");
+		Arrays.asList("蜘蛛","毒蜘蛛","巨型蜘蛛");
 	private final String QUEST_SLOT="kill_all_spiders";
 
 	/**

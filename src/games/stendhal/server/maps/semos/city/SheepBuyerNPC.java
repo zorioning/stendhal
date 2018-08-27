@@ -53,7 +53,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 		public SheepBuyerSpeakerNPC(String name) {
 			super(name);
 			// HP needs to be > 0 for Sato to appear in the killer list for
-			// the big bad wolf
+			// the 大灰狼
 			setBaseHP(100);
 			setHP(100);
 		}
@@ -76,7 +76,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 		}
 
 		/**
-		 * Try to get rid of the big bad wolf that could have spawned in the pen,
+		 * Try to get rid of the 大灰狼 that could have spawned in the pen,
 		 * but miss it sometimes.
 		 *
 		 * @param zone the zone to check
@@ -87,7 +87,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 					if (obj instanceof Creature) {
 						Creature wolf = (Creature) obj;
 
-						if ("wolf".equals(wolf.get("subclass")) && getPen(zone).contains(wolf)) {
+						if (wolf.equals(wolf.get("subclass")) && getPen(zone).contains(wolf)) {
 							wolf.onDamaged(this, wolf.getHP());
 							return;
 						}

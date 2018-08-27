@@ -154,7 +154,7 @@ public class CoalSource extends PlayerActivityEntity {
 				player.sendPrivateText("你发现了 "
 						+ item.getTitle() + ".");
 			} else {
-				logger.error("不到找到物品: " + itemName);
+				logger.error("没到找到物品: " + itemName);
 			}
 			setState(getState()- 1);
 			handleRespawn();

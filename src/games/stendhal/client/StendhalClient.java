@@ -442,7 +442,7 @@ public class StendhalClient extends ClientFramework {
 			public void run() {
 				for (String login : previousLogins) {
 					NotificationType type = (login.indexOf("FAILED") != -1) ? NotificationType.WARNING : NotificationType.SERVER;
-					ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine("Previous " + login, type));
+					ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine("上次" + login, type));
 				}
 			}
 		});

@@ -84,7 +84,7 @@ public class ChefNPC implements ZoneConfigurator  {
 				addJob("我是这里的面包师，也做 #pizza 外卖服务。在战争破坏和路被封锁之前，有很多来自 Ados 城的订单: 但也给了我更多时间给重要的客户制作 #make sandwiches 三明治；他们都说很好吃!");
 				addHelp("如果你想挣钱，可以帮我送一披撒 #pizza 外卖. 本来以前由我女儿 #Sally 送，但他这会在外渡假去了");
 				addReply("bread", "Oh, Erna 管理对外的商务工作。你可以到外面房间跟她说.");
-				addReply("cheese",
+				addReply("干酪",
 				"现在 Cheese 干酪相当难找，我们这最近闹鼠灾。我很奇怪这些老鼠把干酪藏哪了？如果你卖 #'sell cheese' ，我很乐意买一些!");
 				addReply("ham",
 				"很好，你好像一个专业猎人；为什么不去森林猎取一些上等肉呢？不要给我这些小片的肉，虽然。。。我只用高端火腿做三明治sandwiches !");
@@ -95,7 +95,7 @@ public class ChefNPC implements ZoneConfigurator  {
 				"我的 sandwiches 三明治营养且可口，如果你想要，就对我说 #'make 1 sandwich'.");
 				addOffer("我的 #pizza 需要干酪 cheese ,我们也不供应，如果你有 cheese 干酪，可以卖给我 #sell.");
 				final Map<String, Integer> offers = new TreeMap<String, Integer>();
-				offers.put("cheese", 5);
+				offers.put("干酪", 5);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(offers), false);
 
 				addGoodbye();
@@ -103,7 +103,7 @@ public class ChefNPC implements ZoneConfigurator  {
 				// Leander makes sandwiches if you bring him bread, cheese, and ham.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("bread", 1);
-				requiredResources.put("cheese", 2);
+				requiredResources.put("干酪", 2);
 				requiredResources.put("ham", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour(

@@ -93,7 +93,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	 * @param productionActivity
 	 *            the name of the activity, e.g. "build", "forge", "bake"
 	 * @param productName
-	 *            the name of the product, e.g. "plate armor". It must be a
+	 *            the name of the product, e.g. "板甲". It must be a
 	 *            valid item name.
 	 * @param requiredResourcesPerItem
 	 *            a mapping which maps the name of each required resource (e.g.
@@ -118,7 +118,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	 * @param productionActivity
 	 *            the name of the activity, e.g. "build", "forge", "bake"
 	 * @param productName
-	 *            the name of the product, e.g. "plate armor". It must be a
+	 *            the name of the product, e.g. "板甲". It must be a
 	 *            valid item name.
 	 * @param requiredResourcesPerItem
 	 *            a mapping which maps the name of each required resource (e.g.

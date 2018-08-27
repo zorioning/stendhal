@@ -22,7 +22,7 @@ import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * A grain field can be harvested by players who have a scythe. After that, it
+ * A grain field can be harvested by players who have a 大斧头. After that, it
  * will slowly regrow; there are several regrowing steps in which the graphics
  * will change to show the progress.
  *
@@ -80,13 +80,13 @@ public class GrainField extends GrowingPassiveEntityRespawnPoint implements
 		String text;
 		switch (getRipeness()) {
 		case 0:
-			text = "You see " + grainName + " that has just been harvested.";
+			text = "已被收获的 " + grainName + " 。";
 			break;
 		case RIPE:
-			text = "You see ripe " + grainName + ".";
+			text = "成熟的 " + grainName + ".";
 			break;
 		default:
-			text = "You see unripe " + grainName + ".";
+			text = "未成熟的 " + grainName + ".";
 			break;
 		}
 		return text;
@@ -100,17 +100,17 @@ public class GrainField extends GrowingPassiveEntityRespawnPoint implements
 	@Override
 	public boolean onUsed(final RPEntity entity) {
 		if (!entity.nextTo(this)) {
-			entity.sendPrivateText("You can't reach that " + grainName + " from here.");
+			entity.sendPrivateText("不能从这够到 " + grainName + " 。");
 			return false;
 		}
 
 		if (getRipeness() != RIPE) {
-			entity.sendPrivateText("This " + grainName + " is not yet ripe enough to harvest.");
+			entity.sendPrivateText("这些 " + grainName + " 未成熟而不能收割。");
 			return false;
 		}
 
 		if (!isNeededToolEquipped(entity)) {
-			entity.sendPrivateText("You need a " + tools.get(0) +" to harvest " + grainName + " fields.");
+			entity.sendPrivateText("需要用 " + tools.get(0) +" 收割这些 " + grainName + " 。");
 			return false;
 		}
 

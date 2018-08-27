@@ -49,12 +49,12 @@ public class AdminMaker extends ScriptImpl {
 	private static final String TELE_QUEST_SLOT = "AdminMakerTele";
 
 	private final List<String> itemsSingle = Arrays.asList("rod of the gm",
-			"golden shield", "golden armor", "golden cloak",
-			"golden helmet", "golden legs", "golden boots",
+			"golden shield", "黄金铠甲", "金斗篷",
+			"golden helmet", "golden legs", "金靴子",
 			"hunter crossbow");
 
 	private final List<String> itemsStack = Arrays.asList("money",
-			"greater potion", "greater antidote", "power arrow",
+			"greater potion", "greater antidote", "加强箭",
 			"deadly poison");
 
 

@@ -61,7 +61,7 @@ public class WaterSpringSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "water_source");
 		setMenu("Fill|Use");
-		setDescription("你在水中看到一些朋友，就像你发现一口喷泉水。");
+		setDescription("你在水中看到一些朋友，就像你发现一口喷泉。");
 		setResistance(0);
 	}
 

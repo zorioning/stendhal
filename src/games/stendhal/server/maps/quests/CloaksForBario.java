@@ -52,11 +52,11 @@ import games.stendhal.server.entity.player.Player;
  *
  * STEPS:
  * <ul>
- * <li> Bario asks you for a number of blue elf cloaks.</li>
+ * <li> Bario asks you for a number of 蓝灵斗篷s.</li>
  * <li> You get some of the cloaks somehow, e.g. by killing elves.</li>
  * <li> You bring the cloaks to Bario and give them to him.</li>
  * <li> Repeat until Bario received enough cloaks. (Of course you can bring up
- * all required cloaks at the same time.)</li>
+ * all requi红斗篷s at the same time.)</li>
  * <li> Bario gives you a golden shield in exchange.</li>
  * </ul>
  *
@@ -164,18 +164,18 @@ public class CloaksForBario extends AbstractQuest {
 				ConversationStates.ATTENDING,
 				"Welcome! Thanks again for those cloaks.", null);
 
-		// player says he doesn't have any blue elf cloaks with him
+		// player says he doesn't have any 蓝灵斗篷s with him
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.NO_MESSAGES, null,
 				ConversationStates.ATTENDING, "Too bad.", null);
 
-		// player says he has a blue elf cloak with him but he needs to bring more than one still
+		// player says he has a 蓝灵斗篷 with him but he needs to bring more than one still
 		// could also have used GreaterThanCondition for Quest State but this is okay, note we can only get to question 1 if we were active
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
-				new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, "1"), new PlayerHasItemWithHimCondition("blue elf cloak")),
+				new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, "1"), new PlayerHasItemWithHimCondition("蓝灵斗篷")),
 				ConversationStates.QUESTION_1, null,
 				new MultipleActions(
-						new DropItemAction("blue elf cloak"),
+						new DropItemAction("蓝灵斗篷"),
 						new ChatAction() {
 							@Override
 							public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
@@ -192,23 +192,23 @@ public class CloaksForBario extends AbstractQuest {
 							}
 						}));
 
-		// player says he has a blue elf cloak with him and it's the last one
+		// player says he has a 蓝灵斗篷 with him and it's the last one
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("blue elf cloak"));
+		reward.add(new DropItemAction("蓝灵斗篷"));
 		reward.add(new EquipItemAction("golden shield", 1, true));
 		reward.add(new IncreaseXPAction(15000));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(25));
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "1"), new PlayerHasItemWithHimCondition("blue elf cloak")),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "1"), new PlayerHasItemWithHimCondition("蓝灵斗篷")),
 				ConversationStates.ATTENDING,
 				"Thank you very much! Now I have enough cloaks to survive the winter. Here, take this golden shield as a reward.",
 				new MultipleActions(reward));
 
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
-				new NotCondition(new PlayerHasItemWithHimCondition("blue elf cloak")),
+				new NotCondition(new PlayerHasItemWithHimCondition("蓝灵斗篷")),
 				ConversationStates.ATTENDING,
 				"Really? I don't see any...",
 				null);
@@ -231,15 +231,15 @@ public class CloaksForBario extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met a freezing dwarf hiding below ground in Ados Outside NW. He asked me to bring him 10 blue elf cloaks.");
+		res.add("I met a freezing dwarf hiding below ground in Ados Outside NW. He asked me to bring him 10 蓝灵斗篷s.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("I do not want to help Bario.");
 		} else if (!questState.equals("done")) {
 			int cloaks = MathHelper.parseIntDefault(player.getQuest(QUEST_SLOT),  REQUIRED_CLOAKS);
-			res.add("I need to bring Bario " + cloaks + "blue elf cloak"+ "one" + "." );
+			res.add("I need to bring Bario " + cloaks + "蓝灵斗篷"+ "one" + "." );
 		} else {
-			res.add("Bario gave me a precious golden shield in return for the elf cloaks!");
+			res.add("Bario gave me a precious golden shield in return for the 精灵斗篷s!");
 		}
 		return res;
 	}

@@ -324,16 +324,16 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         if (getMaximalAmount(productName, player) < amount) {
             npc.say("如果你把"
                     + getRequiredResourceNamesWithHashes(productName, amount) + " 带给我."
-					+ "我会 " + getProductionActivity() + " "
-                    +  productName + " 给你" );
+					+ "我会为你 " + getProductionActivity() + " "
+                    +  productName + " 。" );
             return false;
         } else {
 			res.setAmount(amount);
-            npc.say("我需要你去弄到 "
+            npc.say("我需要你把 "
                     + getRequiredResourceNamesWithHashes(productName, amount)
-					+ " 给我, 然后做好要花 "
+					+ " 带给我, 然后完成订单要花 "
                     + TimeUtil.approxTimeUntil(getProductionTime(productName, amount))
-                    + " 的时间. 你找到我要的东西了吗?");
+                    + " 的时间。你找到我要的东西了吗?");
 
             return true;
         }
@@ -366,11 +366,11 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
             }
             final long timeNow = new Date().getTime();
             player.setQuest(questSlot, amount + ";" + productName + ";" + timeNow);
-            npc.say("OK, 我会 "
+            npc.say("OK, 我会为你 "
                     + getProductionActivity()
                     + " "
                     + amount + productName
-                    + " 给你，但要花点时间，请等 "
+                    + " ，但要花点时间，请等 "
                     + getApproximateRemainingTime(player) + "后再来拿.");
             return true;
         }
@@ -416,9 +416,9 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
 				player.incProducedCountForItem(productName, products.getQuantity());
 				SingletonRepository.getAchievementNotifier().onProduction(player);
 			} else {
-				npc.say("欢迎回来！你的事我已经完成了，但现在你的背包太满，还不能拿走 "
+				npc.say("欢迎回来！你的订单已经完成了，但现在你的背包太满，无法拿走 "
 						+ numberOfProductItems + productName
-						+ ". 等你身上有空再回来拿.");
+						+ ". 等你身上有空再回来拿吧.");
 			}
 		}
 	}

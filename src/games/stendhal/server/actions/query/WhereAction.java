@@ -57,29 +57,29 @@ public class WhereAction implements ActionListener {
 
 			if (who != null) {
 				if (who.isGhost() && !who.equals(player)) {
-					player.sendPrivateText("No player or pet named \"" + whoName + "\" is currently logged in.");
+					player.sendPrivateText("当前在线人员没有名字叫 \"" + whoName + "\" 的人或宠物.");
 				} else {
 					final StendhalRPZone zone = who.getZone();
 
 					if (zone != null) {
 						if (who.equals(player)) {
-							player.sendPrivateText("You are in " + zone.getName()
-									+ " at (" + who.getX() + "," + who.getY() + ")");
+							player.sendPrivateText("你在 " + zone.getName()
+									+ " 坐标 (" + who.getX() + "," + who.getY() + ")");
 						} else {
-							player.sendPrivateText(who.getTitle() + " is in " + zone.getName()
-									+ " at (" + who.getX() + "," + who.getY() + ")");
+							player.sendPrivateText(who.getTitle() + " 在 " + zone.getName()
+									+ " 坐标 (" + who.getX() + "," + who.getY() + ")");
 						}
 					}
 				}
 			}
 
 			if (animal != null) {
-				player.sendPrivateText("Your " + ItemTools.itemNameToDisplayName(animal.get("type"))
-						+ " is at (" + animal.getX() + "," + animal.getY() + ")");
+				player.sendPrivateText("你的 " + ItemTools.itemNameToDisplayName(animal.get("type"))
+						+ " 坐标在 (" + animal.getX() + "," + animal.getY() + ")");
 			}
 
 			if ((who == null) && (animal == null)) {
-				player.sendPrivateText("No player or pet named \"" + whoName + "\" is currently logged in.");
+				player.sendPrivateText("当前在线人员没有名叫 \"" + whoName + "\" 的人或宠物.");
 			}
 
 			player.notifyWorldAboutChanges();

@@ -164,7 +164,7 @@ public abstract class DomesticAnimal extends Creature {
 	 */
 	@Override
 	protected void dropItemsOn(final Corpse corpse) {
-		final Food food = (Food) SingletonRepository.getEntityManager().getItem("meat");
+		final Food food = (Food) SingletonRepository.getEntityManager().getItem("肉");
 		food.setQuantity(getWeight() / 10 + 1);
 		corpse.add(food);
 	}

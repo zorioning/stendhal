@@ -110,7 +110,7 @@ public class Maze extends AbstractQuest {
 	private void setupConversation() {
 		SpeakerNPC npc = getNPC();
 
-		npc.addQuest("I can send you to a #maze you need to find your way out. I keep the a list of the fast and frequent maze solvers in that blue book on the table.");
+		npc.addQuest("I can send you to a #maze you need to find your way out. I keep the a list of the fast and frequent maze solvers in that 蓝色的书 on the table.");
 
 		npc.add(ConversationStates.ATTENDING,
 				"maze",
