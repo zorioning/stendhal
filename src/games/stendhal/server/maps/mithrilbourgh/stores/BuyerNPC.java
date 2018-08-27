@@ -69,9 +69,9 @@ public class BuyerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Welcome to the supply stores for the Mithrilbourgh Army.");
 				addJob("I proud to be the Quartermaster of the Mithrilbourgh Army. We have plenty of #ammunition. However, we are lacking in #boots and #helmets.");
-				addReply("boots", "I seem to hand out stone boots very regularly, but our careless soldiers  always lose them. Thus, I buy any good boots that you can #offer, see the blue book for a price list.");
+				addReply("boots", "I seem to hand out 石靴 very regularly, but our careless soldiers  always lose them. Thus, I buy any good boots that you can #offer, see the 蓝色的书 for a price list.");
 				addReply("helmets", "I do not have a good source of helmets. Any you can #trade with me would be appreciated, at the moment we only have enough for the lieutenants, and none for the soldiers. The red book has details.");
-				addReply("ammunition", "I sell arrows, wooden arrows are the cheapest, power arrows the most costly. Check the board for all the prices.");
+				addReply("ammunition", "I sell arrows, wooden arrows are the cheapest, 加强箭s the most costly. Check the board for all the prices.");
 				addHelp("As Quartermaster, I take #offers for supplies which we are short of.");
 				addOffer("I buy #boots and #helmets on behalf of the Mithrilbourgh Army, and I sell surplus stock of #ammunition.");
 				addQuest("The Mithrilbourgh Army is not in need your services at present.");
@@ -89,7 +89,7 @@ public class BuyerNPC implements ZoneConfigurator {
 		// Add a book with the shop offers
 		final Sign book = new Sign();
 		book.setPosition(12, 3);
-		book.setText(" -- Buying -- \n steel boots\t 1000\n golden boots\t 1500\n shadow boots\t 2000\n stone boots\t 2500\n chaos boots\t 4000\n green thing boots\t 6000\n xeno boots\t 8000");
+		book.setText(" -- Buying -- \n 铁靴\t 1000\n 金靴子\t 1500\n 影子靴子\t 2000\n 石靴\t 2500\n 混沌靴\t 4000\n 绿了吧唧的靴子\t 6000\n 异种元素靴子\t 8000");
 		book.setEntityClass("book_blue");
 		book.setResistance(10);
 		zone.add(book);

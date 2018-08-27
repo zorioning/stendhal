@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
 
-  <item name="axe">
+  <item name="重斧">
     <type class="axe" subclass="axe" tileid="-1"/>
-    <description>You see a rusty but heavy axe. What it lacks in sharpness it makes up for in weight.</description>
+    <description>这是一把生锈的重斧，它很重但不锋利。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="12"/>
@@ -22,9 +22,9 @@
     </equipable>
   </item>
 
-  <item name="bardiche">
+  <item name="大砍刀">
     <type class="axe" subclass="bardiche" tileid="-1"/>
-    <description>You see a rare and powerful bardiche.</description>
+    <description>这是一把稀有且有力的大砍刀。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="33"/>
@@ -43,9 +43,9 @@
     </equipable>
   </item>
   
-  <item name="battle axe">
+  <item name="战斧">
     <type class="axe" subclass="battle_axe" tileid="-1"/>
-    <description>You see a battle axe. It is well crafted and sharp despite its age.</description>
+    <description>这是一把战斧。制造精良且历久弥新。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="15"/>
@@ -63,9 +63,9 @@
     </equipable>
   </item>
   
-  <item name="black halberd">
+  <item name="黑戟">
     <type class="axe" subclass="black_halberd" tileid="-1"/>
-    <description>You see a black halberd. It's immensely heavy so will make huge blows but you can only swing it at a very slow rate.</description>
+    <description>这是一把黑戟。非常重，会造成巨大的破坏，但是冷却时间很长。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="57"/>
@@ -85,9 +85,9 @@
     </equipable>
   </item>
   
-  <item name="black scythe">
-    <type class="axe" subclass="black_scythe" tileid="-1"/>
-    <description>You see a black scythe. Its attack is awesome for a farming tool.</description>
+  <item name="黑镰刀">
+    <type class="axe" subclass="black_axe" tileid="-1"/>
+    <description>这是一把黑镰刀。对于一种农具来说，它的攻击力是惊人的。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="42"/>
@@ -107,9 +107,9 @@
     </equipable>
   </item>
   
-  <item name="chaos axe">
+  <item name="混沌斧">
     <type class="axe" subclass="chaos_axe" tileid="-1"/>
-    <description>You see a chaos axe. The handle is some alloy you can't recognise and the blade is golden coloured, but thinking too long about it makes you confused.</description>
+    <description>这是一把混沌斧。斧柄是认不出来的一些合金，斧刃是金黄色的。但是思考太久会让你感到困惑。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>    
     <attributes>
       <atk value="52"/>
@@ -129,9 +129,9 @@
     </equipable>
   </item>
   
-  <item name="durin axe">
+  <item name="都灵之斧">
     <type class="axe" subclass="durin_axe" tileid="-1"/>
-    <description>You see a durin axe, a great prize from the dwarves.</description>
+    <description>这是一把都灵之斧，小矮人的大奖。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="47"/>
@@ -150,9 +150,9 @@
     </equipable>
   </item>
   
-  <item name="golden twoside axe">
+  <item name="黄金双刃斧">
     <type class="axe" subclass="golden_twosided_poleaxe" tileid="-1"/>
-    <description>You see a golden twoside axe.  This axe is a rare find.</description>
+    <description>这是一把黄金双刃斧，非常稀有。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="35"/>
@@ -171,9 +171,9 @@
     </equipable>
   </item>
 
-  <item name="halberd">
+  <item name="战戟">
     <type class="axe" subclass="halberd" tileid="-1"/>
-    <description>You see a rare halberd, with an axe's blade fused onto a shaft. It is both heavy and keen-edged.</description>
+    <description>这是一把非常稀有的战戟，斧柄固定在轴上，既重又锋利。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -192,9 +192,9 @@
     </equipable>
   </item>
 
-  <item name="hand axe">
+  <item name="手斧">
     <type class="axe" subclass="hand_axe" tileid="-1"/>
-    <description>You see a hand axe, well worn from years of use but may prove useful.</description>
+    <description>这是一把手斧，历经多年使用，但是可能会有用。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="9"/>
@@ -212,9 +212,9 @@
     </equipable>
   </item>
   
-  <item name="magic twoside axe">
+  <item name="魔法双刃斧">
     <type class="axe" subclass="magic_twosided_poleaxe" tileid="-1"/>
-    <description>You see a magic twoside axe. The nature of the magic isn't clear to you.</description>
+    <description>这是一把魔法双刃斧，但你并不明白魔法的本质。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -234,9 +234,9 @@
     </equipable>
   </item>
   
-  <item name="old scythe">
+  <item name="旧的大镰刀">
     <type class="axe" subclass="oldscythe" tileid="-1"/>
-    <description>You see an old scythe, it used to be weapon of death. But now it is only a useful tool for farming.</description>
+    <description>这是一把旧的大镰刀，原来是死神的武器，但是现在只能当作农具。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="2"/>
@@ -254,9 +254,9 @@
     </equipable>
   </item>
   
-  <item name="scythe">
+  <item name="大镰刀">
     <type class="axe" subclass="scythe" tileid="-1"/>
-    <description>You see the weapon of death - a scythe. It looks dangerous but perhaps also a useful tool for farming.</description>
+    <description>这是死神的武器大镰刀。看起来很危险，但也能当作农具。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="19"/>
@@ -275,9 +275,9 @@
     </equipable>
   </item>
   
-  <item name="sickle">
+  <item name="镰刀">
     <type class="axe" subclass="sickle" tileid="-1"/>
-    <description>You see a sickle, it is a useful tool for farming.</description>
+    <description>这是一把镰刀，是有用的农具。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="2"/>
@@ -295,9 +295,9 @@
     </equipable>
   </item>
 
-  <item name="small axe">
+  <item name="小斧头">
     <type class="axe" subclass="small_axe" tileid="-1"/>
-    <description>You see a small axe. It appears well made but you suspect it is too light to do much damage.</description>
+    <description>这是一把小斧头，看起来制造精良，但是你怀疑它太轻了而不能造成太大的伤害。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="7"/>
@@ -315,9 +315,9 @@
     </equipable>
   </item>
 
-  <item name="twoside axe">
+  <item name="双刃斧">
     <type class="axe" subclass="twosided_poleaxe" tileid="-1"/>
-    <description>You see a well crafted twoside axe.</description>
+    <description>这是一把制造精良的双刃斧。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="29"/>

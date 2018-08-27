@@ -55,8 +55,8 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
  * <li> 10 moneys for each rat
  * <li> 20 moneys for each caverat
  * <li> 100 moneys for each venomrat
- * <li> 160 moneys for each razorrat
- * <li> 360 moneys for each giantrat
+ * <li> 160 moneys for each 利齿鼠
+ * <li> 360 moneys for each 巨型鼠
  * <li> 800 moneys for each archrat
  * <li> 5 karma in total
  * </ul>

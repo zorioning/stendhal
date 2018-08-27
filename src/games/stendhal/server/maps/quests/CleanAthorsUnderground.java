@@ -130,7 +130,7 @@ public class CleanAthorsUnderground extends AbstractQuest {
 		toKill.put("royal mummy", new Pair<Integer, Integer>(0,1));
 		toKill.put("monk",new Pair<Integer, Integer>(0,1));
 		toKill.put("darkmonk",new Pair<Integer, Integer>(0,1));
-		toKill.put("bat",new Pair<Integer, Integer>(0,1));
+		toKill.put("蝙蝠",new Pair<Integer, Integer>(0,1));
 		toKill.put("brown slime",new Pair<Integer, Integer>(0,1));
 		toKill.put("green slime",new Pair<Integer, Integer>(0,1));
 		toKill.put("black slime",new Pair<Integer, Integer>(0,1));

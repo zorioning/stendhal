@@ -88,7 +88,7 @@ import marauroa.common.game.SlotIsFullException;
  * <li> some karma (15)
  * <p>
  * from Sergeant James
- * <li> mainio boots
+ * <li> 很棒的靴子
  * <li> some karma (15)
  *
  * REPETITIONS:
@@ -273,7 +273,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new IncreaseXPAction(2500));
 		actions.add(new DropInfostringItemAction("leather legs","tom"));
-		actions.add(new DropInfostringItemAction("scale armor","peter"));
+		actions.add(new DropInfostringItemAction("鳞甲","peter"));
 		actions.add(new IncreaseKarmaAction(15.0));
 		actions.add(new GiveMapAction(false));
 
@@ -283,7 +283,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, "start"),
 						new PlayerHasInfostringItemWithHimCondition("leather legs", "tom"),
 						new PlayerHasInfostringItemWithHimCondition("note", "charles"),
-						new PlayerHasInfostringItemWithHimCondition("scale armor", "peter")),
+						new PlayerHasInfostringItemWithHimCondition("鳞甲", "peter")),
 				ConversationStates.ATTENDING,
 				"Oh my! Peter, Tom, and Charles are all dead? *cries*. Anyway, here is your reward. And keep the IOU.",
 				new MultipleActions(actions));
@@ -296,7 +296,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 								new AndCondition(
 										new PlayerHasInfostringItemWithHimCondition("leather legs", "tom"),
 										new PlayerHasInfostringItemWithHimCondition("note", "charles"),
-										new PlayerHasInfostringItemWithHimCondition("scale armor", "peter")))),
+										new PlayerHasInfostringItemWithHimCondition("鳞甲", "peter")))),
 				ConversationStates.ATTENDING,
 				"You didn't prove that you have found them all!",
 				null);
@@ -368,8 +368,8 @@ public class KanmararnSoldiers extends AbstractQuest {
 		// Add a refiller to automatically fill the corpse of unlucky Peter
 		final CorpseRefiller peterRefiller = new CorpseRefiller(
 				peter,
-				"scale armor",
-				"You see a slightly rusty scale armor. It is heavily deformed by several strong hammer blows.");
+				"鳞甲",
+				"You see a slightly rusty 鳞甲. It is heavily deformed by several strong hammer blows.");
 		peterRefiller.start();
 	}
 
@@ -403,7 +403,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 		actions.add(new IncreaseXPAction(5000));
 		actions.add(new DropInfostringItemAction("map","Henry"));
 		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 15.0));
-		actions.add(new EquipItemAction("mainio boots", 1, true));
+		actions.add(new EquipItemAction("很棒的靴子", 1, true));
 
 		james.add(ConversationStates.ATTENDING,
 				Arrays.asList("map", "henry"),
@@ -468,7 +468,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 			if ("map".equals(questState)) {
 				return res;
 			}
-			res.add("I met Sergeant James and gave him the treasure map. He gave me an excellent pair of mainio boots in return.");
+			res.add("I met Sergeant James and gave him the treasure map. He gave me an excellent pair of 很棒的靴子 in return.");
 			if (isCompleted(player)) {
 				return res;
 			}

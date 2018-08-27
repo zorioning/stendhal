@@ -103,7 +103,7 @@ public class ObsidianKnife extends AbstractQuest {
 	// the offering knife stage
 	private static final int REQUIRED_LEVEL = 50;
 
-	private static final List<String> FOOD_LIST = Arrays.asList("ham", "meat", "cheese");
+	private static final List<String> FOOD_LIST = Arrays.asList("ham", "肉", "干酪");
 
 	private static final int REQUIRED_DAYS = 3;
 
@@ -135,7 +135,7 @@ public class ObsidianKnife extends AbstractQuest {
 			return res;
 		}
 		res.add("Alrak 让我带给他一些吃的.");
-		if (player.isQuestInState(QUEST_SLOT, "ham", "meat", "cheese")) {
+		if (player.isQuestInState(QUEST_SLOT, "ham", "肉", "干酪")) {
 			res.add("我必须拿到 " + REQUIRED_FOOD + ", 并且返回后说 " + questState + " .");
 			return res;
 		}
@@ -351,7 +351,7 @@ public class ObsidianKnife extends AbstractQuest {
 				null,
 				ConversationStates.ATTENDING,
 				"啊, 这个 mountain dwarf! 希望他喜欢这本宝石书 gem book.",
-				new MultipleActions(new EquipItemAction("blue book", 1, true),
+				new MultipleActions(new EquipItemAction("蓝色的书", 1, true),
 				new SetQuestAction(QUEST_SLOT, "got_book")));
 
 		// allow to say goodbye while Ceryl is listening for the dwarf's name
@@ -374,11 +374,11 @@ public class ObsidianKnife extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "got_book"),
-						new PlayerHasItemWithHimCondition("blue book")),
+						new PlayerHasItemWithHimCondition("蓝色的书")),
 				ConversationStates.IDLE,
 				"Great! I think I'll read this for a while. Bye!",
 				new MultipleActions(
-						new DropItemAction("blue book"),
+						new DropItemAction("蓝色的书"),
 						new IncreaseXPAction(500),
 						new SetQuestAction(QUEST_SLOT, "reading;"),
 						new SetQuestToTimeStampAction(QUEST_SLOT, 1)));
@@ -387,7 +387,7 @@ public class ObsidianKnife extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new OrCondition(new QuestInStateCondition(QUEST_SLOT,"seeking_book"), new QuestInStateCondition(QUEST_SLOT, "got_book")),
-						new NotCondition(new PlayerHasItemWithHimCondition("blue book"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("蓝色的书"))),
 				ConversationStates.ATTENDING,
 				"Hello again. I hope you haven't forgotten about the gem book I wanted.",
 				null);

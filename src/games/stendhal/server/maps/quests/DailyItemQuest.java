@@ -86,54 +86,54 @@ public class DailyItemQuest extends AbstractQuest {
 		items = new HashMap<String, Integer>();
 
 		// ammunition
-		items.put("golden arrow",5);
-		items.put("power arrow",5);
-		items.put("steel arrow",7);
-		items.put("wooden arrow",10);
+		items.put("金箭",5);
+		items.put("加强箭",5);
+		items.put("铁箭",7);
+		items.put("木箭",10);
 
 		// armor
-        items.put("blue armor",1);
-		items.put("chain armor",1);
-		items.put("dress",1);
-		items.put("enhanced chainmail",1);
-		items.put("golden chainmail",1);
-		items.put("iron scale armor",1);
-		items.put("leather armor",1);
-		items.put("leather cuirass",1);
-		items.put("leather scale armor",1);
-		items.put("pauldroned iron cuirass",1);
-		items.put("pauldroned leather cuirass",1);
-		items.put("plate armor",1);
-		items.put("scale armor",1);
-		items.put("studded armor",1);
+        items.put("蓝色盔甲",1);
+		items.put("链甲",1);
+		items.put("布衣",1);
+		items.put("加固锁子甲",1);
+		items.put("黄金锁子甲",1);
+		items.put("铁鳞甲",1);
+		items.put("皮甲",1);
+		items.put("皮胸甲",1);
+		items.put("鳞甲",1);
+		items.put("护肩铁胸甲",1);
+		items.put("护肩皮胸甲",1);
+		items.put("板甲",1);
+		items.put("鳞甲",1);
+		items.put("镶嵌甲",1);
 
-		// axe
-		items.put("axe",1);
-		items.put("bardiche",1);
-		items.put("battle axe",1);
-		items.put("halberd",1);
-		items.put("hand axe",1);
-		items.put("old scythe",1);
-		items.put("scythe",1);
-		items.put("sickle",1);
-		items.put("small axe",1);
-		items.put("twoside axe",1);
+		// 重斧
+		items.put("重斧",1);
+		items.put("大砍刀",1);
+		items.put("战斧",1);
+		items.put("战戟",1);
+		items.put("手斧",1);
+		items.put("旧的大镰刀",1);
+		items.put("大镰刀",1);
+		items.put("镰刀",1);
+		items.put("小斧头",1);
+		items.put("双刃斧",1);
 
 		// boots
-        items.put("blue boots",1);
-		items.put("chain boots",1);
-		items.put("leather boots",1);
-		items.put("studded boots",1);
+        items.put("蓝靴子",1);
+		items.put("链靴",1);
+		items.put("皮靴",1);
+		items.put("钉靴",1);
 
 		// cloaks
-		items.put("blue elf cloak",1);
+		items.put("蓝灵斗篷",1);
 		items.put("cloak",1);
-		items.put("dwarf cloak",1);
-		items.put("elf cloak",1);
-		items.put("green dragon cloak",1);
+		items.put("矮人斗篷",1);
+		items.put("精灵斗篷",1);
+		items.put("绿龙斗篷",1);
 
 		// club
-		items.put("club",1);
+		items.put("木棍",1);
 		items.put("enhanced mace",1);
 		items.put("flail",1);
 		items.put("golden hammer",1);
@@ -177,10 +177,10 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("carrot",10);
 		items.put("cauliflower",5);
 		items.put("char",5);
-		items.put("cheese",10);
+		items.put("干酪",10);
 		items.put("cherry",10);
 		items.put("cherry pie",2);
-		items.put("chicken",10);
+		items.put("鸡腿",10);
 		items.put("chocolate bar",5);
 		items.put("clownfish",5);
 		items.put("collard",5);
@@ -194,7 +194,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("ham",10);
 		items.put("honey",2);
 		items.put("leek",5);
-		items.put("meat",10);
+		items.put("肉",10);
 		items.put("onion",5);
 		items.put("pear",5);
 		items.put("perch",5);
@@ -266,7 +266,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("plate shield",1);
 		items.put("skull shield",1);
 		items.put("studded shield",1);
-		items.put("unicorn shield",1);
+		items.put("独角盾",1);
 		items.put("wooden shield",1);
 
 		// sword
@@ -283,7 +283,7 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// tool
 		items.put("pick",1);
-		items.put("gold pan",1);
+		items.put("金盘子",1);
 	}
 
 	private ChatAction startQuestAction() {

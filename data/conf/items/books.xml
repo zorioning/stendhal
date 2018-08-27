@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
-  <item name="black book">
+  <item name="黑色的书">
     <type class="book" subclass="book_black" tileid="-1"/>
-    <description>You see the black book that Jynath kept out for so long.</description>
+    <description>这是一本 Jynath 拒绝了很久的黑色的书。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -17,9 +17,9 @@
     </equipable>
   </item>
   
-  <item name="blue book">
+  <item name="蓝色的书">
     <type class="book" subclass="book_blue" tileid="-1"/>
-    <description>You see a book with the words GEMS AND MINERALS on the front cover.</description>
+    <description>Y这本书的封面上写着「细菌和矿物」。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

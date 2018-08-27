@@ -86,8 +86,8 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 			outfitTypes.put("glasses", GLASSES);
 			outfitTypes.put("other glasses", GLASSES_2);
 			outfitTypes.put("hat", HAT);
-			outfitTypes.put("horse", HORSE);
-			outfitTypes.put("girl horse", GIRL_HORSE);
+			outfitTypes.put("马尾", HORSE);
+			outfitTypes.put("女士双马尾", GIRL_HORSE);
 			outfitTypes.put("alien", ALIEN);
 	}
 
@@ -176,8 +176,8 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 				priceList.put("glasses", (int) (N * 400));
 				priceList.put("other glasses", (int) (N * 400));
 				priceList.put("hat", (int) (N * 400));
-				priceList.put("horse", (int) (N * 1200));
-				priceList.put("girl horse", (int) (N * 1200));
+				priceList.put("马尾", (int) (N * 1200));
+				priceList.put("女士双马尾", (int) (N * 1200));
 				priceList.put("alien", (int) (N * 1200));
 			       	addGreeting("Hi! How may I help you?");
 				addQuest("I can't think of anything for you, sorry.");

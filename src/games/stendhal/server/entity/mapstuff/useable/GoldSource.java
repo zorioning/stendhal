@@ -26,7 +26,7 @@ import marauroa.common.game.RPClass;
 
 /**
  * A gold source is a spot where a player can prospect for gold nuggets. He
- * needs a gold pan, time, and luck.
+ * needs a 金盘子, time, and luck.
  *
  * Prospecting takes 7-11 seconds; during this time, the player keep standing
  * next to the gold source. In fact, the player only has to be there when the
@@ -44,7 +44,7 @@ public class GoldSource extends PlayerActivityEntity {
 	/**
 	 * The equipment needed.
 	 */
-	private static final String NEEDED_EQUIPMENT = "gold pan";
+	private static final String NEEDED_EQUIPMENT = "金盘子";
 
 	/**
 	 * The chance that prospecting is successful.
@@ -119,7 +119,7 @@ public class GoldSource extends PlayerActivityEntity {
 			return true;
 		}
 
-		player.sendPrivateText("需要一个金盘 a gold pan 去淘金.");
+		player.sendPrivateText("需要一个金盘子才能淘金.");
 		return false;
 	}
 

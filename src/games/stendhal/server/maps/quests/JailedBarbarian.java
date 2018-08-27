@@ -51,11 +51,11 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li>1. Lorenz ask you for a scythe to bring him</li>
+ * <li>1. Lorenz ask you for a 大镰刀 to bring him</li>
  * <li>2. You have to ask Princess Esclara for a 'reason'</li>
  * <li>3. You have to bring him an egg</li>
  * <li>4. You have to inform Princess Ylflia</li>
- * <li>5. You have to bring him a barbarian armor</li>
+ * <li>5. You have to bring him a 野蛮人护甲</li>
  * <li>6. You get a reward.</li>
  * </ul>
  *
@@ -102,7 +102,7 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Thank you! First I need a #scythe to cut down these ugly flowers. And beware of bringing me an old one! Let me know if you have one!",
+				"Thank you! First I need a #大镰刀 to cut down these ugly flowers. And beware of bringing me an old one! Let me know if you have one!",
 				new SetQuestAction(QUEST_SLOT, "start"));
 
 		// Player says no, they've lost karma.
@@ -116,30 +116,30 @@ import games.stendhal.server.maps.Region;
 	final SpeakerNPC npc = npcs.get("Lorenz");
 
 	    final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("scythe"));
+		reward.add(new DropItemAction("大镰刀"));
 		reward.add(new IncreaseXPAction(1000));
 		reward.add(new SetQuestAction(QUEST_SLOT, "capture"));
 		reward.add(new IncreaseKarmaAction(10));
 
-		npc.add(ConversationStates.ATTENDING, "scythe",
+		npc.add(ConversationStates.ATTENDING, "大镰刀",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"),
-				new PlayerHasItemWithHimCondition("scythe")),
+				new PlayerHasItemWithHimCondition("大镰刀")),
 				ConversationStates.ATTENDING,
 				"Thank you!! First part is done! Now I can cut all flowers down! Now please ask Princess Esclara why I am here! I think saying my name should tell her something...",
 				new MultipleActions(reward));
 
 		npc.add(
-			ConversationStates.ATTENDING, "scythe",
-			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("scythe"))),
+			ConversationStates.ATTENDING, "大镰刀",
+			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("大镰刀"))),
 			ConversationStates.ATTENDING,
-			"You don't have a scythe yet! Go and get one and hurry up!",
+			"You don't have a 大镰刀 yet! Go and get one and hurry up!",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
-				"I already asked you to bring me a #scythe to cut the flowers down!",
+				"I already asked you to bring me a #大镰刀 to cut the flowers down!",
 				null);
 	}
 
@@ -248,7 +248,7 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.ATTENDING, "greetings",
 				new QuestInStateCondition(QUEST_SLOT, "spoken"),
 				ConversationStates.ATTENDING,
-				"Thanks my friend. Now a final task for you! Bring me a barbarian armor. Without this I cannot escape from here! Go! Go! And let me know when you have the #armor !",
+				"Thanks my friend. Now a final task for you! Bring me a 野蛮人护甲. Without this I cannot escape from here! Go! Go! And let me know when you have the #armor !",
 				new SetQuestAction(QUEST_SLOT, "armor"));
 
 		npc.add(ConversationStates.ATTENDING,
@@ -263,7 +263,7 @@ import games.stendhal.server.maps.Region;
 		final SpeakerNPC npc = npcs.get("Lorenz");
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("barbarian armor"));
+		reward.add(new DropItemAction("野蛮人护甲"));
 		reward.add(new IncreaseXPAction(50000));
 		reward.add(new EquipItemAction("gold bar", 20));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -271,16 +271,16 @@ import games.stendhal.server.maps.Region;
 
 		npc.add(ConversationStates.ATTENDING, "armor",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "armor"),
-						new PlayerHasItemWithHimCondition("barbarian armor")),
+						new PlayerHasItemWithHimCondition("野蛮人护甲")),
 						ConversationStates.ATTENDING,
 						"Thats all! Now I am prepared for my escape! Here is something I have stolen from Princess Esclara! Do not let her know. And now leave me!",
 						new MultipleActions(reward));
 
 		npc.add(
 			ConversationStates.ATTENDING, "armor",
-			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "armor"), new NotCondition(new PlayerHasItemWithHimCondition("barbarian armor"))),
+			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "armor"), new NotCondition(new PlayerHasItemWithHimCondition("野蛮人护甲"))),
 			ConversationStates.ATTENDING,
-			"You have no barbarian armor with you! Go get one!",
+			"You have no 野蛮人护甲 with you! Go get one!",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -315,7 +315,7 @@ import games.stendhal.server.maps.Region;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
 		res.add("I found my way into Lorenz's hut.");
-		res.add("Lorenz wants a scythe, and not an old one, to cut down the flowers he finds ugly.");
+		res.add("Lorenz wants a 大镰刀, and not an old one, to cut down the flowers he finds ugly.");
 		if ("rejected".equals(questState)) {
 			res.add("I don't want to help Lorenz cut down flowers. Whatever he's jailed for, I bet he deserves it.");
 			return res;
@@ -343,7 +343,7 @@ import games.stendhal.server.maps.Region;
 		if ("spoken".equals(questState)) {
 			return res;
 		}
-		res.add("Lorenz finally resolved to try to break free and I need to get him a barbarian armor for that.");
+		res.add("Lorenz finally resolved to try to break free and I need to get him a 野蛮人护甲 for that.");
 		if ("armor".equals(questState)) {
 			return res;
 		}

@@ -77,7 +77,7 @@ public class CleanStorageSpace extends AbstractQuest {
 			return res;
 		}
 		res.add("I promised Eonna to kill the rats and snakes in her basement.");
-		if ("start".equals(questState) && player.hasKilled("rat") && player.hasKilled("caverat") && player.hasKilled("snake") || "done".equals(questState)) {
+		if ("start".equals(questState) && player.hasKilled("老鼠") && player.hasKilled("洞穴老鼠") && player.hasKilled("蛇") || "done".equals(questState)) {
 			res.add("I have cleaned out Eonna's storage space.");
 		}
 		if ("done".equals(questState)) {
@@ -107,9 +107,9 @@ public class CleanStorageSpace extends AbstractQuest {
 		final HashMap<String, Pair<Integer, Integer>> toKill =
 			new HashMap<String, Pair<Integer, Integer>>();
 		// first number is required solo kills, second is required shared kills
-		toKill.put("rat", new Pair<Integer, Integer>(0,1));
-		toKill.put("caverat", new Pair<Integer, Integer>(0,1));
-		toKill.put("snake", new Pair<Integer, Integer>(0,1));
+		toKill.put("老鼠", new Pair<Integer, Integer>(0,1));
+		toKill.put("洞穴老鼠", new Pair<Integer, Integer>(0,1));
+		toKill.put("蛇", new Pair<Integer, Integer>(0,1));
 
 		start.add(new SetQuestAction(QUEST_SLOT, 0, "start"));
 		start.add(new StartRecordingKillsAction(QUEST_SLOT, 1, toKill));

@@ -11,7 +11,6 @@
  *                                                                         *
  ***************************************************************************/
 package games.stendhal.server.entity.item;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -697,7 +696,7 @@ public class Item extends PassiveEntity implements TurnListener, EquipListener,
 		}
 
 		if (has("atk")) {
-			stats.append("ATK: ");
+			stats.append("攻击力: ");
 			stats.append(get("atk"));
 			// Show only special types
 			if (getDamageType() != Nature.CUT) {
@@ -707,27 +706,27 @@ public class Item extends PassiveEntity implements TurnListener, EquipListener,
 			}
 		}
 		if (has("def")) {
-			stats.append(" DEF: ");
+			stats.append(" 防御: ");
 			stats.append(get("def"));
 		}
 		if (has("ratk")) {
-			stats.append(" RATK: ");
+			stats.append(" 远攻: ");
 			stats.append(get("ratk"));
 		}
 		if (has("rate")) {
-			stats.append(" RATE: ");
+			stats.append(" 速度: ");
 			stats.append(get("rate"));
 		}
 		if (has("amount")) {
-			stats.append(" HP: ");
+			stats.append(" 生命: ");
 			stats.append(get("amount"));
 		}
 		if (has("range")) {
-			stats.append(" RANGE: ");
+			stats.append(" 范围: ");
 			stats.append(get("range"));
 		}
 		if (has("lifesteal")) {
-			stats.append(" LIFESTEAL: ");
+			stats.append(" 吸血: ");
 			stats.append(get("lifesteal"));
 		}
 		if ((susceptibilities != null) && !susceptibilities.isEmpty()) {
@@ -741,16 +740,16 @@ public class Item extends PassiveEntity implements TurnListener, EquipListener,
 		}
 
 		if (has("min_level")) {
-			stats.append(" MIN-LEVEL: ");
+			stats.append(" 最小等级: ");
 			stats.append(get("min_level"));
 		}
 		if (has("life_support")) {
-			stats.append(" LIFE-SUPPORT: ");
+			stats.append(" 生命支持: ");
 			stats.append(get("life_support"));
 		}
 		String statString = "";
 		if (stats.length() > 0) {
-			statString =  " Stats are (" + stats.toString().trim() + ").";
+			statString =  " 属性 (" + stats.toString().trim() + ").";
 		}
 		return (text + levelwarning + statString);
 	}

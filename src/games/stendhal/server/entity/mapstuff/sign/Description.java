@@ -29,7 +29,7 @@ public class Description extends Sign {
 	public String describe() {
 		final String text = getText();
 		if (text == null) {
-			return "You see a sign without any text";
+			return "你看到没有字的标志";
 		}
 
 		return text;

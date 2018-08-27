@@ -119,10 +119,10 @@
 		</equipable>
 	</item>
 	
-	<!-- Removing crab meat
-	<item name="crab meat">
+	<!-- Removing 螃蟹 meat
+	<item name="螃蟹 meat">
 		<type class="food" subclass="crab_meat" tileid="-1" />
-		<description>You see a piece of crab meat. It's bite-sized but delicious.</description>
+		<description>You see a piece of 螃蟹 meat. It's bite-sized but delicious.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="30" />
@@ -142,7 +142,7 @@
 			<slot name="trade" />
 		</equipable>
 	</item>
-	Removing crab meat -->
+	Removing 螃蟹 meat -->
 
 	<item name="grapes">
 		<type class="food" subclass="grapes" tileid="-1" />
@@ -1390,9 +1390,9 @@
 	</item>
 
     <!-- dropped -->
-	<item name="cheese">
+	<item name="干酪">
 		<type class="food" subclass="cheese" tileid="-1" />
-		<description>You see some cheese. Eat it and see what happens.</description>
+		<description>干酪，不知吃下会如何?</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="20" />
@@ -1413,9 +1413,9 @@
 		</equipable>
 	</item>
 
-	<item name="chicken">
+	<item name="鸡腿">
 		<type class="food" subclass="chicken" tileid="-1" />
-		<description>You see a tasty leg of chicken.</description>
+		<description>一只可口的大鸡腿。</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="50" />
@@ -1505,9 +1505,9 @@
 		</equipable>
 	</item>
 
-	<item name="meat">
+	<item name="肉">
 		<type class="food" subclass="meat" tileid="-1" />
-		<description>You see a piece of meat.</description>
+		<description>这是一块肉</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="60" />

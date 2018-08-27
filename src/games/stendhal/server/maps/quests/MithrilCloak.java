@@ -26,7 +26,7 @@ import games.stendhal.server.maps.Region;
 import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
 
 /**
- * QUEST: Mithril Cloak
+ * QUEST: 黑曜石斗篷
  * <p>
  * PARTICIPANTS:
  * <ul>
@@ -59,7 +59,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <li>Ida pricks her finger on the last needle and goes to twilight zone</li>
  * <li>Pdiddi sells the moss to get to twilight zone</li>
  * <li>A creature in the twilight zone drops the elixir to heal lda</li>
- * <li>After being ill Ida asks you to take a blue striped cloak to Josephine</li>
+ * <li>After being ill Ida asks you to take a 蓝色条纹斗篷 to Josephine</li>
  * <li>After taking cloak to Josephine and telling Ida she asks for mithril clasp</li>
  * <li>Pedinghaus makes mithril clasp</li>
  * <li>The clasp completes the cloak</li>
@@ -67,7 +67,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <p>
  * REWARD:
  * <ul>
- * <li>Mithril Cloak</li>
+ * <li>黑曜石斗篷</li>
  * <li> XP</li>
  * <li> Karma</li>
  * </ul>
@@ -92,7 +92,7 @@ public class MithrilCloak extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Mithril Cloak",
+				"黑曜石斗篷",
 				"随着女裁缝Ida给我的的长长的任务列表一件件完成，一件银亮且防御很高的斗蓬就要完工了，",
 				false);
 
@@ -209,7 +209,7 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("twilight_zone")) {
 			return res;
 		}
-		res.add("我给I gave Ida the twilight elixir to restore her health. But she got behind on her other jobs. Now I must go and find a blue striped cloak to take Josephine before Ida can work for me.");
+		res.add("我给I gave Ida the twilight elixir to restore her health. But she got behind on her other jobs. Now I must go and find a 蓝色条纹斗篷 to take Josephine before Ida can work for me.");
 		res.add("我给了 Ida twilight 药剂恢复她的神智，但她不敢再去工作，在 ida 可以工作之前，我必须离开并找到蓝色丝带斗篷带给 Josephine .");
 		if (questState.equals("taking_striped_cloak")) {
 			return res;

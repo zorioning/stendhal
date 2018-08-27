@@ -206,7 +206,7 @@ public class j2DClient implements UserInterface {
 			setOffline(false);
 			times = 0;
 			logger.debug("Synced with server state.");
-			addEventLine(new HeaderLessEventLine("Synchronized",
+			addEventLine(new HeaderLessEventLine("同步数据完成",
 					NotificationType.CLIENT));
 		}
 
@@ -217,7 +217,7 @@ public class j2DClient implements UserInterface {
 			if (times > 3) {
 				logger.debug("Request resync");
 				addEventLine(new HeaderLessEventLine(
-						"Unsynced: Resynchronizing...",
+						"未同步: 重新同步...",
 						NotificationType.CLIENT));
 			}
 		}
@@ -819,7 +819,7 @@ public class j2DClient implements UserInterface {
 		// code
 
 		if (!gameRunning) {
-			logger.info("Request logout");
+			logger.info("请求离开游戏");
 			try {
 				/*
 				 * We request server permision to logout. Server can deny

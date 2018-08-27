@@ -12,7 +12,6 @@
  ***************************************************************************/
 package games.stendhal.server.entity;
 
-
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -3384,6 +3383,7 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 	 */
 	public String getLanguage() {
 		return null;
+//		return "zh_CN";
 	}
 
 	/**

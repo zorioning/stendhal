@@ -84,7 +84,7 @@ public class BakerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				// addGreeting("Hi, most of the people are out of town at the moment.");
 				addJob("我是本地的面包师. 尽管我们得到 Semos 镇的很多支援，但还是有很多的工作要做。");
-				addReply(Arrays.asList("flour", "meat", "carrot"),
+				addReply(Arrays.asList("flour", "肉", "carrot"),
 				        "Ados 供应短缺，我们要从西边的 Semos 镇取得大多数的食物.");
 				addReply(Arrays.asList("mushroom", "button mushroom"),
 					    "我们抱怨我们的 pies 不够吃，所以我们现在只能吃点 mushroom 蘑菇充饥。你可以在森林中找到一些.");
@@ -95,7 +95,7 @@ public class BakerNPC implements ZoneConfigurator {
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("flour", Integer.valueOf(2));
-				requiredResources.put("meat", Integer.valueOf(2));
+				requiredResources.put("肉", Integer.valueOf(2));
 				requiredResources.put("carrot", Integer.valueOf(1));
 				requiredResources.put("button mushroom", Integer.valueOf(2));
 

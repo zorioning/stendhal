@@ -94,40 +94,40 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items = new HashMap<String, Integer>();
 
 		// armor
-		items.put("barbarian armor",1);
-		items.put("chaos armor",1);
-		items.put("dwarvish armor",1);
-		items.put("golden armor",1);
-		items.put("ice armor",1);
-		items.put("magic plate armor",1);
-		items.put("mainio armor",1);
-		items.put("shadow armor",1);
-		items.put("stone armor",1);
-		items.put("xeno armor",1);
+		items.put("野蛮人护甲",1);
+		items.put("浑沌护甲",1);
+		items.put("矮人护甲",1);
+		items.put("黄金铠甲",1);
+		items.put("冰护甲",1);
+		items.put("附魔甲",1);
+		items.put("奇妙甲",1);
+		items.put("影子铠甲",1);
+		items.put("石甲",1);
+		items.put("异种元素甲",1);
 
 		// axe
-		items.put("golden twoside axe",1);
-		items.put("magic twoside axe",1);
+		items.put("黄金双刃斧",1);
+		items.put("魔法双刃斧",1);
 
 		// boots
-		items.put("chaos boots",1);
-		items.put("golden boots",1);
-		items.put("mainio boots",1);
-		items.put("shadow boots",1);
-		items.put("steel boots",1);
-		items.put("stone boots",1);
-		items.put("xeno boots",1);
+		items.put("混沌靴",1);
+		items.put("金靴子",1);
+		items.put("很棒的靴子",1);
+		items.put("影子靴子",1);
+		items.put("铁靴",1);
+		items.put("石靴",1);
+		items.put("异种元素靴子",1);
 
 
 		// cloak
-		items.put("blue dragon cloak",1);
-		items.put("blue striped cloak",1);
-		items.put("chaos cloak",1);
-		items.put("golden cloak",1);
-		items.put("mainio cloak",1);
-		items.put("red dragon cloak",1);
-		items.put("shadow cloak",1);
-		items.put("xeno cloak",1);
+		items.put("蓝龙斗篷",1);
+		items.put("蓝色条纹斗篷",1);
+		items.put("混沌斗篷",1);
+		items.put("金斗篷",1);
+		items.put("华丽的斗篷",1);
+		items.put("红龙斗篷",1);
+		items.put("影子斗篷",1);
+		items.put("异种元素斗篷",1);
 
 		// club
 		items.put("skull staff",1);

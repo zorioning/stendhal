@@ -368,9 +368,9 @@
     </equipable>
   </item>
   
-  <item name="unicorn shield">
+  <item name="独角盾">
     <type class="shield" subclass="unicorn_shield" tileid="-1"/>
-    <description>You see a unicorn shield. It's beautifully crafted and will give you excellent protection.</description>
+    <description>You see a 独角盾. It's beautifully crafted and will give you excellent protection.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>

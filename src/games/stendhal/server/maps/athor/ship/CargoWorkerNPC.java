@@ -61,7 +61,7 @@ public class CargoWorkerNPC implements ZoneConfigurator  {
 				addGreeting("Ahoy! Nice to see you in the cargo hold!");
 				addJob("I'm taking care of the cargo. My job would be much easier without all these #rats.");
 				addHelp("You could earn some money if you'd #offer me something to poison these damn #rats.");
-				addReply(Arrays.asList("rat", "rats"),
+				addReply(Arrays.asList("老鼠", "rats"),
 				"These rats are everywhere. I wonder where they come from. I can't even kill them as fast as they come up.");
 
 				new BuyerAdder().addBuyer(this,

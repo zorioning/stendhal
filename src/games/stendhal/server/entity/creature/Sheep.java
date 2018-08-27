@@ -431,7 +431,7 @@ public class Sheep extends DomesticAnimal {
 
 	@Override
 	public String describe() {
-		String text = "You see a sheep; it looks like it weighs about " + weight + ".";
+		String text = "一只绵羊；目测体重大约 " + weight + " 斤重.";
 		if (hasDescription()) {
 			text = getDescription();
 		}

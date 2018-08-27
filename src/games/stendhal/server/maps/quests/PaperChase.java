@@ -74,7 +74,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		// Each greeting is said by the previous NPC to point to the NPC in the key.
 		greetings.put("Marcus", "My sheep knew that you were on the way to me. ");
 		greetings.put("Eheneumniranin", "Long time ago that someone visited me here. Nice that you found me. ");
-		greetings.put("Balduin", "Ahh, you found me while gathering sheaves of grain with my sickle. Great! ");
+		greetings.put("Balduin", "Ahh, you found me while gathering sheaves of grain with my 镰刀. Great! ");
 		greetings.put("Rachel", "It's windy here, isn't it? Hope the latest hint how to find me wasn't too easy. ");
 		greetings.put("Fritz", "Oh I love customers of Ados bank! They are so sweet! ");
 		greetings.put("Alice Farmer", "Smelling fish here, right? That's the spirit of the ocean! ");

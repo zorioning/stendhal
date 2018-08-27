@@ -40,7 +40,7 @@ public class FifthFloorCreatures implements ZoneConfigurator {
 		final EntityManager manager = SingletonRepository.getEntityManager();
 
 		final Creature creature = manager.getCreature("stone golem");
-		final Creature creature1 = manager.getCreature("wooden golem");
+		final Creature creature1 = manager.getCreature("木质傀儡");
 		final Creature creature2 = manager.getCreature("nymph");
 		final Creature creature3 = manager.getCreature("earth elemental");
 

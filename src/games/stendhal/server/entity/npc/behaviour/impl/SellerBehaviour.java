@@ -84,7 +84,7 @@ public class SellerBehaviour extends MerchantBehaviour {
 		}
 
 		if (amount <= 0) {
-			seller.say("抱歉，你最少买一件这个商品。");
+			seller.say("抱歉，你至少要买一件吧。");
 			return false;
 		}
 
@@ -96,9 +96,9 @@ public class SellerBehaviour extends MerchantBehaviour {
 		if (player.isEquipped("money", price)) {
 			if (player.equipToInventoryOnly(item)) {
 				player.drop("money", price);
-				seller.say("祝贺! 这 "
+				seller.say("谢谢惠顾! 这 "
 						+ amount + " 个 "
-						+ chosenItemName + " 是你的!");
+						+ chosenItemName + " 请拿好!");
 				player.incBoughtForItem(chosenItemName, amount);
 				return true;
 			} else {

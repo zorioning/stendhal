@@ -64,7 +64,7 @@ class MakingClasp {
 
 		// offer the clasp when prompted
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("clasp", "mithril clasp", "ida", "cloak", "mithril cloak"),
+			Arrays.asList("clasp", "mithril clasp", "ida", "cloak", "黑曜石斗篷"),
 			new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_clasp"),
 			ConversationStates.SERVICE_OFFERED,
 			"A clasp? Whatever you say! I am still so happy from that letter you brought me, it would be my pleasure to make something for you. I only need one mithril bar. Do you have it?",
@@ -102,7 +102,7 @@ class MakingClasp {
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("clasp", "mithril clasp", "ida", "cloak", "mithril cloak"),
+			Arrays.asList("clasp", "mithril clasp", "ida", "cloak", "黑曜石斗篷"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "forgingclasp;"),
 			ConversationStates.ATTENDING, null, new ChatAction() {
 				@Override
@@ -138,21 +138,21 @@ class MakingClasp {
 
 		// Player brought the clasp, don't make them wait any longer for the cloak
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("clasp", "mithril clasp", "cloak", "mithril cloak", "task", "quest"),
+				Arrays.asList("clasp", "mithril clasp", "cloak", "黑曜石斗篷", "task", "quest"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_clasp"), new PlayerHasItemWithHimCondition("mithril clasp")),
 				ConversationStates.ATTENDING,
 				"Wow, Pedinghaus really outdid himself this time. It looks wonderful on your new cloak! Wear it with pride.",
 				new MultipleActions(
 									 new DropItemAction("mithril clasp"),
 									 new SetQuestAndModifyKarmaAction(mithrilcloak.getQuestSlot(), "done", 10.0),
-									 new EquipItemAction("mithril cloak", 1, true),
+									 new EquipItemAction("黑曜石斗篷", 1, true),
 									 new IncreaseXPAction(1000)
 									 )
 				);
 
 		// remind about getting clasp
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("clasp", "mithril clasp", "cloak", "mithril cloak", "task", "quest"),
+				Arrays.asList("clasp", "mithril clasp", "cloak", "黑曜石斗篷", "task", "quest"),
 				new OrCondition(
 								new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_clasp"),
 								new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "forgingclasp;"),

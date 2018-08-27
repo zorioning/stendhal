@@ -26,7 +26,7 @@ public class Money extends StackableItem {
 	// world.getRuleManager().getEntityManager().getItem("money");
 	// where world is a StendhalRPWorld.
 	public Money(final Map<String, String> attributes) {
-		super("money", "money", "gold", attributes);
+		super("money", "money", "gold",attributes);
 	}
 
 	public Money(final int quantity) {
@@ -46,6 +46,6 @@ public class Money extends StackableItem {
 
 	@Override
 	public String describe() {
-		return "You see " + getQuantity() + " §money.";
+		return "这是 " + getQuantity() + " §money.";
 	}
 }

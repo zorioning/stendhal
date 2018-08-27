@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="barbarian armor">
+  <item name="野蛮人护甲">
     <type class="armor" subclass="barbarian_armor" tileid="-1"/>
-    <description>You see a suit of barbarian armor. It's dirty and smelly, but still, rather strong.</description>
+    <description>这是一件野蛮人护甲，虽然脏臭，但很皮实。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="15"/>
@@ -21,9 +21,9 @@
     </equipable>
   </item>
   
-  <item name="black armor">
+  <item name="黑色盔甲">
     <type class="armor" subclass="black_armor" tileid="-1"/>
-    <description>You see a suit of black armor. Does it put you in a dark mood?</description>
+    <description>这是一件黑色盔甲。穿上它会感到悲伤吧？</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="26"/>
@@ -42,9 +42,9 @@
     </equipable>
   </item>
   
-  <item name="blue armor">
+  <item name="蓝色盔甲">
     <type class="armor" subclass="blue_armor" tileid="-1"/>
-    <description>You see a suit of blue armor. The colour is stunning azure.</description>
+    <description>这是一件蓝色盔甲，颜色是浅蓝。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="13"/>
@@ -61,9 +61,9 @@
     </equipable>
   </item>
   
-  <item name="chain armor">
+  <item name="链甲">
     <type class="armor" subclass="chain_armor" tileid="-1"/>
-    <description>You see a suit of chain armor. Perhaps even if you don't need it, you can sell it.</description>
+    <description>这是一件链甲，如果你不需要，可以卖掉它。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -79,9 +79,9 @@
     </equipable>
   </item>
   
-  <item name="chaos armor">
+  <item name="浑沌护甲">
     <type class="armor" subclass="chaos_armor" tileid="-1"/>
-    <description>You see a suit of chaos armor. The reflecting contrasting colours make no sense to you.</description>
+    <description>发现一件浑沌护甲，这种反差的配色毫无意义。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="20"/>
@@ -98,9 +98,9 @@
     </equipable>
   </item>
   
-  <item name="dress">
+  <item name="布衣">
     <type class="armor" subclass="dress" tileid="-1"/>
-    <description>You see a dress, which provides practically no defence. It is barely worth picking up.</description>
+    <description>这是一件布衣，几乎没有防御效果，值得捡起吗？</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>    
     <attributes>
       <def value="1"/>
@@ -116,9 +116,9 @@
     </equipable>
   </item>
   
-  <item name="dwarvish armor">
+  <item name="矮人护甲">
     <type class="armor" subclass="dwarvish_armor" tileid="-1"/>
-    <description>You see a dwarvish armor. It's made with ingenuity and skill.</description>
+    <description>这是一件矮人护甲，制作技艺扎实。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="17"/>
@@ -135,9 +135,9 @@
     </equipable>
   </item>
   
-  <item name="elvish armor">
+  <item name="精灵护甲">
     <type class="armor" subclass="elvish_armor" tileid="-1"/>
-    <description>You see a suit of elvish armor. It's made from tree leaves! But somehow constructed to give strong defence.</description>
+    <description>这是一件精灵护甲，它是由树叶制成的，但是防御效果不低。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -154,9 +154,9 @@
     </equipable>
   </item>
   
-  <item name="enhanced chainmail">
+  <item name="加固锁子甲">
     <type class="armor" subclass="enhanced_chainmail" tileid="-1"/>
-    <description>You see a robust suit of enhanced chainmail. The links are closely spaced so even the sharpest point should not pierce it.</description>
+    <description>这是一件加固锁子甲。缝制紧密，最尖锐的武器也不能刺穿。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -172,9 +172,9 @@
     </equipable>
   </item>
   
-  <item name="golden armor">
+  <item name="黄金铠甲">
     <type class="armor" subclass="golden_armor" tileid="-1"/>
-    <description>You see a suit of golden armor. It's made from the best materials with great attention to detail.</description>
+    <description>这是一件黄金铠甲。纯金打造，用料十足，非常华丽。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="16"/>
@@ -191,9 +191,9 @@
     </equipable>
   </item>
   
-  <item name="golden chainmail">
+  <item name="黄金锁子甲">
     <type class="armor" subclass="golden_chainmail" tileid="-1"/>
-    <description>You see a valuable suit of golden chainmail. It is crafted from fine links of expensive metal.</description>
+    <description>这是一件珍贵的黄金锁子甲。是由昂贵的材料制成的。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -210,9 +210,9 @@
     </equipable>
   </item>
   
-  <item name="ice armor">
+  <item name="冰护甲">
     <type class="armor" subclass="ice_armor" tileid="-1"/>
-    <description>You see a suit of ice armor, to protect even the coldest of hearts.</description>
+    <description>这是一件冰护甲，保护最冷酷的心。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="19"/>
@@ -231,9 +231,9 @@
     </equipable>
   </item>
   
-  <item name="iron scale armor">
+  <item name="铁鳞甲">
     <type class="armor" subclass="iron_scale_armor" tileid="-1"/>
-    <description>You see a suit of iron scale armor, whose rounded scales will protect you from many blows.</description>
+    <description>这是一件铁鳞甲，可以让你免受众多攻击。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="8"/>
@@ -249,9 +249,9 @@
     </equipable>
   </item>
   
-  <item name="leather armor">
+  <item name="皮甲">
     <type class="armor" subclass="leather_armor" tileid="-1"/>
-    <description>You see a worn suit of leather armor. It will provide only minimal protection.</description>
+    <description>发现一件皮甲，只能提供最基本的保护。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="3"/>
@@ -268,9 +268,9 @@
     </equipable>
   </item>
   
-  <item name="leather cuirass">
+  <item name="皮胸甲">
     <type class="armor" subclass="leather_cuirass" tileid="-1"/>
-    <description>You see a leather cuirass, well made but still able to be pierced by sharp swords.</description>
+    <description>这是一件皮胸甲，做工不错，可以抵挡利剑。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -286,9 +286,9 @@
     </equipable>
   </item>
   
-  <item name="leather scale armor">
+  <item name="鳞甲">
     <type class="armor" subclass="leather_scale_armor" tileid="-1"/>
-    <description>You see a suit of leather scale armor. The leather is toughened somehow for better protection.</description>
+    <description>这是一件鳞甲，比普通皮甲更结实。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>
@@ -304,9 +304,9 @@
     </equipable>
   </item>
   
-  <item name="magic plate armor">
+  <item name="附魔甲">
     <type class="armor" subclass="magic_plate_armor" tileid="-1"/>
-    <description>You see a suit of magic plate armor. The steel is well tempered and the suit is very strong.</description>
+    <description>这是一件附魔甲，使用最好的焠火技术打造，非常结实。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="24"/>
@@ -327,9 +327,9 @@
     </equipable>
   </item>
   
-  <item name="mainio armor">
+  <item name="奇妙甲">
     <type class="armor" subclass="mainio_armor" tileid="-1"/>
-    <description>You see a strange strange suit of mainio armor. What it lacks in subtlety it makes up for with strength.</description>
+    <description>这是一件奇妙甲。它缺乏精力却充满力量。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="22"/>
@@ -346,9 +346,9 @@
     </equipable>
   </item>
   
-  <item name="mithril armor">
+  <item name="黑曜石铠甲">
     <type class="armor" subclass="mithril_armor" tileid="-1"/>
-    <description>You see a suit of mithril armor. Its tightly woven links are truly amazing.</description>
+    <description>这是一件黑曜石铠甲，缝制紧密，非常漂亮。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="29"/>
@@ -366,9 +366,9 @@
     </equipable>
   </item>
   
-  <item name="pauldroned iron cuirass">
+  <item name="护肩铁胸甲">
     <type class="armor" subclass="enhanced_iron_cuirass" tileid="-1"/>
-    <description>You see a formidable pauldroned iron cuirass. The pauldrons (shoulder pieces) will protect your upper half.</description>
+    <description>这是一件护肩铁胸甲。护肩可以保护你的上半身。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="9"/>
@@ -385,9 +385,9 @@
     </equipable>
   </item>
   
-  <item name="pauldroned leather cuirass">
+  <item name="护肩皮胸甲">
     <type class="armor" subclass="enhanced_leather_cuirass" tileid="-1"/>
-    <description>You see a pauldroned leather cuirass.  It was crafted to withstand minor attacks.</description>
+    <description>这是一件护肩皮胸甲，它能抵挡轻微的攻击。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -403,9 +403,9 @@
     </equipable>
   </item>
   
-  <item name="plate armor">
+  <item name="板甲">
     <type class="armor" subclass="plate_armor" tileid="-1"/>
-    <description>You see a suit of plate armor. You imagine it would be heavy but the steel is well tempered and the suit is very strong.</description>
+    <description>这是一件板甲。它很重，但是很结实。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>
@@ -422,9 +422,9 @@
     </equipable>
   </item>
   
-  <item name="red armor">
+  <item name="红铠甲">
     <type class="armor" subclass="red_armor" tileid="-1"/>
-    <description>You see a suit of red armor. The colour is a striking crimson.</description>
+    <description>这是一件红铠甲，颜色是深红色。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="12"/>
@@ -441,9 +441,9 @@
     </equipable>
   </item>
   
-  <item name="scale armor">
+  <item name="鳞甲">
     <type class="armor" subclass="scale_armor" tileid="-1"/>
-    <description>You see a suit of scale armor. It is not flexible like chain, but will be a better defense.</description>
+    <description>这是一件鳞甲。它不如链甲灵活，但是防御力更好。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="7"/>
@@ -483,9 +483,9 @@
     </equipable>
   </item>
   
-  <item name="shadow armor">
+  <item name="影子铠甲">
     <type class="armor" subclass="shadow_armor" tileid="-1"/>
-    <description>You see a suit of shadow armor. It's hard to decide with what it is made, it is so dark.</description>
+    <description>这是一件影子铠甲。不清楚它是由何物制成，它的颜色太深了。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="17"/>
@@ -504,9 +504,9 @@
     </equipable>
   </item>
   
-  <item name="stone armor">
+  <item name="石甲">
     <type class="armor" subclass="stone_armor" tileid="-1"/>
-    <description>You see a suit of stone armor. Swords will crumble if they try to pierce it.</description>
+    <description>这是一件石甲。剑不能刺穿它。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>
@@ -525,9 +525,9 @@
     </equipable>
   </item>
   
-  <item name="studded armor">
+  <item name="镶嵌甲">
     <type class="armor" subclass="studded_armor" tileid="-1"/>
-    <description>You see a suit of studded armor. Some studs are loose or rusty but it is still fit for purpose.</description>
+    <description>这是一件镶嵌甲。有些螺丝松动或生锈了，但是还能穿。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="5"/>
@@ -543,9 +543,9 @@
     </equipable>
   </item>
   
-  <item name="xeno armor">
+  <item name="异种元素甲">
     <type class="armor" subclass="xeno_armor" tileid="-1"/>
-    <description>You see a suit of xeno armor. The colours remind you of the xenocium hybrid creature.</description>
+    <description>这是一件异种元素甲。穿上它之后看起来就与 Xenocium 一样了。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="21"/>

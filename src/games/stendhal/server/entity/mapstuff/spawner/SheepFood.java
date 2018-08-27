@@ -87,9 +87,9 @@ public class SheepFood extends PassiveEntityRespawnPoint {
 
 	@Override
 	public String describe() {
-		final String text = "你看到树上结有 "
-				+ getAmount()+ "个树梅"
-				+ " 只有羊才可以吃.";
+		final String text = "树上结有 "
+				+ getAmount()+ " 个树莓"
+				+ "，羊喜欢吃.";
 		return text;
 	}
 

@@ -356,7 +356,7 @@ public class AntivenomRing extends AbstractQuest {
 		/*
 		// Player asks about snakes
 		npc.add(ConversationStates.QUESTION_1,
-				Arrays.asList("snake", "snakes", "cobra", "cobras"),
+				Arrays.asList("蛇", "snakes", "眼镜蛇", "cobras"),
 				null,
 				ConversationStates.QUESTION_1,
 				"I've heard rumor newly discovered pit full of snakes somewhere in Ados. But I've never searched for it myself. That kind of work is better left to adventurers.",
@@ -415,7 +415,7 @@ public class AntivenomRing extends AbstractQuest {
 		/*
 		// Player asks about snakes
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("snake", "snakes", "cobra", "cobras"),
+				Arrays.asList("蛇", "snakes", "眼镜蛇", "cobras"),
 				null,
 				ConversationStates.ATTENDING,
 				"I've heard rumor newly discovered pit full of snakes somewhere in Ados. But I've never searched for it myself. That kind of work is better left to adventurers.",
@@ -570,7 +570,7 @@ public class AntivenomRing extends AbstractQuest {
 	private void requestCobraVenom() {
 		// Player asks for antivenom
 		extractor.add(ConversationStates.ATTENDING,
-				Arrays.asList("jameson", "antivenom", "extract", "cobra", "venom"),
+				Arrays.asList("jameson", "antivenom", "extract", "眼镜蛇", "venom"),
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 						new NotCondition(new QuestInStateCondition(QUEST_SLOT, 1, "extracting=done")
 						)

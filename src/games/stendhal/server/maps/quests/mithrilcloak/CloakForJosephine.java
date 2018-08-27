@@ -50,51 +50,51 @@ class CloakForJosephine {
 		// Deliberately overlap with conversation states from the cloak collector quests.
 		// Since if you're on one of these quests she will always ask 'did you bring any cloaks?'
 		// and waits for you to say yes or the name of the cloak you brought
-		// if she just said about 'blue striped cloak' "well i don't want that" then that's confusing for player
+		// if she just said about '蓝色条纹斗篷' "well i don't want that" then that's confusing for player
 		// so we let player give her that cloak even if she was asking about the other quests
-		// of course, she will only take it from ida if player was in quest state for teh mithril cloak quest of "taking_striped_cloak"
+		// of course, she will only take it from ida if player was in quest state for teh 黑曜石斗篷 quest of "taking_striped_cloak"
 
 		final SpeakerNPC npc = npcs.get("Josephine");
 
 		// overlapping with CloaksCollector quest deliberately
-		npc.add(ConversationStates.QUESTION_1, "blue striped cloak", new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
+		npc.add(ConversationStates.QUESTION_1, "蓝色条纹斗篷", new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
 			ConversationStates.QUESTION_1, null,
 			new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-						if (player.drop("blue striped cloak")) {
+						if (player.drop("蓝色条纹斗篷")) {
 							npc.say("Oh, wait, that's from Ida isn't it?! Oh yay! Thank you! Please tell her thanks from me!!");
 							player.setQuest(mithrilcloak.getQuestSlot(), "gave_striped_cloak");
 							npc.setCurrentState(ConversationStates.ATTENDING);
 						} else {
-							npc.say("You don't have a blue striped cloak with you.");
+							npc.say("You don't have a 蓝色条纹斗篷 with you.");
 						}
 					}
 			});
 
 		// overlapping with CloaksCollector2 quest deliberately
-		npc.add(ConversationStates.QUESTION_2, "blue striped cloak", new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
+		npc.add(ConversationStates.QUESTION_2, "蓝色条纹斗篷", new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
 				ConversationStates.QUESTION_2, null,
 				new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-						if (player.drop("blue striped cloak")) {
+						if (player.drop("蓝色条纹斗篷")) {
 							npc.say("Oh, wait, that's from Ida isn't it?! Oh yay! Thank you! Please tell her thanks from me!!");
 							npc.setCurrentState(ConversationStates.ATTENDING);
 							player.setQuest(mithrilcloak.getQuestSlot(), "gave_striped_cloak");
 						} else {
-							npc.say("You don't have a blue striped cloak with you.");
+							npc.say("You don't have a 蓝色条纹斗篷 with you.");
 						}
 					}
 			});
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("blue striped cloak", "mithril", "mithril cloak", "ida"),
-				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"), new PlayerHasItemWithHimCondition("blue striped cloak")),
+				Arrays.asList("蓝色条纹斗篷", "mithril", "黑曜石斗篷", "ida"),
+				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"), new PlayerHasItemWithHimCondition("蓝色条纹斗篷")),
 				ConversationStates.ATTENDING,
 				"Oh that's from Ida isn't it?! Oh yay! Thank you! Please tell her thanks from me!!",
 				new MultipleActions(
-									 new DropItemAction("blue striped cloak"),
+									 new DropItemAction("蓝色条纹斗篷"),
 									 new SetQuestAction(mithrilcloak.getQuestSlot(), "gave_striped_cloak")
 									 )
 				);
@@ -107,10 +107,10 @@ class CloakForJosephine {
 
 		// acknowledge that player took cloak and ask for clasp
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("thanks", "josephine", "mithril", "cloak", "mithril cloak", "task", "quest"),
+				Arrays.asList("thanks", "josephine", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "gave_striped_cloak"),
 				ConversationStates.ATTENDING,
-				"Aw, Josephine is so sweet. I'm glad she liked her blue striped cloak. Now, YOUR cloak is nearly ready, it just needs a clasp to fasten it! My friend #Pedinghaus will make it for you, if you go and ask him.",
+				"Aw, Josephine is so sweet. I'm glad she liked her 蓝色条纹斗篷. Now, YOUR cloak is nearly ready, it just needs a clasp to fasten it! My friend #Pedinghaus will make it for you, if you go and ask him.",
 				new SetQuestAndModifyKarmaAction(mithrilcloak.getQuestSlot(), "need_clasp", 10.0)
 				);
 

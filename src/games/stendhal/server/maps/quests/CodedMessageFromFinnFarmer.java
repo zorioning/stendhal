@@ -102,7 +102,7 @@ public class CodedMessageFromFinnFarmer extends AbstractQuest {
 		new String[] {
 			"The banana",
 			"The swallow",
-			"The elephant",
+			"The 大象",
 			"The teddy bear",
 			"The moon",
 			"Jupiter",

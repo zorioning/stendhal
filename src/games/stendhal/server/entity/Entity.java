@@ -12,7 +12,7 @@
  ***************************************************************************/
 package games.stendhal.server.entity;
 
-import static games.stendhal.server.core.engine.Translate.getText;
+//import static games.stendhal.server.core.engine.Translate.getText;
 
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -94,7 +94,6 @@ public abstract class Entity extends RPObject implements Killer {
 	public Entity() {
 		put("x", 0);
 		put("y", 0);
-
 		x = 0;
 		y = 0;
 
@@ -220,7 +219,8 @@ public abstract class Entity extends RPObject implements Killer {
 		if (has("description")) {
 			description = get("description");
 		}
-		return getText(description);
+//		return getText(description);
+		return description;
 	}
 
 	/**
@@ -518,7 +518,7 @@ public abstract class Entity extends RPObject implements Killer {
 			return getDescription();
 		}
 
-		return "你看到 " + getDescriptionName(false) + ".";
+		return "这是 " + getDescriptionName(false) + ".";
 	}
 
 	/**

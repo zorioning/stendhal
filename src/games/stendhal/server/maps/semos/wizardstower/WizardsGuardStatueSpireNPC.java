@@ -184,12 +184,12 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 					"Well, maybe later. Just tell me when you want a blank scroll.",
 					null);
 
-				//behavior on special item RIFT CLOAK
+				//behavior on special item 裂缝斗篷
 				add(ConversationStates.ATTENDING,
-				    Arrays.asList("rift cloak"),
+				    Arrays.asList("裂缝斗篷"),
 				    ConversationStates.INFORMATION_2,
-				    "I will create a rift cloak for you, but I have to fuse a carbuncle and a sapphire in the magic. The cloak is useless in battle and will protect you only one time, when entering a magical rift."+
-					" The rift disintegrates the cloak instead of you. There is no way to get the cloak back. If you want to enter the rift again, you will need a new rift cloak. Shall I create one for you?",
+				    "I will create a 裂缝斗篷 for you, but I have to fuse a carbuncle and a sapphire in the magic. The cloak is useless in battle and will protect you only one time, when entering a magical rift."+
+					" The rift disintegrates the cloak instead of you. There is no way to get the cloak back. If you want to enter the rift again, you will need a new 裂缝斗篷. Shall I create one for you?",
 				     null);
 				add(ConversationStates.INFORMATION_2,
 					ConversationPhrases.YES_MESSAGES,
@@ -212,17 +212,17 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 								new PlayerHasItemWithHimCondition("sapphire", 1),
 								new PlayerHasItemWithHimCondition("carbuncle", 1)),
 					ConversationStates.ATTENDING,
-					"There is your rift cloak. Don't forget that it protects you only one time, before it is destroyed. So be sure that you are ready for what awaits you in the rift.",
+					"There is your 裂缝斗篷. Don't forget that it protects you only one time, before it is destroyed. So be sure that you are ready for what awaits you in the rift.",
 					new MultipleActions(
 							new DropItemAction("carbuncle", 1),
 							new DropItemAction("sapphire", 1),
-							new EquipItemAction("rift cloak", 1, true),
+							new EquipItemAction("裂缝斗篷", 1, true),
 							new IncreaseXPAction(5000)));
 				add(ConversationStates.INFORMATION_2,
 					ConversationPhrases.NO_MESSAGES,
 					null,
 					ConversationStates.ATTENDING,
-					"Don't forget that you can't enter a magical rift without a rift cloak.",
+					"Don't forget that you can't enter a magical rift without a 裂缝斗篷.",
 					null);
 */
 

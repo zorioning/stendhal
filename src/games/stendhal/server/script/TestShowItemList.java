@@ -43,8 +43,8 @@ public class TestShowItemList extends ScriptImpl {
 		List<Item> itemList = new LinkedList<Item>();
 
 		if (args.isEmpty()) {
-			itemList.add(prepareItem("club", 100));
-			itemList.add(prepareItem("leather armor", -100));
+			itemList.add(prepareItem("木棍", 100));
+			itemList.add(prepareItem("皮甲", -100));
 			itemList.add(prepareItem("ice sword", -10000));
 		} else {
 			ShopList shops = SingletonRepository.getShopList();

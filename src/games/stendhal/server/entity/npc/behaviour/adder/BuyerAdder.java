@@ -61,24 +61,28 @@ public class BuyerAdder {
 					"我想买 " + buyerBehaviour.dealtItems() + ".",
 					null);
 		}
-		engine.add(ConversationStates.ATTENDING, "sell", new SentenceHasErrorCondition(),
+//		engine.add(ConversationStates.ATTENDING, "sell", new SentenceHasErrorCondition(),
+		engine.add(ConversationStates.ATTENDING, ConversationPhrases.SELL_MESSAGES, new SentenceHasErrorCondition(),
 				false, ConversationStates.ATTENDING,
 				null, new ComplainAboutSentenceErrorAction());
 
-		engine.add(ConversationStates.ATTENDING, "sell",
+//		engine.add(ConversationStates.ATTENDING, "sell",
+		engine.add(ConversationStates.ATTENDING, ConversationPhrases.SELL_MESSAGES,
 			new AndCondition(
 					new NotCondition(new SentenceHasErrorCondition()),
 					new NotCondition(buyerBehaviour.getTransactionCondition())),
 			false, ConversationStates.ATTENDING,
 			null, buyerBehaviour.getRejectedTransactionAction());
 
-		engine.add(ConversationStates.ATTENDING, "sell",
+//		engine.add(ConversationStates.ATTENDING, "sell",
+		engine.add(ConversationStates.ATTENDING, ConversationPhrases.SELL_MESSAGES,
 				new AndCondition(
 						new NotCondition(new SentenceHasErrorCondition()),
 						buyerBehaviour.getTransactionCondition()),
 				false, ConversationStates.ATTENDING,
 				null,
 				new BehaviourAction(buyerBehaviour, "sell", "buy") {
+//				new BehaviourAction(buyerBehaviour,  ConversationPhrases.SELL_MESSAGES, ConversationPhrases.BUY_MESSAGES) {
 					@Override
 					public void fireRequestOK(final ItemParserResult res, final Player player, final Sentence sentence, final EventRaiser raiser) {
 						if (player.isBadBoy()) {

@@ -225,7 +225,7 @@ public class Campfire extends AbstractQuest {
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 				String rewardClass;
 				if (Rand.throwCoin() == 1) {
-					rewardClass = "meat";
+					rewardClass = "肉";
 				} else {
 					rewardClass = "ham";
 				}

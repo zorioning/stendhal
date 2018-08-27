@@ -111,7 +111,7 @@ public class PlinksToy extends AbstractQuest {
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("wolf", "wolves"),
+			Arrays.asList("狼", "wolves"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"They came in from the plains, and now they're hanging around the #park over to the east a little ways. I'm not allowed to go near them, they're dangerous.",

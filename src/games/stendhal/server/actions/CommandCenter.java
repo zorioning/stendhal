@@ -51,7 +51,7 @@ import games.stendhal.server.actions.query.QuestListAction;
 import games.stendhal.server.actions.query.WhereAction;
 import games.stendhal.server.actions.query.WhoAction;
 import games.stendhal.server.actions.spell.CastSpellAction;
-import games.stendhal.server.core.engine.Translate;
+//import games.stendhal.server.core.engine.Translate;
 import games.stendhal.server.entity.player.Player;
 import marauroa.common.game.RPAction;
 import marauroa.common.game.RPObject;
@@ -145,14 +145,14 @@ public class CommandCenter {
 		try {
 			if (caster instanceof Player) {
 				final Player player = (Player) caster;
-				Translate.setThreadLanguage(player.getLanguage());
+		//		Translate.setThreadLanguage(player.getLanguage());
 				final ActionListener actionListener = getAction(action);
 				final String type = action.get(Actions.TYPE);
 				if (!AdministrationAction.isPlayerAllowedToExecuteAdminCommand(player, type, true)) {
 					return false;
 				}
 				actionListener.onAction(player, action);
-				Translate.setThreadLanguage(null);
+//				Translate.setThreadLanguage("zh_CN");
 				return true;
 			} else {
 				logger.error("caster is no Player; cannot execute action " + action +

@@ -66,7 +66,7 @@ public class BlacksheepBobNPC implements ZoneConfigurator {
 			final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 			requiredResources.put("vampirette entrails", Integer.valueOf(1));
 			requiredResources.put("bat entrails", Integer.valueOf(1));
-			requiredResources.put("meat", Integer.valueOf(1));
+			requiredResources.put("肉", Integer.valueOf(1));
 			requiredResources.put("wine", Integer.valueOf(2));
 
 			final ProducerBehaviour behaviour = new ProducerBehaviour("blacksheepbob_make_sausage", "make", "sausage",

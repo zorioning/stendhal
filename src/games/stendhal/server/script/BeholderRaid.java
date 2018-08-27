@@ -25,12 +25,12 @@ public class BeholderRaid extends CreateRaid {
 	@Override
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
-		attackArmy.put("young beholder", 7);
+		attackArmy.put("小邪眼怪", 7);
 		attackArmy.put("green slime", 4);
-		attackArmy.put("beholder", 5);
-		attackArmy.put("elder beholder", 1);
-		attackArmy.put("snake", 3);
-		attackArmy.put("grass snake", 4);
+		attackArmy.put("邪眼怪", 5);
+		attackArmy.put("大邪眼怪", 1);
+		attackArmy.put("蛇", 3);
+		attackArmy.put("草蛇", 4);
 		return attackArmy;
 	}
 

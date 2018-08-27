@@ -41,14 +41,14 @@ public class ViewChangeEntity extends UseableEntity {
 
 	@Override
 	public String describe() {
-		return "You see a scrying orb. A note on it says \"Using costs " + COST
-			+ " money. Stay still and concentrate while viewing\".";
+		return "这是一颗水晶球，上面显示 \"使用费用 " + COST
+			+ " 钱。观看时请保持注意\".";
 	}
 
 	@Override
 	public boolean onUsed(RPEntity user) {
 		if (!nextTo(user)) {
-			user.sendPrivateText("You cannot reach that from here.");
+			user.sendPrivateText("从这里不能够到它。");
 			return false;
 		}
 		if (user instanceof Player) {
@@ -59,10 +59,10 @@ public class ViewChangeEntity extends UseableEntity {
 					player.notifyWorldAboutChanges();
 					return true;
 				} else {
-					player.sendPrivateText("You do not have enough money.");
+					player.sendPrivateText("你的钱好像不够.");
 				}
 			} else {
-				player.sendPrivateText("You don't know how to use the strange device.");
+				player.sendPrivateText("你不知道该如何使用这古怪的玩意。");
 			}
 		}
 		return false;

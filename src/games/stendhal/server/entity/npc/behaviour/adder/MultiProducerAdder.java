@@ -150,7 +150,7 @@ public class MultiProducerAdder {
 					public void fire(final Player player, final Sentence sentence,
                             final EventRaiser npc) {
                         // TODO: check - can the StateRemainingTimeAction be used here?
-                        npc.say("我还没有做完你上次给我的事，等 "
+                        npc.say("我还没有完成你上次交给我的事，等 "
                                 + behaviour.getApproximateRemainingTime(player)
                                 + "再回来吧!");
                     }

@@ -106,8 +106,8 @@ public class OutfitChangerAdder {
 
 						final int price = outfitBehaviour.getUnitPrice(res.getChosenItemName()) * res.getAmount();
 
-						raiser.say("To " + action + " 一个 " + res.getChosenItemName() + " 要花费 " + price
-								+ ". 你想 " + action + " 了它?");
+						raiser.say(action + " 一个 " + res.getChosenItemName() + " 需要花费 " + price
+								+ " 钱。确定要 " + action + " 吗?");
 
 						currentBehavRes = res;
 						raiser.setCurrentState(ConversationStates.BUY_PRICE_OFFERED); // success
@@ -126,7 +126,7 @@ public class OutfitChangerAdder {
 
 						if (outfitBehaviour.transactAgreedDeal(currentBehavRes, npc, player)) {
 							if (canReturn) {
-								npc.say("谢谢，当你不再需要它的时候，请不要忘记归还 #return !");
+								npc.say("谢谢，当你不再需要它的时候，请不要忘记 #归还 !");
 								// -1 is also the public static final int NEVER_WEARS_OFF = -1;
 								// but it doesn't recognise it here ...
 							} else if (outfitBehaviour.getEndurance() != -1) {
@@ -147,14 +147,14 @@ public class OutfitChangerAdder {
 				"Ok, 还有别的事吗?", null);
 
 		if (canReturn) {
-			engine.add(ConversationStates.ATTENDING, "return", null,
+			engine.add(ConversationStates.ATTENDING, "归还", null,
 					false, ConversationStates.ATTENDING,
 					null, new ChatAction() {
 						@Override
 						public void fire(final Player player, final Sentence sentence,
 								final EventRaiser npc) {
 							if (outfitBehaviour.returnToOriginalOutfit(player)) {
-								npc.say("Thank you!");
+								npc.say("谢谢!");
 							} else {
 								npc.say("我不能想起我给过你什么东西.");
 							}

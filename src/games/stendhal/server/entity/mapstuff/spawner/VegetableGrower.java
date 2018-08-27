@@ -59,7 +59,7 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 			final int maxRipeness, final int growthRate) {
 		super(object, "items/grower/" + name + "_grower", "items/grower/" + name + " grower", "Pick", maxRipeness, growthRate);
 		vegetableName = name;
-		setDescription("好像有个 "
+		setDescription("好像这些 "
 				+ name + " 正在发芽.");
 		update();
 	}
@@ -72,7 +72,7 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 	public VegetableGrower(final String name) {
 		super("items/grower/" + name + "_grower", "items/grower/" + name + " grower", "Pick", 1, 1, 1);
 		vegetableName = name;
-		setDescription("好像有个 "
+		setDescription("好像这些 "
 				+ name + " 正在发芽.");
 	}
 
@@ -98,10 +98,10 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 			text = getDescription();
 			break;
 		case 1:
-			text = "你看 " + vegetableName + ".";
+			text = "这是 " + vegetableName + ".";
 			break;
 		default:
-			text = "你看见一个不熟的 " +  vegetableName + ".";
+			text = "这些 " +  vegetableName + " 还没长熟。";
 			break;
 		}
 		return text;
@@ -126,15 +126,15 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 				entity.equipOrPutOnGround(grain);
 				return true;
 			} else if (entity instanceof Player) {
-				String message = "这个 " + vegetableName
-						+ " 还不没成熟而不能采摘.";
+				String message = "这些 " + vegetableName
+						+ " 还没成熟，不能采摘.";
 				if(notRipeEnoughMessage != null) {
 					message = notRipeEnoughMessage;
 				}
 				((Player) entity).sendPrivateText(message);
 			}
 		} else if (entity instanceof Player) {
-			((Player) entity).sendPrivateText("你离得太远.");
+			((Player) entity).sendPrivateText("离你太远.");
 		}
 		return false;
 	}

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <creatures xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../creatures.xsd ">
   
@@ -22,11 +22,11 @@
       <item value="mega potion" quantity="[2,4]" probability="50.0"/>
       <item value="giant heart" quantity="[1,1]" probability="90.0"/>
       <item value="money" quantity="[3000,30000]" probability="100.0"/>
-      <item value="magic plate armor" quantity="[1,1]" probability="2.0"/>
+      <item value="附魔甲" quantity="[1,1]" probability="2.0"/>
       <item value="jewelled legs" quantity="[1,1]" probability="2.5"/>
-      <item value="black cloak" quantity="[1,1]" probability="2.5"/>
+      <item value="黑斗篷" quantity="[1,1]" probability="2.5"/>
       <item value="liberty helmet" quantity="[1,1]" probability="1.0"/>
-      <item value="magic twoside axe" quantity="[1,1]" probability="2.0"/>
+      <item value="魔法双刃斧" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
     </equips>
@@ -68,13 +68,13 @@
       <item value="mega potion" quantity="[2,5]" probability="50.0"/>
       <item value="soup" quantity="[2,4]" probability="50.0"/>
       <item value="giant heart" quantity="[1,1]" probability="90.0"/>
-      <item value="mithril boots" quantity="[1,1]" probability="1.0"/>
-      <item value="power arrow" quantity="[10,30]" probability="5.0"/>
+      <item value="黑曜石靴" quantity="[1,1]" probability="1.0"/>
+      <item value="加强箭" quantity="[10,30]" probability="5.0"/>
       <item value="mithril bow" quantity="[1,1]" probability="0.5"/>
       <item value="money" quantity="[5000,25000]" probability="100.0"/>
     </drops>
     <equips>
-      <slot name="lhand" item="power arrow" quantity="10000"/>
+      <slot name="lhand" item="加强箭" quantity="10000"/>
       <slot name="rhand" item="hunter crossbow" quantity="1"/>
     </equips>
     <abilities>
@@ -118,9 +118,9 @@
       <item value="greater potion" quantity="[1,2]" probability="50.0"/>
       <item value="giant heart" quantity="[1,1]" probability="85.0"/>
       <item value="money" quantity="[200,1000]" probability="100.0"/>
-      <item value="black armor" quantity="[1,1]" probability="0.02"/>
+      <item value="黑色盔甲" quantity="[1,1]" probability="0.02"/>
       <item value="vulcano hammer" quantity="[1,1]" probability="0.01"/>
-      <item value="black cloak" quantity="[1,1]" probability="1.0"/>
+      <item value="黑斗篷" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -159,7 +159,7 @@
       <item value="money" quantity="[30,60]" probability="100.0"/>
       <item value="fairy cake" quantity="[1,5]" probability="10.0"/>
       <item value="empty scroll" quantity="[1,2]" probability="5.0"/>
-      <item value="golden cloak" quantity="[1,1]" probability="2.0"/>
+      <item value="金斗篷" quantity="[1,1]" probability="2.0"/>
       <item value="liberty helmet" quantity="[1,1]" probability="0.1"/>
       <item value="balloon" quantity="[1,1]" probability="5.0"/>
     </drops>
@@ -201,7 +201,7 @@
       <item value="greater potion" quantity="[1,4]" probability="50.0"/>
       <item value="giant heart" quantity="[1,1]" probability="85.0"/>
       <item value="money" quantity="[300,3000]" probability="100.0"/>
-      <item value="magic plate armor" quantity="[1,1]" probability="0.1"/>
+      <item value="附魔甲" quantity="[1,1]" probability="0.1"/>
       <item value="magic chain helmet" quantity="[1,1]" probability="1.0"/>
       <item value="immortal sword" quantity="[1,1]" probability="1.0"/>
     </drops>
@@ -244,12 +244,12 @@
       <item value="soup" quantity="[1,3]" probability="30.0"/>
       <item value="giant heart" quantity="[1,1]" probability="90.0"/>
       <item value="mithril legs" quantity="[1,1]" probability="0.3"/>
-      <item value="power arrow" quantity="[10,30]" probability="7.0"/>
+      <item value="加强箭" quantity="[10,30]" probability="7.0"/>
       <item value="mithril bow" quantity="[1,1]" probability="0.2"/>
       <item value="money" quantity="[4000,9000]" probability="100.0"/>
     </drops>
     <equips>
-      <slot name="lhand" item="power arrow" quantity="10000"/>
+      <slot name="lhand" item="加强箭" quantity="10000"/>
       <slot name="rhand" item="hunter crossbow" quantity="1"/>
     </equips>
     <abilities>
@@ -259,9 +259,9 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Leave now, before it is too late for you."/>
-        <noise state="idle follow fight" value="Your destiny is not here."/>
-        <noise state="idle follow fight" value="Neither the earth nor the sky has a place for you..."/>
+        <noise state="idle follow fight" value="别烦我，再晚要你好看"/>
+        <noise state="idle follow fight" value="你的命运不应如此"/>
+        <noise state="idle follow fight" value="天地难容于你"/>
       </says>
       <profile name="brave"/>
       <profile name="archer"/>

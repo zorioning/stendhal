@@ -185,6 +185,6 @@ public class WellSource extends PlayerActivityEntity {
 		// remove 30 money from player as they throw a coin into the
 		// well
 		player.drop("money", 30);
-		player.sendPrivateText("You throw 30 coins into the well and make a wish.");
+		player.sendPrivateText("你把30枚金币扔到井里，并许愿。");
 	}
 }

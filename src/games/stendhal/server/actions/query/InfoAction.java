@@ -26,13 +26,13 @@ import marauroa.common.game.RPAction;
  */
 public class InfoAction implements ActionListener {
 
-	private static final String DATE_FORMAT_NOW = "dd-MMMM-yyyy HH:mm:ss";
+	private static final String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
 
 	@Override
 	public void onAction(final Player player, final RPAction action) {
-		player.sendPrivateText("The server time is " + getGametime());
+		player.sendPrivateText("服务器时间是 " + getGametime());
 		if (Debug.PRE_RELEASE_VERSION != null) {
-			player.sendPrivateText("Testserver version " + Debug.VERSION + " - " + Debug.PRE_RELEASE_VERSION);
+			player.sendPrivateText("服务器版本 " + Debug.VERSION + " - " + Debug.PRE_RELEASE_VERSION);
 		}
 	}
 

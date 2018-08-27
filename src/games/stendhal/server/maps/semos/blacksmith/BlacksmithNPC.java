@@ -71,13 +71,13 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-				addReply("wood",
+				addReply("木头",
 						"我需要一些木头保持炉子的火力. 你可以在森林里的地上找到一些.");
 
 				addReply(Arrays.asList("ore", "iron", "iron ore"),
 				"你能到 Or'ril 西面的山上，矮人矿附近的地方找到铁矿，去那要小心!");
 
-				addReply("gold pan",
+				addReply("金盘子",
 				"带着这个工具，你才能够淘金. 顺着 Or'ril 河, 城堡的南边, 瀑布的旁边是一个湖。我以前在那里发现过金块 #'gold nugget' 。也许你也可以.");
 
 				addReply("gold nugget",
@@ -93,7 +93,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 
 				// Xoderos casts iron if you bring him wood and iron ore.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("wood", 1);
+				requiredResources.put("木头", 1);
 				requiredResources.put("iron ore", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("xoderos_cast_iron",

@@ -206,11 +206,11 @@ public class Player extends RPEntity implements UseListener {
 
 		player.update();
 		Entity entity = SingletonRepository.getEntityManager().getItem(
-				"leather armor");
+				"皮甲");
 		RPSlot slot = player.getSlot("armor");
 		slot.add(entity);
 
-		entity = SingletonRepository.getEntityManager().getItem("club");
+		entity = SingletonRepository.getEntityManager().getItem("木棍");
 		slot = player.getSlot("rhand");
 		slot.add(entity);
 
@@ -1540,7 +1540,7 @@ public class Player extends RPEntity implements UseListener {
 		final String name = getTitle();
 		final int hours = age / 60;
 		final int minutes = age % 60;
-		final String time = hours + " hours and " + minutes + " minutes";
+		final String time = hours + " 小时 " + minutes + " 分钟";
 		final String text = "你看到 " + name + ".\n" + name + " 的等级是 "
 				+ getLevel() + " 已经玩了 " + time + ".";
 		final StringBuilder sb = new StringBuilder();
@@ -1973,7 +1973,7 @@ public class Player extends RPEntity implements UseListener {
 	// that.
 	@Override
 	public String toString() {
-		return "Player [" + getName() + ", " + hashCode() + "]";
+		return "玩家 [" + getName() + ", " + hashCode() + "]";
 	}
 
 	/**

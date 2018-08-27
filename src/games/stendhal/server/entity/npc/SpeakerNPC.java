@@ -755,7 +755,7 @@ public class SpeakerNPC extends NPC {
 	 * Add default greeting transition with optional recognition of the NPC name.
 	 */
 	public void addGreeting() {
-		addGreeting("Greetings! How may I help you?", null);
+		addGreeting("欢迎光临! 需要我的帮助吗?", null);
 	}
 
 	/**
@@ -891,7 +891,7 @@ public class SpeakerNPC extends NPC {
 	}
 
 	public void addGoodbye() {
-		addGoodbye("Bye.");
+		addGoodbye("再见。");
 	}
 
 	public void addGoodbye(final String text) {
@@ -971,9 +971,9 @@ public class SpeakerNPC extends NPC {
 		addWaitMessage(null, new ChatAction() {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-				npc.say("Please wait, " + player.getTitle()
-						+ "! I am still attending to "
-						+ npc.getAttending().getTitle() + ".");
+				npc.say("请稍等，" + player.getTitle()
+						+ "! 我正在和 "
+						+ npc.getAttending().getTitle() + " 说点事。");
 			}
 		});
 	}

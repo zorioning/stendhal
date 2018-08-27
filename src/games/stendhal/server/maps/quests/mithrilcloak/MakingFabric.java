@@ -75,8 +75,8 @@ class MakingFabric {
 	private void makeThreadStep() {
     	final SpeakerNPC npc = npcs.get("Vincento Price");
 
-		npc.addReply("silk", "Keep this quiet, ok? I'll spin silk thread from the silk glands of a giant spider. Just ask me to #make it.");
-		npc.addReply("silk gland", "Like I said, they come from giant spiders.");
+		npc.addReply("silk", "Keep this quiet, ok? I'll spin silk thread from the silk glands of a 巨型蜘蛛. Just ask me to #make it.");
+		npc.addReply("silk gland", "Like I said, they come from 巨型蜘蛛.");
 
 		final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 		requiredResources.put("silk gland", Integer.valueOf(1));
@@ -314,8 +314,8 @@ class MakingFabric {
 		final SpeakerNPC npc = npcs.get("Kampusch");
 
 		npc.addReply("balloon", "Ah! They are dropped by the charming little baby angels who dwell in Kikareukin Islands. I want one for my daughter.");
-		npc.addReply("silk thread", "That is from the silk glands of giant spiders. You need 40 spools of silk thread to make something as large as a cloak, say.");
-		npc.addReply("silk", "That is from the silk glands of giant spiders.");
+		npc.addReply("silk thread", "That is from the silk glands of 巨型蜘蛛. You need 40 spools of silk thread to make something as large as a cloak, say.");
+		npc.addReply("silk", "That is from the silk glands of 巨型蜘蛛.");
 		npc.addReply("mithril nuggets", "You can find them for yourself.");
 		npc.addReply("Whiggins", "Find the wizard Whiggins inside his house in the magic city.");
 		npc.addReply("scientists", "I hear of experiments deep in Kalavan Castle. The scientists are a crazy bunch, but look for the lead researcher, Vincento Price, he may be sane enough to help you.");
@@ -420,7 +420,7 @@ class MakingFabric {
 
 		// player asks about fabric/quest
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "mithril cloak", "task", "quest"),
+				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_mithril_thread"),
 				ConversationStates.QUEST_OFFERED,
 				"I would love to weave you some fabric but I'm afraid my mind is full of other things. I have offended a fellow wizard. I was up all night writing him an apology letter, but I have no-one to deliver it to him. Unless ... that is ... would YOU deliver this letter for me?",
@@ -446,7 +446,7 @@ class MakingFabric {
 
 		// player returns without having taking letter
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "mithril cloak", "pedinghaus", "task", "quest", "letter", "note"),
+				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "pedinghaus", "task", "quest", "letter", "note"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"),
 				ConversationStates.ATTENDING,
 				"Please don't forget to take that letter to Pedinghaus. It means a lot to me.", null);
@@ -454,7 +454,7 @@ class MakingFabric {
 		// player returns having taking letter
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak",
-							  "mithril cloak", "pedinghaus", "regards", "forgiven", "task", "quest"),
+							  "黑曜石斗篷", "pedinghaus", "regards", "forgiven", "task", "quest"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "took_letter"),
 				ConversationStates.SERVICE_OFFERED,
 				"Thank you so much for taking that letter! Now, do you have the 40 spools of mithril thread "
@@ -462,7 +462,7 @@ class MakingFabric {
 
 		// player's quest state is in nothing to do with the letter, thread or weaving.
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "mithril cloak", "pedinghaus", "task", "quest"),
+				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "pedinghaus", "task", "quest"),
 				new NotCondition(
 								 new OrCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_mithril_thread"),
 												 new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"),
@@ -509,7 +509,7 @@ class MakingFabric {
 
 		// player returns while fabric is still being woven, or is ready
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "mithril cloak", "task", "quest"),
+			Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "weavingfabric;"),
 			ConversationStates.ATTENDING, null, new ChatAction() {
 				@Override
@@ -558,7 +558,7 @@ class MakingFabric {
 
 		// accept the fabric and ask for scissors
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("fabric", "mithril", "cloak", "mithril cloak", "task", "quest"),
+				Arrays.asList("fabric", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_fabric"), new PlayerHasItemWithHimCondition(mithrilcloak.getFabricName())),
 				ConversationStates.ATTENDING,
 				"Wow you got the " + mithrilcloak.getFabricName() + " , that took longer than I expected! Now, to cut it I need magical #scissors, if you would go get them from #Hogart. I will be waiting for you to return.",
@@ -570,7 +570,7 @@ class MakingFabric {
 		// remind about fabric. there are so many steps to getting fabric
 		// that the player could be in many quest states and she still is just waiting for fabric
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("fabric", "mithril", "cloak", "mithril cloak", "task", "quest"),
+				Arrays.asList("fabric", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
 				new OrCondition(
 								new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_fabric"),
 								new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "makingthread;"),
@@ -585,7 +585,7 @@ class MakingFabric {
 								 ),
 				ConversationStates.ATTENDING,
 				"I'm still waiting for the " + mithrilcloak.getFabricName()
-				+ " so I can start work on your mithril cloak. You should ask #Kampusch about anything textile related.",
+				+ " so I can start work on your 黑曜石斗篷. You should ask #Kampusch about anything textile related.",
 				null);
 
 		npc.addReply("Hogart", "He's that grumpy old dwarf in the Or'ril mines. I already sent him a message saying I wanted some new scissors but he didn't respond. Well, what he lacks in people skills he makes up for in his metal work.");

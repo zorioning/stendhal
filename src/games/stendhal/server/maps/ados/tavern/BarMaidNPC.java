@@ -72,7 +72,7 @@ public class BarMaidNPC implements ZoneConfigurator {
 				offerings.put("beer", 15);
 				offerings.put("pie", 160);
 				offerings.put("bread", 50);
-				offerings.put("cheese", 20);
+				offerings.put("干酪", 20);
 				offerings.put("tomato", 30);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 				addGoodbye();

@@ -100,11 +100,11 @@ public interface ITPPQuestConstants {
 	 * List of creatures types to create.
 	 */
 	public final List<String> RAT_TYPES = Arrays.asList(
-			"rat",
-			"caverat",
-			"venomrat",
-			"razorrat",
-			"giantrat",
+			"老鼠",
+			"洞穴老鼠",
+			"毒液鼠",
+			"利齿鼠",
+			"巨型鼠",
 			"archrat");
 
 	/**
