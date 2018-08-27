@@ -69,43 +69,43 @@ import games.stendhal.server.maps.Region;
  */
 public class MedicineForTad extends AbstractQuest {
 
-	static final String ILISA_TALK_ASK_FOR_FLASK = "Medicine for #Tad? Didn't he tell you to bring a flask?";
-	static final String ILISA_TALK_ASK_FOR_HERB = "Ah, I see you have that flask. #Tad needs medicine, right? Hmm... I'll need a #herb. Can you help?";
-	static final String ILISA_TALK_DESCRIBE_HERB = "North of Semos, near the tree grove, grows a herb called arandula. Here is a picture I drew so you know what to look for.";
-	static final String ILISA_TALK_INTRODUCE_TAD = "He needs a very powerful potion to heal himself. He offers a good reward to anyone who will help him.";
-	static final String ILISA_TALK_REMIND_HERB = "Can you fetch those #herbs for the #medicine?";
-	static final String ILISA_TALK_PREPARE_MEDICINE = "Okay! Thank you. Now I will just mix these... a pinch of this... and a few drops... there! Can you ask #Tad to stop by and collect it? I want to see how he's doing.";
-	static final String ILISA_TALK_EXPLAIN_MEDICINE = "The medicine that #Tad is waiting for.";
+	static final String ILISA_TALK_ASK_FOR_FLASK = "#Tad 要的药？他不是让你把 flask 带给他吗?";
+	static final String ILISA_TALK_ASK_FOR_HERB = "啊, 我看见你拿着 flask. #Tad 需要药，对吧？ 唔... 我还需要点 #herb. 你能帮我取点吗?";
+	static final String ILISA_TALK_DESCRIBE_HERB = "Semos 镇北面，挨着小树林，生长着一种名叫arandula的草药，这张图画的是这种草药的图片，所以快照图去找吧.";
+	static final String ILISA_TALK_INTRODUCE_TAD = "他需要一种强心济来治好他的病，他会给帮助过他的人很不错的酬金。";
+	static final String ILISA_TALK_REMIND_HERB = "你拿到这些#herbs 来制作 #medicine 了吗?";
+	static final String ILISA_TALK_PREPARE_MEDICINE = "很好!谢谢你，现在我要把这些混合...加入这个...然后再滴点... 好了！你能让 #Tad 停下并收集这个吗？ 我想知道他在做些什么。";
+	static final String ILISA_TALK_EXPLAIN_MEDICINE = "这是 #Tad 急需的东西.";
 
-	static final String KETTEH_TALK_BYE_INTRODUCES_TAD = "Farewell. Have you met Tad, in the hostel? If you get a chance, please check in on him. I heard he was not feeling well. You can find the hostel in Semos village, close to Nishiya.";
-	static final String KETTEH_TALK_BYE_REMINDS_OF_TAD = "Goodbye. Don't forget to check on Tad. I hope he's feeling better.";
+	static final String KETTEH_TALK_BYE_INTRODUCES_TAD = "再会，你见到Ted了，在旅店里？如果你有机会，请看看他，我听说他近来身体不太好。你可以在 Semos 村子里的旅店找到他，离Nishiya很近.";
+	static final String KETTEH_TALK_BYE_REMINDS_OF_TAD = "再见，不要忘了去看看 Tad。我希望他好起来.";
 
-	static final String TAD_TALK_GOT_FLASK = "Ok, you got the flask!";
-	static final String TAD_TALK_REWARD_MONEY = "Here, take this money to cover your expense.";
-	static final String TAD_TALK_FLASK_ILISA = "Now, I need you to take it to #Ilisa... she'll know what to do next.";
-	static final String TAD_TALK_REMIND_FLASK_ILISA = "I need you to take a flask to #Ilisa... she'll know what to do next.";
-	static final String TAD_TALK_INTRODUCE_ILISA = "Ilisa is the summon healer at Semos temple.";
-	static final String TAD_TALK_REMIND_MEDICINE = "*cough* I hope #Ilisa hurries with my medicine...";
-	static final String TAD_TALK_COMPLETE_QUEST = "Thanks! I will go talk with #Ilisa as soon as possible.";
+	static final String TAD_TALK_GOT_FLASK = "Ok, 你得到了 flask!";
+	static final String TAD_TALK_REWARD_MONEY = "拿着，这些钱足够你的开销了.";
+	static final String TAD_TALK_FLASK_ILISA = "现在，我需要你带着它去找 #Ilisa... 她一看就明白接下来要做什么。";
+	static final String TAD_TALK_REMIND_FLASK_ILISA = "我需要你带着flask去找 #Ilisa... 她一看就明白接下来要做什么。";
+	static final String TAD_TALK_INTRODUCE_ILISA = "Ilisa 是 Semos 教堂的召唤治疗师。";
+	static final String TAD_TALK_REMIND_MEDICINE = "*cough* 我希望 #Ilisa 能快点把药制好...";
+	static final String TAD_TALK_COMPLETE_QUEST = "谢谢！我会尽快和 #Ilisa 谈谈。";
 
-	static final String TAD_TALK_ASK_FOR_EMPTY_FLASK = "I'm not feeling well... I need to get a bottle of medicine made. Can you fetch me an empty #flask?";
-	static final String TAD_TALK_ALREADY_HELPED_1 = "I'm alright now, thanks.";
-	static final String TAD_TALK_ALREADY_HELPED_2 = "You've already helped me out! I'm feeling much better now.";
-	static final String TAD_TALK_WAIT_FOR_FLASK = "*cough* Oh dear... I really need this medicine! Please hurry back with the #flask from #Margaret.";
-	static final String TAD_TALK_FLASK_MARGARET = "You could probably get a flask from #Margaret.";
-	static final String TAD_TALK_INTRODUCE_MARGARET = "Margaret is the maid in the inn just down the street.";
-	static final String TAD_TALK_CONFIRM_QUEST = "So, will you help?";
-	static final String TAD_TALK_QUEST_REFUSED = "Oh, please won't you change your mind? *sneeze*";
-	static final String TAD_TALK_QUEST_ACCEPTED = "Great! Please go as quickly as you can. *sneeze*";
+	static final String TAD_TALK_ASK_FOR_EMPTY_FLASK = "我感觉很不好... 我需要拿到一瓶药济。你能帮我取一个空的 #flask 吗?";
+	static final String TAD_TALK_ALREADY_HELPED_1 = "我现在好了，谢谢。";
+	static final String TAD_TALK_ALREADY_HELPED_2 = "你帮我脱离险境！现在我觉得好多了！";
+	static final String TAD_TALK_WAIT_FOR_FLASK = "*cough* Oh 亲爱的... 我真的需要这些药！请快点去找 #Margaretrry 取个 #flask 回来.";
+	static final String TAD_TALK_FLASK_MARGARET = "你应该去 #Margaret 处取个 flask.";
+	static final String TAD_TALK_INTRODUCE_MARGARET = "Margaret 是酒店的服务员，平时就在离这不远的酒店里。";
+	static final String TAD_TALK_CONFIRM_QUEST = "所以, 你会帮我吗?";
+	static final String TAD_TALK_QUEST_REFUSED = "Oh, 请不要改变主意好吗？ *sneeze*";
+	static final String TAD_TALK_QUEST_ACCEPTED = "太好了! 请尽快吧. *sneeze*";
 
-	static final String HISTORY_MET_TAD = "I have met Tad in Semos Hostel.";
-	static final String HISTORY_QUEST_OFFERED = "He asked me to buy a flask from Margaret in Semos Tavern.";
-	static final String HISTORY_GOT_FLASK = "I got a flask and will bring it to Tad soon.";
-	static final String HISTORY_TAKE_FLASK_TO_ILISA = "Tad asked me to take the flask to Ilisa at Semos Temple.";
-	static final String HISTORY_ILISA_ASKED_FOR_HERB = "Ilisa asked me to get a herb called Arandula which I can find north of Semos, near the tree grove.";
-	static final String HISTORY_GOT_HERB = "I found some Arandula herbs and will bring them to Ilisa.";
-	static final String HISTORY_POTION_READY = "Ilisa created a powerful potion to help Tad. She asked me to tell him that it is ready.";
-	static final String HISTORY_DONE = "Tad thanked me.";
+	static final String HISTORY_MET_TAD = "我在 Semos 旅店里见到了 Ted.";
+	static final String HISTORY_QUEST_OFFERED = "他让我去 Semos 酒店里 找 Margaret 买一个 flask .";
+	static final String HISTORY_GOT_FLASK = "我拿到了 flask ，并马上带给了 Tad .";
+	static final String HISTORY_TAKE_FLASK_TO_ILISA = "Tad 让我拿着 flask 到 Semos教堂找 Ilisa.";
+	static final String HISTORY_ILISA_ASKED_FOR_HERB = "Ilisa 让我去 Semos 镇的北边取一种叫 Arandula 的药草, 这种药草长在小树林的旁边.";
+	static final String HISTORY_GOT_HERB = "我找到了 Arandula 药草，并把它带给了 Ilisa.";
+	static final String HISTORY_POTION_READY = "Ilisa 制作了一种强心济帮助 Tad 治疗。她让我给他带话，药已备好。";
+	static final String HISTORY_DONE = "Tad 对我十分感谢.";
 
 	static final String STATE_START = "start";
 	static final String STATE_ILISA = "ilisa";
@@ -427,8 +427,8 @@ public class MedicineForTad extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Medicine For Tad",
-				"Tad, a boy in Semos Hostel, needs help to get his medicine.",
+				"Tad的药济",
+				"Tad, Semos 旅馆的一位青年，需要我帮忙取些药。",
 				false);
 		step_1();
 		step_2();

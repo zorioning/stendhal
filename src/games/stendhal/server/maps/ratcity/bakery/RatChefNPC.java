@@ -64,7 +64,7 @@ public class RatChefNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addJob("I'm the best #crepes suzette au chocolate chef in town. Ask me to #bake one for you!");
 				addReply("crepes",
-                    "Ah le dessert for a prince... A taste of which, I really believe, would reform a cannibal into a civilized gentleman.");
+                    "Ah le dessert for a prince... A taste of which, I really believe, would reform a 食人族 into a civilized gentleman.");
                 /**
                  * chocolate bar is the item, and the parser knows nothing about bar/bars.
                  * Handle all possibilities explicitly.

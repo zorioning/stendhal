@@ -85,7 +85,7 @@ public class AmazonMermaidArmorNPC implements ZoneConfigurator {
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buyamazoncloaks")), false);
 				addOffer("I hate to say it, but look at the blackboard over yonder to see my prices and what I buy.");
 				addQuest("There's not a thing you can do for me, thanks.");
-				addGoodbye("Bye. Don't you just HATE this place? ;) Say hey to the amazoness giant while you are here.");
+				addGoodbye("Bye. Don't you just HATE this place? ;) Say hey to the 亚马逊巨人 while you are here.");
 
 			}
 		};

@@ -73,28 +73,28 @@ public class MeetHayunn extends AbstractQuest {
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("Hayunn Naratha is the first guy I ever met in this world, he challenged me to kill a rat.");
+		res.add("Hayunn Naratha 是我在这个世上第一个遇到的人，他给我的任务是杀死一只老鼠。");
 		if (player.getQuest(QUEST_SLOT, 0).equals("start") && new KilledForQuestCondition(QUEST_SLOT,1).fire(player, null, null)) {
-			res.add("I killed that rat, I should go back to tell him!");
+			res.add("我杀了一只老鼠，我应该回去告诉他!");
 		}
 		if (player.getQuest(QUEST_SLOT, 0).equals("start")) {
 			return res;
 		}
-		res.add("I killed the rat. Hayunn will teach me more about the world now.");
+		res.add("我杀死了老鼠。Hayunn 会教我有关这个世界的更多知识。");
 		if ("killed".equals(questState)) {
 			return res;
 		}
-		res.add("Hayunn gave me a bit of money and told me to go find Monogenes in Semos City, who will give me a map.");
+		res.add("Hayunn 给了我一点钱，并告诉我去找 Semos 镇的 Monogenes 要一张地图");
 		if ("taught".equals(questState)) {
 			return res;
 		}
-		res.add("Hayunn told me lots of useful information about how to survive, and gave me a studded shield and some money.");
+		res.add("Hayunn 告诉我很有用的生存知识，并给了我一面学徒盾和一些钱。");
 		if (isCompleted(player)) {
 			return res;
 		}
 		// if things have gone wrong and the quest state didn't match any of the above, debug a bit:
 		final List<String> debug = new ArrayList<String>();
-		debug.add("Quest state is: " + questState);
+		debug.add("任务状态: " + questState);
 		logger.error("History doesn't have a matching quest state for " + questState);
 		return debug;
 	}
@@ -170,7 +170,7 @@ public class MeetHayunn extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "killed")),
 				ConversationStates.INFORMATION_1,
-		        "You ran off pretty fast after coming to tell me you killed that rat! I was about to give you a little tip. Do you want it?",
+		        "当你能杀死老鼠后麻利跑回来告诉我！我会给你点提示，你做的到吗？",
 				null);
 
 		// Player has returned to say hi again.
@@ -233,8 +233,8 @@ public class MeetHayunn extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Meet Hayunn Naratha",
-				"Hayunn Naratha can teach young heroes important basics of the Stendhal world.",
+				"会见 Hayunn Naratha",
+				"在这个世界上，Hayunn Naratha 是年轻英雄们重要的导师.",
 				false);
 		prepareHayunn();
 	}

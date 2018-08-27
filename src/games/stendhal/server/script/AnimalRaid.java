@@ -31,7 +31,7 @@ public class AnimalRaid extends CreateRaid {
 		attackArmy.put("老虎", 2);
 		attackArmy.put("狮子", 3);
 		attackArmy.put("大熊猫", 2);
-		attackArmy.put("penguin", 4);
+		attackArmy.put("企鹅", 4);
 		attackArmy.put("凯门鳄", 3);
 		attackArmy.put("幼熊", 2);
 		attackArmy.put("黑熊", 1);

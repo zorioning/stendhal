@@ -69,9 +69,9 @@ import games.stendhal.server.util.TimeUtil;
 	private static Logger logger = Logger.getLogger(KillBlordroughs.class);
 
 	protected static List<String> BLORDROUGHS = Arrays.asList(
-			"blordrough quartermaster",
-			"blordrough corporal",
-			"blordrough storm trooper");
+			"布拉德鲁军队",
+			"布拉德鲁下士",
+			"布拉德鲁风暴骑兵");
 
 	/**
 	 * function returns list of blordrough creatures.

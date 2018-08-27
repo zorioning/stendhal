@@ -22,11 +22,11 @@ public class BarbarianRaid extends CreateRaid {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
 		attackArmy.put("barbarian", 30);
 		attackArmy.put("蛮族人狼", 15);
-		attackArmy.put("barbarian elite", 12);
-		attackArmy.put("barbarian priest", 7);
-		attackArmy.put("barbarian chaman", 5);
-		attackArmy.put("barbarian leader", 3);
-		attackArmy.put("barbarian king", 1);
+		attackArmy.put("蛮族精英", 12);
+		attackArmy.put("蛮族牧师", 7);
+		attackArmy.put("野蛮夏曼人", 5);
+		attackArmy.put("蛮族首领", 3);
+		attackArmy.put("野蛮人王", 1);
 
 		return attackArmy;
 	}

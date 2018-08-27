@@ -29,7 +29,7 @@ public class KoboldRaid extends CreateRaid {
 		attackArmy.put("archer kobold", 3);
 		attackArmy.put("leader kobold", 7);
 		attackArmy.put("soldier kobold", 7);
-		attackArmy.put("giant kobold", 2);
+		attackArmy.put("巨型狗头人", 2);
 		attackArmy.put("veteran kobold", 7);
 		return attackArmy;
 	}

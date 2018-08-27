@@ -51,8 +51,8 @@ public class FightingAchievementFactory extends AbstractAchievementFactory {
 															new PlayerHasKilledNumberOfCreaturesCondition("狮子", 30),
 															new PlayerHasKilledNumberOfCreaturesCondition("大象", 50)
 															)));
-		fightingAchievements.add(createAchievement("fight.general.ents", "Wood Cutter", "Kill 10 ents, 10 entwifes and 10 old ents", Achievement.MEDIUM_BASE_SCORE, true,
-													new PlayerHasKilledNumberOfCreaturesCondition(10, "ent", "entwife", "old ent")));
+		fightingAchievements.add(createAchievement("fight.general.ents", "Wood Cutter", "Kill 10 ents, 10 树精妻子s and 10 old ents", Achievement.MEDIUM_BASE_SCORE, true,
+													new PlayerHasKilledNumberOfCreaturesCondition(10, "ent", "树精妻子", "老树精")));
 		fightingAchievements.add(createAchievement("fight.special.rare", "Poacher", "Kill any rare creature", Achievement.HARD_BASE_SCORE, true,
 				new KilledRareCreatureCondition()));
 

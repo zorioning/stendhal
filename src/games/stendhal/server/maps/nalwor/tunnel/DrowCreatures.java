@@ -36,15 +36,15 @@ public class DrowCreatures implements ZoneConfigurator {
 	private static final String QUEST_SLOT="kill_dark_elves";
 	// at the beginning places there must be creatures from DarkElvesCreatures.class
 	private final List<String> creatures =
-		Arrays.asList("dark elf captain",
-				      "dark elf general",
-				      "dark elf knight",
-				      "dark elf wizard",
-				      "dark elf sacerdotist",
-				      "dark elf viceroy",
-				      "dark elf matronmother",
-					  "dark elf elite archer",
-				      "dark elf archer");
+		Arrays.asList("黑暗精灵队长",
+				      "黑暗精灵将军",
+				      "黑暗精灵骑士",
+				      "黑暗精灵巫师",
+				      "黑暗精灵僧侣",
+				      "黑暗精灵总督",
+				      "黑暗精灵妈妈",
+					  "黑暗精灵精英弓箭手",
+				      "黑暗精灵弓箭手");
 
 	/**
 	 * Configure a zone.

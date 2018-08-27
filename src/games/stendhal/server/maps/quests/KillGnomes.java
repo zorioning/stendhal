@@ -106,8 +106,8 @@ public class KillGnomes extends AbstractQuest {
 
 		final Map<String, Pair<Integer, Integer>> toKill = new TreeMap<String, Pair<Integer, Integer>>();
 		toKill.put("gnome", new Pair<Integer, Integer>(0,1));
-		toKill.put("infantry gnome", new Pair<Integer, Integer>(0,1));
-		toKill.put("cavalryman gnome",new Pair<Integer, Integer>(0,1));
+		toKill.put("步兵侏儒", new Pair<Integer, Integer>(0,1));
+		toKill.put("骑兵侏儒",new Pair<Integer, Integer>(0,1));
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new SetQuestAction(QUEST_SLOT, "start"));

@@ -30,7 +30,7 @@ public class FarmRaid extends CreateRaid {
 		attackArmy.put("老母鸡", 4);
 		attackArmy.put("山羊", 3);
 		attackArmy.put("马", 2);
-		attackArmy.put("chick", 5);
+		attackArmy.put("小鸡", 5);
 		attackArmy.put("公牛", 2);
 		attackArmy.put("公羊", 5);
 		attackArmy.put("小老鼠", 5);
