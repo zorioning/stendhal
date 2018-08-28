@@ -169,7 +169,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 				// to exit renting/choosing an allotment
 				add(ConversationStates.ANY,
-					"没了",
+					"none",
 					null,
 					ConversationStates.ATTENDING,
 					"Ok.",

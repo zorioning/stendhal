@@ -130,27 +130,27 @@ public class AntivenomRing extends AbstractQuest {
 		String quest = player.getQuest(QUEST_SLOT, 0);
 		final String[] questState = player.getQuest(QUEST_SLOT).split(",");
 		if ("done".equals(quest)) {
-			res.add("I gathered all that Jameson asked for. He applied a special mixture to my ring which made it more resistant to poison. I also got some XP and karma.");
+			res.add("我收集到了 Jameson 要的全部原料。他把这些特殊的原料混合进我的戒指， 使这个戒指的抗毒性更强了。我还得到了一些经验和运气.");
 		}
 		else if ("rejected".equals(quest)) {
-			res.add("Poison is too dangerous. I do not want to get hurt.");
+			res.add("毒非常危险，我可不想受害。");
 		}
 		else {
 			if (questState[0].split("=")[0] == "mixing") {
-				res.add(mixer.getName() + " is mixing the antivenom.");
+				res.add(mixer.getName() + " 正在混入抗毒济。");
 			}
 			else {
 				final ItemCollection missingMixItems = new ItemCollection();
 				missingMixItems.addFromQuestStateString(questState[0]);
-				res.add("I still need to bring Jameson " + missingMixItems.toStringList() + ".");
+				res.add("我还需要把 Jameson 带来 " + missingMixItems.toStringList() + ".");
 			}
 
 			if (questState[1].split("=")[0] == "extracting") {
-				res.add(extractor.getName() + " is extracting the venom.");
+				res.add(extractor.getName() + " 正把毒汁提取出来。");
 			}
 
 			if (questState[2].split("=")[0] == "fusing") {
-				res.add(fuser.getName() + " is creating my ring.");
+				res.add(fuser.getName() + " 正在制成我的戒指。");
 			}
 		}
 		return res;
@@ -284,7 +284,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
-				"非常感谢. It had been so long since I was able to enjoy a fairy cake. Are you enjoying your ring?",
+				"非常感谢. 从上次吃到我喜欢的 fairy cake 己过了很长时间了吧，你喜欢你的戒指吗？",
 				null);
 
 		// Player is enjoying the ring
@@ -322,7 +322,7 @@ public class AntivenomRing extends AbstractQuest {
 				Arrays.asList("cake", "fairy cake"),
 				null,
 				ConversationStates.QUESTION_1,
-				"Oh, they are the best treat I have ever tasted. Only the most heavenly creatures could make such angelic food.",
+				"Oh, 我是我品尝过的最好的食物。只有最重的生物才能做出如此可口的食物。",
 				null);
 
 		// Player asks about rings
@@ -337,21 +337,21 @@ public class AntivenomRing extends AbstractQuest {
 				Arrays.asList("medicinal ring", "medicinal rings"),
 				null,
 				ConversationStates.QUESTION_1,
-				"Some poisonous creatures carry them.",
+				"在一些毒物体内存在。",
 				null);
 
 		mixer.add(ConversationStates.QUESTION_1,
 				Arrays.asList("antivenom ring", "antivenom rings"),
 				null,
 				ConversationStates.QUESTION_1,
-				"If you bring me what I need I may be able to strengthen a #medicinal #ring.",
+				"如果你能把它带来，我可以加强一个 #medicinal #ring.",
 				null);
 
 		mixer.add(ConversationStates.QUESTION_1,
 				Arrays.asList("antitoxin ring", "antitoxin rings", "gm antitoxin ring", "gm antitoxin rings"),
 				null,
 				ConversationStates.QUESTION_1,
-				"Heh! This is the ultimate protection against poisoning. Good luck getting one!",
+				"Heh! 这是终极的抗毒物品了。能得到它运气真的不错！",
 				null);
 		/*
 		// Player asks about snakes
@@ -381,7 +381,7 @@ public class AntivenomRing extends AbstractQuest {
 				Arrays.asList("cake", "fairy cake"),
 				null,
 				ConversationStates.ATTENDING,
-				"Oh, they are the best treat I have ever tasted. Only the most heavenly creatures could make such angelic food.",
+				"Oh, 这是我吃过最好的食物了。只有最重的生物才能做出如此好吃的食物。",
 				null);
 
 		// Player asks about rings
@@ -576,7 +576,7 @@ public class AntivenomRing extends AbstractQuest {
 						)
 				),
 				ConversationStates.QUESTION_1,
-				"What that, you need some venom to create an antivemon? I can extract the venom from a cobra's venom gland, but I will need a vial to hold it in. Would you get me these items?",
+				"那是什么，你需要一些毒液可能造出一个 antivemon? 我能从眼镜蛇的腺体中取出毒液，但我需要一个小瓶子装它，你能去找一只吗？",
 				null);
 
 		// Player will retrieve items
@@ -586,7 +586,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationStates.IDLE,
 				null,
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, 1, EXTRACTION_ITEMS),
-						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 1, "Good! I will need [items].  Do you have any of those with you?")
+						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 1, "很好！我需要 [items]。你身上带着一些吗？")
 				)
 		);
 	}
@@ -609,7 +609,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationStates.QUESTION_1,
 				null,
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, 2, FUSION_ITEMS),
-						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 2, "You need a powerful item that can protect you from poison? I can fuse antivenom into medicinal ring to make it stronger, but it won't be cheep. I will need [items]. My price is " + Integer.toString(REQUIRED_MONEY) + ". Will you get all this for me?")
+						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 2, "你需要一个强力抗毒的物品使你免受毒害吗？我可以把抗毒液混入医疗戒指 medicinal ring 医疗戒指中，让它的抗毒性更强，当然代价不低，我需要 [items]. 然后你还需要付 " + Integer.toString(REQUIRED_MONEY) + " 钱币，你能把这些全都找来吗？")
 				)
 		);
 
@@ -620,7 +620,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationStates.IDLE,
 				null,
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, 2, EXTRACTION_ITEMS),
-						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Alright, do you have any of the items that I asked for with you?")
+						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "好吧，你找到我要的东西了吗？")
 				)
 		);
 	}
@@ -633,7 +633,7 @@ public class AntivenomRing extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Antivenom Ring",
-				"As a favor to an old friend, Jameson the apothecary will strengthen the medicinal ring.",
+				"作为送给老朋友的礼物, 药济师 Jameson 能够加强医疗戒指 medicinal ring.",
 				false);
 		prepareHintNPCs();
 		requestAntivenom();
