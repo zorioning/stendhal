@@ -40,7 +40,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Bobby (the boy in fado city)</li>
+ * <li>Bobby (the boy in 法多城)</li>
  * </ul>
  *
  * STEPS:
@@ -89,7 +89,7 @@ public class BalloonForBobby extends AbstractQuest {
 	private void prepareGreetWithBalloonStep() {
 
 		// get a reference to Bobby
-		SpeakerNPC npc = npcs.get("Bobby");
+		SpeakerNPC npc = npcs.get("波比");
 
 		// Add conditions for all 4 different kinds of balloons
 		npc.add(
@@ -105,7 +105,7 @@ public class BalloonForBobby extends AbstractQuest {
 								new PlayerIsWearingOutfitCondition(balloonList[2]),
 								new PlayerIsWearingOutfitCondition(balloonList[3]))),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Hello, is that balloon for me?",
+				"你好，这个气球是给我的吗?",
 				null);
 	}
 
@@ -114,7 +114,7 @@ public class BalloonForBobby extends AbstractQuest {
 	// (Unless it's not mine town week)
 	private void prepareAttendingWithBalloonStep() {
 
-		SpeakerNPC npc = npcs.get("Bobby");
+		SpeakerNPC npc = npcs.get("波比");
 
 		npc.add(
 				ConversationStates.ATTENDING,
@@ -144,7 +144,7 @@ public class BalloonForBobby extends AbstractQuest {
 										new PlayerIsWearingOutfitCondition(balloonList[2]),
 										new PlayerIsWearingOutfitCondition(balloonList[3])))),
 				ConversationStates.ATTENDING,
-				"You don't even have a balloon for me :(",
+				"你又没有气球给我 :(",
 				null);
 
 		npc.add(
@@ -152,16 +152,16 @@ public class BalloonForBobby extends AbstractQuest {
 				"balloon",
 				new SystemPropertyCondition("stendhal.minetown"),
 				ConversationStates.ATTENDING,
-				"The clouds told me that the mine town weeks are still going -"
-				+ " I can get my own balloons."
-				+ " Come back when mine town weeks are over :)",
+				"从天上的云可以得知，矿镇周还会继续。"
+				+ " 我会有很多气球。"
+				+ " 当矿镇周结束后再来看看 :)",
 				null);
 	}
 
 	// Let player decide if he wants to give the balloon to bobby
 	private void prepareQuestItemQuestionStep() {
 
-		SpeakerNPC npc = npcs.get("Bobby");
+		SpeakerNPC npc = npcs.get("波比");
 
 		// The player has a balloon but wants to keep it to himself
 		npc.add(
@@ -190,7 +190,7 @@ public class BalloonForBobby extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Yippie! Fly balloon! Fly!",
+				"耶！气球飞！飞吧！",
 				new MultipleActions(reward));
 
 	}
@@ -207,7 +207,7 @@ public class BalloonForBobby extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "BalloonForBobby";
+		return "Bobby的气球";
 	}
 
 	@Override
@@ -222,7 +222,7 @@ public class BalloonForBobby extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Bobby";
+		return "波比";
 	}
 
 }

@@ -1,5 +1,5 @@
 /**
- * logic for Ados city wall.
+ * logic for 阿多斯城 wall.
  */
 package games.stendhal.server.maps.ados.wall;
 

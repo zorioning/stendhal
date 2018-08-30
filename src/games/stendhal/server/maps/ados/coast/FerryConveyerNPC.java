@@ -68,7 +68,7 @@ public class FerryConveyerNPC implements ZoneConfigurator  {
 				+ " gold, but only when it's anchored near this harbor. Just ask me for the #status if you want to know where the ferry is.");
 		addJob("If passengers want to #board the #ferry to #Athor #island, I take them to the ship with this rowing boat.");
 		addReply("ferry", "The ferry sails regularly between this coast and #Athor #island. You can #board it when it's here. Ask me for the #status to find out where it is currently.");
-		addReply(Arrays.asList("Athor", "island"), "Athor Island is a fun place where many people spend their holidays.");
+		addReply(Arrays.asList("Athor", "island"), "阿托尔岛 is a fun place where many people spend their holidays.");
 		add(ConversationStates.ATTENDING, "status",
 				null,
 				ConversationStates.ATTENDING,
@@ -143,7 +143,7 @@ public class FerryConveyerNPC implements ZoneConfigurator  {
 			};
 
 			npc.setPosition(101, 103);
-			npc.setDescription("You see Eliza. She takes customers on board of the Athor island ferry.");
+			npc.setDescription("You see Eliza. She takes customers on board of the 阿托尔岛 ferry.");
 			npc.setEntityClass("woman_008_npc");
 			npc.setDirection(Direction.LEFT);
 			zone.add(npc);

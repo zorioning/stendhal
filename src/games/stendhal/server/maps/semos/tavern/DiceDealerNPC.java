@@ -34,24 +34,24 @@ public class DiceDealerNPC implements ZoneConfigurator {
 	 */
 	@Override
 	public void configureZone(final StendhalRPZone zone, final Map<String, String> attributes) {
-		buildRicardo(zone);
+		build里卡多(zone);
 	}
 
-	final CroupierNPC ricardo = new CroupierNPC("Ricardo") {
+	final CroupierNPC ricardo = new CroupierNPC("里卡多") {
 		@Override
 		protected void createPath() {
-			// Ricardo doesn't move
+			// 里卡多 doesn't move
 			setPath(null);
 		}
 
 		@Override
 		protected void createDialog() {
 			addGreeting("欢迎来到牌桌 #gambling ,这里是梦想成真的地方.");
-			addJob("本店是 Semos 镇唯一官方授权的赌场.");
+			addJob("本店是 塞门镇唯一官方授权的赌场.");
 			addReply(
 			        "gambling",
 			        "规则很简单：如果你要加入只要对我说 #play, 然后下注，把骰子扔到桌上，正面数值总值越大，你的赢得的奖金越多。奖金计算请看后面的黑板!");
-			addHelp("如果你在找 Ouchit: 他在楼上.");
+			addHelp("如果你在找 奥斯特: 他在楼上.");
 			addGoodbye();
 		}
 
@@ -61,11 +61,11 @@ public class DiceDealerNPC implements ZoneConfigurator {
 		}
 	};
 
-	private void buildRicardo(final StendhalRPZone zone) {
+	private void build里卡多(final StendhalRPZone zone) {
 		ricardo.setEntityClass("naughtyteen2npc");
 		ricardo.setPosition(26, 2);
 		ricardo.setDirection(Direction.DOWN);
-		ricardo.setDescription("Ricardo 的口袋总是叮叮铛铛的响，作为酒保来说他有点太年轻。");
+		ricardo.setDescription("里卡多 的口袋总是叮叮铛铛的响，作为酒保来说他有点太年轻。");
 		ricardo.initHP(100);
 		final Rectangle tableArea = new Rectangle(25, 4, 2, 3);
 

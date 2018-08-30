@@ -54,7 +54,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li>Haunchy Meatoch asks you to fetch coal for his BBQ</li>
- * <li>Find some coal in Semos Mine or buy some from other players</li>
+ * <li>Find some coal in 塞门镇 Mine or buy some from other players</li>
  * <li>Take the coal to Haunchy</li>
  * <li>Haunchy gives you a tasty reward</li>
  * </ul>
@@ -96,7 +96,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				Arrays.asList("coal"),
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"Coal 煤炭不易找到，通常可以在地下的某处找到，但也有可能在 Semos 的旧矿区通道内找到...",
+				"Coal 煤炭不易找到，通常可以在地下的某处找到，但也有可能在 塞门镇 的旧矿区通道内找到...",
 				null);
 
         // player has completed the quest (doesn't happen here)
@@ -139,7 +139,7 @@ public class CoalForHaunchy extends AbstractQuest {
 
 	/*
 	 * Get Coal Step :
-	 * Players will get some coal in Semos Mine and with buying some from other players.
+	 * Players will get some coal in 塞门镇 Mine and with buying some from other players.
 	 *
 	 */
 	private void bringCoalStep() {

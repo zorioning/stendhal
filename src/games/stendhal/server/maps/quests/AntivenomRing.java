@@ -63,7 +63,7 @@ import games.stendhal.server.util.ItemCollection;
  * STEPS:
  * <ul>
  * <li>Bring note to apothecary to Jameson.</li>
- * <li>As a favor to Klaas, Jameson will help you to strengthen your medicinal ring.</li>
+ * <li>As a favor to 克拉丝, Jameson will help you to strengthen your medicinal ring.</li>
  * <li>Bring Jameson a medicinal ring, venom gland, 2 mandragora and 5 fairycakes.</li>
  * <li>Jameson requires a bottle big enough to hold venom extracted from gland.</li>
  * <li>Bring Jameson a giant bottle.</li>
@@ -126,7 +126,7 @@ public class AntivenomRing extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("在 Semos 山,我找到了隐士药济师的试验室.");
+		res.add("在 塞门镇 山,我找到了隐士药济师的试验室.");
 		String quest = player.getQuest(QUEST_SLOT, 0);
 		final String[] questState = player.getQuest(QUEST_SLOT).split(",");
 		if ("done".equals(quest)) {
@@ -218,7 +218,7 @@ public class AntivenomRing extends AbstractQuest {
 						new PlayerHasItemWithHimCondition("note to apothecary"),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.QUEST_OFFERED,
-				"Oh, Klaas的信. 是给我的吗?",
+				"Oh, 克拉丝的信. 是给我的吗?",
 				null);
 
 		// In case player dropped note before speaking to Jameson
@@ -228,7 +228,7 @@ public class AntivenomRing extends AbstractQuest {
 						new PlayerHasItemWithHimCondition("note to apothecary"),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.QUEST_OFFERED,
-				"Oh, Klaas 的信. 是给我的吗?",
+				"Oh, 克拉丝 的信. 是给我的吗?",
 				null);
 
 		// Player accepts quest
@@ -240,7 +240,7 @@ public class AntivenomRing extends AbstractQuest {
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, 0, MIX_ITEMS),
 						new IncreaseKarmaAction(5.0),
 						new DropItemAction("note to apothecary"),
-						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 0, "Klaas 让我协助你，我能做一个指环，用它提高抗毒性，我需要你带来 [items].  你带了这些物品吗？")
+						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, 0, "克拉丝 让我协助你，我能做一个指环，用它提高抗毒性，我需要你带来 [items].  你带了这些物品吗？")
 				)
 		);
 
@@ -267,7 +267,7 @@ public class AntivenomRing extends AbstractQuest {
 				new AndCondition(new NotCondition(new PlayerHasItemWithHimCondition("note to apothecary")),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"抱歉，但我现在很心，可能你应该得 #Klaas 说.",
+				"抱歉，但我现在很心，可能你应该得 #克拉丝 说.",
 				null);
 
 		// Player asks for quest after it is started

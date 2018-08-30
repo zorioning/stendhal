@@ -64,7 +64,7 @@ final class AthorHouseSeller extends HouseSellerNPCBase {
 				 + getCost()
 				 + " money.  Also, you must pay a monthly tax of " + HouseTax.BASE_TAX
 				 + " money. If you have an apartment in mind, please tell me the number now. I will check availability. "
-				 + "Athor Apartments are numbered "
+				 + "阿托尔公寓s are numbered "
 				 + getLowestHouseNumber() + " to " + getHighestHouseNumber() + ".",
 				 null);
 

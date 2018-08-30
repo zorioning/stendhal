@@ -35,7 +35,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <li>Mithrilbourgh wizards, in kirdneh and magic city</li>
  * <li>Hogart, a retired master dwarf smith, forgotten below the dwarf mines in
  * Orril.</li>
- * <li>Terry, the dragon hatcher in semos caves.</li>
+ * <li>Terry, the dragon hatcher in 塞门洞穴.</li>
  * <li>Ritati Dragontracker, odds and ends buyer in ados abandoned keep</li>
  * <li>Pdiddi, the dodgy dealer from Semos</li>
  * <li>Josephine, young woman from Fado</li>
@@ -253,7 +253,7 @@ public class MithrilCloak extends AbstractQuest {
 		return 100;
 	}
 
-	// Not sure about this one. it would make an achievement for all quests in ados city, quite hard
+	// Not sure about this one. it would make an achievement for all quests in 阿多斯城, quite hard
 	@Override
 	public String getRegion() {
 		return Region.ADOS_CITY;

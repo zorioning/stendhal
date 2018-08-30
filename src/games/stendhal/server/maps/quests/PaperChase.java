@@ -57,9 +57,9 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 
 	private static final int TELEPORT_PENALTY_IN_MINUTES = 10;
 
-	private static final List<String> NPC_IDLE = Arrays.asList("Tad", "Haunchy Meatoch", "Pdiddi", "Ketteh Wehoh");
+	private static final List<String> NPC_IDLE = Arrays.asList("泰德", "Haunchy Meatoch", "Pdiddi", "Ketteh Wehoh");
 
-	private List<String> points = Arrays.asList("Nishiya", "Marcus", "Eheneumniranin", "Balduin", "Rachel", "Fritz",
+	private List<String> points = Arrays.asList("尼世亚", "Marcus", "Eheneumniranin", "Balduin", "Rachel", "Fritz",
 												"Alice Farmer", "Elisabeth", "Sue", "Old Mother Helena", "Hazel",
 												"Captain Brownbeard", "Jane", "Seremela", "Phalk", "Fidorea");
 
@@ -92,7 +92,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 
 	private void setupTexts() {
 		texts.put("Marcus", "The next person you should find takes care of thieves and other criminals. "
-				  + "He works in a fort near Semos.");
+				  + "He works in a fort near 塞门镇.");
 		texts.put("Eheneumniranin", "You'll have to find the half sickling elf on Ados farm, next. He is always busy while gathering grain.");
 		texts.put("Balduin", "The next person on your trail sits on top of a really windy mountain.");
 		texts.put("Rachel", "The next lady to find works in a bank and can tell you all about her job.");
@@ -105,7 +105,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		texts.put("Captain Brownbeard", "Now you have to travel on a ferry and talk to an old salt who will lead you to the next person to meet up with.");
 		texts.put("Jane", "Harrr yarrr the next lady enjoys a sunbath together with her husband on Athor beach.");
 		texts.put("Seremela", "It's not long ago that the next person you have to find opened a beautiful flowershop. I've seen lots of long eared creatures walking around her, hidden in a city which lays in a forest.");
-		texts.put("Phalk", "The next person you have to find is an old warrior who guards the mines, north to Semos.");
+		texts.put("Phalk", "The next person you have to find is an old warrior who guards the mines, north to 塞门镇.");
 		texts.put("Fidorea", "The final person to talk to, is the one who started all this.");
 	}
 
@@ -128,7 +128,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 
 			// player does not have this quest or finished it
 			if (questState == null) {
-				raiser.say("Please talk to Fidorea in the Mine Town north of Semos to start the paper chase.");
+				raiser.say("Please talk to Fidorea in the Mine Town north of 塞门镇 to start the paper chase.");
 				return;
 			}
 
@@ -215,7 +215,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 			Arrays.asList("paper", "chase"),
 			new SystemPropertyCondition("stendhal.minetown"),
 			ConversationStates.ATTENDING,
-			"You must ask every person on the trail about the #paper #chase. Your journey starts in Semos Village, where you find a sheep loving and sheep selling man. "
+			"You must ask every person on the trail about the #paper #chase. Your journey starts in 塞门镇 Village, where you find a sheep loving and sheep selling man. "
 			+ "And just a warning: you may teleport on your journey, but every teleport will count as " + TELEPORT_PENALTY_IN_MINUTES + " minutes on the high score sign.",
 			startAction);
 

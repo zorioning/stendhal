@@ -76,7 +76,7 @@ public class SuntanCreamForZara extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Zara on Athor Island.");
+		res.add("I have met Zara on 阿托尔岛.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("I do not want to help Zara. She can burn.");
@@ -89,7 +89,7 @@ public class SuntanCreamForZara extends AbstractQuest {
 			res.add("I got the suntan cream.");
 		}
 		if (questState.equals("done")) {
-			res.add("I took the suntan cream to Zara and she let me have a key to her house in Ados City North. She says it is the one at the far end of the lower row.");
+			res.add("I took the suntan cream to Zara and she let me have a key to her house in 阿多斯城 North. She says it is the one at the far end of the lower row.");
 		}
 		return res;
 	}

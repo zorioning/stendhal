@@ -53,8 +53,8 @@ public class RetireeNPC implements ZoneConfigurator {
 				addJob("哈哈! 工作? 十年前就从我的信使 #postman 工作退休了！哈哈！");
 				addHelp("我帮不了你，但你可以帮助 Stendhal; 告诉你所有的朋友，访问https://stendhalgame.org and see how you can help!还可以帮助做开发！");
 				addGoodbye();
-				addReply("postman", "我以前邮递信件。但现在都是用短信了。我现在也用短信发消息了。下面给你发一条.", new StoreMessageAction("Diogenes", "在 Semos 镇，这是很好的聊天方式。如果你想使用信使给其他不在线的人发消息。只需用 /msg postman"));
-				addOffer("好吧... 虽然我仍然可以为你稍信，但我已退休，其他人接替了我的工作。你可以问问那边的人，Semos 镇北边的新信使 #postman .");
+				addReply("postman", "我以前邮递信件。但现在都是用短信了。我现在也用短信发消息了。下面给你发一条.", new StoreMessageAction("Diogenes", "在 塞门镇，这是很好的聊天方式。如果你想使用信使给其他不在线的人发消息。只需用 /msg postman"));
+				addOffer("好吧... 虽然我仍然可以为你稍信，但我已退休，其他人接替了我的工作。你可以问问那边的人，塞门镇北边的新信使 #postman .");
 				add(ConversationStates.ATTENDING,
 						ConversationPhrases.QUEST_MESSAGES,
 						null,
@@ -66,7 +66,7 @@ public class RetireeNPC implements ZoneConfigurator {
 						        if (Rand.throwCoin() == 1) {
 							        npc.say("Ah, 任务... 就像以前我年轻时! 我记得有个请求是关于... 噢看那，一只鸟! Hmm, 什么? 啊, 任务... 就像以前我年轻的时候!");
 						        } else {
-						        	npc.say("你知道那边的 Sato 收购羊? 好吧，传说地牢的深处有一个怪物，它也买羊...并且收购价要比 Sato 高的多!");
+						        	npc.say("你知道那边的 赛特 收购羊? 好吧，传说地牢的深处有一个怪物，它也买羊...并且收购价要比 赛特 高的多!");
 						        }
 					        }
 				        });

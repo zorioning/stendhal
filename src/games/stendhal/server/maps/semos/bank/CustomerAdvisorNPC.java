@@ -58,11 +58,11 @@ public class CustomerAdvisorNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("欢迎来到 Semos 银行! 我在这里为你服务。 #help #帮助 管理你的个人物品箱.");
+				addGreeting("欢迎来到 塞门镇 银行! 我在这里为你服务。 #help #帮助 管理你的个人物品箱.");
 				addHelp("顺着走廊向右走，你会发现特殊的物品箱。你可以把你的随身物品放进里面，其他人却不能碰！箱子区域布了阵法保障存取人的 #安全.");
 				addReply("安全", "当你站在箱子旁整理物品时，其他人或动物都不能走到你附近。一种魔法阵会阻止其他对你施法想靠近你的人。当你需要离开，下面我会告诉你关于一些 #安全交易 的事.");
 				addReply("安全交易", "要和另一个玩家交易时，鼠标右键点击他，选择交易 '交易'. 如果他们也想与你交易，你会看到一个弹出窗口，你可以把需要交易的物品拖进里面。也能看到对方给你的东西。双方点击“出价” ，这时需要你们双方同意后交易完成。");
-				addJob("我是 Semos 镇银行的客服经理.");
+				addJob("我是 塞门镇银行的客服经理.");
 				addOffer("如果你希望单独访问你的个人仓库，我能给你一个 #私人仓库 . 里面的指南手册会解释它是如何工作的。");
 				addGoodbye("很荣幸人您服务.");
 				add(ConversationStates.ANY, "私人仓库", new QuestCompletedCondition("armor_dagobert"), ConversationStates.IDLE, null,

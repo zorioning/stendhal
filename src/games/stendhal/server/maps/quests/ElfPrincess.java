@@ -59,7 +59,7 @@ import games.stendhal.server.maps.Region;
  * PARTICIPANTS:
  * <ul>
  * <li>Tywysoga, the Elf Princess in Nalwor Tower</li>
- * <li>Rose Leigh, the wandering flower seller.</li>
+ * <li>罗斯莉, the wandering flower seller.</li>
  * </ul>
  *
  * STEPS:
@@ -102,7 +102,7 @@ public class ElfPrincess extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new OrCondition(new QuestNotStartedCondition(QUEST_SLOT), new QuestInStateCondition(QUEST_SLOT, 0, "rejected")),
 			ConversationStates.QUEST_OFFERED,
-			"Will you find the wandering flower seller, Rose Leigh, and get from her my favourite flower, the Rhosyd?",
+			"Will you find the wandering flower seller, 罗斯莉, and get from her my favourite flower, the Rhosyd?",
 			null);
 
         // shouldn't happen: is a repeatable quest
@@ -116,14 +116,14 @@ public class ElfPrincess extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestInStateCondition(QUEST_SLOT, 0, "flower_brought"),
 			ConversationStates.QUEST_OFFERED,
-			"The last Rhosyd you brought me was so lovely. Will you find me another from Rose Leigh?",
+			"The last Rhosyd you brought me was so lovely. Will you find me another from 罗斯莉?",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new OrCondition(new QuestInStateCondition(QUEST_SLOT, 0, "start"), new QuestInStateCondition(QUEST_SLOT, 0, "got_flower")),
 			ConversationStates.ATTENDING,
-			"I do so love those pretty flowers from Rose Leigh ...",
+			"I do so love those pretty flowers from 罗斯莉 ...",
 			null);
 
 		// Player agrees to collect flower
@@ -143,7 +143,7 @@ public class ElfPrincess extends AbstractQuest {
 	}
 
 	private void getFlowerStep() {
-		final SpeakerNPC rose = npcs.get("Rose Leigh");
+		final SpeakerNPC rose = npcs.get("罗斯莉");
 
         // give the flower if it's at least 5 minutes since the flower was last given, and set the time slot again
 		rose.add(ConversationStates.IDLE,
@@ -247,7 +247,7 @@ public class ElfPrincess extends AbstractQuest {
 				// goldbars.setBoundTo(player.getName()); <- not sure
 				// if these should get bound or not.
 				player.equipOrPutOnGround(goldbars);
-				npc.say("Thank you! Take these " + Integer.toString(goldamount) + " gold bars, I have plenty. And, listen: If you'd ever like to get me another, be sure to ask me first. Rose Leigh is superstitious, she won't give the bloom unless she senses you need it.");
+				npc.say("Thank you! Take these " + Integer.toString(goldamount) + " gold bars, I have plenty. And, listen: If you'd ever like to get me another, be sure to ask me first. 罗斯莉 is superstitious, she won't give the bloom unless she senses you need it.");
 			}
 		};
 		npc.add(ConversationStates.ATTENDING,
@@ -265,7 +265,7 @@ public class ElfPrincess extends AbstractQuest {
 			Arrays.asList("flower", "Rhosyd"),
 			new NotCondition(new PlayerHasItemWithHimCondition("rhosyd")),
 			ConversationStates.ATTENDING,
-			"You don't seem to have a rhosyd bloom with you. But Rose Leigh wanders all over the island, I'm sure you'll find her one day!",
+			"You don't seem to have a rhosyd bloom with you. But 罗斯莉 wanders all over the island, I'm sure you'll find her one day!",
 			null);
 
 	}
@@ -296,10 +296,10 @@ public class ElfPrincess extends AbstractQuest {
 			res.add("The Elf Princess asked for a pretty flower, but I can't be bothered with that. I'm gonna kill some orcs!");
 		}
 		if ("start".equals(questState) || "got_flower".equals(questState) || isCompleted(player)) {
-			res.add("The Princess requested I find the wandering flower seller Rose Leigh to get a precious rhosyd from her.");
+			res.add("The Princess requested I find the wandering flower seller 罗斯莉 to get a precious rhosyd from her.");
 		}
 		if ("got_flower".equals(questState) || isCompleted(player)) {
-			res.add("I found Rose Leigh and got the flower to take Princess Tywysoga.");
+			res.add("I found 罗斯莉 and got the flower to take Princess Tywysoga.");
 		}
         if (isRepeatable(player)) {
             res.add("I took the flower to the Princess and she gave me gold bars. If I want to make her happy again, I can ask her for another task.");

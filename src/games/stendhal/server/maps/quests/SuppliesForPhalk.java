@@ -50,7 +50,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Phalk, the dwarf guarding Semos mines</li>
+ * <li>Phalk, the dwarf guarding 塞门镇矿山</li>
  * <li>Wrvil, a kobold weapon trader in Wo'fol</li>
  * <li>Mrotho, in Ados barracks</li>
  * </ul>
@@ -443,7 +443,7 @@ import games.stendhal.server.maps.Region;
 	public void addToWorld() {
 		fillQuestInfo(
 				"Supplies for Phalk",
-				"Phalk, the dwarvish guard in Semos Mine, is in need of supplies.",
+				"Phalk, the dwarvish guard in 塞门镇 Mine, is in need of supplies.",
 				false);
 		askForFood();
 		receiveFood();
@@ -459,7 +459,7 @@ import games.stendhal.server.maps.Region;
 				return res;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
-			res.add("I spoke with Phalk, who guards a passage in Semos Mines.");
+			res.add("I spoke with Phalk, who guards a passage in 塞门镇矿山.");
 			res.add("Phalk asked me to bring him 3 sandwiches, 3 bottles of beer and 3 glasses of wine.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help Phalk.");

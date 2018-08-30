@@ -184,7 +184,7 @@ public class StendhalQuestSystem {
 			loadQuest(new EasterGiftsForChildren());
 		}
 		if (System.getProperty("stendhal.minetown") != null) {
-			loadQuest(new PaperChase()); // needs to be loaded before SemosMineTownRevivalWeeks
+			loadQuest(new PaperChase()); // needs to be loaded before 塞门镇MineTownRevivalWeeks
 			loadQuest(new MineTownRevivalWeeks());
 		}
 

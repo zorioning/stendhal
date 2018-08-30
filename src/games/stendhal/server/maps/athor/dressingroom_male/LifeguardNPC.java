@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.OutfitChangerBehaviour;
 import games.stendhal.server.entity.npc.behaviour.impl.ProducerBehaviour;
 
 /**
- * Dressing rooms at the Athor island beach (Inside / Level 0).
+ * Dressing rooms at the 阿托尔岛 beach (Inside / Level 0).
  *
  * @author daniel
  */
@@ -81,7 +81,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 						Arrays.asList("suntan", "cream", "suntan cream"),
 				"Pam's and mine suntan cream is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special suntan cream for you.");
 
-				addReply("arandula", "Arandula is a herb which is growing around Semos.");
+				addReply("arandula", "Arandula is a herb which is growing around 塞门镇.");
 
 				addReply(
 						"kokuda",

@@ -105,7 +105,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 						"bake", "bread", requiredResources, 10 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				"欢迎来到 Semos 镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包。");
+				"欢迎来到 塞门镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包。");
 
 				addOffer("我们的 pizza 外卖团队可以 #借 一些厨师制服给你.");
 

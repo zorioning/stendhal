@@ -53,10 +53,10 @@ public class FoodSellerNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("We just got fresh apples and carrots from several #farms near Semos!");
-				addReply(Arrays.asList("Semos Farm", "Semos", "Farm", "farms"), "We get all our food from different farms near Semos, but the route is #dangerous.");
-				addReply(Arrays.asList("dangerous", "expensive"), "With all the soldiers fighting in the great battle, the route to Semos is left unprotected. So I am afraid, the prices are relatively high.");
-				addJob("I sell goods from the #farms near Semos as soon as we get them.");
+				addGreeting("We just got fresh apples and carrots from several #farms near 塞门镇!");
+				addReply(Arrays.asList("塞门镇 Farm", "塞门镇", "Farm", "farms"), "We get all our food from different farms near 塞门镇, but the route is #dangerous.");
+				addReply(Arrays.asList("dangerous", "expensive"), "With all the soldiers fighting in the great battle, the route to 塞门镇 is left unprotected. So I am afraid, the prices are relatively high.");
+				addJob("I sell goods from the #farms near 塞门镇 as soon as we get them.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("adosfoodseller")));
 				addGoodbye();
 			}

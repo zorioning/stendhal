@@ -45,7 +45,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">The gate is locked.</parameter>
+        <parameter name="message">门上锁了</parameter>
       </implementation>
 	</entity>    
 
@@ -54,7 +54,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">The gate is locked.</parameter>
+        <parameter name="message">门上锁了</parameter>
       </implementation>
 	</entity>    
 
@@ -164,7 +164,7 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
     <entity x="21" y="72">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
+      <attribute name="description">这是一张优雅且干净的餐桌</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">1</attribute>
     </entity>
@@ -172,7 +172,7 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
     <entity x="27" y="72">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
+      <attribute name="description">这是一张优雅且干净的餐桌</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">1</attribute>
     </entity>
@@ -180,7 +180,7 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
     <entity x="21" y="77">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
+      <attribute name="description">这是一张优雅且干净的餐桌</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">1</attribute>
     </entity>
@@ -188,7 +188,7 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
     <entity x="27" y="77">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
+      <attribute name="description">这是一张优雅且干净的餐桌</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">1</attribute>
     </entity>
@@ -196,7 +196,7 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
     <entity x="33" y="69">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
+      <attribute name="description">这是一张优雅且干净的餐桌</attribute>
       <attribute name="width">4</attribute>
       <attribute name="height">1</attribute>
     </entity>
@@ -205,112 +205,112 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
     <entity x="2" y="62">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="7" y="62">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="11" y="69">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="2" y="74">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="11" y="75">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="3" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="11" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="21" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="24" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="27" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="30" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="21" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="24" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="27" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="30" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="35" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
@@ -451,7 +451,7 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
       <attribute name="text">
 SOUP RECIPE
 
-carrot, salad (From Semos)
+carrot, salad (From 塞门镇)
 onion, cauliflower, broccoli, leek, spinach, courgette (From Fado)
 collard (special exotic type of cabbage - hard to find. often grows indoors)
       </attribute>
@@ -600,7 +600,7 @@ where panning for gold is possible. this spot is south of Or'ril castle.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">The gate is locked.</parameter>
+        <parameter name="message">门上锁了</parameter>
       </implementation>
 	</entity>
   </zone>
@@ -942,27 +942,27 @@ For example say:  11  if you want the room called Water of Love.
     <entity x="7" y="3">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="18" y="14">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="7" y="17">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
     </entity>
 
     <entity x="18" y="17">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
     </entity>
 
   </zone>
@@ -1922,14 +1922,14 @@ Today I used an orb in the witch Jynath's house and arrived in a city of witches
     <entity x="10" y="21">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="25" y="21">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table for setting food and drinks on.</attribute>
+      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
@@ -2276,7 +2276,7 @@ Today I used an orb in the witch Jynath's house and arrived in a city of witches
 List of felons to bar from entry:
 Conual
 Bario
-Nomyr Ahba
+诺姆安巴
 Sister Benedicta
       </attribute>
       <attribute name="class">book_red</attribute>

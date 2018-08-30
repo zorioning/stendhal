@@ -138,7 +138,7 @@ import games.stendhal.server.maps.Region;
     	npc.add(ConversationStates.ATTENDING, "potion",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 			    ConversationStates.ATTENDING, "I will help you make this potion, Mrs Yeti is an old friend of mine. But the blade on "
-				+ "my magic knife has snapped yet again. I need another. I get mine from Hackim Easso of Semos City, will you go to him and "
+				+ "my magic knife has snapped yet again. I need another. I get mine from Hackim Easso of 塞门镇, will you go to him and "
 				+ "ask him to make another knife? Just say my name: #salva",
 				new SetQuestAction(QUEST_SLOT, "hackim"));
 
@@ -207,7 +207,7 @@ import games.stendhal.server.maps.Region;
 				new PlayerHasItemWithHimCondition("pie",5)),
 				ConversationStates.ATTENDING, "Ah, thank you very much! Now I will tell you a little secret of mine. I am not a blacksmith, "
 				+ "only an assistant. I can't make knives at all! But I sell Salva a normal knife and is happy enough with that! So just take her "
-				+ "a plain knife like you could buy from Xin Blanca in Semos Tavern. I'll tell her I made it! Oh and thanks for the pies!!!",
+				+ "a plain knife like you could buy from Xin Blanca in 塞门镇 Tavern. I'll tell her I made it! Oh and thanks for the pies!!!",
 				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "knife", 1.0), new DropItemAction("pie",5)));
 
 	    npc.add(ConversationStates.ATTENDING, Arrays.asList("salva", "pies"),
@@ -269,7 +269,7 @@ import games.stendhal.server.maps.Region;
 							 new NotCondition(new PlayerHasPetOrSheepCondition())),
 			ConversationStates.ATTENDING,
 			"You can get a baby dragon only if you have a mythical egg. Those, you must get from Morgrin at the wizard school. "
-			+ "Then Terry in Semos caves will hatch it.",
+			+ "Then Terry in 塞门洞穴 will hatch it.",
 			null);
 
 		// if they have any pet or sheep, then check if it's a baby dragon
@@ -357,7 +357,7 @@ import games.stendhal.server.maps.Region;
 				return res;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
-			res.add("I met Mrs. Yeti in icy caves below Semos Mountain.");
+			res.add("I met Mrs. Yeti in icy caves below 塞门镇 Mountain.");
 			res.add("Mrs. Yeti asked me to go to Salva Mattori for a special love potion for her husband.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help with soppy love stories..");

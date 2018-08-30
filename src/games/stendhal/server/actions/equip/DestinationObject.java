@@ -257,7 +257,7 @@ class DestinationObject extends MoveableObject {
 	 *
 	 * @param entity the item
 	 * @param player the player to get the zone from
-	 * @return <code>true</code> if the if zone is Semos tavern and entity is
+	 * @return <code>true</code> if the if zone is 塞门镇 tavern and entity is
 	 * 	dice
 	 */
 	private boolean isGamblingZoneAndIsDice(final Entity entity, final Player player) {

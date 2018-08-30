@@ -163,13 +163,13 @@ public class HerbsForJynath extends AbstractQuest {
 
         // created conditions and actions for the player having all the necessary items
         // purpose: to clean up the code
-        AndCondition playerHasAllCondition = new AndCondition(new PlayerHasItemWithHimCondition("beer", 2), new PlayerHasItemWithHimCondition("wood", 2));
+        AndCondition playerHasAllCondition = new AndCondition(new PlayerHasItemWithHimCondition("beer", 2), new PlayerHasItemWithHimCondition("木头", 2));
         AndCondition playerIsInQuestCondition = new AndCondition(new QuestActiveCondition(QUEST_SLOT), new QuestNotCompletedCondition(QUEST_SLOT));
 
     	// create the reward that is given to player for winning
     	List<ChatAction> rewardActions = new LinkedList<ChatAction>();
         rewardActions.add(new DropItemAction("beer", 2));
-        rewardActions.add(new DropItemAction("wood", 2));
+        rewardActions.add(new DropItemAction("木头", 2));
         rewardActions.add(new EquipItemAction("money", 1234));
         rewardActions.add(new IncreaseXPAction(1234));
         rewardActions.add(new IncreaseKarmaAction(10));

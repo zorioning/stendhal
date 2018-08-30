@@ -30,7 +30,7 @@ import games.stendhal.server.util.TimeUtil;
  * <li>Jackie - brings players from the ferry to the docks. Captain - the ship
  * captain.
  * <li>Laura - the ship galley maid.
- * <li>Ramon - offers blackjack on the ship.
+ * <li>Ramon - offers 二十一点 on the ship.
  *
  * @see games.stendhal.server.maps.athor.ship.CaptainNPC
  * @author daniel

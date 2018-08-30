@@ -510,7 +510,7 @@ public class SadScientist extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.QUEST_STARTED,
-				"我妻子住在 Semos 城. 她喜爱宝石. 你能给我带些宝石 #gems 吗?" +
+				"我妻子住在 塞门镇 城. 她喜爱宝石. 你能给我带些宝石 #gems 吗?" +
 				",我要做一件特别的腿 #legs?" ,
 				null);
 
@@ -537,7 +537,7 @@ public class SadScientist extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"我等着你, Semos 来的." ,
+				"我等着你, 塞门镇 来的." ,
 				new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS));
 
 		npc.add(ConversationStates.QUEST_STARTED,

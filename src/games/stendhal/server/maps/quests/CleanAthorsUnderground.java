@@ -47,12 +47,12 @@ import marauroa.common.Pair;
  * QUEST: Clean Athors underground
  *
  * PARTICIPANTS: <ul>
- * <li> NPC on Athor island
+ * <li> NPC on 阿托尔岛
  * <li> one of each creature in Athor underground
  * </ul>
  *
  * STEPS:<ul>
- * <li> John on Athor island asks players to kill some creatures of the dungeon for him, cause he can't explore it otherwise
+ * <li> John on 阿托尔岛 asks players to kill some creatures of the dungeon for him, cause he can't explore it otherwise
  * <li> Kill them for him and go back to the NPC to get your reward
  * </ul>
  *
@@ -88,7 +88,7 @@ public class CleanAthorsUnderground extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"My wife Jane and me are on vacation here on Athor island. #Unfortunately we can't explore the whole island because some ugly #creatures step in our way each time. Can you help us by killing some of them to turn our vacation into a good one?",
+				"My wife Jane and me are on vacation here on 阿托尔岛. #Unfortunately we can't explore the whole island because some ugly #creatures step in our way each time. Can you help us by killing some of them to turn our vacation into a good one?",
 				null);
 
 		npc.add(
@@ -147,7 +147,7 @@ public class CleanAthorsUnderground extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Fantastic! We can't wait for your return. Please kill one of each creature you can find in the underground of Athor island. I bet you'll get them all!",
+				"Fantastic! We can't wait for your return. Please kill one of each creature you can find in the underground of 阿托尔岛. I bet you'll get them all!",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -218,7 +218,7 @@ public class CleanAthorsUnderground extends AbstractQuest {
 			if (!isCompleted(player)) {
 				res.add("I must kill one of each creature of the Athor underground to help John and Jane have a nice vacation!");
 			} else if(isRepeatable(player)){
-				res.add("It's a long time ago that I visited John and Jane on Athor island. Maybe they need my help again now.");
+				res.add("It's a long time ago that I visited John and Jane on 阿托尔岛. Maybe they need my help again now.");
 			} else {
 				res.add("I've killed some creatures and John and Jane can finally enjoy their vacation! They will not need my help again during the next days.");
 			}

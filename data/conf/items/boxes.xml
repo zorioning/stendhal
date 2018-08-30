@@ -20,7 +20,7 @@
   <item name="篮子">
     <type class="box" subclass="basket" tileid="-1"/>
     <description>这是一个复活节篮子，看看里面有什么吧。</description>
-    <implementation class-name="games.stendhal.server.entity.item.basket"/>
+    <implementation class-name="games.stendhal.server.entity.item.Basket"/>
     <attributes>
     </attributes>
     <weight value="0.01"/>

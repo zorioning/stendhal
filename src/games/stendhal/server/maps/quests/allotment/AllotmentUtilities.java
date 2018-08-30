@@ -374,7 +374,7 @@ public class AllotmentUtilities implements TurnListener {
 							if (allotment.has("name") && name.equals(allotment.getName())) {
 								for (Player player : getPlayers(zoneName)) {
 									if (player.getArea().intersects(allotment.getArea())) {
-										player.sendPrivateText("你的租房到期时间还有 " + WARN_TIME + " 分钟。恭请您完成并以有序的方式退出。 亲切的问候，Semos Allotment Rentals员工。");
+										player.sendPrivateText("你的租房到期时间还有 " + WARN_TIME + " 分钟。恭请您完成并以有序的方式退出。 亲切的问候，塞门镇 Allotment Rentals员工。");
 									}
 
 									if (player.getName().equals(tracker.getPlayerName())) {

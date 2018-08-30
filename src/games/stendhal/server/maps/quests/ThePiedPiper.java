@@ -35,7 +35,7 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
  * QUEST: The Pied Piper
  *
  * PARTICIPANTS: <ul>
- * <li> Mayor Chalmers
+ * <li> 查玛斯市长
  * <li> George
  * <li> Anna
  * <li> Jens
@@ -46,7 +46,7 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
  *
  * STEPS:<ul>
  * <li> PART I.
- * <li> Mayor will activate the quest by telling to all about Ados city rats problem.
+ * <li> Mayor will activate the quest by telling to all about 阿多斯城 rats problem.
  * <li> Kill (all) rats in city and go back to mayor for your reward.
  * </ul>
  *
@@ -237,10 +237,10 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
 		}
 		final String questState = player.getQuest(QUEST_SLOT, 0);
 		if ("rats".equals(questState)) {
-			history.add("I have killed some rats in Ados city already, and am trying to kill more.");
+			history.add("I have killed some rats in 阿多斯城 already, and am trying to kill more.");
 		}
 		if ("done".equals(questState)) {
-			history.add("I have killed some rats in Ados city and got a reward from Mayor Chalmers!");
+			history.add("I have killed some rats in 阿多斯城 and got a reward from 查玛斯市长!");
 		}
 		return history;
  	}
@@ -255,7 +255,7 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
 		questTimer = new QuestTimer();
 		fillQuestInfo(
 				"The Pied Piper",
-				"Ados City has a rat problem from time to time.",
+				"阿多斯城 has a rat problem from time to time.",
 				true);
 
 		startQuest();

@@ -44,7 +44,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Caroline who is working in her tavern in Ados city</li>
+ * <li>Caroline who is working in her tavern in 阿多斯城</li>
  * </ul>
  *
  * STEPS:
@@ -57,7 +57,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li>100 XP</li>
- * <li>5 Ados city scrolls</li>
+ * <li>5 阿多斯城 scrolls</li>
  * <li>2 home scrolls</li>
  * <li>Karma: 50</li>
  * </ul>
@@ -212,7 +212,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		reward.add(new DropItemAction("small easter egg", 1));
 		reward.add(new DropItemAction("apple", 5));
 		reward.add(new DropItemAction("cherry",5));
-		reward.add(new EquipItemAction("ados city scroll", 5));
+		reward.add(new EquipItemAction("阿多斯城回城卷", 5));
 		reward.add(new EquipItemAction("home scroll", 2));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -249,7 +249,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Easter Gifts For Children",
-				"Caroline, the nice tavern owner in Ados city, wants to make some children happy during Easter holidays.",
+				"Caroline, the nice tavern owner in 阿多斯城, wants to make some children happy during Easter holidays.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();

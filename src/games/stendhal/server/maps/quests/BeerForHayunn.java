@@ -38,18 +38,18 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Beer For Hayunn
+ * QUEST: Beer For 海云那冉
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Hayunn Naratha (the veteran warrior in Semos)</li>
+ * <li>海云那冉 (the veteran warrior in 塞门镇)</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Hayunn asks you to buy a beer from Margaret.</li>
+ * <li>海云那冉 asks you to buy a beer from Margaret.</li>
  * <li>Margaret sells you a beer.</li>
- * <li>Hayunn sees your beer, asks for it and then thanks you.</li>
+ * <li>海云那冉 sees your beer, asks for it and then thanks you.</li>
  * </ul>
  *
  * REWARD:
@@ -76,42 +76,42 @@ public class BeerForHayunn extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have talked to Hayunn.");
+		res.add("我和 海云那冉 谈了些话。");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("I do not want to make Hayunn drunk.");
+			res.add("我不想让 海云那冉 喝多drunk.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("I promised to buy him a beer from Margaret in Semos Tavern.");
+			res.add("我答应海云那冉，从塞门镇 酒店的 Margaret 处买瓶啤酒给他.");
 		}
 		if ("start".equals(questState) && player.isEquipped("beer")
 				|| "done".equals(questState)) {
-			res.add("I have a bottle of beer.");
+			res.add("我有一瓶啤酒。");
 		}
 		if ("done".equals(questState)) {
-			res.add("I gave the beer to Hayunn. He paid me 20 gold coins and I got some experience.");
+			res.add("我把啤酒给了 海云那冉。他付给我20金币，我还增加了一些经验。");
 		}
 		return res;
 	}
 
 	private void prepareRequestingStep() {
-		final SpeakerNPC npc = npcs.get("Hayunn Naratha");
+		final SpeakerNPC npc = npcs.get("海云那冉");
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			// Don't give the task until the previous is completed to avoid
-			// confusing Hayunn in a lot of places later.
+			// confusing 海云那冉 in a lot of places later.
 			new AndCondition(new QuestNotCompletedCondition(QUEST_SLOT),
 					new QuestCompletedCondition(OTHER_QUEST_SLOT)),
 			ConversationStates.QUEST_OFFERED,
-			"My mouth is dry, but I can't be seen to abandon this teaching room! Could you bring me some #beer from the #tavern?",
+			"我口快渴死了，但我不能斿离开这间教育半步！你能去 #酒店 带点 #啤酒 给我吗?",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Thanks all the same, but I don't want to get too heavily into drinking; I'm still on duty, you know! I'll need my wits about me if a student shows up...",
+			"还是谢谢你，但我不想喝太多；你要明白，我还是有责任感的！如果有学生出现，我还要保持师德...",
 			null);
 
 		npc.add(
@@ -119,7 +119,7 @@ public class BeerForHayunn extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Thanks! I'll be right here, waiting. And guarding, of course.",
+			"谢谢！我保证在这等着，绝对。",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		npc.add(
@@ -127,23 +127,23 @@ public class BeerForHayunn extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Oh, well forget it then. I guess I'll just hope for it to start raining, and then stand with my mouth open.",
+			"Oh, 就当我没说，我现在只希望下场雨，然后我张大嘴接点。",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			"tavern",
+			"酒店",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"If you don't know where the inn is, you could ask old Monogenes; he's good with directions. Are you going to help?",
+			"如果你不知酒店在哪儿，如可以问问老 Monogenes; 他是个不错的向导。你要去问问吗？",
 			null);
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			"beer",
+			"啤酒",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"A bottle of cool beer from #Margaret will be more than enough. So, will you do it?",
+			"#Margaret 卖的冰镇啤酒就够了，怎么样，你愿意去吗？",
 			null);
 
 		npc.add(
@@ -151,30 +151,30 @@ public class BeerForHayunn extends AbstractQuest {
 			"Margaret",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"Margaret is the pretty maid in the tavern, of course! Quite a looker, too... heh. Will you go for me?",
+			"Margaret 是酒店的可爱妹纸，当然也非常漂亮！哈哈，你是不是要去看看？顺便买点啤酒。",
 			null);
 	}
 
 	private void prepareBringingStep() {
-		final SpeakerNPC npc = npcs.get("Hayunn Naratha");
+		final SpeakerNPC npc = npcs.get("海云那冉");
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestActiveCondition(QUEST_SLOT),
-					new PlayerHasItemWithHimCondition("beer")),
+					new PlayerHasItemWithHimCondition("啤酒")),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Hey! Is that beer for me?", null);
+			"嗨！这是给我的酒吗？", null);
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestActiveCondition(QUEST_SLOT),
 					new NotCondition(new PlayerHasItemWithHimCondition("beer"))),
 			ConversationStates.ATTENDING,
-			"Hey, I'm still waiting for that beer, remember? Anyway, what can I do for you?",
+			"嗨，我还在等着啤酒呢，没忘吧？还有，有什么需要我帮助的？",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("beer"));
+		reward.add(new DropItemAction("啤酒"));
 		reward.add(new EquipItemAction("money", 20));
 		reward.add(new IncreaseXPAction(50));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -182,9 +182,9 @@ public class BeerForHayunn extends AbstractQuest {
 		npc.add(
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new PlayerHasItemWithHimCondition("beer"),
+			new PlayerHasItemWithHimCondition("啤酒"),
 			ConversationStates.ATTENDING,
-			"*glug glug* Ah! That hit the spot. Let me know if you need anything, ok?",
+			"*glug glug* 咕嘟，咕嘟，啊！正合我意。如果你需要什么尽管说，ok?",
 			new MultipleActions(reward));
 
 		npc.add(
@@ -192,15 +192,15 @@ public class BeerForHayunn extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Drat! You remembered that I asked you for one, right? I could really use it right now.",
+			"该死！要记着你的保证，对吧？现在我真的急需!",
 			null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Beer for Hayunn",
-				"Hayunn Naratha, the great warrior in Semos Guard House, wants a beer.",
+				"海云那冉 的啤酒",
+				"海云那冉,守卫屋的很棒的勇士，他想喝点啤酒",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -218,7 +218,7 @@ public class BeerForHayunn extends AbstractQuest {
 
 	public String getTitle() {
 
-		return "Beer for Hayunn";
+		return "海云那冉的啤酒";
 	}
 
 	@Override
@@ -233,6 +233,6 @@ public class BeerForHayunn extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Hayunn Naratha";
+		return "海云那冉";
 	}
 }

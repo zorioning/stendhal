@@ -35,7 +35,7 @@ import games.stendhal.server.entity.npc.condition.PlayerHasItemWithHimCondition;
 
 /*
  * Food and drink seller,  Inside Semos Tavern - Level 0 (ground floor)
- * Sells the flask required for Tad's quest IntroducePlayers
+ * Sells the flask required for 泰德's quest IntroducePlayers
  */
 public class BarMaidNPC implements ZoneConfigurator {
 	private final ShopList shops = SingletonRepository.getShopList();
@@ -67,7 +67,7 @@ public class BarMaidNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addReply("flask", "如果你想买一个烧瓶，请对我说: #buy #flask. 或者你还可以问我买其它的东西 #offer.");
+				addReply("瓶子", "如果你想买一个烧瓶，请对我说: #buy #瓶子. 或者你还可以问我买其它的东西 #offer.");
 				addQuest("Oh 很高兴为你服务，但很不幸，我帮不了你.");
 				addJob("这是这个正规洒吧的坐台小姐姐，你想要一些 #buy 国产或进口的啤酒, 还有好吃的小吃.");
 				addHelp("本酒吧为客人提供住宿和餐饮服务！需要点什么酒水饮料请对我说 #offer .");

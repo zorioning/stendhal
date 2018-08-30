@@ -41,7 +41,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Monogenes, an old man in Semos city.</li>
+ * <li>Monogenes, an old man in 塞门镇.</li>
  * </ul>
  *
  * STEPS:
@@ -71,7 +71,7 @@ public class HatForMonogenes extends AbstractQuest {
 	public List<String> getHistory(final Player player) {
 		final List<String> res = new ArrayList<String>();
 		if (player.hasQuest(QUEST_SLOT)) {
-			res.add("I have met Monogenes at the spring in Semos village");
+			res.add("I have met Monogenes at the spring in 塞门镇 village");
 		}
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
@@ -95,7 +95,7 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"Could you bring me a #hat to cover my bald head? Brrrrr! The days here in Semos are really getting colder...",
+			"Could you bring me a #hat to cover my bald head? Brrrrr! The days here in 塞门镇 are really getting colder...",
 			null);
 
 		monogenes.add(ConversationStates.ATTENDING,

@@ -130,7 +130,7 @@ public class RandomDestinationPortal extends QuestCompletedPortal {
 		locations.add(new Location("int_ados_haunted_house", 25, 4, 27));	// haunted house
 		locations.add(new Location("-2_orril_dungeon", 25, 106, 21));		// rat dungeon
 		locations.add(new Location("-1_semos_mine_nw", 30, 22, 75));		// kobold city
-		locations.add(new Location("0_athor_island", 30, 77, 73));          // athor island
+		locations.add(new Location("0_athor_island", 30, 77, 73));          // 阿托尔岛
         locations.add(new Location("-1_ados_wall", 30, 91, 62));			// ados sewers
         locations.add(new Location("-2_kotoch_entrance", 30, 20, 111));     // orc dungeons
         locations.add(new Location("0_nalwor_city", 60, 88, 85));           // nalwor city
@@ -147,7 +147,7 @@ public class RandomDestinationPortal extends QuestCompletedPortal {
 		locations.add(new Location("int_kalavan_castle_basement", 150, 30,103)); // kalavan castle
 		locations.add(new Location("int_oni_palace_1", 150, 28, 28));		// oni palace
 		locations.add(new Location("-4_ados_abandoned_keep", 150, 11, 27));	// -4 abandoned keep
-		locations.add(new Location("-2_semos_mine_w2", 150, 22, 39));		// balrog semos mines
+		locations.add(new Location("-2_semos_mine_w2", 150, 22, 39));		// balrog 塞门镇矿山
 		locations.add(new Location("-1_nalwor_drows_tunnel_n", 170, 58, 44)); // nalwor drow tunnel (main)
 		locations.add(new Location("-6_ados_abandoned_keep", 170, 15, 19));	// -6 ados abandoned keep
 		locations.add(new Location("int_mithrilbourgh_stores", 170, 6, 5));	// mithrilbourgh stores

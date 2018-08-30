@@ -42,7 +42,7 @@ public class MakeupArtist implements LoadableContent {
 	public void addToWorld() {
 		removeNPC("Fidorea");
 
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		new MakeupArtistNPC().buildFidorea(zone, 72, 103);
 		PaperChase paperChase = (PaperChase) StendhalQuestSystem.get().getQuest("PaperChase");
 		if (paperChase != null) {

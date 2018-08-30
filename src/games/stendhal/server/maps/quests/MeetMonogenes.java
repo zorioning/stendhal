@@ -51,7 +51,7 @@ public class MeetMonogenes extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Meet Monogenes",
-				"A wise old man in Semos has a map to guide newcomers through the town.",
+				"A wise old man in 塞门镇 has a map to guide newcomers through the town.",
 				false);
 		final SpeakerNPC npc = npcs.get("Monogenes");
 
@@ -77,7 +77,7 @@ public class MeetMonogenes extends AbstractQuest {
 			ConversationPhrases.HELP_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_1,
-			"I can offer you a few tips on socializing with the residents of Semos, if you like?",
+			"I can offer you a few tips on socializing with the residents of 塞门镇, if you like?",
 			null);
 
 		npc.add(
@@ -89,7 +89,7 @@ public class MeetMonogenes extends AbstractQuest {
 			"to the topics they bring up; suitable subjects will be highlighted #'like this'. A few " +
 			"generally safe topics of conversation are the person's #job, asking for #help, asking if " +
 			"they have an #offer to make, and asking for a #quest to go on. Now, if you want a quick " +
-			"run-down of the #buildings in Semos, just say.",
+			"run-down of the #buildings in 塞门镇, just say.",
 			null);
 
 		npc.add(
@@ -97,7 +97,7 @@ public class MeetMonogenes extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"And how are you supposed to know what's happening? By reading the Semos Tribune? Hah! Bye, then.",
+			"And how are you supposed to know what's happening? By reading the 塞门镇 Tribune? Hah! Bye, then.",
 			null);
 
 		final List<String> yesnotriggers = new ArrayList<String>();
@@ -126,14 +126,14 @@ public class MeetMonogenes extends AbstractQuest {
 			"map", null, ConversationStates.ATTENDING,
 			"I have marked the following locations on my map:\n"
 			+ "1 Townhall, Mayor lives here,   2 Library,   3 Bank,   4 Bakery,\n"
-			+ "5 Storage,   6 Blacksmith, Carmen,   7 Inn, Margaret \n"
+			+ "5 Storage,   6 Blacksmith, 卡蔓,   7 Inn, Margaret \n"
         	+ "8 Temple, Ilisa,   9 Dangerous Dungeon,\n"
         	+ "10 Public Chest, \n"
-        	+ "A Semos Village,   B Northern Plains and Mine, \n"
+        	+ "A 塞门镇 Village,   B Northern Plains and Mine, \n"
         	+ "C Very long path to Ados, \n"
         	+ "D Southern Plains and Nalwor Forest, \n"
-        	+ "E Semos Village Open Field",
-        	new ExamineChatAction("map-semos-city.png", "Semos City", "Map of Semos City"));
+        	+ "E 塞门镇 Village Open Field",
+        	new ExamineChatAction("map-semos-city.png", "塞门镇", "Map of 塞门镇"));
 
 		npc.addReply(
 			"bank",
@@ -164,7 +164,7 @@ public class MeetMonogenes extends AbstractQuest {
 
 		npc.addReply(
 			"village",
-			"Just keep heading southwest, past the #blacksmith, and you will shortly come to the old Semos village. Nishiya still sells sheep there.");
+			"Just keep heading southwest, past the #blacksmith, and you will shortly come to the old 塞门镇 village. 尼世亚 still sells sheep there.");
 
 
 		/** Give the reward to the polite newcomer user */

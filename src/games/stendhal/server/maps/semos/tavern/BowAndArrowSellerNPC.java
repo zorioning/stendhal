@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.SellerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /*
- * Inside Semos Tavern - Level 1 (upstairs)
+ * Inside 塞门镇 Tavern - Level 1 (upstairs)
  */
 public class BowAndArrowSellerNPC implements ZoneConfigurator {
 	private final ShopList shops = SingletonRepository.getShopList();
@@ -44,7 +44,7 @@ public class BowAndArrowSellerNPC implements ZoneConfigurator {
 	}
 
 	private void buildOuchit(final StendhalRPZone zone) {
-		final SpeakerNPC ouchit = new SpeakerNPC("Ouchit") {
+		final SpeakerNPC ouchit = new SpeakerNPC("奥斯特") {
 
 			@Override
 			protected void createPath() {
@@ -71,7 +71,7 @@ public class BowAndArrowSellerNPC implements ZoneConfigurator {
 		ouchit.setEntityClass("weaponsellernpc");
 		ouchit.setPosition(21, 3);
 		ouchit.initHP(100);
-		ouchit.setDescription("你遇见了 Ouchit. 他喜欢木制武器...");
+		ouchit.setDescription("你遇见了 奥斯特. 他喜欢木制武器...");
 		zone.add(ouchit);
 	}
 }

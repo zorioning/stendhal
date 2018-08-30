@@ -69,7 +69,7 @@ public class GreeterNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hello! Welcome to Fado City! You can #learn about Fado from me.");
+				addGreeting("Hello! Welcome to 法多城! You can #learn about Fado from me.");
 				addReply("learn",
 				        "Fado guards the bridge over Or'ril river which is vital for the commercial route between #Deniran and Ados. There's an active social life here, being the preferred city for celebrating marriages and tasting elaborate meals.");
 				addReply("Deniran",

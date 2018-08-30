@@ -50,15 +50,15 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Sally, a scout sitting next to a campfire near Or'ril</li>
+ * <li> 莎丽, a scout sitting next to a campfire near Or'ril</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Sally asks you for wood for her campfire</li>
+ * <li> 莎丽 asks you for wood for her campfire</li>
  * <li> You collect 10 pieces of wood in the forest</li>
- * <li> You give the wood to Sally.</li>
- * <li> Sally gives you 10 meat or ham in return.<li>
+ * <li> You give the wood to 莎丽.</li>
+ * <li> 莎丽 gives you 10 meat or ham in return.<li>
  * </ul>
  *
  * REWARD:
@@ -102,21 +102,21 @@ public class Campfire extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Sally");
+		res.add("我遇见了 莎丽");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("I do not want to help Sally");
+			res.add("我不想帮 莎丽");
 			return res;
 		}
-		res.add("I do want to help Sally");
-		if (player.isEquipped("wood", REQUIRED_WOOD) || isCompleted(player)) {
-			res.add("I have found the 10 wood needed to start the fire");
+		res.add("我不想帮 莎丽");
+		if (player.isEquipped("木头", REQUIRED_WOOD) || isCompleted(player)) {
+			res.add("我在找生火用的 10 根木头");
 		}
 		if (isCompleted(player)) {
-			res.add("I have given Sally the wood. She gave me some food in return. I also gained 50 xp");
+			res.add("我把木头给了 莎丽 ，她给我一些作物作为答谢，我还得到了 50 xp");
 		}
 		if(isRepeatable(player)){
-			res.add("Sally's fire needs some wood again.");
+			res.add("莎丽 的火又需要木材了");
 		}
 		return res;
 	}
@@ -124,24 +124,24 @@ public class Campfire extends AbstractQuest {
 
 
 	private void prepareRequestingStep() {
-		final SpeakerNPC npc = npcs.get("Sally");
+		final SpeakerNPC npc = npcs.get("莎丽");
 
 		// player returns with the promised wood
 		npc.add(ConversationStates.IDLE,
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-					new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("wood", REQUIRED_WOOD)),
+					new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("木头", REQUIRED_WOOD)),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Hi again! You've got wood, I see; do you have those 10 pieces of wood I asked about earlier?",
+			"又见面了！你弄到木头了！我看看。是不是我问你之前你就已经弄到这10根木头了？",
 			null);
 
 		//player returns without promised wood
 		npc.add(ConversationStates.IDLE,
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-					new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("wood", REQUIRED_WOOD))),
+					new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("木头", REQUIRED_WOOD))),
 			ConversationStates.ATTENDING,
-			"You're back already? Don't forget that you promised to collect ten pieces of wood for me!",
+			"又回来了？不要忘了给我找的10根木头",
 			null);
 
 		// first chat of player with sally
@@ -149,7 +149,7 @@ public class Campfire extends AbstractQuest {
 			ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestNotStartedCondition(QUEST_SLOT)),
-			ConversationStates.ATTENDING, "Hi! I need a little #favor ... ",
+			ConversationStates.ATTENDING, "嗨！我想要点 #favor ... ",
 			null);
 
 		// player who is rejected or 'done' but waiting to start again, returns
@@ -159,7 +159,7 @@ public class Campfire extends AbstractQuest {
 					new QuestNotInStateCondition(QUEST_SLOT, "start"),
 					new QuestStartedCondition(QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"Hi again!",
+			"又见面了!",
 			null);
 
 		// if they ask for quest while on it, remind them
@@ -167,7 +167,7 @@ public class Campfire extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestInStateCondition(QUEST_SLOT, "start"),
 			ConversationStates.ATTENDING,
-			"You already promised me to bring me some wood! Ten pieces, remember?",
+			"你答应给我的木头呢?10块！记住了？",
 			null);
 
 		// first time player asks/ player had rejected
@@ -175,7 +175,7 @@ public class Campfire extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I need more wood to keep my campfire running, But I can't leave it unattended to go get some! Could you please get some from the forest for me? I need ten pieces.",
+				"不能让篝火熄灭，我还需要再弄点木头, 但这会儿没人看管，我不能自已去弄！你可以去森林中取一些木头吗？10根就够了",
 				null);
 
 		// player returns - enough time has passed
@@ -183,7 +183,7 @@ public class Campfire extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, "start"), new QuestStartedCondition(QUEST_SLOT), new TimePassedCondition(QUEST_SLOT,REQUIRED_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"My campfire needs wood again! Could you please get some from the forest for me? I need ten pieces.",
+				"篝火又要加木头了！麻烦你去森林跑一趟吧？我需要10根。",
 				null);
 
 		// player returns - enough time has passed
@@ -192,14 +192,14 @@ public class Campfire extends AbstractQuest {
 				new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, "start"), new QuestStartedCondition(QUEST_SLOT), new NotCondition(new TimePassedCondition(QUEST_SLOT,REQUIRED_MINUTES))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT,REQUIRED_MINUTES,"Thanks, but I think the wood you brought already will last me"));
+				new SayTimeRemainingAction(QUEST_SLOT,REQUIRED_MINUTES,"谢谢，但我觉得你带的木头已经够用了"));
 
 		// player is willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Okay. You can find wood in the forest north of here. Come back when you get ten pieces of wood!",
+			"Okay. 你去北方的森林找些木头，找够了10根就回来吧!",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		// player is not willing to help
@@ -207,16 +207,16 @@ public class Campfire extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Oh dear, how am I going to cook all this meat? Perhaps I'll just have to feed it to the animals...",
+			"天哪！我拿什么煮这些肉？半生不熟的只能喂狗了...",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 	}
 
 	private void prepareBringingStep() {
-		final SpeakerNPC npc = npcs.get("Sally");
+		final SpeakerNPC npc = npcs.get("莎丽");
 		// player has wood and tells sally, yes, it is for her
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("wood", REQUIRED_WOOD));
+		reward.add(new DropItemAction("木头", REQUIRED_WOOD));
 		reward.add(new IncreaseXPAction(50));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT));
 		reward.add(new IncreaseKarmaAction(10));
@@ -229,7 +229,7 @@ public class Campfire extends AbstractQuest {
 				} else {
 					rewardClass = "ham";
 				}
-				npc.say("Thank you! Here, take some " + rewardClass + "!");
+				npc.say("谢谢你！这些 " + rewardClass + " 送给你了!");
 				final StackableItem reward = (StackableItem) SingletonRepository.getEntityManager().getItem(rewardClass);
 				reward.setQuantity(REQUIRED_WOOD);
 				player.equipOrPutOnGround(reward);
@@ -239,16 +239,16 @@ public class Campfire extends AbstractQuest {
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new PlayerHasItemWithHimCondition("wood", REQUIRED_WOOD),
+			new PlayerHasItemWithHimCondition("木头", REQUIRED_WOOD),
 			ConversationStates.ATTENDING, null,
 			new MultipleActions(reward));
 
 		//player said the wood was for her but has dropped it from his bag or hands
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new NotCondition(new PlayerHasItemWithHimCondition("wood", REQUIRED_WOOD)),
+			new NotCondition(new PlayerHasItemWithHimCondition("木头", REQUIRED_WOOD)),
 			ConversationStates.ATTENDING,
-			"Hey! Where did you put the wood?",
+			"嗨！你在哪找的木头？",
 			null);
 
 		// player had wood but said it is not for sally
@@ -257,7 +257,7 @@ public class Campfire extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Oh... well, I hope you find some quickly; this fire's going to burn out soon!",
+			"Oh... 好的，希望你快点给我找点，这火快不行了！",
 			null);
 	}
 
@@ -265,7 +265,7 @@ public class Campfire extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Campfire",
-				"Sally wants to build a campfire, but she doesn't have any wood.",
+				"莎丽 想做一顿野餐，但木材不太够",
 				true);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -283,7 +283,7 @@ public class Campfire extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Sally";
+		return "莎丽";
 	}
 
 	@Override

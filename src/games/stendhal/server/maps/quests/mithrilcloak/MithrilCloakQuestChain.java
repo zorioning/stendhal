@@ -22,9 +22,9 @@ package games.stendhal.server.maps.quests.mithrilcloak;
  * <li>Mithrilbourgh wizards, in kirdneh and magic city</li>
  * <li>Hogart, a retired master dwarf smith, forgotten below the dwarf mines in
  * Orril.</li>
- * <li>Terry, the dragon hatcher in semos caves.</li>
+ * <li>Terry, the dragon hatcher in 塞门洞穴.</li>
  * <li>Ritati Dragontracker, odds and ends buyer in ados abandoned keep</li>
- * <li>Pdiddi, the dodgy dealer from Semos</li>
+ * <li>Pdiddi, the dodgy dealer from 塞门镇</li>
  * <li>Josephine, young woman from Fado</li>
  * <li>Pedinghaus, the mithril casting wizard in Ados</li>
  * </ul>

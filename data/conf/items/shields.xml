@@ -389,9 +389,9 @@
     </equipable>
   </item>
   
-  <item name="wooden shield">
+  <item name="木盾">
     <type class="shield" subclass="wooden_shield" tileid="-1"/>
-    <description>You see a wooden shield. It is made of cheap wood and heavily used. However, it still seems to offer you some kind of basic protection.</description>
+    <description>You see a 木盾. It is made of cheap wood and heavily used. However, it still seems to offer you some kind of basic protection.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="10"/>

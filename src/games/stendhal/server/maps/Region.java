@@ -17,17 +17,17 @@ package games.stendhal.server.maps;
  *
  */
 public final class Region {
-	public static final String ADOS_CITY = "Ados City";
-	public static final String ADOS_SURROUNDS = "Ados Surrounds";
-	public static final String AMAZON_ISLAND = "Amazon Island";
-	public static final String ATHOR_ISLAND = "Athor Island";
-	public static final String SEMOS_CITY = "Semos City";
-	public static final String SEMOS_SURROUNDS = "Semos Surrounds";
-	public static final String SEMOS_MINES = "Semos Mines";
-	public static final String SEMOS_DUNGEONS = "Semos Dungeons";
-	public static final String SEMOS_YETI_CAVE = "Semos Yeti Cave";
-	public static final String FADO_CITY = "Fado City";
-	public static final String FADO_CAVES = "Fado Caves";
+	public static final String ADOS_CITY = "阿多斯城";
+	public static final String ADOS_SURROUNDS = "阿多斯城辖区";
+	public static final String AMAZON_ISLAND = "亚马孙岛";
+	public static final String ATHOR_ISLAND = "阿托尔岛";
+	public static final String SEMOS_CITY = "塞门镇";
+	public static final String SEMOS_SURROUNDS = "塞门辖区";
+	public static final String SEMOS_MINES = "塞门镇矿山";
+	public static final String SEMOS_DUNGEONS = "塞门地牢";
+	public static final String SEMOS_YETI_CAVE = "塞门雪人洞";
+	public static final String FADO_CITY = "法多城";
+	public static final String FADO_CAVES = "法多山洞";
 	public static final String NALWOR_CITY = "Nalwor City";
 	public static final String KIRDNEH = "Kirdneh";
 	public static final String KALAVAN = "Kalavan";

@@ -292,7 +292,7 @@
     <entity x="37" y="60">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.chest.NPCOwnedChest">
-        <parameter name="npc">Sally</parameter>
+        <parameter name="npc">莎丽</parameter>
       </implementation>
     </entity>
     <entity x="101" y="67">
@@ -315,10 +315,10 @@
     <entity x="67" y="9">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-North: Or'ril castle
-West: Fado
-East: Nalwor
-Northeast: Semos
+向北： Or'ril castle
+向西： Fado
+向东： Nalwor
+东北：: 塞门镇
     </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
@@ -748,9 +748,9 @@ Northeast: Semos
     <entity x="28" y="17">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-The hidden secrets of Athor island
+The hidden secrets of 阿托尔岛
 -By Sara Beth-
-Down in the deep sea around Athor island it lays, hidden under soft sand - the mighty treasure of Faiumoni.
+Down in the deep sea around 阿托尔岛 it lays, hidden under soft sand - the mighty treasure of Faiumoni.
       	</attribute>
       <attribute name="resistance">0</attribute>
       <attribute name="class">book_red</attribute>
@@ -760,7 +760,7 @@ Down in the deep sea around Athor island it lays, hidden under soft sand - the m
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
 Success in fights: a manual
--By Hayunn Naratha-
+-By 海云那冉-
 As a mighty warrior, you always need to wear a powerful armor in fights.
      	</attribute>
       <attribute name="resistance">0</attribute>

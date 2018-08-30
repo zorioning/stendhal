@@ -46,7 +46,7 @@ import games.stendhal.server.maps.Region;
  * <p>
  * PARTICIPANTS:
  * <ul>
- * <li> Leander (the baker in Semos)
+ * <li> Leander (the baker in 塞门镇)
  * <li> NPC's all over the world (as customers)
  * </ul>
  *
@@ -194,7 +194,7 @@ public class PizzaDelivery extends AbstractQuest {
 		return res;
 	}
 
-	// Don't add Sally here, as it would conflict with Leander telling
+	// Don't add 莎丽 here, as it would conflict with Leander telling
 	// about his daughter.
 	private static void buildCustomerDatabase() {
 		customerDB = new HashMap<String, CustomerData>();
@@ -343,9 +343,9 @@ public class PizzaDelivery extends AbstractQuest {
 				"这就是结果! 为什么花这么长时间?",
 				2));
 
-		customerDB.put("Nishiya",
+		customerDB.put("尼世亚",
 			new CustomerData(
-				"Nishiya 卖羊人. 要吧在西边找到他，就是村子中。",
+				"尼世亚 卖羊人. 要吧在西边找到他，就是村子中。",
 				"Pizza Pasta",
 				// minutes to deliver. Tested by mort: easy
 				// to do in less than 1 min.
@@ -358,9 +358,9 @@ public class PizzaDelivery extends AbstractQuest {
 				"很不好. 都凉了，谢了.",
 				0));
 
-		customerDB.put("Ouchit",
+		customerDB.put("奥斯特",
 			new CustomerData(
-				"Ouchit 是个军火商，他现在在Semos酒馆的二楼出租房中.",
+				"奥斯特 是个军火商，他现在在塞门镇酒馆的二楼出租房中.",
 				"Pizza Quattro Stagioni",
 				// minutes to deliver. Tested by mort: can
 				// be done in 45 sec with no danger.
@@ -394,7 +394,7 @@ public class PizzaDelivery extends AbstractQuest {
 
 		customerDB.put("Tor'Koom",
 			new CustomerData(
-				"Tor'Koom 是一个兽人，住在Semos城地下的地牢中。羊是他最爱的食物。他住在地下四层，小心!",
+				"Tor'Koom 是一个兽人，住在塞门镇城地下的地牢中。羊是他最爱的食物。他住在地下四层，小心!",
 				// "Pizza sheep" in Italian ;)
 				"Pizza Pecora",
 				// minutes to deliver. Tested by kymara:
@@ -615,7 +615,7 @@ public class PizzaDelivery extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"糟糕. 我希望我女儿 #Sally 能从露营中赶回来，可以帮我送货。",
+			"糟糕. 我希望我女儿 #莎丽 能从露营中赶回来，可以帮我送货。",
 			new ChatAction() {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {

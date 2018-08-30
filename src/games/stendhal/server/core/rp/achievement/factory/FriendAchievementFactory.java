@@ -47,14 +47,14 @@ public class FriendAchievementFactory extends AbstractAchievementFactory {
 				new AndCondition(
 						// Susi Quest is never set to done, therefore we check just if the quest has been started (condition "anyFriends" from FoundGirl.java)
 						new QuestStartedCondition("susi"),
-						// Help Tad, Semos Town Hall (Medicine for Tad)
+						// Help 泰德, 塞门镇 Town Hall (Medicine for 泰德)
 						new QuestCompletedCondition("introduce_players"),
-						// Plink, Semos Plains North
+						// Plink, 塞门镇 Plains North
 						new QuestCompletedCondition("plinks_toy"),
 						// Anna, in Ados
 						new QuestCompletedCondition("toys_collector"),
-						// Sally, Orril River
-						// 'completed' doesn't work for Sally - return player.hasQuest(QUEST_SLOT) && !"start".equals(player.getQuest(QUEST_SLOT)) && !"rejected".equals(player.getQuest(QUEST_SLOT));
+						// 莎丽, Orril River
+						// 'completed' doesn't work for 莎丽 - return player.hasQuest(QUEST_SLOT) && !"start".equals(player.getQuest(QUEST_SLOT)) && !"rejected".equals(player.getQuest(QUEST_SLOT));
 						new AndCondition(new QuestActiveCondition("campfire"), new QuestNotInStateCondition("campfire", "start")),
 						// Annie, Kalavan city gardens
 						new QuestStateStartsWithCondition("icecream_for_annie","eating;"),

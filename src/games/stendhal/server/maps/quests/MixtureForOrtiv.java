@@ -80,7 +80,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "flask=1;arandula=2;red lionfish=10;kokuda=1;toadstool=12;licorice=2;apple=10;wine=30;garlic=2;pestle and mortar=1";
+	protected static final String NEEDED_ITEMS = "瓶子=1;arandula=2;red lionfish=10;kokuda=1;toadstool=12;licorice=2;apple=10;wine=30;garlic=2;pestle and mortar=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -162,11 +162,11 @@ public class MixtureForOrtiv extends AbstractQuest {
 
 		npc.addReply("apple", "苹果是刺客最爱的食物。我在Semon城东,Orril和Halwor河的旁边见过一些苹果树" );
 
-			npc.addReply("flask", "我听说一个年轻的女人在Semo卖这东西.");
+			npc.addReply("瓶子", "我听说一个年轻的女人在Semo卖这东西.");
 
 			npc.addReply("toadstool", "Toadstools 毒性很强，我听说曾有猎人在森林吃了一点，就病了好几天.");
 
-			npc.addReply("arandula", "像是一些旧友跟我说过，Semos的北面, 离小树林很近的地方，生找着一种名叫 arandula 的药草");
+			npc.addReply("arandula", "像是一些旧友跟我说过，塞门镇的北面, 离小树林很近的地方，生找着一种名叫 arandula 的药草");
 
 			npc.addReply("red lionfish","Red lionfish 很难找到，它们体外有红白相门的条纹，红是紫红色 " +
 					"或棕色。我曾听说在Faiumoni的一个地方，你可以钓到它们，但要小心，每条 lionfish  都有毒!");

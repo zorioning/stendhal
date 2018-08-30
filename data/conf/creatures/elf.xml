@@ -4,9 +4,9 @@
   
   <!-- START: albino elf -->
   
-  <creature name="albino elf swordsman">
+  <creature name="天使精灵剑客">
     <type class="albino_elf" subclass="albino_elf_swordsman" tileid="albino_elf.png:4"/>
-    <description>You see an albino elf swordsman who is a professional in using swords. He can attack you from behind in a blink of an eye.</description>
+    <description>这是一个天使精灵剑客，他是使用剑的专家。他可以在眨眼之间从你背后攻击你。</description>
     <attributes>
       <atk value="330"/>
       <def value="57"/>
@@ -35,9 +35,9 @@
     </ai>
   </creature>
   
-  <creature name="albino elf archer">
+  <creature name="天使精灵弓箭手">
     <type class="albino_elf" subclass="albino_elf_archer" tileid="albino_elf.png:0"/>
-    <description>You see an albino elf archer. He is so sharp-eyed that he could hit a bee from a distance of 100 meters.</description>
+    <description>这是一个天使精灵弓箭手。他的眼睛很敏锐，能从100米远的地方击中一只蜜蜂。</description>
     <attributes>
       <atk value="345"/>
       <def value="94"/>
@@ -52,12 +52,12 @@
     <drops>
       <item value="money" quantity="[10,30]" probability="90.0"/>
       <item value="镶嵌甲" quantity="[1,1]" probability="2.0"/>
-      <item value="s铁箭" quantity="[5,15]" probability="10.0"/>
-      <item value="wooden bow" quantity="[1,1]" probability="2.0"/>
+      <item value="铁箭" quantity="[5,15]" probability="10.0"/>
+      <item value="木弓" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
-      <slot name="lhand" item="s铁箭" quantity="10000"/>
-      <slot name="rhand" item="wooden bow" quantity="1"/>
+      <slot name="lhand" item="铁箭" quantity="10000"/>
+      <slot name="rhand" item="木弓" quantity="1"/>
     </equips>
     <ai>
       <profile name="brave"/>
@@ -68,9 +68,9 @@
     </ai>
   </creature>
   
-  <creature name="albino elf magician">
+  <creature name="天使精灵魔术师">
     <type class="albino_elf" subclass="albino_elf_magician" tileid="albino_elf.png:2"/>
-    <description>You see an albino elf magician. He knows all the secrets of magic. You'd be better to not let him unleash his full power!</description>
+    <description> 这是一个天使精灵魔术师。他知道所有的魔术秘密。你最好不要让他释放他的全部力量</description>
     <attributes>
       <atk value="432"/>
       <def value="58"/>
@@ -99,9 +99,9 @@
     </ai>
   </creature>
   
-  <creature name="albino elf queen">
+  <creature name="天使精灵女王">
     <type class="albino_elf" subclass="albino_elf_queen" tileid="albino_elf.png:3"/>
-    <description>You see an albino elf queen. She is the matriarch of the albino elf race and she will do everything to protect it.</description>
+    <description>这是一个天使精灵女王。她是天使精灵族的女族长，她将竭尽全力保护它。</description>
     <attributes>
       <atk value="454"/>
       <def value="48"/>
@@ -129,9 +129,9 @@
     </ai>
   </creature>
   
-  <creature name="albino elf king">
+  <creature name="天使精灵王">
     <type class="albino_elf" subclass="albino_elf_king" tileid="albino_elf.png:1"/>
-    <description>You see an albino elf king. He is the patriarch of albino elves and won countless of battles with his powerful albino elf army.</description>
+    <description>这是一个天使精灵国王。他是天使精灵的族长，与他强大的天使精灵军队打过无数仗。</description>
     <attributes>
       <atk value="461"/>
       <def value="53"/>
@@ -165,9 +165,9 @@
   
   <!-- START: dark elf -->
   
-  <creature name="child dark elf">
+  <creature name="幼齿黑暗精灵">
     <type class="dark_elf" subclass="baby_drow" tileid="dark_elf.png:10"/>
-    <description>You see a child dark elf. You should know that dark elves are already quite strong and intelligent when they are children. Don't think you can fight him so easily!</description>
+    <description>幼齿黑暗这是一个幼齿黑暗精灵。你应该知道黑暗精灵在他们还是孩子的时候就已经非常强壮和聪明了。别以为你跟他打得那么容易</description>
     <attributes>
       <atk value="374"/>
       <def value="67"/>
@@ -196,9 +196,9 @@
     </ai>
   </creature>
   
-  <creature name="dark elf archer">
+  <creature name="黑暗精灵弓箭手">
     <type class="dark_elf" subclass="dark_elf_archer" tileid="dark_elf.png:0"/>
-    <description>You see a dark elf archer. Dark elf archer's flawless aim can be fatal for those who dare to oppose them.</description>
+    <description>这是一个黑暗精灵弓箭手。黑暗精灵弓箭手完美无瑕的瞄准对那些敢于反抗他们的人来说是致命的。</description>
     <attributes>
       <atk value="385"/>
       <def value="125"/>
@@ -215,12 +215,12 @@
       <item value="精灵护甲" quantity="[1,1]" probability="5.0"/>
       <item value="像小精灵的斗篷" quantity="[1,1]" probability="5.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
-      <item value="s铁箭" quantity="[1,5]" probability="10.0"/>
+      <item value="铁箭" quantity="[1,5]" probability="10.0"/>
       <item value="longbow" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
-      <slot name="lhand" item="s铁箭" quantity="10000"/>
-      <slot name="rhand" item="wooden bow" quantity="1"/>
+      <slot name="lhand" item="铁箭" quantity="10000"/>
+      <slot name="rhand" item="木弓" quantity="1"/>
     </equips>
     <ai>
       <profile name="brave"/>
@@ -263,7 +263,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf elite archer">
+  <creature name="黑暗精灵精英弓箭手">
     <type class="dark_elf" subclass="dark_elf_elite_archer" tileid="dark_elf.png:2"/>
     <description></description>
     <attributes>
@@ -297,7 +297,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf captain">
+  <creature name="黑暗精灵队长">
     <type class="dark_elf" subclass="dark_elf_captain" tileid="dark_elf.png:1"/>
     <description></description>
     <attributes>
@@ -323,7 +323,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Think not to defy the dark elves!"/>
+        <noise state="idle follow fight" value="不要违抗黑暗精灵!"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -333,7 +333,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf knight">
+  <creature name="黑暗精灵骑士">
     <type class="dark_elf" subclass="dark_elf_knight" tileid="dark_elf.png:4"/>
     <description></description>
     <attributes>
@@ -367,9 +367,9 @@
     </ai>
   </creature>
   
-  <creature name="dark elf general">
+  <creature name="黑暗精灵将军">
     <type class="dark_elf" subclass="dark_elf_general" tileid="dark_elf.png:3"/>
-    <description>You see a Dark Elf General. It is commanding the evil troops of Nalwor Caves against intruders.</description>
+    <description>这是一个黑暗精灵将军。它正在指挥纳尔沃洞穴的邪恶军队抵抗入侵者。</description>
     <attributes>
       <atk value="515"/>
       <def value="92"/>
@@ -394,7 +394,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="We will never return to the light!"/>
+        <noise state="idle follow fight" value="我们将永远不会回到光明!"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -404,9 +404,9 @@
     </ai>
   </creature>
   
-  <creature name="dark elf wizard">
+  <creature name="黑暗精灵巫师">
     <type class="dark_elf" subclass="dark_elf_wizard" tileid="dark_elf.png:9"/>
-    <description>Dark elf wizards are very powerful and dangerous. They are specialised in dark magic.</description>
+    <description>黑精灵巫师是非常强大和危险的。他们专门研究黑魔法。=黑精灵巫师是非常强大和危险的。他们专门研究黑魔法。</description>
     <attributes>
       <atk value="615"/>
       <def value="103"/>
@@ -434,7 +434,7 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="The Spider Queen will avenge me!"/>
+        <noise state="idle follow fight" value="巨型蜘蛛女王会为我报仇的!"/>
       </says>
       <profile name="poisonous" params="5,greater poison"/>
       <profile name="brave"/>
@@ -445,7 +445,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf viceroy">
+  <creature name="黑暗精灵总督">
     <type class="dark_elf" subclass="dark_elf_viceroy" tileid="dark_elf.png:8"/>
     <description></description>
     <attributes>
@@ -473,7 +473,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Keep away from me, sunlight dweller!"/>
+        <noise state="idle follow fight" value="离我远点，阳光居民!"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -482,7 +482,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf ranger">
+  <creature name="黑暗精灵游侠">
     <type class="dark_elf" subclass="dark_elf_ranger" tileid="dark_elf.png:11"/>
     <description></description>
     <attributes>
@@ -511,7 +511,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Keep away from me, sunlight dweller!"/>
+        <noise state="idle follow fight" value="离我远点，阳光居民!"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -521,7 +521,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf sacerdotist">
+  <creature name="黑暗精灵僧侣">
     <type class="dark_elf" subclass="dark_elf_sacerdotist" tileid="dark_elf.png:7"/>
     <description></description>
     <attributes>
@@ -552,7 +552,7 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="The Queen of Spiders will take her revenge on you!"/>
+        <noise state="idle follow fight" value="巨型蜘蛛女王会报复你的!"/>
       </says>
       <profile name="poisonous" params="15,greater poison"/>
       <profile name="brave"/>
@@ -562,7 +562,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf admiral">
+  <creature name="黑暗精灵海军上将">
     <type class="dark_elf" subclass="dark_elf_admiral" tileid="dark_elf.png:13"/>
     <description></description>
     <attributes>
@@ -587,8 +587,8 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Fear the dark elf armies!"/>
-        <noise state="idle follow fight" value="We are the darkness you fear!"/>
+        <noise state="idle follow fight" value="害怕黑暗精灵军队!"/>
+        <noise state="idle follow fight" value="我们是你所恐惧的黑暗!"/>
       </says>
       <profile name="poisonous" params="15,greater poison"/>
       <profile name="brave"/>
@@ -598,9 +598,9 @@
     </ai>
   </creature>
   
-  <creature name="dark elf master">
+  <creature name="黑暗精灵大师">
     <type class="dark_elf" subclass="dark_elf_master" tileid="dark_elf.png:12"/>
-    <description>You see a dark elf master. Beware of his high skills on magic and swordsmanship!</description>
+    <description>这是了一个黑暗精灵大师。小心他高超的魔法和剑术!</description>
     <attributes>
       <atk value="838"/>
       <def value="174"/>
@@ -628,8 +628,8 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="You will never see the light again!"/>
-        <noise state="idle follow fight" value="Darkness will fall upon you!"/>
+        <noise state="idle follow fight" value="你再也见不到光明了!"/>
+        <noise state="idle follow fight" value="黑暗会降临在你身上!"/>
       </says>
       <profile name="poisonous" params="15,greater poison"/>
       <profile name="brave"/>
@@ -640,7 +640,7 @@
     </ai>
   </creature>
   
-  <creature name="dark elf matronmother">
+  <creature name="黑暗精灵妈妈">
     <type class="dark_elf" subclass="dark_elf_matronmother" tileid="dark_elf.png:5"/>
     <description>Dusky and shrouded, this matriarch rules her clan with a soft touch and sharp fangs. An expert in venoms and poisons, you wouldn't ever want to turn your back on her. </description>
     <attributes>
@@ -671,8 +671,8 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="You disturbed my rest!"/>
-        <noise state="idle follow fight" value="Now, you will pay."/>
+        <noise state="idle follow fight" value="你打扰了我的休息!"/>
+        <noise state="idle follow fight" value="现在,你要付钱!"/>
       </says>
       <profile name="poisonous" params="15,greater poison"/>
       <profile name="brave"/>
@@ -688,9 +688,9 @@
   
   <!-- START: elf -->
   
-  <creature name="elf">
+  <creature name="精灵">
     <type class="elf" subclass="elf" tileid="elf.png:3"/>
-    <description>You see an elf which loves the forest and lives in peace.</description>
+    <description>这是了一个爱森林、和平生活的精灵。</description>
     <attributes>
       <atk value="177"/>
       <def value="30"/>
@@ -722,9 +722,9 @@
     </ai>
   </creature>
   
-  <creature name="militia elf">
+  <creature name="民兵精灵">
     <type class="elf" subclass="militia_elf" tileid="elf.png:6"/>
-    <description>You see a militia elf which trains hard to beat you!</description>
+    <description>这是一个训练有素的民兵精灵很难打败你! 精灵弓箭手=精灵弓箭手</description>
     <attributes>
       <atk value="200"/>
       <def value="44"/>
@@ -756,9 +756,9 @@
     </ai>
   </creature>
   
-  <creature name="archer elf">
+  <creature name="精灵弓箭手">
     <type class="elf" subclass="archer_elf" tileid="elf.png:0"/>
-    <description>You see an archer elf which can do much damage with its 木箭s.</description> 
+    <description>这是一个弓箭精灵，它的木箭可以造成很大的伤害。</description> 
     <attributes>
       <atk value="198"/>
       <def value="42"/>
@@ -775,13 +775,13 @@
       <item value="elvish legs" quantity="[1,1]" probability="5.0"/>
       <item value="护肩铁胸甲" quantity="[1,1]" probability="0.5"/>
       <item value="木箭" quantity="[10,20]" probability="5.0"/>
-      <item value="wooden bow" quantity="[1,1]" probability="2.5"/>
+      <item value="木弓" quantity="[1,1]" probability="2.5"/>
       <item value="scimitar" quantity="[1,1]" probability="5.0"/>
       <item value="apple" quantity="[1,3]" probability="20.0"/>
     </drops>
     <equips>
       <slot name="lhand" item="木箭" quantity="10000"/>
-      <slot name="rhand" item="wooden bow" quantity="1"/>
+      <slot name="rhand" item="木弓" quantity="1"/>
     </equips>
     <ai>
       <profile name="brave"/>
@@ -792,9 +792,9 @@
     </ai>
   </creature>
   
-  <creature name="soldier elf">
+  <creature name="士兵精灵">
     <type class="elf" subclass="soldier_elf" tileid="elf.png:7"/>
-    <description>You see a soldier elf, a good partner of the militia elves.</description>
+    <description>这是一个士兵精灵，一个民兵精灵的好伙伴。</description>
     <attributes>
       <atk value="216"/>
       <def value="40"/>
@@ -826,9 +826,9 @@
     </ai>
   </creature>
   
-  <creature name="mage elf">
+  <creature name="精灵法师">
     <type class="elf" subclass="mage_elf" tileid="elf.png:5"/>
-    <description>You see a mage elf. She can feel pure magic when she stands outside in the forest and just frees her mind.</description>
+    <description>这是一个法师精灵。当她站在外面的森林里时，她能感觉到纯粹的魔力，并且解放了她的思想。</description>
     <attributes>
       <atk value="242"/>
       <def value="63"/>
@@ -858,9 +858,9 @@
     </ai>
   </creature>
   
-  <creature name="commander elf">
+  <creature name="精灵指挥官">
     <type class="elf" subclass="commander_elf" tileid="elf.png:2"/>
-    <description>You see a busy commander elf. He has control over the army of elves.</description>
+    <description>这是一个忙碌的精灵指挥官。他控制着精灵的军队。</description>
     <attributes>
       <atk value="285"/>
       <def value="102"/>
@@ -894,9 +894,9 @@
     </ai>
   </creature>
   
-  <creature name="archmage elf">
+  <creature name="精灵大法师">
     <type class="elf" subclass="archmage_elf" tileid="elf.png:1"/>
-    <description>You see an archmage elf. She is pretty.</description>
+    <description>这是一个大法师精灵。她很漂亮。</description>
     <attributes>
       <atk value="256"/>
       <def value="87"/>
@@ -927,9 +927,9 @@
     </ai>
   </creature>
   
-  <creature name="elf sacerdotist">
+  <creature name="精灵僧侣">
     <type class="elf" subclass="elf_sacerdotist" tileid="elf.png:4"/>
-    <description></description>
+    <description>这是一个精灵僧侣。</description>
     <attributes>
       <atk value="380"/>
       <def value="108"/>
@@ -962,9 +962,9 @@
     </ai>
   </creature>
   
-  <creature name="elf wizard">
+  <creature name="精灵巫师">
     <type class="elf" subclass="elf_wizard" tileid="elf.png:9"/>
-    <description>You see an elf wizard. He is a very wise elf who knows almost every kind of magic. He likes to use nature spells to make every plant and creature fertile, but he is also able to defend himself when he has to do.</description>
+    <description>这是一个精灵巫师。他是一个非常聪明的精灵，几乎知道所有的魔法。他喜欢使用自然魔法使每一种植物和生物都能繁殖，但他也能在必要时保护自己。</description>
     <attributes>
       <atk value="400"/>
       <def value="70"/>
@@ -997,7 +997,7 @@
     </ai>
   </creature>
   
-  <creature name="elf bodyguard">
+  <creature name="精灵保镖">
     <type class="elf" subclass="elf_bodyguard" tileid="elf.png:8"/>
     <description></description>
     <attributes>

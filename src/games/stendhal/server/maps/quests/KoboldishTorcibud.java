@@ -384,7 +384,7 @@ public class KoboldishTorcibud extends AbstractQuest {
             ConversationStates.ATTENDING,
             "Wrof! Not so common vegetables,"
                 + " but I know that there are some being grown outside a farm"
-                + " near Semos city.",
+                + " near 塞门镇.",
             null);
 
         // Player is curious about fierywater

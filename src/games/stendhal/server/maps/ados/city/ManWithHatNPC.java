@@ -59,7 +59,7 @@ public class ManWithHatNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Hello.");
-				addHelp("When I lived together with my beloved wife, we used to travel a lot. We loved the beach on Athor Island! But these memories make me sad now.");
+				addHelp("When I lived together with my beloved wife, we used to travel a lot. We loved the beach on 阿托尔岛! But these memories make me sad now.");
 				addJob("I stopped working after my wife died.");
 				addOffer("I have nothing to offer you.");
 				addGoodbye("Goodbye, thank you for talking with me.");

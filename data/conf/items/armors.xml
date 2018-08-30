@@ -286,9 +286,9 @@
     </equipable>
   </item>
   
-  <item name="鳞甲">
+  <item name="皮鳞甲">
     <type class="armor" subclass="leather_scale_armor" tileid="-1"/>
-    <description>这是一件鳞甲，比普通皮甲更结实。</description>
+    <description>这是一件皮鳞甲，比普通皮甲更结实。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="4"/>

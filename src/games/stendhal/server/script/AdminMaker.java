@@ -150,7 +150,7 @@ public class AdminMaker extends ScriptImpl {
 			new Destination("0_ados_city", 30, 57),
 			new Destination("0_orril_forest_e", 107, 7),
 			new Destination("0_ados_mountain_n2_w2", 10, 100),
-			new Destination("0_semos_mountain_n2_e2", 86, 71),
+			new Destination("0_塞门_山_北2_e2", 86, 71),
 			new Destination("-2_orril_dungeon", 106, 21),
 			new Destination("-2_orril_lich_palace", 67, 118),
 			new Destination("-2_orril_dwarf_mine", 50, 40),
@@ -250,7 +250,7 @@ public class AdminMaker extends ScriptImpl {
 		npc.setEntityClass("tavernbarmaidnpc");
 
 		// Place NPC in int_admin_playground on server start
-		final String myZone = "0_semos_city";
+		final String myZone = "0_塞门_镇";
 		sandbox.setZone(myZone);
 		int x = 32;
 		int y = 16;

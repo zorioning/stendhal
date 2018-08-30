@@ -70,7 +70,7 @@ public class HouseBuyingMain {
 	}
 
 	/**
-	 * The NPC for Athor Apartments.
+	 * The NPC for 阿托尔公寓s.
 	 *
 	 * @param zone target zone
 	 */

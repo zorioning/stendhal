@@ -47,7 +47,7 @@ public class SheepSellerNPC implements ZoneConfigurator {
 	}
 
 	private void buildSemosVillageArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Nishiya") {
+		final SpeakerNPC npc = new SpeakerNPC("尼世亚") {
 			@Override
 			protected void createPath() {
 				final List<Node> nodes = new LinkedList<Node>();
@@ -103,14 +103,14 @@ public class SheepSellerNPC implements ZoneConfigurator {
 				addReply("放羊",
 						"你需要把羊保持在离你不太远的地方，当你切换地区时，羊要在附近才行；你可以呼出 #sheep 去喊羊回来。如果你决定放生它，你可以鼠标右键，然后选择离开；但坦白的说，我认为这样的行为很不负责.");
 				addReply("sell",
-						"一旦你把羊放到100的体重，你可以把它给 Semos 镇上的 Sato；他会收购你的羊.");
+						"一旦你把羊放到100的体重，你可以把它给 塞门镇上的 Sato；他会收购你的羊.");
 				addReply("own",
 						"如果你发现一只被放生的羊，可以点击鼠标右键，并选择 own 驯服它，羊需要人的照料!");
 			}
 		};
 
 		npc.setEntityClass("sellernpc");
-		npc.setDescription("Nishiya 在路上巡逻并照料着他的羊，你可以从他那里买一只.");
+		npc.setDescription("尼世亚 在路上巡逻并照料着他的羊，你可以从他那里买一只.");
 		npc.setPosition(33, 44);
 		npc.initHP(100);
 		npc.setSounds(Arrays.asList("cough-11", "cough-2", "cough-3"));

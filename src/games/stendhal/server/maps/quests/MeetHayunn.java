@@ -40,12 +40,12 @@ import games.stendhal.server.maps.Region;
 /**
  * QUEST: Speak with Hayunn
  * <p>
- * PARTICIPANTS: <ul><li> Hayunn Naratha</ul>
+ * PARTICIPANTS: <ul><li> 海云那冉</ul>
  *
  * STEPS: <ul>
- * <li> Talk to Hayunn to activate the quest.
+ * <li> Talk to 海云那冉 to activate the quest.
  * <li> He asks you to kill a rat, also offering to teach you how
- * <li> Return and get directions to Semos
+ * <li> Return and get directions to 塞门镇
  * <li> Return and learn how to click move, and get some URLs
  * </ul>
  *
@@ -73,22 +73,22 @@ public class MeetHayunn extends AbstractQuest {
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("Hayunn Naratha 是我在这个世上第一个遇到的人，他给我的任务是杀死一只老鼠。");
+		res.add("海云那冉 是我在这个世上第一个遇到的人，他给我的任务是杀死一只老鼠。");
 		if (player.getQuest(QUEST_SLOT, 0).equals("start") && new KilledForQuestCondition(QUEST_SLOT,1).fire(player, null, null)) {
 			res.add("我杀了一只老鼠，我应该回去告诉他!");
 		}
 		if (player.getQuest(QUEST_SLOT, 0).equals("start")) {
 			return res;
 		}
-		res.add("我杀死了老鼠。Hayunn 会教我有关这个世界的更多知识。");
+		res.add("我杀死了老鼠。海云那冉 会教我有关这个世界的更多知识。");
 		if ("killed".equals(questState)) {
 			return res;
 		}
-		res.add("Hayunn 给了我一点钱，并告诉我去找 Semos 镇的 Monogenes 要一张地图");
+		res.add("海云那冉 给了我一点钱，并告诉我去找 塞门镇的 Monogenes 要一张地图");
 		if ("taught".equals(questState)) {
 			return res;
 		}
-		res.add("Hayunn 告诉我很有用的生存知识，并给了我一面学徒盾和一些钱。");
+		res.add("海云那冉 告诉我很有用的生存知识，并给了我一面学徒盾和一些钱。");
 		if (isCompleted(player)) {
 			return res;
 		}
@@ -101,7 +101,7 @@ public class MeetHayunn extends AbstractQuest {
 
 	private void prepareHayunn() {
 
-		final SpeakerNPC npc = npcs.get("Hayunn Naratha");
+		final SpeakerNPC npc = npcs.get("海云那冉");
 
 		// player wants to learn how to attack
 		npc.add(
@@ -121,7 +121,7 @@ public class MeetHayunn extends AbstractQuest {
 				"好的, 你挺聪明，我相信你一定能完成!",
 				null);
 
-		//player returns to Hayunn not having killed a rat
+		//player returns to 海云那冉 not having killed a rat
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
@@ -131,7 +131,7 @@ public class MeetHayunn extends AbstractQuest {
 				"我看你还没有完成杀老鼠的任务，还需要我告诉你怎么杀死它吗？",
 				null);
 
-		//player returns to Hayunn having killed a rat
+		//player returns to 海云那冉 having killed a rat
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new IncreaseXPAction(10));
 		actions.add(new SetQuestAction(QUEST_SLOT, "killed"));
@@ -143,7 +143,7 @@ public class MeetHayunn extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new KilledForQuestCondition(QUEST_SLOT, 1)),
 				ConversationStates.INFORMATION_1,
-				"你杀死了老鼠！现在，我猜你想去游历一翻，那你知道去 Semos 的路吗？",
+				"你杀死了老鼠！现在，我猜你想去游历一翻，那你知道去 塞门镇 的路吗？",
 				new MultipleActions(actions));
 
 
@@ -153,14 +153,14 @@ public class MeetHayunn extends AbstractQuest {
 		reward.add(new EquipItemAction("money", 5));
 		reward.add(new IncreaseXPAction(10));
 		reward.add(new SetQuestAction(QUEST_SLOT, "taught"));
-		reward.add(new ExamineChatAction("monogenes.png", "Monogenes", "North part of Semos city."));
+		reward.add(new ExamineChatAction("monogenes.png", "Monogenes", "North part of 塞门镇."));
 
 		npc.add(
 			ConversationStates.INFORMATION_1,
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"出门顺着路向东走，你不会错过 Semos 镇，如果你和 Monogenes 说话, 就是图片上的这个老人，他会给你一张地图，另外再给你5元钱做路费，拜拜！",
+			"出门顺着路向东走，你不会错过 塞门镇，如果你和 Monogenes 说话, 就是图片上的这个老人，他会给你一张地图，另外再给你5元钱做路费，拜拜！",
 			new MultipleActions(reward));
 
 	   	// incase player didn't finish learning everything when he came after killing the rat, he must have another chance. Here it is.
@@ -187,7 +187,7 @@ public class MeetHayunn extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_3,
-			"也许现在你已经发现了 Semos 的地牢. 那里的地下走廊很狭窄，因此快速准确的移动会很有效, 你想详细了解,对吧? #Yes?",
+			"也许现在你已经发现了 塞门镇 的地牢. 那里的地下走廊很狭窄，因此快速准确的移动会很有效, 你想详细了解,对吧? #Yes?",
 			null);
 
 		npc.add(
@@ -233,8 +233,8 @@ public class MeetHayunn extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"会见 Hayunn Naratha",
-				"在这个世界上，Hayunn Naratha 是年轻英雄们重要的导师.",
+				"会见 海云那冉",
+				"在这个世界上，海云那冉 是年轻英雄们重要的导师.",
 				false);
 		prepareHayunn();
 	}
@@ -251,6 +251,6 @@ public class MeetHayunn extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Hayunn Naratha";
+		return "海云那冉";
 	}
 }

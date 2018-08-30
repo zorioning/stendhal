@@ -18,12 +18,12 @@ import games.stendhal.server.entity.npc.NPCList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Soldiers protecting the entrance to Semos Mine.
+ * Soldiers protecting the entrance to 塞门镇 Mine.
  */
 public class SoldierNPCs implements LoadableContent {
 
 	private void createNPC() {
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		final SpeakerNPC npc1 = new SpeakerNPC("Hibitus") {
 
 			@Override
@@ -42,7 +42,7 @@ public class SoldierNPCs implements LoadableContent {
 		npc1.setPosition(88, 98);
 		npc1.setEntityClass("youngsoldiernpc");
 		npc1.setDirection(Direction.RIGHT);
-		npc1.setDescription("You see Hibitus. He guards the entrance to Semos Mine.");
+		npc1.setDescription("You see Hibitus. He guards the entrance to 塞门镇 Mine.");
 		npc1.initHP(100);
 		zone.add(npc1);
 
@@ -64,7 +64,7 @@ public class SoldierNPCs implements LoadableContent {
 		npc2.setPosition(92, 98);
 		npc2.setEntityClass("youngsoldiernpc");
 		npc2.setDirection(Direction.LEFT);
-		npc2.setDescription("You see Lucanus. He guards the entrance to Semos Mine.");
+		npc2.setDescription("You see Lucanus. He guards the entrance to 塞门镇 Mine.");
 		npc2.initHP(100);
 		zone.add(npc2);
 	}

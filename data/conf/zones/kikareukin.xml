@@ -67,7 +67,7 @@
       </implementation>
     </entity>
     <portal x="66" y="63" ref="exit">
-      <destination zone="0_semos_mountain_n2_w3" ref="kikareukin_exit" />
+      <destination zone="0_塞门_山_北2_西3" ref="kikareukin_exit" />
     </portal>
     <portal x="25" y="8" ref="cloud_exit1">
       <implementation
@@ -131,7 +131,7 @@
   <zone name="1_kikareukin_cave" level="1" x="499616" y="499744"
     file="Level 1/kikareukin/cave.tmx">
     <portal x="16" y="96" ref="entrance">
-      <destination zone="0_semos_mountain_n_w4" ref="kikareukin_entrance" />
+      <destination zone="0_塞门_山_北_西4" ref="kikareukin_entrance" />
     </portal>
   </zone>
 

@@ -28,11 +28,11 @@ import games.stendhal.server.util.Area;
 import marauroa.common.game.RPObject;
 
 /**
- * A merchant (original name: Sato) who buys sheep from players.
+ * A merchant (original name: 赛特) who buys sheep from players.
  */
 public class SheepBuyerNPC implements ZoneConfigurator {
 
-	// The sheep pen where Sato moves what he buys
+	// The sheep pen where 赛特 moves what he buys
 	/** Left X coordinate of the sheep pen */
 	private static final int SHEEP_PEN_X = 39;
 	/** Top Y coordinate of the sheep pen */
@@ -42,17 +42,17 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 	/** Height of the sheep pen */
 	private static final int SHEEP_PEN_HEIGHT = 6;
 	/**
-	 * The maximum number of sheep Sato keeps in his sheep pen.
+	 * The maximum number of sheep 赛特 keeps in his sheep pen.
 	 */
 	private static final int MAX_SHEEP_IN_PEN = 8;
-	/** The area covering the sheep pen in Semos */
+	/** The area covering the sheep pen in 塞门镇 */
 	private Area pen;
 
 	public class SheepBuyerSpeakerNPC extends SpeakerNPC {
 
 		public SheepBuyerSpeakerNPC(String name) {
 			super(name);
-			// HP needs to be > 0 for Sato to appear in the killer list for
+			// HP needs to be > 0 for 赛特 to appear in the killer list for
 			// the 大灰狼
 			setBaseHP(100);
 			setHP(100);
@@ -133,12 +133,12 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 
 			killWolves(zone);
 			/*
-			 * Keep the amount of sheep reasonable. Sato's
+			 * Keep the amount of sheep reasonable. 赛特's
 			 * a business man and letting the sheep starve
 			 * would be bad for busines.
 			 */
 			if (oldSheep.size() >= MAX_SHEEP_IN_PEN) {
-				// Sato sells the oldest sheep
+				// 赛特 sells the oldest sheep
 				zone.remove(oldSheep.get(0));
 			}
 
@@ -152,14 +152,14 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 	@Override
 	public void configureZone(StendhalRPZone zone,
 			Map<String, String> attributes) {
-		final SpeakerNPC npc = new SheepBuyerSpeakerNPC("Sato") {
+		final SpeakerNPC npc = new SheepBuyerSpeakerNPC("赛特") {
 			@Override
 			public void createDialog() {
 				addGreeting();
-				addJob("我在 Semos 收购羊，然后把羊出口到 Ados 城。");
+				addJob("我在 塞门镇 收购羊，然后把羊出口到 Ados 城。");
 				addHelp("我收购羊,但要公平合理的价格。有羊的话，你只需要对我说卖羊 #sell #sheep, 我会马上处理!");
 				addGoodbye();
-				addQuest("Hmm 我要给我朋友引见一下，或许你问问 Nishiya ,他可以给你出点主意...");
+				addQuest("Hmm 我要给我朋友引见一下，或许你问问 尼世亚 ,他可以给你出点主意...");
 			}
 
 			@Override
@@ -181,7 +181,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 		npc.setPosition(40, 45);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.setEntityClass("buyernpc");
-		npc.setDescription("你看到了 Sato. 他只喜爱羊.");
+		npc.setDescription("你看到了 赛特. 他只喜爱羊.");
 		npc.setSounds(Arrays.asList("hiccup-1", "sneeze-1"));
 		zone.add(npc);
 	}

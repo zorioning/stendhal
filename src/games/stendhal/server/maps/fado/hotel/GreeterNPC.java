@@ -60,7 +60,7 @@ public class GreeterNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hello! Welcome to the Fado City Hotel! Can I #help you?");
+				addGreeting("Hello! Welcome to the 法多城 Hotel! Can I #help you?");
 
 				addJob("I am the hotel receptionist.");
 				addHelp("When the building work on the hotel rooms is complete you will be able to #reserve one.");

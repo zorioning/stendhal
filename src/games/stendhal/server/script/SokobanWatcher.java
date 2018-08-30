@@ -27,7 +27,7 @@ public class SokobanWatcher extends ScriptImpl implements TurnListener {
 		cleanup();
 		TurnNotifier.get().notifyInSeconds(2, this);
 
-		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		Wall wall = new Wall(20, 1);
 		wall.setPosition(26, 107);
 		wall.setEntityClass("block/mine_cart_empty");
@@ -70,7 +70,7 @@ public class SokobanWatcher extends ScriptImpl implements TurnListener {
 
 	@Override
 	public void onTurnReached(int currentTurn) {
-		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		StendhalRPZone target = SingletonRepository.getRPWorld().getZone("int_semos_townhall");
 
 		Player first = null;

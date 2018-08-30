@@ -92,7 +92,7 @@ public class BakerNPC implements ZoneConfigurator {
 				addJob("I'm the local baker. My speciality is fish and leek pies. I pride myself in making them promptly.");
 				addReply(Arrays.asList("cod", "mackerel"),
 				        "You can catch cod in Ados. Mackerel may be caught at sea. Perhaps creatures which eat fish might drop them too.");
-				addReply("flour", "We get our supplies of flour from Semos");
+				addReply("flour", "We get our supplies of flour from 塞门镇");
 				addReply("leek", "We're lucky enough to have leeks growing right here in the Fado allotments.");
 				addHelp("Ask me to make you a fish and leek pie. They're not stodgy like meat pies so you can eat them a little quicker.");
 				addGoodbye();

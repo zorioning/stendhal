@@ -45,7 +45,7 @@ import marauroa.common.Pair;
  * <p>
  * PARTICIPANTS:
  * <ul>
- * <li> Jenny, by the mill in Semos Plains
+ * <li> Jenny, by the mill in 塞门镇 Plains
  * </ul>
  *
  * STEPS:
@@ -84,7 +84,7 @@ public class KillGnomes extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"Some gnomes have been stealing carrots from the farms North of Semos. "
+				"Some gnomes have been stealing carrots from the farms North of 塞门镇. "
 				+ "They need to be taught a lesson, will you help?",
 				null);
 
@@ -117,7 +117,7 @@ public class KillGnomes extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Excellent. You'll find the gnomes camped out, north west of Semos. Make sure you kill some of the ringleaders, too, at least one infantryman and one cavalryman.",
+				"Excellent. You'll find the gnomes camped out, north west of 塞门镇. Make sure you kill some of the ringleaders, too, at least one infantryman and one cavalryman.",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,

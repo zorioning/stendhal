@@ -36,7 +36,7 @@ import games.stendhal.server.maps.Region;
 
 /**
  * In this quest the player can help Eheneumniranin by bringing
- * two carts with straw up to the barn near Karl.
+ * two carts with straw up to the barn near 卡尔.
  *
  * (proof of concept for pushable blocks)
  *
@@ -52,7 +52,7 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li> Eheneumniranin asks you to push some carts full of straw to Karl's barn </li>
+ * <li> Eheneumniranin asks you to push some carts full of straw to 卡尔's barn </li>
  * <li> Push 2 carts to the designated spots in front of the barn </li>
  * </ul>
  *
@@ -136,12 +136,12 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-                        "That is really nice. I was getting tired of bringing carts to Karl. Please #push two straw carts to Karl's #barn and tell me that you are #done afterwards.",
+                        "That is really nice. I was getting tired of bringing carts to 卡尔. Please #push two straw carts to 卡尔's #barn and tell me that you are #done afterwards.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start;2", 2.0));
 
 		npc.addReply("push", "You can easily move the carts by pushing them in front of the barn entrance. Take care to not get them stuck anywhere around or you won't be able to move them away.");
 
-		npc.addReply("barn", "You can find Karl's barn north of here. It is marked by a huge sign with his name.");
+		npc.addReply("barn", "You can find 卡尔's barn north of here. It is marked by a huge sign with his name.");
 
 		/*
 		 * Player refused to help - end the conversation.
@@ -190,7 +190,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("jenny"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"You can find #Jenny near Semos at the mill. She mills grain into #flour for you if you bring her a few sheaves.",
+				"You can find #Jenny near 塞门镇 at the mill. She mills grain into #flour for you if you bring her a few sheaves.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -218,7 +218,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("leander"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Leander runs the bakery in Semos City and can make #sandwiches for you if you bring him the ingredients. Why don't you give him a visit?",
+				"Leander runs the bakery in 塞门镇 and can make #sandwiches for you if you bring him the ingredients. Why don't you give him a visit?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -243,7 +243,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 
 		ChatCondition c = constructHayCartsNotYetCompletedCondition();
 
-		String cartDescription = "You see a straw cart. Can you manage to push it to Karl's barn?";
+		String cartDescription = "You see a straw cart. Can you manage to push it to 卡尔's barn?";
 
 		Block cartOne = new Block(true, "hay_cart");
 		cartOne.setPosition(87, 100);

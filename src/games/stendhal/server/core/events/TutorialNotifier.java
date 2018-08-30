@@ -84,9 +84,9 @@ public class TutorialNotifier {
 	 */
 	public static void zoneChange(final Player player, final String sourceZone,
 			final String destinationZone) {
-		if (sourceZone.equals("0_semos_village_w") && destinationZone.equals("int_semos_guard_house")) {
+		if (sourceZone.equals("0_塞门_村庄_西") && destinationZone.equals("int_semos_guard_house")) {
 			process(player, TutorialEventType.RETURN_GUARDHOUSE);
-		} else if (destinationZone.equals("0_semos_city")) {
+		} else if (destinationZone.equals("0_塞门_镇")) {
 			process(player, TutorialEventType.VISIT_SEMOS_CITY);
 		} else if (destinationZone.equals("int_semos_tavern_0")) {
 			process(player, TutorialEventType.VISIT_SEMOS_TAVERN);

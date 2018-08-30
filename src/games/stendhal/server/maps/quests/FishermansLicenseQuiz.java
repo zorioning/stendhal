@@ -93,7 +93,7 @@ public class FishermansLicenseQuiz extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met Santiago in a hut in Ados city. If I pass his quiz I get a fishing license.");
+		res.add("I met Santiago in a hut in 阿多斯城. If I pass his quiz I get a fishing license.");
 		if (!player.isQuestCompleted(QUEST_SLOT)) {
 			if (remainingTimeToWait(player)>0) {
 				res.add("I failed the last exam and it's too soon to try again.");

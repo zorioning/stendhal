@@ -61,7 +61,7 @@ public class SergeantNPC implements ZoneConfigurator  {
 		};
 
 		npc.setEntityClass("royalguardnpc");
-		npc.setDescription("Sergeant James 是 Semos镇军队的军士长。他看起来有点失落...");
+		npc.setDescription("Sergeant James 是 塞门镇军队的军士长。他看起来有点失落...");
 		npc.setPosition(66, 46);
 		npc.setBaseHP(100);
 		npc.initHP(75);

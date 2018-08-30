@@ -96,8 +96,8 @@ public class TwilightElixir extends Drink {
 					user.sendPrivateText("Oh oh. 因为一些奇怪的原因，卷轴没有把我传送到正确的地点.");
 					logger.warn("twilight elixir to unknown zone hell,"
 								+ " teleported " + user.getName()
-								+ " to Semos instead");
-					zone = SingletonRepository.getRPWorld().getZone("0_semos_city");
+								+ " to 塞门镇 instead");
+					zone = SingletonRepository.getRPWorld().getZone("0_塞门_镇");
 				}
 				((Player) user).teleport(zone, x, y, null, (Player) user);
 				extra = " 现在你应该下地狱，因为你不想别的，只考虑你自己";

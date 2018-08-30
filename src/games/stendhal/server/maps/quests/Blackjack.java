@@ -165,13 +165,13 @@ public class Blackjack extends AbstractQuest {
 			}
 
 			if (playerStands && (playerSum < bankSum)) {
-				messagebuf.append("The bank stands.\n");
+				messagebuf.append("庄家 胜.\n");
 				bankStands = true;
 			}
 			if (!bankStands) {
 				final String bankCard = deck.pop();
 				bankCards.add(bankCard);
-				messagebuf.append("The bank got a " + bankCard + ".\n");
+				messagebuf.append("庄家得到一张 " + bankCard + ".\n");
 			}
 			playerSum = sumValues(playerCards);
 			bankSum = sumValues(bankCards);
@@ -181,20 +181,20 @@ public class Blackjack extends AbstractQuest {
 				+ playerCards);
 		playerCardsItem.notifyWorldAboutChanges();
 		bankCardsItem.setQuantity(bankSum);
-		bankCardsItem.setDescription("你看了 bank's 的牌: "
+		bankCardsItem.setDescription("你看了庄家的牌: "
 				+ bankCards);
 		bankCardsItem.notifyWorldAboutChanges();
 		if (!playerStands) {
-			messagebuf.append("你有 " + playerSum + ".\n");
+			messagebuf.append("你有 " + playerSum + "点。\n");
 			if (playerSum == 21) {
 				playerStands = true;
 			}
 		}
 		if (!bankStands) {
-			messagebuf.append("The bank has " + bankSum + ".\n");
+			messagebuf.append("庄家有 " + bankSum + "点。\n");
 			if ((bankSum >= 17) && (bankSum <= 21) && (bankSum >= playerSum)) {
 				bankStands = true;
-				messagebuf.append("The bank stands.\n");
+				messagebuf.append("庄家胜。\n");
 			}
 		}
 		final String message2 = analyze(rpEntity);
@@ -214,22 +214,22 @@ public class Blackjack extends AbstractQuest {
 		final int bankSum = sumValues(bankCards);
 		String message = null;
 		if (isBlackjack(bankCards) && isBlackjack(playerCards)) {
-			message = "你有一张 blackjack, but the bank has one too. It's a push. ";
+			message = "你有一张 二十一点, 但庄家也有一个. It's a push. ";
 			message += payOff(rpEntity, 1);
 		} else if (isBlackjack(bankCards)) {
-			message = "The bank has a blackjack. Better luck next time!";
+			message = "庄家有一张 二十一点. 祝下次好运!";
 		} else if (isBlackjack(playerCards)) {
-			message = "你有一张 blackjack! 恭喜! ";
+			message = "你有一张 二十一点! 恭喜! ";
 			message += payOff(rpEntity, 3);
 		} else if (playerSum > 21) {
 			if (bankSum > 21) {
-				message = "Both have busted! This is a draw. ";
+				message = "双方出局Both have busted!平局 This is a draw. ";
 				message += payOff(rpEntity, 1);
 			} else {
 				message = "你已破产! 下次好运!";
 			}
 		} else if (bankSum > 21) {
-			message = "The bank has busted! Congratulations! ";
+			message = "庄家破产！恭喜！";
 			message += payOff(rpEntity, 2);
 		} else {
 			if (!playerStands) {
@@ -238,12 +238,12 @@ public class Blackjack extends AbstractQuest {
 			} else if (!bankStands) {
 				letBankDrawAfterPause(ramon.getAttending().getName());
 			} else if (bankSum > playerSum) {
-				message = "The bank 赢了. 下次好运!";
+				message = "庄家胜，祝下次好运!";
 			} else if (bankSum == playerSum) {
-				message = "This is a draw. ";
+				message = "平局";
 				message += payOff(rpEntity, 1);
 			} else {
-				message = "你赢了. 祝贺你! ";
+				message = "你赢了. 恭喜！";
 				message += payOff(rpEntity, 2);
 			}
 		}
@@ -272,7 +272,7 @@ public class Blackjack extends AbstractQuest {
 	 *            The player.
 	 * @param factor
 	 *            The multiplier. 1 for draw, 2 for win, 3 for win with
-	 *            blackjack.
+	 *            二十一点.
 	 * @return A message that the NPC should say to inform the player.
 	 */
 	private String payOff(final RPEntity rpEntity, final int factor) {
@@ -280,10 +280,10 @@ public class Blackjack extends AbstractQuest {
 		money.setQuantity(factor * stake);
 		rpEntity.equipOrPutOnGround(money);
 		if (factor == 1) {
-			return "You get your stake back.";
+			return "取回你的筹码。";
 		} else {
-			return "Here's your stake, plus " + (factor - 1) * stake
-					+ " pieces of gold.";
+			return "你的筹码, 增加 " + (factor - 1) * stake
+					+ " 筹码。";
 		}
 	}
 
@@ -302,11 +302,11 @@ public class Blackjack extends AbstractQuest {
 			@Override
 			protected void createDialog() {
 
-				addGreeting("欢迎来到 #blackjack 牌桌! 在船出发之前，你可以在这里玩玩 #play 牌打发时间。");
-				addJob("我是Semos酒吧的发牌手，但我没有参与打牌的权力，但我哥哥Ricardo也在这个酒吧工作。");
+				addGreeting("欢迎来到 #二十一点 牌桌! 在船出发之前，你可以在这里玩玩 #play 牌打发时间。");
+				addJob("我是塞门镇酒吧的发牌手，但我没有参与打牌的权力，但我哥哥里卡多也在这个酒吧工作。");
 				addReply(
-						"blackjack",
-						"Blackjack 玩法简单，不懂可以在墙上读读规则说明。.");
+						"二十一点",
+						"二十一点 玩法简单，不懂可以在墙上读读规则说明。.");
 				addHelp("不要太专注于玩牌而赶不上船，注意听通知");
 				addGoodbye("再见!");
 			}
@@ -320,7 +320,7 @@ public class Blackjack extends AbstractQuest {
 
 		ramon.setEntityClass("naughtyteen2npc");
 		ramon.setPosition(26, 36);
-		ramon.setDescription("Ramon 想和你玩几局 blackjack. 你想给他个机会吗?");
+		ramon.setDescription("Ramon 想和你玩几局 二十一点. 你想给他个机会吗?");
 		ramon.setDirection(Direction.DOWN);
 		ramon.initHP(100);
 		zone.add(ramon);
@@ -419,19 +419,19 @@ public class Blackjack extends AbstractQuest {
 				});
 
 		fillQuestInfo(
-				"Blackjack",
-				"不你在Athor码头等船时，可以玩几局Blackjack打发时间.",
+				"二十一点",
+				"不你在Athor码头等船时，可以玩几局Blackjack（二十一点）打发时间.",
 				true);
 	}
 
 	@Override
 	public String getSlotName() {
-		return "blackjack";
+		return "二十一点";
 	}
 
 	@Override
 	public String getName() {
-		return "Blackjack";
+		return "二十一点";
 	}
 
 	@Override

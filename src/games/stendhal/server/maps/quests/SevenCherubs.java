@@ -68,11 +68,11 @@ public class SevenCherubs extends AbstractQuest {
 	private final HashMap<String, String> cherubsHistory = new HashMap<String,String>();
 
 	private void fillHistoryMap() {
-		cherubsHistory.put("Cherubiel", "I met Cherubiel in Semos Village.");
+		cherubsHistory.put("Cherubiel", "I met Cherubiel in 塞门镇 Village.");
 		cherubsHistory.put("Ophaniel",  "I met Ophaniel by Orril River.");
 		cherubsHistory.put("Gabriel",   "I met Gabriel in Nalwor City.");
 		cherubsHistory.put("Raphael",   "I met Raphael between Orril River and the bridge to Fado.");
-		cherubsHistory.put("Zophiel",   "I met Zophiel on Semos Mountain.");
+		cherubsHistory.put("Zophiel",   "I met Zophiel on 塞门镇 Mountain.");
 		cherubsHistory.put("Azazel",    "I met Azazel by Ados Rock.");
 		cherubsHistory.put("Uriel",     "I met Uriel on Orril Mountain.");
 	}
@@ -175,7 +175,7 @@ public class SevenCherubs extends AbstractQuest {
 								raiser.say("Well done! You only need to find "
 												+ (7 - list.size())
 												+ " more. Fare thee well!");
-								if (raiser.getZone().getName().equals("0_semos_village_w")) {
+								if (raiser.getZone().getName().equals("0_塞门_村庄_西")) {
 									player.addXP(20);
 								} else {
 									player.addXP((7 - left + 1) * 200);
@@ -235,7 +235,7 @@ public class SevenCherubs extends AbstractQuest {
 		StendhalRPZone zone;
 		SpeakerNPC npc;
 
-		zone = world.getZone("0_semos_village_w");
+		zone = world.getZone("0_塞门_村庄_西");
 		npc = new CherubNPC("Cherubiel", 32, 60);
 		zone.add(npc);
 
@@ -255,7 +255,7 @@ public class SevenCherubs extends AbstractQuest {
 		npc = new CherubNPC("Uriel", 47, 27);
 		zone.add(npc);
 
-		zone = world.getZone("0_semos_mountain_n2_w2");
+		zone = world.getZone("0_塞门_山_北2_西2");
 		npc = new CherubNPC("Zophiel", 16, 3);
 		zone.add(npc);
 

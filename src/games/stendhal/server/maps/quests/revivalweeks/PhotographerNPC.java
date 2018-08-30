@@ -24,7 +24,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 public class PhotographerNPC implements LoadableContent {
 
 	private void createNPC() {
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		final SpeakerNPC npc1 = new SpeakerNPC("Kirla") {
 
 			@Override

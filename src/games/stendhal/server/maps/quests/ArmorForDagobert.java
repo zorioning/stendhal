@@ -44,7 +44,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Dagobert, the consultant at the bank of Semos</li>
+ * <li>Dagobert, the consultant at the bank of 塞门镇</li>
  * </ul>
  *
  * STEPS:
@@ -79,7 +79,7 @@ public class ArmorForDagobert extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我见到了 Dagobert. 他是 Semos 银行的顾问。");
+		res.add("我见到了 Dagobert. 他是 塞门镇 银行的顾问。");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("他让我找一件 皮胸甲 ，但我拒绝了他的请求。");
@@ -210,7 +210,7 @@ public class ArmorForDagobert extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Armor For Dagobert",
-				"Dagobert, Semos 镇的银行顾问，需要安全保护.",
+				"Dagobert, 塞门镇的银行顾问，需要安全保护.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();

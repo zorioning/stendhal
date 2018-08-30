@@ -107,7 +107,7 @@ public class FoundGirl implements LoadableContent {
 			Arrays.asList("Mine", "Town", "Revival", "Weeks", "Mine Town",
 					"Mine Town Revival", "Mine Town Revival Weeks", "Mine Town", "Revival Weeks"),
 			ConversationStates.ATTENDING,
-			"During the Revival Weeks we #celebrate the old and now mostly dead Mine Town north of Semos City. "
+			"During the Revival Weeks we #celebrate the old and now mostly dead Mine Town north of 塞门镇. "
 			+ "The party was cancelled a few years ago because the people of Ados were searching for me after I got lost. "
 			+ "Now that I am found we can party again!",
 			null);

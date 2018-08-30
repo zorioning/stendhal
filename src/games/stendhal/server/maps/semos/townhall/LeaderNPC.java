@@ -55,7 +55,7 @@ public class LeaderNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Oh hi, we're just taking a break here. My three cadets just got a reward from the Mayor for helping defend Semos.");
+				addGreeting("Oh hi, we're just taking a break here. My three cadets just got a reward from the Mayor for helping defend 塞门镇.");
 				addJob("I'm in charge of these three cadets. They need a lot of instruction, which I will have to go back to soon. Feel free to listen in, you may learn something!");
 				addHelp("I can give you advice on your #weapon.");
 				addQuest("Let me advise you on your #weapon.");

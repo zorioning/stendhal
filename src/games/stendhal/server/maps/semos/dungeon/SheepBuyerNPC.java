@@ -41,8 +41,8 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Tor'Koom") {
 			@Override
 			public void createDialog() {
-				// TODO: The code is similar to Sato's SheepBuyerBehaviour.
-				// Only the phrasing is different, and Sato doesn't buy
+				// TODO: The code is similar to 赛特's SheepBuyerBehaviour.
+				// Only the phrasing is different, and 赛特 doesn't buy
 				// skinny sheep. Get rid of the code duplication.
 				addGreeting(getName() + " 来看看！人类!");
 				addJob(getName() + " 从人类那里买东西真便宜!");

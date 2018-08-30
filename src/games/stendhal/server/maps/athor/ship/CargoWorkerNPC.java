@@ -36,7 +36,7 @@ public class CargoWorkerNPC implements ZoneConfigurator  {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Klaas") {
+		final SpeakerNPC npc = new SpeakerNPC("克拉丝") {
 
 			/*@Override
 			protected void createPath() {
@@ -96,7 +96,7 @@ public class CargoWorkerNPC implements ZoneConfigurator  {
 
 			npc.setPosition(25, 38);
 			npc.setEntityClass("seller2npc");
-			npc.setDescription ("You see Klaas who takes care of the cargo. He hates rats!");
+			npc.setDescription ("You see 克拉丝 who takes care of the cargo. He hates rats!");
 			npc.setDirection(Direction.DOWN);
 			zone.add(npc);
 	}

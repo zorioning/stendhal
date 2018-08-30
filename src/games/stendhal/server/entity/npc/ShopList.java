@@ -28,7 +28,7 @@ public final class ShopList {
 
 		shops.add("food&drinks", "beer", 10);
 		shops.add("food&drinks", "wine", 15);
-		shops.add("food&drinks", "flask", 5);
+		shops.add("food&drinks", "瓶子", 5);
 		shops.add("food&drinks", "干酪", 20);
 		shops.add("food&drinks", "apple", 10);
 		shops.add("food&drinks", "carrot", 10);
@@ -60,13 +60,13 @@ public final class ShopList {
 		shops.add("scrolls", "summon scroll", 200);
 		shops.add("scrolls", "empty scroll", 2000);
 
-		shops.add("fadoscrolls", "fado city scroll", 600);
+		shops.add("fadoscrolls", "法多城回城卷", 600);
 		shops.add("fadoscrolls", "empty scroll", 2200);
 
 		shops.add("nalworscrolls", "nalwor city scroll", 400);
 		shops.add("nalworscrolls", "empty scroll", 2000);
 
-		shops.add("adosscrolls", "ados city scroll", 400);
+		shops.add("adosscrolls", "阿多斯城回城卷", 400);
 		shops.add("adosscrolls", "empty scroll", 2000);
 
 		shops.add("kirdnehscrolls", "kirdneh city scroll", 400);
@@ -76,15 +76,15 @@ public final class ShopList {
 		shops.add("allscrolls", "home scroll", 250);
 		shops.add("allscrolls", "summon scroll", 200);
 		shops.add("allscrolls", "empty scroll", 2000);
-		shops.add("allscrolls", "ados city scroll", 400);
+		shops.add("allscrolls", "阿多斯城回城卷", 400);
 		shops.add("allscrolls", "nalwor city scroll", 400);
-		shops.add("allscrolls", "fado city scroll", 600);
+		shops.add("allscrolls", "法多城回城卷", 600);
 		shops.add("allscrolls", "kirdneh city scroll", 600);
 
 		shops.add("sellstuff", "knife", 15);
 		shops.add("sellstuff", "木棍", 10);
 		shops.add("sellstuff", "dagger", 25);
-		shops.add("sellstuff", "wooden shield", 25);
+		shops.add("sellstuff", "木盾", 25);
 		shops.add("sellstuff", "", 25);
 		shops.add("sellstuff", "leather helmet", 25);
 		shops.add("sellstuff", "cloak", 30);
@@ -106,7 +106,7 @@ public final class ShopList {
 		shops.add("sellbetterstuff2", "shadow shield", 30000);
 		shops.add("sellbetterstuff2", "hell dagger", 20000);
 
-		shops.add("sellrangedstuff", "wooden bow", 300);
+		shops.add("sellrangedstuff", "木弓", 300);
 		shops.add("sellrangedstuff", "木箭", 2);
 
 		shops.add("buystuff", "short sword", 15);
@@ -313,7 +313,7 @@ public final class ShopList {
 		shops.add("buyarcherstuff", "铁箭", 5);
 		shops.add("buyarcherstuff", "金箭", 10);
 		shops.add("buyarcherstuff", "加强箭", 35);
-		shops.add("buyarcherstuff", "wooden bow", 250);
+		shops.add("buyarcherstuff", "木弓", 250);
 		shops.add("buyarcherstuff", "crossbow", 400);
 		shops.add("buyarcherstuff", "longbow", 300);
 		shops.add("buyarcherstuff", "composite bow", 350);
@@ -348,7 +348,7 @@ public final class ShopList {
 		shops.add("buy4gnomes", "cloak", 25);
 		shops.add("buy4gnomes", "apple", 5);
 		shops.add("buy4gnomes", "marbles", 50);
-		shops.add("buy4gnomes", "wooden shield", 20);
+		shops.add("buy4gnomes", "木盾", 20);
 
 		// hotdog lady in athor)
 		shops.add("buy4hotdogs", "sausage", 30);

@@ -55,7 +55,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				// greeting message in quest given (ChocolateForElisabeth)
 				addJob("Job? I like to play with my #toys :)");
-				addReply("toys", "There is a young boy who lives in Semos and gave me one of his teddies once :) So sweet!");
+				addReply("toys", "There is a young boy who lives in 塞门镇 and gave me one of his teddies once :) So sweet!");
 				addHelp("Ask my #mommy, maybe she can help you...");
 				addReply("mommy", "She sits on the bench over there and enjoys the sun.");
 				addOffer("I can't offer you anything, I'm just a #child.");

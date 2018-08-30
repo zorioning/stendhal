@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.BuyerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 
 /*
- * Inside Semos Tavern - Level 1 (upstairs)
+ * Inside 塞门镇 Tavern - Level 1 (upstairs)
  */
 public class RareWeaponsSellerNPC implements ZoneConfigurator {
 	private final ShopList shops = SingletonRepository.getShopList();
@@ -64,7 +64,7 @@ public class RareWeaponsSellerNPC implements ZoneConfigurator {
 				        ConversationStates.ATTENDING,
 				        "Ssshh! 我偶尔买点稀有武器和盔甲，你有吗？看看我的出价 #offer", null);
 				addOffer("看下墙上的黑板，上面有我的出价.");
-				add(ConversationStates.ATTENDING, Arrays.asList("eye", "leg", "wood", "patch"),
+				add(ConversationStates.ATTENDING, Arrays.asList("eye", "leg", "木头", "patch"),
 				        ConversationStates.ATTENDING, "不是每天都这么走运 ...", null);
 				add(ConversationStates.ATTENDING, "pirate", null, ConversationStates.ATTENDING,
 				        "那跟你没关系!", null);

@@ -18,7 +18,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.mapstuff.spawner.PassiveEntityRespawnPoint;
 
 /**
- * Creates bottles in Semos bakery
+ * Creates bottles in 塞门镇 bakery
  */
 public class ItemsOnTable implements ZoneConfigurator {
 	@Override

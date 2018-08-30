@@ -89,7 +89,7 @@ public class AwaitingPhase extends TPPQuest {
 	 */
 	private void fillConversations() {
 		//piper
-		conversations.add("Good day, Mayor Chalmers. What did you call me here for?");
+		conversations.add("Good day, 查玛斯市长. What did you call me here for?");
 		//mayor
 		conversations.add("Hello, very glad to see our respectable hero here. Who hasn't heard about you, there is almost...");
 		//piper
@@ -103,7 +103,7 @@ public class AwaitingPhase extends TPPQuest {
 		//piper
 		conversations.add("I can help, if you are ready to pay.");
 		//mayor
-		conversations.add("Ados City has no other way to eliminate this nuisance. We will pay you.");
+		conversations.add("阿多斯城 has no other way to eliminate this nuisance. We will pay you.");
 		//piper
 		conversations.add("Do you know my usual price?");
 		//mayor
@@ -228,9 +228,9 @@ public class AwaitingPhase extends TPPQuest {
 			"because melody will also protect MY rats. " +
 			"Just enjoy the show.";
 			 */
-			"Mayor Chalmers shouts: Thankfully, all the #rats are gone now, " +
+			"查玛斯市长 shouts: Thankfully, all the #rats are gone now, " +
 			"the Pied Piper hypnotized them and led them away to the dungeons. "+
-			"Those of you who helped Ados City with the rats problem "+
+			"Those of you who helped 阿多斯城 with the rats problem "+
 			"can get your #reward now.";
 
 		return text;

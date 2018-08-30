@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.BuyerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 
 /*
- * Ados City, house with a woman who makes sails for the ships
+ * 阿多斯城, house with a woman who makes sails for the ships
  */
 public class SeamstressNPC implements ZoneConfigurator {
 	private final ShopList shops = SingletonRepository.getShopList();

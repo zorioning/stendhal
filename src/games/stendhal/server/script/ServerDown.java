@@ -82,7 +82,7 @@ public class ServerDown extends ScriptImpl {
 		// Note: This portal is defined in misc.xml, too.
 		Portal portal = new Portal();
 		portal.setPosition(15, 28);
-		portal.setDestination("0_semos_city", "townhall_entrance");
+		portal.setDestination("0_塞门_镇", "townhall_entrance");
 		zone.add(portal);
 
 		zone.remove(NPCList.get().get("Megan"));

@@ -136,9 +136,9 @@
     </equipable>
   </item>
   
-  <item name="wooden spear">
+  <item name="木矛">
     <type class="missile" subclass="wooden_spear" tileid="-1"/>
-    <description>You see a wooden spear. You can attack at a distance with this primitive weapon. Stand square on, not diagonally, for the best results.</description>
+    <description>You see a 木矛. You can attack at a distance with this primitive weapon. Stand square on, not diagonally, for the best results.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="10"/>

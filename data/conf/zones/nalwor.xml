@@ -592,7 +592,7 @@ below average.
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
         <parameter name="key">nalwor bank key</parameter>
-        <parameter name="rejected">The door is locked.</parameter>
+        <parameter name="rejected">门锁住了</parameter>
       </implementation>
     </portal>
     <!-- seems strange to lock it from the inside? Else, a player will leave 
@@ -602,7 +602,7 @@ below average.
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
         <parameter name="key">nalwor bank key</parameter>
-        <parameter name="rejected">The door is locked.</parameter>
+        <parameter name="rejected">门锁住了</parameter>
       </implementation>
     </portal>
     <entity x="18" y="17">
@@ -862,7 +862,7 @@ below average.
       <name>Nalwor Bank Left Entrance</name>
       <title>Nalwor Bank</title>
       <type>bank</type>
-      <description>A place to store your possessions. This one also houses an affiliate of Semos bank.</description>
+      <description>A place to store your possessions. This one also houses an affiliate of 塞门镇 bank.</description>
       <url>https://stendhalgame.org/player-guide/faq.html#Banking</url>
     </point-of-interest>
 
@@ -874,7 +874,7 @@ below average.
       <name>Nalwor Bank Right Entrance</name>
       <title>Nalwor Bank</title>
       <type>bank</type>
-      <description>A place to store your possessions. This one also houses an affiliate of Semos bank.</description>
+      <description>A place to store your possessions. This one also houses an affiliate of 塞门镇 bank.</description>
       <url>https://stendhalgame.org/player-guide/faq.html#Banking</url>
     </point-of-interest>
 

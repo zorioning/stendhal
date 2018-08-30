@@ -563,7 +563,7 @@
 
   <item name="nihonto">
     <type class="sword" subclass="nihonto" tileid="-1"/>
-    <description>You see a samurai's nihonto sword with a razor sharp blade.</description>
+    <description>You see a 武士's nihonto sword with a razor sharp blade.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="20"/>

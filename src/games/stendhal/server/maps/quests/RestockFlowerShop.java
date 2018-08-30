@@ -174,17 +174,17 @@ public class RestockFlowerShop extends AbstractQuest {
 				Arrays.asList("who", "where"),
 				Arrays.asList("jenny"),
 				Arrays.asList("fleur"),
-				Arrays.asList("flask"),
+				Arrays.asList("瓶子"),
 				ConversationPhrases.HELP_MESSAGES);
 		List<String> responses = new ArrayList<String>();
 		responses.add("#Jenny carries seeds for this type of flower.");
 		responses.add("#Fleur always has the nicest roses.");
 		responses.add("Zantedeschia is my favorite flower. Some call them arum or calla lilies, though they are not true lilies. Ask #Jenny if she has any bulbs.");
-		responses.add("I need water to keep the #flowers fresh. You'll need to find a water source and fill up some #flasks. Maybe there is someone who sells water.");
+		responses.add("I need water to keep the #flowers fresh. You'll need to find a water source and fill up some #瓶子s. Maybe there is someone who sells water.");
 		responses.add("#Jenny knows a lot about flowers. You may be able to talk with #Fleur as well.");
-		responses.add("You can find Jenny around the windmill near Semos where she mills flour.");
+		responses.add("You can find Jenny around the windmill near 塞门镇 where she mills flour.");
 		responses.add("Fleur works at the market in Kirdneh.");
-		responses.add("Ask the barmaid in Semos.");
+		responses.add("Ask the barmaid in 塞门镇.");
 		responses.add("I can #remind you of which #flowers I need. I might also be able help you figure out #where you can find some.");
 
 		for (int f = 0; f < responses.size(); f++) {

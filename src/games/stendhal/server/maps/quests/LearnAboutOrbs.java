@@ -33,7 +33,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Ilisa, the summon healer in Semos temple</li>
+ * <li>Ilisa, the summon healer in 塞门镇 temple</li>
  * </ul>
  *
  * STEPS:
@@ -72,7 +72,7 @@ public class LearnAboutOrbs extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Ilisa in Semos Temple.");
+		res.add("I have met Ilisa in 塞门镇 Temple.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("done")) {
 			res.add("Ilisa taught me how to use orbs. I must be careful as they could send me somewhere dangerous.");

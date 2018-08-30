@@ -440,7 +440,7 @@
       <item value="皮胸甲" quantity="[1,1]" probability="10.0"/>
       <item value="护肩皮胸甲" quantity="[1,1]" probability="10.0"/>
       <item value="mace" quantity="[1,1]" probability="1.0"/>
-      <item value="wooden shield" quantity="[1,1]" probability="0.5"/>
+      <item value="木盾" quantity="[1,1]" probability="0.5"/>
       <item value="studded legs" quantity="[1,1]" probability="1.0"/>
       <item value="dagger" quantity="[1,1]" probability="0.5"/>
     </drops>
