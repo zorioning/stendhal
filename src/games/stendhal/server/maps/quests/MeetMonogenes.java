@@ -45,7 +45,7 @@ import games.stendhal.server.maps.Region;
 public class MeetMonogenes extends AbstractQuest {
 	@Override
 	public String getSlotName() {
-		return "梦金斯";
+		return "Monogenes";
 	}
 	@Override
 	public void addToWorld() {
@@ -65,12 +65,12 @@ public class MeetMonogenes extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(
 						new GreetingMatchesNameCondition(npc.getName()),
-						new QuestNotCompletedCondition("梦金斯")),
+						new QuestNotCompletedCondition("Monogenes")),
 				ConversationStates.INFORMATION_1,
 				"你好，过来这外地人！不要因为人们的陌生和冷漠觉得害怕... " +
 				"Blordrough 令人恐惧的影响力已四处弥散，也影响着这个城镇和我们每个人。" +
 				"尽管不太熟，我能给你一些提示，你原意听听吗？",
-				new SetQuestAction("梦金斯", "done"));
+				new SetQuestAction("Monogenes", "done"));
 
 		npc.add(
 			ConversationStates.ATTENDING,
@@ -196,7 +196,7 @@ public class MeetMonogenes extends AbstractQuest {
 	@Override
 	public List<String> getHistory(final Player player) {
 			final List<String> res = new ArrayList<String>();
-			if (!player.hasQuest("梦金斯")) {
+			if (!player.hasQuest("Monogenes")) {
 				return res;
 			}
 			if (isCompleted(player)) {

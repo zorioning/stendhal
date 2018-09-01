@@ -153,7 +153,7 @@ public class MeetHayunn extends AbstractQuest {
 		reward.add(new EquipItemAction("money", 5));
 		reward.add(new IncreaseXPAction(10));
 		reward.add(new SetQuestAction(QUEST_SLOT, "taught"));
-		reward.add(new ExamineChatAction("Monogenes.png", "梦金斯", "塞门镇北部"));
+		reward.add(new ExamineChatAction("Monogenes.png", "Monogenes", "塞门镇北部"));
 
 		npc.add(
 			ConversationStates.INFORMATION_1,
@@ -187,7 +187,7 @@ public class MeetHayunn extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_3,
-			"也许现在你已经发现了 塞门镇 的地牢. 那里的地下走廊很狭窄，因此快速准确的移动会很有效, 你想详细了解,对吧? #Yes?",
+			"也许现在你已经发现了 塞门镇 的地牢. 那里的地下走廊很狭窄，因此快速准确的移动会很有效, 你想详细了解,是吧?",
 			null);
 
 		npc.add(
