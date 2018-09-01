@@ -26,7 +26,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.ProducerBehaviour;
 import games.stendhal.server.entity.npc.behaviour.impl.SeedSellerBehaviour;
 
 /**
- * The miller (original name: Jenny). She mills flour for players who bring
+ * The miller (original name: 詹妮). She mills flour for players who bring
  * grain.
  */
 public class MillerNPC implements ZoneConfigurator {
@@ -38,7 +38,7 @@ public class MillerNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		SpeakerNPC npc = new SpeakerNPC("Jenny") {
+		SpeakerNPC npc = new SpeakerNPC("詹妮") {
 			@Override
 			public void createDialog() {
 				addJob("我管理着这个风车，用它把农民生产的谷物 #grain 磨 #mill 成面粉，我也为 塞门镇 的面包房供货.");
@@ -68,9 +68,9 @@ public class MillerNPC implements ZoneConfigurator {
 		final ProducerBehaviour behaviour = new ProducerBehaviour("jenny_mill_flour",
 				"mill", "flour", requiredResources, 2 * 60);
 		new SellerAdder().addSeller(npc, new SeedSellerBehaviour());
-		new ProducerAdder().addProducer(npc, behaviour,"你好! 我叫 Jenny, 当地的磨坊厂长。如果你给我带来一些谷物 #grain, 我能把它们磨 #mill 成面粉flour.");
+		new ProducerAdder().addProducer(npc, behaviour,"你好! 我叫 詹妮, 当地的磨坊厂长。如果你给我带来一些谷物 #grain, 我能把它们磨 #mill 成面粉flour.");
 		npc.setPosition(19, 39);
-		npc.setDescription("你看到了 Jenny. 她是当地的磨坊厂长.");
+		npc.setDescription("你看到了 詹妮. 她是当地的磨坊厂长.");
 		npc.setDirection(Direction.DOWN);
 		npc.setEntityClass("woman_003_npc");
 		zone.add(npc);

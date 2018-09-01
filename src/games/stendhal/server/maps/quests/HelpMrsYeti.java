@@ -152,7 +152,7 @@ import games.stendhal.server.maps.Region;
 	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","potion"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "knife"),
 				new PlayerHasItemWithHimCondition("knife")),
-				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #potion. I need 3 lilia flowers, 1 sprig of kokuda, 1 glass of wine and 1 black pearl. Please bring them all together at once and then ask me to make the #potion.",
+				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #potion. I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of wine and 1 black pearl. Please bring them all together at once and then ask me to make the #potion.",
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, "potion"), new DropItemAction("knife")));
 
 	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","potion"),
@@ -162,7 +162,7 @@ import games.stendhal.server.maps.Region;
 				null);
 
 		final List<ChatAction> potionactions = new LinkedList<ChatAction>();
-		potionactions.add(new DropItemAction("lilia",3));
+		potionactions.add(new DropItemAction("紫丁香",3));
 		potionactions.add(new DropItemAction("kokuda"));
 		potionactions.add(new DropItemAction("wine"));
 		potionactions.add(new DropItemAction("black pearl"));
@@ -173,7 +173,7 @@ import games.stendhal.server.maps.Region;
 		// don't make player wait for potion - could add this in later if wanted
 		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","potion"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "potion"),
-								 new PlayerHasItemWithHimCondition("lilia",3),
+								 new PlayerHasItemWithHimCondition("紫丁香",3),
 								 new PlayerHasItemWithHimCondition("kokuda"),
 								 new PlayerHasItemWithHimCondition("wine"),
 								 new PlayerHasItemWithHimCondition("black pearl")),
@@ -183,11 +183,11 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","potion"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "potion"),
 								 new NotCondition(
-												  new AndCondition(new PlayerHasItemWithHimCondition("lilia",3),
+												  new AndCondition(new PlayerHasItemWithHimCondition("紫丁香",3),
 																   new PlayerHasItemWithHimCondition("kokuda"),
 																   new PlayerHasItemWithHimCondition("wine"),
 																   new PlayerHasItemWithHimCondition("black pearl")))),
-				ConversationStates.ATTENDING, "I need 3 lilia flowers, 1 sprig of kokuda, 1 glass of wine and 1 black pearl to make the love potion. Please bring them all together at once. Thanks!", null);
+				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of wine and 1 black pearl to make the love potion. Please bring them all together at once. Thanks!", null);
 
 
 	}
@@ -378,7 +378,7 @@ import games.stendhal.server.maps.Region;
 			if ("knife".equals(questState)) {
 				return res;
 			}
-			res.add("The love potion requires 3 lilia flowers, 1 sprig of kokuda, 1 glass of wine and 1 black pearl.");
+			res.add("The love potion requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of wine and 1 black pearl.");
 			if ("potion".equals(questState)) {
 				return res;
 			}

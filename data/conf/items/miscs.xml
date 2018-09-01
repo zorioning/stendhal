@@ -22,9 +22,9 @@
     </equipable>
   </item>
 
-  <item name="seed">
+  <item name="种子">
     <type class="misc" subclass="seed" tileid="-1"/>
-    <description>You see a seed. It can be planted anywhere, but it will only thrive on fertile ground.</description>
+    <description>You see a 种子. It can be planted anywhere, but it will only thrive on fertile ground.</description>
     <implementation class-name="games.stendhal.server.entity.item.Seed"/> 
 	 <attributes>
       <quantity value="1"/>

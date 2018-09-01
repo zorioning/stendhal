@@ -222,7 +222,7 @@ public class DisplaceAction implements ActionListener {
 	/* returns true if zone is semos tavern and entity is dice */
 	private boolean isGamblingZoneAndIsDice(final Entity entity, final Player player) {
 		final StendhalRPZone zone = player.getZone();
-		return "int_semos_tavern_0".equals(zone.getName()) && ("dice").equals(entity.getTitle());
+		return "int_塞门_酒馆_0".equals(zone.getName()) && ("dice").equals(entity.getTitle());
 	}
 
 	/* returns true if entity is a corpse, it's not owner by that player, and the distance is far */

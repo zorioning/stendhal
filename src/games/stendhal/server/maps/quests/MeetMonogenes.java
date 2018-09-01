@@ -31,10 +31,10 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Speak with Monogenes PARTICIPANTS: - Monogenes
+ * QUEST: Speak with 梦金斯 PARTICIPANTS: - 梦金斯
  *
- * STEPS: - Talk to Monogenes to activate the quest and keep speaking with
- * Monogenes. - Be polite and say "bye" at the end of the conversation to get a
+ * STEPS: - Talk to 梦金斯 to activate the quest and keep speaking with
+ * 梦金斯. - Be polite and say "bye" at the end of the conversation to get a
  * small reward.
  *
  * REWARD: broken (- 10 XP (check that user's level is lesser than 2) - No money)
@@ -45,17 +45,17 @@ import games.stendhal.server.maps.Region;
 public class MeetMonogenes extends AbstractQuest {
 	@Override
 	public String getSlotName() {
-		return "Monogenes";
+		return "梦金斯";
 	}
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Meet Monogenes",
-				"A wise old man in 塞门镇 has a map to guide newcomers through the town.",
+				"会见梦金斯",
+				"塞门镇一们年老的智者有一张地图，可以指引新玩家熟悉此镇。",
 				false);
-		final SpeakerNPC npc = npcs.get("Monogenes");
+		final SpeakerNPC npc = npcs.get("梦金斯");
 
-		npc.addGreeting(null, new SayTextAction("Hi again, [name]. How can I #help you this time?"));
+		npc.addGreeting(null, new SayTextAction("又见面了, [name]. 这次要 #帮助 你做点什么？"));
 
 		// A little trick to make NPC remember if it has met
         // player before and react accordingly
@@ -65,19 +65,19 @@ public class MeetMonogenes extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(
 						new GreetingMatchesNameCondition(npc.getName()),
-						new QuestNotCompletedCondition("Monogenes")),
+						new QuestNotCompletedCondition("梦金斯")),
 				ConversationStates.INFORMATION_1,
-				"Hello there, stranger! Don't be too intimidated if people are quiet and reserved... " +
-				"the fear of Blordrough and his forces has spread all over the country, and we're all " +
-				"a bit concerned. I can offer a few tips on socializing though, would you like to hear them?",
-				new SetQuestAction("Monogenes", "done"));
+				"你好，过来这外地人！不要因为人们的陌生和冷漠觉得害怕... " +
+				"Blordrough 令人恐惧的影响力已四处弥散，也影响着这个城镇和我们每个人。" +
+				"尽管不太熟，我能给你一些提示，你原意听听吗？",
+				new SetQuestAction("梦金斯", "done"));
 
 		npc.add(
 			ConversationStates.ATTENDING,
 			ConversationPhrases.HELP_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_1,
-			"I can offer you a few tips on socializing with the residents of 塞门镇, if you like?",
+			"我能给你一些有关塞门镇居民情况的小提示， 是否你想听?",
 			null);
 
 		npc.add(
@@ -85,11 +85,11 @@ public class MeetMonogenes extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"You should introduce yourself by saying \"hi\". After this, try to keep the conversation " +
-			"to the topics they bring up; suitable subjects will be highlighted #'like this'. A few " +
-			"generally safe topics of conversation are the person's #job, asking for #help, asking if " +
-			"they have an #offer to make, and asking for a #quest to go on. Now, if you want a quick " +
-			"run-down of the #buildings in 塞门镇, just say.",
+			"你可通通说说 \"#hi\" \"#你好\" \"嗨\" \"喂\" 等方式吸引别人的注意。 " +
+			"然后看看对方原意谈论的内容，一些高亮的内容 比如 #'像这样' 。" +
+			"还有一些常用的对话词语可以对话，比如问 #工作 , 寻求 #帮助 , " +
+			"还有交易有关的 #买卖 或 #交易 等常用对话。你可以继续问 #问题 。" +
+			"r如果你想快速的了解下 塞门镇 的常用 #地标 ，问我就对了.",
 			null);
 
 		npc.add(
@@ -97,7 +97,7 @@ public class MeetMonogenes extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"And how are you supposed to know what's happening? By reading the 塞门镇 Tribune? Hah! Bye, then.",
+			"想了解发生了什么事？想听听塞门镇讲坛？哈!且听下回分解。",
 			null);
 
 		final List<String> yesnotriggers = new ArrayList<String>();
@@ -109,62 +109,62 @@ public class MeetMonogenes extends AbstractQuest {
 				"",
 				new NotCondition(new TriggerInListCondition(yesnotriggers)),
 				ConversationStates.INFORMATION_1,
-				"I asked you a 'yes or no' question: I can offer a few tips on socializing, would you like to hear them?",
+				"问你一个 ' #是 与 #不 ' 的问题：我可以提供一些关于社区的小提示，你原意听听吗？",
 				null);
 
 		// he puts 'like this' into blue and so many people try that first
 		npc.addReply(
-				"like this",
-				"That's right, like that! Now, I can show you a #map or direct you to the #bank, the #library, the #tavern, the #temple, the #blacksmith, the #bakery, or the old #village.");
+				"像这样",
+				"对啦，像这样！现在，你可以查看这张 #地图 或指引你去 #银库 ,  #图书馆 ,  #酒店 , #教堂 ,  #铁匠铺 ,  #面包房 , 或者旧 #村庄 .");
 
 		npc.addReply(
-			"buildings",
-			"I can show you a #map or direct you to the #bank, the #library, the #tavern, the #temple, the #blacksmith, the #bakery, the #public #chest or the old #village.");
+			"地标",
+			"给你一张地图，或为你指出 #银库 ,  #图书馆 ,  #酒店 , #教堂 ,  #铁匠铺 ,  #面包房 , #公共箱 或者旧 #村庄 等地圵.");
 
 		npc.add(
 			ConversationStates.ATTENDING,
-			"map", null, ConversationStates.ATTENDING,
-			"I have marked the following locations on my map:\n"
-			+ "1 Townhall, Mayor lives here,   2 Library,   3 Bank,   4 Bakery,\n"
-			+ "5 Storage,   6 Blacksmith, 卡蔓,   7 Inn, Margaret \n"
-        	+ "8 Temple, Ilisa,   9 Dangerous Dungeon,\n"
-        	+ "10 Public Chest, \n"
-        	+ "A 塞门镇 Village,   B Northern Plains and Mine, \n"
-        	+ "C Very long path to Ados, \n"
-        	+ "D Southern Plains and Nalwor Forest, \n"
-        	+ "E 塞门镇 Village Open Field",
-        	new ExamineChatAction("map-semos-city.png", "塞门镇", "Map of 塞门镇"));
+			"地图", null, ConversationStates.ATTENDING,
+			"我已在这张地图上作了地标标记:\n"
+			+ "1 镇政厅, 城主住在里面,   2 图书馆,   3 银库,   4 面包房,\n"
+			+ "5 银库,   6 铁匠铺的卡蔓,   7 酒店的Margaret \n"
+        	+ "8 教堂的Ilisa,   9 地牢 Dungeon,\n"
+        	+ "10 公共箱, \n"
+        	+ "A 塞门镇 村庄,   B 北部平源和矿山, \n"
+        	+ "C 去 Ados 城的大路, \n"
+        	+ "D 南部平原和 Nalwor 森林, \n"
+        	+ "E 塞门镇 村庄 开放地带",
+        	new ExamineChatAction("map-semos-city.png", "塞门镇", "塞门镇地图"));
 
 		npc.addReply(
-			"bank",
-			"See this big building in front of me, with the giant fake treasure chest? That's it right there. Kinda obvious once you think about it.");
+			"银库",
+			"我前面的一所大房子，门前放着一个很大的假宝箱。很明显，就是那。");
 
 		npc.addReply(
-			"library",
-			"Follow the path from here to the west; you'll see a building with two doors, and the emblem of a book and quill pen on display.");
+			"图书馆",
+			"顺着路往西走，有一个两个门的大房子，门上面标记着书和羽毛笔");
 
 		npc.addReply(
-			"tavern",
-			"Just head southeast along the path, and you can't miss it. It has a large sign that reads INN.");
+			"酒店",
+			"顺着路东南方向就不会走错，门前标志是INN.");
 
 		npc.addReply(
-			"temple",
-			"The temple is southeast from here, beside the #tavern. It has a cross on the roof, very distinctive.");
+			"教堂",
+			"教堂在这的东南方向，挨着 #酒店 。屋顶上有个十字架，很好找");
 
 		npc.addReply(
-			"bakery",
-			"Our local bakery is just east of this square; they have a sign up with a picture of a loaf of bread on it.");
+			"面包房",
+			"直往东走是本地的面包房；门前标志是个面包");
 
 		npc.addReply(
-			"blacksmith",
-			"Head southwest to reach the smithy. There's a picture of an anvil hanging above the door, you should be able to spot it.");
+			"铁匠铺",
+			"西南方向走是铁匠铺。门前标志是铁锤，很容易找到。");
 
-		npc.addReply(Arrays.asList("public", "public chest", "community chest", "chest"),
-			"Follow the orange path on the map to arrive at the public chest. Inhabitants of Faiumoni and brave warriors throw some useful stuff in there which you can take for free. Remember: It is always good to share and give what you don't need anymore.");
+		npc.addReply(Arrays.asList("公共", "公共箱", "箱子"),
+			"顺着地图橙色的路往下走能看到 公共箱。Faiumoni的居民和勇士会把一些自已无用的东西扔进去，你可以去找点适合你用的拿走。但要记住：把不需要的东西分享出来总是很好的");
 
 		npc.addReply(
-			"village",
-			"Just keep heading southwest, past the #blacksmith, and you will shortly come to the old 塞门镇 village. 尼世亚 still sells sheep there.");
+			"村庄",
+			"一直往西南方向走，路过 #铁匠铺 ，然后你就进入了塞门镇 旧村庄。尼世亚 在那里卖羊。");
 
 
 		/** Give the reward to the polite newcomer user */
@@ -196,11 +196,11 @@ public class MeetMonogenes extends AbstractQuest {
 	@Override
 	public List<String> getHistory(final Player player) {
 			final List<String> res = new ArrayList<String>();
-			if (!player.hasQuest("Monogenes")) {
+			if (!player.hasQuest("梦金斯")) {
 				return res;
 			}
 			if (isCompleted(player)) {
-				res.add("I spoke with Monogenes and he offered to give me a map. I can always get that map from him at any time, just by asking.");
+				res.add("我找到了梦金斯，他给了我一份地图。以后我就可以随时找他看这份地图。");
 			}
 			return res;
 	}
@@ -211,6 +211,6 @@ public class MeetMonogenes extends AbstractQuest {
 	}
 	@Override
 	public String getNPCName() {
-		return "Monogenes";
+		return "梦金斯";
 	}
 }

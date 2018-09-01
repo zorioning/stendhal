@@ -21,10 +21,10 @@ import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * An old man (original name: Monogenes) who stands around and gives directions
+ * An old man (original name: 梦金斯) who stands around and gives directions
  * to newcomers. He's the brother of RetireeNPC (original name: Diogenes).
  *
- * @see games.stendhal.server.maps.quests.MeetMonogenes
+ * @see games.stendhal.server.maps.quests.Meet梦金斯
  * @see games.stendhal.server.maps.quests.HatForMonogenes
  */
 public class GreeterNPC implements ZoneConfigurator {
@@ -36,7 +36,7 @@ public class GreeterNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Monogenes") {
+		final SpeakerNPC npc = new SpeakerNPC("梦金斯") {
 			@Override
 			public void createDialog() {
 				addJob("我是 Diogenes 的大哥，我也不记得我以前是做什么的了...我现在退休了.");
@@ -54,7 +54,7 @@ public class GreeterNPC implements ZoneConfigurator {
 		};
 		npc.setPosition(27, 43);
 		npc.setEntityClass("oldmannpc");
-		npc.setDescription("你见到了 Monogenes. 他看起来很苍老。可能他还知道一两件事...");
+		npc.setDescription("你见到了 梦金斯. 他看起来很苍老。可能他还知道一两件事...");
 		npc.setDirection(Direction.LEFT);
 		zone.add(npc);
 	}

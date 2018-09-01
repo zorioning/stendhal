@@ -405,8 +405,8 @@ public class PlayerTransformer implements Transformer {
 
 
 
-	public static final String DEFAULT_ENTRY_ZONE = "int_semos_guard_house";
-	public static final String RESET_ENTRY_ZONE = "int_semos_townhall";
+	public static final String DEFAULT_ENTRY_ZONE = "int_塞门_守卫_室";
+	public static final String RESET_ENTRY_ZONE = "int_塞门_镇政厅";
 
 	/**
 	 * Low level players have a different start zone.

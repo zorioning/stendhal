@@ -46,7 +46,7 @@ public class AllotmentUtilities implements TurnListener {
 	/**
 	 * List of zones which have allotments that can be rented
 	 */
-	private static String[] zones = { "0_semos_mountain_w2" };
+	private static String[] zones = { "0_塞门_山_w2" };
 
 	/**
 	 * Singleton instance to return

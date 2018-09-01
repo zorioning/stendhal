@@ -91,11 +91,11 @@ public class SheepSellerNPC implements ZoneConfigurator {
 				}
 
 				final Map<String, Integer> items = new HashMap<String, Integer>();
-				items.put("绵羊", BUYING_PRICE);
+				items.put("sheep", BUYING_PRICE);
 
 				addGreeting();
 				addJob("我是牧羊人.");
-				addHelp("我销售羊只，要买的话，只要告诉我你想买羊 #buy #sheep. 如果你没做过这行，我能告诉你如何 #放羊, 只要小心 #照看 它，最后可以卖出个好价钱。如果你在野外偶然发现羊，也可以使用支配 #own 把羊牵走.");
+				addHelp("我销售羊只，要买的话，只要告诉我你想买羊 #买 #sheep. 如果你没做过这行，我能告诉你如何 #放羊, 只要小心 #照看 它，最后可以卖出个好价钱。如果你在野外偶然发现羊，也可以使用支配 #own 把羊牵走.");
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SheepSellerBehaviour(items));
 				addReply("照看",

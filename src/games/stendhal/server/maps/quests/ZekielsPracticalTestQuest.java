@@ -269,13 +269,13 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			null,
 			new MultipleActions(
 					new SetQuestAction(QUEST_SLOT, "first_step"),
-					new TeleportAction("int_semos_wizards_tower_1", 15, 16, Direction.DOWN)));
+					new TeleportAction("int_塞门_巫师_塔楼_1", 15, 16, Direction.DOWN)));
 	}
 
 	private void finishQuestStep() {
 
 		// NOTE: this is a different NPC from Zekiel the guardian used above. This one 'finishes' the quest
-		// and is in int_semos_wizards_tower_7, not the basement.
+		// and is in int_塞门_巫师_塔楼_7, not the basement.
 		final SpeakerNPC npc = npcs.get("Zekiel");
 
 		// player got to the last level of the tower
@@ -325,7 +325,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			"teleport",
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.IDLE, null,
-			new TeleportAction("int_semos_wizards_tower_8", 21, 22, Direction.UP));
+			new TeleportAction("int_塞门_巫师_塔楼_8", 21, 22, Direction.UP));
 
 		// player who has completed quest asks about the tower or test, offer the teleport or help
 		npc.add(ConversationStates.ATTENDING,

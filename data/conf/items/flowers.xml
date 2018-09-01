@@ -20,9 +20,9 @@
     </equipable>
   </item>
 
-  <item name="rose">
+  <item name="玫瑰">
     <type class="flower" subclass="rose" tileid="-1"/>
-    <description>You see a single red rose. It smells heavenly.</description>
+    <description>You see a single red 玫瑰. It smells heavenly.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -40,9 +40,9 @@
     </equipable>
   </item> 
 
-  <item name="lilia">
+  <item name="紫丁香">
     <type class="flower" subclass="lilia" tileid="-1"/>
-    <description>You see a lilia, a single precious bloom.</description>
+    <description>You see a 紫丁香, a single precious bloom.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -60,9 +60,9 @@
     </equipable>
   </item>
 
-  <item name="daisies">
+  <item name="雏菊">
     <type class="flower" subclass="daisies" tileid="-1"/>
-    <description>You see a bunch of daisies. They are cheap and cheerful!</description>
+    <description>You see a bunch of 雏菊. They are cheap and cheerful!</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -80,9 +80,9 @@
     </equipable>
   </item>
 
-  <item name="pansy">
+  <item name="三色堇">
     <type class="flower" subclass="pansy" tileid="-1"/>
-    <description>You see a pansy, so colorful and beautiful.</description>
+    <description>You see a 三色堇, so colorful and beautiful.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -100,9 +100,9 @@
     </equipable>
   </item>
 
-  <item name="zantedeschia">
+  <item name="马蹄莲">
     <type class="flower" subclass="zantedeschia" tileid="-1"/>
-    <description>You see a zantedeschia, a delicate bloom with the sweetest fragrance.</description>
+    <description>You see a 马蹄莲, a delicate bloom with the sweetest fragrance.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

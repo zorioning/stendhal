@@ -68,13 +68,13 @@ public class SevenCherubs extends AbstractQuest {
 	private final HashMap<String, String> cherubsHistory = new HashMap<String,String>();
 
 	private void fillHistoryMap() {
-		cherubsHistory.put("Cherubiel", "I met Cherubiel in 塞门镇 Village.");
-		cherubsHistory.put("Ophaniel",  "I met Ophaniel by Orril River.");
-		cherubsHistory.put("Gabriel",   "I met Gabriel in Nalwor City.");
-		cherubsHistory.put("Raphael",   "I met Raphael between Orril River and the bridge to Fado.");
-		cherubsHistory.put("Zophiel",   "I met Zophiel on 塞门镇 Mountain.");
-		cherubsHistory.put("Azazel",    "I met Azazel by Ados Rock.");
-		cherubsHistory.put("Uriel",     "I met Uriel on Orril Mountain.");
+		cherubsHistory.put("Cherubiel", "我在 塞门村庄 遇见了 Cherubiel");
+		cherubsHistory.put("Ophaniel",  "我在 Orril 河边 遇见了 Ophaniel.");
+		cherubsHistory.put("Gabriel",   "我在 Nalwor 遇见了 Gabriel.");
+		cherubsHistory.put("Raphael",   "我在 Orril 河和去 Fado 的桥 中间遇见了 Raphael");
+		cherubsHistory.put("Zophiel",   "我在 塞门山 遇见了 Zophiel");
+		cherubsHistory.put("Azazel",    "我在 Ados Rock 遇见了 Azazel");
+		cherubsHistory.put("Uriel",     "我在I Orril 山 遇见了 Orril");
 	}
 
 	@Override
@@ -104,13 +104,13 @@ public class SevenCherubs extends AbstractQuest {
 				if (!cherub.trim().equals("")) {
 					if (first) {
 						first = false;
-						res.add("I have started finding the seven cherubs");
+						res.add("我开始寻找这七个天使");
 					}
 					res.add(cherubsHistory.get(cherub));
 				}
 			}
 			if (isCompleted(player)) {
-				res.add("Done! I have found every one!");
+				res.add("完成，我发现了所有的天使!");
 			}
 		}
 		return res;
@@ -160,9 +160,9 @@ public class SevenCherubs extends AbstractQuest {
 
 						if (list.contains(raiser.getName())) {
 							if (left > -1) {
-								raiser.say("Seek out the other cherubim to get thy reward!");
+								raiser.say("找出其他的天使能得到奖励!");
 							} else {
-								raiser.say("Thou hast sought and found each of the seven cherubim! Now, mighty art thou with the rewards so earn'd.");
+								raiser.say("汝的眼睛能看到这七个天使！ 现在，这是汝应得了奖赏.");
 							}
 						} else {
 							player.setQuest(QUEST_SLOT, npcDoneText + ";"
@@ -172,16 +172,16 @@ public class SevenCherubs extends AbstractQuest {
 							player.getStatusList().removeAll(PoisonStatus.class);
 
 							if (left > 0) {
-								raiser.say("Well done! You only need to find "
+								raiser.say("不错！你再发现 "
 												+ (7 - list.size())
-												+ " more. Fare thee well!");
+												+ " 个. Fare thee well!");
 								if (raiser.getZone().getName().equals("0_塞门_村庄_西")) {
 									player.addXP(20);
 								} else {
 									player.addXP((7 - left + 1) * 200);
 								}
 							} else {
-								raiser.say("Thou hast proven thyself brave enough to bear this mighty relic!");
+								raiser.say("这已证明了你的勇敢，你已具体配戴这个上古神器了！");
 
 								/*
 								 * Proposal by Daniel Herding (mort): once
@@ -229,8 +229,8 @@ public class SevenCherubs extends AbstractQuest {
 		final StendhalRPWorld world = SingletonRepository.getRPWorld();
 		fillHistoryMap();
 		fillQuestInfo(
-				"Seven Cherubs",
-				"Seven cherubs stay on this world, and finding them all is rewarded with a prize.",
+				"七个天使",
+				"七个天使留在了这个世界上，找到他们并赢取奖励",
 				false);
 		StendhalRPZone zone;
 		SpeakerNPC npc;
@@ -266,6 +266,6 @@ public class SevenCherubs extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "SevenCherubs";
+		return "七个天使";
 	}
 }

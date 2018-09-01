@@ -204,7 +204,7 @@ public class ImperialPrincess extends AbstractQuest {
 				" forest, I am sure you will find that without trouble.");
 		npc.addReply(
 				"kekik",
-				"My maid's friend Jenny has a source not far from her. The wooded areas at the eastern" +
+				"My maid's friend 詹妮 has a source not far from her. The wooded areas at the eastern" +
 				" end of Nalwor river may have it. too.");
 	}
 

@@ -71,7 +71,7 @@ public class SokobanWatcher extends ScriptImpl implements TurnListener {
 	@Override
 	public void onTurnReached(int currentTurn) {
 		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
-		StendhalRPZone target = SingletonRepository.getRPWorld().getZone("int_semos_townhall");
+		StendhalRPZone target = SingletonRepository.getRPWorld().getZone("int_塞门_镇政厅");
 
 		Player first = null;
 		List<Player> list = new LinkedList<Player>(zone.getPlayers());

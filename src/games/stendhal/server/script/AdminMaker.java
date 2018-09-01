@@ -154,7 +154,7 @@ public class AdminMaker extends ScriptImpl {
 			new Destination("-2_orril_dungeon", 106, 21),
 			new Destination("-2_orril_lich_palace", 67, 118),
 			new Destination("-2_orril_dwarf_mine", 50, 40),
-			new Destination("-1_semos_mine_nw", 22, 75),
+			new Destination("-1_塞门_矿山_nw", 22, 75),
 			new Destination("-6_kanmararn_city", 33, 52),
 			new Destination("-2_ados_outside_nw", 28, 4),
 			new Destination("-2_kotoch_entrance", 20, 111),
@@ -166,7 +166,7 @@ public class AdminMaker extends ScriptImpl {
 			new Destination("-1_fado_great_cave_w2", 90, 57),
 			new Destination("0_athor_island", 77, 73),
 			new Destination("5_kikareukin_cave", 31, 100),
-			new Destination("-2_semos_mine_e2", 4, 5),
+			new Destination("-2_塞门_矿山_e2", 4, 5),
 			new Destination("0_amazon_island_nw", 30, 30),
 			new Destination("int_mithrilbourgh_stores", 6, 5)
 		);

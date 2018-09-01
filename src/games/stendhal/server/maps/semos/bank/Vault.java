@@ -138,7 +138,7 @@ public class Vault extends StendhalRPZone {
 				// PlayerRPClass).
 				// If they are scrolling out or walking out the portal it works
 				// as before.
-				entity.put("zoneid", "int_semos_bank");
+				entity.put("zoneid", "int_塞门_银库");
 				entity.put("x", "9");
 				entity.put("y", "27");
 

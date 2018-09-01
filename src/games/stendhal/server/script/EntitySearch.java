@@ -33,12 +33,12 @@ import marauroa.common.game.RPObject;
  * [1] int_admin_playground [7] -3_orril_dungeon
  * <p>
  * /script EntitySearch.class nonrespawn Non-Respawn creatures (minus sheep)
- * balrog (350) 0_semos_plains_n 11 11 death (30) 0_semos_plains_n 27 24
- * black_death (300) 0_semos_plains_n 44 44
+ * balrog (350) 0_塞门_草原_n 11 11 death (30) 0_塞门_草原_n 27 24
+ * black_death (300) 0_塞门_草原_n 44 44
  * <p>
  * /script EntitySearch.class zname &lt; partialZoneName &gt; Respawn points for zone
- * names containing: 0_semos_plain Respawn points for 0_semos_plains_ne [1]
- * gnome(2) [17] rat(0) Respawn points for 0_semos_plains_n_e2 [2] snake(3) [1]
+ * names containing: 0_semos_plain Respawn points for 0_塞门_草原_ne [1]
+ * gnome(2) [17] rat(0) Respawn points for 0_塞门_草原_n_e2 [2] snake(3) [1]
  * gnome(2) ...
  *
  */

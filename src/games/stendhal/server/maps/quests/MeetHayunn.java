@@ -84,7 +84,7 @@ public class MeetHayunn extends AbstractQuest {
 		if ("killed".equals(questState)) {
 			return res;
 		}
-		res.add("海云那冉 给了我一点钱，并告诉我去找 塞门镇的 Monogenes 要一张地图");
+		res.add("海云那冉 给了我一点钱，并告诉我去找 塞门镇的 梦金斯 要一张地图");
 		if ("taught".equals(questState)) {
 			return res;
 		}
@@ -153,14 +153,14 @@ public class MeetHayunn extends AbstractQuest {
 		reward.add(new EquipItemAction("money", 5));
 		reward.add(new IncreaseXPAction(10));
 		reward.add(new SetQuestAction(QUEST_SLOT, "taught"));
-		reward.add(new ExamineChatAction("monogenes.png", "Monogenes", "North part of 塞门镇."));
+		reward.add(new ExamineChatAction("Monogenes.png", "梦金斯", "塞门镇北部"));
 
 		npc.add(
 			ConversationStates.INFORMATION_1,
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"出门顺着路向东走，你不会错过 塞门镇，如果你和 Monogenes 说话, 就是图片上的这个老人，他会给你一张地图，另外再给你5元钱做路费，拜拜！",
+			"出门顺着路向东走，你不会错过 塞门镇，如果你和 梦金斯 说话, 就是图片上的这个老人，他会给你一张地图，另外再给你5元钱做路费，拜拜！",
 			new MultipleActions(reward));
 
 	   	// incase player didn't finish learning everything when he came after killing the rat, he must have another chance. Here it is.

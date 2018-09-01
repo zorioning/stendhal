@@ -532,7 +532,7 @@ public class MealForGroongo extends AbstractQuest {
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_couscous = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_couscous.put("flour", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_couscous.put("water", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_couscous.put("水", new Pair<Integer, Integer>(1,4));
         requiredIngredients_couscous.put("courgette", new Pair<Integer, Integer>(1,6));
         requiredIngredients_couscous.put("onion", new Pair<Integer, Integer>(2,4));
         requiredIngredients_couscous.put("garlic", new Pair<Integer, Integer>(2,3));

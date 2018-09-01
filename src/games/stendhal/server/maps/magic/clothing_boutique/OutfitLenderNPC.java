@@ -94,7 +94,7 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 
 
 	private void buildBoutiqueArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Liliana") {
+		final SpeakerNPC npc = new SpeakerNPC("莉莉娅娜") {
 			@Override
 			protected void createPath() {
 			    final List<Node> nodes = new LinkedList<Node>();
@@ -201,7 +201,7 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 		npc.setPosition(16, 5);
 		// npc.setPosition(101, 102);
 		npc.initHP(100);
-		npc.setDescription("You see Liliana. She works in the Magic City clothes boutique.");
+		npc.setDescription("You see 莉莉娅娜. She works in the Magic City clothes boutique.");
 		zone.add(npc);
 	}
 }

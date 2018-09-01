@@ -185,18 +185,18 @@ public class FindJefsMom extends AbstractQuest {
         // give the flower if it's at least 5 days since the player activated the quest the last time, and set the time slot again
 		amber.add(ConversationStates.ATTENDING, "杰夫",
 			new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0,"start"),
-							 new PlayerCanEquipItemCondition("zantedeschia")),
+							 new PlayerCanEquipItemCondition("马蹄莲")),
 
 			ConversationStates.IDLE,
-			"噢，我想想: ) 我儿子杰夫让你来看望我，她是个很棒很有爱的孩子！请把这些 zantedeschia 给他. 我很喜爱这些花！带上这个，回去告诉他我很好 #fine.",
-			new MultipleActions(new EquipItemAction("zantedeschia", 1, true),
+			"噢，我想想: ) 我儿子杰夫让你来看望我，她是个很棒很有爱的孩子！请把这些 马蹄莲 给他. 我很喜爱这些花！带上这个，回去告诉他我很好 #fine.",
+			new MultipleActions(new EquipItemAction("马蹄莲", 1, true),
                                 new SetQuestAction(QUEST_SLOT, 0, "found_mom")));
 
 
 		// don't put the flower on the ground - if player has no space, tell them
 		amber.add(ConversationStates.ATTENDING, "杰夫",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "start"),
-								 new NotCondition(new PlayerCanEquipItemCondition("zantedeschia"))),
+								 new NotCondition(new PlayerCanEquipItemCondition("马蹄莲"))),
 				ConversationStates.IDLE,
 				"哦, 我想拜托你把这些花带给我儿子，证明我没事。不过我看得出来，你身上没有地方可以带着花，请清理下你的物品，然后回来取花吧。!",
 				null);
@@ -211,18 +211,18 @@ public class FindJefsMom extends AbstractQuest {
 	    amber.add(ConversationStates.ATTENDING, "杰夫",
 	    		new AndCondition(
 	    				new QuestInStateCondition(QUEST_SLOT, "found_mom"),
-	    				new PlayerHasItemWithHimCondition("zantedeschia")),
+	    				new PlayerHasItemWithHimCondition("马蹄莲")),
 	    		ConversationStates.IDLE,
 	    		"请把这些花带给我儿子，并对他说我很好 #fine.",
 	    		null);
 
 	    // replace flower if lost
-	    amber.add(ConversationStates.ATTENDING, Arrays.asList("杰夫", "flower", "zantedeschia"),
+	    amber.add(ConversationStates.ATTENDING, Arrays.asList("杰夫", "flower", "马蹄莲"),
 	    		new AndCondition(
 	    				new QuestInStateCondition(QUEST_SLOT, 0, "found_mom"),
-	    				new NotCondition(new PlayerHasItemWithHimCondition("zantedeschia"))),
+	    				new NotCondition(new PlayerHasItemWithHimCondition("马蹄莲"))),
 	    		ConversationStates.IDLE,
-	    		"噢，你把我给的花弄丢了？恐怕我也没有了。你和风车旁的 Jenny 谈谈，或许她可以帮到你。",
+	    		"噢，你把我给的花弄丢了？恐怕我也没有了。你和风车旁的 詹妮 谈谈，或许她可以帮到你。",
 	    		null);
 
 	}
@@ -245,10 +245,10 @@ public class FindJefsMom extends AbstractQuest {
 			}
 		};
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("flower", "zantedeschia", "fine", "amber", "done"),
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "found_mom"), new PlayerHasItemWithHimCondition("zantedeschia")),
+				Arrays.asList("flower", "马蹄莲", "fine", "amber", "done"),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "found_mom"), new PlayerHasItemWithHimCondition("马蹄莲")),
 				ConversationStates.ATTENDING, null,
-				new MultipleActions(new DropItemAction("zantedeschia"),
+				new MultipleActions(new DropItemAction("马蹄莲"),
                                     new IncreaseXPAction(800),
                                     new IncreaseKarmaAction(15),
 									addRandomNumberOfItemsAction,

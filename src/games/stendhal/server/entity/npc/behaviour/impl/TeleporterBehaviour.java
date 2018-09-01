@@ -106,10 +106,10 @@ public class TeleporterBehaviour implements TurnListener {
 		for (int i = 0; i < 10; i++) {
 			zones.add(world.getZone("0_塞门_镇"));
 			zones.add(world.getZone("0_塞门_村庄_西"));
-			zones.add(world.getZone("0_semos_plains_n"));
-			zones.add(world.getZone("0_semos_plains_ne"));
-			zones.add(world.getZone("0_semos_road_e"));
-			zones.add(world.getZone("0_semos_plains_s"));
+			zones.add(world.getZone("0_塞门_草原_n"));
+			zones.add(world.getZone("0_塞门_草原_ne"));
+			zones.add(world.getZone("0_塞门_大道_e"));
+			zones.add(world.getZone("0_塞门_草原_s"));
 		}
 	}
 

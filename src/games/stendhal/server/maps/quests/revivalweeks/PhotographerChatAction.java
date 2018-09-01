@@ -58,7 +58,7 @@ public class PhotographerChatAction implements ChatAction {
 		" starting the adventure",
 		" exploring 塞门镇 Dungeon",
 		" visiting the 塞门镇 Temple",
-		" meeting Jenny",
+		" meeting 詹妮",
 		" discovering the Gnome village",
 		" visiting Ados",
 		" discovering a huge tower",
@@ -139,7 +139,7 @@ public class PhotographerChatAction implements ChatAction {
 		if (player.getLevel() < 50) {
 			photos.add(Integer.valueOf(1));
 		}
-		if (player.hasVisitedZone(world.getZone("-1_semos_dungeon"))) {
+		if (player.hasVisitedZone(world.getZone("-1_塞门_地牢"))) {
 			photos.add(Integer.valueOf(2));
 		}
 		if (player.hasVisitedZone(world.getZone("int_afterlife"))) {
@@ -148,19 +148,19 @@ public class PhotographerChatAction implements ChatAction {
 		if (player.hasQuest("jenny_mill_flour")) {
 			photos.add(Integer.valueOf(4));
 		}
-		if (player.hasVisitedZone(world.getZone("0_semos_mountain_n_w2"))) {
+		if (player.hasVisitedZone(world.getZone("0_塞门_山_n_w2"))) {
 			photos.add(Integer.valueOf(5));
 		}
 		if (player.hasVisitedZone(world.getZone("0_ados_wall_n"))) {
 			photos.add(Integer.valueOf(6));
 		}
-		if (player.hasVisitedZone(world.getZone("int_semos_wizards_tower_basement"))) {
+		if (player.hasVisitedZone(world.getZone("int_塞门_巫师_塔楼_basement"))) {
 			photos.add(Integer.valueOf(7));
 		}
 		if (player.hasVisitedZone(world.getZone("-1_ados_outside_nw"))) {
 			photos.add(Integer.valueOf(8));
 		}
-		if (player.hasVisitedZone(world.getZone("int_semos_wizards_tower_9"))) {
+		if (player.hasVisitedZone(world.getZone("int_塞门_巫师_塔楼_9"))) {
 			photos.add(Integer.valueOf(9));
 		}
 		if (player.hasQuest("icecream_for_annie")) {
@@ -173,7 +173,7 @@ public class PhotographerChatAction implements ChatAction {
 			photos.add(Integer.valueOf(12));
 		}
 		/*
-		if (player.hasVisitedZone(world.getZone("int_semos_wizards_tower_9"))) {
+		if (player.hasVisitedZone(world.getZone("int_塞门_巫师_塔楼_9"))) {
 			photos.add(Integer.valueOf(13));
 		}
 		*/

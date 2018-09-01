@@ -71,7 +71,7 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 				Achievement.HARD_BASE_SCORE, true,
 				new PlayerProducedNumberOfItemsCondition(5, resources)));
 
-		achievements.add(createAchievement("production.flour.1000", "Jenny's Assistant", "Produce 1000 flour",
+		achievements.add(createAchievement("production.flour.1000", "詹妮's Assistant", "Produce 1000 flour",
 				Achievement.EASY_BASE_SCORE, true,
 				new PlayerProducedNumberOfItemsCondition(1000, "flour")));
 

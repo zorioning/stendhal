@@ -36,7 +36,7 @@ import games.stendhal.server.maps.quests.revivalweeks.TicTacToeGame;
  */
 public class MineTownRevivalWeeks extends AbstractQuest {
 
-	public static final String QUEST_NAME = "塞门镇MineTownRevivalWeeks";
+	public static final String QUEST_NAME = "SemosMineTownRevivalWeeks";
 	private static final String QUEST_SLOT = "semos_mine_town_revival";
 	private List<LoadableContent> content = new LinkedList<LoadableContent>();
 

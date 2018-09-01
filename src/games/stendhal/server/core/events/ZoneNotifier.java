@@ -54,9 +54,9 @@ public class ZoneNotifier {
 	 */
     public static void zoneChange(final Player player, final String sourceZone,
             final String destinationZone) {
-        if (destinationZone.equals("-1_semos_catacombs_se")) {
+        if (destinationZone.equals("-1_塞门_墓室_se")) {
             process(player, ZoneEventType.VISIT_SUB1_SEMOS_CATACOMBS);
-        } else if (destinationZone.equals("-2_semos_catacombs")) {
+        } else if (destinationZone.equals("-2_塞门_墓室_")) {
             process(player, ZoneEventType.VISIT_SUB2_SEMOS_CATACOMBS);
         } else if (destinationZone.equals("1_kikareukin_cave")) {
             process(player, ZoneEventType.VISIT_KIKAREUKIN_CAVE);
@@ -68,7 +68,7 @@ public class ZoneNotifier {
             process(player, ZoneEventType.VISIT_MAGIC_CITY_N);
         } else if (destinationZone.equals("-1_fado_great_cave_e2")) {
             process(player, ZoneEventType.VISIT_MAGIC_CITY);
-        } else if (destinationZone.equals("-1_semos_caves")) {
+        } else if (destinationZone.equals("-1_塞门_山洞")) {
             process(player, ZoneEventType.VISIT_SEMOS_CAVES);
         } else if (destinationZone.equals("int_ados_castle_entrance")) {
             process(player, ZoneEventType.VISIT_ADOS_CASTLE);

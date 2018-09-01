@@ -9,15 +9,15 @@
       <parameter name="color">#008888</parameter>
     </attributes>
     <portal x="30" y="6" ref="exit_left">
-      <destination zone="int_semos_temple" ref="restart_life" />
+      <destination zone="int_塞门_教堂" ref="restart_life" />
     </portal>
 
     <portal x="31" y="6" ref="exit_center">
-      <destination zone="int_semos_temple" ref="restart_life" />
+      <destination zone="int_塞门_教堂" ref="restart_life" />
     </portal>
 
     <portal x="32" y="6" ref="exit_right">
-      <destination zone="int_semos_temple" ref="restart_life" />
+      <destination zone="int_塞门_教堂" ref="restart_life" />
     </portal>
 
     <entity x="29" y="22">
@@ -99,10 +99,10 @@ Walk on, and you will be returned to the land of the living...
   <zone name="int_abstract_admin_investigation" file="interiors/abstract/admin_investigation.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleport" />
     <portal x="6" y="10" ref="entrance1">
-      <destination zone="int_semos_temple" ref="restart_life" />
+      <destination zone="int_塞门_教堂" ref="restart_life" />
     </portal>
     <portal x="19" y="10" ref="entrance2">
-      <destination zone="int_semos_temple" ref="restart_life" />
+      <destination zone="int_塞门_教堂" ref="restart_life" />
     </portal>
 
     <entity x="16" y="2">

@@ -286,13 +286,13 @@ public class Unblock extends ScriptImpl implements TurnListener {
 		keepFreeAreas.add(new KeepFreeArea(new Area(world.getZone("0_塞门_镇"), 17, 23, 3, 2), 23, 25));
 
 		// bank exit
-		keepFreeAreas.add(new KeepFreeArea(new Area(world.getZone("int_semos_bank"), 8, 28, 11, 29), 24, 27));
+		keepFreeAreas.add(new KeepFreeArea(new Area(world.getZone("int_塞门_银库"), 8, 28, 11, 29), 24, 27));
 
 		// inn entrance
 		keepFreeAreas.add(new KeepFreeArea(new Area(world.getZone("0_塞门_镇"), 40, 38, 4, 3), 50, 40));
 
 		// inn exit
-		keepFreeAreas.add(new KeepFreeArea(new Area(world.getZone("int_semos_tavern_0"), 21, 15, 3, 2), 22, 11));
+		keepFreeAreas.add(new KeepFreeArea(new Area(world.getZone("int_塞门_酒馆_0"), 21, 15, 3, 2), 22, 11));
 
 		TurnNotifier.get().notifyInSeconds(CHECK_INTERVAL, this);
 	}

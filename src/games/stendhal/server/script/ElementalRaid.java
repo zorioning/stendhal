@@ -26,7 +26,7 @@ public class ElementalRaid extends CreateRaid {
 	protected Map<String, Integer> createArmy() {
 		final Map<String, Integer> attackArmy = new HashMap<String, Integer>();
 		attackArmy.put("fire elemental", 7);
-		attackArmy.put("water elemental", 7);
+		attackArmy.put("水元素", 7);
 		attackArmy.put("ice elemental", 7);
 		attackArmy.put("earth elemental", 7);
 		attackArmy.put("djinn", 5);

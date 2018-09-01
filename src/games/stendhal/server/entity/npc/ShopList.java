@@ -465,12 +465,12 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "sandwich", 130);
 		shops.add("sellrevivalweeks", "wine", 25);
 		shops.add("sellrevivalweeks", "beer", 20);
-		shops.add("sellrevivalweeks", "water", 15);
+		shops.add("sellrevivalweeks", "水", 15);
 
 		// for ados botanical gardens or if you like, other cafes.
 		// expensive prices to make sure that the npc production of these items isn't compromised
 		shops.add("cafe", "tea", 80);
-		shops.add("cafe", "water", 50);
+		shops.add("cafe", "水", 50);
 		shops.add("cafe", "chocolate shake", 150);
 		shops.add("cafe", "sandwich", 170);
 		shops.add("cafe", "tuna sandwich", 180);

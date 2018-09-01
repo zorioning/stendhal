@@ -30,7 +30,7 @@ public class LeaveAction implements ChatAction {
 		final DeathmatchState deathmatchState = DeathmatchState.createFromQuestString(player.getQuest("deathmatch"));
 
 		if (deathmatchState.getLifecycleState() == DeathmatchLifecycle.DONE) {
-			final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_plains_n");
+			final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_草原_n");
 			player.teleport(zone, 100, 115, null, player);
 		} else if (deathmatchState.getLifecycleState() == DeathmatchLifecycle.VICTORY) {
 			raiser.say("I don't think you claimed your #victory yet.");

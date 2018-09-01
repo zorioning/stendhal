@@ -23,7 +23,7 @@ import games.stendhal.server.entity.player.Player;
 
 /**
  * Represents the rainbow beans that takes the player to the dream world zone,
- * after which it will teleport player to a random location in 0_semos_plains_s.
+ * after which it will teleport player to a random location in 0_塞门_草原_s.
  */
 public class RainbowBeansScroll extends TimedTeleportScroll {
 

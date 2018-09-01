@@ -61,15 +61,18 @@ public class MrYetiNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Greetings, strange foreigner!");
-				addJob("My job is to clean up all this around you!");
-				addHelp("I am not able to help you!");
+//				addGreeting("Greetings, strange foreigner!");
+//				addJob("My job is to clean up all this around you!");
+//				addHelp("I am not able to help you!");
+				addGreeting("欢迎你，奇怪的外乡人！");
+				addJob("我的工作是清理你四周的这些地方。");
+				addHelp("我帮不了你！");
 				addGoodbye();
 			}
 		};
 
 		yetimale.setEntityClass("yetimalenpc");
-		yetimale.setDescription("You see Mr. Yeti, a white hairy man with huge feet!");
+		yetimale.setDescription("你遇见了 Mr. Yeti, 有着一双大脚的他身上长满白色毛发！");
 		yetimale.setPosition(29, 29);
 		yetimale.setCollisionAction(CollisionAction.STOP);
 		yetimale.initHP(100);

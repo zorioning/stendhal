@@ -159,13 +159,13 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("poison",5);
 		items.put("potion",5);
 		items.put("tea",3);
-		items.put("water",5);
+		items.put("水",5);
 		items.put("wine",10);
 
 		// flower
-		items.put("daisies",5);
-		items.put("lilia",5);
-		items.put("rose",10);
+		items.put("雏菊",5);
+		items.put("紫丁香",5);
+		items.put("玫瑰",10);
 
 		// food
 		items.put("apple",5);

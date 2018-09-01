@@ -37,18 +37,18 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Hat For Monogenes
+ * QUEST: Hat For 梦金斯
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Monogenes, an old man in 塞门镇.</li>
+ * <li>梦金斯, an old man in 塞门镇.</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Monogenes asks you to buy a hat for him.</li>
+ * <li> 梦金斯 asks you to buy a hat for him.</li>
  * <li> Xin Blanca sells you a leather helmet.</li>
- * <li> Monogenes sees your leather helmet and asks for it and then thanks you.</li>
+ * <li> 梦金斯 sees your leather helmet and asks for it and then thanks you.</li>
  * </ul>
  *
  * REWARD:
@@ -71,38 +71,38 @@ public class HatForMonogenes extends AbstractQuest {
 	public List<String> getHistory(final Player player) {
 		final List<String> res = new ArrayList<String>();
 		if (player.hasQuest(QUEST_SLOT)) {
-			res.add("I have met Monogenes at the spring in 塞门镇 village");
+			res.add("我在塞门镇的喷泉处遇到了 梦金斯。");
 		}
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have to find a hat, something leather to keep his head warm.");
+		res.add("我需要找一顶帽子，里面的毛皮可以给我的头保暖。");
 		if (player.isQuestInState(QUEST_SLOT, "start")
 				&& player.isEquipped("leather helmet")
 				|| player.isQuestCompleted(QUEST_SLOT)) {
-			res.add("I have found a hat.");
+			res.add("我发现了一顶帽子.");
 		}
 		if (player.isQuestCompleted(QUEST_SLOT)) {
-			res.add("I gave the hat to Monogenes to keep his bald head warm.");
+			res.add("我把帽子给了 梦金斯 ，让他的光头给暖和一些.");
 		}
 		return res;
 	}
 
 	private void createRequestingStep() {
-		final SpeakerNPC monogenes = npcs.get("Monogenes");
+		final SpeakerNPC monogenes = npcs.get("梦金斯");
 
 		monogenes.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"Could you bring me a #hat to cover my bald head? Brrrrr! The days here in 塞门镇 are really getting colder...",
+			"你能带给我一顶 #帽子 吗？我的头冻得不行了，啊！啊！塞门镇在这个时节真是冷...",
 			null);
 
 		monogenes.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Thanks for the offer, good friend, but this hat will last me five winters at least, and it's not like I need more than one.",
+			"谢谢你的帮助，好兄弟，这顶帽子好的可以让我至少撑过5个冬天，对于我来说有点浪费了.",
 			null);
 
 		monogenes.add(
@@ -110,7 +110,7 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Thanks, my good friend. I'll be waiting here for your return!",
+			"谢谢我的好兄弟，我在这等你回来！",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		monogenes.add(
@@ -118,20 +118,20 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"You surely have more importants things to do, and little time to do them in. I'll just stay here and freeze to death, I guess... *sniff*",
+			"你确定还有重要的事，连这点小事都不愿帮我？我猜我快不行了.... *sniff*",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		monogenes.add(
 			ConversationStates.QUEST_OFFERED,
-			"hat",
+			"帽子",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"You don't know what a hat is?! Anything light that can cover my head; like leather, for instance. Now, will you do it?",
+			"你不知道帽子是什么？任何一个可以盖住我头的东西！像皮毛，你可以帮我吗?",
 			null);
 	}
 
 	private void createBringingStep() {
-		final SpeakerNPC monogenes = npcs.get("Monogenes");
+		final SpeakerNPC monogenes = npcs.get("梦金斯");
 
 		monogenes.add(ConversationStates.IDLE,
 			ConversationPhrases.GREETING_MESSAGES,
@@ -139,7 +139,7 @@ public class HatForMonogenes extends AbstractQuest {
 					new QuestInStateCondition(QUEST_SLOT, "start"),
 					new PlayerHasItemWithHimCondition("leather helmet")),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Hey! Is that leather hat for me?", null);
+			"嗨！这是给我的皮帽吗？", null);
 
 		monogenes.add(ConversationStates.IDLE,
 			ConversationPhrases.GREETING_MESSAGES,
@@ -147,7 +147,7 @@ public class HatForMonogenes extends AbstractQuest {
 					new QuestInStateCondition(QUEST_SLOT, "start"),
 					new NotCondition(new PlayerHasItemWithHimCondition("leather helmet"))),
 			ConversationStates.ATTENDING,
-			"Hey, my good friend, remember that leather hat I asked you about before? It's still pretty chilly here...",
+			"嗨，我的朋友，还记得之前答应我的皮帽吗？这里真是太冷了..",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
@@ -163,7 +163,7 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			new PlayerHasItemWithHimCondition("leather helmet"),
 			ConversationStates.ATTENDING,
-			"Bless you, my good friend! Now my head will stay nice and warm.",
+			"祝福你我的朋友！现在我的头不再冷了",
 			new MultipleActions(reward));
 
 		monogenes.add(
@@ -171,15 +171,15 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"I guess someone more fortunate will get his hat today... *sneeze*",
+			"我猜某个今天得到帽子的人一定更幸福... *sneeze*",
 			null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Hat for Monogenes",
-				"Monogenes wants a hat to help him keep warm during the winter.",
+				"Hat for 梦金斯",
+				"梦金斯 想要一顶帽子取暖以渡过这个寒冬.",
 				false);
 		createRequestingStep();
 		createBringingStep();
@@ -196,6 +196,6 @@ public class HatForMonogenes extends AbstractQuest {
 	}
 	@Override
 	public String getNPCName() {
-		return "Monogenes";
+		return "梦金斯";
 	}
 }

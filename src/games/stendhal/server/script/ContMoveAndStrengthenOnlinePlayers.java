@@ -61,7 +61,7 @@ public class ContMoveAndStrengthenOnlinePlayers extends ScriptImpl {
 		private StendhalRPZone zoneAfterlife;
 
 		public ContMoveAndStrengthenPlayersTurnListener() {
-			zoneGuardHouse = StendhalRPWorld.get().getZone("int_semos_guard_house");
+			zoneGuardHouse = StendhalRPWorld.get().getZone("int_塞门_守卫_室");
 			zoneAfterlife = StendhalRPWorld.get().getZone("int_afterlife");
 		}
 

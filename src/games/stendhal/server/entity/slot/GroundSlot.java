@@ -107,7 +107,7 @@ public class GroundSlot extends EntitySlot {
 	 * @return <code>true</code>if zone is semos tavern and entity is dice
 	 */
 	private boolean isGamblingZoneAndIsDice(final Entity entity) {
-		return "int_semos_tavern_0".equals(zone.getName()) && ("dice").equals(entity.getTitle());
+		return "int_塞门_酒馆_0".equals(zone.getName()) && ("dice").equals(entity.getTitle());
 	}
 
 
