@@ -77,7 +77,7 @@ public class MinerNPC implements ZoneConfigurator {
 				addQuest("抱歉，但如你所见，弄了一身灰我也没有完成工作。我没空想你的问题，除非你能帮我弄一些煤.");
 				addJob("我是个矿工。在这个矿洞努力工作着，如果你往下走得越深，环境就会变越热，并且灰尘越多，光线条件也差,你很难看清路...");
 				addReply("map","这是 Semos 矿山的地图，是我自已以前画的，它或许能帮你找到路，但要注意，上面的路也不是完全精确!",
-						new ExamineChatAction("map-semos-mine.png", "Semos Mine", "Rough map of Semos Mine"));
+						new ExamineChatAction("map-semos-mine.png", "塞门镇 Mine", "Rough map of 塞门镇 Mine"));
 				addGoodbye("再会，祝好运!");
 
 			}

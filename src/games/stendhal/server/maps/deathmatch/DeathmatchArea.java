@@ -51,7 +51,7 @@ public class DeathmatchArea implements LoginListener {
 
 		if (cowardSpot == null) {
 			cowardSpot = new Spot(SingletonRepository.getRPWorld().getZone(
-			"0_semos_mountain_n2_w"), 104, 123);
+			"0_塞门_山_北2_西"), 104, 123);
 		}
 		player.teleport(cowardSpot.getZone(), cowardSpot.getX(), cowardSpot.getY(), Direction.DOWN, player);
 		player.sendPrivateText("You wake up far away from the city in the mountains. But you don't know what happened.");

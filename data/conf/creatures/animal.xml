@@ -207,9 +207,9 @@
   
   <!-- START: fowl -->
   
-  <creature name="chick">
+  <creature name="小鸡">
     <type class="farm_animal" subclass="chick" tileid="farm_animal.png:2"/>
-    <description>You see a little chick, it doesn't like to be away from its mother.</description>
+    <description>一只小鸡, 它一步也不离开鸡妈妈.</description>
     <attributes>
       <atk value="32"/>
       <def value="7"/>
@@ -228,8 +228,8 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="peep peep"/>
-        <noise state="idle follow fight" value="peep peep peep"/>
+        <noise state="idle follow fight" value="唧~唧~"/>
+        <noise state="idle follow fight" value="唧~唧~唧~"/>
         <sound value="chicken-chick-1" />
         <sound value="chicken-chick-2" />
       </says>
@@ -324,8 +324,8 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="peep peep"/>
-        <noise state="idle follow fight" value="peep peep peep"/>
+        <noise state="idle follow fight" value="唧~唧~"/>
+        <noise state="idle follow fight" value="唧~唧~唧~"/>
         <sound value="chicken-1"/>
       </says>
       <profile name="animal"/>
@@ -334,9 +334,9 @@
     </ai>
   </creature>
   
-  <creature name="penguin">
+  <creature name="企鹅">
     <type class="animal" subclass="penguin" tileid="animal.png:16"/>
-    <description>You see a penguin, smart and silly.</description>
+    <description>一只企鹅，虽然聪明但行动迟缓。</description>
     <attributes>
       <atk value="36"/>
       <def value="7"/>
@@ -421,7 +421,7 @@
       <item value="poison" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
-      <slot name="lhand" item="s铁箭" quantity="10000"/>
+      <slot name="lhand" item="铁箭" quantity="10000"/>
       <slot name="rhand" item="dummy_ranged" quantity="1"/>
     </equips>
     <ai>
@@ -704,7 +704,7 @@
     <corpse name="animal"/>
     <drops>
       <item value="肉" quantity="[1,2]" probability="80.0"/>
-      <item value="wood" quantity="[1,2]" probability="20.0"/>
+      <item value="木头" quantity="[1,2]" probability="20.0"/>
     </drops>
     <equips>
     </equips>
@@ -1436,7 +1436,7 @@
     <drops>
       <item value="money" quantity="[10,100]" probability="70.0"/>
       <item value="greater potion" quantity="[1,4]" probability="30.0"/>
-      <item value="wooden spear" quantity="[20,40]" probability="30.0"/>
+      <item value="木矛" quantity="[20,40]" probability="30.0"/>
     </drops>
     <equips>
     </equips>

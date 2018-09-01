@@ -164,17 +164,17 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 				    null);
 				add(ConversationStates.INFORMATION_1,
 					ConversationPhrases.YES_MESSAGES,
-					new NotCondition(new PlayerHasItemWithHimCondition("wood", 8)),
+					new NotCondition(new PlayerHasItemWithHimCondition("木头", 8)),
 					ConversationStates.ATTENDING,
 					"You don't have enough wood, I will need eight pieces.",
 					null);
 				add(ConversationStates.INFORMATION_1,
 					ConversationPhrases.YES_MESSAGES,
-					new PlayerHasItemWithHimCondition("wood", 8),
+					new PlayerHasItemWithHimCondition("木头", 8),
 					ConversationStates.ATTENDING,
 					"There is your blank scroll.",
 					new MultipleActions(
-						new DropItemAction("wood", 8),
+						new DropItemAction("木头", 8),
 						new EquipItemAction("blank scroll", 1, true),
 						new IncreaseXPAction(250)));
 				add(ConversationStates.INFORMATION_1,

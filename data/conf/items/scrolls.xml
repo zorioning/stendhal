@@ -83,9 +83,9 @@
     </equipable>
   </item>
 
-  <item name="ados city scroll">
+  <item name="阿多斯城回城卷">
     <type class="scroll" subclass="ados" tileid="-1"/>
-    <description>You see a ados city scroll, it will take you back to ados city.</description>
+    <description>You see a 阿多斯城回城卷, it will take you back to 阿多斯城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_ados_city_n 50 50"/>
@@ -104,9 +104,9 @@
     </equipable>
   </item>
 
-  <item name="fado city scroll">
+  <item name="法多城回城卷">
     <type class="scroll" subclass="fado" tileid="-1"/>
-    <description>You see a fado city scroll, it will take you back to fado city.</description>
+    <description>You see a 法多城回城卷, it will take you back to 法多城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_fado_city 40 30"/>
@@ -209,10 +209,10 @@
 
   <item name="home scroll">
     <type class="scroll" subclass="home" tileid="-1"/>
-    <description>You see a home scroll, it will take you back to semos city.</description>
+    <description>You see a home scroll, it will take you back to 塞门镇.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
-      <infostring value="0_semos_city 30 40"/>
+      <infostring value="0_塞门_镇 30 40"/>
       <quantity value="1"/>
       <menu value="Use|Use"/>
     </attributes>

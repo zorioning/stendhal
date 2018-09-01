@@ -90,7 +90,7 @@ public class GuardNPC implements ZoneConfigurator  {
 				addGoodbye();
 			}};
 			npc.setPosition(9, 7);
-			npc.setDescription("你遇到了 Semos 监狱的看守，Marcus.");
+			npc.setDescription("你遇到了 塞门镇 监狱的看守，Marcus.");
 			npc.setEntityClass("youngsoldiernpc");
 			zone.add(npc);
 	}

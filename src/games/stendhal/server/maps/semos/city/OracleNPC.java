@@ -51,7 +51,7 @@ public class OracleNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("玫瑰为红，紫萝为蓝，Semos 需要帮助，你能做些什么？");
+				addGreeting("玫瑰为红，紫萝为蓝，塞门镇 需要帮助，你能做些什么？");
 
 				// use a standard action to list the names of NPCs for quests which haven't been started in this region
 				addReply(ConversationPhrases.HELP_MESSAGES, null, new SayNPCNamesForUnstartedQuestsAction(regions));

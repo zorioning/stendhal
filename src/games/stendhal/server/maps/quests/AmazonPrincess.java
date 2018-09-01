@@ -48,7 +48,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Princess Esclara, the Amazon Princess in a Hut on Amazon Island</li>
+ * <li>Princess Esclara, the Amazon Princess in a Hut on 亚马孙岛</li>
  * </ul>
  *
  * STEPS:

@@ -271,9 +271,9 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new VegetableGrower("wood", "虽然没有要捡的东西，但这些木头还是可以用用。");
+			passiveEntityrespawnPoint = new VegetableGrower("木头", "虽然没有要捡的东西，但这些木头还是可以用用。");
 			passiveEntityrespawnPoint.put("menu", "Pick|Use");
-			passiveEntityrespawnPoint.setDescription("一根圆木倒在地下。");
+			passiveEntityrespawnPoint.setDescription("一根木头倒在地下。");
 			break;
 		case 1:
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("iron ore", 3000);

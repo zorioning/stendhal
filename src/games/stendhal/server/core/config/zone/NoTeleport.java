@@ -18,7 +18,7 @@ import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
 
 /**
- * Semos Jail - Level -3.
+ * 塞门镇 Jail - Level -3.
  *
  * @author hendrik
  */

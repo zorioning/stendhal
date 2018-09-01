@@ -70,7 +70,7 @@ public class TheMissingBooks extends AbstractQuest {
 
 	private static Map<String, String> quotes = new HashMap<String, String>();
 	static {
-		quotes.put("Down in the deep sea around Athor island...",
+		quotes.put("Down in the deep sea around 阿托尔岛...",
 						"it lays, hidden under soft sand - the mighty treasure of Faiumoni.");
 		quotes.put("As a mighty warrior,...",
 						"you always need to wear a powerful armor in fights.");
@@ -79,7 +79,7 @@ public class TheMissingBooks extends AbstractQuest {
 		quotes.put("Hungry? Thirsty? Tired?...",
 						"A break might help. Take a look around the lovely nature of Faiumoni and find relaxing places to make a stop at. Even when you are busy during tasks, a healthy snack will power you up.");
 		quotes.put("And there they were: two strangers, alone in the tunnel...",
-						"of Amazon island, heading out for reaching the right entrance to a life full of joy and peace - at least they hoped for that.");
+						"of 阿多斯城, heading out for reaching the right entrance to a life full of joy and peace - at least they hoped for that.");
 		quotes.put("Oh my oh my oh my! What for a huge creature I'm looking at! It's red, it's huge,...",
 						"it's powerful, it has a hard forehand...Could that be it? It is a balrog!");
 		quotes.put("You need some flour, some eggs, some butter, some sugar, some chocolate and some milk...",

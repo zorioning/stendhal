@@ -417,8 +417,8 @@ public class ReverseArrow extends AbstractQuest implements
 	}
 
 	private void step1CreateDoors() {
-		// 0_semos_mountain_n2 at (95,101)
-		final String entranceZoneName = "0_semos_mountain_n2";
+		// 0_塞门_山_北2 at (95,101)
+		final String entranceZoneName = "0_塞门_山_北2";
 		entranceZone = SingletonRepository.getRPWorld().getZone(entranceZoneName);
 		door = new NotifyingDoor("housedoor");
 		door.setPosition(95, 101);

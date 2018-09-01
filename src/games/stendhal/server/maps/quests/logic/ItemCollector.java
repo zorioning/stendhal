@@ -22,7 +22,7 @@ import java.util.List;
  * Example usage:
  *
  * <pre>
- * new ItemCollector().require().item("wood").pieces(2).bySaying("Bring me %s, please.");
+ * new ItemCollector().require().item("木头").pieces(2).bySaying("Bring me %s, please.");
  * </pre>
  */
 public class ItemCollector {

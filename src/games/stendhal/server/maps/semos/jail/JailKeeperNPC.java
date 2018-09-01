@@ -23,7 +23,7 @@ import games.stendhal.server.core.pathfinder.Node;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Semos Jail - Level -2.
+ * 塞门镇 Jail - Level -2.
  *
  * @author hendrik
  */
@@ -63,7 +63,7 @@ public class JailKeeperNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("youngsoldiernpc");
-		npc.setDescription("You see one of the Semos jail keepers, Sten Tanquilos.");
+		npc.setDescription("You see one of the 塞门镇 jail keepers, Sten Tanquilos.");
 		npc.setPosition(4, 17);
 		npc.initHP(100);
 		zone.add(npc);

@@ -82,7 +82,7 @@ public class StuffForVulcanus extends AbstractQuest {
 
 	public StuffForVulcanus() {
 		itemCollector.require().item("iron").pieces(15).bySaying("I cannot #forge it without the missing %s.");
-		itemCollector.require().item("wood").pieces(26).bySaying("How do you expect me to #forge it without missing %s for the fire?");
+		itemCollector.require().item("木头").pieces(26).bySaying("How do you expect me to #forge it without missing %s for the fire?");
 		itemCollector.require().item("gold bar").pieces(12).bySaying("I must pay a bill to spirits in order to cast the enchantment over the sword. I need %s more.");
 		itemCollector.require().item("giant heart").pieces(6).bySaying("It is the base element of the enchantment. I need %s still.");
 
@@ -224,7 +224,7 @@ public class StuffForVulcanus extends AbstractQuest {
 				"Collect some iron ore from the mines which are rich in minerals.",
 				null);
 		npc.add(ConversationStates.ANY,
-				"wood",
+				"木头",
 				null,
 				ConversationStates.ATTENDING,
 				"The forest is full of wood logs.",
@@ -239,7 +239,7 @@ public class StuffForVulcanus extends AbstractQuest {
 				Arrays.asList("giant", "giant heart"),
 				null,
 				ConversationStates.ATTENDING,
-				"There are ancient stories of giants living in the mountains at the north of Semos and Ados.",
+				"There are ancient stories of giants living in the mountains at the north of 塞门镇 and Ados.",
 				null);
 	}
 

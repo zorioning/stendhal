@@ -70,7 +70,7 @@ public class GreeterNPC implements ZoneConfigurator {
 				addJob("I just wander around. In fact, albino elves wander around a lot. We're #nomadic, you know.");
 				addReply("nomadic", "We don't have a permanent home, we travel instead between forests and glens. When we find a clearing we like, we settle. We liked this one because of the ancient #stones near by.");
 				addReply("stones", "They have some mystical quality. We like to be by them for the changing of the seasons.");
-				addHelp("I would sell you enchanted scrolls to return to Fado City. I have a source of cheap ones.");
+				addHelp("I would sell you enchanted scrolls to return to 法多城. I have a source of cheap ones.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("fadoscrolls")) {
 
 					@Override

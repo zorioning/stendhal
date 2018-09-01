@@ -42,9 +42,9 @@
     </equipable>
   </item>
   
-  <item name="flask">
+  <item name="瓶子">
     <type class="container" subclass="flask" tileid="-1"/>
-    <description>You see a flask. This flask is good for storing medicine.</description>
+    <description>You see a 瓶子. This 瓶子 is good for storing medicine.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

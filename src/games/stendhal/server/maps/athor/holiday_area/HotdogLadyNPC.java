@@ -29,7 +29,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /*
- * Outside holiday area on Athor Island)
+ * Outside holiday area on 阿托尔岛)
  */
 public class HotdogLadyNPC implements ZoneConfigurator {
 	private final ShopList shops = SingletonRepository.getShopList();
@@ -72,7 +72,7 @@ public class HotdogLadyNPC implements ZoneConfigurator {
 		hotdoglady.setEntityClass("woman_013_npc");
 		hotdoglady.setPosition(33,69);
 		hotdoglady.initHP(100);
-		hotdoglady.setDescription("You see Sara Beth. Her hotdog market is the most popular one on Athor island.");
+		hotdoglady.setDescription("You see Sara Beth. Her hotdog market is the most popular one on 阿托尔岛.");
 		zone.add(hotdoglady);
 	}
 }

@@ -57,7 +57,7 @@ public class MithrilForgerNPC implements ZoneConfigurator {
 
 				// Pedinghaus makes mithril if you bring him mithril nugget and wood
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("wood", 20);
+				requiredResources.put("木头", 20);
 				requiredResources.put("mithril nugget", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("Pedinghaus_cast_mithril",
@@ -65,7 +65,7 @@ public class MithrilForgerNPC implements ZoneConfigurator {
 
 				new ProducerAdder().addProducer(this, behaviour,
 				        "Greetings. I sense you may be interested in mithril. If you desire me to #cast you a #'mithril bar', just say the word.");
-				addReply("wood",
+				addReply("木头",
 		        		"The wood is for the fire. I hope you collect yours from the forest, and not the barbaric practise of killing ents.");
 				addReply(Arrays.asList("mithril ore", "mithril nugget"),
 				        "Nowadays these rare nuggets are only likely to be found in the Ados mountains. I have no idea if that area is still civilised...");

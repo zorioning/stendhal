@@ -288,7 +288,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 		};
 		npc.setPosition(37, 2);
 		npc.setEntityClass("experiencedwarriornpc");
-		npc.setDescription("You see Starkad, the mighty warrior and defender of Semos.");
+		npc.setDescription("You see Starkad, the mighty warrior and defender of 塞门镇.");
 		zone.add(npc);
 	}
 

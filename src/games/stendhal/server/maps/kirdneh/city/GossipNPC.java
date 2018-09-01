@@ -45,7 +45,7 @@ public class GossipNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Jef") {
+		final SpeakerNPC npc = new SpeakerNPC("杰夫") {
 
 			@Override
 			protected void createPath() {

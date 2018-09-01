@@ -39,7 +39,7 @@ import games.stendhal.server.maps.Region;
  * <p>
  * PARTICIPANTS:
  * <ul>
- * <li> Balduin, a hermit living on a mountain between Semos and Ados
+ * <li> Balduin, a hermit living on a mountain between 塞门镇 and Ados
  * </ul>
  * <p>
  * STEPS:

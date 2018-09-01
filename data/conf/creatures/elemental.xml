@@ -86,7 +86,7 @@
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
       <item value="greater antidote" quantity="[1,2]" probability="50.0"/>
-      <item value="wood" quantity="[1,3]" probability="10.0"/>
+      <item value="木头" quantity="[1,3]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -412,7 +412,7 @@
     <corpse name="wooden" harmless="wooden" />
     <drops>
       <item value="money" quantity="[5,19]" probability="100.0"/>
-      <item value="wood" quantity="[1,2]" probability="15.0"/>
+      <item value="木头" quantity="[1,2]" probability="15.0"/>
     </drops>
     <equips>
     </equips>
@@ -446,7 +446,7 @@
     <drops>
       <item value="money" quantity="[50,70]" probability="100.0"/>
       <item value="greater potion" quantity="[1,2]" probability="20.0"/>
-      <item value="wood" quantity="[1,4]" probability="60.0"/>
+      <item value="木头" quantity="[1,4]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
@@ -467,9 +467,9 @@
     </ai>
   </creature>
   
-  <creature name="old ent">      
+  <creature name="老树精">      
    <type class="ent" subclass="old_ent" tileid="ent.png:1"/>
-   <description>You see an old ent. It has seen many years passing by and survived a lot of storms. You can see that it is very old because it has already lost all of its leaves and most of its bark is broken...</description>    
+   <description>这是一个老树精。它经历了许多年的风风雨雨。你可以看到它很老了，因为它已经失去了所有的叶子，大部分树皮都被折断了…… </description>    
    <attributes>      
     <atk value="573"/>   
     <def value="128"/>   
@@ -485,7 +485,7 @@
    <drops>   
      <item value="money" quantity="[30,50]" probability="100.0"/>    
      <item value="greater potion" quantity="[1,2]" probability="30.0"/>      
-     <item value="wood" quantity="[1,3]" probability="70.0"/>    
+     <item value="木头" quantity="[1,3]" probability="70.0"/>    
      <item value="button mushroom" quantity="[3,5]" probability="20.0"/>     
     </drops>     
     <equips>     
@@ -506,9 +506,9 @@
     </ai>    
   </creature>
   
-  <creature name="entwife">
+  <creature name="树精妻子">
     <type class="ent" subclass="entwife" tileid="ent.png:3"/>
-    <description>You see an entwife. It is stronger than an ent and lives in a group in an ancient forest.</description>
+    <description>这是一个树妻。它比树精强壮，生活在古老的森林里。</description>
     <attributes>
       <atk value="719"/>
       <def value="93"/>
@@ -524,7 +524,7 @@
     <drops>
       <item value="button mushroom" quantity="[1,6]" probability="50.0"/>
       <item value="greater potion" quantity="[2,3]" probability="10.0"/>
-      <item value="wood" quantity="[2,6]" probability="70.0"/>
+      <item value="木头" quantity="[2,6]" probability="70.0"/>
       <item value="grain" quantity="[5,20]" probability="30.0"/>
       <item value="leek" quantity="[3,20]" probability="10.0"/>
       <item value="cauliflower" quantity="[5,20]" probability="25.0"/>

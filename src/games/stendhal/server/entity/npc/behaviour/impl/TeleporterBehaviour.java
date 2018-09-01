@@ -104,8 +104,8 @@ public class TeleporterBehaviour implements TurnListener {
 	private void addHighProbability() {
 		final StendhalRPWorld world = SingletonRepository.getRPWorld();
 		for (int i = 0; i < 10; i++) {
-			zones.add(world.getZone("0_semos_city"));
-			zones.add(world.getZone("0_semos_village_w"));
+			zones.add(world.getZone("0_塞门_镇"));
+			zones.add(world.getZone("0_塞门_村庄_西"));
 			zones.add(world.getZone("0_semos_plains_n"));
 			zones.add(world.getZone("0_semos_plains_ne"));
 			zones.add(world.getZone("0_semos_road_e"));
@@ -128,7 +128,7 @@ public class TeleporterBehaviour implements TurnListener {
 		badZones.add("0_ados_wall_n");
 		badZones.add("0_fado_forest_se");
 		badZones.add("0_fado_forest_s_e2");
-		badZones.add("0_semos_mountain_n_w4");
+		badZones.add("0_塞门_山_北_西4");
 		// the following have historically been very hard to find a path in
 		badZones.add("0_ados_city_n");
 		badZones.add("0_ados_ocean_e");

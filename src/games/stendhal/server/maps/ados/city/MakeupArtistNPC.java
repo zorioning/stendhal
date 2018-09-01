@@ -24,7 +24,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.OutfitChangerBehaviour;
 import games.stendhal.server.util.TimeUtil;
 
 /**
- * Creates the NPCs and portals in Ados City.
+ * Creates the NPCs and portals in 阿多斯城.
  *
  * @author hendrik
  */

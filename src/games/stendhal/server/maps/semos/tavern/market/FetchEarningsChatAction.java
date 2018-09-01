@@ -49,10 +49,10 @@ public class FetchEarningsChatAction implements ChatAction {
 		}
 		if (collectedSum > 0) {
 			player.sendPrivateText("你的销售总额为 "+Integer.valueOf(collectedSum).toString()+" 钱.");
-			npc.say("欢迎来到 Semos 交易中心，我已把你代销的货款给你，还有其它事吗?");
+			npc.say("欢迎来到 塞门镇 交易中心，我已把你代销的货款给你，还有其它事吗?");
 		} else {
 			//either you have no space in your bag or there isn't anything to collect
-			npc.say("欢迎来到 Semos 交易中心. 需要什么服务吗 #help ?");
+			npc.say("欢迎来到 塞门镇 交易中心. 需要什么服务吗 #help ?");
 		}
 		npc.setCurrentState(ConversationStates.ATTENDING);
 	}

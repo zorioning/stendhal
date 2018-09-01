@@ -63,11 +63,11 @@ public class ConfectionerApplePieNPC implements ZoneConfigurator {
 				addReply("milk",
 					"Perhaps you should visit some farm where you see they have cows...");
 				addReply("flour",
-					"Ahh... I get all my flour at the mill just north of Semos city!");
+					"Ahh... I get all my flour at the mill just north of 塞门镇!");
 				addReply("egg",
 					"Find some hens and you'll easily find some eggs, too!");
 				addReply("apple",
-					"Mmm... When once in a while I travel from Semos to Ados, I always stop at the orchard near a farm along the road...");
+					"Mmm... When once in a while I travel from 塞门镇 to Ados, I always stop at the orchard near a farm along the road...");
 
 
 				addHelp("If it would help, I could #bake an apple pie for you!");

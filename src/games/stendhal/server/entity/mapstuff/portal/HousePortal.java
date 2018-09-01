@@ -70,7 +70,7 @@ public class HousePortal extends AccessCheckingPortal {
 	 * @param doorId the door identifier
 	 */
 	public HousePortal(final String doorId) {
-		super("The door is locked.");
+		super("门锁住了");
 		setRPClass(RPCLASS_NAME);
 		put("type", "house_portal");
 		put(DOOR_ID, doorId);
@@ -90,7 +90,7 @@ public class HousePortal extends AccessCheckingPortal {
 		put("type", "house_portal");
 		super.setDestination(get(DESTINATION_ZONE), idToObject(DESTINATION_ID));
 		super.setIdentifier(idToObject(PORTAL_REFERENCE));
-		setRejectedMessage("The door is locked.");
+		setRejectedMessage("门锁住了");
 
 	   	store();
 	}

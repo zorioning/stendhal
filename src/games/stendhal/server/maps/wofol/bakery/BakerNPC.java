@@ -83,12 +83,12 @@ public class BakerNPC implements ZoneConfigurator {
 				addJob("I #make #pizza. I have learn from the great baker #Leander.");
 				addReply(Arrays.asList("button mushroom", "porcini"),
 				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
-				addReply("flour", "Mill near Semos produce from grain.");
+				addReply("flour", "Mill near 塞门镇 produce from grain.");
 				addReply("干酪", "Cheese? I know not.");
 				addReply("tomato", "This grow in glass houses.");
 				addReply("ham", "The pig animal have ham.");
 				addHelp("I have work with #Leander, I #make #pizza.");
-				addReply("Leander", "I was with human, in Semos. The great Leander taught to #make #pizza.");
+				addReply("Leander", "I was with human, in 塞门镇. The great Leander taught to #make #pizza.");
 				addQuest("#Leander need pizza send. I #make #pizza, you have ingredients.");
 				addGoodbye("You no take candle!");
 

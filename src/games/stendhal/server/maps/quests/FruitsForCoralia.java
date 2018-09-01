@@ -241,7 +241,7 @@ public class FruitsForCoralia extends AbstractQuest {
         	"apple",
         	new QuestActiveCondition(QUEST_SLOT),
         	ConversationStates.QUESTION_1,
-        	"好红, 好亮的苹果! 这是我刚从Semos东边拿到的.",
+        	"好红, 好亮的苹果! 这是我刚从塞门镇东边拿到的.",
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
@@ -262,7 +262,7 @@ public class FruitsForCoralia extends AbstractQuest {
             "grapes",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "There's a beautiful little temple in the mountains north of Semos北面的山上有一个漂亮的神庙，上面爬满了葡萄藤 grapes!  还听说 Or'ril山上有些旧房子.",
+            "There's a beautiful little temple in the mountains north of 塞门镇北面的山上有一个漂亮的神庙，上面爬满了葡萄藤 grapes!  还听说 Or'ril山上有些旧房子.",
             null);
 
     	npc.add(ConversationStates.QUESTION_1,

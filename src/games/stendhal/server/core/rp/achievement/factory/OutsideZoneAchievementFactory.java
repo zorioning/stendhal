@@ -23,7 +23,7 @@ public class OutsideZoneAchievementFactory extends AbstractAchievementFactory {
 	public Collection<Achievement> createAchievements() {
 		Collection<Achievement> list = new LinkedList<Achievement>();
 		//All outside zone achievements
-		list.add(createAchievement("zone.outside.semos", "Junior Explorer", "Visit all outside zones in the Semos region",
+		list.add(createAchievement("zone.outside.semos", "Junior Explorer", "Visit all outside zones in the 塞门镇 region",
 									Achievement.EASY_BASE_SCORE, true,
 									new PlayerVisitedZonesInRegionCondition("semos", Boolean.TRUE, Boolean.TRUE)));
 		list.add(createAchievement("zone.outside.ados", "Big City Explorer", "Visit all outside zones in the Ados region",

@@ -22,7 +22,7 @@ public class InteriorZoneAchievementFactory extends AbstractAchievementFactory {
 	public Collection<Achievement> createAchievements() {
 		Collection<Achievement> list = new LinkedList<Achievement>();
 		//All below ground achievements
-		list.add(createAchievement("zone.interior.semos", "Home maker", "Visit all interior zones in the Semos region",
+		list.add(createAchievement("zone.interior.semos", "Home maker", "Visit all interior zones in the 塞门镇 region",
 									Achievement.MEDIUM_BASE_SCORE, true,
 									new PlayerVisitedZonesInRegionCondition("semos", Boolean.FALSE, Boolean.FALSE)));
 		list.add(createAchievement("zone.interior.nalwor", "Elf visitor", "Visit all interior zones in the Nalwor region",

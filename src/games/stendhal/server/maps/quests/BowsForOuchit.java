@@ -36,18 +36,18 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Bows for Ouchit
+ * QUEST: Bows for 奥斯特
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Ouchit, ranged items seller</li>
- * <li> Karl, farmer</li>
+ * <li> 奥斯特, ranged items seller</li>
+ * <li> 卡尔, farmer</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Ouchit asks for wood for his bows and arrows. </li>
- * <li> Puchit asks you to fetch horse hair from Karl also.</li>
+ * <li> 奥斯特 asks for wood for his bows and arrows. </li>
+ * <li> Puchit asks you to fetch 马尾鬃 from 卡尔 also.</li>
  * <li> Return and you get some equipment as reward.<li>
  * </ul>
  *
@@ -72,18 +72,18 @@ public class BowsForOuchit extends AbstractQuest {
 	public void prepareQuestStep() {
 
 		/*
-		 * get a reference to the Ouchit NPC
+		 * get a reference to the 奥斯特 NPC
 		 */
-		SpeakerNPC npc = npcs.get("Ouchit");
+		SpeakerNPC npc = npcs.get("奥斯特");
 
 		/*
-		 * Add a reply on the trigger phrase "quest" to Ouchit
+		 * Add a reply on the trigger phrase "quest" to 奥斯特
 		 */
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
-				"Are you here to help me a bit?",
+				"能过来帮个忙吗？",
 				null);
 
 		/*
@@ -93,8 +93,8 @@ public class BowsForOuchit extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"Good! I sell bows and arrows. It would be great if you could " +
-				"bring me 10 pieces of #wood. Can you bring me the wood?",
+				"不错！我销售弓和箭，如果你能带来10根木头就太好了。 " +
+				"能带来吗?",
 				null);
 
 		/*
@@ -104,7 +104,7 @@ public class BowsForOuchit extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
-				"Oh ok, bye.",
+				"哦，好吧,再见.",
 				null);
 
 		/*
@@ -114,18 +114,17 @@ public class BowsForOuchit extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Nice :-) Come back when you have them and say #wood.",
-				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "wood", 2.0));
+				"很好 :-) 当你找够木头时回来说 #木头.",
+				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "木头", 2.0));
 
 		/*
 		 * Player asks about wood.
 		 */
 		npc.add(ConversationStates.QUEST_OFFERED,
-				"wood",
+				"木头",
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"Wood is a great item with many purposes. Of course you will " +
-				"find some pieces in a forest. Will you bring me 10 pieces?",
+				"木头可以用在很多地方。当然是在森林中可以找到它，你可以带10根过来吗?",
 				null);
 
 		/*
@@ -135,84 +134,79 @@ public class BowsForOuchit extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
-				"Ok, you can come back later if you want. Bye for now.",
+				"好吧，当你想帮我的时候再过来，再见了！",
 				null);
 	}
 
 	public void bringWoodStep() {
 
 		/*
-		 * get a reference to the Ouchit NPC
+		 * get a reference to the 奥斯特 NPC
 		 */
-		SpeakerNPC npc = npcs.get("Ouchit");
+		SpeakerNPC npc = npcs.get("奥斯特");
 
 		/*
 		 * Player asks about quest, remind what they're doing
 		 */
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
-				new QuestInStateCondition(QUEST_SLOT,"wood"),
+				new QuestInStateCondition(QUEST_SLOT,"木头"),
 				ConversationStates.ATTENDING,
-				"I'm waiting for you to bring me 10 pieces of #wood.",
+				"我还在等你带来10根 #木头",
 				null);
 
 		/*
 		 * Player asks about wood, but hasn't collected any - remind them.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				"wood",
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"wood"),
-								 new NotCondition (new PlayerHasItemWithHimCondition("wood",10))),
+				"木头",
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"木头"),
+								 new NotCondition (new PlayerHasItemWithHimCondition("木头",10))),
 				ConversationStates.ATTENDING,
-				"Wood is a great item with many purposes. Of course you will " +
-				"find some pieces in a forest. Please remember to come back when you " +
-				"have ten pieces for me, and say #wood.",
+				"木头可以用在很多地方。当然是在森林中可以找到它，当你找够10根木头时，请记得回来对我说 #木头",
 				null);
 
 		/*
 		 * Player asks about wood, and has collected some - take it and
-ask for horse hair.
+ask for 马尾鬃.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				"wood",
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"wood"),
-								new PlayerHasItemWithHimCondition("wood",10)),
+				"木头",
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"木头"),
+								new PlayerHasItemWithHimCondition("木头",10)),
 				ConversationStates.ATTENDING,
-				"Great, now I can make new arrows. But for the bows I need " +
-				"bowstrings. Please go to #Karl. I know he has horses and if " +
-				"you tell him my name he will give you #'horse hairs' from a horsetail.",
-				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "hair", 2.0), new DropItemAction("wood", 10)));
+				"太好了，现在我可以制作箭了。但制作弓还需要弓弦。还请找到 #Karl，他养了很多马，如果你把我的名字告诉他，他会从马尾上剪些 #'马尾鬃' 给你。",
+				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "hair", 2.0), new DropItemAction("木头", 10)));
 
 		/*
-		 * For simplicity, respond to 'Karl' at any time.
+		 * For simplicity, respond to '卡尔' at any time.
 		 */
-		npc.addReply("Karl", "Karl is a farmer, east of Semos. He has many pets on his farm.");
+		npc.addReply("卡尔", "卡尔 是个农未，在 塞门镇 的东面，他的农场养了很多宠物。");
 	}
 
 	public void getHairStep() {
 
 		/*
-		 * get a reference to the Karl NPC
+		 * get a reference to the 卡尔 NPC
 		 */
-		SpeakerNPC npc = npcs.get("Karl");
+		SpeakerNPC npc = npcs.get("卡尔");
 
 		npc.add(ConversationStates.ATTENDING,
-				"Ouchit",
+				"奥斯特",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
-								new NotCondition (new PlayerHasItemWithHimCondition("horse hair",1))),
+								new NotCondition (new PlayerHasItemWithHimCondition("马尾鬃",1))),
 				ConversationStates.ATTENDING,
-				"Hello, hello! Ouchit needs more horse hairs from my horses? " +
-				"No problem, here you are. Send Ouchit greetings from me.",
-				new EquipItemAction("horse hair"));
+				"你好，你好！Ouchit要些 马尾鬃？没问题，拿去吧。顺便带我向 奥斯特 问个好。",
+				new EquipItemAction("马尾鬃"));
 
 	}
 
 	public void bringHairStep() {
 
 		/*
-		 * get a reference to the Ouchit NPC
+		 * get a reference to the 奥斯特 NPC
 		 */
-		SpeakerNPC npc = npcs.get("Ouchit");
+		SpeakerNPC npc = npcs.get("奥斯特");
 
 		/*
 		 * Player asks about quest, remind what they're doing
@@ -221,41 +215,40 @@ ask for horse hair.
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT,"hair"),
 				ConversationStates.ATTENDING,
-				"I'm waiting for you to bring me some #'horse hairs'.",
+				"我正等着你带来 #'马尾鬃'.",
 				null);
 
 		/*
-		 * Player asks about horse hair, but hasn't collected any - remind them.
+		 * Player asks about 马尾鬃, but hasn't collected any - remind them.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("hair", "马尾", "horse hairs"),
+				Arrays.asList("hair", "马尾", "马尾鬃"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
-								new NotCondition (new PlayerHasItemWithHimCondition("horse hair"))),
+								new NotCondition (new PlayerHasItemWithHimCondition("马尾鬃"))),
 				ConversationStates.ATTENDING,
-				"Horse hairs can be used as a bowstring. Please fetch me some from #Karl.",
+				"马尾鬃可以制作弓弦。请代我找 #卡尔 取一些过来。",
 				null);
 
 		/*
 		 * These actions are part of the reward
 		 */
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("horse hair"));
+		reward.add(new DropItemAction("马尾鬃"));
 		reward.add(new EquipItemAction("鳞甲", 1, true));
 		reward.add(new EquipItemAction("chain legs", 1, true));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 10.0));
 
 		/*
-		 * Player asks about horse hair, and has collected some - take it
-and ask for horse hair.
+		 * Player asks about 马尾鬃, and has collected some - take it
+and ask for 马尾鬃.
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("hair", "马尾", "horse hairs"),
+				Arrays.asList("hair", "马尾", "马尾鬃"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
-								new PlayerHasItemWithHimCondition("horse hair")),
+								new PlayerHasItemWithHimCondition("马尾鬃")),
 				ConversationStates.ATTENDING,
-				"Yay, you got the horse hairs. Thanks a lot. Karl is really nice. Here, " +
-				"take this for your work. Someone left it here and I don't need those things.",
+				"呀！你把 马尾鬃 带来了，非常感谢。Karl 真是好人。这是之前有人落下的东西，放我这没用，送给你了，这是你应得的。",
 				new MultipleActions(reward));
 
 		/*
@@ -265,7 +258,7 @@ and ask for horse hair.
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Thanks for your help. If I can #offer you anything just ask.",
+				"感谢你的帮助。如果需要我的帮助，尽管说",
 				null);
 
 	}
@@ -277,8 +270,8 @@ and ask for horse hair.
 		getHairStep();
 		bringHairStep();
 		fillQuestInfo(
-				"Bows for Ouchit",
-				"Ouchit is running out of bows and arrows to sell!",
+				"奥斯特 的弓",
+				"奥斯特 忙于制造和销售弓和箭!",
 				false);
 	}
 
@@ -289,21 +282,21 @@ and ask for horse hair.
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("Ouchit asked me for help to replenish his stocks of bows and arrows.");
-		if (player.isQuestInState(QUEST_SLOT, "wood", "hair", "done")) {
-			res.add("First I must fetch Ouchit 10 pieces of wood.");
+		res.add("奥斯特 让我帮他找一些弓箭的原材料。");
+		if (player.isQuestInState(QUEST_SLOT, "木头", "hair", "done")) {
+			res.add("首先我必须找10根木头给 Ouchit。");
 		}
-		if(player.isEquipped("wood", 10) && "wood".equals(questState)) {
-			res.add("I've got the wood to take to Ouchit.");
+		if(player.isEquipped("木头", 10) && "木头".equals(questState)) {
+			res.add("我集齐了木头，并交给 奥斯特.");
 		}
 		if(player.isQuestInState(QUEST_SLOT, "hair", "done")) {
-			res.add("Next I need to get some horse hairs, which Ouchit uses as bowstrings. I'm told the farmer Karl will help me.");
+			res.add("然后我需要拿一些 马尾鬃,Ouchit要用它做弓弦。他告诉我找到农夫 卡尔 可以弄到.");
 		}
-		if(player.isEquipped("horse hair") && "hair".equals(questState) || isCompleted(player)) {
-			res.add("Karl was kind and gave me some horse hairs.");
+		if(player.isEquipped("马尾鬃") && "hair".equals(questState) || isCompleted(player)) {
+			res.add("卡尔 真是好人，直接给了我一些 马尾鬃.");
 		}
 		if (isCompleted(player)) {
-			res.add("Ouchit gave me some new equipment as thanks for helping him.");
+			res.add("作为谢礼，Ouchit 给了我一个新装备");
 		}
 		return res;
 	}
@@ -330,6 +323,6 @@ and ask for horse hair.
 
 	@Override
 	public String getNPCName() {
-		return "Ouchit";
+		return "奥斯特";
 	}
 }

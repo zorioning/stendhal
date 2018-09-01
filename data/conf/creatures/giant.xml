@@ -4,9 +4,9 @@
   
   <!-- START: amazon -->
   
-  <creature name="amazoness giant">
+  <creature name="亚马逊巨人">
     <type class="giant_human" subclass="amazoness_giant" tileid="giant_human.png:10"/>
-    <description>You see an amazoness giant. She looks very beautiful but don't be deceived by that!</description>
+    <description>这是一个亚马逊巨人。她长得很漂亮，但你不要看错了。</description>
     <attributes>
       <atk value="974"/>
       <def value="124"/>
@@ -64,7 +64,7 @@
     <ai>
       <says>
         <noise state="idle follow fight" value="Fee Fie Foe Fum!!"/>
-        <noise state="idle follow fight" value="I seek the blood of a Semos Man!"/>
+        <noise state="idle follow fight" value="I seek the blood of a 塞门镇 Man!"/>
       </says>
       <profile name="brave"/>
       <profile name="animal"/>
@@ -74,9 +74,9 @@
     </ai>
   </creature>
   
-  <creature name="elder giant">
+  <creature name="大巨头">
     <type class="giant_human" subclass="giant_elder" tileid="giant_human.png:0"/>
-    <description>You see an elder giant. For many years he lived alone and had to hide because he was hunted by humans! Now he is old and has decided not to hide any longer because he wants to see something else in his life.</description>
+    <description>这是一个年长的巨人。多年来，他独自生活，不得不躲藏起来，因为他被人类猎杀!现在他老了，决定不再躲藏，因为他想在他的生活中看到别的东西。</description>
     <attributes>
       <atk value="826"/>
       <def value="96"/>
@@ -99,8 +99,8 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Gnomes! Run away!"/>
-        <noise state="idle follow fight" value="You may steal my money but you'll never take my heart!"/>
+        <noise state="idle follow fight" value="侏儒!快跑!"/>
+        <noise state="idle follow fight" value="你可能会偷我的钱，但你永远不会夺走我的心!"/>
       </says>
       <profile name="brave"/>
       <profile name="animal"/>
@@ -111,9 +111,9 @@
     </ai>
   </creature>
   
-  <creature name="master giant">
+  <creature name="巨人之主">
     <type class="giant_human" subclass="master_giant" tileid="giant_human.png:9"/>
-    <description>You see a master giant with dark black eyes. His blood pumps loudly into his heart.</description>
+    <description>这是的是一个有着黑色眼睛的巨人之主。他的血液泵入他的心脏。</description>
     <attributes>
       <atk value="850"/>
       <def value="98"/>
@@ -137,8 +137,8 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Thou shalt die!"/>
-        <noise state="idle follow fight" value="Worms will feast on your corpse!"/>
+        <noise state="idle follow fight" value="你必死!"/>
+        <noise state="idle follow fight" value="W虫子会吃掉你的尸体!"/>
       </says>
       <profile name="brave"/>
       <profile name="animal"/>
@@ -147,9 +147,9 @@
     </ai>
   </creature>
   
-  <creature name="black giant">
+  <creature name="黑巨人">
     <type class="giant_human" subclass="black_giant" tileid="giant_human.png:3"/>
-    <description>You see a tall black giant. His armor and sword will hit you hard. Be prepared!</description>
+    <description>这是一个高大的黑巨人。他的盔甲和剑会狠狠地打你。做好准备!</description>
     <attributes>
       <atk value="1154"/>
       <def value="119"/>
@@ -181,8 +181,8 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Who dare challenge me?"/>
-        <noise state="idle follow fight" value="Leave me now, before it is too late!"/>
+        <noise state="idle follow fight" value="谁敢挑战我吗??"/>
+        <noise state="idle follow fight" value="现在就离开我，否则就太晚了!"/>
       </says>
       <profile name="brave"/>
       <profile name="animal"/>
@@ -197,7 +197,7 @@
   
   <!-- START: imperial -->
   
-  <creature name="imperial general giant">
+  <creature name="帝国巨人将军">
     <type class="giant_human" subclass="imperial_general_giant" tileid="giant_human.png:8"/>
     <description></description>
     <attributes>
@@ -235,9 +235,9 @@
   
   <!-- START: kobold -->
   
-  <creature name="giant kobold">
+  <creature name="巨型狗头人">
     <type class="huge_animal" subclass="giant_kobold" tileid="huge_animal.png:4"/>
-    <description>You see a giant kobold. Though generally playful it doesn't quite know it's own strength. When it asks for a hug, it's best to decline that offer.</description>
+    <description>这是一个巨型狗头人。虽然它通常很好玩，但它并不知道自己的力量。当对方要求拥抱时，最好拒绝对方的拥抱。</description>
     <attributes>
       <atk value="440"/>
       <def value="57"/>
@@ -274,7 +274,7 @@
   
   <!-- START: madaram -->
   
-  <creature name="kasarkutominubat">
+  <creature name="卡萨库木蝠">
     <type class="madaram" subclass="kasarkutominubat" tileid="madaram.png:0"/>
     <description></description>
     <attributes>

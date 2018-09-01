@@ -230,7 +230,7 @@ public class Soup extends AbstractQuest {
 			Arrays.asList("salad", "carrot"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"I usually have to get them imported from Semos. So do you want the soup?",
+			"I usually have to get them imported from 塞门镇. So do you want the soup?",
 			null);
 	}
 

@@ -104,7 +104,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 			}};
 			npc.setPosition(23, 12);
 			npc.setEntityClass("blacksmithnpc");
-			npc.setDescription("你见到了 Xoderos, 是 Semos 镇的强壮的铁匠.");
+			npc.setDescription("你见到了 Xoderos, 是 塞门镇的强壮的铁匠.");
 			zone.add(npc);
 	}
 }

@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.BuyerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 
 /**
- * In Amazon Island ne .
+ * In 亚马孙岛 ne .
  */
 public class AmazonMermaidArmorNPC implements ZoneConfigurator {
     private final ShopList shops = SingletonRepository.getShopList();

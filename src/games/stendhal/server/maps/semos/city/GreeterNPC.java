@@ -40,7 +40,7 @@ public class GreeterNPC implements ZoneConfigurator {
 			@Override
 			public void createDialog() {
 				addJob("我是 Diogenes 的大哥，我也不记得我以前是做什么的了...我现在退休了.");
-				addOffer("我在 Semos 镇做地标 #buildings 指引员。帮助新来的移民指路。当我心情不好时，也会故意指错路逗自已开心。。。呵呵呵！当然，有时我指的错路，他们最终还是找到正确的路，哈哈哈!");
+				addOffer("我在 塞门镇做地标 #buildings 指引员。帮助新来的移民指路。当我心情不好时，也会故意指错路逗自已开心。。。呵呵呵！当然，有时我指的错路，他们最终还是找到正确的路，哈哈哈!");
 				// All further behaviour is defined in quest classes.
 			}
 

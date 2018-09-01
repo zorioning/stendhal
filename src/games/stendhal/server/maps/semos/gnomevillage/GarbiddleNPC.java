@@ -44,7 +44,7 @@ public class GarbiddleNPC implements ZoneConfigurator {
 	}
 
 	private void buildgarbiddle(final StendhalRPZone zone) {
-		final SpeakerNPC garbiddle = new SpeakerNPC("Garbiddle") {
+		final SpeakerNPC garbiddle = new SpeakerNPC("嘎比豆") {
 
 			@Override
 			protected void createPath() {
@@ -70,7 +70,7 @@ public class GarbiddleNPC implements ZoneConfigurator {
 		garbiddle.setEntityClass("gnomenpc");
 		garbiddle.setPosition(37, 112);
 		garbiddle.initHP(100);
-		garbiddle.setDescription("你看见 Garbiddle, 长的很精致的侏儒女士. 她等着顾客上门");
+		garbiddle.setDescription("你看见 嘎比豆, 长的很精致的侏儒女士. 她等着顾客上门");
 		zone.add(garbiddle);
 	}
 }

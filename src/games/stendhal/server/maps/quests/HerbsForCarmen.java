@@ -44,18 +44,18 @@ import games.stendhal.server.maps.Region;
 import games.stendhal.server.util.ItemCollection;
 
 /**
- * QUEST: Herbs For Carmen
+ * QUEST: Herbs For 卡蔓
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Carmen (the healer in Semos)</li>
+ * <li>卡蔓 (the healer in 塞门镇)</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Carmen introduces herself and asks for some items to help her heal people.</li>
+ * <li>卡蔓 introduces herself and asks for some items to help her heal people.</li>
  * <li>You collect the items.</li>
- * <li>Carmen sees yours items, asks for them then thanks you.</li>
+ * <li>卡蔓 sees yours items, asks for them then thanks you.</li>
  * </ul>
  *
  * REWARD:
@@ -85,22 +85,22 @@ public class HerbsForCarmen extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Carmen 向我索要冶病配方，以便可以治疗其他病人。");
+		res.add("卡蔓 向我索要冶病配方，以便可以治疗其他病人。");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("我不想帮助 Carmen. 我猜她可以找别人帮助。");
+			res.add("我不想帮助 卡蔓. 我猜她可以找别人帮助。");
 		} else if (!"done".equals(questState)) {
 			final ItemCollection missingItems = new ItemCollection();
 			missingItems.addFromQuestStateString(questState);
-			res.add("我还需要把 " + missingItems.toStringList() + "带给 Carmen.");
+			res.add("我还需要把 " + missingItems.toStringList() + "带给 卡蔓.");
 		} else {
-			res.add("我帮助了 Carmen ，现在她可以继续治病救人了。");
+			res.add("我帮助了 卡蔓 ，现在她可以继续治病救人了。");
 		}
 		return res;
 	}
 
 	private void prepareRequestingStep() {
-		final SpeakerNPC npc = npcs.get("Carmen");
+		final SpeakerNPC npc = npcs.get("卡蔓");
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
@@ -130,7 +130,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"我是 Carmen. 我能免费为你治病，直到你变得更强之前。很多勇者都向我寻求帮助。但现在我的 #ingredients 配方不够了，我需要补充我的药材",
+			"我是 卡蔓. 我能免费为你治病，直到你变得更强之前。很多勇者都向我寻求帮助。但现在我的 #ingredients 配方不够了，我需要补充我的药材",
 			null);
 
 		npc.add(
@@ -168,7 +168,7 @@ public class HerbsForCarmen extends AbstractQuest {
 
 		npc.add(
 			ConversationStates.ATTENDING,
-			"wood",
+			"木头",
 			null,
 			ConversationStates.ATTENDING,
 			"木头是个好东西，可以用在不同的地方，当然你可以在森林中找到一些。",
@@ -179,7 +179,7 @@ public class HerbsForCarmen extends AbstractQuest {
 			Arrays.asList("button mushroom","porcino","porcini","porcinis"),
 			null,
 			ConversationStates.ATTENDING,
-			"有人告诉我在 Semos 森林中有一些不同种类的蘑菇，从这往南走就能到。",
+			"有人告诉我在 塞门镇 森林中有一些不同种类的蘑菇，从这往南走就能到。",
 			null);
 
 		npc.add(
@@ -187,13 +187,13 @@ public class HerbsForCarmen extends AbstractQuest {
 			"arandula",
 			null,
 			ConversationStates.ATTENDING,
-			"出了 Semos 向北, 在 grove 树的旁边，生着名叫 arnandula 的药草，给你看看它的图片，方但你找到它。",
-			new ExamineChatAction("arandula.png", "Carmen's drawing", "Arandula"));
+			"出了 塞门镇 向北, 在 grove 树的旁边，生着名叫 arnandula 的药草，给你看看它的图片，方但你找到它。",
+			new ExamineChatAction("arandula.png", "卡蔓's drawing", "Arandula"));
 
 	}
 
 	private void prepareBringingStep() {
-		final SpeakerNPC npc = npcs.get("Carmen");
+		final SpeakerNPC npc = npcs.get("卡蔓");
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
@@ -281,8 +281,8 @@ public class HerbsForCarmen extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Herbs for Carmen",
-				"Semos 的医者, Carmen 为了做出足够的药济，正到处寻找药济的原料.",
+				"Herbs for 卡蔓",
+				"塞门镇 的医者, 卡蔓 为了做出足够的药济，正到处寻找药济的原料.",
 				true);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -300,7 +300,7 @@ public class HerbsForCarmen extends AbstractQuest {
 
 	public String getTitle() {
 
-		return "Herbs for Carmen";
+		return "Herbs for 卡蔓";
 	}
 
 	@Override
@@ -315,6 +315,6 @@ public class HerbsForCarmen extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Carmen";
+		return "卡蔓";
 	}
 }

@@ -25,7 +25,7 @@ import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 /**
- * ZoneConfigurator configuring Rudolph the Red-Nosed Reindeer who clops around Semos city during Christmas season
+ * ZoneConfigurator configuring Rudolph the Red-Nosed Reindeer who clops around 塞门镇 during Christmas season
  */
 public class RudolphNPC implements ZoneConfigurator {
 

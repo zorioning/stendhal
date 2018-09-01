@@ -126,7 +126,7 @@ public class AdosWildlifeRaid implements TurnListener {
 	}
 
 	public void createPortal() {
-		StendhalRPZone zone1 = (StendhalRPZone) StendhalRPWorld.get().getRPZone(new IRPZone.ID("0_semos_city"));
+		StendhalRPZone zone1 = (StendhalRPZone) StendhalRPWorld.get().getRPZone(new IRPZone.ID("0_塞门_镇"));
 		StendhalRPZone zone2 = (StendhalRPZone) StendhalRPWorld.get().getRPZone(new IRPZone.ID("0_ados_outside_nw"));
 
 		portal = new Portal();

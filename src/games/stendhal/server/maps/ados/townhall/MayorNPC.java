@@ -48,7 +48,7 @@ public class MayorNPC implements ZoneConfigurator {
 	}
 
 	private void buildMayor(final StendhalRPZone zone) {
-		final SpeakerNPC mayor = new SpeakerNPC("Mayor Chalmers") {
+		final SpeakerNPC mayor = new SpeakerNPC("查玛斯市长") {
 
 			@Override
 			protected void createPath() {

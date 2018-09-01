@@ -209,7 +209,7 @@ public class InvasionPhase extends TPPQuest {
 	public String getSwitchingToNextPhaseMessage() {
 		final String text =
 			"市长 Chalmers 播报: 紧急, #rats 老鼠已占领城市, "+
-		  //"Mayor Chalmers shouts: The #rats left as suddenly as they arrived. "+
+		  //"查玛斯市长 shouts: The #rats left as suddenly as they arrived. "+
 		  //"Perhaps they have returned to the sewers. "+
 			"我现在南要呼叫Pied Piper, 一个灭鼠人."+
 			"另外, 感谢所有尽力清理 Ados的市民, "+
@@ -241,12 +241,12 @@ public class InvasionPhase extends TPPQuest {
 	}
 
 	/**
-	 * Red alert! Rats in the Ados city!
+	 * Red alert! Rats in the 阿多斯城!
 	 *
 	 * @return Ados mayor's call for help message
 	 */
 	protected String ratsProblem() {
-		final String text = "Mayor Chalmers shouts: Ados City is being invaded by #rats!"+
+		final String text = "查玛斯市长 shouts: 阿多斯城 is being invaded by #rats!"+
 			              " Anyone who will help to clean up the city, will be rewarded!";
 		return(text);
 	}

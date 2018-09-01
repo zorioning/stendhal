@@ -61,17 +61,17 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li> Jef waits for his mum in Kirdneh for a longer time now and is frightened that something happened to her</li>
+ * <li>杰夫waits for his mum in Kirdneh for a longer time now and is frightened that something happened to her</li>
  * <li> You go to find Amber somewhere in Fado forest</li>
  * <li> She gives you a flower which you have to bring to Jef</li>
  * <li> You return and give the flower to Jef</li>
- * <li> Jef will reward you well</li>
+ * <li>杰夫will reward you well</li>
  * </ul>
  *
  * REWARD:
  * <ul>
  * <li> 800 XP</li>
- * <li> Red lionfish which Jef got by someone who made holidays on Amazon island earlier (between 1-6)</li>
+ * <li> Red lionfish which杰夫got by someone who made holidays on 阿多斯城 earlier (between 1-6)</li>
  * <li> Karma: 15</li>
  * </ul>
  *
@@ -96,7 +96,7 @@ public class FindJefsMom extends AbstractQuest {
 		return QUEST_SLOT;
 	}
 	private void offerQuestStep() {
-		final SpeakerNPC npc = npcs.get("Jef");
+		final SpeakerNPC npc = npcs.get("杰夫");
 
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
@@ -163,7 +163,7 @@ public class FindJefsMom extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				"Jef",
+				"杰夫",
 				null,
 				ConversationStates.ATTENDING,
 				"对, 是我 :)",
@@ -183,18 +183,18 @@ public class FindJefsMom extends AbstractQuest {
 		final SpeakerNPC amber = npcs.get("Amber");
 
         // give the flower if it's at least 5 days since the player activated the quest the last time, and set the time slot again
-		amber.add(ConversationStates.ATTENDING, "Jef",
+		amber.add(ConversationStates.ATTENDING, "杰夫",
 			new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0,"start"),
 							 new PlayerCanEquipItemCondition("zantedeschia")),
 
 			ConversationStates.IDLE,
-			"噢，我想想: ) 我儿子 Jef 让你来看望我，她是个很棒很有爱的孩子！请把这些 zantedeschia 给他. 我很喜爱这些花！带上这个，回去告诉他我很好 #fine.",
+			"噢，我想想: ) 我儿子杰夫让你来看望我，她是个很棒很有爱的孩子！请把这些 zantedeschia 给他. 我很喜爱这些花！带上这个，回去告诉他我很好 #fine.",
 			new MultipleActions(new EquipItemAction("zantedeschia", 1, true),
                                 new SetQuestAction(QUEST_SLOT, 0, "found_mom")));
 
 
 		// don't put the flower on the ground - if player has no space, tell them
-		amber.add(ConversationStates.ATTENDING, "Jef",
+		amber.add(ConversationStates.ATTENDING, "杰夫",
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 								 new NotCondition(new PlayerCanEquipItemCondition("zantedeschia"))),
 				ConversationStates.IDLE,
@@ -202,13 +202,13 @@ public class FindJefsMom extends AbstractQuest {
 				null);
 
         // don't give the flower if the quest state isn't start
-	    amber.add(ConversationStates.ATTENDING, "Jef",
+	    amber.add(ConversationStates.ATTENDING, "杰夫",
 		     	new AndCondition(new NotCondition(new QuestActiveCondition(QUEST_SLOT))),
 		    	ConversationStates.IDLE,
 		    	"我不相信你，当你对我说我儿子名字时声音颤抖，我希望他很好，而且能开心安全。",
 		    	null);
 
-	    amber.add(ConversationStates.ATTENDING, "Jef",
+	    amber.add(ConversationStates.ATTENDING, "杰夫",
 	    		new AndCondition(
 	    				new QuestInStateCondition(QUEST_SLOT, "found_mom"),
 	    				new PlayerHasItemWithHimCondition("zantedeschia")),
@@ -217,7 +217,7 @@ public class FindJefsMom extends AbstractQuest {
 	    		null);
 
 	    // replace flower if lost
-	    amber.add(ConversationStates.ATTENDING, Arrays.asList("Jef", "flower", "zantedeschia"),
+	    amber.add(ConversationStates.ATTENDING, Arrays.asList("杰夫", "flower", "zantedeschia"),
 	    		new AndCondition(
 	    				new QuestInStateCondition(QUEST_SLOT, 0, "found_mom"),
 	    				new NotCondition(new PlayerHasItemWithHimCondition("zantedeschia"))),
@@ -228,7 +228,7 @@ public class FindJefsMom extends AbstractQuest {
 	}
 
 	private void bringFlowerToJefStep() {
-		final SpeakerNPC npc = npcs.get("Jef");
+		final SpeakerNPC npc = npcs.get("杰夫");
 
 		ChatAction addRandomNumberOfItemsAction = new ChatAction() {
 			@Override
@@ -292,9 +292,9 @@ public class FindJefsMom extends AbstractQuest {
 		}
         if (isCompleted(player)) {
             if (isRepeatable(player)) {
-                res.add("会见了 Jef 的妈妈后，应该回去答复 Jef 了，或许他想要我再次寻找他妈妈。");
+                res.add("会见了杰夫的妈妈后，应该回去答复杰夫了，或许他想要我再次寻找他妈妈。");
             } else {
-                res.add("我对 Jef 说他妈妈很好，现在他想让妈妈一个人独自呆一段时间.");
+                res.add("我对杰夫说他妈妈很好，现在他想让妈妈一个人独自呆一段时间.");
             }
 		}
 
@@ -320,6 +320,6 @@ public class FindJefsMom extends AbstractQuest {
 	}
 	@Override
 	public String getNPCName() {
-		return "Jef";
+		return "杰夫";
 	}
 }

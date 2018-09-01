@@ -48,7 +48,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Julius (the Soldier who guards the entrance to Ados City)</li>
+ * <li>Julius (the Soldier who guards the entrance to 阿多斯城)</li>
  * <li>Crystal NPCs around Faiumoni</li>
  * </ul>
  *

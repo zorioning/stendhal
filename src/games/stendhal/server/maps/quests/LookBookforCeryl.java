@@ -166,7 +166,7 @@ public class LookBookforCeryl extends AbstractQuest {
 
 		npc.add(ConversationStates.ATTENDING, "ceryl", null,
 			ConversationStates.ATTENDING,
-			"Ceryl is the librarian at Semos, of course.", null);
+			"Ceryl is the librarian at 塞门镇, of course.", null);
 
 		/** Finally if player didn't start the quest, just ignore him/her */
 		npc.add(

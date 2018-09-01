@@ -60,7 +60,7 @@ public class WallSoldier1NPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hi, welcome to Ados City!");
+				addGreeting("Hi, welcome to 阿多斯城!");
 				addJob("A job? Are you blind? I'm a guard! Isn't this obvious? Please move along, citizen.");
 				addHelp("I don't have time for chatting. If you need help, better ask Julius. He's located at the main entrance of the city.");
 				addGoodbye("Goodbye.");

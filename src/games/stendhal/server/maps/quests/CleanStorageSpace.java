@@ -70,7 +70,7 @@ public class CleanStorageSpace extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Eonna at her house in Semos next to the bakery.");
+		res.add("I have met Eonna at her house in 塞门镇 next to the bakery.");
 		final String questState = player.getQuest(QUEST_SLOT, 0);
 		if ("rejected".equals(questState)) {
 			res.add("I do not want to clear her storage space of creatures.");

@@ -54,14 +54,14 @@ public class MayorNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Welcome citizen! Do you need #help?");
-				addJob("I'm the mayor of Semos village.");
-				addHelp("You will find a lot of people in Semos that offer you help on different topics.");
+				addJob("I'm the mayor of 塞门镇 village.");
+				addHelp("You will find a lot of people in 塞门镇 that offer you help on different topics.");
 				addGoodbye("Have a good day and enjoy your stay!");
 			}
 		};
 
 		npc.setEntityClass("mayornpc");
-		npc.setDescription("The mighty mayor of Semos, Mayor Sakhs, is walking infront of you. He seems to be nervous...");
+		npc.setDescription("The mighty mayor of 塞门镇, Mayor Sakhs, is walking infront of you. He seems to be nervous...");
 		npc.setPosition(13, 3);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.initHP(100);

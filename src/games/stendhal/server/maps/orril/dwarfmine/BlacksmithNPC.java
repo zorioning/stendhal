@@ -72,7 +72,7 @@ public class BlacksmithNPC implements ZoneConfigurator {
 				        ConversationStates.ATTENDING,
 				        Arrays.asList("vampire"),
 				        ConversationStates.ATTENDING,
-				        "The husband had hired the help of a Vampire Lord! The Lady became his Vampire Bride and her maids became vampiresses. The Catacombs of North Semos are a deadly place now.",
+				        "The husband had hired the help of a Vampire Lord! The Lady became his Vampire Bride and her maids became vampiresses. The Catacombs of North 塞门镇 are a deadly place now.",
 				        null);
 				addGoodbye("So long. I bet you won't sleep so well tonight.");
 				addReply("bobbin", "Bobbins? BOBBINS?! Do you think I am a female?! Pfff go find some other blacksmith I'm no bobbin maker.");

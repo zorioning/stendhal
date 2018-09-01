@@ -49,12 +49,12 @@ public class QuestAchievementFactory extends AbstractAchievementFactory {
 		// questAchievements.add(createAchievement("quest.special.dm.025", "Gladiator", "Fight 25 Deathmatches",
 		//		Achievement.HARD_BASE_SCORE, true, new QuestStateGreaterThanCondition("deathmatch", 1, 24)));
 
-		// have completed all quests in Semos City?
-		questAchievements.add(createAchievement("quest.special.semos", "Aide to Semos folk", "Complete all quests in Semos City",
+		// have completed all quests in 塞门镇?
+		questAchievements.add(createAchievement("quest.special.semos", "Aide to 塞门镇 folk", "Complete all quests in 塞门镇",
 				Achievement.MEDIUM_BASE_SCORE, true, new QuestsInRegionCompletedCondition(Region.SEMOS_CITY)));
 
-		// have completed all quests in Ados City?
-		questAchievements.add(createAchievement("quest.special.ados", "Helper of Ados city dwellers", "Complete all quests in Ados City",
+		// have completed all quests in 阿多斯城?
+		questAchievements.add(createAchievement("quest.special.ados", "Helper of 阿多斯城 dwellers", "Complete all quests in 阿多斯城",
 				Achievement.MEDIUM_BASE_SCORE, true, new QuestsInRegionCompletedCondition(Region.ADOS_CITY)));
 
 		// complete nearly all the quests in the game?

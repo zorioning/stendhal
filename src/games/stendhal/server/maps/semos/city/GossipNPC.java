@@ -29,7 +29,7 @@ import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
 import games.stendhal.server.entity.npc.condition.QuestNotCompletedCondition;
 
 /**
- * A guy (original name: Nomyr Ahba) who looks into the windows of the bakery
+ * A guy (original name: 诺姆安巴) who looks into the windows of the bakery
  * and the house next to it.
  *
  * Basically all he does is sending players to the retired adventurer at
@@ -44,7 +44,7 @@ public class GossipNPC implements ZoneConfigurator {
     }
 
     private void buildNPC(StendhalRPZone zone) {
-        final SpeakerNPC npc = new SpeakerNPC("Nomyr Ahba") {
+        final SpeakerNPC npc = new SpeakerNPC("诺姆安巴") {
 
             @Override
             public void createDialog() {
@@ -80,7 +80,7 @@ public class GossipNPC implements ZoneConfigurator {
                     "sack",
                     null,
                     ConversationStates.ATTENDING,
-                    "啊. 你不是真的好奇我麻袋里装了什么，你可以向 Karl 要一个空的，可以把一些你喜欢的东西放进去，甚至是糖!",
+                    "啊. 你不是真的好奇我麻袋里装了什么，你可以向 卡尔 要一个空的，可以把一些你喜欢的东西放进去，甚至是糖!",
                     null);
 
                 add(ConversationStates.ATTENDING,
@@ -94,7 +94,7 @@ public class GossipNPC implements ZoneConfigurator {
                     ConversationPhrases.YES_MESSAGES,
                     null,
                     ConversationStates.IDLE,
-                    "首先你应该和 Hayunn Naratha 谈谈. 他是个很棒的好英雄，也是这里留下不多的最好的守卫...我想他会乐意给你一些建议！祝好运.",
+                    "首先你应该和 海云那冉 谈谈. 他是个很棒的好英雄，也是这里留下不多的最好的守卫...我想他会乐意给你一些建议！祝好运.",
                     null);
 
                 add(ConversationStates.INFORMATION_1,
@@ -105,7 +105,7 @@ public class GossipNPC implements ZoneConfigurator {
                     null);
 
                 addHelp("我是... 他们都叫我万事通 \"observer\". 我可以告诉你最近的一些传言。你要听吗?");
-                addJob("我知道每个 Semos 的每个传言！也虚构了传言中的大部分。然而,其中一个关于 Hackim 把私武器走私给像你一样的冒险者的消息却是真的!");
+                addJob("我知道每个 塞门镇 的每个传言！也虚构了传言中的大部分。然而,其中一个关于 Hackim 把私武器走私给像你一样的冒险者的消息却是真的!");
                 addQuest("感谢你的提问，但现在不需要任何东西！... 咦! 我只希望这个布袋 #sack 不那么笨重.");
                 addOffer("Tz 尽管我背着这个麻袋 #sack, 也不意味着我能卖你什么东西...但我听说那边的老家货 hMonogenes 需要帮助");
                 addGoodbye();
@@ -127,7 +127,7 @@ public class GossipNPC implements ZoneConfigurator {
         npc.setPosition(46, 20);
         npc.setEntityClass("thiefnpc");
         zone.add(npc);
-        npc.setDescription("Nomyr Ahba 老是背着一个大包,看起来有点古怪。");
+        npc.setDescription("诺姆安巴 老是背着一个大包,看起来有点古怪。");
     }
 
 }

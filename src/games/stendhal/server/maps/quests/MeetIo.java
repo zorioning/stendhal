@@ -55,7 +55,7 @@ public class MeetIo extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I met the telepath Io Flotto in Semos Temple.");
+		res.add("I met the telepath Io Flotto in 塞门镇 Temple.");
 		if (isCompleted(player)) {
 			res.add("Io taught me the six basic elements of telepathy and promised to remind me if I need to refresh my knowledge.");
 		}

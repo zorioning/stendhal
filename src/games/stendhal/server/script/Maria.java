@@ -101,9 +101,9 @@ public class Maria extends ScriptImpl {
 		npc.behave("greet", "Hi, 我能帮你做些什么?");
 		npc.behave(
 				"job",
-				"我 Semos #酒吧 的酒娘，现任大厅经理. 本店销售 #sell 上等啤酒和食品.");
+				"我 塞门镇 #酒吧 的酒娘，现任大厅经理. 本店销售 #sell 上等啤酒和食品.");
 		npc.behave("酒吧",
-//			"I have a #coupon for a free beer in Semos' tavern. "+
+//			"I have a #coupon for a free beer in 塞门镇' tavern. "+
 			"酒吧就在神庙隔壁的左边.");
 		npc.behave("help",
 				"你可以看看本店的服务 #offer ,或者住宿，或者交结新朋友!");

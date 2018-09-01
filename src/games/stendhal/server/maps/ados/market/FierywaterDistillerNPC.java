@@ -55,8 +55,8 @@ public class FierywaterDistillerNPC implements ZoneConfigurator {
                     "That's my speciality! Mix that with other ingredients and you'll have an excellent beverage."
                     +   " Gulp that down 100% pure and most likely you will not survive to tell the experience!");
                 addReply(Arrays.asList("sugar", "cane", "canes", "sugar cane"),
-                    "I get all my sugar canes imported directly from Athor island.");
-                addReply("wood",
+                    "I get all my sugar canes imported directly from 阿托尔岛.");
+                addReply("木头",
                     "You find plenty of wood logs near trees, and forests are the best place to look for those!");
                 addGoodbye("Enjoy the market!");
             }
@@ -69,7 +69,7 @@ public class FierywaterDistillerNPC implements ZoneConfigurator {
 
         final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
         requiredResources.put("sugar cane", 5);
-        requiredResources.put("wood", 1);
+        requiredResources.put("木头", 1);
 
         final ProducerBehaviour behaviour = new ProducerBehaviour("uncle_dag_brew_fierywater",
             "brew", "fierywater", requiredResources, 20 * 60);

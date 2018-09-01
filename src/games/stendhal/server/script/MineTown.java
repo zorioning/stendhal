@@ -71,12 +71,12 @@ public class MineTown extends ScriptImpl {
 }
 // TODO: these should not be done manually but added and removed as part of the script load and unload
 // Mine Town Weeks information
-// Loading mountain_n2_mine_town_weeks.tmx and Semos halloween.city.tmx . Both contain several walkblockers for tables, Carolines shop and signs.
+// Loading mountain_n2_mine_town_weeks.tmx and 塞门镇 halloween.city.tmx . Both contain several walkblockers for tables, Carolines shop and signs.
 
 // Mine Town map:
 // Walkblockers for tables at:
 // x="55" y="110">, <entity x="61" y="110">, <entity x="67" y="110">
-//<attribute name="description">You see a nice clean table for resting your drinks on.</attribute>
+//<attribute name="description">这是一张优雅且干净的餐桌</attribute>
 //<attribute name="width">4</attribute>
 //<attribute name="height">2</attribute>
 
@@ -88,9 +88,9 @@ public class MineTown extends ScriptImpl {
 // x="94" y="118", x="95" y="119", x="96" y="119"
 // <attribute name="text">Welcome to the Mine Town Revival Weeks xxxx!</attribute>
 
-// The Semos city_halloween.tmx map
+// The 塞门镇_halloween.tmx map
 // Banners at:
 // x="53" y="3", x="14" y="4", x="16" y="48", x="58" y="49"
-// <attribute name="text">#Mine #Town #Revival #Weeks #xxxx! Enjoy the #x #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #Semos #City to reach the #Mine #Town!</attribute>
+// <attribute name="text">#Mine #Town #Revival #Weeks #xxxx! Enjoy the #x #festival and meet #Susi and her father while celebrating with snacks and drinks! Just take the path up to the #North #from #塞门 镇 #City to reach the #Mine #Town!</attribute>
 // <attribute name="width">2</attribute>
 // <attribute name="height">2</attribute>

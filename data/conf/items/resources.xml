@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
-	 <item name="wood">
+	 <item name="木头">
     <type class="resource" subclass="wood" tileid="-1"/>
-    <description>You see some wood, fallen from a nearby tree.</description>
+    <description>一根木头，掉落在林间的路旁。</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -445,9 +445,9 @@
     </equipable>
   </item>
   
-  <item name="horse hair">
+  <item name="马尾鬃">
     <type class="resource" subclass="horsehair" tileid="-1"/>
-    <description>You see some horse hairs.</description>
+    <description>You see some 马尾鬃.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

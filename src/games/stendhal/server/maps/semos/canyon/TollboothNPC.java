@@ -53,7 +53,7 @@ public class TollboothNPC implements ZoneConfigurator  {
 			public void createDialog() {
 			    addGreeting("Hello, 如果你想过桥去对面的 #Antum ,你需要支付 #pay " + REQUIRED_COINS + " 金币.");
 				addHelp("如果你想过桥去对面的 #Antum ,你需要支付 #pay " + REQUIRED_COINS + " 金币.");
-				addJob("我守护这座连接着 Semos 和 Antum.");
+				addJob("我守护这座连接着 塞门镇 和 Antum.");
 				addGoodbye("Farewell.");
 				addReply("antum", "Antum 是圣地.");
 
@@ -72,7 +72,7 @@ public class TollboothNPC implements ZoneConfigurator  {
                 ConversationStates.IDLE,
                 "返回 Smons 不用付费，只用走过大门就行.",
                 new MultipleActions(new DropItemAction("money", 25),
-                        new TeleportAction("0_semos_canyon", 36, 29, Direction.UP))
+                        new TeleportAction("0_塞门_峡谷", 36, 29, Direction.UP))
                 );
 
         // Player does not have enough money for toll

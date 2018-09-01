@@ -61,7 +61,7 @@ public class BankNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Greetings. If you need #help, please ask.");
 				addJob("I work here in the bank.");
-				addHelp("That room has two chests owned by this bank and two owned by Semos bank.");
+				addHelp("That room has two chests owned by this bank and two owned by 塞门镇 bank.");
 				addGoodbye("Goodbye, young human.");
 				//remaining behaviour defined in Take Gold for Grafindle quest
 			}
@@ -96,7 +96,7 @@ public class BankNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Welcome to Nalwor Bank. I'm here to #help.");
-				addHelp("Customers can deposit their items in the chests in that small room behind me. The two chests on the right are under Semos management.");
+				addHelp("Customers can deposit their items in the chests in that small room behind me. The two chests on the right are under 塞门镇 management.");
 				addOffer("I can #help you.");
 				addJob("I help customers of the bank, elves and even humans.");
 				addQuest("I don't need anything, thank you.");

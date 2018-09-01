@@ -92,7 +92,7 @@ public class LearnAboutKarma extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"If you want to get good #karma all you have to do is be helpful to others. I know a hunter girl called Sally who needs wood, and "
+			"If you want to get good #karma all you have to do is be helpful to others. I know a hunter girl called 莎丽 who needs wood, and "
 			+ "I know another girl called Annie who loves icecream, well, I know many people who needs tasks doing for them regularly and I'm sure if you help them you will be rewarded, that's how karma works after all.", null);
 
 		// player is willing to help other people

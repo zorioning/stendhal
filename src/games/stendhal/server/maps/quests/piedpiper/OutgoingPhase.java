@@ -199,9 +199,9 @@ public class OutgoingPhase extends TPPQuest {
 	@Override
 	public String getSwitchingToNextPhaseMessage() {
 		final String text =
-			"Mayor Chalmers shouts: Thankfully, all the #rats are gone now, " +
+			"查玛斯市长 shouts: Thankfully, all the #rats are gone now, " +
 			"the Pied Piper hypnotized them and led them away to the dungeons. "+
-			"Those of you who helped Ados City with the rats problem "+
+			"Those of you who helped 阿多斯城 with the rats problem "+
 			"can get your #reward now.";
 		return text;
 	}

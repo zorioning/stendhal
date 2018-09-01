@@ -29,7 +29,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /*
- * Inside Semos Tavern - Level 0 (ground floor)
+ * Inside 塞门镇 Tavern - Level 0 (ground floor)
  */
 public class TraderNPC implements ZoneConfigurator {
 	private final ShopList shops = SingletonRepository.getShopList();

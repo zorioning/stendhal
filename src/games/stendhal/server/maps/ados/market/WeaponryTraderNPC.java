@@ -27,7 +27,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.BuyerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 
 /**
- * Creates the NPCs and portals in Ados City.
+ * Creates the NPCs and portals in 阿多斯城.
  *
  * @author hendrik
  */

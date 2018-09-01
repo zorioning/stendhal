@@ -22,7 +22,7 @@ public class UndergroundZoneAchievementFactory extends AbstractAchievementFactor
 	public Collection<Achievement> createAchievements() {
 		Collection<Achievement> list = new LinkedList<Achievement>();
 		//All below ground achievements
-		list.add(createAchievement("zone.underground.semos", "Canary", "Visit all underground zones in the Semos region",
+		list.add(createAchievement("zone.underground.semos", "Canary", "Visit all underground zones in the 塞门镇 region",
 									Achievement.MEDIUM_BASE_SCORE, true,
 									new PlayerVisitedZonesInRegionCondition("semos", Boolean.TRUE, Boolean.FALSE)));
 		list.add(createAchievement("zone.underground.nalwor", "Fear not drows nor hell", "Visit all underground zones in the Nalwor region",

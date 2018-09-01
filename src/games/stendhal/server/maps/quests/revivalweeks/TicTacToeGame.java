@@ -145,7 +145,7 @@ public class TicTacToeGame implements LoadableContent {
 
 	@Override
 	public void addToWorld() {
-		zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 
 		addBoard();
 		addNPC();

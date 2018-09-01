@@ -65,7 +65,7 @@ public class MarkedScroll extends TeleportScroll {
 	@Override
 	protected boolean useTeleportScroll(final Player player) {
 		// init as home_scroll
-		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_city");
+		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_镇");
 		int x = 30;
 		int y = 40;
 
@@ -87,7 +87,7 @@ public class MarkedScroll extends TeleportScroll {
 					player.sendPrivateText("Oh oh. For some strange reason the scroll did not teleport me to the right place.");
 					logger.warn("marked scroll to unknown zone " + infostring
 							+ " teleported " + player.getName()
-							+ " to Semos instead");
+							+ " to 塞门镇 instead");
 				} else {
 					if (player.getKeyedSlot("!visited", zoneName) == null) {
 						player.sendPrivateText("Although you have heard a lot of rumors about the destination, "

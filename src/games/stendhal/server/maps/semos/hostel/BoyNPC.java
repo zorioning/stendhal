@@ -45,7 +45,7 @@ public class BoyNPC implements ZoneConfigurator {
 	}
 
 	private void buildSemosTownhallArea(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Tad") {
+		final SpeakerNPC npc = new SpeakerNPC("泰德") {
 
 			@Override
 			protected void createPath() {
@@ -110,7 +110,7 @@ public class BoyNPC implements ZoneConfigurator {
 		});
 
 		npc.setEntityClass("childnpc");
-		npc.setDescription("这个年轻的男孩叫 Tad. 他的脸色苍白，看起来病得很重.");
+		npc.setDescription("这个年轻的男孩叫 泰德. 他的脸色苍白，看起来病得很重.");
 
 		npc.setPosition(18, 21);
 		npc.setDirection(Direction.LEFT);

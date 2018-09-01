@@ -44,7 +44,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Lorenz, the jailed barbarian in a hut on Amazon Island</li>
+ * <li>Lorenz, the jailed barbarian in a hut on 亚马孙岛</li>
  * <li>Esclara the Amazon Princess</li>
  * <li>Ylflia the Princess of Kalavan</li>
  * </ul>
@@ -295,7 +295,7 @@ import games.stendhal.server.maps.Region;
 	public void addToWorld() {
 		fillQuestInfo(
 				"Jailed Barbarian",
-				"Lorenz is a jailed Barbarian on Amazon Island. It's a mystery why he is jailed there, but perhaps he needs help.",
+				"Lorenz is a jailed Barbarian on 亚马孙岛. It's a mystery why he is jailed there, but perhaps he needs help.",
 				true);
 		step1();
 		step2();

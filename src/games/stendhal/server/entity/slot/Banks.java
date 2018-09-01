@@ -18,7 +18,7 @@ package games.stendhal.server.entity.slot;
  * @author hendrik
  */
 public enum Banks {
-	/** bank in Semos. */
+	/** bank in 塞门镇. */
 	SEMOS("bank"),
 	/** bank in Ados. */
 	ADOS("bank_ados"),

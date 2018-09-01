@@ -141,7 +141,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 			String creatureName = pickedCreature.getName();
 
 
-			raiser.say("Semos镇需要你的帮助，去杀掉 " + creatureName
+			raiser.say("塞门镇需要你的帮助，去杀掉 " + creatureName
 					+ " ，完成后回来说 #complete 就行了。");
 
 			questLast = "" + new Date().getTime();
@@ -260,23 +260,23 @@ public class DailyMonsterQuest extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我已在 Semos 城镇大厅见到了城主 Sakhs。");
+		res.add("我已在 塞门镇 城镇大厅见到了城主 Sakhs。");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("我不想帮助Semos城。");
+			res.add("我不想帮助塞门镇城。");
 			return res;
 		}
 
-		res.add("我想帮助 Semos城。");
+		res.add("我想帮助 塞门镇城。");
 		if (player.hasQuest(QUEST_SLOT) && !player.isQuestCompleted(QUEST_SLOT)) {
 			final boolean questDone = new KilledForQuestCondition(QUEST_SLOT, 0)
 					.fire(player, null, null);
 			final String creatureToKill = getCreatureToKillFromPlayer(player);
 			if (!questDone) {
-				res.add("我接受了帮助Semos镇杀死 " + creatureToKill
+				res.add("我接受了帮助塞门镇杀死 " + creatureToKill
 						+ " 的任务. 但我还没杀掉它.");
 			} else {
-				res.add("我帮助Semos镇杀死了 " + creatureToKill
+				res.add("我帮助塞门镇杀死了 " + creatureToKill
 						+ "。");
 			}
 		}
@@ -292,10 +292,10 @@ public class DailyMonsterQuest extends AbstractQuest {
 				res.add("我杀掉了城主想杀掉的怪物，现在Semon城又向我寻求帮助了。");
 			}
 		}
-		// add to history how often player helped Semos so far
+		// add to history how often player helped 塞门镇 so far
 		final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {
-			res.add("目前，我已拯救了Semos镇 "
+			res.add("目前，我已拯救了塞门镇 "
 					+ repetitions + " 次。");
 		}
 		return res;
@@ -483,7 +483,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Daily Monster Quest",
-				"Sakhs城需要勇士保卫Semos城的安全。",
+				"Sakhs城需要勇士保卫塞门镇城的安全。",
 				true);
 		step_1();
 		step_2();

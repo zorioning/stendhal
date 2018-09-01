@@ -131,7 +131,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 				"iron",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
-				"The candlestick needs to be made of iron. The blacksmith in Semos can help you.",
+				"The candlestick needs to be made of iron. The blacksmith in 塞门镇 can help you.",
 				null);
 
 		// we should only answer to these ingredients questions if the candles stage is not yet done

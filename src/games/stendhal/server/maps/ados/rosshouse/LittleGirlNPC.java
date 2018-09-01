@@ -75,9 +75,9 @@ public class LittleGirlNPC implements ZoneConfigurator {
 				// Revival Weeks
 				add(
 					ConversationStates.ATTENDING,
-					Arrays.asList("Semos", "Mine", "Town", "Revival", "Weeks"),
+					Arrays.asList("塞门镇", "Mine", "Town", "Revival", "Weeks"),
 					ConversationStates.ATTENDING,
-					"During the Revival Weeks at the end of October we celebrate the old and now mostly dead dead Mine Town north of Semos City.",
+					"During the Revival Weeks at the end of October we celebrate the old and now mostly dead dead Mine Town north of 塞门镇.",
 					null);
 
 				// help

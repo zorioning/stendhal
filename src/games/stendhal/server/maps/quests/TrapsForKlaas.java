@@ -40,16 +40,16 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Traps for Klaas
+ * QUEST: Traps for 克拉丝
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Klaas (the Seaman that takes care of Athor's ferry's cargo)</li>
+ * <li>克拉丝 (the Seaman that takes care of Athor's ferry's cargo)</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Klaas asks you to bring him rodent traps.</li>
+ * <li>克拉丝 asks you to bring him rodent traps.</li>
  * </ul>
  *
  * REWARD:
@@ -57,7 +57,7 @@ import games.stendhal.server.maps.Region;
  * <li>1000 XP</li>
  * <li>5 greater antidote
  * <li>note to apothecary (disabled until Antivenom Ring quest is ready)
- * <li>Can sell rodent traps to Klaas</li>
+ * <li>Can sell rodent traps to 克拉丝</li>
  * <li>Karma: 10</li>
  * </ul>
  *
@@ -82,25 +82,25 @@ public class TrapsForKlaas extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have talked to Klaas.");
+		res.add("I have talked to 克拉丝.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("I do not care to deal with rodents.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("I promised to gather " + REQUIRED_TRAPS + " rodent traps and bring them to Klaas.");
+			res.add("I promised to gather " + REQUIRED_TRAPS + " rodent traps and bring them to 克拉丝.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, 0, "done")) {
-			res.add("I gave the rodent traps to Klaas. I got some experience and antidotes.");
+			res.add("I gave the rodent traps to 克拉丝. I got some experience and antidotes.");
 		}
 		if (isRepeatable(player)) {
-		    res.add("I should check if Klaas needs my help again.");
+		    res.add("I should check if 克拉丝 needs my help again.");
 		}
 		return res;
 	}
 
 	private void prepareRequestingStep() {
-		final SpeakerNPC npc = npcs.get("Klaas");
+		final SpeakerNPC npc = npcs.get("克拉丝");
 
 		// Player asks for quest
 		npc.add(ConversationStates.ATTENDING,
@@ -143,7 +143,7 @@ public class TrapsForKlaas extends AbstractQuest {
 			ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.NO_MESSAGES,
 			null,
-			// Klaas walks away
+			// 克拉丝 walks away
 			ConversationStates.IDLE,
 			"Don't waste my time. I've got to protect the cargo.",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
@@ -160,7 +160,7 @@ public class TrapsForKlaas extends AbstractQuest {
 	}
 
 	private void prepareBringingStep() {
-		final SpeakerNPC npc = npcs.get("Klaas");
+		final SpeakerNPC npc = npcs.get("克拉丝");
 
 		// Reward
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
@@ -244,8 +244,8 @@ public class TrapsForKlaas extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Traps for Klaas",
-				"Klaas, the cargo caretaker on the Athor ferry, is in need of some rodent traps.",
+				"Traps for 克拉丝",
+				"克拉丝, the cargo caretaker on the Athor ferry, is in need of some rodent traps.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -278,6 +278,6 @@ public class TrapsForKlaas extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Klaas";
+		return "克拉丝";
 	}
 }

@@ -60,7 +60,7 @@ public class WallSoldier2NPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hello friend! Enjoy your visit at Ados city!");
+				addGreeting("Hello friend! Enjoy your visit at 阿多斯城!");
 				addJob("I am a soldier and my duty is to guard the city wall.");
 				addHelp("If you need directions on how to find your way around the city, ask Julius at the city entrance.");
 				// addQuest("Ask Vicendus, he is always up to something.");

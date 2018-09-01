@@ -379,7 +379,7 @@ public class Herald extends ScriptImpl {
 							turnNotifier.dontNotify(heraldNews.get(i).getTNL());
 						}
 						if(heraldNews.size()!=0){
-							npc.say("Ufff, I have now some time for rest. I heard, there is a gambling game in Semos city?");
+							npc.say("Ufff, I have now some time for rest. I heard, there is a gambling game in 塞门镇?");
 							heraldNews.clear();
 						} else {
 							npc.say("Oh, thank you for trying to help me, but I'm ok.");

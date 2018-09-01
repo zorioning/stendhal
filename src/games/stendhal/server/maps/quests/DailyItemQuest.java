@@ -100,7 +100,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("铁鳞甲",1);
 		items.put("皮甲",1);
 		items.put("皮胸甲",1);
-		items.put("鳞甲",1);
+		items.put("皮鳞甲",1);
 		items.put("护肩铁胸甲",1);
 		items.put("护肩皮胸甲",1);
 		items.put("板甲",1);
@@ -146,7 +146,7 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// container
 		items.put("eared bottle",3);
-		items.put("flask",5);
+		items.put("瓶子",5);
 		items.put("slim bottle",5);
 
 		// drinks
@@ -245,7 +245,7 @@ public class DailyItemQuest extends AbstractQuest {
 		// ranged
 		items.put("composite bow",1);
 		items.put("longbow",1);
-		items.put("wooden bow",1);
+		items.put("木弓",1);
 
 		// resource
 		items.put("coal",10);
@@ -255,7 +255,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("gold nugget",10);
 		items.put("iron",5);
 		items.put("iron ore",10);
-		items.put("wood",10);
+		items.put("木头",10);
 
 		// shield
         items.put("blue shield",1);
@@ -267,7 +267,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("skull shield",1);
 		items.put("studded shield",1);
 		items.put("独角盾",1);
-		items.put("wooden shield",1);
+		items.put("木盾",1);
 
 		// sword
 		items.put("biting sword",1);
@@ -298,7 +298,7 @@ public class DailyItemQuest extends AbstractQuest {
 	}
 
 	private void getQuest() {
-		final SpeakerNPC npc = npcs.get("Mayor Chalmers");
+		final SpeakerNPC npc = npcs.get("查玛斯市长");
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 								 new NotCondition(new TimePassedCondition(QUEST_SLOT,1,expireDelay))),
@@ -335,7 +335,7 @@ public class DailyItemQuest extends AbstractQuest {
 	}
 
 	private void completeQuest() {
-		final SpeakerNPC npc = npcs.get("Mayor Chalmers");
+		final SpeakerNPC npc = npcs.get("查玛斯市长");
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.FINISH_MESSAGES,
@@ -379,7 +379,7 @@ public class DailyItemQuest extends AbstractQuest {
 	}
 
 	private void abortQuest() {
-		final SpeakerNPC npc = npcs.get("Mayor Chalmers");
+		final SpeakerNPC npc = npcs.get("查玛斯市长");
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.ABORT_MESSAGES,
@@ -487,6 +487,6 @@ public class DailyItemQuest extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Mayor Chalmers";
+		return "查玛斯市长";
 	}
 }

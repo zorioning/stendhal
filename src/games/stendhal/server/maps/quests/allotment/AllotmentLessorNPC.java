@@ -25,7 +25,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.util.TimeUtil;
 
 /**
- * Builds an allotment lessor NPC for Semos.
+ * Builds an allotment lessor NPC for 塞门镇.
  *
  * @author kymara, filipe
  */

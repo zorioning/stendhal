@@ -38,7 +38,7 @@ import games.stendhal.server.maps.quests.BeerForHayunn;
 
 
 /**
- * An old hero (original name: Hayunn Naratha) who players meet when they enter the semos guard house.
+ * An old hero (original name: 海云那冉) who players meet when they enter the semos guard house.
  *
  * @see games.stendhal.server.maps.quests.BeerForHayunn
  * @see games.stendhal.server.maps.quests.MeetHayunn
@@ -53,7 +53,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		SpeakerNPC npc = new SpeakerNPC("Hayunn Naratha") {
+		SpeakerNPC npc = new SpeakerNPC("海云那冉") {
 
 			@Override
 			public void createDialog() {
@@ -84,7 +84,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 						null);
 
 				addHelp("像我说的，我是一个退休的冒险者，现在教新玩家，你想知道哪些?我可以教你");
-				addJob("我的工作是指导 Semos 镇的人们怎样从地牢中的怪物口中逃脱。我现在退休了。和我们所有的年轻人去南方和邪恶的 Blordrough 军团战斗。一些怪物野心膨胀，从下面跑出了地面。Semos 需要像你一样善良的人帮助. 你可以向城主问问有什么任务需要去做。");
+				addJob("我的工作是指导 塞门镇的人们怎样从地牢中的怪物口中逃脱。我现在退休了。和我们所有的年轻人去南方和邪恶的 Blordrough 军团战斗。一些怪物野心膨胀，从下面跑出了地面。塞门镇 需要像你一样善良的人帮助. 你可以向城主问问有什么任务需要去做。");
 				addGoodbye();
 				// further behaviour is defined in quests.
 			}
@@ -104,7 +104,7 @@ public class RetiredAdventurerNPC implements ZoneConfigurator {
 		npc.setPosition(4, 9);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.setEntityClass("oldheronpc");
-		npc.setDescription("你遇见了 Hayunn Naratha. 在他灰白色的头发和破旧的盔甲下面，有着锐利的目光和结实的肌肉");
+		npc.setDescription("你遇见了 海云那冉. 在他灰白色的头发和破旧的盔甲下面，有着锐利的目光和结实的肌肉");
 		npc.setBaseHP(100);
 		npc.setHP(85);
 		zone.add(npc);

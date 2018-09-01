@@ -62,7 +62,7 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"places",
-						"The most important locations on #Faiumoni are #Or'ril Castle, #Semos, #Ados, #Nalwor, and of course #Deniran City.");
+						"The most important locations on #Faiumoni are #Or'ril Castle, #塞门 镇, #Ados, #Nalwor, and of course #Deniran City.");
 
 		npc
 				.addReply(
@@ -71,13 +71,13 @@ public class MeetZynn extends AbstractQuest {
 
 		npc
 				.addReply(
-						"Semos",
-						"Semos is our town where you are right now. We're on the north side of Faiumoni, with a population of about 40-50.");
+						"塞门镇",
+						"塞门镇 is our town where you are right now. We're on the north side of Faiumoni, with a population of about 40-50.");
 
 		npc
 				.addReply(
 						"Ados",
-						"Ados is an important coastal city to the east of us here in #Semos, where merchants bring trade from #Deniran. It's widely considered to be one of the Empire's most important shipping routes.");
+						"Ados is an important coastal city to the east of us here in #塞门 镇, where merchants bring trade from #Deniran. It's widely considered to be one of the Empire's most important shipping routes.");
 
 		npc
 				.addReply(
@@ -102,12 +102,12 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"levels",
-						"Maps are split into levels according to the height of that particular area above or below the surface. Areas on the surface are at level 0. The level number is the first thing in a map's name. For instance, #Semos itself is at ground level, so it is level 0; its map is called \"0_semos_city\". The first level of the dungeon beneath us is at level -1, so its map is called \"-1_semos_dungeon\". You should note, though, that a map of a building's interior will usually have the level at the end of the name instead, with \"int\" (for \"interior\") at the start. For instance, the upstairs floor of the tavern would be mapped out as \"int_semos_tavern_1\".");
+						"Maps are split into levels according to the height of that particular area above or below the surface. Areas on the surface are at level 0. The level number is the first thing in a map's name. For instance, #塞门 镇 itself is at ground level, so it is level 0; its map is called \"0_塞门_镇\". The first level of the dungeon beneath us is at level -1, so its map is called \"-1_semos_dungeon\". You should note, though, that a map of a building's interior will usually have the level at the end of the name instead, with \"int\" (for \"interior\") at the start. For instance, the upstairs floor of the tavern would be mapped out as \"int_semos_tavern_1\".");
 
 		npc
 				.addReply(
 						"naming",
-						"Each map is usually split up into \"sets\" of zones, with a central feature that is used as a reference point. The zones surrounding this central zone are named by the direction in which they lie from it. For instance, from the central zone \"0_semos_city\", you can travel west to the old village at \"0_semos_village_w\", or you could travel two zones north and one west to the mountains at \"0_semos_mountain_n2_w\".");
+						"Each map is usually split up into \"sets\" of zones, with a central feature that is used as a reference point. The zones surrounding this central zone are named by the direction in which they lie from it. For instance, from the central zone \"0_塞门_镇\", you can travel west to the old village at \"0_塞门_村庄_西\", or you could travel two zones north and one west to the mountains at \"0_塞门_山_北2_西\".");
 
 		npc
 				.addReply(
@@ -152,7 +152,7 @@ public class MeetZynn extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Meet Zynn Iwuhos",
-				"Zynn Iwuhos, in the Semos library, is a great source of useful information.",
+				"Zynn Iwuhos, in the 塞门镇 library, is a great source of useful information.",
 				false);
 		step_1();
 	}

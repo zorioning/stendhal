@@ -29,7 +29,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.SellerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /**
- * A young lady (original name: Carmen) who heals players without charge.
+ * A young lady (original name: 卡蔓) who heals players without charge.
  */
 public class HealerNPC implements ZoneConfigurator {
 
@@ -40,7 +40,7 @@ public class HealerNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Carmen") {
+		final SpeakerNPC npc = new SpeakerNPC("卡蔓") {
 			@Override
 			public void createDialog() {
 				addGreeting("Hi, 如果需要 #帮助 #help ，只要跟我说一声.");
@@ -62,7 +62,7 @@ public class HealerNPC implements ZoneConfigurator {
 		new HealerAdder().addHealer(npc, 0);
 		npc.setPosition(5, 46);
 		npc.setCollisionAction(CollisionAction.STOP);
-		npc.setDescription("你看到了好心的 Carmen. 喜欢帮助人。你有需要时可以找她.");
+		npc.setDescription("你看到了好心的 卡蔓. 喜欢帮助人。你有需要时可以找她.");
 		npc.setEntityClass("welcomernpc");
 		npc.setSounds(Arrays.asList("giggle-1", "giggle-2"));
 		zone.add(npc);

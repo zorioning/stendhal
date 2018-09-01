@@ -26,8 +26,8 @@ import games.stendhal.server.entity.npc.behaviour.adder.SellerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /**
- * Builds Karl, the farmer NPC.
- * He gives horse hairs needed for the BowsForOuchit quest
+ * Builds 卡尔, the farmer NPC.
+ * He gives 马尾鬃 needed for the BowsForOuchit quest
  * He gives help to newcomers about the area
  * He suggests you can buy milk from his wife Philomena
  * @author kymara
@@ -46,10 +46,10 @@ public class FarmerNPC implements ZoneConfigurator {
 	}
 
 	private void buildFarmer(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Karl") {
+		final SpeakerNPC npc = new SpeakerNPC("卡尔") {
 
 			/*
-			 * Karl walks around near the red barn and along the path some way.
+			 * 卡尔 walks around near the red barn and along the path some way.
 			 */
 
 			@Override
@@ -89,7 +89,7 @@ public class FarmerNPC implements ZoneConfigurator {
 			}
 		};
 
-		npc.setDescription("You see Karl, a friendly elderly farmer.");
+		npc.setDescription("You see 卡尔, a friendly elderly farmer.");
 		npc.setEntityClass("beardmannpc");
 		npc.setPosition(64, 76);
 		npc.initHP(100);

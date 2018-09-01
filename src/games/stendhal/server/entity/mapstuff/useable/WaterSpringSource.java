@@ -22,9 +22,9 @@ import games.stendhal.server.events.SoundEvent;
 import marauroa.common.game.RPClass;
 
 /**
- * A water spring source is a spot where a player can fill an empty flask with spring water.
+ * A water spring source is a spot where a player can fill an empty 瓶子 with spring water.
  *
- * Filling an empty flask takes 10 seconds + randomized 4 seconds; during this time, the player keep standing next to
+ * Filling an empty 瓶子 takes 10 seconds + randomized 4 seconds; during this time, the player keep standing next to
  * the water spring.
  *
  * @author Vanessa Julius (based on WellSource by kymara)
@@ -37,7 +37,7 @@ public class WaterSpringSource extends PlayerActivityEntity {
 	private static final String[] items = { "water" };
 
 	/**
-	 * The chance that filling flask is successful.
+	 * The chance that filling 瓶子 is successful.
 	 */
 	private static final double FINDING_PROBABILITY = 0.50;
 
@@ -104,10 +104,10 @@ public class WaterSpringSource extends PlayerActivityEntity {
 	@Override
 	protected boolean isPrepared(final Player player) {
         /*
-        * The player can fill an empty flask at the spring.
+        * The player can fill an empty 瓶子 at the spring.
         * Check they have it before they can start filling it up.
 		*/
-		if (player.isEquipped("flask")) {
+		if (player.isEquipped("瓶子")) {
 			return true;
 		} else {
 			player.sendPrivateText("需要一个瓶子才能装水。");
@@ -192,8 +192,8 @@ public class WaterSpringSource extends PlayerActivityEntity {
         addEvent(new SoundEvent(startSound, SOUND_RADIUS, 100, SoundLayer.AMBIENT_SOUND));
         notifyWorldAboutChanges();
 
-		// remove flask from player as they try to fill it.
-		player.drop("flask");
+		// remove 瓶子 from player as they try to fill it.
+		player.drop("瓶子");
 		player.sendPrivateText("你把泉水装进了空瓶子，希望不要从手中滑落!");
 	}
 }

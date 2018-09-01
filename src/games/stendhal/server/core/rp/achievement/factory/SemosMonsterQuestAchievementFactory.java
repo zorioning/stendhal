@@ -30,15 +30,15 @@ public class SemosMonsterQuestAchievementFactory extends AbstractAchievementFact
 	public Collection<Achievement> createAchievements() {
 		List<Achievement> questAchievements = new LinkedList<Achievement>();
 		//daily monster quest achievements
-		questAchievements.add(createAchievement("quest.special.daily.0010", "Semos' Protector", "Finish daily monster quest 10 times",
+		questAchievements.add(createAchievement("quest.special.daily.0010", "塞门镇之守卫", "Finish daily monster quest 10 times",
 												Achievement.EASY_BASE_SCORE, true, new QuestStateGreaterThanCondition("daily", 2, 9)));
-		questAchievements.add(createAchievement("quest.special.daily.0050", "Semos' Guardian", "Finish daily monster quest 50 times",
+		questAchievements.add(createAchievement("quest.special.daily.0050", "塞门镇之护卫", "Finish daily monster quest 50 times",
 												Achievement.EASY_BASE_SCORE, true, new QuestStateGreaterThanCondition("daily", 2, 49)));
-		questAchievements.add(createAchievement("quest.special.daily.0100", "Semos' Hero", "Finish daily monster quest 100 times",
+		questAchievements.add(createAchievement("quest.special.daily.0100", "塞门镇之英雄", "Finish daily monster quest 100 times",
 												Achievement.MEDIUM_BASE_SCORE, true, new QuestStateGreaterThanCondition("daily", 2, 99)));
-		questAchievements.add(createAchievement("quest.special.daily.0250", "Semos' Champion", "Finish daily monster quest 250 times",
+		questAchievements.add(createAchievement("quest.special.daily.0250", "塞门镇之冠军", "Finish daily monster quest 250 times",
 												Achievement.MEDIUM_BASE_SCORE, true, new QuestStateGreaterThanCondition("daily", 2, 249)));
-		questAchievements.add(createAchievement("quest.special.daily.0500", "Semos' Vanquisher", "Finish daily monster quest 500 times",
+		questAchievements.add(createAchievement("quest.special.daily.0500", "塞门镇之战神", "Finish daily monster quest 500 times",
 												Achievement.HARD_BASE_SCORE, true, new QuestStateGreaterThanCondition("daily", 2, 499)));
 
 		return questAchievements;

@@ -73,7 +73,7 @@ public class NewsFromHackim extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Hackim the blacksmith assistant wants me to bring a secret message to Xin Blanca in Semos tavern.");
+		res.add("Hackim the blacksmith assistant wants me to bring a secret message to Xin Blanca in 塞门镇 tavern.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("That job was just too hot for me and I don't want to do anything illegal.");
@@ -124,7 +124,7 @@ public class NewsFromHackim extends AbstractQuest {
 			Arrays.asList("Xin", "Xin Blanca", "Blanca"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"You don't know who Xin is? Everybody at the tavern knows Xin. He's the guy who owes beer money to most of the people in Semos! So, will you do it?",
+			"You don't know who Xin is? Everybody at the tavern knows Xin. He's the guy who owes beer money to most of the people in 塞门镇! So, will you do it?",
 			null);
 
 		npc.addReply(Arrays.asList("Xin", "Xin Blanca", "Blanca"), "Xin's so cool. I want to work in the tavern too like him but my dad says I have to learn a trade.");
@@ -167,7 +167,7 @@ public class NewsFromHackim extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"News from Hackim",
-				"Hackim Easso, the Semos blacksmith assistant, needs help to send a message to someone.",
+				"Hackim Easso, the 塞门镇 blacksmith assistant, needs help to send a message to someone.",
 				false);
 		step_1();
 		step_2();

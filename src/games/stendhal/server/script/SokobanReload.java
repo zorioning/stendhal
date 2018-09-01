@@ -32,7 +32,7 @@ public class SokobanReload extends ScriptImpl implements FilterCriteria<Entity> 
 	@Override
 	public void execute(Player admin, List<String> args) {
 		super.execute(admin, args);
-		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		List<Entity> filteredEntities = zone.getFilteredEntities(this);
 
 		Object object = filteredEntities.get(0);

@@ -77,11 +77,11 @@ public class HistorianGeographerNPC implements ZoneConfigurator {
 						new AndCondition(new GreetingMatchesNameCondition(getName()),
 								new QuestNotCompletedCondition("Zynn")),
 						ConversationStates.ATTENDING,
-						"Hi, 潜在读者！这里记录了Semos镇的历史，还有很多关于 Faiumoni 岛的有趣的真相. 如果你喜欢，我能为你提供此地的 #地理 和 #历史 的简短的介绍。 #geography and #history! 我还关注着本地的 #新闻 #news, 你可以随时问我有关此方面的知识.",
+						"Hi, 潜在读者！这里记录了塞门镇的历史，还有很多关于 Faiumoni 岛的有趣的真相. 如果你喜欢，我能为你提供此地的 #地理 和 #历史 的简短的介绍。 #geography and #history! 我还关注着本地的 #新闻 #news, 你可以随时问我有关此方面的知识.",
 						new SetQuestAction("Zynn", "done"));
 
 				addHelp("我能为你提供最好的帮助，把我对于 Faiumoni 的 #地理 和 #历史 #geography and #history 的知识分享给你，还有最新的 #消息 #news 。");
-				addJob("我是一个历史和地理学家，我记录并保留了关于 Faiumoni 的每件事的真相，你知道在这个图书管写最多书的人是我吗？ 好吧，对于 \"明白如何杀死怪物\"  这一书, 当然...这是由 Hayunn Naratha 写的.");
+				addJob("我是一个历史和地理学家，我记录并保留了关于 Faiumoni 的每件事的真相，你知道在这个图书管写最多书的人是我吗？ 好吧，对于 \"明白如何杀死怪物\"  这一书, 当然...这是由 海云那冉 写的.");
 
 				addQuest("我不认为目前您还不能帮我做一些具体的事，但还是谢谢你的关心!");
 
@@ -94,7 +94,7 @@ public class HistorianGeographerNPC implements ZoneConfigurator {
 				        Arrays.asList("haizen", "haizen."),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "Haizen? 他是一个住在 Semos 和 Ados之间的小房子的巫师。我以前常去那里卖卷轴给他，但他有个条件，恐怕你不得不一个人去找他.",
+				        "Haizen? 他是一个住在 塞门镇 和 Ados之间的小房子的巫师。我以前常去那里卖卷轴给他，但他有个条件，恐怕你不得不一个人去找他.",
 				        null);
 			}
 		};

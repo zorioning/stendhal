@@ -71,12 +71,12 @@ public class GoldsmithNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hi!");
 				addJob("I'm the goldsmith of this city.");
-				addHelp("My brother Xoderos is a blacksmith in Semos. Currently he is selling tools. Perhaps he can make a #gold #pan for you.");
+				addHelp("My brother Xoderos is a blacksmith in 塞门镇. Currently he is selling tools. Perhaps he can make a #gold #pan for you.");
 				addGoodbye("Bye.");
 
 				// Joshua makes gold if you bring him gold nugget and wood
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("wood", 2);
+				requiredResources.put("木头", 2);
 				requiredResources.put("gold nugget", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("joshua_cast_gold",
@@ -84,12 +84,12 @@ public class GoldsmithNPC implements ZoneConfigurator {
 
 				new ProducerAdder().addProducer(this, behaviour,
 				        "Hi! I'm the local goldsmith. If you require me to #cast you a #'gold bar' just tell me!");
-				addReply("wood",
+				addReply("木头",
 		        		"I need some wood to keep my furnace lit. You can find any amount of it just lying around in the forest.");
 				addReply(Arrays.asList("ore", "gold ore", "gold nugget"),
 				        "I think there are places in the water where you can find gold ore. But you need a special tool to prospect for gold.");
 				addReply(Arrays.asList("gold bar", "gold", "bar"),
-				        "After I've casted the gold for you keep it safe. I've heard rumours that Fado city will be safe to travel to again soon. There you can sell or trade gold.");
+				        "After I've casted the gold for you keep it safe. I've heard rumours that 法多城 will be safe to travel to again soon. There you can sell or trade gold.");
 				addReply("金盘子",
 				        "If you had a 金盘子, you would be able to prospect for gold at certain places.");
 				addReply(Arrays.asList("oil", "can of oil", "buy oil"), "Oh, fishermen supply us with that.");

@@ -46,7 +46,7 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Xoderos the blacksmith in Semos</li>
+ * <li> Xoderos the blacksmith in 塞门镇</li>
  * <li> Joshua the blacksmith in Ados</li>
  * </ul>
  *
@@ -87,7 +87,7 @@ public class HungryJoshua extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have asked Xoderos at Semos blacksmith if he has a quest for me.");
+		res.add("I have asked Xoderos at 塞门镇 blacksmith if he has a quest for me.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("I do not want to help Xoderos and Joshua.");

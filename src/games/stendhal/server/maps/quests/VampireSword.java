@@ -69,7 +69,7 @@ import games.stendhal.server.maps.Region;
  * <li>Fill the goblet and come back.</li>
  * <li>You get some items from the Catacombs and kill the Vampire Lord.</li>
  * <li>You get the iron needed in the usual way by collecting iron ore and
- * casting in Semos.</li>
+ * casting in 塞门镇.</li>
  * <li>Hogart forges the Vampire Sword for you.</li>
  * </ul>
  * <p>
@@ -107,7 +107,7 @@ public class VampireSword extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"I can forge a powerful life stealing sword for you. You will need to go to the Catacombs below Semos Graveyard and fight the Vampire Lord. Are you interested?",
+			"I can forge a powerful life stealing sword for you. You will need to go to the Catacombs below 塞门镇 Graveyard and fight the Vampire Lord. Are you interested?",
 			null);
 
 		// Player asks about quests, but has finished this quest
@@ -132,7 +132,7 @@ public class VampireSword extends AbstractQuest {
 		// Player wants to do the quest
 		npc.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES, null,
-			ConversationStates.ATTENDING, "Then you need this #goblet. Take it to the Semos #Catacombs.",
+			ConversationStates.ATTENDING, "Then you need this #goblet. Take it to the 塞门镇 #Catacombs.",
 			new MultipleActions(gobletactions));
 
 		// Player doesn't want to do the quest; remember this, but they can ask again to start it.
@@ -144,7 +144,7 @@ public class VampireSword extends AbstractQuest {
 			"Oh, well forget it then. You must have a better sword than I can forge, huh? Bye.",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
-		npc.addReply("catacombs", "The Catacombs of north Semos of the ancient #stories.");
+		npc.addReply("catacombs", "The Catacombs of north 塞门镇 of the ancient #stories.");
 
 		npc.addReply("goblet", "Go fill it with the blood of the enemies you meet in the #Catacombs.");
 	}
@@ -224,7 +224,7 @@ public class VampireSword extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("empty goblet"),
 					new NotCondition(new PlayerHasItemWithHimCondition("goblet"))),
 			ConversationStates.IDLE,
-			"Did you lose your way? The Catacombs are in North Semos. Don't come back without a " +
+			"Did you lose your way? The Catacombs are in North 塞门镇. Don't come back without a " +
 			"full goblet! Bye!",
 			null);
 

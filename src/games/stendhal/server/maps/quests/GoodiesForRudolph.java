@@ -46,13 +46,13 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Rudolph (the Red-Nosed Reindeer) - walking around Semos during Christmas season.</li>
+ * <li>Rudolph (the Red-Nosed Reindeer) - walking around 塞门镇 during Christmas season.</li>
  * </ul>
  *
  * STEPS:
  * <ul>
  * <li>Rudolph asks you for some reindeer moss, carrots and apples.</li>
- * <li>You get his goodies by collecting them from around Semos..</li>
+ * <li>You get his goodies by collecting them from around 塞门镇..</li>
  * <li>Rudolph sees you have collected goodies and asks for them and then thanks you.</li>
  * </ul>
  *
@@ -76,7 +76,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 	private static final int REQUIRED_MONTHS = 11;
 	private static final int REQUIRED_MINUTES = 60 * 24 * 30 * REQUIRED_MONTHS;
 
-	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in Semos. If you get 5 reindeer moss, 10 apples and 10 carrots, I'll give you a reward.";
+	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in 塞门镇. If you get 5 reindeer moss, 10 apples and 10 carrots, I'll give you a reward.";
 	private static final String RUDOLPH_TALK_QUEST_OFFER = "I want some delicious goodies only you can help me get. Do you think you can help me?";
 
 	@Override
@@ -85,7 +85,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Rudolph. He is the Red-Nosed Reindeer running around in Semos.");
+		res.add("I have met Rudolph. He is the Red-Nosed Reindeer running around in 塞门镇.");
 		final String questStateFull = player.getQuest(QUEST_SLOT);
 		final String[] parts = questStateFull.split(";");
 		final String questState = parts[0];
@@ -159,7 +159,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 			Arrays.asList("goodies"),
 			null,
 			ConversationStates.ATTENDING,
-			"Reindeer moss is a pale green patch of wonderfulness which grows all around this city. Apples are found at the farm to the east of the city, and carrots are to the northeast of the city.",
+			"Reindeer moss is a pale green patch of wonderfulness which grows all around this city. Apples are found at the farm to the east of the city, and carrots are to the 东北： of the city.",
 			null);
 	}
 

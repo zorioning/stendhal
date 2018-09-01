@@ -23,7 +23,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.ProducerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.ProducerBehaviour;
 
 /**
- * Cocktail Bar at the Athor island beach (Inside / Level 0).
+ * Cocktail Bar at the 阿托尔岛 beach (Inside / Level 0).
  *
  * @author kymara
  */

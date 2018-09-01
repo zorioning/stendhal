@@ -99,7 +99,7 @@ public class MoveAndStrengthenOnlinePlayers extends ScriptImpl {
 				}
 
 				private void fillBag(Player player) {
-					String[] items = {"leek", "porcini", "potion", "antidote", "beer", "minor potion", "home scroll", "ados city scroll", "empty scroll"};
+					String[] items = {"leek", "porcini", "potion", "antidote", "beer", "minor potion", "home scroll", "阿多斯城回城卷", "empty scroll"};
 					for(String item : items) {
 						StackableItem stackable = (StackableItem) SingletonRepository.getEntityManager().getItem(item);
 						stackable.setQuantity(50);

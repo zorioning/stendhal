@@ -20,7 +20,7 @@ public class PaperChaseSign implements LoadableContent {
 	private void createHallOfFameSign() {
 		sign = new Sign();
 		sign.setPosition(69, 106);
-		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		zone.add(sign);
 		updateQuest();
 	}
@@ -50,7 +50,7 @@ public class PaperChaseSign implements LoadableContent {
 	 */
 	@Override
 	public boolean removeFromWorld() {
-		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_semos_mountain_n2");
+		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
 		zone.remove(sign);
 		updateQuest();
 		return true;

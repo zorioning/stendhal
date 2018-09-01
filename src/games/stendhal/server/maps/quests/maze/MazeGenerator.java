@@ -70,7 +70,7 @@ public class MazeGenerator {
 	private static final String[] prizes = {
 		"summon scroll",
 		"home scroll",
-		"ados city scroll",
+		"阿多斯城回城卷",
 		"nalwor city scroll",
 		"kirdneh city scroll",
 		"kalavan city scroll",

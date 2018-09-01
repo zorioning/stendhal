@@ -84,7 +84,7 @@ Walk on, and you will be returned to the land of the living...
 
     <!-- Note: This portal is defined in ServerDown, too. -->
     <portal x="15" y="28" ref="exit">
-      <destination zone="0_semos_city" ref="townhall_entrance" />
+      <destination zone="0_塞门_镇" ref="townhall_entrance" />
     </portal>
 
     <entity x="0" y="0">

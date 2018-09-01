@@ -214,7 +214,7 @@ public class Jail implements ZoneConfigurator, LoginListener {
 	}
 
 	/**
-	 * Releases an inmate and teleports him to Semos city, but only if he is
+	 * Releases an inmate and teleports him to 塞门镇, but only if he is
 	 * still in jail.
 	 *
 	 * @param inmateName

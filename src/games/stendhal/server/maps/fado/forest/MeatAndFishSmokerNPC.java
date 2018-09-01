@@ -93,22 +93,22 @@ public class MeatAndFishSmokerNPC implements ZoneConfigurator {
                 productsNames.add("smoked cod");
 
                 final Map<String, Integer> reqRes_smokedMeat = new TreeMap<String, Integer>();
-                reqRes_smokedMeat.put("wood", 2);
+                reqRes_smokedMeat.put("木头", 2);
                 reqRes_smokedMeat.put("肉", 1);
                 reqRes_smokedMeat.put("kekik", 1);
 
                 final Map<String, Integer> reqRes_smokedHam = new TreeMap<String, Integer>();
-                reqRes_smokedHam.put("wood", 3);
+                reqRes_smokedHam.put("木头", 3);
                 reqRes_smokedHam.put("ham", 1);
                 reqRes_smokedHam.put("kekik", 2);
 
                 final Map<String, Integer> reqRes_smokedTrout = new TreeMap<String, Integer>();
-                reqRes_smokedTrout.put("wood", 1);
+                reqRes_smokedTrout.put("木头", 1);
                 reqRes_smokedTrout.put("trout", 1);
                 reqRes_smokedTrout.put("sclaria", 1);
 
                 final Map<String, Integer> reqRes_smokedCod = new TreeMap<String, Integer>();
-                reqRes_smokedCod.put("wood", 1);
+                reqRes_smokedCod.put("木头", 1);
                 reqRes_smokedCod.put("cod", 1);
                 reqRes_smokedCod.put("sclaria", 2);
 

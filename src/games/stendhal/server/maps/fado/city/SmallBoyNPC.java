@@ -51,7 +51,7 @@ public class SmallBoyNPC implements ZoneConfigurator {
 	// A Small Boy NPC a bit below the tavern
 	//
 	private void buildSmallBoyNPC(final StendhalRPZone zone) {
-		final SpeakerNPC boynpc = new SpeakerNPC("Bobby") {
+		final SpeakerNPC boynpc = new SpeakerNPC("波比") {
 
 			@Override
 			protected void createPath() {

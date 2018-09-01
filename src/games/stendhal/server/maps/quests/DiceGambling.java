@@ -45,7 +45,7 @@ public class DiceGambling extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 
-		final CroupierNPC ricardo = (CroupierNPC) SingletonRepository.getNPCList().get("Ricardo");
+		final CroupierNPC ricardo = (CroupierNPC) SingletonRepository.getNPCList().get("里卡多");
 
 		final Map<Integer, Pair<String, String>> prizes = initPrices();
 
@@ -110,7 +110,7 @@ public class DiceGambling extends AbstractQuest {
 
 		fillQuestInfo(
 				"Dice Gambling",
-				"Try your luck at Semos Tavern's gambling table.",
+				"Try your luck at 塞门镇 Tavern's gambling table.",
 				true);
 	}
 
@@ -168,7 +168,7 @@ public class DiceGambling extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Ricardo";
+		return "里卡多";
 	}
 
 }

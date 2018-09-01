@@ -28,7 +28,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
 
 /**
- * Creates the NPCs and portals in Ados City.
+ * Creates the NPCs and portals in 阿多斯城.
  *
  * @author hendrik
  */
