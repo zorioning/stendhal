@@ -47,7 +47,7 @@ public class FlowerSellerNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC sellernpc = new SpeakerNPC("Fleur") {
+		final SpeakerNPC sellernpc = new SpeakerNPC("弗乐尔") {
 
 			@Override
 			protected void createPath() {
@@ -57,12 +57,12 @@ public class FlowerSellerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Hi! Are you here to #trade?");
-				addReply(ConversationPhrases.YES_MESSAGES, "Good! I can sell you a beautiful red rose. Not rhosyd mind you, they're rare. Only 罗斯莉 knows where they grow, and no-one ever knows where 罗斯莉 is!");
+				addReply(ConversationPhrases.YES_MESSAGES, "Good! I can sell you a beautiful red 玫瑰. Not rhosyd mind you, they're rare. Only 罗斯莉 knows where they grow, and no-one ever knows where 罗斯莉 is!");
 				addReply(ConversationPhrases.NO_MESSAGES, "Very well, if I can help you just say.");
-				addJob("I sell roses in this here market.");
+				addJob("I sell 玫瑰s in this here market.");
 				addHelp("If you need to access your funds, there is a branch of Fado bank right here in Kirdneh. It's the small building north of the museum, on the east of the city.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
-				offerings.put("rose", 50);
+				offerings.put("玫瑰", 50);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 				addGoodbye("Come back soon!");
 			}
@@ -71,7 +71,7 @@ public class FlowerSellerNPC implements ZoneConfigurator {
 		sellernpc.setEntityClass("noimagenpc"); /* woman_000_npc */
 		sellernpc.setPosition(64, 82);
 		sellernpc.initHP(100);
-		sellernpc.setDescription("You see Fleur. Her roses are made for young couples.");
+		sellernpc.setDescription("You see 弗乐尔. Her 玫瑰s are made for young couples.");
 		zone.add(sellernpc);
 	}
 }

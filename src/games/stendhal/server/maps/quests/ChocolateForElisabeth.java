@@ -230,7 +230,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 				// pick a random flower
-				String rewardClass = Rand.rand(Arrays.asList("daisies","zantedeschia","pansy"));
+				String rewardClass = Rand.rand(Arrays.asList("雏菊","马蹄莲","三色堇"));
 
 				final StackableItem item = (StackableItem) SingletonRepository.getEntityManager().getItem(rewardClass);
 				item.setQuantity(1);

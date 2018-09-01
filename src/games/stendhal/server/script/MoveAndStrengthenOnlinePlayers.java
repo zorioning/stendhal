@@ -59,7 +59,7 @@ public class MoveAndStrengthenOnlinePlayers extends ScriptImpl {
 		int packet = 1;
 		for (Player p : onlinePlayers) {
 			String zoneName = p.getZone().getName();
-			if ((zoneName != null) && (zoneName.equals("int_afterlife") || zoneName.equals("int_semos_guard_house"))) {
+			if ((zoneName != null) && (zoneName.equals("int_afterlife") || zoneName.equals("int_塞门_守卫_室"))) {
 				pl.add(p);
 				if(pl.getAllPlayers().size() == 5) {
 					SingletonRepository.getTurnNotifier().notifyInTurns(packet, new MoveAndStrengthenPlayersTurnListener(pl, admin));

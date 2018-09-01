@@ -242,9 +242,9 @@
     </attributes>
 
     <point-of-interest x="90" y="97">
-      <name>塞门镇矿山</name>
+      <name>塞门矿山</name>
       <type>dungeon</type>
-      <description>Western entrance to the 塞门镇矿山, the city of Wofol and the huge tunnel system leading through the mountains. (Player Level 6 - 597)</description>
+      <description>Western entrance to the 塞门矿山, the city of Wofol and the huge tunnel system leading through the mountains. (Player Level 6 - 597)</description>
       <url>https://stendhalgame.org/dungeon/semos_mines.html</url>
     </point-of-interest>
 
@@ -475,7 +475,7 @@
 
   </zone>
 
-  <zone name="0_semos_mountain_n_w3" level="0" x="499744" y="499872"
+  <zone name="0_塞门_山_n_w3" level="0" x="499744" y="499872"
     file="Level 0/semos/mountain_n_w3.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -483,7 +483,7 @@
     </attributes>
   </zone>
 
-  <zone name="0_semos_mountain_n_w2" level="0" x="499872" y="499872"
+  <zone name="0_塞门_山_n_w2" level="0" x="499872" y="499872"
     file="Level 0/semos/mountain_n_w2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -504,10 +504,10 @@
     </entity>
 
     <portal x="63" y="115" ref="right1">
-      <destination zone="0_semos_mountain_n_w2" ref="left1" />
+      <destination zone="0_塞门_山_n_w2" ref="left1" />
     </portal>
     <portal x="64" y="115" ref="left1">
-      <destination zone="0_semos_mountain_n_w2" ref="right1" />
+      <destination zone="0_塞门_山_n_w2" ref="right1" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new LevelLessThanCondition(50)</parameter>
@@ -515,10 +515,10 @@
       </implementation>
     </portal>
     <portal x="63" y="116" ref="right2">
-      <destination zone="0_semos_mountain_n_w2" ref="left2" />
+      <destination zone="0_塞门_山_n_w2" ref="left2" />
     </portal>
     <portal x="64" y="116" ref="left2">
-      <destination zone="0_semos_mountain_n_w2" ref="right2" />
+      <destination zone="0_塞门_山_n_w2" ref="right2" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new LevelLessThanCondition(50)</parameter>
@@ -526,10 +526,10 @@
       </implementation>
     </portal>
     <portal x="63" y="117" ref="right3">
-      <destination zone="0_semos_mountain_n_w2" ref="left3" />
+      <destination zone="0_塞门_山_n_w2" ref="left3" />
     </portal>
     <portal x="64" y="117" ref="left3">
-      <destination zone="0_semos_mountain_n_w2" ref="right3" />
+      <destination zone="0_塞门_山_n_w2" ref="right3" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new LevelLessThanCondition(50)</parameter>
@@ -552,7 +552,7 @@
     </entity>
 
     <portal x="76" y="36" ref="wizardstower_entrance">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="wizardstower_exit" />
     </portal>
 
@@ -587,7 +587,7 @@
   </zone>
 
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_basement" file="interiors/semos/wizards_tower_basement.tmx">
+  <zone name="int_塞门_巫师_塔楼_basement" file="interiors/semos/wizards_tower_basement.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.WizardsGuardStatueNPC" />
 
@@ -600,7 +600,7 @@
     </entity>
 
     <portal x="15" y="29" ref="wizardstower_exit">
-      <destination zone="0_semos_mountain_n_w2" ref="wizardstower_entrance" />
+      <destination zone="0_塞门_山_n_w2" ref="wizardstower_entrance" />
     </portal>
 
     <portal x="15" y="16" ref="basement_teleport">
@@ -609,7 +609,7 @@
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_1" file="interiors/semos/wizards_tower_1.tmx">
+  <zone name="int_塞门_巫师_塔楼_1" file="interiors/semos/wizards_tower_1.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.FirstFloorCreatures" />
@@ -649,7 +649,7 @@
     </entity>
 
     <portal x="15" y="15" ref="first_floor_exit">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
@@ -659,12 +659,12 @@
     </portal>
 
     <portal x="15" y="4" ref="north_choice_floor_1">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="27" y="15" ref="east_choice_floor_1">
-      <destination zone="int_semos_wizards_tower_1" ref="choice_floor_1" />
+      <destination zone="int_塞门_巫师_塔楼_1" ref="choice_floor_1" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","first_step")</parameter>
@@ -674,17 +674,17 @@
     </portal>
 
     <portal x="15" y="26" ref="south_choice_floor_1">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="3" y="15" ref="west_choice_floor_1">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="15" y="6" ref="portal_to_second_floor">
-      <destination zone="int_semos_wizards_tower_2" ref="portal_from_first_floor" />
+      <destination zone="int_塞门_巫师_塔楼_2" ref="portal_from_first_floor" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
@@ -695,7 +695,7 @@
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_2" file="interiors/semos/wizards_tower_2.tmx">
+  <zone name="int_塞门_巫师_塔楼_2" file="interiors/semos/wizards_tower_2.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.SecondFloorCreatures" />
@@ -722,7 +722,7 @@
     </portal>
 
     <portal x="15" y="15" ref="second_floor_exit">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
@@ -732,17 +732,17 @@
     </portal>
 
     <portal x="15" y="4" ref="north_choice_floor_2">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="27" y="15" ref="east_choice_floor_2">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="15" y="26" ref="south_choice_floor_2">
-      <destination zone="int_semos_wizards_tower_2" ref="choice_floor_2" />
+      <destination zone="int_塞门_巫师_塔楼_2" ref="choice_floor_2" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","second_step")</parameter>
@@ -752,12 +752,12 @@
     </portal>
 
     <portal x="3" y="15" ref="west_choice_floor_2">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="23" y="20" ref="portal_to_third_floor">
-      <destination zone="int_semos_wizards_tower_3" ref="portal_from_second_floor" />
+      <destination zone="int_塞门_巫师_塔楼_3" ref="portal_from_second_floor" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
@@ -768,7 +768,7 @@
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_3" file="interiors/semos/wizards_tower_3.tmx">
+  <zone name="int_塞门_巫师_塔楼_3" file="interiors/semos/wizards_tower_3.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.ThirdFloorCreatures" />
@@ -785,7 +785,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">Zekiel the guardian: "This is the third step of the test and the domain of Ravashack."</parameter>
+        <parameter name="enterMessage">Zekiel the guardian: "This is the third step of the test and the domain of 拉瓦夏克."</parameter>
       </implementation>
     </entity>
 
@@ -795,7 +795,7 @@
     </portal>
 
     <portal x="15" y="15" ref="third_floor_exit">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
@@ -805,32 +805,32 @@
     </portal>
 
     <portal x="15" y="4" ref="north_choice_floor_3">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="27" y="15" ref="east_choice_floor_3">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="15" y="26" ref="south_choice_floor_3">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="3" y="15" ref="west_choice_floor_3">
-      <destination zone="int_semos_wizards_tower_3" ref="choice_floor_3" />
+      <destination zone="int_塞门_巫师_塔楼_3" ref="choice_floor_3" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","third_step")</parameter>
-        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of Ravashack. You have almost done the half of the test. Search the next shimmering spot of the hexagram.'</parameter>
-        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of Ravashack. You have almost done the half of the test. Search the next shimmering spot of the hexagram.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fourth_step")])</parameter>
+        <parameter name="rejected">Zekiel the guardian: 'You have chosen the correct one of 拉瓦夏克. You have almost done the half of the test. Search the next shimmering spot of the hexagram.'</parameter>
+        <parameter name="action">new MultipleActions([new SendPrivateMessageAction("Zekiel the guardian: 'You have chosen the correct one of 拉瓦夏克. You have almost done the half of the test. Search the next shimmering spot of the hexagram.'"), new EquipItemAction("candle"), new SetQuestAction("zekiels_practical_test", "fourth_step")])</parameter>
       </implementation>
     </portal>
 
     <portal x="7" y="20" ref="portal_to_fourth_floor">
-      <destination zone="int_semos_wizards_tower_4" ref="portal_from_third_floor" />
+      <destination zone="int_塞门_巫师_塔楼_4" ref="portal_from_third_floor" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
@@ -841,7 +841,7 @@
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_4" file="interiors/semos/wizards_tower_4.tmx">
+  <zone name="int_塞门_巫师_塔楼_4" file="interiors/semos/wizards_tower_4.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.FourthFloorCreatures" />
@@ -868,7 +868,7 @@
     </portal>
 
     <portal x="15" y="15" ref="fourth_floor_exit">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
@@ -878,12 +878,12 @@
     </portal>
 
     <portal x="15" y="4" ref="north_choice_floor_4">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="27" y="15" ref="east_choice_floor_4">
-      <destination zone="int_semos_wizards_tower_4" ref="choice_floor_4" />
+      <destination zone="int_塞门_巫师_塔楼_4" ref="choice_floor_4" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","fourth_step")</parameter>
@@ -893,17 +893,17 @@
     </portal>
 
     <portal x="15" y="26" ref="south_choice_floor_4">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="3" y="15" ref="west_choice_floor_4">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="15" y="24" ref="portal_to_fifth_floor">
-      <destination zone="int_semos_wizards_tower_5" ref="portal_from_fourth_floor" />
+      <destination zone="int_塞门_巫师_塔楼_5" ref="portal_from_fourth_floor" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
@@ -914,7 +914,7 @@
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_5" file="interiors/semos/wizards_tower_5.tmx">
+  <zone name="int_塞门_巫师_塔楼_5" file="interiors/semos/wizards_tower_5.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.FifthFloorCreatures" />
@@ -941,7 +941,7 @@
     </portal>
 
     <portal x="15" y="15" ref="fifth_floor_exit">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
@@ -951,22 +951,22 @@
     </portal>
 
     <portal x="15" y="4" ref="north_choice_floor_5">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="27" y="15" ref="east_choice_floor_5">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="15" y="26" ref="south_choice_floor_5">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="3" y="15" ref="west_choice_floor_5">
-      <destination zone="int_semos_wizards_tower_5" ref="choice_floor_5" />
+      <destination zone="int_塞门_巫师_塔楼_5" ref="choice_floor_5" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","fifth_step")</parameter>
@@ -976,7 +976,7 @@
     </portal>
 
     <portal x="7" y="10" ref="portal_to_sixth_floor">
-      <destination zone="int_semos_wizards_tower_6" ref="portal_from_fifth_floor" />
+      <destination zone="int_塞门_巫师_塔楼_6" ref="portal_from_fifth_floor" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
@@ -987,7 +987,7 @@
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_6" file="interiors/semos/wizards_tower_6.tmx">
+  <zone name="int_塞门_巫师_塔楼_6" file="interiors/semos/wizards_tower_6.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.SixthFloorCreatures" />
@@ -1014,7 +1014,7 @@
     </portal>
 
     <portal x="15" y="15" ref="sixth_floor_exit">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
@@ -1024,7 +1024,7 @@
     </portal>
 
     <portal x="15" y="4" ref="north_choice_floor_6">
-      <destination zone="int_semos_wizards_tower_6" ref="choice_floor_6" />
+      <destination zone="int_塞门_巫师_塔楼_6" ref="choice_floor_6" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestInStateCondition("zekiels_practical_test","sixth_step")</parameter>
@@ -1034,22 +1034,22 @@
     </portal>
 
     <portal x="27" y="15" ref="east_choice_floor_6">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="15" y="26" ref="south_choice_floor_6">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="3" y="15" ref="west_choice_floor_6">
-      <destination zone="int_semos_wizards_tower_basement"
+      <destination zone="int_塞门_巫师_塔楼_basement"
         ref="basement_teleport" />
     </portal>
 
     <portal x="23" y="10" ref="portal_to_seventh_floor">
-      <destination zone="int_semos_wizards_tower_7" ref="portal_from_sixth_floor" />
+      <destination zone="int_塞门_巫师_塔楼_7" ref="portal_from_sixth_floor" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyDestroyingDoor">
         <parameter name="class">transparent</parameter>
@@ -1060,7 +1060,7 @@
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_7" file="interiors/semos/wizards_tower_7.tmx">
+  <zone name="int_塞门_巫师_塔楼_7" file="interiors/semos/wizards_tower_7.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.WizardsGuardStatueSpireNPC" />
 
@@ -1077,14 +1077,14 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.OneWayPortalDestination" />
     </portal>
     <portal x="15" y="13" ref="portal_sparkle_leave_tower">
-      <destination zone="0_semos_mountain_n_w2" ref="wizardstower_entrance" />
+      <destination zone="0_塞门_山_n_w2" ref="wizardstower_entrance" />
     </portal>
     <portal x="15" y="17" ref="portal_sparkle_enter_spire">
-      <destination zone="int_semos_wizards_tower_8" ref="portal_sparkle_to_seventh_floor" />
+      <destination zone="int_塞门_巫师_塔楼_8" ref="portal_sparkle_to_seventh_floor" />
     </portal>
   </zone>
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_8" file="interiors/semos/wizards_tower_spire_1.tmx">
+  <zone name="int_塞门_巫师_塔楼_8" file="interiors/semos/wizards_tower_spire_1.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.RedFireWizardNPC" />
     <configurator
@@ -1107,10 +1107,10 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.OneWayPortalDestination" />
     </portal>
     <portal x="21" y="23" ref="portal_sparkle_to_seventh_floor">
-      <destination zone="int_semos_wizards_tower_7" ref="portal_sparkle_enter_spire" />
+      <destination zone="int_塞门_巫师_塔楼_7" ref="portal_sparkle_enter_spire" />
     </portal>
     <portal x="21" y="6" ref="portal_to_spire_2">
-      <destination zone="int_semos_wizards_tower_9" ref="portal_from_spire_1" />
+      <destination zone="int_塞门_巫师_塔楼_9" ref="portal_from_spire_1" />
       <attribute name="hidden" />
     </portal>
     <!-- <portal x="7" y="28" ref="portal_to_malleus_plain"> <destination 
@@ -1158,7 +1158,7 @@
   </zone>
 
   <!-- Interiors of the wizards tower -->
-  <zone name="int_semos_wizards_tower_9" file="interiors/semos/wizards_tower_spire_2.tmx">
+  <zone name="int_塞门_巫师_塔楼_9" file="interiors/semos/wizards_tower_spire_2.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.wizardstower.BlackDeathWizardNPC" />
     <configurator
@@ -1192,7 +1192,7 @@
         class-name="games.stendhal.server.entity.mapstuff.portal.OneWayPortalDestination" />
     </portal>
     <portal x="21" y="7" ref="portal_to_spire_1">
-      <destination zone="int_semos_wizards_tower_8" ref="portal_from_spire_2" />
+      <destination zone="int_塞门_巫师_塔楼_8" ref="portal_from_spire_2" />
       <attribute name="hidden" />
     </portal>
 
@@ -1223,7 +1223,7 @@
   <!-- Plains of the wizards -->
   <zone name="malleus_plain" file="interiors/abstract/malleus_plain.tmx"
     accessible="false">
-    <!-- <portal x="7" y="28" ref="portal_to_malleus"> <destination zone="int_semos_wizards_tower_8" 
+    <!-- <portal x="7" y="28" ref="portal_to_malleus"> <destination zone="int_塞门_巫师_塔楼_8" 
       ref="portal_to_malleus_plain" /> </portal> -->
     <portal x="23" y="28" ref="cliff_way">
       <destination zone="malleus_plain" ref="cliff_way_back" />
@@ -1264,7 +1264,7 @@
     </portal>
   </zone>
 
-  <zone name="0_semos_plains_n" level="0" x="500000" y="499872"
+  <zone name="0_塞门_草原_n" level="0" x="500000" y="499872"
     file="Level 0/semos/plains_n.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -1304,7 +1304,7 @@
 	</entity>
 
     <portal x="92" y="101" ref="catacombs_entrance">
-      <destination zone="-1_semos_catacombs_se" ref="entrance" />
+      <destination zone="-1_塞门_墓室_se" ref="entrance" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestStartedCondition("vs_quest")</parameter>
@@ -1321,19 +1321,19 @@
 
     <entity x="77" y="66">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(Jenny from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
+      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
       <attribute name="class">signpost</attribute>
     </entity>
 
     <entity x="59" y="58">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(Jenny from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
+      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
       <attribute name="class">signpost</attribute>
     </entity>
 
     <entity x="68" y="43">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(Jenny from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
+      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
       <attribute name="class">signpost</attribute>
     </entity>
 
@@ -1372,7 +1372,7 @@ If everybody would think so, we were on the way to a better world...
 
   </zone>
 
-  <zone name="0_semos_plains_ne" level="0" x="500128" y="499872"
+  <zone name="0_塞门_草原_ne" level="0" x="500128" y="499872"
     file="Level 0/semos/plains_ne.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -1394,7 +1394,7 @@ If everybody would think so, we were on the way to a better world...
 
   </zone>
 
-  <zone name="0_semos_plains_n_e2" level="0" x="500192" y="499872"
+  <zone name="0_塞门_草原_n_e2" level="0" x="500192" y="499872"
     file="Level 0/semos/plains_n_e2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -1402,7 +1402,7 @@ If everybody would think so, we were on the way to a better world...
     </attributes>
   </zone>
 
-  <zone name="0_semos_mountain_n_e2" level="0" x="500256" y="499872"
+  <zone name="0_塞门_山_n_e2" level="0" x="500256" y="499872"
     file="Level 0/semos/mountain_n_e2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -1427,7 +1427,7 @@ If everybody would think so, we were on the way to a better world...
 
   </zone>
 
-  <zone name="0_semos_mountain_w2" level="0" x="499744" y="500000"
+  <zone name="0_塞门_山_w2" level="0" x="499744" y="500000"
     file="Level 0/semos/mountain_w2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -1435,7 +1435,7 @@ If everybody would think so, we were on the way to a better world...
     </attributes>
   </zone>
 
-  <zone name="0_semos_plains_w" level="0" x="499872" y="500000"
+  <zone name="0_塞门_草原_w" level="0" x="499872" y="500000"
     file="Level 0/semos/plains_w.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -1458,7 +1458,7 @@ If everybody would think so, we were on the way to a better world...
     </entity>
   </zone>
 
-  <zone name="int_semos_guard_house" file="interiors/semos/guard_house.tmx">
+  <zone name="int_塞门_守卫_室" file="interiors/semos/guard_house.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.guardhouse.RetiredAdventurerNPC" />
     <portal x="13" y="16" ref="entrance">
@@ -1534,7 +1534,7 @@ If everybody would think so, we were on the way to a better world...
       class-name="games.stendhal.server.maps.semos.village.SheepSellerNPC" />
 
     <portal x="16" y="34" ref="guard_house_entrance">
-      <destination zone="int_semos_guard_house" ref="entrance" />
+      <destination zone="int_塞门_守卫_室" ref="entrance" />
     </portal>
     <portal x="29" y="40" ref="hostel_entrance">
       <destination zone="int_semos_hostel" ref="entrance_right" />
@@ -1761,7 +1761,7 @@ If everybody would think so, we were on the way to a better world...
     </point-of-interest>
 
     <portal x="42" y="37" ref="tavern_entrance">
-      <destination zone="int_semos_tavern_0" ref="entrance" />
+      <destination zone="int_塞门_酒馆_0" ref="entrance" />
     </portal>
 
     <!--for the admin house -->
@@ -1771,7 +1771,7 @@ If everybody would think so, we were on the way to a better world...
     </portal>
 
     <portal x="53" y="37" ref="temple_entrance">
-      <destination zone="int_semos_temple" ref="entrance_center_right" />
+      <destination zone="int_塞门_教堂" ref="entrance_center_right" />
     </portal>
 
     <portal x="15" y="41" ref="blacksmith_entrance">
@@ -1798,19 +1798,19 @@ If everybody would think so, we were on the way to a better world...
     </point-of-interest>
 
     <portal x="18" y="22" ref="bank_entrance">
-      <destination zone="int_semos_bank" ref="entrance" />
+      <destination zone="int_塞门_银库" ref="entrance" />
     </portal>
 
     <portal x="29" y="13" ref="townhall_entrance_left">
-      <destination zone="int_semos_townhall" ref="entrance_left" />
+      <destination zone="int_塞门_镇政厅" ref="entrance_left" />
     </portal>
 
     <portal x="30" y="13" ref="townhall_entrance">
-      <destination zone="int_semos_townhall" ref="entrance" />
+      <destination zone="int_塞门_镇政厅" ref="entrance" />
     </portal>
 
     <portal x="31" y="13" ref="townhall_entrance_right">
-      <destination zone="int_semos_townhall" ref="entrance_right" />
+      <destination zone="int_塞门_镇政厅" ref="entrance_right" />
     </portal>
 
     <portal x="44" y="19" ref="bakery_entrance">
@@ -2099,7 +2099,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
   </zone>
 
 
-  <zone name="int_semos_tavern_0" file="interiors/semos/tavern_0.tmx">
+  <zone name="int_塞门_酒馆_0" file="interiors/semos/tavern_0.tmx">
     <attributes>
       <parameter name="file" condition="stendhal.christmas">interiors/semos/tavern_0_xmas.tmx</parameter>
     </attributes>
@@ -2143,7 +2143,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     </portal>
 
     <portal x="4" y="4" ref="upstairs">
-      <destination zone="int_semos_tavern_1" ref="downstairs" />
+      <destination zone="int_塞门_酒馆_1" ref="downstairs" />
     </portal>
 
     <!-- table on the left -->
@@ -2243,14 +2243,14 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     </entity>
   </zone>
 
-  <zone name="int_semos_tavern_1" file="interiors/semos/tavern_1.tmx">
+  <zone name="int_塞门_酒馆_1" file="interiors/semos/tavern_1.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.tavern.RareWeaponsSellerNPC" />
     <configurator
       class-name="games.stendhal.server.maps.semos.tavern.BowAndArrowSellerNPC" />
 
     <portal x="4" y="4" ref="downstairs">
-      <destination zone="int_semos_tavern_0" ref="upstairs" />
+      <destination zone="int_塞门_酒馆_0" ref="upstairs" />
     </portal>
 
     <entity x="1" y="1">
@@ -2286,7 +2286,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     </entity>
   </zone>
 
-  <zone name="int_semos_temple" file="interiors/semos/temple.tmx">
+  <zone name="int_塞门_教堂" file="interiors/semos/temple.tmx">
     <configurator class-name="games.stendhal.server.maps.semos.temple.HealerNPC" />
     <configurator class-name="games.stendhal.server.maps.semos.temple.TelepathNPC" />
 
@@ -2553,7 +2553,7 @@ Holy mackerel! These chips are tasty.
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.PopupImage">
         <parameter name="image">map-wofol.png</parameter>
-        <parameter name="title">塞门镇矿山 and the Kobold city of Wofol</parameter>
+        <parameter name="title">塞门矿山 and the Kobold city of Wofol</parameter>
       </implementation>
       <attribute name="class">map-wofol</attribute>
     </entity>
@@ -2611,7 +2611,7 @@ Holy mackerel! These chips are tasty.
     </portal>
   </zone>
 
-  <zone name="int_semos_bank" file="interiors/semos/bank.tmx">
+  <zone name="int_塞门_银库" file="interiors/semos/bank.tmx">
     <attributes>
       <parameter name="file" condition="stendhal.christmas">interiors/semos/bank_xmas.tmx</parameter>
     </attributes>
@@ -2940,7 +2940,7 @@ Holy mackerel! These chips are tasty.
 
   </zone>
 
-  <zone name="int_semos_townhall" file="interiors/semos/townhall.tmx">
+  <zone name="int_塞门_镇政厅" file="interiors/semos/townhall.tmx">
   <attributes>
       <parameter name="file" condition="stendhal.christmas">interiors/semos/townhall_xmas.tmx</parameter>
     </attributes>
@@ -3039,7 +3039,7 @@ Holy mackerel! These chips are tasty.
     </portal>
 
     <portal x="1" y="4" ref="exit_3">
-      <destination zone="int_semos_bank" ref="house_exit_3" />
+      <destination zone="int_塞门_银库" ref="house_exit_3" />
     </portal>
 
     <portal x="17" y="11" ref="exit_4">
@@ -3078,7 +3078,7 @@ Holy mackerel! These chips are tasty.
     </entity>
   </zone>
 
-  <zone name="0_semos_road_e" level="0" x="500128" y="500000"
+  <zone name="0_塞门_大道_e" level="0" x="500128" y="500000"
     file="Level 0/semos/road_e.tmx">
 
     <configurator class-name="games.stendhal.server.maps.semos.road.BoyGuardianNPC" />
@@ -3184,12 +3184,12 @@ Holy mackerel! These chips are tasty.
   <zone name="int_semos_swanky_pad" file="interiors/semos/swanky_pad.tmx">
     <configurator class-name="games.stendhal.server.maps.semos.pad.DealerNPC" />
     <portal x="7" y="18" ref="entrance">
-      <destination zone="0_semos_road_e" ref="pad_entrance" />
+      <destination zone="0_塞门_大道_e" ref="pad_entrance" />
     </portal>
 
   </zone>
 
-  <zone name="0_semos_road_se" level="0" x="500128" y="500064"
+  <zone name="0_塞门_大道_se" level="0" x="500128" y="500064"
     file="Level 0/semos/road_se.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -3208,7 +3208,7 @@ Holy mackerel! These chips are tasty.
 
   </zone>
 
-  <zone name="0_semos_plains_s" level="0" x="500000" y="500064"
+  <zone name="0_塞门_草原_s" level="0" x="500000" y="500064"
     file="Level 0/semos/plains_s.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -3246,7 +3246,7 @@ Holy mackerel! These chips are tasty.
 TO THE FOREST
 
 Shepherds please note: keep watch for
-the wolves while searching for berries here
+the wolves while searching for 树莓 here
    </attribute>
     </entity>
 
@@ -3271,7 +3271,7 @@ Mature sheep wanted: please speak to 赛特
 
   </zone>
 
-  <zone name="0_semos_forest_s" level="0" x="500000" y="500128"
+  <zone name="0_塞门_森林_s" level="0" x="500000" y="500128"
     file="Level 0/semos/forest_s.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
@@ -3312,7 +3312,7 @@ Mature sheep wanted: please speak to 赛特
 
   <!-- Level -1 -->
 
-  <zone name="-1_semos_mine_n2_w2" level="-1" x="499744" y="499744"
+  <zone name="-1_塞门_矿山_n2_w2" level="-1" x="499744" y="499744"
     file="Level -1/semos/mine_n2_w2.tmx">
 
     <entity x="81" y="5">
@@ -3441,15 +3441,15 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_mine_n2_e" level="-1" x="500128" y="499616"
+  <zone name="-1_塞门_矿山_n2_e" level="-1" x="500128" y="499616"
     file="Level -1/semos/mine_n2_e.tmx">
   </zone>
 
-  <zone name="-1_semos_mine_n2_e2" level="-1" x="500256" y="499616"
+  <zone name="-1_塞门_矿山_n2_e2" level="-1" x="500256" y="499616"
     file="Level -1/semos/mine_n2_e2.tmx">
   </zone>
 
-  <zone name="-1_semos_mine_n2" level="-1" x="500000" y="499744"
+  <zone name="-1_塞门_矿山_n2" level="-1" x="500000" y="499744"
     file="Level -1/semos/mine_n2.tmx">
 
     <configurator
@@ -3562,7 +3562,7 @@ Mature sheep wanted: please speak to 赛特
 
   </zone>
 
-  <zone name="-1_semos_mine_ne" level="-1" x="500128" y="499744"
+  <zone name="-1_塞门_矿山_ne" level="-1" x="500128" y="499744"
     file="Level -1/semos/mine_ne.tmx">
 
     <entity x="79" y="107">
@@ -3606,7 +3606,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_mine_n_e2" level="-1" x="500256" y="499744"
+  <zone name="-1_塞门_矿山_n_e2" level="-1" x="500256" y="499744"
     file="Level -1/semos/mine_n_e2.tmx">
 
     <entity x="56" y="49">
@@ -3647,21 +3647,21 @@ Mature sheep wanted: please speak to 赛特
 
   <zone name="int_wofol_house1" file="interiors/wofol/house1.tmx">
     <portal x="5" y="8" ref="entrance">
-      <destination zone="-1_semos_mine_n_w2" ref="house1_entrance" />
+      <destination zone="-1_塞门_矿山_n_w2" ref="house1_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_house2" file="interiors/wofol/house2.tmx">
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_n_w2" ref="house2_entrance" />
+      <destination zone="-1_塞门_矿山_n_w2" ref="house2_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_house3" file="interiors/wofol/house3.tmx">
     <portal x="6" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_n_w2" ref="house3_entrance" />
+      <destination zone="-1_塞门_矿山_n_w2" ref="house3_entrance" />
     </portal>
   </zone>
 
-  <zone name="-1_semos_mine_n_w2" level="-1" x="499744" y="499872"
+  <zone name="-1_塞门_矿山_n_w2" level="-1" x="499744" y="499872"
     file="Level -1/semos/mine_n_w2.tmx">
     <portal x="121" y="17" ref="house1_entrance">
       <destination zone="int_wofol_house1" ref="entrance" />
@@ -3678,7 +3678,7 @@ Mature sheep wanted: please speak to 赛特
     <configurator class-name="games.stendhal.server.maps.wofol.house4.TraderNPC" />
 
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="house4_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="house4_entrance" />
     </portal>
 
 
@@ -3710,48 +3710,48 @@ Mature sheep wanted: please speak to 赛特
   <zone name="int_wofol_house5" file="interiors/wofol/house5.tmx">
     <configurator class-name="games.stendhal.server.maps.wofol.house5.GhostNPC" />
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="house5_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="house5_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_house7" file="interiors/wofol/house7.tmx">
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="house7_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="house7_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_blacksmith" file="interiors/wofol/blacksmith.tmx">
     <configurator
       class-name="games.stendhal.server.maps.wofol.blacksmith.BlacksmithNPC" />
     <portal x="5" y="11" ref="entrance_left">
-      <destination zone="-1_semos_mine_nw" ref="blacksmith_entrance_left" />
+      <destination zone="-1_塞门_矿山_nw" ref="blacksmith_entrance_left" />
     </portal>
     <portal x="19" y="11" ref="entrance_right">
-      <destination zone="-1_semos_mine_nw" ref="blacksmith_entrance_right" />
+      <destination zone="-1_塞门_矿山_nw" ref="blacksmith_entrance_right" />
     </portal>
   </zone>
   <zone name="int_wofol_house8" file="interiors/wofol/house8.tmx">
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="house8_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="house8_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_house9" file="interiors/wofol/house9.tmx">
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="house9_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="house9_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_house6" file="interiors/wofol/house6.tmx">
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="house6_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="house6_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_house10" file="interiors/wofol/house10.tmx">
     <portal x="7" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="house10_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="house10_entrance" />
     </portal>
   </zone>
 
   <zone name="int_wofol_library_0" file="interiors/wofol/library_0.tmx">
     <portal x="4" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="library_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="library_entrance" />
     </portal>
     <portal x="21" y="3" ref="upstairs">
       <destination zone="int_wofol_library_1" ref="downstairs" />
@@ -3777,42 +3777,42 @@ Mature sheep wanted: please speak to 赛特
     <configurator
       class-name="games.stendhal.server.maps.wofol.bar.KoboldBarmaidNPC" />
     <portal x="3" y="8" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="bar_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="bar_entrance" />
     </portal>
   </zone>
 
   <zone name="int_wofol_bakery" file="interiors/wofol/bakery.tmx">
     <configurator class-name="games.stendhal.server.maps.wofol.bakery.BakerNPC" />
     <portal x="5" y="14" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="bakery_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="bakery_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_townhall" file="interiors/wofol/townhall.tmx">
     <portal x="5" y="31" ref="entrance_left">
-      <destination zone="-1_semos_mine_nw" ref="townhall_entrance_left" />
+      <destination zone="-1_塞门_矿山_nw" ref="townhall_entrance_left" />
     </portal>
     <portal x="45" y="31" ref="entrance_centre">
-      <destination zone="-1_semos_mine_nw" ref="townhall_entrance_centre" />
+      <destination zone="-1_塞门_矿山_nw" ref="townhall_entrance_centre" />
     </portal>
     <portal x="56" y="31" ref="entrance_right">
-      <destination zone="-1_semos_mine_nw" ref="townhall_entrance_right" />
+      <destination zone="-1_塞门_矿山_nw" ref="townhall_entrance_right" />
     </portal>
   </zone>
   <zone name="int_wofol_warehouse" file="interiors/wofol/warehouse.tmx">
     <portal x="3" y="13" ref="entrance">
-      <destination zone="-1_semos_mine_nw" ref="warehouse_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="warehouse_entrance" />
     </portal>
   </zone>
   <zone name="int_wofol_weaponshop" file="interiors/wofol/weaponshop.tmx">
     <portal x="5" y="10" ref="entrance_left">
-      <destination zone="-1_semos_mine_nw" ref="weaponshop_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="weaponshop_entrance" />
     </portal>
     <portal x="6" y="10" ref="entrance_right">
-      <destination zone="-1_semos_mine_nw" ref="weaponshop_entrance" />
+      <destination zone="-1_塞门_矿山_nw" ref="weaponshop_entrance" />
     </portal>
   </zone>
 
-  <zone name="-1_semos_mine_nw" level="-1" x="499872" y="499872"
+  <zone name="-1_塞门_矿山_nw" level="-1" x="499872" y="499872"
     file="Level -1/semos/mine_nw.tmx">
     <portal x="6" y="23" ref="house4_entrance">
       <destination zone="int_wofol_house4" ref="entrance" />
@@ -3905,7 +3905,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_caves" level="-1" x="500256" y="499872"
+  <zone name="-1_塞门_山洞" level="-1" x="500256" y="499872"
     file="Level -1/semos/caves.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.caves.BabyDragonSellerNPC" />
@@ -3930,7 +3930,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_dungeon" level="-1" x="500064" y="500000"
+  <zone name="-1_塞门_地牢" level="-1" x="500064" y="500000"
     file="Level -1/semos/dungeon.tmx">
 
     <entity x="1" y="1">
@@ -3957,7 +3957,7 @@ Mature sheep wanted: please speak to 赛特
     </portal>
 
     <portal x="28" y="17" ref="entrance">
-      <destination zone="0_semos_plains_w" ref="jail_entrance" />
+      <destination zone="0_塞门_草原_w" ref="jail_entrance" />
     </portal>
 
 
@@ -3966,7 +3966,7 @@ Mature sheep wanted: please speak to 赛特
 
   </zone>
 
-  <zone name="-1_semos_catacombs_ne" level="-1" x="500064" y="499872"
+  <zone name="-1_塞门_墓室_ne" level="-1" x="500064" y="499872"
     file="Level -1/semos/catacombs_ne.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
@@ -3983,7 +3983,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_catacombs_nw" level="-1" x="500000" y="499872"
+  <zone name="-1_塞门_墓室_nw" level="-1" x="500000" y="499872"
     file="Level -1/semos/catacombs_nw.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
@@ -4000,7 +4000,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_catacombs_se" level="-1" x="500064" y="499936"
+  <zone name="-1_塞门_墓室_se" level="-1" x="500064" y="499936"
     file="Level -1/semos/catacombs_se.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
@@ -4009,7 +4009,7 @@ Mature sheep wanted: please speak to 赛特
     </attributes>
 
     <portal x="28" y="37" ref="entrance" replacing="true">
-      <destination zone="0_semos_plains_n" ref="catacombs_entrance" />
+      <destination zone="0_塞门_草原_n" ref="catacombs_entrance" />
     </portal>
 
     <entity x="1" y="1">
@@ -4020,7 +4020,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_catacombs_sw" level="-1" x="500000" y="499936"
+  <zone name="-1_塞门_墓室_sw" level="-1" x="500000" y="499936"
     file="Level -1/semos/catacombs_sw.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
@@ -4037,7 +4037,7 @@ Mature sheep wanted: please speak to 赛特
   </zone>
 
 
-  <zone name="-1_semos_yeti_cave" level="-1" x="499616" y="499872"
+  <zone name="-1_塞门_雪人_洞" level="-1" x="499616" y="499872"
     file="Level -1/semos/yeticave.tmx">
     <attributes>
       <parameter name="color_method">softlight</parameter>
@@ -4049,27 +4049,27 @@ Mature sheep wanted: please speak to 赛特
 
   <!-- Level -2 -->
 
-  <zone name="-2_semos_mine_n2_e" level="-2" x="500128" y="499616"
+  <zone name="-2_塞门_矿山_n2_e" level="-2" x="500128" y="499616"
     file="Level -2/semos/mine_n2_e.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_n2_e2" level="-2" x="500256" y="499616"
+  <zone name="-2_塞门_矿山_n2_e2" level="-2" x="500256" y="499616"
     file="Level -2/semos/mine_n2_e2.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_n2_e3" level="-2" x="500384" y="499616"
+  <zone name="-2_塞门_矿山_n2_e3" level="-2" x="500384" y="499616"
     file="Level -2/semos/mine_n2_e3.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_ne" level="-2" x="500128" y="499744"
+  <zone name="-2_塞门_矿山_ne" level="-2" x="500128" y="499744"
     file="Level -2/semos/mine_ne.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_n_e2" level="-2" x="500256" y="499744"
+  <zone name="-2_塞门_矿山_n_e2" level="-2" x="500256" y="499744"
     file="Level -2/semos/mine_n_e2.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_n_e3" level="-2" x="500384" y="499744"
+  <zone name="-2_塞门_矿山_n_e3" level="-2" x="500384" y="499744"
     file="Level -2/semos/mine_n_e3.tmx">
     <entity x="56" y="18">
       <implementation
@@ -4082,23 +4082,23 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-2_semos_mine_e" level="-2" x="500128" y="499872"
+  <zone name="-2_塞门_矿山_e" level="-2" x="500128" y="499872"
     file="Level -2/semos/mine_e.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_e2" level="-2" x="500256" y="499872"
+  <zone name="-2_塞门_矿山_e2" level="-2" x="500256" y="499872"
     file="Level -2/semos/mine_e2.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_e3" level="-2" x="500384" y="499872"
+  <zone name="-2_塞门_矿山_e3" level="-2" x="500384" y="499872"
     file="Level -2/semos/mine_e3.tmx">
   </zone>
 
-  <zone name="-2_semos_mine_w2" level="-2" x="499744" y="499872"
+  <zone name="-2_塞门_矿山_w2" level="-2" x="499744" y="499872"
     file="Level -2/semos/mine_w2.tmx">
     <configurator class-name="games.stendhal.server.maps.semos.mines.HighPriestNPC" />
     <portal x="26" y="44" ref="to_balrog" replacing="true">
-      <destination zone="-2_semos_mine_w2" ref="exit_balrog" />
+      <destination zone="-2_塞门_矿山_w2" ref="exit_balrog" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">150</parameter>
@@ -4106,11 +4106,11 @@ Mature sheep wanted: please speak to 赛特
       </implementation>
     </portal>
     <portal x="42" y="44" ref="exit_balrog" replacing="true">
-      <destination zone="-2_semos_mine_w2" ref="to_balrog" />
+      <destination zone="-2_塞门_矿山_w2" ref="to_balrog" />
     </portal>
   </zone>
 
-  <zone name="-2_semos_dungeon" level="-2" x="500096" y="500032"
+  <zone name="-2_塞门_地牢" level="-2" x="500096" y="500032"
     file="Level -2/semos/dungeon.tmx">
 
     <entity x="1" y="1">
@@ -4136,7 +4136,7 @@ Mature sheep wanted: please speak to 赛特
       <parameter name="message">For security reasons, items may not be moved around in jail.</parameter>
     </configurator>
     <portal x="59" y="67" ref="jail_entrance_left">
-      <destination zone="int_semos_temple" ref="restart_life" />
+      <destination zone="int_塞门_教堂" ref="restart_life" />
     </portal>
 
   </zone>
@@ -4333,7 +4333,7 @@ Mature sheep wanted: please speak to 赛特
 
   <!-- Level -3 -->
 
-  <zone name="-3_semos_dungeon" level="-3" x="500096" y="500032"
+  <zone name="-3_塞门_地牢" level="-3" x="500096" y="500032"
     file="Level -3/semos/dungeon.tmx">
 
     <entity x="1" y="1">
@@ -4383,7 +4383,7 @@ Mature sheep wanted: please speak to 赛特
 
   <!-- Level -4 -->
 
-  <zone name="-4_semos_dungeon" level="-4" x="500096" y="500064"
+  <zone name="-4_塞门_地牢" level="-4" x="500096" y="500064"
     file="Level -4/semos/dungeon.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.dungeon.SheepBuyerNPC" />
@@ -4504,13 +4504,13 @@ Mature sheep wanted: please speak to 赛特
       or ring abused -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <portal x="43" y="49" ref="exit1">
-      <destination zone="0_semos_plains_s" ref="dream_exit1" />
+      <destination zone="0_塞门_草原_s" ref="dream_exit1" />
     </portal>
     <portal x="40" y="88" ref="exit2">
-      <destination zone="0_semos_plains_s" ref="dream_exit2" />
+      <destination zone="0_塞门_草原_s" ref="dream_exit2" />
     </portal>
     <portal x="76" y="115" ref="exit3">
-      <destination zone="0_semos_plains_s" ref="dream_exit3" />
+      <destination zone="0_塞门_草原_s" ref="dream_exit3" />
     </portal>
     <entity x="0" y="0">
       <implementation

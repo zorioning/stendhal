@@ -167,8 +167,8 @@ public class CoalForHaunchy extends AbstractQuest {
 									final EventRaiser npc) {
 								int grilledsteakAmount = Rand.rand(4) + 1;
 								new EquipItemAction("grilled steak", grilledsteakAmount, true).fire(player, sentence, npc);
-								npc.say("Thank you!! Take " + grilledsteakAmount + " " +
-										 "grilled steak" + " from my grill!");
+								npc.say("谢谢你！从我的烧烤架上拿走 " + grilledsteakAmount + " 个 " +
+										 "grilled steak" + " !");
 								new SetQuestAndModifyKarmaAction(getSlotName(), "waiting;"
 										+ System.currentTimeMillis(), 10.0).fire(player, sentence, npc);
 							}
@@ -179,7 +179,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationStates.ATTENDING, triggers,
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("coal",25))),
 				ConversationStates.ATTENDING,
-				"You don't have the coal amount which I need yet. Go and pick some more pieces up, please.",
+				"你给的煤不够我用的。还请再去捡点回来！",
 				null);
 
 		npc.add(
@@ -187,14 +187,14 @@ public class CoalForHaunchy extends AbstractQuest {
 				Arrays.asList("coal","stone coal"),
 				new QuestNotInStateCondition(QUEST_SLOT,"start"),
 				ConversationStates.ATTENDING,
-				"Sometime you could do me a #favour ...", null);
+				"有时你真是我的 #最爱 ...", null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Coal for Haunchy",
-				"Haunchy Meatoch is afraid of his BBQ grillfire. Will his coal last till the steaks are ready or will he need some more?",
+				"Haunchy 的煤炭",
+				"Haunchy Meatoch 担心他的烧烤大餐。他准备的煤炭能够持续到他的烧烤结束吗？或许他准备的不够?",
 				true);
 		offerQuestStep();
 		bringCoalStep();
@@ -207,20 +207,20 @@ public class CoalForHaunchy extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Haunchy Meatoch welcomed me to the Ados market.");
+		res.add("Haunchy Meatoch 欢迎我来到 Ados 集市");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("He asked me to fetch him some pieces of coal but I don't have time to collect some.");
+			res.add("他让我去弄些煤炭，但我没时间做这些。");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
-			res.add("The BBQ grill-heat is low and I promised Haunchy to help him out with 25 pieces of coal.");
+			res.add("烧烤大餐的铁架温度不够，我答应为 Haunchy 去找 25 块煤炭。");
 		}
 		if ("start".equals(questState) && player.isEquipped("coal",25) || isCompleted(player)) {
-			res.add("I found 25 pieces of coal for the Haunchy and think he will be happy.");
+			res.add("我找到了 25 块煤炭，我想 Haunchy 一定会很高兴");
 		}
 		if (isCompleted(player)) {
 			if (isRepeatable(player)) {
-				res.add("I took 25 pieces of coal to the Haunchy, but I'd bet his amount is low again and needs more. Maybe I'll get more grilled tasty steaks.");
+				res.add("我带着 25 块煤炭给了 Haunchy, 但我but I'd bet his amount is low again and needs more. Maybe I'll get more grilled tasty steaks.");
 			} else {
 				res.add("Haunchy Meatoch was really happy when I gave him the coal, he has enough for now. He gave me some of the best steaks which I ever ate!");
 			}

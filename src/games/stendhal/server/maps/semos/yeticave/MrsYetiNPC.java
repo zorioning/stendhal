@@ -80,17 +80,17 @@ public class MrsYetiNPC implements ZoneConfigurator {
 				final Map<String, Integer> items = new HashMap<String, Integer>();
 				items.put("roach", BUYING_PRICE);
 
-				new SellerAdder().addSeller(this, new QuestCompletedSellerBehaviour(QUEST_SLOT, "I have a #task for you before I will sell you anything.", items));
+				new SellerAdder().addSeller(this, new QuestCompletedSellerBehaviour(QUEST_SLOT, "在销售给你商品之前，有个 #任务 交给你。", items));
 				// for quest see games.stendhal.server.maps.quest.HelpMrsYeti
-				addGreeting("Greetings, strange foreigner!");
-				addJob("I go out to hunt for food while Mr Yeti makes his snow sculptures.");
-				addHelp("Be careful of the creatures lurking in these caves!");
+				addGreeting("欢迎你，奇怪的外乡人！");
+				addJob("在 Mr Yeti 做雪雕时，我外出打猎了。");
+				addHelp("要小心那些洞里潜伏的怪兽！");
 				addGoodbye();
 			}
 		};
 
 		yetifemale.setEntityClass("yetifemalenpc");
-		yetifemale.setDescription("You see Mrs. Yeti, a white hairy lady with huge feet!");
+		yetifemale.setDescription("你遇见了 Mrs. Yeti, 有着一双大脚的她身上长满白色毛发！");
 		yetifemale.setPosition(102, 19);
 		yetifemale.setCollisionAction(CollisionAction.STOP);
 		yetifemale.initHP(100);

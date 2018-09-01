@@ -23,7 +23,7 @@ import games.stendhal.server.core.pathfinder.Node;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Erastus, the archmage of the Wizards Tower
+ * 伊拉斯塔斯, the archmage of the Wizards Tower
  *
  * see games.stendhal.server.maps.quests.ArchmageErastusQuest
  */
@@ -35,7 +35,7 @@ public class BlueArchmageNPC implements ZoneConfigurator {
 	}
 
 	private void buildErastus(final StendhalRPZone zone) {
-		final SpeakerNPC erastus = new SpeakerNPC("Erastus") {
+		final SpeakerNPC erastus = new SpeakerNPC("伊拉斯塔斯") {
 
 			@Override
 			protected void createPath() {
@@ -79,19 +79,19 @@ public class BlueArchmageNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Be greeted, adventurer!");
-				addHelp("All magical types have a #opposite magic to preserve the balance. Remember that when you follow your adventures.");
-				addJob("I am Erastus. My assignment is to unite and lead the wizards of the circle.");
-				addOffer("I do not offer anything. But Zekiel and the wizards can surely help you.");
-				addReply("opposite", "If you want to combat fire then use water. But the opposite is not just a clear contrast. The archmages " +
-						"are able to combine them to create the most powerful magic which the world has ever seen.");
-				addQuest("Yes, I have a quest for you. But first you have to learn more about magic from the wizards of the circle. I will give it to you, when you are done with their quests.");
-				addGoodbye("See you soon, adventurer!");
+				addGreeting("你好，冒险者！");
+				addHelp("所有的魔法类型都有一个 #相克 的魔法以维持平衡。牢记这条很重要。");
+				addJob("我是 Erastus。我的职责是联合并领导圈子中的巫师。");
+				addOffer("我什么都不卖。不过 Zekiel 和 巫师们应该可以帮到你！");
+				addReply("相克", "想打败火系当然用水系。但相克不只是针锋相对。" +
+						"我见过 大法师 能够融合它们，并创建出更强大的魔法。");
+				addQuest("是的我有个请求，但你需要首先从巫师圈里学会点魔法知识。当你完成我的请求时，我会把这个给你。");
+				addGoodbye("再见，冒险者！");
 
 			} //remaining behaviour defined in maps.quests.ArchmageErastusQuest
 		};
 
-		erastus.setDescription("You see Erastus, the grandmaster of all magics.");
+		erastus.setDescription("你遇见 Erastus，他是全能级法术大师。");
 		erastus.setEntityClass("blueoldwizardnpc");
 		erastus.setPosition(21, 36);
 		erastus.initHP(100);

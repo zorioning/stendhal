@@ -93,7 +93,7 @@ public class SadScientist extends AbstractQuest {
 
 	private static Logger logger = Logger.getLogger(SadScientist.class);
 
-	private static final String LETTER_DESCRIPTION = "You see a letter for Vasi Elos.";
+	private static final String LETTER_DESCRIPTION = "这是一封寄给 Vasi Elos 的信.";
 	private static final String QUEST_SLOT = "sad_scientist";
 	private static final int REQUIRED_MINUTES = 20;
 	private static final String NEEDED_ITEMS = "emerald=1;obsidian=1;sapphire=1;carbuncle=2;gold bar=20;mithril bar=1";
@@ -173,7 +173,7 @@ public class SadScientist extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"A Sad Scientist",
+				"悲伤的科学家",
 				"Vasi Elos, 一个孤独的科学家，想给他的情人送一件特别的礼物.",
 				false);
 		prepareQuestSteps();

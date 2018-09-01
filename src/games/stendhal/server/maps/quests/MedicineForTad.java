@@ -70,35 +70,35 @@ import games.stendhal.server.maps.Region;
 public class MedicineForTad extends AbstractQuest {
 
 	static final String ILISA_TALK_ASK_FOR_FLASK = "#泰德 要的药？他不是让你把 瓶子 带给他吗?";
-	static final String ILISA_TALK_ASK_FOR_HERB = "啊, 我看见你拿着 瓶子. #泰德 需要药，对吧？ 唔... 我还需要点 #herb. 你能帮我取点吗?";
+	static final String ILISA_TALK_ASK_FOR_HERB = "啊, 我看见你拿着 瓶子. #泰德 需要药，对吧？ 唔... 我还需要点 #草药. 你能帮我取点吗?";
 	static final String ILISA_TALK_DESCRIBE_HERB = "塞门镇北面，挨着小树林，生长着一种名叫arandula的草药，这张图画的是这种草药的图片，所以快照图去找吧.";
 	static final String ILISA_TALK_INTRODUCE_TAD = "他需要一种强心济来治好他的病，他会给帮助过他的人很不错的酬金。";
-	static final String ILISA_TALK_REMIND_HERB = "你拿到这些#herbs 来制作 #medicine 了吗?";
+	static final String ILISA_TALK_REMIND_HERB = "你拿到这些 #草药 来制作 #药济 了吗?";
 	static final String ILISA_TALK_PREPARE_MEDICINE = "很好!谢谢你，现在我要把这些混合...加入这个...然后再滴点... 好了！你能让 #泰德 停下并收集这个吗？ 我想知道他在做些什么。";
 	static final String ILISA_TALK_EXPLAIN_MEDICINE = "这是 #泰德 急需的东西.";
 
 	static final String KETTEH_TALK_BYE_INTRODUCES_TAD = "再会，你见到Ted了，在旅店里？如果你有机会，请看看他，我听说他近来身体不太好。你可以在 塞门镇 村子里的旅店找到他，离Nishiya很近.";
-	static final String KETTEH_TALK_BYE_REMINDS_OF_TAD = "再见，不要忘了去看看 Tad。我希望他好起来.";
+	static final String KETTEH_TALK_BYE_REMINDS_OF_TAD = "再见，不要忘了去看看 泰德。我希望他好起来.";
 
 	static final String TAD_TALK_GOT_FLASK = "Ok, 你得到了 瓶子!";
 	static final String TAD_TALK_REWARD_MONEY = "拿着，这些钱足够你的开销了.";
 	static final String TAD_TALK_FLASK_ILISA = "现在，我需要你带着它去找 #Ilisa... 她一看就明白接下来要做什么。";
 	static final String TAD_TALK_REMIND_FLASK_ILISA = "我需要你带着瓶子去找 #Ilisa... 她一看就明白接下来要做什么。";
 	static final String TAD_TALK_INTRODUCE_ILISA = "Ilisa 是 塞门镇 教堂的召唤治疗师。";
-	static final String TAD_TALK_REMIND_MEDICINE = "*cough* 我希望 #Ilisa 能快点把药制好...";
+	static final String TAD_TALK_REMIND_MEDICINE = "*cough* 咳...咳！我希望 #Ilisa 能快点把药制好...";
 	static final String TAD_TALK_COMPLETE_QUEST = "谢谢！我会尽快和 #Ilisa 谈谈。";
 
 	static final String TAD_TALK_ASK_FOR_EMPTY_FLASK = "我感觉很不好... 我需要拿到一瓶药济。你能帮我取一个空的 #瓶子 吗?";
 	static final String TAD_TALK_ALREADY_HELPED_1 = "我现在好了，谢谢。";
 	static final String TAD_TALK_ALREADY_HELPED_2 = "你帮我脱离险境！现在我觉得好多了！";
-	static final String TAD_TALK_WAIT_FOR_FLASK = "*cough* Oh 亲爱的... 我真的需要这些药！请快点去找 #Margaretrry 取个 #瓶子 回来.";
+	static final String TAD_TALK_WAIT_FOR_FLASK = "*cough* 咳...咳！Oh 亲爱的... 我真的需要这些药！请快点去找 #Margaret 取个 #瓶子 回来.";
 	static final String TAD_TALK_FLASK_MARGARET = "你应该去 #Margaret 处取个 瓶子.";
 	static final String TAD_TALK_INTRODUCE_MARGARET = "Margaret 是酒店的服务员，平时就在离这不远的酒店里。";
 	static final String TAD_TALK_CONFIRM_QUEST = "所以, 你会帮我吗?";
 	static final String TAD_TALK_QUEST_REFUSED = "Oh, 请不要改变主意好吗？ *sneeze*";
 	static final String TAD_TALK_QUEST_ACCEPTED = "太好了! 请尽快吧. *sneeze*";
 
-	static final String HISTORY_MET_TAD = "我在 塞门镇 旅店里见到了 Ted.";
+	static final String HISTORY_MET_TAD = "我在 塞门镇 旅店里见到了 泰德.";
 	static final String HISTORY_QUEST_OFFERED = "他让我去 塞门镇 酒店里 找 Margaret 买一个 瓶子 .";
 	static final String HISTORY_GOT_FLASK = "我拿到了 瓶子 ，并马上带给了 泰德 .";
 	static final String HISTORY_TAKE_FLASK_TO_ILISA = "泰德 让我拿着 瓶子 到 塞门镇教堂找 Ilisa.";
@@ -330,7 +330,7 @@ public class MedicineForTad extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("herb", "arandula"),
+				Arrays.asList("草药", "arandula"),
 				new QuestStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
 				ILISA_TALK_DESCRIBE_HERB,

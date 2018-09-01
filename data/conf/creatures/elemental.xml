@@ -356,7 +356,7 @@
   
   <!-- START: water -->
   
-  <creature name="water elemental">
+  <creature name="水元素">
     <type class="elemental" subclass="water_elemental" tileid="elemental.png:3"/>
     <description>You see a Water elemental which is made of water and various other liquids.</description>
     <attributes>

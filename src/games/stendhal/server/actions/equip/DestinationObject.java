@@ -262,7 +262,7 @@ class DestinationObject extends MoveableObject {
 	 */
 	private boolean isGamblingZoneAndIsDice(final Entity entity, final Player player) {
 		final StendhalRPZone zone = player.getZone();
-		return "int_semos_tavern_0".equals(zone.getName()) && ("dice").equals(entity.getTitle());
+		return "int_塞门_酒馆_0".equals(zone.getName()) && ("dice").equals(entity.getTitle());
 	}
 
 	/** returns true when this DestinationObject is valid. */

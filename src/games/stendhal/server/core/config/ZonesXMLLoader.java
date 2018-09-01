@@ -138,7 +138,7 @@ public final class ZonesXMLLoader {
 			}
 
 			final String name = zdesc.getName();
-			if (!name.matches(regex) && !name.equals("int_semos_townhall") && !name.equals("int_semos_guard_house")) {
+			if (!name.matches(regex) && !name.equals("int_塞门_镇政厅") && !name.equals("int_塞门_守卫_室")) {
 				continue;
 			}
 

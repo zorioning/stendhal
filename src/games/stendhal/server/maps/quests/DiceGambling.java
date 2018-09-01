@@ -75,14 +75,14 @@ public class DiceGambling extends AbstractQuest {
 
 		ricardo.add(ConversationStates.ATTENDING, "play", null,
 				ConversationStates.QUESTION_1,
-				"In order to play, you have to stake " + STAKE
-						+ " gold. Do you want to pay?", null);
+				"想要开始游戏, 需要压注 " + STAKE
+						+ " 金币，你确定压吗？", null);
 
 		ricardo.add(ConversationStates.QUESTION_1,
 			ConversationPhrases.YES_MESSAGES,
 			new PlayerHasItemWithHimCondition("money", STAKE),
 			ConversationStates.ATTENDING,
-			"OK, here are the dice. Just throw them when you're ready. Good luck!",
+			"OK, 这是骰子，准备好了就扔出来，祝你好运!",
 			new ChatAction() {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
@@ -98,50 +98,50 @@ public class DiceGambling extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			new NotCondition(new PlayerHasItemWithHimCondition("money", STAKE)),
 			ConversationStates.ATTENDING,
-			"Hey! You don't have enough money!", null);
+			"喂! 你的钱不够啊!", null);
 
 		ricardo.add(
 			ConversationStates.QUESTION_1,
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Coward! How will you ever become a hero when you risk nothing?",
+			"胆小鬼！你这么胆小怎么能成英雄！",
 			null);
 
 		fillQuestInfo(
-				"Dice Gambling",
-				"Try your luck at 塞门镇 Tavern's gambling table.",
+				"骰子游戏",
+				"在塞门镇酒店的赌上碰碰运气.",
 				true);
 	}
 
 	private Map <Integer, Pair<String, String>> initPrices() {
 		Map<Integer, Pair<String, String>> map = new HashMap<Integer, Pair<String, String>>();
 		map.put(3, new Pair<String, String>("blue shield",
-				"Dude, you are one unlucky guy! I feel so sorry for you! Here, take this blue shield."));
+				"小哥，你真是狗屎运！我对你很失望！给你，把这 blue shield 拿走吧."));
 		map.put(7, new Pair<String, String>("beer",
-				"That's enough for a consolation prize, a bottle of beer."));
+				"这是安慰奖，一瓶啤酒."));
 		map.put(8, new Pair<String, String>("wine",
-				"You have won this delicious glass of wine!"));
+				"你赢了一杯可口的红酒！"));
 		map.put(9, new Pair<String, String>("studded shield",
-				"Take this simple shield as a reward."));
+				"这个简单的盾是给你的奖励"));
 		map.put(10, new Pair<String, String>("chain legs",
-				"I hope you have a use for these chain legs."));
+				"我希望你能用到这些 chain legs."));
 		map.put(11,	new Pair<String, String>("antidote",
-			   "This antidote will serve you well when you fight against poisonous creatures."));
+			   "当你在野外中毒时，这瓶解毒济可帮上大忙"));
 		map.put(12, new Pair<String, String>("sandwich",
-				"You have won a tasty sandwich!"));
+				"你赢了一块美味的三明治！"));
 		map.put(13, new Pair<String, String>("cheeseydog",
-				"Take this tasty cheesydog!"));
+				"把这个好吃的 cheesydog 带走吧！"));
 		map.put(14, new Pair<String, String>("home scroll",
-		"You have won this very useful home scroll!"));
+		"你赢到了这个好用的回城卷！"));
 		map.put(15,	new Pair<String, String>("greater potion",
-				"You have won a greater potion, but with your luck you'll probably never have to use it!"));
+				"你赢了一瓶大生命药济，但你以前或许从来没用过这个!"));
 		map.put(16,	new Pair<String, String>("longbow",
-		"You could be a formidable archer with this prize of a longbow!"));
+		"拿着这个拉风的长弓，你会是个优秀的弓箭手！"));
 		map.put(17,	new Pair<String, String>("红斗篷",
-		"You're going to look great in this fashionable 红斗篷!"));
+		"穿上这件时尚的 红斗篷 你一定变得很酷！"));
 		map.put(18, new Pair<String, String>("magic chain helmet",
-				"You have hit the JACKPOT! A magic chain helmet!"));
+				"你得到了特等奖！一个 magic chain helmet!"));
 
 		return map;
 	}

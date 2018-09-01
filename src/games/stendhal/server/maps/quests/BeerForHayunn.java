@@ -135,7 +135,7 @@ public class BeerForHayunn extends AbstractQuest {
 			"酒店",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"如果你不知酒店在哪儿，如可以问问老 Monogenes; 他是个不错的向导。你要去问问吗？",
+			"如果你不知酒店在哪儿，如可以问问老 梦金斯; 他是个不错的向导。你要去问问吗？",
 			null);
 
 		npc.add(

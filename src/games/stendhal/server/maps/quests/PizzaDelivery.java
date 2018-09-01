@@ -281,10 +281,9 @@ public class PizzaDelivery extends AbstractQuest {
 				"我希望下次拿到Pizza时，它还是热的。",
 				10));
 
-		customerDB.put(
-			"Jenny",
+		customerDB.put("詹妮",
 			new CustomerData(
-				"Jenny 拥有一座磨坊，地点在 Semons 镇的北方稍偏东的平原中",
+				"詹妮 拥有一座磨坊，地点在 Semons 镇的北方稍偏东的平原中",
 				"Pizza Margherita",
 				// minutes to deliver. Tested by mort: can
 				// be done in 1:15 min, with no real danger.
@@ -333,7 +332,7 @@ public class PizzaDelivery extends AbstractQuest {
 				"Marcus 是 Semon 牢房的守卫。从这往西走到头，在Semon 村子的远方。", "Pizza Tonno",
 				// minutes to deliver. Tested by kymara: takes longer than before due to fence in village
 				3,
-				// tip when delivered on time. A bit higher than Jenny
+				// tip when delivered on time. A bit higher than 詹妮
 				// because you can't do anything else in the jail and need
 				// to walk out again.
 				25,

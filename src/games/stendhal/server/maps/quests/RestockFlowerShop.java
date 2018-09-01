@@ -76,7 +76,7 @@ public class RestockFlowerShop extends AbstractQuest {
 
 	// Different types of flowers needed in quest
 	private static final List<String> flowerTypes = Arrays.asList(
-			"daisies", "lilia", "pansy", "rose", "zantedeschia");
+			"雏菊", "紫丁香", "三色堇", "玫瑰", "马蹄莲");
 	public static List<Integer> requestedQuantities = Arrays.asList();
 
 	private final int MAX_FLOWERS = flowerTypes.size() * 10;
@@ -125,7 +125,7 @@ public class RestockFlowerShop extends AbstractQuest {
 	private void setupBasicResponses() {
 
 		List<List<String>> keywords = Arrays.asList(
-				Arrays.asList("flower"),
+				Arrays.asList("花"),
 				ConversationPhrases.HELP_MESSAGES);
 		List<String> responses = Arrays.asList(
 				"这些花不好看吗?",
@@ -145,14 +145,14 @@ public class RestockFlowerShop extends AbstractQuest {
 
 		// Player asks to be reminded of remaining flowers required
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("flower", "remind", "what", "item", "list", "something"),
+				Arrays.asList("花", "记得", "什么", "物品", "目录", "东西"),
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
 				null,
 				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我还需要 [items]. 你身上带的有吗?"));
 
         npc.add(ConversationStates.QUESTION_1,
-                Arrays.asList("flower", "remind", "what", "item", "list", "something"),
+                Arrays.asList("花", "记得", "什么", "物品", "目录", "东西"),
                 new QuestActiveCondition(QUEST_SLOT),
                 ConversationStates.QUESTION_1,
                 null,
@@ -160,32 +160,32 @@ public class RestockFlowerShop extends AbstractQuest {
 
         // Player asks to be reminded of remaining flowers required
         npc.add(ConversationStates.QUESTION_1,
-                Arrays.asList("flower", "remind", "what", "item", "list"),
+                Arrays.asList("花", "记得", "什么", "物品", "目录"),
                 new QuestActiveCondition(QUEST_SLOT),
                 ConversationStates.QUESTION_1,
                 null,
                 new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我还需要 [items]. 你身上带的有吗?"));
 
 		List<List<String>> keywords = Arrays.asList(
-				Arrays.asList("daisy", "bunch of daisies", "bunches of daisies", "lilia", "pansy"),
-				Arrays.asList("rose"),
-				Arrays.asList("zantedeschia"),
-				Arrays.asList("water", "bottle of water"),
-				Arrays.asList("who", "where"),
-				Arrays.asList("jenny"),
-				Arrays.asList("fleur"),
+				Arrays.asList("雏菊", "一束雏菊", "紫丁香", "三色堇"),
+				Arrays.asList("玫瑰"),
+				Arrays.asList("马蹄莲"),
+				Arrays.asList("水"),
+				Arrays.asList("谁", "在哪"),
+				Arrays.asList("詹妮"),
+				Arrays.asList("弗乐尔"),
 				Arrays.asList("瓶子"),
 				ConversationPhrases.HELP_MESSAGES);
 		List<String> responses = new ArrayList<String>();
-		responses.add("#Jenny carries seeds for this type of flower.");
-		responses.add("#Fleur always has the nicest roses.");
-		responses.add("Zantedeschia is my favorite flower. Some call them arum or calla lilies, though they are not true lilies. Ask #Jenny if she has any bulbs.");
-		responses.add("I need water to keep the #flowers fresh. You'll need to find a water source and fill up some #瓶子s. Maybe there is someone who sells water.");
-		responses.add("#Jenny knows a lot about flowers. You may be able to talk with #Fleur as well.");
-		responses.add("You can find Jenny around the windmill near 塞门镇 where she mills flour.");
-		responses.add("Fleur works at the market in Kirdneh.");
-		responses.add("Ask the barmaid in 塞门镇.");
-		responses.add("I can #remind you of which #flowers I need. I might also be able help you figure out #where you can find some.");
+		responses.add("#詹妮 带着这种花的种子");
+		responses.add("#弗乐尔 有最好的 玫瑰。");
+		responses.add("#马蹄莲 是我最喜欢的花. 一些人叫它海芋或是叫它丁香，然而它不是真正的丁香。可以去向 #詹妮 要一些马蹄莲球茎。");
+		responses.add("我需要用水为这些 #花 保鲜.你要找些源，然后装到这个 #瓶子 里。也可以去买些水。");
+		responses.add("#詹妮 懂得很多花的知识，也可以找他问关于 #弗乐尔 的消息.");
+		responses.add("詹妮常常呆在磨坊，可以在挨着塞门镇的大风车旁边找找。");
+		responses.add("弗乐尔 在 Kirdneh 的市场工作");
+		responses.add("去塞门镇 的酒吧打听一下.");
+		responses.add("我还 #记得 你要带给我的 #花 !也帮你指出 #去哪里 可以找到");
 
 		for (int f = 0; f < responses.size(); f++) {
 			npc.add(ConversationStates.ANY,
@@ -206,7 +206,7 @@ public class RestockFlowerShop extends AbstractQuest {
 						new NotCondition(new QuestActiveCondition(QUEST_SLOT)),
 						new TimePassedCondition(QUEST_SLOT, 1, WAIT_TIME)),
 				ConversationStates.QUEST_OFFERED,
-				"The flower shop is running low on flowers. Will you help me restock it?",
+				"花店的花供应严重不足。你可以帮我进点货吗？",
 				null);
 
 		// Player requests quest after started
@@ -214,7 +214,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"You still haven't brought me the #flowers I asked for.",
+				"你还没带来工要的 #花",
 				null);
 
 		// Player requests quest before wait period ended
@@ -223,7 +223,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, WAIT_TIME)),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, WAIT_TIME, "The flowers you brought are selling quickly. I may need your help again in"));
+				new SayTimeRemainingAction(QUEST_SLOT, 1, WAIT_TIME, "这么快你就把花带来了。或许我还需要你的帮助"));
 
 		// Player accepts quest
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -233,8 +233,8 @@ public class RestockFlowerShop extends AbstractQuest {
 				null,
 				new MultipleActions(
 						new StartItemsCollectionWithLimitAction(QUEST_SLOT, 0, flowerTypes, MAX_FLOWERS),
-						new AddItemToCollectionAction(QUEST_SLOT, "water", REQ_WATER),
-						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Great! Here is what I need: [items]."))
+						new AddItemToCollectionAction(QUEST_SLOT, "水", REQ_WATER),
+						new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "太好了，我需要 [items]."))
 		);
 
 		// Player rejects quest
@@ -242,7 +242,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"I am sorry to hear that.",
+				"听到这些真的很难过。",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 	}
 
@@ -252,7 +252,7 @@ public class RestockFlowerShop extends AbstractQuest {
 		for (String f : flowerTypes) {
 			requestedItems.add(f);
 		}
-		requestedItems.add("water");
+		requestedItems.add("水");
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new IncreaseXPAction(1000));
@@ -260,7 +260,7 @@ public class RestockFlowerShop extends AbstractQuest {
 		reward.add(new EquipItemAction("nalwor city scroll", 5));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));
-		reward.add(new SayTextAction("Thank you so much! Now I can fill all of my orders."));
+		reward.add(new SayTextAction("非常感谢！现在我要开始忙了。"));
 
 		ChatAction rewardAction = new MultipleActions(reward);
 
@@ -274,8 +274,8 @@ public class RestockFlowerShop extends AbstractQuest {
 					new CollectRequestedItemsAction(
 							item,
 							QUEST_SLOT,
-							"Thank you! What else did you bring?",
-							"I don't need any more of those.",
+							"谢谢你！你还带了别的吗？",
+							"我不再需要了。",
 							rewardAction,
 							ConversationStates.IDLE
 							));
@@ -286,7 +286,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
-				"Did you bring #something for the shop?",
+				"你给店里带了什么 #东西 吗",
 				null);
 
 		// Player confirms brought flowers
@@ -294,7 +294,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
-				"What did you bring?",
+				"你带的是什么？",
 				null);
 
 		// Player didn't bring flowers
@@ -302,7 +302,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Don't stop to smell the roses yet. Orders are backing up. I can #remind you of what to bring.",
+				"别再一直闻那些玫瑰了，要开始忙了。我 #记得 你还要给我带东西过来。",
 				null);
 
 		// Player offers item that wasn't requested
@@ -310,7 +310,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				"",
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
-				"I don't think that would look good in the shop.",
+				"我不觉得这东西东西放店里会好看。",
 				null);
 
 		// Player says "bye" or "no" while listing flowers
@@ -325,7 +325,7 @@ public class RestockFlowerShop extends AbstractQuest {
 				endDiscussionPhrases,
 				null,
 				ConversationStates.IDLE,
-				"Please come back when you have found some flowers.",
+				"你找到那些花时再回来。",
 				null);
 	}
 
@@ -346,7 +346,7 @@ public class RestockFlowerShop extends AbstractQuest {
 	}
 
 	public String getTitle() {
-		return "Restock the Flower Shop";
+		return "给花店备货";
 	}
 
 	@Override
@@ -363,7 +363,7 @@ public class RestockFlowerShop extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				getTitle(),
-				getNPCName() + " needs to restock the flower shop in Nalwor City.",
+				getNPCName() + " 需要为 Nalwor 城的花店备好货。",
 				true);
 		setupBasicResponses();
 		setupActiveQuestResponses();

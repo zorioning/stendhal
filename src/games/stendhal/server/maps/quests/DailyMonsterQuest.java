@@ -142,7 +142,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 
 
 			raiser.say("塞门镇需要你的帮助，去杀掉 " + creatureName
-					+ " ，完成后回来说 #complete 就行了。");
+					+ " ，完成后回来说 #完成 就行了。");
 
 			questLast = "" + new Date().getTime();
 			player.setQuest(
@@ -332,7 +332,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 					public void fire(Player player, Sentence sentence, EventRaiser npc) {
 						npc.say("你的任务是杀掉 " +
 								player.getQuest(QUEST_SLOT,0) +
-								". 完成后回复 #complete 完成它!");
+								". 完成后回复 #完成 !");
 					}
 				});
 
@@ -353,7 +353,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 						if(player.getQuest(QUEST_SLOT, 0)!=null) {
 								npc.say("你的任务是杀掉 " +
 										player.getQuest(QUEST_SLOT, 0) +
-										". 完成后回复 #complete 完成它!" +
+										". 完成后回复 #完成 !" +
 										" 如果你没找到它，可能它没给Semon镇惹麻烦，如果你喜欢，还可以杀掉其它的 #another 怪物。");
 						}
 					}
@@ -425,7 +425,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 					public void fire(Player player, Sentence sentence, EventRaiser npc) {
 							final String questKill = player.getQuest(QUEST_SLOT, 0).split(",")[0];
 							npc.say("你还没有杀掉 " + questKill
-									+ " 。完成后回来回复 #complete 就可以了.");
+									+ " 。完成后回复 #完成 就可以了.");
 					}
 				});
 
@@ -458,7 +458,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 						new QuestNotStartedCondition(QUEST_SLOT),
 						new QuestCompletedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"可能我还没有给你发出任务 #quest 。",
+				"可能我还没有给你发出 #任务 #quest 。",
 				null);
 
 		// player have no expired quest

@@ -181,23 +181,23 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("done"),
 				createTaskFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Thank you for helping me with the harvest. Here is your reward. Maybe you can bring the grain to #Jenny who can mill #flour from it.",
+				"Thank you for helping me with the harvest. Here is your reward. Maybe you can bring the grain to #詹妮 who can mill #flour from it.",
 				createReward());
 		/*
 		 * Player has finished the quest and can get additional information
 		 */
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("jenny"),
+				Arrays.asList("詹妮"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"You can find #Jenny near 塞门镇 at the mill. She mills grain into #flour for you if you bring her a few sheaves.",
+				"You can find #詹妮 near 塞门镇 at the mill. She mills grain into #flour for you if you bring her a few sheaves.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("flour"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"#Jenny will mill the grain I gave you as reward to flour which you could maybe use for #bread?",
+				"#詹妮 will mill the grain I gave you as reward to flour which you could maybe use for #bread?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,

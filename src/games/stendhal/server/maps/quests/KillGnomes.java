@@ -45,13 +45,13 @@ import marauroa.common.Pair;
  * <p>
  * PARTICIPANTS:
  * <ul>
- * <li> Jenny, by the mill in 塞门镇 Plains
+ * <li> 詹妮, by the mill in 塞门镇 Plains
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Gnomes have been stealing carrots so Jenny asks you to kill some.
- * <li> You go kill the Gnomes in the gnome village and you get the reward from Jenny
+ * <li> Gnomes have been stealing carrots so 詹妮 asks you to kill some.
+ * <li> You go kill the Gnomes in the gnome village and you get the reward from 詹妮
  * </ul>
  * <p>
  * REWARD:
@@ -78,14 +78,13 @@ public class KillGnomes extends AbstractQuest {
 	}
 
 	private void step_1() {
-		final SpeakerNPC npc = npcs.get("Jenny");
+		final SpeakerNPC npc = npcs.get("詹妮");
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"Some gnomes have been stealing carrots from the farms North of 塞门镇. "
-				+ "They need to be taught a lesson, will you help?",
+				"几个侏儒偷了塞门镇北方农场的胡萝卜，要给这些小偷上上课，你原意帮我吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -93,7 +92,7 @@ public class KillGnomes extends AbstractQuest {
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT,"killed"),
 						 new TimePassedCondition(QUEST_SLOT, 1, WEEK_IN_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"Those pesky gnomes are stealing carrots again. I think they need another lesson. Will you help?",
+				"这些讨厌的侏儒又偷胡萝卜了。我觉得有必要给了们上一课，你能再去吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -101,7 +100,7 @@ public class KillGnomes extends AbstractQuest {
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT,"killed"),
 						 new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, WEEK_IN_MINUTES))),
 				ConversationStates.ATTENDING,
-				"The gnomes haven't made any trouble since you last taught them a lesson.",
+				"自从你教训了那些侏儒后，他们再没找过麻烦。",
 				null);
 
 		final Map<String, Pair<Integer, Integer>> toKill = new TreeMap<String, Pair<Integer, Integer>>();
@@ -117,15 +116,15 @@ public class KillGnomes extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Excellent. You'll find the gnomes camped out, north west of 塞门镇. Make sure you kill some of the ringleaders, too, at least one infantryman and one cavalryman.",
+				"太好了。你可以到塞门镇西北方向找到了侏儒的大本营，你要保证杀掉盗贼头目，还有至少一个步兵的和骑兵！",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"You're right, perhaps it is cruel to slaughter gnomes who only stole a carrot or so. "
-				+ "Maybe the farms should just increase their security. ",
+				"你说的对，只因只偷了几个胡萝卜就杀掉那些侏儒也许太过残忍。"
+				+ "可能那些农民只是想增加点安全措施。",
 				new SetQuestAction(QUEST_SLOT, "rejected"));
 	}
 
@@ -135,7 +134,7 @@ public class KillGnomes extends AbstractQuest {
 
 	private void step_3() {
 
-		final SpeakerNPC npc = npcs.get("Jenny");
+		final SpeakerNPC npc = npcs.get("詹妮");
 
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
@@ -153,8 +152,8 @@ public class KillGnomes extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new KilledForQuestCondition(QUEST_SLOT, 1)),
 				ConversationStates.ATTENDING,
-				"I see you have killed the gnomes as I asked. I hope they will stay away from the carrots for a while! "
-				+ "Please take these potions as a reward.",
+				"我了解到你已杀了侏儒，希望他们能老实一阵子。"
+				+ "这些毒药是给你的回报。",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.ATTENDING,
@@ -163,16 +162,16 @@ public class KillGnomes extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new NotCondition(new KilledForQuestCondition(QUEST_SLOT, 1))),
 				ConversationStates.ATTENDING,
-				"You need to teach those pesky gnomes a lesson, by killing some as an example! "
-				+ "Make sure you get the leaders, too, at least one infantryman and one cavalryman.",
+				"你需要给这些小偷上一课，杀几只以儆效尤！"
+				+ "一定要杀掉他们的头目，还有至少一个步兵和一个骑兵。",
 				null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Kill Gnomes",
-				"Jenny isn't happy that gnomes keep stealing her carrots.",
+				"杀死侏儒",
+				"詹妮 对胡萝卜被侏儒偷走感到很生气。",
 				false);
 		step_1();
 		step_2();
@@ -186,11 +185,11 @@ public class KillGnomes extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I must kill some gnomes, especially the leader ones, to teach them all a lesson!");
+				res.add("我必须杀死一些侏儒，尤其是领头的那个，给他们上一课！");
 			} else if(isRepeatable(player)){
-				res.add("Those pesky gnomes have forgotten the lesson I taught them and are stealing again! Jenny needs my help.");
+				res.add("这些记吃不记打的侏儒忘了我给的教训，又开始偷了！需要帮帮詹妮。");
 			} else {
-				res.add("The gnomes are now staying away from Jenny's carrots. Yeah!");
+				res.add("侏儒们现在不敢再偷詹妮的胡萝卜了，耶！");
 			}
 			return res;
 	}
@@ -219,7 +218,7 @@ public class KillGnomes extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Jenny";
+		return "詹妮";
 	}
 
 	@Override

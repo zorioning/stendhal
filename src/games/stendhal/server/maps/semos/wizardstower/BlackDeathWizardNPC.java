@@ -23,7 +23,7 @@ import games.stendhal.server.core.pathfinder.Node;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Ravashack, the death wizard of the Wizards Tower
+ * 拉瓦夏克, the death wizard of the Wizards Tower
  *
  * see games.stendhal.server.maps.quests.WizardRavashackPlainQuest
  */
@@ -35,7 +35,7 @@ public class BlackDeathWizardNPC implements ZoneConfigurator {
 	}
 
 	private void buildRavashack(final StendhalRPZone zone) {
-		final SpeakerNPC ravashack = new SpeakerNPC("Ravashack") {
+		final SpeakerNPC ravashack = new SpeakerNPC("拉瓦夏克") {
 
 			@Override
 			protected void createPath() {
@@ -69,18 +69,18 @@ public class BlackDeathWizardNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Greetings mortal! What is it this time?");
-				addHelp("Excuse me mortal, I am very busy, working to establish the necromancers part at the wizards circle.");
-				addJob("I am Ravashack. I represent the necromancers of #Wraithforge at the wizards circle.");
-				addOffer("Excuse me mortal, I am very busy, working to establish the necromancers part at the wizards circle.");
-				addQuest("The magic in this world has just begun and I am very busy to establish the necromancers of #Wraithforge at the wizards circle. I will tell you in time, when I have a quest for you.");
-				addReply("Wraithforge", "In the centre of the fields of glory lies Wraithforge, the school of dark magic.");
-				addGoodbye("So long, mortal!");
+				addGreeting("人类！欢迎你，现在什么时间了？");
+				addHelp("抱歉人类，我正忙着在巫师圈子内建立死灵法师部门。");
+				addJob("我叫 拉瓦侠客。是巫师圈子内 #灵魂熔炉 的死灵法师。");
+				addOffer("抱歉人类，我正忙着在巫师圈子内建立死灵法师部门。");
+				addQuest("这个世界上的魔法技术刚刚起步，我忙着在巫师圈子中组建 #灵魂熔炉 的死灵法师。当需要你出力的时候，我会及时通知你。");
+				addReply("灵魂熔炉", "在 glory 的中心地带安置着灵魂熔炉, 是一所黑暗魔法学校.");
+				addGoodbye("太久了！人类！");
 
 			} //remaining behaviour defined in maps.quests.WizardRavashackPlainQuest
 		};
 
-		ravashack.setDescription("You see Ravashack, the mighty and mystical Necromancer.");
+		ravashack.setDescription("你遇见了 拉瓦侠客，他是个具有神秘强大魔力的死灵法师。");
 		ravashack.setEntityClass("largeblackwizardnpc");
 		ravashack.setPosition(5, 17);
 		ravashack.initHP(100);

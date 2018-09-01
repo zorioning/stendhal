@@ -100,7 +100,7 @@ import marauroa.common.Pair;
 		enemyForces.put("chaos",
 				new Pair<Integer, String>(150,"They are strong and crazy. Only my elite archers hold them from expanding more."));
 		enemyForces.put("mountain dwarf",
-				new Pair<Integer, String>(150,"They are my historical neighbors, living in 塞门镇矿山."));
+				new Pair<Integer, String>(150,"They are my historical neighbors, living in 塞门矿山."));
 		enemyForces.put("mountain orc",
 				new Pair<Integer, String>(150,"Stupid creatures, but very strong. Can be found in an abandoned underground keep somewhere near Ados."));
 		enemyForces.put("imperial",

@@ -23,7 +23,7 @@ public final class Region {
 	public static final String ATHOR_ISLAND = "阿托尔岛";
 	public static final String SEMOS_CITY = "塞门镇";
 	public static final String SEMOS_SURROUNDS = "塞门辖区";
-	public static final String SEMOS_MINES = "塞门镇矿山";
+	public static final String SEMOS_MINES = "塞门矿山";
 	public static final String SEMOS_DUNGEONS = "塞门地牢";
 	public static final String SEMOS_YETI_CAVE = "塞门雪人洞";
 	public static final String FADO_CITY = "法多城";

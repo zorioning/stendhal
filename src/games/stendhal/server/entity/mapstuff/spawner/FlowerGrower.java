@@ -36,7 +36,7 @@ public class FlowerGrower extends VegetableGrower {
 	private static final int GROW_TIME_TURNS = 60000;
 	/** Maximum ripeness of flowers */
 	private static final int MAX_RIPENESS = 4;
-	private static final String GROWER_NAME = "lilia";
+	private static final String GROWER_NAME = "紫丁香";
     /** The description depends upon the ripeness of the flower grower */
 	private final String[] description = {
 			"你看见一些刚被种上的植物",
@@ -66,7 +66,7 @@ public class FlowerGrower extends VegetableGrower {
 	/**
 	 * Constructor.
 	 *
-	 * Default FlowerGrower produces lilia.
+	 * Default FlowerGrower produces 紫丁香.
 	 */
 	public FlowerGrower() {
 		this(GROWER_NAME);

@@ -41,7 +41,7 @@ import games.stendhal.server.entity.npc.condition.QuestActiveCondition;
 import games.stendhal.server.entity.npc.condition.QuestNotActiveCondition;
 import games.stendhal.server.entity.player.Player;
 /**
- * Configure Wofol Blacksmith (-1_semos_mine_nw).
+ * Configure Wofol Blacksmith (-1_塞门_矿山_nw).
  *
  * @author kymara
  */

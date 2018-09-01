@@ -47,37 +47,37 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"history",
-						"At present, there are two significant powers on Faiumoni; the Deniran Empire, and the dark legions of Blordrough. Blordrough has recently conquered the south of the island, seizing several steel mines and a large gold mine. At present, Deniran still controls the central and northern parts of Faiumoni, including several gold and mithril mines.");
+						"目前看，在 Faiumoni 内有两股势力；Deniran 帝国, 和 Blordrough 的黑暗军团. Blordrough 最近征服了岛的南半部，夺取了几个铁矿和一座大金矿。现在 Deniran 仍控制着 Faiumoni 的中部和北部，包括几座金矿和密银矿 mithril mines.");
 
 		npc
 				.addReply(
 						"news",
-						"The Deniran Empire is currently seeking adventurers to sign on as mercenaries with their army to retake southern Faiumoni from the forces of Blordrough. Unfortunately Blordrough is still holding out against everything the Empire can throw at him.");
+						"Deniran 帝国正招募雇佣军以扩充军队，重新夺回被 Blordrough 抢去的南部地区。但很不幸 Blordrough 的黑暗军队也在顽强地对抗着帝国的进攻。");
 
 		npc
 				.addReply(
 						"geography",
-						"Let's talk about the different #places you can visit on Faiumoni! I can also help you #get and #use a map, or give you advice on using the psychic #SPS system.");
+						"接下来谈谈在 Faiumoni #地区 你还可以活动的地方！我可以帮你 #取得 和 #使用 地图，或者帮你弄清使用心灵 #SPS 系统的方法。");
 
 		npc
 				.addReply(
-						"places",
-						"The most important locations on #Faiumoni are #Or'ril Castle, #塞门 镇, #Ados, #Nalwor, and of course #Deniran City.");
+						"地区",
+						"#Faiumoni 最重要的地区包括 #Or'ril 城堡, #塞门镇, #阿多斯, #Nalwor, 也然也包括 #Deniran 城.");
 
 		npc
 				.addReply(
 						"Faiumoni",
-						"Faiumoni is the island on which you stand! You've probably already noticed the mountains to the north. There is also a large desert in the middle of the island, and of course the river which bisects it, just below #Or'ril Castle to the south.");
+						"Faiumoni 就是你脚下的这片岛！你可能已注意北部的山地，还有岛中部的沙漠，还有一条东西走向的大河把岛分成两半， 而河的南只有 #Or'ril 城堡.");
 
 		npc
 				.addReply(
 						"塞门镇",
-						"塞门镇 is our town where you are right now. We're on the north side of Faiumoni, with a population of about 40-50.");
+						"塞门镇就是你现在的所在地。我们都在 Faiumoni 的北半部，人口大约有 40-50 人.");
 
 		npc
 				.addReply(
-						"Ados",
-						"Ados is an important coastal city to the east of us here in #塞门 镇, where merchants bring trade from #Deniran. It's widely considered to be one of the Empire's most important shipping routes.");
+						"阿多斯",
+						"阿多斯是一个重要海滨城市，在 #塞门镇 的东方。商人再通过那里出口到 #Deniran. 这条通道是帝国最重要的航线之一。");
 
 		npc
 				.addReply(
@@ -92,22 +92,22 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"Deniran",
-						"The Empire's capital city of Deniran lies in the heart of Faiumoni, and is the main base of operations for the Deniran army. Most of the Empire's main trade routes with other countries originate in this city, then extending north through #Ados, and south to Sikhw. Unfortunately, the southern routes were been destroyed when Blordrough and his armies conquered Sikhw, some time ago now.");
+						"是帝国的首都，Faiumoni 的核心地带，, and is the main base of operations for the Deniran army. Most of the Empire's main trade routes with other countries originate in this city, then extending north through #Ados, and south to Sikhw. Unfortunately, the southern routes were been destroyed when Blordrough and his armies conquered Sikhw, some time ago now.");
 
 		npc
 				.addReply(
-						"use",
-						"Once you #get a map, there are three scales on which you need to understand it. Firstly, there are the map #levels, then you need to familiarize yourself with the #naming conventions for the different zones within those levels, and lastly you should learn how we describe a person's #positioning within a zone. We'll have you navigating around in no time!");
+						"使用",
+						"一旦你 #取得 一张地图，上面有三种刻度，一是地图的 #层级， #levels, 然后你要自己弄清楚不同地区的层级的 ＃命名 规则 #naming conventions，最后你要学会描述某人在某地区的 ＃方位  #positioning 。然后你就可以快速定位!");
 
 		npc
 				.addReply(
-						"levels",
-						"Maps are split into levels according to the height of that particular area above or below the surface. Areas on the surface are at level 0. The level number is the first thing in a map's name. For instance, #塞门 镇 itself is at ground level, so it is level 0; its map is called \"0_塞门_镇\". The first level of the dungeon beneath us is at level -1, so its map is called \"-1_semos_dungeon\". You should note, though, that a map of a building's interior will usually have the level at the end of the name instead, with \"int\" (for \"interior\") at the start. For instance, the upstairs floor of the tavern would be mapped out as \"int_semos_tavern_1\".");
+						"层级",
+						"地图会根据地表的上或下划分层级。地表正常级别是 0。级别数字在每个地图名字的最前面，举例说明 #塞门镇 就在地表 0级，地图表示为 \"0_塞门_镇\"。而地下的地牢一层表示为： \"-1_塞门_地牢\". 一定要记住。而在建筑物内部也会有层级的名称，一般在最前面标记为 \"int\" (内部的意思)。举个例子酒馆二楼标记为： \"int_塞门_酒馆_1\".");
 
 		npc
 				.addReply(
-						"naming",
-						"Each map is usually split up into \"sets\" of zones, with a central feature that is used as a reference point. The zones surrounding this central zone are named by the direction in which they lie from it. For instance, from the central zone \"0_塞门_镇\", you can travel west to the old village at \"0_塞门_村庄_西\", or you could travel two zones north and one west to the mountains at \"0_塞门_山_北2_西\".");
+						"命名",
+						"地图通常被分为各个 \"地区\" , 较中心的地点常被用作基准原点。地区周边地带使用它相对基准原点的方向的方式记录。举个例子。有个基准地区叫 \"0_塞门_镇\"，你向西走到旧村庄的名称记为 \"0_塞门_村庄_西\", 或者你往北走两格，再向西走一格地图到达山区，名称就记为 \"0_塞门_山_北2_西\".");
 
 		npc
 				.addReply(
@@ -116,18 +116,18 @@ public class MeetZynn extends AbstractQuest {
 
 		npc
 				.addReply(
-						"get",
-						"You can get a map of Stendhal at #https://stendhalgame.org/world/atlas.html if you want one. Careful you don't spoil any surprises for yourself, though!");
+						"取得",
+						"你可以在 #https://stendhalgame.org/world/atlas.html 查看到 Stendhal 的世界地图。 Careful you don't spoil any surprises for yourself, though!");
 
 		npc
 				.addReply(
 						"SPS",
-						"SPS stands for Stendhal Positioning System; you can ask #Io in the Temple about the exact details of how it works. Essentially, it allows you to ascertain the exact current location of yourself or your friends at any time.");
+						"SPS 是Stendhal的定位系统；你可以去教堂的 #Io 询问有关这东西工作原理和细节。基本来说，它可以在任意时间查到你或朋友的精确位置。");
 
 		npc
 				.addReply(
 						"Io",
-						"Her full name is \"Io Flotto\". She spends most of her time in the Temple, um, floating. She may seem weird, but her \"intuition\" works far better than any mere compass, as I can vouch.");
+						"它的全名是 \"Io Flotto\".她大部分时间都在教堂，嗯...漂着...她可能有些怪异。但她的直觉 \"intuition\" 工作远远好过任何指示器, 正如我讲的那样。");
 
 		/**
 		 * I still have to think of a way to reward a good amount of XP to the
@@ -135,16 +135,16 @@ public class MeetZynn extends AbstractQuest {
 		 * list of all the things the player has asked and reward him when the
 		 * list is complete?
 		 */
-		npc.add(ConversationStates.ATTENDING, "bye",
+		npc.add(ConversationStates.ATTENDING, "再见",
 			new LevelLessThanCondition(15),
 			ConversationStates.IDLE,
-			"Bye. Hey, if you're going to hang around the library, don't forget to be quiet; people could be studying!",
+			"再见，如果你去图书馆逛逛，请保持安静；其他人正在学习！",
 			null);
 
-		npc.add(ConversationStates.ATTENDING, "bye",
+		npc.add(ConversationStates.ATTENDING, "再见",
 			new LevelGreaterThanCondition(14),
 			ConversationStates.IDLE,
-			"Bye. Hey, you should consider getting a library card, you know.",
+			"再见，你要知道，你应该考虑办一张会员卡。",
 			null);
 	}
 
@@ -152,7 +152,7 @@ public class MeetZynn extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Meet Zynn Iwuhos",
-				"Zynn Iwuhos, in the 塞门镇 library, is a great source of useful information.",
+				"Zynn Iwuhos, 在塞门镇图书管工作，掌握了相当多的实用信息资源。",
 				false);
 		step_1();
 	}

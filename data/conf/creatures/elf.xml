@@ -758,7 +758,7 @@
   
   <creature name="精灵弓箭手">
     <type class="elf" subclass="archer_elf" tileid="elf.png:0"/>
-    <description>这是一个弓箭精灵，它的木箭可以造成很大的伤害。</description> 
+    <description>精灵弓箭手=精灵弓箭手.</description> 
     <attributes>
       <atk value="198"/>
       <def value="42"/>
@@ -929,7 +929,7 @@
   
   <creature name="精灵僧侣">
     <type class="elf" subclass="elf_sacerdotist" tileid="elf.png:4"/>
-    <description>这是一个精灵僧侣。</description>
+    <description></description>
     <attributes>
       <atk value="380"/>
       <def value="108"/>

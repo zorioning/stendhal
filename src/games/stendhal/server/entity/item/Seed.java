@@ -19,7 +19,7 @@ import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.mapstuff.spawner.FlowerGrower;
 
 /**
- * A seed can be planted.
+ * A 种子 can be planted.
  * The plant action defines the behaviour (e.g. only plantable on fertile ground).
  * The infostring stores what it will grow.
  */
@@ -44,7 +44,7 @@ public class Seed extends StackableItem {
 	@Override
 	public boolean onUsed(final RPEntity user) {
 		if (!this.isContained()) {
-			// the seed is on the ground, but not next to the player
+			// the 种子 is on the ground, but not next to the player
 			if (!this.nextTo(user)) {
 				user.sendPrivateText(" " + this.getName() + " 离你太远");
 				return false;
@@ -60,7 +60,7 @@ public class Seed extends StackableItem {
 				flowerGrower = new FlowerGrower(this.getInfoString());
 			}
 			user.getZone().add(flowerGrower);
-			// add the FlowerGrower where the seed was on the ground
+			// add the FlowerGrower where the 种子 was on the ground
 			flowerGrower.setPosition(this.getX(), this.getY());
 			// The first stage of growth happens almost immediately
 			TurnNotifier.get().notifyInTurns(3, flowerGrower);
@@ -68,7 +68,7 @@ public class Seed extends StackableItem {
 			this.removeOne();
 			return true;
 		}
-		// the seed was 'contained' in a slot and so it cannot be planted
+		// the 种子 was 'contained' in a slot and so it cannot be planted
 		user.sendPrivateText("你把 " + this.getName() + " 直接放在地面上，笨!");
 		return false;
 	}

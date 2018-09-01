@@ -21,14 +21,14 @@ import games.stendhal.server.entity.player.Player;
  * <p>
  * infostring attribute in items.xml:
  * <p>
- * <code> 1_dreamscape 77 35 5400 0_semos_plains_s -1 -1 </code>
+ * <code> 1_dreamscape 77 35 5400 0_塞门_草原_s -1 -1 </code>
  * <p>
  * where
  * <ul>
  * <li>1_dreamscape is the target zone name;
  * <li>77 and 35 are the target x and y position;
  * <li>5400 is the number of turns before return;
- * <li>0_semos_plains_s is the return zone;
+ * <li>0_塞门_草原_s is the return zone;
  * <li>-1 and -1 are the return x and y positions (negative value means a random
  * position)
  * </ul>

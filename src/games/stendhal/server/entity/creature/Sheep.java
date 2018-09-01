@@ -36,7 +36,7 @@ import marauroa.common.game.RPObject;
 import marauroa.common.game.SyntaxException;
 
 /**
- * A sheep is a domestic animal that can be owned by a player. It eats berries
+ * A sheep is a domestic animal that can be owned by a player. It eats 树莓
  * from bushes and can be sold.
  */
 /**

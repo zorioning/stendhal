@@ -88,7 +88,7 @@ public class MeetSanta extends AbstractQuest implements LoginListener {
                                                         new PlayerIsAGoodBoyCondition(),
                                                         new NotCondition(new NakedCondition())),
 					ConversationStates.IDLE,
-					"Hi again! Good bye, and remember to behave if you want a present next year!",
+					"又见面了！再见，如果你想明年还有礼物，要好好表现哦!",
 				    new ChatAction() {
 					    @Override
 						public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
@@ -114,7 +114,7 @@ public class MeetSanta extends AbstractQuest implements LoginListener {
                                                         new PlayerIsAGoodBoyCondition(),
                                                         new NotCondition(new NakedCondition())),
 					ConversationStates.IDLE,
-					"Merry Christmas! I have a present and a hat for you. Good bye, and remember to behave if you want a present next year!",
+					"Merry Christmas! 我有一个礼物和一顶帽子送你。如果你想明年还有礼物，要好好表现哦!再会!",
 					new MultipleActions(reward));
 
 				add(ConversationStates.IDLE,
