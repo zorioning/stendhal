@@ -22,6 +22,9 @@ Stendhal是一款开发多年的RPG网游。这款游戏完全开源，客户端
 2、src/games/stendhal/server/maps/ 文件夹下，里面文件夹是每个城镇名字，再里面是每个npc的对话<br/>
 查看汉化进度：https://github.com/Gamuxorg/stendhal-cn/projects/1
 
+## 如何做汉化
+  请查看Wiki页  https://github.com/Gamuxorg/stendhal-cn/wiki
+
 ## How to play
 
 [![Play now](https://arianne-project.org/images/playbutton.png)](https://stendhalgame.org/account/mycharacters.html) &nbsp; &nbsp; &nbsp; &nbsp;
