@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
 	
-  <item name="assassin dagger">
+  <item name="刺客匕首">
     <type class="sword" subclass="assassin_dagger" tileid="-1"/>
-    <description>You see an assassin dagger, easy to pull out and use when needed.</description>
+    <description>一把刺客匕首, 需要使用时方便拿出。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="6"/>
@@ -23,9 +23,9 @@
     </equipable>
   </item>
 
-  <item name="biting sword">
+  <item name="突刺剑">
     <type class="sword" subclass="biting_sword" tileid="-1"/>
-    <description>The point of this biting sword is chiseled to a lethal point. It will serve you well.</description>
+    <description>这把突刺剑会使人丧命, 可以很好的辅助你。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="25"/>
@@ -66,9 +66,9 @@
     </equipable>
   </item>
 
-  <item name="broadsword">
+  <item name="阔剑">
     <type class="sword" subclass="broadsword" tileid="-1"/>
-    <description>You see a mighty broadsword. Enemies will see their death.</description>
+    <description>一把威武的阔剑, 只要亮剑即是敌人的死期。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="34"/>
@@ -87,9 +87,9 @@
     </equipable>
   </item>
 
-  <item name="buster">
+  <item name="屠刀">
     <type class="sword" subclass="buster" tileid="-1"/>
-    <description>You see a buster, with its distinctive, oversized blade.</description>
+    <description>一把屠刀, 突出的刀锋是它独有的特征</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="21"/>
@@ -108,9 +108,9 @@
     </equipable>
   </item>
 
-  <item name="chaos dagger">
+  <item name="混沌匕首">
     <type class="sword" subclass="chaos_dagger" tileid="-1"/>
-    <description>You see a chaos dagger, it is very lightweight and sharp. It will heal you while hurting them.</description>
+    <description>一把混沌匕首, 重量轻但锋利。可以在伤及敌人的同时吸取生命。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
      <atk value="7"/>
@@ -130,9 +130,9 @@
   </equipable>
  </item>
 
-  <item name="chaos sword">
+  <item name="混沌之剑">
     <type class="sword" subclass="chaos_sword" tileid="-1"/>
-    <description>The chaos sword. It hurts them but it heals you.</description>
+    <description>一把混沌之剑, 可以重创对手并吸取生命。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="32"/>
@@ -152,9 +152,9 @@
     </equipable>
   </item>
 
-  <item name="claymore">
+  <item name="双刃剑">
     <type class="sword" subclass="claymore" tileid="-1"/>
-    <description>This claymore is very hard to lift as it is so heavy. It will be a good weapon if you can swing it.</description>
+    <description>这把双刃剑很重, 很难举起, 除非你能灵活使用它</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="36"/>
@@ -193,9 +193,9 @@
     </equipable>
   </item>
 
-  <item name="dark dagger">
+  <item name="暗之匕首">
     <type class="sword" subclass="dark_dagger" tileid="-1"/>
-    <description>You see a dark dagger. It's designed to be used with a fast motion.</description>
+    <description>一把暗之匕首, 这种设计是为了迅速击杀对手</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="8"/>
@@ -215,9 +215,9 @@
     </equipable>
   </item>
 
-  <item name="demon fire sword">
+  <item name="赤魔剑">
     <type class="sword" subclass="demon_fire_sword" tileid="-1"/>
-    <description>The demon fire sword, a horrible sword taken from hell's deepest dungeons.</description>
+    <description>一把赤魔剑, 是从地牢深入带上来的恐怖之剑</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="58"/>
@@ -238,9 +238,9 @@
     </equipable>
   </item>
 
-  <item name="demon sword">
+  <item name="恶魔剑">
     <type class="sword" subclass="kilij" tileid="-1"/>
-    <description>Demon skeletons return from hell with this demon sword.</description>
+    <description>一把恶魔剑, 是用地狱恶魔的骨头制成</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="22"/>
@@ -260,9 +260,9 @@
     </equipable>
   </item>
 
-  <item name="drow sword">
+  <item name="卓尔之剑">
     <type class="sword" subclass="blooddrinker" tileid="-1"/>
-    <description>This is a genuine drow sword.</description>
+    <description>一把真正的卓尔之剑</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="31"/>
@@ -282,9 +282,9 @@
     </equipable>
   </item>
 
-  <item name="elvish sword">
+  <item name="精灵之剑">
     <type class="sword" subclass="elvish_sword" tileid="-1"/>
-    <description>This is an elvish sword. It looks like it is made from tree leaves!</description>
+    <description>一把精灵之剑, 看着好像是由树枝制成</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="16"/>
@@ -303,9 +303,9 @@
     </equipable>
   </item>
 
-  <item name="fire sword">
+  <item name="烈火剑">
     <type class="sword" subclass="fire_sword" tileid="-1"/>
-    <description>Flames race along this fire sword as you wield it.</description>
+    <description>一把烈火剑, 挥砍时会带着火光</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="30"/>
@@ -325,9 +325,9 @@
     </equipable>
   </item>
 
-  <item name="golden blade">
+  <item name="黄金匕首">
     <type class="sword" subclass="magic_dagger" tileid="-1"/>
-    <description>You see the rare and precious golden blade. It can steal life from those you stab with it.</description>
+    <description>一把珍稀的黄金匕首, 刺入敌人时可以吸取生命</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="5"/>
@@ -348,9 +348,9 @@
     </equipable>
   </item>
 
-  <item name="golden orc sword">
+  <item name="黄金大剑">
     <type class="sword" subclass="golden_orc_sword" tileid="-1"/>
-    <description>You see a golden orc sword, with its heavy and deadly appearance it seems also valuable.</description>
+    <description>一把黄金大剑, 看外观就知道很重也很致命, 当然也很值钱..</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="32"/>
@@ -369,9 +369,9 @@
     </equipable>
   </item>
 
-  <item name="great sword">
+  <item name="巨剑">
     <type class="sword" subclass="great_sword" tileid="-1"/>
-    <description>This rare great sword is heavy and of good craftsmanship. It can only attack incredibly slowly.</description>
+    <description>这把罕见的有着优良工的巨剑非常沉重,  挥砍时速度很慢</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="60"/>

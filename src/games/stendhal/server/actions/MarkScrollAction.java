@@ -14,7 +14,7 @@ public class MarkScrollAction implements ActionListener {
 	public void onAction(Player player, RPAction action) {
 
 		// can't try to drop the scroll straight away as teleport may not be allowed
-		if(player.isEquipped("empty scroll", 1)) {
+		if(player.isEquipped("空白卷轴", 1)) {
 
 			final StendhalRPZone zone = player.getZone();
 			final int x = player.getX();
@@ -22,11 +22,11 @@ public class MarkScrollAction implements ActionListener {
 
 			if (zone.isTeleportInAllowed(x, y)) {
 
-				player.drop("empty scroll", 1);
+				player.drop("空白卷轴", 1);
 
 				String infostring = zone.getName() + " " + x + " " + y;
 
-				Item scroll = SingletonRepository.getEntityManager().getItem("marked scroll");
+				Item scroll = SingletonRepository.getEntityManager().getItem("标记卷轴");
 				scroll.setInfoString(infostring);
 
 				// add a description if the player wanted one
@@ -41,7 +41,7 @@ public class MarkScrollAction implements ActionListener {
 				player.sendPrivateText("The strong anti magic aura in this area prevents the scroll from working!");
 			}
 		} else {
-			player.sendPrivateText("You don't have any empty scrolls to mark.");
+			player.sendPrivateText("You don't have any 空白卷轴s to mark.");
 		}
 	}
 

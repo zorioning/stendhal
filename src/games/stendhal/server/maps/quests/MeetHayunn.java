@@ -49,7 +49,7 @@ import games.stendhal.server.maps.Region;
  * <li> Return and learn how to click move, and get some URLs
  * </ul>
  *
- * REWARD: <ul><li> 20 XP <li> 5 gold coins <li> studded shield </ul>
+ * REWARD: <ul><li> 20 XP <li> 5 gold coins <li> 镶嵌盾 </ul>
  *
  * REPETITIONS: <ul><li> Get the URLs as much as wanted but you only get the reward once.</ul>
  */
@@ -208,7 +208,7 @@ public class MeetHayunn extends AbstractQuest {
 			null);
 
 		final List<ChatAction> reward2 = new LinkedList<ChatAction>();
-		reward2.add(new EquipItemAction("studded shield"));
+		reward2.add(new EquipItemAction("镶嵌盾"));
 		reward2.add(new IncreaseXPAction(20));
 		reward2.add(new SetQuestAction(QUEST_SLOT, "done"));
 

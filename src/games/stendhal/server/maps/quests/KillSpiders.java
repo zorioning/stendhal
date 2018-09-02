@@ -143,7 +143,7 @@ public class KillSpiders extends AbstractQuest {
 								&& player.hasKilled("巨型蜘蛛")) {
 							raiser.say("Oh thank you my friend. Here you have something special, I got it from a Magican. Who he was I do not know. What the egg's good for, I do not know. I only know, it could be useful for you.");
 							final Item mythegg = SingletonRepository.getEntityManager()
-									.getItem("mythical egg");
+									.getItem("传说之卵");
 							mythegg.setBoundTo(player.getName());
 							player.equipOrPutOnGround(mythegg);
 							player.addKarma(5.0);
@@ -170,7 +170,7 @@ public class KillSpiders extends AbstractQuest {
 							) {
 							raiser.say("Oh thank you my friend. Here you have something special, I got it from a Magican. Who he was I do not know. What the egg's good for, I do not know. I only know, it could be useful for you.");
 							final Item mythegg = SingletonRepository.getEntityManager()
-									.getItem("mythical egg");
+									.getItem("传说之卵");
 							mythegg.setBoundTo(player.getName());
 							player.equipOrPutOnGround(mythegg);
 							player.addKarma(5.0);
@@ -217,7 +217,7 @@ public class KillSpiders extends AbstractQuest {
 			return history;
 		}
 		if ("killed".equals(questState)) {
-			history.add("I have killed all spiders in the magic school basement and got a mythical egg.");
+			history.add("I have killed all spiders in the magic school basement and got a 传说之卵.");
 			return history;
 		}
 

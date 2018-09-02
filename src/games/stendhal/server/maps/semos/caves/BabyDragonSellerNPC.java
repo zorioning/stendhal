@@ -96,7 +96,7 @@ public class BabyDragonSellerNPC implements ZoneConfigurator {
     						// being used to store egg hatching times
 					       	player.removeQuest(QUEST_SLOT);
 					       	player.notifyWorldAboutChanges();
-					    } else if (player.isEquipped("mythical egg")) {
+					    } else if (player.isEquipped("传说之卵")) {
 					    	raiser.say("Where did you get that egg from?! Never mind. Tell me if you need me to #hatch it for you. It is my hobby, after all.");
 					    } else {
 							raiser.say("Hi. I don't get so many visitors, down here.");
@@ -111,8 +111,8 @@ public class BabyDragonSellerNPC implements ZoneConfigurator {
 						// but we might as well warn player here that they wouldn't be allowed two.
 							raiser.say("You've already got a pet. If you get another they might fight ... or worse ...");
 					   } else {
-						if (player.isEquipped("mythical egg")) {
-						    player.drop("mythical egg");
+						if (player.isEquipped("传说之卵")) {
+						    player.drop("传说之卵");
 						    raiser.say("Ok, I'll take your egg and hatch it in one of these nesting boxes. Come back in " + 7 + " days and you should be the proud owner of a new born baby dragon.");
 						    player.setQuest(QUEST_SLOT, Long.toString(System.currentTimeMillis()));
 						    player.notifyWorldAboutChanges();

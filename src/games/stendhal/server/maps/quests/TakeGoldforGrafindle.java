@@ -216,7 +216,7 @@ public class TakeGoldforGrafindle extends AbstractQuest {
 		/** Complete the quest */
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("gold bar", GOLD_AMOUNT));
-		reward.add(new EquipItemAction("nalwor bank key", 1, true));
+		reward.add(new EquipItemAction("纳尔沃银库钥匙", 1, true));
 		reward.add(new IncreaseXPAction(200));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(10));

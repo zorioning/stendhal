@@ -90,24 +90,24 @@ public class WitchNPC implements ZoneConfigurator {
 				        Arrays.asList("magic", "scroll", "scrolls"),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "I #offer scrolls that help you to travel faster: #'home scrolls' and the #markable #'empty scrolls'. For the more advanced customer, I also have #'summon scrolls'!",
+				        "I #offer scrolls that help you to travel faster: #'home scrolls' and the #markable #'空白卷轴s'. For the more advanced customer, I also have #'召唤卷轴s'!",
 				        null);
 				add(ConversationStates.ATTENDING, Arrays.asList("home", "home scroll"), null,
 				        ConversationStates.ATTENDING,
 				        "Home scrolls take you home immediately, a good way to escape danger!", null);
 				add(
 				        ConversationStates.ATTENDING,
-				        Arrays.asList("empty", "marked", "empty scroll", "markable", "marked scroll"),
+				        Arrays.asList("empty", "marked", "空白卷轴", "markable", "标记卷轴"),
 				        null,
 				        ConversationStates.ATTENDING,
-				        "Empty scrolls are used to mark a position. Those marked scrolls can take you back to that position. They are a little expensive, though.",
+				        "空白卷轴s are used to mark a position. Those 标记卷轴s can take you back to that position. They are a little expensive, though.",
 				        null);
 				add(
 				        ConversationStates.ATTENDING,
 				        "summon",
 				        null,
 				        ConversationStates.ATTENDING,
-				        "A summon scroll empowers you to summon animals to you; advanced magicians will be able to summon stronger monsters than others. Of course, these scrolls can be dangerous if misused.",
+				        "A 召唤卷轴 empowers you to summon animals to you; advanced magicians will be able to summon stronger monsters than others. Of course, these scrolls can be dangerous if misused.",
 				        null);
 				addGoodbye("Goodbye - and careful not to touch that orb, it leads somewhere very dangerous!");
 			}

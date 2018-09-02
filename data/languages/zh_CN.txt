@@ -698,106 +698,200 @@ angel figurine=angel figurine
 You see a sparkling angel figurine.=You see a sparkling angel figurine.
 skull ring=skull ring
 You see a skull ring.=You see a skull ring.
-amulet=amulet
-You see an amulet.=You see an amulet.
-ankh=ankh
-You see a mysterious ankh. You don't know what it is for.=You see a mysterious ankh. You don't know what it is for.
-wedding ring=wedding ring
-You see a golden wedding ring, a symbol of love.=You see a golden wedding ring, a symbol of love.
-engagement ring=engagement ring
-You see a diamond engagement ring, a symbol of love (or a symbol of wealth?)=You see a diamond engagement ring, a symbol of love (or a symbol of wealth?)
-emerald ring=emerald ring
-You see an emerald ring, known as ring of life. Wear it, and you risk less from death.=You see an emerald ring, known as ring of life. Wear it, and you risk less from death.
-summon scroll=summon scroll
-You see a summon scroll.=You see a summon scroll.
-nalwor city scroll=nalwor city scroll
-You see a nalwor city scroll, it will take you back to nalwor city.=You see a nalwor city scroll, it will take you back to nalwor city.
-ados city scroll=ados city scroll
-You see a ados city scroll, it will take you back to ados city.=You see a ados city scroll, it will take you back to ados city.
-fado city scroll=fado city scroll
-You see a fado city scroll, it will take you back to fado city.=You see a fado city scroll, it will take you back to fado city.
-kirdneh city scroll=kirdneh city scroll
-You see a kirdneh city scroll, it will take you back to kirdneh city.=You see a kirdneh city scroll, it will take you back to kirdneh city.
-kalavan city scroll=kalavan city scroll
-You see a kalavan city scroll, it will take you back to kalavan city.=You see a kalavan city scroll, it will take you back to kalavan city.
-marked scroll=marked scroll
-You see a marked scroll.=You see a marked scroll.
-invitation scroll=invitation scroll
-You see an invitation scroll.=You see an invitation scroll.
-home scroll=回城卷
-You see a home scroll, it will take you back to semos city.=You see a home scroll, it will take you back to semos city.
-empty scroll=empty scroll
-You see an empty scroll. If used correctly it will return you to where you marked it at.=You see an empty scroll. If used correctly it will return you to where you marked it at.
-rainbow beans=rainbow beans
-You see a small pile of rainbow beans. One says something odd.=You see a small pile of rainbow beans. One says something odd.
-balloon=balloon
-You see a bright red balloon. You can use it to float high up into the clouds.=You see a bright red balloon. You can use it to float high up into the clouds.
-twilight moss=twilight moss
-You see a strange looking piece of moss. It looks like it could have hallucinogenic properties.=You see a strange looking piece of moss. It looks like it could have hallucinogenic properties.
-lucky charm=lucky charm
-You see a lucky charm. Some believe that it helps their karma in some way, but others think that is superstition.=You see a lucky charm. Some believe that it helps their karma in some way, but others think that is superstition.
-mithril clasp=mithril clasp
-You see a clasp made from mithril, it would provide the fastening for a cloak.=You see a clasp made from mithril, it would provide the fastening for a cloak.
-mythical egg=mythical egg
-You see a mythical egg, but you do not know, what it is for.=You see a mythical egg, but you do not know, what it is for.
-magical eggshells=magical eggshells
-You see shards from a mythical egg. They have magical properties.=You see shards from a mythical egg. They have magical properties.
-golden gm token=golden gm token
-You see a golden gm token.=You see a golden gm token.
-silvery gm token=silvery gm token
-You see a silvery gm token.=You see a silvery gm token.
-bronze gm token=bronze gm token
-You see a bronze gm token.=You see a bronze gm token.
-black shield=black shield
-You see a black shield. Its darkness will surely protect you.=You see a black shield. Its darkness will surely protect you.
-blue shield=blue shield
-You see a blue shield. It feels light in your hand but is strong enough for excellent protection.=You see a blue shield. It feels light in your hand but is strong enough for excellent protection.
-buckler=小圆盾
-You see a small buckler. It may protect you against swords and maces but against stronger weapons you do not trust it.=发现一个小圆盾，它能抵挡利剑和棍棒的进攻，但强力武器就挡不住了。
-chaos shield=混乱之盾。
-You see a chaos shield. Its charming appearance will fool your enemies.=发现一个混乱之盾，上面特殊的花纹可以迷惑敌人。
-crown shield=crown shield
-You see a mighty crown shield. It is in perfect condition.=You see a mighty crown shield. It is in perfect condition.
-elvish shield=elvish shield
-You see an elvish shield. It looks like one big tree leaf!=You see an elvish shield. It looks like one big tree leaf!
-enhanced lion shield=enhanced lion shield
-An enhanced lion shield glints at you. It will defend you well.=An enhanced lion shield glints at you. It will defend you well.
-golden shield=golden shield
-You see a golden shield, could it be the ultimate in defence?=You see a golden shield, could it be the ultimate in defence?
-green dragon shield=green dragon shield
-You see an green dragon shield, scaly and strong.=You see an green dragon shield, scaly and strong.
-lion shield=lion shield
-You see a valuable lion shield. It is heavy enough to defend you against strong attacks.=You see a valuable lion shield. It is heavy enough to defend you against strong attacks.
-magic plate shield=magic plate shield
-You see a magic plate shield. It has a magical quality surrounding it.=You see a magic plate shield. It has a magical quality surrounding it.
-mainio shield=mainio shield
-You see a strange looking mainio shield. You have no idea what it's made of, but it seems to protect you well by distracting your enemies.=You see a strange looking mainio shield. You have no idea what it's made of, but it seems to protect you well by distracting your enemies.
-mithril shield=mithril shield
-You see a mithril shield. You will most surely be protected.=You see a mithril shield. You will most surely be protected.
-plate shield=plate shield
-You see a solid plate shield. It is in good condition, and might be worth a little.=You see a solid plate shield. It is in good condition, and might be worth a little.
-red shield=red shield
-You see a red shield. It is a stunning shade of scarlet.=You see a red shield. It is a stunning shade of scarlet.
-shadow shield=shadow shield
-You see a shadow shield. Rather than reflecting light, it seems to absorb it.=You see a shadow shield. Rather than reflecting light, it seems to absorb it.
-skull shield=skull shield
-The face of a skull scowls at you from this fearsome skull shield.=The face of a skull scowls at you from this fearsome skull shield.
-studded shield=studded shield
-You see a studded shield. It's a little dented but seems robust enough.=You see a studded shield. It's a little dented but seems robust enough.
-unicorn shield=unicorn shield
-You see a unicorn shield. It's beautifully crafted and will give you excellent protection.=You see a unicorn shield. It's beautifully crafted and will give you excellent protection.
-wooden shield=wooden shield
-You see a wooden shield. It is made of cheap wood and heavily used. However, it still seems to offer you some kind of basic protection.=You see a wooden shield. It is made of cheap wood and heavily used. However, it still seems to offer you some kind of basic protection.
-xeno shield=xeno shield
-You see a lightweight but strong xeno shield, in the colours of the creature it was looted from.=You see a lightweight but strong xeno shield, in the colours of the creature it was looted from.
-assassin dagger=assassin dagger
-You see an assassin dagger, easy to pull out and use when needed.=You see an assassin dagger, easy to pull out and use when needed.
-biting sword=突刺剑
-The point of this biting sword is chiseled to a lethal point. It will serve you well.=The point of this biting sword is chiseled to a lethal point. It will serve you well.
-black sword=黑刃剑
-You see a black sword.  Its darkness will surely protect you.=You see a black sword.  Its darkness will surely protect you.
-broadsword=阔剑
-You see a mighty broadsword. Enemies will see their death.=You see a mighty broadsword. Enemies will see their death.
+amulet=护身符 
+You see an amulet.=发现一个护身符。 
+ankh=十字架 
+You see a mysterious ankh. You don't know what it is for.=发现一个神秘的十字架，不知道是干什么用的。 
+wedding ring=婚戒 
+You see a golden wedding ring, a symbol of love.=发现一个金色婚戒，象征爱情。 
+
+engagement ring=订婚戒指 
+
+You see a diamond engagement ring, a symbol of love (or a symbol of wealth?)=发现一个钻石订婚戒指，象征爱情还是财富？ 
+
+emerald ring=祖母绿戒指 
+
+You see an emerald ring, known as ring of life. Wear it, and you risk less from death.=发现一个祖母绿戒指，象征生命。戴上它，就能降低死亡风险。 
+
+summon scroll=召唤卷 
+
+You see a summon scroll.=发现一幅召唤卷。 
+
+nalwor city scroll=纳尔沃城市卷 
+
+You see a nalwor city scroll, it will take you back to nalwor city.=发现一幅纳尔沃城市卷，它会带你回到纳尔沃。 
+
+ados city scroll=艾道斯城市卷 
+
+You see a ados city scroll, it will take you back to ados city.=发现一幅艾道斯城市卷，它会带你回到艾道斯。 
+
+fado city scroll=法朵城市卷 
+
+You see a fado city scroll, it will take you back to fado city.=发现一幅法朵城市卷，它会带你回到法朵。 
+
+kirdneh city scroll=克德内城市卷 
+
+You see a kirdneh city scroll, it will take you back to kirdneh city.=发现一幅克德内城市卷，它会带你回到克德内。 
+
+kalavan city scroll=卡拉文城市卷 
+
+You see a kalavan city scroll, it will take you back to kalavan city.=发现一幅卡拉文城市卷，它会带你回到卡拉文。 
+
+marked scroll=记号卷 
+
+You see a marked scroll.=发现一幅记号卷 
+
+invitation scroll=邀请卷 
+
+You see an invitation scroll.=发现一幅邀请卷。 
+
+home scroll=回城卷 
+
+You see a home scroll, it will take you back to semos city.=发现一幅回城卷，它会带你回到西蒙。 
+
+empty scroll=空卷 
+
+You see an empty scroll. If used correctly it will return you to where you marked it at.=发现一幅空卷，如果使用方式正确，它会带你回到标记的地方。 
+
+rainbow beans=彩虹豆 
+
+You see a small pile of rainbow beans. One says something odd.=发现一小堆彩虹豆，奇怪的存在。 
+
+balloon=气球 
+
+You see a bright red balloon. You can use it to float high up into the clouds.=发现一只亮红色气球，可以把它放飞。 
+
+twilight moss=暮光苔藓 
+
+You see a strange looking piece of moss. It looks like it could have hallucinogenic properties.=发现一丛长相奇特的苔藓，看起来像是有迷幻功能。 
+
+lucky charm=幸运宝石 
+
+You see a lucky charm. Some believe that it helps their karma in some way, but others think that is superstition.=发现一枚幸运宝石，有些人认为它会带来好运，有些人觉得纯属迷信。 
+
+mithril clasp=黑曜石别针 
+
+You see a clasp made from mithril, it would provide the fastening for a cloak.=发现一枚黑曜石做的别针，可以用它系紧斗篷。 
+
+mythical egg=神话蛋 
+
+You see a mythical egg, but you do not know, what it is for.=Y发现一枚神话蛋，然而并不知是干什么用的 
+
+magical eggshells=魔力蛋壳 
+
+You see shards from a mythical egg. They have magical properties.=发现一些神话蛋碎片，它们具有魔力。 
+
+golden gm token=金币 
+
+You see a golden gm token.=发现一枚金币。 
+
+silvery gm token=银币 
+
+You see a silvery gm token.=发现一枚银币 
+
+bronze gm token=铜币 
+
+You see a bronze gm token.=发现一枚铜币 
+
+black shield=黑盾 
+
+You see a black shield. Its darkness will surely protect you.=发现一个黑色盾，可以保护你不受伤害 
+
+blue shield=蓝盾 
+
+You see a blue shield. It feels light in your hand but is strong enough for excellent protection.=发现一个蓝盾，轻便但防御力优秀。 
+
+buckler=小圆盾 
+
+You see a small buckler. It may protect you against swords and maces but against stronger weapons you do not trust it.=发现一个小圆盾，它能抵挡利剑和棍棒的进攻，但强力武器就挡不住了。 
+
+chaos shield=混乱之盾。 
+
+You see a chaos shield. Its charming appearance will fool your enemies.=发现一个混乱之盾，上面特殊的花纹可以迷惑敌人。 
+
+crown shield=皇冠之盾 
+
+You see a mighty crown shield. It is in perfect condition.=发现一个皇冠之盾，性能完美。 
+
+elvish shield=精灵之盾 
+
+You see an elvish shield. It looks like one big tree leaf!=发现一个精灵之盾，看起来像片大树叶。 
+
+enhanced lion shield=加强狮盾 
+
+An enhanced lion shield glints at you. It will defend you well.=一个加强狮盾闪闪发光，它会很好的保护你。 
+
+golden shield=金盾 
+
+You see a golden shield, could it be the ultimate in defence?=发现一个金盾，大概是防御中的终结者？ 
+
+green dragon shield=绿龙盾 
+
+You see an green dragon shield, scaly and strong.=发现一个绿龙盾，布满鳞片很牢固 
+
+lion shield=狮盾 
+
+You see a valuable lion shield. It is heavy enough to defend you against strong attacks.=发现一个值钱的狮盾，重到可以抵挡强力攻击。 
+
+magic plate shield=魔力平板盾 
+
+You see a magic plate shield. It has a magical quality surrounding it.=发现一个魔力平板盾，具有魔法。 
+
+mainio shield=奇妙盾 
+
+You see a strange looking mainio shield. You have no idea what it's made of, but it seems to protect you well by distracting your enemies.= 发现一个长相特别的奇妙盾，并不知是用什么做的，但是看起来能分散敌人的注意力从而保护你。 
+
+mithril shield=黑曜石盾 
+
+You see a mithril shield. You will most surely be protected.=发现一个黑曜石盾，它一定可以保护你。 
+
+plate shield=平板盾 
+
+You see a solid plate shield. It is in good condition, and might be worth a little.=发现一个平板盾，性能良好，值点小钱。 
+
+red shield=红盾 
+
+You see a red shield. It is a stunning shade of scarlet.=发现一个红盾，迷人的深红色。 
+
+shadow shield=影盾 
+
+You see a shadow shield. Rather than reflecting light, it seems to absorb it.=发现一个影盾，可以吸收光。 
+
+skull shield=骷髅盾 
+
+The face of a skull scowls at you from this fearsome skull shield.=骷髅盾上的骷髅脸怒视着你。 
+
+studded shield=螺栓盾 
+
+You see a studded shield. It's a little dented but seems robust enough.=发现一个螺栓盾，看起来有点凹痕但是足够坚固。 
+
+unicorn shield=独角兽盾 
+
+You see a unicorn shield. It's beautifully crafted and will give you excellent protection.=发现一个独角兽盾，做工精美，防御力优秀 
+
+wooden shield=木盾 
+
+You see a wooden shield. It is made of cheap wood and heavily used. However, it still seems to offer you some kind of basic protection.=发现一个木盾，便宜木头，耗损严重，但仍能进行基础防御。 
+
+xeno shield=外来盾 
+
+You see a lightweight but strong xeno shield, in the colours of the creature it was looted from.=发现一个轻盈但牢固的外来盾，颜色和它原来的主人一样。 
+
+assassin dagger=暗杀匕首 
+
+You see an assassin dagger, easy to pull out and use when needed.=发现一把暗杀匕首，需要使用时方便拿出。 
+
+biting sword=突刺剑 
+
+The point of this biting sword is chiseled to a lethal point. It will serve you well.=这把突刺剑会使人丧命，可以很好的辅助你。 
+
+black sword=黑刃剑 
+
+You see a black sword.  Its darkness will surely protect you.=发现一把黑刃剑，会很好的保护你。 
+
+broadsword=阔剑 
+
+You see a mighty broadsword. Enemies will see their death.=发现一把威武的阔剑，敌人会看到他们的死期。 
 buster=屠刀
 You see a buster, with its distinctive, oversized blade.=You see a buster, with its distinctive, oversized blade.
 chaos dagger=吸血匕首
@@ -814,7 +908,7 @@ demon fire sword=赤魔剑
 The demon fire sword, a horrible sword taken from hell's deepest dungeons.=The demon fire sword, a horrible sword taken from hell's deepest dungeons.
 demon sword=恶魔剑
 Demon skeletons return from hell with this demon sword.=Demon skeletons return from hell with this demon sword.
-drow sword=drow sword
+drow sword=卓尔之剑
 This is a genuine drow sword.=This is a genuine drow sword.
 elvish sword=精灵之剑
 This is an elvish sword. It looks like it is made from tree leaves!=This is an elvish sword. It looks like it is made from tree leaves!
@@ -824,7 +918,7 @@ golden blade=黄金匕首
 You see the rare and precious golden blade. It can steal life from those you stab with it.=You see the rare and precious golden blade. It can steal life from those you stab with it.
 golden orc sword=黄金重剑
 You see a golden orc sword, with its heavy and deadly appearance it seems also valuable.=You see a golden orc sword, with its heavy and deadly appearance it seems also valuable.
-great sword=巨剑
+great sword=巨剑///////////////////
 This rare great sword is heavy and of good craftsmanship. It can only attack incredibly slowly.=This rare great sword is heavy and of good craftsmanship. It can only attack incredibly slowly.
 hell dagger=地狱匕首
 You see a hell dagger. Is the colour that of the burning fires of Hell?=You see a hell dagger. Is the colour that of the burning fires of Hell?

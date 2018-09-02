@@ -313,7 +313,7 @@ class MakingFabric {
 	private void makeMithrilThreadStep() {
 		final SpeakerNPC npc = npcs.get("Kampusch");
 
-		npc.addReply("balloon", "Ah! They are dropped by the charming little baby angels who dwell in Kikareukin Islands. I want one for my daughter.");
+		npc.addReply("气球", "Ah! They are dropped by the charming little baby angels who dwell in Kikareukin Islands. I want one for my daughter.");
 		npc.addReply("silk thread", "That is from the silk glands of 巨型蜘蛛. You need 40 spools of silk thread to make something as large as a cloak, say.");
 		npc.addReply("silk", "That is from the silk glands of 巨型蜘蛛.");
 		npc.addReply("mithril nuggets", "You can find them for yourself.");
@@ -334,10 +334,10 @@ class MakingFabric {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					if (player.isEquipped("silk thread", 40)
 						&& player.isEquipped("mithril nugget", 7)
-						&& player.isEquipped("balloon")) {
+						&& player.isEquipped("气球")) {
 						player.drop("silk thread", 40);
 					    player.drop("mithril nugget", 7);
-						player.drop("balloon");
+						player.drop("气球");
 						final long timeNow = new Date().getTime();
 						player.setQuest(mithrilcloak.getQuestSlot(), "fusingthread;" + timeNow);
 						npc.say("I will fuse 40 mithril thread for you. Please come back in "
@@ -345,7 +345,7 @@ class MakingFabric {
 								+ ".");
 						player.notifyWorldAboutChanges();
 					} else {
-						npc.say("For 40 spools of mithril thread to make your cloak, I need 40 spools of #silk #thread, 7 #mithril #nuggets and a #balloon.");
+						npc.say("For 40 spools of mithril thread to make your cloak, I need 40 spools of #silk #thread, 7 #mithril #nuggets and a #气球.");
 					}
 				}
 			});

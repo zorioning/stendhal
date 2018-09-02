@@ -1443,11 +1443,11 @@ If everybody would think so, we were on the way to a better world...
       <parameter name="weather" condition="stendhal.christmas">snow_light</parameter>
     </attributes>
     <portal x="85" y="26" ref="jail_entrance_left">
-      <destination zone="-1_semos_jail" ref="entrance" />
+      <destination zone="-1_塞门_监狱" ref="entrance" />
     </portal>
 
     <portal x="86" y="26" ref="jail_entrance">
-      <destination zone="-1_semos_jail" ref="entrance" />
+      <destination zone="-1_塞门_监狱" ref="entrance" />
     </portal>
 
     <entity x="53" y="26">
@@ -1499,7 +1499,7 @@ If everybody would think so, we were on the way to a better world...
     </entity>
   </zone>
 
-  <zone name="int_semos_hostel" file="interiors/semos/hostel.tmx">
+  <zone name="int_塞门_旅馆" file="interiors/semos/hostel.tmx">
     <configurator class-name="games.stendhal.server.maps.semos.hostel.KidsNPCs" />
     <configurator class-name="games.stendhal.server.maps.semos.hostel.BoyNPC" />
 
@@ -1537,7 +1537,7 @@ If everybody would think so, we were on the way to a better world...
       <destination zone="int_塞门_守卫_室" ref="entrance" />
     </portal>
     <portal x="29" y="40" ref="hostel_entrance">
-      <destination zone="int_semos_hostel" ref="entrance_right" />
+      <destination zone="int_塞门_旅馆" ref="entrance_right" />
     </portal>
 
     <entity x="38" y="42">
@@ -1775,19 +1775,19 @@ If everybody would think so, we were on the way to a better world...
     </portal>
 
     <portal x="15" y="41" ref="blacksmith_entrance">
-      <destination zone="int_semos_blacksmith" ref="entrance" />
+      <destination zone="int_塞门_铁匠铺" ref="entrance" />
     </portal>
 
     <portal x="6" y="22" ref="library_entrance_left">
-      <destination zone="int_semos_library" ref="entrance_left" />
+      <destination zone="int_塞门_图书馆" ref="entrance_left" />
     </portal>
 
     <portal x="11" y="22" ref="library_entrance_right">
-      <destination zone="int_semos_library" ref="entrance_right" />
+      <destination zone="int_塞门_图书馆" ref="entrance_right" />
     </portal>
 
     <portal x="52" y="19" ref="storage_entrance">
-      <destination zone="int_semos_storage_0" ref="entrance" />
+      <destination zone="int_塞门_仓库_0" ref="entrance" />
     </portal>
 
     <point-of-interest x="18" y="21">
@@ -1814,7 +1814,7 @@ If everybody would think so, we were on the way to a better world...
     </portal>
 
     <portal x="44" y="19" ref="bakery_entrance">
-      <destination zone="int_semos_bakery" ref="entrance" />
+      <destination zone="int_塞门_面包房" ref="entrance" />
     </portal>
 
     <entity x="42" y="37">
@@ -2342,7 +2342,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     </portal>
   </zone>
 
-  <zone name="int_semos_blacksmith" file="interiors/semos/blacksmith.tmx">
+  <zone name="int_塞门_铁匠铺" file="interiors/semos/blacksmith.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.blacksmith.BlacksmithNPC" />
     <configurator
@@ -2484,7 +2484,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     </entity>
   </zone>
 
-  <zone name="int_semos_library" file="interiors/semos/library.tmx">
+  <zone name="int_塞门_图书馆" file="interiors/semos/library.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.library.HistorianGeographerNPC" />
     <configurator
@@ -2583,7 +2583,7 @@ Holy mackerel! These chips are tasty.
     </entity>
   </zone>
 
-  <zone name="int_semos_storage_0" file="interiors/semos/storage_0.tmx">
+  <zone name="int_塞门_仓库_0" file="interiors/semos/storage_0.tmx">
       <attributes>
       <parameter name="file" condition="stendhal.christmas">interiors/semos/storage_0_xmas.tmx</parameter>
     </attributes>
@@ -2595,11 +2595,11 @@ Holy mackerel! These chips are tasty.
     </portal>
 
     <portal x="16" y="2" ref="downstairs">
-      <destination zone="int_semos_storage_-1" ref="upstairs" />
+      <destination zone="int_塞门_仓库_-1" ref="upstairs" />
     </portal>
   </zone>
 
-  <zone name="int_semos_storage_-1" file="interiors/semos/storage_-1.tmx">
+  <zone name="int_塞门_仓库_-1" file="interiors/semos/storage_-1.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
       <parameter name="color">#413263</parameter>
@@ -2607,7 +2607,7 @@ Holy mackerel! These chips are tasty.
     </attributes>
 
     <portal x="26" y="10" ref="upstairs">
-      <destination zone="int_semos_storage_0" ref="downstairs" />
+      <destination zone="int_塞门_仓库_0" ref="downstairs" />
     </portal>
   </zone>
 
@@ -2615,7 +2615,7 @@ Holy mackerel! These chips are tasty.
     <attributes>
       <parameter name="file" condition="stendhal.christmas">interiors/semos/bank_xmas.tmx</parameter>
     </attributes>
-    <!-- to disallow making or using marked scrolls for getting to trading 
+    <!-- to disallow making or using 标记卷轴s for getting to trading 
       table area -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator
@@ -2995,7 +2995,7 @@ Holy mackerel! These chips are tasty.
 
   </zone>
 
-  <zone name="int_semos_bakery" file="interiors/semos/bakery.tmx">
+  <zone name="int_塞门_面包房" file="interiors/semos/bakery.tmx">
     <configurator class-name="games.stendhal.server.maps.semos.bakery.ChefNPC" />
     <configurator
       class-name="games.stendhal.server.maps.semos.bakery.ShopAssistantNPC" />
@@ -3035,7 +3035,7 @@ Holy mackerel! These chips are tasty.
     </portal>
 
     <portal x="17" y="4" ref="exit_2">
-      <destination zone="0_ados_wall_n" ref="house_exit_2" />
+      <destination zone="0_阿多斯_城墙_n" ref="house_exit_2" />
     </portal>
 
     <portal x="1" y="4" ref="exit_3">
@@ -3043,7 +3043,7 @@ Holy mackerel! These chips are tasty.
     </portal>
 
     <portal x="17" y="11" ref="exit_4">
-      <destination zone="-1_semos_jail" ref="house_exit_4" />
+      <destination zone="-1_塞门_监狱" ref="house_exit_4" />
     </portal>
 
     <entity x="2" y="6">
@@ -3302,7 +3302,7 @@ Mature sheep wanted: please speak to 赛特
       <attribute name="text">
 向北： 塞门镇
 向南： Kirdneh City
-向东： Nalwor City
+向东： 纳尔沃城
 西南： Or'ril Castle and 法多城
                          </attribute>
     </entity>
@@ -3941,7 +3941,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-1_semos_jail" level="-1" x="499872" y="500000"
+  <zone name="-1_塞门_监狱" level="-1" x="499872" y="500000"
     file="Level -1/semos/jail.tmx">
     <configurator class-name="games.stendhal.server.entity.player.Jail" />
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleport" />
@@ -4121,7 +4121,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-2_semos_jail" level="-2" x="499872" y="500000"
+  <zone name="-2_塞门_监狱" level="-2" x="499872" y="500000"
     file="Level -2/semos/jail.tmx">
     <configurator class-name="games.stendhal.server.maps.semos.jail.JailKeeperNPC" />
     <configurator class-name="games.stendhal.server.core.config.zone.NoItemMove">
@@ -4129,7 +4129,7 @@ Mature sheep wanted: please speak to 赛特
     </configurator>
   </zone>
 
-  <zone name="-3_semos_jail" level="-3" x="499872" y="500000"
+  <zone name="-3_塞门_监狱" level="-3" x="499872" y="500000"
     file="Level -3/semos/jail_walk.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoMoveTo" />
     <configurator class-name="games.stendhal.server.core.config.zone.NoItemMove">
@@ -4141,7 +4141,7 @@ Mature sheep wanted: please speak to 赛特
 
   </zone>
 
-  <zone name="-2_semos_catacombs" level="-2" x="500000" y="499872"
+  <zone name="-2_塞门_墓室" level="-2" x="500000" y="499872"
     file="Level -2/semos/catacombs.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
@@ -4150,53 +4150,53 @@ Mature sheep wanted: please speak to 赛特
     </attributes>
     <portal x="9" y="6" ref="dragon_portal_1">
 
-      <destination zone="-2_semos_catacombs" ref="dragon_portal_2" />
+      <destination zone="-2_塞门_墓室" ref="dragon_portal_2" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="86" y="12" ref="dragon_portal_2">
 
-      <destination zone="-2_semos_catacombs" ref="dragon_portal_1" />
+      <destination zone="-2_塞门_墓室" ref="dragon_portal_1" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="8" ref="one_way_1a">
-      <destination zone="-2_semos_catacombs" ref="one_way_1b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_1b" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="9" ref="one_way_2a">
-      <destination zone="-2_semos_catacombs" ref="one_way_2b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_2b" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="10" ref="one_way_3a">
-      <destination zone="-2_semos_catacombs" ref="one_way_3b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_3b" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="11" ref="one_way_4a">
-      <destination zone="-2_semos_catacombs" ref="one_way_4b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_4b" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="12" ref="one_way_5a">
-      <destination zone="-2_semos_catacombs" ref="one_way_5b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_5b" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="13" ref="one_way_6a">
-      <destination zone="-2_semos_catacombs" ref="one_way_6b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_6b" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="14" ref="one_way_7a">
-      <destination zone="-2_semos_catacombs" ref="one_way_7b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_7b" />
       <attribute name="hidden" />
     </portal>
 
     <portal x="84" y="15" ref="one_way_8a">
-      <destination zone="-2_semos_catacombs" ref="one_way_7b" />
+      <destination zone="-2_塞门_墓室" ref="one_way_7b" />
       <attribute name="hidden" />
     </portal>
 
@@ -4241,7 +4241,7 @@ Mature sheep wanted: please speak to 赛特
     </portal>
 
     <portal x="94" y="57" ref="downstairs" replacing="true">
-      <destination zone="-3_semos_catacombs" ref="upstairs" />
+      <destination zone="-3_塞门_墓室" ref="upstairs" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
         <parameter name="key">vampirette entrails</parameter>
@@ -4344,7 +4344,7 @@ Mature sheep wanted: please speak to 赛特
     </entity>
   </zone>
 
-  <zone name="-3_semos_catacombs" level="-3" x="500064" y="499872"
+  <zone name="-3_塞门_墓室" level="-3" x="500064" y="499872"
     file="Level -3/semos/catacombs.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
@@ -4354,7 +4354,7 @@ Mature sheep wanted: please speak to 赛特
     <configurator
       class-name="games.stendhal.server.maps.semos.catacombs.VampireLordCreature" />
     <portal x="30" y="57" ref="upstairs" replacing="true">
-      <destination zone="-2_semos_catacombs" ref="downstairs" />
+      <destination zone="-2_塞门_墓室" ref="downstairs" />
     </portal>
 
     <entity x="1" y="1">
@@ -4500,7 +4500,7 @@ Mature sheep wanted: please speak to 赛特
       <parameter name="color_method">softlight</parameter>
       <parameter name="color">#22ffdd</parameter>
     </attributes>
-    <!-- Don't allow teleporting in as we don't want marked scrolls made 
+    <!-- Don't allow teleporting in as we don't want 标记卷轴s made 
       or ring abused -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <portal x="43" y="49" ref="exit1">

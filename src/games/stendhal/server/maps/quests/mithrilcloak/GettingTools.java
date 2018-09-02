@@ -118,10 +118,10 @@ class GettingTools {
 					final int neededEggshells = Integer.valueOf(questslot[1]);
 					if (player.isEquipped("iron")
 						&& player.isEquipped("mithril bar")
-						&& player.isEquipped("magical eggshells", neededEggshells)) {
+						&& player.isEquipped("附魔蛋壳", neededEggshells)) {
 							player.drop("iron");
 							player.drop("mithril bar");
-							player.drop("magical eggshells", neededEggshells);
+							player.drop("附魔蛋壳", neededEggshells);
 							npc.say("Good. It will take me some time to make these, come back in "
 									   + REQUIRED_MINUTES_SCISSORS + " minutes to get your scissors.");
 							player.addXP(100);
@@ -129,7 +129,7 @@ class GettingTools {
 							player.notifyWorldAboutChanges();
 						} else {
 							npc.say("Liar, you don't have everything I need. Ask me about #scissors again when you have an iron bar, a mithril bar, and "
-									+ questslot[1] + " magical eggshells. And don't be wasting my time!");
+									+ questslot[1] + " 附魔蛋壳. And don't be wasting my time!");
 						}
 				}
 			});
@@ -182,7 +182,7 @@ class GettingTools {
 
 		// offer eggshells when prompted
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("eggshells", "magical", "magical eggshells", "scissors", "hogart", "ida", "cloak", "黑曜石斗篷", "specials"),
+				Arrays.asList("eggshells", "magical", "附魔蛋壳", "scissors", "hogart", "ida", "cloak", "黑曜石斗篷", "specials"),
 				new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "need_eggshells"),
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every " + Integer.toString(REQUIRED_POISONS) + " disease poisons you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?",
@@ -201,7 +201,7 @@ class GettingTools {
                         final int required = (sentence.getNumeral().getAmount());
 						if (player.drop("disease poison", required * REQUIRED_POISONS)) {
 							npc.say("Ok, here's your " + Integer.toString(required) + " eggshells. Enjoy!");
-							new EquipItemAction("magical eggshells", required, true).fire(player, sentence, npc);
+							new EquipItemAction("附魔蛋壳", required, true).fire(player, sentence, npc);
 						} else {
 							npc.say("Ok, ask me again when you have " + Integer.toString(required * REQUIRED_POISONS) + " disease poisons with you.");
 						}

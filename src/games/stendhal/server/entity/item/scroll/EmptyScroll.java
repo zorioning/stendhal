@@ -27,7 +27,7 @@ public class EmptyScroll extends Scroll {
 	// private static final Logger logger = Logger.getLogger(EmptyScroll.class);
 
 	/**
-	 * Creates a new empty scroll.
+	 * Creates a new 空白卷轴.
 	 *
 	 * @param name
 	 * @param clazz
@@ -61,7 +61,7 @@ public class EmptyScroll extends Scroll {
 
 		if (zone.isTeleportInAllowed(player.getX(), player.getY())) {
 			final Item markedScroll = SingletonRepository.getEntityManager().getItem(
-					"marked scroll");
+					"标记卷轴");
 			markedScroll.setInfoString(player.getID().getZoneID() + " "
 					+ player.getX() + " " + player.getY());
 			player.equipOrPutOnGround(markedScroll);

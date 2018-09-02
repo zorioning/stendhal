@@ -36,17 +36,17 @@ import games.stendhal.server.maps.quests.logic.ItemCollector;
 import games.stendhal.server.util.TimeUtil;
 
 /**
- * QUEST: The mithril shield forging.
+ * QUEST: The 黑曜石盾 forging.
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Baldemar, mithrilbourgh elite wizard, will forge a mithril shield.
+ * <li> Baldemar, mithrilbourgh elite wizard, will forge a 黑曜石盾.
  * </ul>
  *
  * STEPS:
  * <ul>
  * <li> Baldemar tells you about shield.
- * <li> He offers to forge a mithril shield for you if you bring him what he
+ * <li> He offers to forge a 黑曜石盾 for you if you bring him what he
  * needs.
  * <li> You give him all he asks for.
  * <li> Baldemar checks if you have ever killed a 黑巨人 alone, or not
@@ -55,7 +55,7 @@ import games.stendhal.server.util.TimeUtil;
  *
  * REWARD:
  * <ul>
- * <li> mithril shield
+ * <li> 黑曜石盾
  * <li> 95000 XP
  * <li> some karma (25)
  * </ul>
@@ -84,7 +84,7 @@ public class StuffForBaldemar extends AbstractQuest {
 
 	public StuffForBaldemar() {
 		itemCollector.require().item("mithril bar").pieces(20)
-				.bySaying("I cannot #forge it without the missing %s. After all, this IS a mithril shield.");
+				.bySaying("I cannot #forge it without the missing %s. After all, this IS a 黑曜石盾.");
 		itemCollector.require().item("obsidian")
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
 		itemCollector.require().item("diamond")
@@ -95,8 +95,8 @@ public class StuffForBaldemar extends AbstractQuest {
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
 		itemCollector.require().item("sapphire").pieces(10)
 				.bySaying("I need several gems to grind into dust to mix with the mithril. I need %s still.");
-		itemCollector.require().item("black shield").bySaying("I need %s to form the framework for your new shield.");
-		itemCollector.require().item("magic plate shield")
+		itemCollector.require().item("黑盾").bySaying("I need %s to form the framework for your new shield.");
+		itemCollector.require().item("附魔钢盾")
 				.bySaying("I need %s for the pieces and parts for your new shield.");
 		itemCollector.require().item("gold bar").pieces(10)
 				.bySaying("I need %s to melt down with the mithril and iron.");
@@ -214,10 +214,10 @@ public class StuffForBaldemar extends AbstractQuest {
 						return;
 					}
 
-					raiser.say("I have finished forging your new mithril shield. Enjoy. Now I will see what Trillium has stored behind the counter for me. ;)");
+					raiser.say("I have finished forging your new 黑曜石盾. Enjoy. Now I will see what Trillium has stored behind the counter for me. ;)");
 					player.addXP(95000);
 					player.addKarma(25);
-					final Item mithrilshield = SingletonRepository.getEntityManager().getItem("mithril shield");
+					final Item mithrilshield = SingletonRepository.getEntityManager().getItem("黑曜石盾");
 					mithrilshield.setBoundTo(player.getName());
 					player.equipOrPutOnGround(mithrilshield);
 					player.notifyWorldAboutChanges();
@@ -287,10 +287,10 @@ public class StuffForBaldemar extends AbstractQuest {
 			res.add("I will need to bravely face a 黑巨人 alone, before I am worthy of this shield.");
 		}
 		if (questState.startsWith("forging")) {
-			res.add("Baldemar is forging my mithril shield!");
+			res.add("Baldemar is forging my 黑曜石盾!");
 		}
 		if (isCompleted(player)) {
-			res.add("I brought Baldemar many items, killed a 黑巨人 solo, and he forged me a mithril shield.");
+			res.add("I brought Baldemar many items, killed a 黑巨人 solo, and he forged me a 黑曜石盾.");
 		}
 		return res;
 	}

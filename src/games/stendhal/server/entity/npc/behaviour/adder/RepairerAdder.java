@@ -38,7 +38,7 @@ public class RepairerAdder {
 	public void addRepairer(final SpeakerNPC npc) {
 		final RepairerBehaviour repairerBehaviour = new RepairerBehaviour(
 						new RepairingPriceCalculationStrategy(new HashSet<String>()),
-						new HashSet<String>(Arrays.asList("buckler")));
+						new HashSet<String>(Arrays.asList("小圆盾")));
 
 		servicersRegister.add(npc.getName(), repairerBehaviour);
 

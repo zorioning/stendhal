@@ -93,16 +93,16 @@ public class ContMoveAndStrengthenOnlinePlayers extends ScriptImpl {
 			StackableItem potions = (StackableItem) SingletonRepository.getEntityManager().getItem("greater potion");
 			potions.setQuantity(5000);
 			player.equipToInventoryOnly(potions);
-			if(!player.isEquipped("chaos dagger")) {
+			if(!player.isEquipped("混沌匕首")) {
 				Item first = (Item) player.getSlot("rhand").getFirst();
 				player.drop(first);
-				Item dagger = SingletonRepository.getEntityManager().getItem("chaos dagger");
+				Item dagger = SingletonRepository.getEntityManager().getItem("混沌匕首");
 				player.equip("rhand", dagger);
 			}
-			if(!player.isEquipped("chaos shield")) {
+			if(!player.isEquipped("混乱之盾")) {
 				Item first = (Item) player.getSlot("lhand").getFirst();
 				player.drop(first);
-				Item shield = SingletonRepository.getEntityManager().getItem("chaos shield");
+				Item shield = SingletonRepository.getEntityManager().getItem("混乱之盾");
 				player.equip("lhand", shield);
 			}
 			if(!player.isEquipped("black helmet")) {

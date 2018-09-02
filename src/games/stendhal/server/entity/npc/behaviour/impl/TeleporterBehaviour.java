@@ -121,11 +121,11 @@ public class TeleporterBehaviour implements TurnListener {
 		zones = new ArrayList<StendhalRPZone>();
 		final List<String> badZones = new ArrayList<String>();
 		// the following are too dangerous
-		badZones.add("0_nalwor_city");
+		badZones.add("0_纳尔沃_城");
 		badZones.add("0_orril_castle");
 		badZones.add("0_ados_swamp");
 		badZones.add("0_ados_outside_w");
-		badZones.add("0_ados_wall_n");
+		badZones.add("0_阿多斯_城墙_n");
 		badZones.add("0_fado_forest_se");
 		badZones.add("0_fado_forest_s_e2");
 		badZones.add("0_塞门_山_北_西4");
@@ -133,8 +133,8 @@ public class TeleporterBehaviour implements TurnListener {
 		badZones.add("0_ados_city_n");
 		badZones.add("0_ados_ocean_e");
 		badZones.add("0_athor_island_w");
-		badZones.add("0_nalwor_forest_n");
-		badZones.add("0_nalwor_river_s");
+		badZones.add("0_纳尔沃_森林_n");
+		badZones.add("0_纳尔沃_河_s");
 		while (itr.hasNext()) {
 			final StendhalRPZone aZone = (StendhalRPZone) itr.next();
 			final String zoneName = aZone.getName();

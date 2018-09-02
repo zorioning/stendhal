@@ -158,10 +158,10 @@
     <drops>
       <item value="money" quantity="[30,60]" probability="100.0"/>
       <item value="fairy cake" quantity="[1,5]" probability="10.0"/>
-      <item value="empty scroll" quantity="[1,2]" probability="5.0"/>
+      <item value="空白卷轴" quantity="[1,2]" probability="5.0"/>
       <item value="金斗篷" quantity="[1,1]" probability="2.0"/>
       <item value="liberty helmet" quantity="[1,1]" probability="0.1"/>
-      <item value="balloon" quantity="[1,1]" probability="5.0"/>
+      <item value="气球" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -261,7 +261,7 @@
       <says>
         <noise state="idle follow fight" value="别烦我，再晚要你好看"/>
         <noise state="idle follow fight" value="你的命运不应如此"/>
-        <noise state="idle follow fight" value="天地难容于你"/>
+        <noise state="idle follow fight" value="天地之广, 然无汝归处"/>
       </says>
       <profile name="brave"/>
       <profile name="archer"/>

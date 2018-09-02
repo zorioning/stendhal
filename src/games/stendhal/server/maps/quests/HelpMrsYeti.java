@@ -268,7 +268,7 @@ import games.stendhal.server.maps.Region;
 			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "dragon"),
 							 new NotCondition(new PlayerHasPetOrSheepCondition())),
 			ConversationStates.ATTENDING,
-			"You can get a baby dragon only if you have a mythical egg. Those, you must get from Morgrin at the wizard school. "
+			"You can get a baby dragon only if you have a 传说之卵. Those, you must get from Morgrin at the wizard school. "
 			+ "Then Terry in 塞门洞穴 will hatch it.",
 			null);
 

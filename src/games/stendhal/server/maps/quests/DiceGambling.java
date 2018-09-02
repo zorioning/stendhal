@@ -116,13 +116,13 @@ public class DiceGambling extends AbstractQuest {
 
 	private Map <Integer, Pair<String, String>> initPrices() {
 		Map<Integer, Pair<String, String>> map = new HashMap<Integer, Pair<String, String>>();
-		map.put(3, new Pair<String, String>("blue shield",
-				"小哥，你真是狗屎运！我对你很失望！给你，把这 blue shield 拿走吧."));
+		map.put(3, new Pair<String, String>("蓝盾",
+				"小哥，你真是狗屎运！我对你很失望！给你，把这 蓝盾 拿走吧."));
 		map.put(7, new Pair<String, String>("beer",
 				"这是安慰奖，一瓶啤酒."));
 		map.put(8, new Pair<String, String>("wine",
 				"你赢了一杯可口的红酒！"));
-		map.put(9, new Pair<String, String>("studded shield",
+		map.put(9, new Pair<String, String>("镶嵌盾",
 				"这个简单的盾是给你的奖励"));
 		map.put(10, new Pair<String, String>("chain legs",
 				"我希望你能用到这些 chain legs."));

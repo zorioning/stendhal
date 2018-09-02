@@ -37,7 +37,7 @@ public class WellSource extends PlayerActivityEntity {
 	 */
 	private static final String[] items = { "money", "木头", "iron ore",
 			"gold nugget", "potion", "home scroll", "greater potion",
-			"sapphire", "carbuncle", "horned golden helmet", "dark dagger",
+			"sapphire", "carbuncle", "horned golden helmet", "暗之匕首",
 			"present" };
 
 	/**
@@ -150,7 +150,7 @@ public class WellSource extends PlayerActivityEntity {
 			final String itemName = items[Rand.rand(items.length)];
 			final Item item = SingletonRepository.getEntityManager().getItem(itemName);
 			int amount = 1;
-			if (itemName.equals("dark dagger")
+			if (itemName.equals("暗之匕首")
 					|| itemName.equals("horned golden helmet")) {
 				/*
 				 * Bound powerful items.

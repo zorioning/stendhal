@@ -56,15 +56,15 @@ public class ItemsOnTable implements ZoneConfigurator {
 		plantGrower3.setToFullGrowth();
 
 		// Plant grower for a shield (3 hours)
-		final PassiveEntityRespawnPoint plantGrower4 = new PassiveEntityRespawnPoint("crown shield", 36000);
+		final PassiveEntityRespawnPoint plantGrower4 = new PassiveEntityRespawnPoint("王冠之盾", 36000);
 		plantGrower4.setPosition(40, 22);
 		plantGrower4.setDescription("Imperial soliders leave their things here.");
 		zone.add(plantGrower4);
 
 		plantGrower4.setToFullGrowth();
 
-		// Plant grower for a claymore (24 hours)
-		final PassiveEntityRespawnPoint plantGrower5 = new PassiveEntityRespawnPoint("claymore", 288000);
+		// Plant grower for a 双刃剑 (24 hours)
+		final PassiveEntityRespawnPoint plantGrower5 = new PassiveEntityRespawnPoint("双刃剑", 288000);
 		plantGrower5.setPosition(27, 21);
 		plantGrower5.setDescription("Imperial soliders leave their things here.");
 		zone.add(plantGrower5);

@@ -56,7 +56,7 @@ public class DropPlayerItems extends ScriptImpl {
 				amount = Integer.parseInt(args.get(1));
 				itemName = args.get(2);
 			} catch (final NumberFormatException e) {
-				// admin did something like "playername black shield" (i.e. an
+				// admin did something like "playername 黑盾" (i.e. an
 				// item with spaces, but didnt use quotes, or a number)
 				// catch the exception and see if we can help them anyway
 				// amount = 1; is default

@@ -29,9 +29,9 @@ import games.stendhal.server.entity.npc.behaviour.impl.BuyerBehaviour;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /**
- * Builds an NPC to buy gems and gold and sell engagement ring.
+ * Builds an NPC to buy gems and gold and sell 订婚戒指.
  * <p>
- * He is also the NPC who can fix a broken emerald ring
+ * He is also the NPC who can fix a broken 翡翠戒指
  * (../../quests/Ringmaker.java)
  * <p>
  * He is also the NPC who casts the wedding ring (../../quests/Marriage.java)
@@ -74,12 +74,12 @@ public class RingSmithNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hi! Can I #help you?");
 				addJob("I work with #gold, to fix and make jewellery.");
-				addOffer("I sell engagement rings which I make myself. I also buy gems and gold, see the red catalogue on the table.");
+				addOffer("I sell 订婚戒指s which I make myself. I also buy gems and gold, see the red catalogue on the table.");
 				addReply(
 						"gold",
 						"It's cast from gold nuggets which you can pan for on Or'ril river. I don't cast it myself, but a smith in Ados does.");
-				addHelp("I am an expert on #'wedding rings' and #'emerald rings', sometimes called the ring of #life.");
-				addQuest("Well, you could consider getting married to be a quest! Ask me about #'wedding rings' if you need one.");
+				addHelp("I am an expert on #'婚戒s' and #'翡翠戒指s', sometimes called the ring of #life.");
+				addQuest("Well, you could consider getting married to be a quest! Ask me about #'婚戒s' if you need one.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellrings")), false);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buyprecious")), false);
 				addGoodbye("Bye, my friend.");

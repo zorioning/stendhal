@@ -74,7 +74,7 @@ class Engagement {
 				"equals",
 				null,
 				ConversationStates.ATTENDING,
-				"The #wedding ring needs time to regain its power after each use, and it needs less power to bring equals together. "
+				"The #婚戒 needs time to regain its power after each use, and it needs less power to bring equals together. "
 				+ "For couples of similar level the time to regain power is less than 10 minutes and can be as little as 5 minutes.",
 				null);
 
@@ -189,7 +189,7 @@ class Engagement {
 
 	private void giveInvite(final Player player) {
 		final StackableItem invite = (StackableItem) SingletonRepository.getEntityManager().getItem(
-				"invitation scroll");
+				"邀请函");
 		invite.setQuantity(4);
 		// location of church
 		invite.setInfoString("marriage," + player.getName());
@@ -218,14 +218,14 @@ class Engagement {
 			additional = "I have given invitations for your guests to " + bride.getName() + ". " + groom.getName()
 				+ ", if Ognir was already making you a ring, you will now have to go and ask him to make another.";
 		} else {
-			additional = "I have not given you more invitation scrolls, as you were both already engaged, and had "
+			additional = "I have not given you more 邀请函s, as you were both already engaged, and had "
 				+ "them before. If you were having rings forged you will both need to make them again.";
 		}
 		nun.say("Congratulations, "
 				+ groom.getName()
 				+ " and "
 				+ bride.getName()
-				+ ", you are now engaged! Please make sure you have been to Ognir to get wedding rings made before "
+				+ ", you are now engaged! Please make sure you have been to Ognir to get 婚戒s made before "
 				+ "you go to the church for the service. " + additional);
 		// Memorize that the two engaged so that the priest knows
 		groom.setQuest(marriage.getQuestSlot(), "engaged");

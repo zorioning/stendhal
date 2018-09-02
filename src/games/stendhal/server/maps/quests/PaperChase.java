@@ -241,7 +241,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 			new IncreaseKarmaAction(15),
 			new IncreaseXPAction(400),
 			new SetQuestAction(QUEST_SLOT, 0, "done"),
-			new EquipItemAction("empty scroll", 5),
+			new EquipItemAction("空白卷轴", 5),
 			new SetHallOfFameToAgeDiffAction(QUEST_SLOT, 1, FAME_TYPE),
 			loadSignFromHallOfFame);
 

@@ -27,7 +27,7 @@ import games.stendhal.server.entity.player.Player;
 public class Stocking extends Box {
 
 	private static final String[] ITEMS = { "mega potion", "love potion", "pomegranate",
-			"fish soup", "mithril nugget", "empty scroll", "teddy", "crepes suzette", "vsop koboldish torcibud"};
+			"fish soup", "mithril nugget", "空白卷轴", "teddy", "crepes suzette", "vsop koboldish torcibud"};
 
 	/**
 	 * Creates a new Stocking.

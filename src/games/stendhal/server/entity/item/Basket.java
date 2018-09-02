@@ -27,7 +27,7 @@ import games.stendhal.server.entity.player.Player;
 public class Basket extends Box {
 
 
-	private static final String[] ITEMS = {"egg", "easter egg", "small easter egg", "spotted egg", "mythical egg"};
+	private static final String[] ITEMS = {"egg", "easter egg", "small easter egg", "spotted egg", "传说之卵"};
 
 	/**
 	 * Creates a new Basket.

@@ -8,14 +8,14 @@
   -->
   
   <!--  Ground level -->
-  <zone name="0_ados_mountain_n2_w2" level="0" x="500384" y="499744" file="Level 0/ados/mountain_n2_w2.tmx">
+  <zone name="0_阿多斯_山脉_n2_w2" level="0" x="500384" y="499744" file="Level 0/ados/mountain_n2_w2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying(temperature=-1)</parameter>
     </attributes>
   </zone>
   
-  <zone name="0_ados_mountain_n2_w" level="0" x="500512" y="499744" file="Level 0/ados/mountain_n2_w.tmx">
+  <zone name="0_阿多斯_山脉_n2_w" level="0" x="500512" y="499744" file="Level 0/ados/mountain_n2_w.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -25,12 +25,12 @@
     
     <!-- Portals -->
     <portal x="18" y="52" ref="ent1n">
-      <destination zone="0_ados_mountain_n2_w" ref="ent1s" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent1s" />
       <attribute name="hidden" />
     </portal>
     
     <portal x="18" y="53" ref="ent1s">
-      <destination zone="0_ados_mountain_n2_w" ref="ent1n" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent1n" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">100</parameter>
         <parameter name="rejected">The entwives are NOT babysitters. Come back when you have some age on you.</parameter>
@@ -39,12 +39,12 @@
     </portal>
     
     <portal x="19" y="52" ref="ent2n">
-      <destination zone="0_ados_mountain_n2_w" ref="ent2s" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent2s" />
       <attribute name="hidden" />
     </portal>
     
     <portal x="19" y="53" ref="ent2s">
-      <destination zone="0_ados_mountain_n2_w" ref="ent2n" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent2n" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">100</parameter>
         <parameter name="rejected">The entwives are NOT babysitters. Come back when you have some age on you.</parameter>
@@ -53,12 +53,12 @@
     </portal>
     
     <portal x="20" y="52" ref="ent3n">
-      <destination zone="0_ados_mountain_n2_w" ref="ent3s" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent3s" />
       <attribute name="hidden" />
     </portal>
     
     <portal x="20" y="53" ref="ent3s">
-      <destination zone="0_ados_mountain_n2_w" ref="ent3n" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent3n" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">100</parameter>
         <parameter name="rejected">The entwives are NOT babysitters. Come back when you have some age on you.</parameter>
@@ -67,12 +67,12 @@
     </portal>
     
     <portal x="21" y="52" ref="ent4n">
-      <destination zone="0_ados_mountain_n2_w" ref="ent4s" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent4s" />
       <attribute name="hidden" />
     </portal>
     
     <portal x="21" y="53" ref="ent4s">
-      <destination zone="0_ados_mountain_n2_w" ref="ent4n" />
+      <destination zone="0_阿多斯_山脉_n2_w" ref="ent4n" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">100</parameter>
         <parameter name="rejected">The entwives are NOT babysitters. Come back when you have some age on you.</parameter>
@@ -107,7 +107,7 @@
     
   </zone>
   
-  <zone name="0_ados_mountain_n2" level="0" x="500640" y="499744" file="Level 0/ados/mountain_n2.tmx">
+  <zone name="0_阿多斯_山脉_n2" level="0" x="500640" y="499744" file="Level 0/ados/mountain_n2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying(temperature=-1)</parameter>
@@ -122,7 +122,7 @@
  	  </point-of-interest>
   </zone>
   
-  <zone name="0_ados_wall_n2" level="0" x="500768" y="499744" file="Level 0/ados/wall_n2.tmx">
+  <zone name="0_阿多斯_城墙_n2" level="0" x="500768" y="499744" file="Level 0/ados/wall_n2.tmx">
  	  <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -540,7 +540,7 @@
     
   </zone>
   
-  <zone name="0_ados_mountain_n_w2" level="0" x="500384" y="499872" file="Level 0/ados/mountain_n_w2.tmx">
+  <zone name="0_阿多斯_山脉_n_w2" level="0" x="500384" y="499872" file="Level 0/ados/mountain_n_w2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -582,7 +582,7 @@
     
   </zone>
   
-  <zone name="0_ados_mountain_nw" level="0" x="500512" y="499872" file="Level 0/ados/mountain_nw.tmx">
+  <zone name="0_阿多斯_山脉_nw" level="0" x="500512" y="499872" file="Level 0/ados/mountain_nw.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.outside.MagicianHouseGreeterNPC" />
     
@@ -651,13 +651,13 @@
     <configurator class-name="games.stendhal.server.maps.ados.magician_house.ItemsOnTable" />
     
     <portal x="12" y="13" ref="entrance">
-      <destination zone="0_ados_mountain_nw" ref="magician_house_entrance"/>
+      <destination zone="0_阿多斯_山脉_nw" ref="magician_house_entrance"/>
     </portal>
     
     <entity x="9" y="6">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-Summon scrolls will immediately
+召唤卷轴s will immediately
 summon a creature that will attack
 your foes. Strong magicians are
 able to summon strong and dangerous
@@ -829,7 +829,7 @@ Home for endangered animals
     
   </zone>
   
-  <zone name="0_ados_wall_n" level="0" x="500768" y="499872" file="Level 0/ados/wall_n.tmx">
+  <zone name="0_阿多斯_城墙_n" level="0" x="500768" y="499872" file="Level 0/ados/wall_n.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -1134,7 +1134,7 @@ Home for endangered animals
     </portal>
     
     <portal x="7" y="74" ref="house_50">
-      <destination zone="int_ados_house_50" ref="in" />
+      <destination zone="int_阿多斯_公寓_50" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 50</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1142,7 +1142,7 @@ Home for endangered animals
     </portal>
     
     <portal x="12" y="74" ref="house_51">
-      <destination zone="int_ados_house_51" ref="in" />
+      <destination zone="int_阿多斯_公寓_51" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 51</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1150,7 +1150,7 @@ Home for endangered animals
     </portal>
     
     <portal x="17" y="74" ref="house_52">
-      <destination zone="int_ados_house_52" ref="in" />
+      <destination zone="int_阿多斯_公寓_52" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 52</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1158,7 +1158,7 @@ Home for endangered animals
     </portal>
     
     <portal x="22" y="74" ref="house_53">
-      <destination zone="int_ados_house_53" ref="in" />
+      <destination zone="int_阿多斯_公寓_53" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 53</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1166,7 +1166,7 @@ Home for endangered animals
     </portal>
     
     <portal x="27" y="74" ref="house_54">
-      <destination zone="int_ados_house_54" ref="in_left" />
+      <destination zone="int_阿多斯_公寓_54" ref="in_left" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 54</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1174,7 +1174,7 @@ Home for endangered animals
     </portal>
     
     <portal x="32" y="74" ref="house_55">
-      <destination zone="int_ados_house_55" ref="in_left" />
+      <destination zone="int_阿多斯_公寓_55" ref="in_left" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 55</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1182,7 +1182,7 @@ Home for endangered animals
     </portal> 
     
     <portal x="37" y="74" ref="house_56">
-      <destination zone="int_ados_house_56" ref="in" />
+      <destination zone="int_阿多斯_公寓_56" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 56</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1198,7 +1198,7 @@ Home for endangered animals
     </portal>
     
     <portal x="19" y="85" ref="house_57">
-      <destination zone="int_ados_house_57" ref="in" />
+      <destination zone="int_阿多斯_公寓_57" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 57</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1206,7 +1206,7 @@ Home for endangered animals
     </portal>
     
     <portal x="24" y="85" ref="house_58">
-      <destination zone="int_ados_house_58" ref="in" />
+      <destination zone="int_阿多斯_公寓_58" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 58</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1214,7 +1214,7 @@ Home for endangered animals
     </portal>
     
     <portal x="29" y="85" ref="house_59">
-      <destination zone="int_ados_house_59" ref="in" />
+      <destination zone="int_阿多斯_公寓_59" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 59</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1222,7 +1222,7 @@ Home for endangered animals
     </portal>
     
     <portal x="34" y="85" ref="house_60">
-      <destination zone="int_ados_house_60" ref="in" />
+      <destination zone="int_阿多斯_公寓_60" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 60</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1230,7 +1230,7 @@ Home for endangered animals
     </portal>
     
     <portal x="39" y="85" ref="house_61">
-      <destination zone="int_ados_house_61" ref="in" />
+      <destination zone="int_阿多斯_公寓_61" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 61</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1238,7 +1238,7 @@ Home for endangered animals
     </portal>
     
     <portal x="44" y="85" ref="house_62">
-      <destination zone="int_ados_house_62" ref="in" />
+      <destination zone="int_阿多斯_公寓_62" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 62</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -1816,12 +1816,12 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="12" y="23" ref="entrance">
-      <destination zone="0_ados_wall" ref="felina_entrance" />
+      <destination zone="0_阿多斯_城墙" ref="felina_entrance" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_71" file="interiors/ados/house_71.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_71" file="interiors/ados/house_71.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -1830,7 +1830,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="12" y="14" ref="in">
-      <destination zone="0_ados_wall" ref="house_71" />
+      <destination zone="0_阿多斯_城墙" ref="house_71" />
     </portal>
     
     <!-- Clock -->
@@ -1865,7 +1865,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_house_72" file="interiors/ados/house_72.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_72" file="interiors/ados/house_72.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">6</parameter>
@@ -1874,7 +1874,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="1" y="15" ref="in">
-      <destination zone="0_ados_wall" ref="house_72" />
+      <destination zone="0_阿多斯_城墙" ref="house_72" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -1896,7 +1896,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_house_73" file="interiors/ados/house_73.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_73" file="interiors/ados/house_73.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">9</parameter>
@@ -1905,7 +1905,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="1" y="7" ref="in">
-      <destination zone="0_ados_wall" ref="house_73" />
+      <destination zone="0_阿多斯_城墙" ref="house_73" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -1919,7 +1919,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_house_74" file="interiors/ados/house_74.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_74" file="interiors/ados/house_74.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">28</parameter>
@@ -1928,7 +1928,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="17" y="20" ref="in">
-      <destination zone="0_ados_wall" ref="house_74" />
+      <destination zone="0_阿多斯_城墙" ref="house_74" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -1950,7 +1950,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_house_75" file="interiors/ados/house_75.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_75" file="interiors/ados/house_75.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">2</parameter>
@@ -1959,7 +1959,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="1" y="15" ref="in">
-      <destination zone="0_ados_wall" ref="house_75" />
+      <destination zone="0_阿多斯_城墙" ref="house_75" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -1981,7 +1981,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_house_76" file="interiors/ados/house_76.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_76" file="interiors/ados/house_76.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">3</parameter>
@@ -1990,7 +1990,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="1" y="15" ref="in">
-      <destination zone="0_ados_wall" ref="house_76" />
+      <destination zone="0_阿多斯_城墙" ref="house_76" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -2012,7 +2012,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_house_77" file="interiors/ados/house_77.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_77" file="interiors/ados/house_77.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -2021,7 +2021,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="1" y="15" ref="in">
-      <destination zone="0_ados_wall" ref="house_77"/>
+      <destination zone="0_阿多斯_城墙" ref="house_77"/>
     </portal>
     
     <!-- flushing toilet -->
@@ -2074,15 +2074,15 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="24" y="58" ref="entrance_left">
-      <destination zone="0_ados_wall" ref="barracks_entrance_left" />
+      <destination zone="0_阿多斯_城墙" ref="barracks_entrance_left" />
     </portal>
     
     <portal x="25" y="58" ref="entrance_right">
-      <destination zone="0_ados_wall" ref="barracks_entrance_center" />
+      <destination zone="0_阿多斯_城墙" ref="barracks_entrance_center" />
     </portal>
     
     <portal x="2" y="46" ref="down">
-      <destination zone="-1_ados_wall" ref="up" />
+      <destination zone="-1_阿多斯_城墙" ref="up" />
     </portal>
     
     <portal x="46" y="11" ref="upstairs_2">
@@ -2730,7 +2730,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_castle_entrance" file="interiors/ados/castle_entrance.tmx">
+  <zone name="int_阿多斯_城堡_入口" file="interiors/ados/castle_entrance.tmx">
     <!-- entrance -->
     <portal x="15" y="30" ref="entranceleft">
       <destination zone="0_ados_city" ref="castle_left_entrance" />
@@ -2742,359 +2742,359 @@ My fee:
     
     <!--hallway-->
     <portal x="15" y="24" ref="hall1">
-      <destination zone="int_ados_castle_entrance" ref="hall1a" />
+      <destination zone="int_阿多斯_城堡_入口" ref="hall1a" />
     </portal>
     
     <portal x="16" y="24" ref="hall2">
-      <destination zone="int_ados_castle_entrance" ref="hall2a" />
+      <destination zone="int_阿多斯_城堡_入口" ref="hall2a" />
     </portal>
     
     <portal x="15" y="21" ref="hall1a">
-      <destination zone="int_ados_castle_entrance" ref="hall1" />
+      <destination zone="int_阿多斯_城堡_入口" ref="hall1" />
     </portal>
     
     <portal x="16" y="21" ref="hall2a">
-      <destination zone="int_ados_castle_entrance" ref="hall2" />
+      <destination zone="int_阿多斯_城堡_入口" ref="hall2" />
     </portal>
     
     <!-- left corridor -->
     <portal x="0" y="3" ref="left1">
-      <destination zone="int_ados_castle_left" ref="bottom1" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom1" />
     </portal>
     
     <portal x="0" y="4" ref="left2">
-      <destination zone="int_ados_castle_left" ref="bottom2" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom2" />
     </portal>
     
     <portal x="0" y="5" ref="left3">
-      <destination zone="int_ados_castle_left" ref="bottom3"/>
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom3"/>
     </portal>
     
     <portal x="0" y="6" ref="left4">
-      <destination zone="int_ados_castle_left" ref="bottom4" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom4" />
     </portal>
     
     <portal x="0" y="7" ref="left5">
-      <destination zone="int_ados_castle_left" ref="bottom5" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom5" />
     </portal>
     
     <portal x="0" y="8" ref="left6">
-      <destination zone="int_ados_castle_left" ref="bottom6" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom6" />
     </portal>
     
     <portal x="0" y="9" ref="left7">
-      <destination zone="int_ados_castle_left" ref="bottom7" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom7" />
     </portal>
     
     <portal x="0" y="10" ref="left8">
-      <destination zone="int_ados_castle_left" ref="bottom8" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom8" />
     </portal>
     
     <portal x="0" y="11" ref="left9">
-      <destination zone="int_ados_castle_left" ref="bottom9" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom9" />
     </portal>
     
     <portal x="0" y="12" ref="left10">
-      <destination zone="int_ados_castle_left" ref="bottom10" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom10" />
     </portal>
     
     <portal x="0" y="13" ref="left11">
-      <destination zone="int_ados_castle_left" ref="bottom11" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="bottom11" />
     </portal>
     
     <!-- right corridor -->
     <portal x="31" y="3" ref="right1">
-      <destination zone="int_ados_castle_right" ref="bottom1" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom1" />
     </portal>
     
     <portal x="31" y="4" ref="right2">
-      <destination zone="int_ados_castle_right" ref="bottom2" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom2" />
     </portal>
     
     <portal x="31" y="5" ref="right3">
-      <destination zone="int_ados_castle_right" ref="bottom3" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom3" />
     </portal>
     
     <portal x="31" y="6" ref="right4">
-      <destination zone="int_ados_castle_right" ref="bottom4" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom4" />
     </portal>
     
     <portal x="31" y="7" ref="right5">
-      <destination zone="int_ados_castle_right" ref="bottom5" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom5" />
     </portal>
     
     <portal x="31" y="8" ref="right6">
-      <destination zone="int_ados_castle_right" ref="bottom6" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom6" />
     </portal>
     
     <portal x="31" y="9" ref="right7">
-      <destination zone="int_ados_castle_right" ref="bottom7" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom7" />
     </portal>
     
     <portal x="31" y="10" ref="right8">
-      <destination zone="int_ados_castle_right" ref="bottom8" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom8" />
     </portal>
     
     <portal x="31" y="11" ref="right9">
-      <destination zone="int_ados_castle_right" ref="bottom9" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom9" />
     </portal>
     
     <portal x="31" y="12" ref="right10">
-      <destination zone="int_ados_castle_right" ref="bottom10" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom10" />
     </portal>
     
     <portal x="31" y="13" ref="right11">
-      <destination zone="int_ados_castle_right" ref="bottom11" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="bottom11" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_castle_left" file="interiors/ados/castle_left.tmx">
+  <zone name="int_阿多斯_城堡_左侧" file="interiors/ados/castle_left.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.castle.JesterNPC" />
     
     <!-- bottom corridor -->
     <portal x="31" y="35" ref="bottom1">
-      <destination zone="int_ados_castle_entrance" ref="left1" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left1" />
     </portal>
     
     <portal x="31" y="36" ref="bottom2">
-      <destination zone="int_ados_castle_entrance" ref="left2" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left2" />
     </portal>
     
     <portal x="31" y="37" ref="bottom3">
-      <destination zone="int_ados_castle_entrance" ref="left3" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left3" />
     </portal>
     
     <portal x="31" y="38" ref="bottom4">
-      <destination zone="int_ados_castle_entrance" ref="left4" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left4" />
     </portal>
     
     <portal x="31" y="39" ref="bottom5">
-      <destination zone="int_ados_castle_entrance" ref="left5" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left5" />
     </portal>
     
     <portal x="31" y="40" ref="bottom6">
-      <destination zone="int_ados_castle_entrance" ref="left6" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left6" />
     </portal>
     
     <portal x="31" y="41" ref="bottom7">
-      <destination zone="int_ados_castle_entrance" ref="left7" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left7" />
     </portal>
     
     <portal x="31" y="42" ref="bottom8">
-      <destination zone="int_ados_castle_entrance" ref="left8" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left8" />
     </portal>
     
     <portal x="31" y="43" ref="bottom9">
-      <destination zone="int_ados_castle_entrance" ref="left9" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left9" />
     </portal>
     
     <portal x="31" y="44" ref="bottom10">
-      <destination zone="int_ados_castle_entrance" ref="left10" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left10" />
     </portal>
     
     <portal x="31" y="45" ref="bottom11">
-      <destination zone="int_ados_castle_entrance" ref="left11" />
+      <destination zone="int_阿多斯_城堡_入口" ref="left11" />
     </portal>
     
     <!-- top corridor -->
     <portal x="31" y="3" ref="top1">
-      <destination zone="int_ados_castle_throne" ref="left1" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left1" />
     </portal>
     
     <portal x="31" y="4" ref="top2">
-      <destination zone="int_ados_castle_throne" ref="left2" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left2" />
     </portal>
     
     <portal x="31" y="5" ref="top3">
-      <destination zone="int_ados_castle_throne" ref="left3" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left3" />
     </portal>
     
     <portal x="31" y="6" ref="top4">
-      <destination zone="int_ados_castle_throne" ref="left4" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left4" />
     </portal>
     
     <portal x="31" y="7" ref="top5">
-     <destination zone="int_ados_castle_throne" ref="left5" />
+     <destination zone="int_阿多斯_城堡_市政厅" ref="left5" />
     </portal>
     
     <portal x="31" y="8" ref="top6">
-      <destination zone="int_ados_castle_throne" ref="left6" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left6" />
     </portal>
     
     <portal x="31" y="9" ref="top7">
-      <destination zone="int_ados_castle_throne" ref="left7" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left7" />
     </portal>
     
     <portal x="31" y="10" ref="top8">
-      <destination zone="int_ados_castle_throne" ref="left8" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left8" />
     </portal>
     
     <portal x="31" y="11" ref="top9">
-      <destination zone="int_ados_castle_throne" ref="left9" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="left9" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_castle_right" file="interiors/ados/castle_right.tmx">
+  <zone name="int_阿多斯_城堡_右侧" file="interiors/ados/castle_right.tmx">
     <!-- bottom corridor -->
     <portal x="0" y="35" ref="bottom1">
-      <destination zone="int_ados_castle_entrance" ref="right1" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right1" />
     </portal>
     
     <portal x="0" y="36" ref="bottom2">
-      <destination zone="int_ados_castle_entrance" ref="right2" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right2" />
     </portal>
     
     <portal x="0" y="37" ref="bottom3">
-      <destination zone="int_ados_castle_entrance" ref="right3" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right3" />
     </portal>
     
     <portal x="0" y="38" ref="bottom4">
-      <destination zone="int_ados_castle_entrance" ref="right4" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right4" />
     </portal>
     
     <portal x="0" y="39" ref="bottom5">
-      <destination zone="int_ados_castle_entrance" ref="right5" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right5" />
     </portal>
     
     <portal x="0" y="40" ref="bottom6">
-      <destination zone="int_ados_castle_entrance" ref="right6" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right6" />
     </portal>
     
     <portal x="0" y="41" ref="bottom7">
-      <destination zone="int_ados_castle_entrance" ref="right7" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right7" />
     </portal>
     
     <portal x="0" y="42" ref="bottom8">
-      <destination zone="int_ados_castle_entrance" ref="right8" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right8" />
     </portal>
     
     <portal x="0" y="43" ref="bottom9">
-      <destination zone="int_ados_castle_entrance" ref="right9" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right9" />
     </portal>
     
     <portal x="0" y="44" ref="bottom10">
-      <destination zone="int_ados_castle_entrance" ref="right10" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right10" />
     </portal>
     
     <portal x="0" y="45" ref="bottom11">
-      <destination zone="int_ados_castle_entrance" ref="right11" />
+      <destination zone="int_阿多斯_城堡_入口" ref="right11" />
     </portal>
     
     <!-- top corridor -->
     <portal x="0" y="3" ref="top1">
-      <destination zone="int_ados_castle_throne" ref="right1" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right1" />
     </portal>
     
     <portal x="0" y="4" ref="top2">
-      <destination zone="int_ados_castle_throne" ref="right2" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right2" />
     </portal>
     
     <portal x="0" y="5" ref="top3">
-      <destination zone="int_ados_castle_throne" ref="right3" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right3" />
     </portal>
     
     <portal x="0" y="6" ref="top4">
-      <destination zone="int_ados_castle_throne" ref="right4" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right4" />
     </portal>
     
     <portal x="0" y="7" ref="top5">
-      <destination zone="int_ados_castle_throne" ref="right5" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right5" />
     </portal>
     
     <portal x="0" y="8" ref="top6">
-      <destination zone="int_ados_castle_throne" ref="right6" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right6" />
     </portal>
     
     <portal x="0" y="9" ref="top7">
-      <destination zone="int_ados_castle_throne" ref="right7" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right7" />
     </portal>
     
     <portal x="0" y="10" ref="top8">
-      <destination zone="int_ados_castle_throne" ref="right8" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right8" />
     </portal>
     
     <portal x="0" y="11" ref="top9">
-      <destination zone="int_ados_castle_throne" ref="right9" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="right9" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_castle_throne" file="interiors/ados/castle_throne.tmx">
+  <zone name="int_阿多斯_城堡_市政厅" file="interiors/ados/castle_throne.tmx">
     <!-- left corridor -->
     <portal x="0" y="16" ref="left1">
-      <destination zone="int_ados_castle_left" ref="top1" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top1" />
     </portal>
     
     <portal x="0" y="17" ref="left2">
-      <destination zone="int_ados_castle_left" ref="top2" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top2" />
     </portal>
     
     <portal x="0" y="18" ref="left3">
-      <destination zone="int_ados_castle_left" ref="top3" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top3" />
     </portal>
     
     <portal x="0" y="19" ref="left4">
-      <destination zone="int_ados_castle_left" ref="top4" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top4" />
     </portal>
     
     <portal x="0" y="20" ref="left5">
-      <destination zone="int_ados_castle_left" ref="top5" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top5" />
     </portal>
     
     <portal x="0" y="21" ref="left6">
-      <destination zone="int_ados_castle_left" ref="top6" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top6" />
     </portal>
     
     <portal x="0" y="22" ref="left7">
-      <destination zone="int_ados_castle_left" ref="top7" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top7" />
     </portal>
     
     <portal x="0" y="23" ref="left8">
-      <destination zone="int_ados_castle_left" ref="top8" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top8" />
     </portal>
     
     <portal x="0" y="24" ref="left9">
-      <destination zone="int_ados_castle_left" ref="top9" />
+      <destination zone="int_阿多斯_城堡_左侧" ref="top9" />
     </portal>
     
     <!-- right corridor -->
     <portal x="31" y="16" ref="right1">
-      <destination zone="int_ados_castle_right" ref="top1" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top1" />
     </portal>
     
     <portal x="31" y="17" ref="right2">
-      <destination zone="int_ados_castle_right" ref="top2" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top2" />
     </portal>
     
     <portal x="31" y="18" ref="right3">
-      <destination zone="int_ados_castle_right" ref="top3" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top3" />
     </portal>
     
     <portal x="31" y="19" ref="right4">
-      <destination zone="int_ados_castle_right" ref="top4" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top4" />
     </portal>
     
     <portal x="31" y="20" ref="right5">
-      <destination zone="int_ados_castle_right" ref="top5" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top5" />
     </portal>
     
     <portal x="31" y="21" ref="right6">
-      <destination zone="int_ados_castle_right" ref="top6" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top6" />
     </portal>
     
     <portal x="31" y="22" ref="right7">
-      <destination zone="int_ados_castle_right" ref="top7" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top7" />
     </portal>
     
     <portal x="31" y="23" ref="right8">
-      <destination zone="int_ados_castle_right" ref="top8" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top8" />
     </portal>
     
     <portal x="31" y="24" ref="right9">
-      <destination zone="int_ados_castle_right" ref="top9" />
+      <destination zone="int_阿多斯_城堡_右侧" ref="top9" />
     </portal>
     
     <!-- garden --> 
@@ -3112,19 +3112,19 @@ My fee:
     
     <!-- secret dungeon-->
     <portal x="15" y="3" ref="secret">
-      <destination zone="int_ados_castle_dungeons" ref="entrance2"/>
+      <destination zone="int_阿多斯_城堡_地牢" ref="entrance2"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_castle_dungeons" file="interiors/ados/castle_dungeons.tmx">
+  <zone name="int_阿多斯_城堡_地牢" file="interiors/ados/castle_dungeons.tmx">
     <!-- Portals -->
     <portal x="33" y="29" ref="entrance1">
       <destination zone="0_ados_city" ref="castledungeons" />
     </portal>
     
     <portal x="46" y="3" ref="entrance2">
-      <destination zone="int_ados_castle_throne" ref="secret" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="secret" />
     </portal>
     
     <portal x="9" y="27" ref="crawlyspacedown">
@@ -3146,7 +3146,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_50" file="interiors/ados/house_50.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_50" file="interiors/ados/house_50.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -3165,17 +3165,17 @@ My fee:
     </portal>
     
     <portal x="12" y="14" ref="up">
-      <destination zone="int_ados_house_50_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_50_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_50_1" file="interiors/ados/house_50_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_50_1" file="interiors/ados/house_50_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="12" y="14" ref="down">
-      <destination zone="int_ados_house_50" ref="up" />
+      <destination zone="int_阿多斯_公寓_50" ref="up" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -3197,7 +3197,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_51" file="interiors/ados/house_51.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_51" file="interiors/ados/house_51.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -3216,17 +3216,17 @@ My fee:
     </portal>
     
     <portal x="3" y="1" ref="up">
-      <destination zone="int_ados_house_51_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_51_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_51_1" file="interiors/ados/house_51_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_51_1" file="interiors/ados/house_51_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="3" y="1" ref="down">
-      <destination zone="int_ados_house_51" ref="up" />
+      <destination zone="int_阿多斯_公寓_51" ref="up" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -3249,7 +3249,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_52" file="interiors/ados/house_52.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_52" file="interiors/ados/house_52.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">12</parameter>
@@ -3268,7 +3268,7 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_52_1" ref="down"/>
+      <destination zone="int_阿多斯_公寓_52_1" ref="down"/>
     </portal>
     
     <!-- Tables -->
@@ -3280,17 +3280,17 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_52_1" file="interiors/ados/house_52_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_52_1" file="interiors/ados/house_52_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_52" ref="up"/>
+      <destination zone="int_阿多斯_公寓_52" ref="up"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_53" file="interiors/ados/house_53.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_53" file="interiors/ados/house_53.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -3309,22 +3309,22 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_53_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_53_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_53_1" file="interiors/ados/house_53_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_53_1" file="interiors/ados/house_53_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_53" ref="up" />
+      <destination zone="int_阿多斯_公寓_53" ref="up" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_54" file="interiors/ados/house_54.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_54" file="interiors/ados/house_54.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">12</parameter>
@@ -3347,7 +3347,7 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_54_1" ref="down"/>
+      <destination zone="int_阿多斯_公寓_54_1" ref="down"/>
     </portal>
     
     <!-- Tables -->
@@ -3364,17 +3364,17 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_54_1" file="interiors/ados/house_54_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_54_1" file="interiors/ados/house_54_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_54" ref="up"/>
+      <destination zone="int_阿多斯_公寓_54" ref="up"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_55" file="interiors/ados/house_55.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_55" file="interiors/ados/house_55.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">12</parameter>
@@ -3397,12 +3397,12 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_55_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_55_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_55_1" file="interiors/ados/house_55_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_55_1" file="interiors/ados/house_55_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Interactive sounds -->
@@ -3423,12 +3423,12 @@ My fee:
     </entity>
     
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_55" ref="up" />
+      <destination zone="int_阿多斯_公寓_55" ref="up" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_56" file="interiors/ados/house_56.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_56" file="interiors/ados/house_56.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -3446,12 +3446,12 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_56_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_56_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_56_1" file="interiors/ados/house_56_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_56_1" file="interiors/ados/house_56_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
   <!-- Interactive sounds -->
@@ -3466,12 +3466,12 @@ My fee:
   
   <!-- Portal -->
   <portal x="3" y="3" ref="down">
-    <destination zone="int_ados_house_56" ref="up" />
+    <destination zone="int_阿多斯_公寓_56" ref="up" />
   </portal>
   
   </zone>
   
-  <zone name="int_ados_house_57" file="interiors/ados/house_57.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_57" file="interiors/ados/house_57.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">12</parameter>
@@ -3489,12 +3489,12 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_57_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_57_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_57_1" file="interiors/ados/house_57_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_57_1" file="interiors/ados/house_57_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Piano -->
@@ -3508,12 +3508,12 @@ My fee:
     </entity>
     
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_57" ref="up"/>
+      <destination zone="int_阿多斯_公寓_57" ref="up"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_58" file="interiors/ados/house_58.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_58" file="interiors/ados/house_58.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">11</parameter>
@@ -3543,7 +3543,7 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_58_1" ref="down"/>
+      <destination zone="int_阿多斯_公寓_58_1" ref="down"/>
     </portal>
     
     <!-- Tables -->
@@ -3554,7 +3554,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_58_1" file="interiors/ados/house_58_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_58_1" file="interiors/ados/house_58_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.maps.semos.city.FertileGrounds">
       <parameter name="x">3</parameter>
@@ -3565,12 +3565,12 @@ My fee:
     
     <!-- Portals -->
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_58" ref="up"/>
+      <destination zone="int_阿多斯_公寓_58" ref="up"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_59" file="interiors/ados/house_59.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_59" file="interiors/ados/house_59.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -3607,7 +3607,7 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_59_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_59_1" ref="down" />
     </portal>
     
     <!-- Tables -->
@@ -3619,17 +3619,17 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_59_1" file="interiors/ados/house_59_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_59_1" file="interiors/ados/house_59_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_59" ref="up" />
+      <destination zone="int_阿多斯_公寓_59" ref="up" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_60" file="interiors/ados/house_60.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_60" file="interiors/ados/house_60.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">7</parameter>
@@ -3647,7 +3647,7 @@ My fee:
       <destination zone="0_ados_city_n" ref="house_60"/>
     </portal>
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_60_1" ref="down"/>
+      <destination zone="int_阿多斯_公寓_60_1" ref="down"/>
     </portal>
     
     <!-- Tables -->
@@ -3677,17 +3677,17 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_60_1" file="interiors/ados/house_60_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_60_1" file="interiors/ados/house_60_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_60" ref="up"/>
+      <destination zone="int_阿多斯_公寓_60" ref="up"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_61" file="interiors/ados/house_61.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_61" file="interiors/ados/house_61.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">5</parameter>
@@ -3699,7 +3699,7 @@ My fee:
       <destination zone="0_ados_city_n" ref="house_61"/>
     </portal>
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_61_1" ref="down"/>
+      <destination zone="int_阿多斯_公寓_61_1" ref="down"/>
     </portal>
     
     <!-- Tables -->
@@ -3729,7 +3729,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_61_1" file="interiors/ados/house_61_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_61_1" file="interiors/ados/house_61_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.maps.semos.city.FertileGrounds">
       <parameter name="x">2</parameter>
@@ -3740,12 +3740,12 @@ My fee:
     
     <!-- Portals -->
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_61" ref="up"/>
+      <destination zone="int_阿多斯_公寓_61" ref="up"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_62" file="interiors/ados/house_62.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_62" file="interiors/ados/house_62.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">13</parameter>
@@ -3764,17 +3764,17 @@ My fee:
     </portal>
     
     <portal x="3" y="3" ref="up">
-      <destination zone="int_ados_house_62_1" ref="down" />
+      <destination zone="int_阿多斯_公寓_62_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_house_62_1" file="interiors/ados/house_62_1.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_62_1" file="interiors/ados/house_62_1.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->  
     <portal x="3" y="3" ref="down">
-      <destination zone="int_ados_house_62" ref="up" />
+      <destination zone="int_阿多斯_公寓_62" ref="up" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -3789,7 +3789,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_63" file="interiors/ados/house_63.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_63" file="interiors/ados/house_63.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">20</parameter>
@@ -3809,7 +3809,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_64" file="interiors/ados/house_64.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_64" file="interiors/ados/house_64.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">20</parameter>
@@ -3829,7 +3829,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_65" file="interiors/ados/house_65.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_65" file="interiors/ados/house_65.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">10</parameter>
@@ -3849,7 +3849,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_66" file="interiors/ados/house_66.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_66" file="interiors/ados/house_66.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">19</parameter>
@@ -3906,7 +3906,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_67" file="interiors/ados/house_67.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_67" file="interiors/ados/house_67.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">20</parameter>
@@ -3926,7 +3926,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_68" file="interiors/ados/house_68.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_68" file="interiors/ados/house_68.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">22</parameter>
@@ -3940,7 +3940,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_69" file="interiors/ados/house_69.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_69" file="interiors/ados/house_69.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">9</parameter>
@@ -3971,7 +3971,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_70" file="interiors/ados/house_70.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_70" file="interiors/ados/house_70.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x">11</parameter>
@@ -4295,7 +4295,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_wall" level="0" x="500768" y="500000" file="Level 0/ados/wall.tmx">
+  <zone name="0_阿多斯_城墙" level="0" x="500768" y="500000" file="Level 0/ados/wall.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -4332,11 +4332,11 @@ My fee:
     </portal>
     
     <portal x="108" y="106" ref="diving_board">
-      <destination zone="0_ados_wall" ref="diving_board_destination" />
+      <destination zone="0_阿多斯_城墙" ref="diving_board_destination" />
     </portal>
     
     <portal x="118" y="9" ref="house_71">
-      <destination zone="int_ados_house_71" ref="in" />
+      <destination zone="int_阿多斯_公寓_71" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 71</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4344,7 +4344,7 @@ My fee:
     </portal>
     
     <portal x="119" y="23" ref="house_72">
-      <destination zone="int_ados_house_72" ref="in" />
+      <destination zone="int_阿多斯_公寓_72" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 72</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4352,7 +4352,7 @@ My fee:
     </portal> 
     
     <portal x="119" y="34" ref="house_73">
-      <destination zone="int_ados_house_73" ref="in" />
+      <destination zone="int_阿多斯_公寓_73" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 73</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4360,7 +4360,7 @@ My fee:
     </portal>
     
     <portal x="121" y="56" ref="house_74">
-      <destination zone="int_ados_house_74" ref="in"/>
+      <destination zone="int_阿多斯_公寓_74" ref="in"/>
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 74</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4368,7 +4368,7 @@ My fee:
     </portal>
     
     <portal x="99" y="91" ref="house_75">
-      <destination zone="int_ados_house_75" ref="in"/>
+      <destination zone="int_阿多斯_公寓_75" ref="in"/>
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 75</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4376,7 +4376,7 @@ My fee:
     </portal>
     
     <portal x="108" y="91" ref="house_76">
-      <destination zone="int_ados_house_76" ref="in" />
+      <destination zone="int_阿多斯_公寓_76" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 76</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4384,7 +4384,7 @@ My fee:
     </portal>
     
     <portal x="117" y="91" ref="house_77">
-      <destination zone="int_ados_house_77" ref="in" />
+      <destination zone="int_阿多斯_公寓_77" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 77</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4565,16 +4565,16 @@ My fee:
     
     <!-- castle garden entrance --> 
     <portal x="17" y="24" ref="ingardenleft">
-      <destination zone="int_ados_castle_throne" ref="outgardenleft" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="outgardenleft" />
     </portal>
     
     <portal x="18" y="24" ref="ingardenright">
-      <destination zone="int_ados_castle_throne" ref="outgardenright" />
+      <destination zone="int_阿多斯_城堡_市政厅" ref="outgardenright" />
     </portal>
     
     <!-- castle dungeon-->
     <portal x="10" y="31" ref="castledungeons">
-      <destination zone="int_ados_castle_dungeons" ref="entrance1" />
+      <destination zone="int_阿多斯_城堡_地牢" ref="entrance1" />
     </portal>
     
     <point-of-interest x="10" y="31">
@@ -4591,7 +4591,7 @@ My fee:
     </entity>
     
     <portal x="5" y="52" ref="house_63">
-      <destination zone="int_ados_house_63" ref="in" />
+      <destination zone="int_阿多斯_公寓_63" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 63</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4599,7 +4599,7 @@ My fee:
     </portal>
     
     <portal x="5" y="60" ref="house_64">
-      <destination zone="int_ados_house_64" ref="in" />
+      <destination zone="int_阿多斯_公寓_64" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 64</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4607,7 +4607,7 @@ My fee:
     </portal>
     
     <portal x="5" y="69" ref="house_65">
-      <destination zone="int_ados_house_65" ref="in" />
+      <destination zone="int_阿多斯_公寓_65" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 65</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4615,7 +4615,7 @@ My fee:
     </portal>
     
     <portal x="5" y="76" ref="house_66">
-      <destination zone="int_ados_house_66" ref="in" />
+      <destination zone="int_阿多斯_公寓_66" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 66</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4623,7 +4623,7 @@ My fee:
     </portal>
     
     <portal x="18" y="55" ref="house_67">
-      <destination zone="int_ados_house_67" ref="in" />
+      <destination zone="int_阿多斯_公寓_67" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 67</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4631,7 +4631,7 @@ My fee:
     </portal>
     
     <portal x="18" y="61" ref="house_68">
-      <destination zone="int_ados_house_68" ref="in" />
+      <destination zone="int_阿多斯_公寓_68" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 68</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4639,7 +4639,7 @@ My fee:
     </portal>
     
     <portal x="50" y="60" ref="house_69">
-      <destination zone="int_ados_house_69" ref="in" />
+      <destination zone="int_阿多斯_公寓_69" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 69</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4647,7 +4647,7 @@ My fee:
     </portal>
     
     <portal x="22" y="113" ref="house_70">
-      <destination zone="int_ados_house_70" ref="in" />
+      <destination zone="int_阿多斯_公寓_70" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 70</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4691,7 +4691,7 @@ My fee:
     </portal>
     
     <portal x="17" y="40" ref="castle_left_entrance">
-      <destination zone="int_ados_castle_entrance" ref="entranceleft" />
+      <destination zone="int_阿多斯_城堡_入口" ref="entranceleft" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">10</parameter>
         <parameter name="rejected">Assassins have taken over the castle and blocked the door. You are too weak to force it open.</parameter>
@@ -4699,7 +4699,7 @@ My fee:
     </portal>
     
     <portal x="18" y="40" ref="castle_centre_entrance">
-      <destination zone="int_ados_castle_entrance" ref="entranceright" />
+      <destination zone="int_阿多斯_城堡_入口" ref="entranceright" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">10</parameter>
         <parameter name="rejected">Assassins have taken over the castle and blocked the door. You are too weak to force it open.</parameter>
@@ -4707,7 +4707,7 @@ My fee:
     </portal>
     
     <portal x="19" y="40" ref="castle_right_entrance">
-      <destination zone="int_ados_castle_entrance" ref="entranceright" />
+      <destination zone="int_阿多斯_城堡_入口" ref="entranceright" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">10</parameter>
         <parameter name="rejected">Assassins have taken over the castle and blocked the door. You are too weak to force it open.</parameter>
@@ -4756,7 +4756,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_wall_s" level="0" x="500768" y="500128" file="Level 0/ados/wall_s.tmx">
+  <zone name="0_阿多斯_城墙_s" level="0" x="500768" y="500128" file="Level 0/ados/wall_s.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -4887,7 +4887,7 @@ My fee:
     
     <!-- Houses not ready for sale
     <portal x="4" y="10" ref="house_78">
-      <destination zone="int_ados_house_78" ref="in" />
+      <destination zone="int_阿多斯_公寓_78" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 78</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4895,7 +4895,7 @@ My fee:
     </portal>
     
     <portal x="15" y="10" ref="house_79">
-      <destination zone="int_ados_house_79" ref="in" />
+      <destination zone="int_阿多斯_公寓_79" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 79</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4903,7 +4903,7 @@ My fee:
     </portal>
     
     <portal x="25" y="8" ref="house_80">
-      <destination zone="int_ados_house_80" ref="in" />
+      <destination zone="int_阿多斯_公寓_80" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 80</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4911,7 +4911,7 @@ My fee:
     </portal>
     
     <portal x="34" y="41" ref="house_81">
-      <destination zone="int_ados_house_81" ref="in" />
+      <destination zone="int_阿多斯_公寓_81" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 81</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4919,7 +4919,7 @@ My fee:
     </portal>
     
     <portal x="47" y="41" ref="house_82">
-      <destination zone="int_ados_house_82" ref="in" />
+      <destination zone="int_阿多斯_公寓_82" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 82</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4927,7 +4927,7 @@ My fee:
     </portal>
     
     <portal x="34" y="50" ref="house_83">
-      <destination zone="int_ados_house_83" ref="in" />
+      <destination zone="int_阿多斯_公寓_83" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 83</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -4935,7 +4935,7 @@ My fee:
     </portal>
     
     <portal x="47" y="50" ref="house_84">
-      <destination zone="int_ados_house_84" ref="in" />
+      <destination zone="int_阿多斯_公寓_84" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.HousePortal">
         <parameter name="doorId">ados house 84</parameter>
         <parameter name="rejected">门锁住了</parameter>
@@ -5019,7 +5019,7 @@ My fee:
   </zone>
   
   <!-- fill in the interior portal and chest locations as you uncomment these
-  <zone name="int_ados_house_78" file="interiors/ados/house_78.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_78" file="interiors/ados/house_78.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x"></parameter>
@@ -5032,7 +5032,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_79" file="interiors/ados/house_79.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_79" file="interiors/ados/house_79.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x"></parameter>
@@ -5061,7 +5061,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_80" file="interiors/ados/house_80.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_80" file="interiors/ados/house_80.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x"></parameter>
@@ -5074,7 +5074,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_81" file="interiors/ados/house_81.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_81" file="interiors/ados/house_81.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x"></parameter>
@@ -5087,7 +5087,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_82" file="interiors/ados/house_82.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_82" file="interiors/ados/house_82.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x"></parameter>
@@ -5100,7 +5100,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_83" file="interiors/ados/house_83.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_83" file="interiors/ados/house_83.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x"></parameter>
@@ -5113,7 +5113,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_house_84" file="interiors/ados/house_84.tmx" accessible="false">
+  <zone name="int_阿多斯_公寓_84" file="interiors/ados/house_84.tmx" accessible="false">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <configurator class-name="games.stendhal.server.entity.mapstuff.chest.StoredChestConfigurator">
       <parameter name="x"></parameter>
@@ -5138,7 +5138,7 @@ My fee:
   
   
   
-  <zone name="0_ados_coast_s_w2" level="0" x="500640" y="500256" file="Level 0/ados/coast_s_w2.tmx">
+  <zone name="0_阿多斯_海岸_s_w2" level="0" x="500640" y="500256" file="Level 0/ados/coast_s_w2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -5160,7 +5160,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_coast_sw" level="0" x="500768" y="500256" file="Level 0/ados/coast_sw.tmx">
+  <zone name="0_阿多斯_海岸_sw" level="0" x="500768" y="500256" file="Level 0/ados/coast_sw.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -5168,7 +5168,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_coast_s" level="0" x="500896" y="500256" file="Level 0/ados/coast_s.tmx">
+  <zone name="0_阿多斯_海岸_s" level="0" x="500896" y="500256" file="Level 0/ados/coast_s.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -5205,12 +5205,12 @@ My fee:
     
   	<!-- Portals -->
   	<portal x="13" y="126" ref="up1">
-  		<destination zone="0_ados_mountain_n2_w" ref="keep1" />
+  		<destination zone="0_阿多斯_山脉_n2_w" ref="keep1" />
   		<attribute name="face">north</attribute>
   	</portal>
   	
   	<portal x="14" y="126" ref="up2">
-  		<destination zone="0_ados_mountain_n2_w" ref="keep2" />
+  		<destination zone="0_阿多斯_山脉_n2_w" ref="keep2" />
   		<attribute name="face">north</attribute>
   	</portal>
   	
@@ -5275,7 +5275,7 @@ My fee:
     
   </zone>
   
-  <zone name="-1_ados_wall_n" level="-1" x="500768" y="499872" file="Level -1/ados/wall_n.tmx">
+  <zone name="-1_阿多斯_城墙_n" level="-1" x="500768" y="499872" file="Level -1/ados/wall_n.tmx">
     <attributes>
       <!-- dingy green -->
       <parameter name="color_method">multiply</parameter>
@@ -5311,7 +5311,7 @@ My fee:
     
   </zone>
   
-  <zone name="-1_ados_wall" level="-1" x="500768" y="500000" file="Level -1/ados/wall.tmx">
+  <zone name="-1_阿多斯_城墙" level="-1" x="500768" y="500000" file="Level -1/ados/wall.tmx">
     <attributes>
       <!-- dingy green -->
       <parameter name="color_method">multiply</parameter>
@@ -5344,7 +5344,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="20" y="25" ref="crawlyspaceup">
-      <destination zone="int_ados_castle_dungeons" ref="crawlyspacedown" />
+      <destination zone="int_阿多斯_城堡_地牢" ref="crawlyspacedown" />
     </portal>
     
     <!-- Music/Ambiance -->
@@ -5360,11 +5360,11 @@ My fee:
   <!-- commented out till ready
   <zone name="-1_ados_vaults" level="-1" x="500768" y="500128" file="Level -1/ados/vaults.tmx">
     <portal x="49" y="28" ref="up_left">
-      <destination zone="0_ados_wall_s" ref="down_left" />
+      <destination zone="0_阿多斯_城墙_s" ref="down_left" />
     </portal>
     
     <portal x="50" y="28" ref="up_right">
-      <destination zone="0_ados_wall_s" ref="down_right" />
+      <destination zone="0_阿多斯_城墙_s" ref="down_right" />
     </portal>
     
   </zone>

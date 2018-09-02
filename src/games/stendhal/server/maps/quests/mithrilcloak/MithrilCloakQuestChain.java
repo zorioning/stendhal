@@ -32,7 +32,7 @@ package games.stendhal.server.maps.quests.mithrilcloak;
  * STEPS:
  * <ul>
  * <li>Ida needs sewing machine fixed, with one of three items from a list</li>
- * <li>Once machine fixed and if you have done mithril shield quest, Ida offers you cloak</li>
+ * <li>Once machine fixed and if you have done 黑曜石盾 quest, Ida offers you cloak</li>
  * <li>Kampusch tells you to how to make the fabric</li>
  * <li>Imperial scientists take silk glands and make silk thread</li>
  * <li>Kampusch fuses mithril nuggets into the silk thread</li>
@@ -47,8 +47,8 @@ package games.stendhal.server.maps.quests.mithrilcloak;
  * <li>Pdiddi sells the moss to get to twilight zone</li>
  * <li>A creature in the twilight zone drops the elixir to heal lda</li>
  * <li>After being ill Ida asks you to take a 蓝色条纹斗篷 to Josephine</li>
- * <li>After taking cloak to Josephine and telling Ida she asks for mithril clasp</li>
- * <li>Pedinghaus makes mithril clasp</li>
+ * <li>After taking cloak to Josephine and telling Ida she asks for 黑曜石胸针</li>
+ * <li>Pedinghaus makes 黑曜石胸针</li>
  * <li>The clasp completes the cloak</li>
  * </ul>
  * <p>

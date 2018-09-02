@@ -42,7 +42,7 @@
   
   <item name="scroll eraser">
     <type class="tool" subclass="scrolleraser" tileid="-1"/>
-    <description>You see a scroll eraser. Put a marked scroll in the opposite hand to clean the scroll.</description>
+    <description>You see a scroll eraser. Put a 标记卷轴 in the opposite hand to clean the scroll.</description>
     <implementation class-name="games.stendhal.server.entity.item.FoodMill"/>
     <attributes>
       <menu value="Use|Use"/>

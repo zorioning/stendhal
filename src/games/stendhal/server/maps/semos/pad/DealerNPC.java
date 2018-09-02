@@ -23,7 +23,7 @@ import games.stendhal.server.core.pathfinder.Node;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds the NPC who deals in rainbow beans.
+ * Builds the NPC who deals in 彩虹豆.
  * Other behaviour defined in maps/quests/RainbowBeans.java
  *
  * @author kymara

@@ -65,7 +65,7 @@ class Marriage {
 							return player.hasQuest(marriage.getQuestSlot())
 									&& player.getQuest(marriage.getQuestSlot()).startsWith(
 											"engaged")
-									&& player.isEquipped("wedding ring");
+									&& player.isEquipped("婚戒");
 						}
 					},
 					// TODO: make sure the pair getting married are engaged to each
@@ -139,11 +139,11 @@ class Marriage {
 						public boolean fire(final Player player, final Sentence sentence,
 								final Entity npc) {
 							return (!player.hasQuest(marriage.getQuestSlot())
-									|| (player.hasQuest(marriage.getQuestSlot())	&& player.getQuest(marriage.getQuestSlot()).startsWith("engaged") && !player.isEquipped("wedding ring")));
+									|| (player.hasQuest(marriage.getQuestSlot())	&& player.getQuest(marriage.getQuestSlot()).startsWith("engaged") && !player.isEquipped("婚戒")));
 						}
 					},
 					ConversationStates.ATTENDING,
-					"You're not ready to be married yet. Come back when you are properly engaged, and bring your wedding ring. And try to remember not to leave your partner behind ....",
+					"You're not ready to be married yet. Come back when you are properly engaged, and bring your 婚戒. And try to remember not to leave your partner behind ....",
 					null);
 
 		// What he responds to marry if you are already married
@@ -186,9 +186,9 @@ class Marriage {
 		} else if (bride.hasQuest(marriage.getQuestSlot())
 				&& !bride.getQuest(marriage.getQuestSlot()).startsWith("engaged")) {
 			priest.say(bride.getName() + " isn't engaged.");
-		}  else if (!bride.isEquipped("wedding ring")) {
+		}  else if (!bride.isEquipped("婚戒")) {
 			priest.say(bride.getName()
-					+ " hasn't got a wedding ring to give you.");
+					+ " hasn't got a 婚戒 to give you.");
 		} else {
 			askGroom();
 		}
@@ -228,9 +228,9 @@ class Marriage {
 
 	private void giveRing(final Player player, final Player partner) {
 		// players bring their own golden rings
-		player.drop("wedding ring");
+		player.drop("婚戒");
 		final Item ring = SingletonRepository.getEntityManager().getItem(
-				"wedding ring");
+				"婚戒");
 		ring.setInfoString(partner.getName());
 		ring.setBoundTo(player.getName());
 		player.equipOrPutOnGround(ring);
