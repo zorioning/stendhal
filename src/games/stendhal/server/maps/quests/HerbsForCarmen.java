@@ -77,7 +77,7 @@ public class HerbsForCarmen extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "arandula=5;porcini=1;apple=3;wood=2;button mushroom=1";
+	protected static final String NEEDED_ITEMS = "arandula=5;porcini=1;apple=3;木头=2;button mushroom=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {

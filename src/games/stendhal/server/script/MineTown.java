@@ -20,7 +20,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.quests.MineTownRevivalWeeks;
 
 /**
- * Starts or stops the Mine Town Revival Weeks.
+ * Starts or stops the 矿镇复兴展会周.
  *
  * information about semos.xml changes at the bottom of the script
  * @author hendrik
@@ -43,26 +43,26 @@ public class MineTown extends ScriptImpl {
 	}
 
 	/**
-	 * Starts the Mine Town Revival Weeks.
+	 * Starts the 矿镇复兴展会周.
 	 *
 	 * @param admin adminstrator running the script
 	 */
 	private void startSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) != null) {
-			admin.sendPrivateText("Mine Town Revival Weeks are already active.");
+			admin.sendPrivateText("矿镇复兴展会周 are already active.");
 			return;
 		}
 		StendhalQuestSystem.get().loadQuest(new MineTownRevivalWeeks());
 	}
 
 	/**
-	 * Ends the Mine Town Revival Weeks.
+	 * Ends the 矿镇复兴展会周.
 	 *
 	 * @param admin adminstrator running the script
 	 */
 	private void stopSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) == null) {
-			admin.sendPrivateText("Mine Town Revival Weeks are not active.");
+			admin.sendPrivateText("矿镇复兴展会周 are not active.");
 			return;
 		}
 		StendhalQuestSystem.get().unloadQuest(MineTownRevivalWeeks.QUEST_NAME);
@@ -86,7 +86,7 @@ public class MineTown extends ScriptImpl {
 
 // Wooden arch at:
 // x="94" y="118", x="95" y="119", x="96" y="119"
-// <attribute name="text">Welcome to the Mine Town Revival Weeks xxxx!</attribute>
+// <attribute name="text">Welcome to the 矿镇复兴展会周 xxxx!</attribute>
 
 // The 塞门镇_halloween.tmx map
 // Banners at:

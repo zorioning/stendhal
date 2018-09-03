@@ -152,9 +152,9 @@ public class BalloonForBobby extends AbstractQuest {
 				"balloon",
 				new SystemPropertyCondition("stendhal.minetown"),
 				ConversationStates.ATTENDING,
-				"从天上的云可以得知，矿镇周还会继续。"
+				"从天上的云可以得知，矿镇复兴展会还会继续。"
 				+ " 我会有很多气球。"
-				+ " 当矿镇周结束后再来看看 :)",
+				+ " 当矿镇复兴展会周结束后再来看看 :)",
 				null);
 	}
 

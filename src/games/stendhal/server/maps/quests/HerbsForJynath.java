@@ -28,7 +28,7 @@ public class HerbsForJynath extends AbstractQuest {
 
     public static final String QUEST_SLOT = "herbs_jynath";
     // The things that need to be collected by user to
-    protected static final String NEEDED_ITEMS = "beer=2;wood=2";
+    protected static final String NEEDED_ITEMS = "beer=2;木头=2";
     // "herbs" added to quest messages
     List<String> NEW_QUEST_MESSAGES = ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, "herbs");
 

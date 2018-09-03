@@ -451,7 +451,7 @@ public final class ShopList {
 		//Scuba Instructor Edward
 		shops.add("sellScubaStuff", "scuba gear", 22000);
 
-		// Mine Town Revival Weeks Caroline
+		// 矿镇复兴展会周 Caroline
 		shops.add("sellrevivalweeks", "cherry pie", 195);
 		shops.add("sellrevivalweeks", "apple pie", 195);
 		shops.add("sellrevivalweeks", "vanilla shake", 120);

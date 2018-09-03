@@ -21,7 +21,7 @@ import games.stendhal.server.maps.ados.city.MakeupArtistNPC;
 import games.stendhal.server.maps.quests.PaperChase;
 
 /**
- * Make up Artist Fidorea during the Mine Town Revival Weeks
+ * Make up Artist Fidorea during the 矿镇复兴展会周
  */
 public class MakeupArtist implements LoadableContent {
 

@@ -47,9 +47,9 @@ public class AdminHelpNPC implements ZoneConfigurator {
 				addReply("nice", "想知道多少玩家认为你的帮助很到位？好吧，我告诉你 loads of them do.");
 				addReply("things", "因此，你是一个可以测试全部 #blue #words 的人, 对吧? 现在你对你的职责感到惊奇吧！");
 				addReply("blue", "Aw, 不要发愁 :( 听个好音乐，可能会好... ");
-				addReply("words", "玫瑰s are red, violets are blue, Stendhal is great, and so are you!");
+				addReply("words", "玫瑰是红的, 紫萝兰是蓝色，Stendhal很好玩，还有你!");
 			//	addReply("portals", "The one with the Sun goes to 塞门镇. It shows you where this house really is. The rest are clear, I hope. There is a door to the bank, the jail, and the Death Match in Ados. Of course they are all one way portals so you will not be disturbed by unexpected visitors.");
-				addReply("portals", "顶着太阳云了semos镇，它说明了这个房子真实的位置。我希望安静且清楚.这里是通向Ados城的银行、监狱、死亡赛场的入口，当然这些是一种传送方法。所以你也不必奇怪遇到意料之外的玩家");
+				addReply("portals", "塞门镇太阳升起的地方，指示出这个房子真实的位置。剩下的就很清楚了.这里是通向Ados阿多斯城的银行、监狱、死亡赛场的入口，当然这些是一种传送方法。所以你也不必奇怪遇到意料之外的玩家");
 				addQuest("现在你正测试多少种想法w you're really testing how much thought went into making me!");
 				add(ConversationStates.ATTENDING,
 						"playground",
