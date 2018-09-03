@@ -26,7 +26,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Crearid, an old lady found in Nalwor city</li>
+ * <li>Crearid, an old lady found in 纳尔沃城</li>
  * </ul>
  *
  * STEPS:

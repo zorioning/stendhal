@@ -268,7 +268,7 @@ public class AdosDeathmatch extends AbstractQuest {
 						  new DeathMatchEmptyCondition(),
 						  new NotCondition(new PlayerHasPetOrSheepCondition())),
 				 ConversationStates.IDLE, null,
-				 new TeleportAction("0_ados_wall_n", 100, 86, Direction.DOWN));
+				 new TeleportAction("0_阿多斯_城墙_n", 100, 86, Direction.DOWN));
 
 
 		npc2.add(ConversationStates.ATTENDING, Arrays.asList("比赛", "挑战","challenge"),
@@ -299,7 +299,7 @@ public class AdosDeathmatch extends AbstractQuest {
 
 		npc2.add(ConversationStates.QUESTION_1, ConversationPhrases.YES_MESSAGES, null,
 				 ConversationStates.IDLE, null,
-				 new TeleportAction("0_ados_wall_n", 100, 86, Direction.DOWN));
+				 new TeleportAction("0_阿多斯_城墙_n", 100, 86, Direction.DOWN));
 
 
 		npc2.add(ConversationStates.QUESTION_1, ConversationPhrases.NO_MESSAGES, null,

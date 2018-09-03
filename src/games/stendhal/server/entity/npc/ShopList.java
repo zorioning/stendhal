@@ -57,27 +57,27 @@ public final class ShopList {
 		shops.add("superhealing", "mega potion", 1500);
 
 		shops.add("scrolls", "home scroll", 250);
-		shops.add("scrolls", "summon scroll", 200);
-		shops.add("scrolls", "empty scroll", 2000);
+		shops.add("scrolls", "召唤卷轴", 200);
+		shops.add("scrolls", "空白卷轴", 2000);
 
 		shops.add("fadoscrolls", "法多城回城卷", 600);
-		shops.add("fadoscrolls", "empty scroll", 2200);
+		shops.add("fadoscrolls", "空白卷轴", 2200);
 
-		shops.add("nalworscrolls", "nalwor city scroll", 400);
-		shops.add("nalworscrolls", "empty scroll", 2000);
+		shops.add("nalworscrolls", "纳尔沃城回城卷", 400);
+		shops.add("nalworscrolls", "空白卷轴", 2000);
 
 		shops.add("adosscrolls", "阿多斯城回城卷", 400);
-		shops.add("adosscrolls", "empty scroll", 2000);
+		shops.add("adosscrolls", "空白卷轴", 2000);
 
 		shops.add("kirdnehscrolls", "kirdneh city scroll", 400);
 		shops.add("kirdnehscrolls", "home scroll", 400);
-		shops.add("kirdnehscrolls", "empty scroll", 2000);
+		shops.add("kirdnehscrolls", "空白卷轴", 2000);
 
 		shops.add("allscrolls", "home scroll", 250);
-		shops.add("allscrolls", "summon scroll", 200);
-		shops.add("allscrolls", "empty scroll", 2000);
+		shops.add("allscrolls", "召唤卷轴", 200);
+		shops.add("allscrolls", "空白卷轴", 2000);
 		shops.add("allscrolls", "阿多斯城回城卷", 400);
-		shops.add("allscrolls", "nalwor city scroll", 400);
+		shops.add("allscrolls", "纳尔沃城回城卷", 400);
 		shops.add("allscrolls", "法多城回城卷", 600);
 		shops.add("allscrolls", "kirdneh city scroll", 600);
 
@@ -95,15 +95,15 @@ public final class ShopList {
 		shops.add("sellbetterstuff1", "蓝色条纹斗篷", 5000);
 		shops.add("sellbetterstuff1", "blue helmet", 6000);
 		shops.add("sellbetterstuff1", "blue legs", 6000);
-		shops.add("sellbetterstuff1", "blue shield", 20000);
-		shops.add("sellbetterstuff1", "assassin dagger", 12000);
+		shops.add("sellbetterstuff1", "蓝盾", 20000);
+		shops.add("sellbetterstuff1", "刺客匕首", 12000);
 
 		shops.add("sellbetterstuff2", "影子铠甲", 18000);
 		shops.add("sellbetterstuff2", "影子靴子", 4000);
 		shops.add("sellbetterstuff2", "影子斗篷", 7000);
 		shops.add("sellbetterstuff2", "shadow helmet", 8000);
 		shops.add("sellbetterstuff2", "shadow legs", 10000);
-		shops.add("sellbetterstuff2", "shadow shield", 30000);
+		shops.add("sellbetterstuff2", "影盾", 30000);
 		shops.add("sellbetterstuff2", "hell dagger", 20000);
 
 		shops.add("sellrangedstuff", "木弓", 300);
@@ -111,7 +111,7 @@ public final class ShopList {
 
 		shops.add("buystuff", "short sword", 15);
 		shops.add("buystuff", "sword", 60);
-		shops.add("buystuff", "studded shield", 20);
+		shops.add("buystuff", "镶嵌盾", 20);
 		shops.add("buystuff", "镶嵌甲", 22);
 		shops.add("buystuff", "studded helmet", 17);
 		shops.add("buystuff", "studded legs", 20);
@@ -136,7 +136,7 @@ public final class ShopList {
 
 		shops.add("buygrain", "grain", 1);
 
-		shops.add("sellrings", "engagement ring", 5000);
+		shops.add("sellrings", "订婚戒指", 5000);
 		// gold and gemstones
 		shops.add("buyprecious", "gold bar", 250);
 		shops.add("buyprecious", "emerald", 200);
@@ -150,30 +150,30 @@ public final class ShopList {
 		shops.add("buyrare", "scimitar", 65);
 		shops.add("buyrare", "katana", 70);
 		shops.add("buyrare", "大砍刀", 75);
-		shops.add("buyrare", "golden hammer", 80);
+		shops.add("buyrare", "黄金战锤", 80);
 
 		// rare armor shop
 		shops.add("buyrare", "加固锁子甲", 32);
 		shops.add("buyrare", "黄金锁子甲", 52);
 		shops.add("buyrare", "板甲", 62);
-		shops.add("buyrare", "plate shield", 40);
-		shops.add("buyrare", "lion shield", 50);
+		shops.add("buyrare", "钢盾", 40);
+		shops.add("buyrare", "狮盾", 50);
 
 		// rare elf weapons buyer
 		shops.add("elfbuyrare", "战斧", 70);
 		shops.add("elfbuyrare", "双刃斧", 80);
-		shops.add("elfbuyrare", "claymore", 90);
-		shops.add("elfbuyrare", "broadsword", 100);
+		shops.add("elfbuyrare", "双刃剑", 90);
+		shops.add("elfbuyrare", "阔剑", 100);
 		shops.add("elfbuyrare", "staff", 75);
-		shops.add("elfbuyrare", "enhanced lion shield", 100);
-		shops.add("elfbuyrare", "crown shield", 120);
+		shops.add("elfbuyrare", "加强狮盾", 100);
+		shops.add("elfbuyrare", "王冠之盾", 120);
 
 		// more rare weapons shop (fado)
-		shops.add("buyrare2", "war hammer", 120);
-		shops.add("buyrare2", "biting sword", 150);
+		shops.add("buyrare2", "战锤", 120);
+		shops.add("buyrare2", "突刺剑", 150);
 		shops.add("buyrare2", "crossbow", 175);
-		shops.add("buyrare2", "great sword", 250);
-		shops.add("buyrare2", "fire sword", 2000);
+		shops.add("buyrare2", "巨剑", 250);
+		shops.add("buyrare2", "烈火剑", 2000);
 		shops.add("buyrare2", "ice sword", 5000);
         shops.add("buyrare2", "hell dagger", 8000);
 
@@ -182,8 +182,8 @@ public final class ShopList {
 		shops.add("buyrare3", "shadow legs", 5000);
 		shops.add("buyrare3", "黄金铠甲", 7000);
 		shops.add("buyrare3", "影子铠甲", 9000);
-		shops.add("buyrare3", "golden shield", 10000);
-		shops.add("buyrare3", "shadow shield", 15000);
+		shops.add("buyrare3", "金盾", 10000);
+		shops.add("buyrare3", "影盾", 15000);
 
 		// less rare armor shop (kobold city - kobolds drop some of these
 		// things)
@@ -191,13 +191,13 @@ public final class ShopList {
 		shops.add("buystuff2", "studded legs", 70);
 		shops.add("buystuff2", "钉靴", 75);
 		shops.add("buystuff2", "链靴", 100);
-		shops.add("buystuff2", "skull shield", 100);
+		shops.add("buystuff2", "骷髅盾", 100);
 		shops.add("buystuff2", "独角盾", 125);
 		shops.add("buystuff2", "viking helmet", 250);
 
 		shops.add("sellstuff2", "皮靴", 50);
 		shops.add("sellstuff2", "studded helmet", 60);
-		shops.add("sellstuff2", "studded shield", 80);
+		shops.add("sellstuff2", "镶嵌盾", 80);
 		shops.add("sellstuff2", "sword", 90);
 		shops.add("sellstuff2", "矮人斗篷", 230);
 
@@ -246,26 +246,26 @@ public final class ShopList {
 
 		// buy chaos items (scared dwarf, after quest)
 		shops.add("buychaos", "chaos legs", 8000);
-		shops.add("buychaos", "chaos sword", 12000);
-		shops.add("buychaos", "chaos shield", 18000);
+		shops.add("buychaos", "混沌之剑", 12000);
+		shops.add("buychaos", "混乱之盾", 18000);
 		shops.add("buychaos", "浑沌护甲", 20000);
 
 		// buy elvish items (albino elf, after quest)
 		shops.add("buyelvish", "精灵靴", 300);
 		shops.add("buyelvish", "elvish legs", 300);
-		shops.add("buyelvish", "elvish sword", 800);
-		shops.add("buyelvish", "elvish shield", 1000);
-		shops.add("buyelvish", "drow sword", 1200);
+		shops.add("buyelvish", "精灵之剑", 800);
+		shops.add("buyelvish", "精灵之盾", 1000);
+		shops.add("buyelvish", "卓尔之剑", 1200);
 		shops.add("buyelvish", "像小精灵的斗篷", 400);
 		shops.add("buyelvish", "精灵护甲", 400);
 
 		// magic items or 'relics' (witch in magic city)
-		shops.add("buymagic", "demon sword", 4000);
-		shops.add("buymagic", "dark dagger", 8000);
+		shops.add("buymagic", "恶魔剑", 4000);
+		shops.add("buymagic", "暗之匕首", 8000);
 		shops.add("buymagic", "liberty helmet", 8000);
 		shops.add("buymagic", "immortal sword", 10000);
 		shops.add("buymagic", "jewelled legs", 12000);
-		shops.add("buymagic", "magic plate shield", 16000);
+		shops.add("buymagic", "附魔钢盾", 16000);
 		shops.add("buymagic", "附魔甲", 20000);
 
 		// red items (supplier in sedah city)
@@ -274,7 +274,7 @@ public final class ShopList {
 		shops.add("buyred", "红斗篷", 250);
 		shops.add("buyred", "red helmet", 200);
 		shops.add("buyred", "red legs", 200);
-		shops.add("buyred", "red shield", 750);
+		shops.add("buyred", "红盾", 750);
 
 		// mainio items (despot in mithrilbourgh throne room)
 		shops.add("buymainio", "奇妙甲", 22000);
@@ -282,23 +282,23 @@ public final class ShopList {
 		shops.add("buymainio", "华丽的斗篷", 12000);
 		shops.add("buymainio", "mainio helmet", 8000);
 		shops.add("buymainio", "mainio legs", 7000);
-		shops.add("buymainio", "mainio shield", 16000);
+		shops.add("buymainio", "奇妙之盾", 16000);
 
 		// assassinhq principal Femme Fatale)
-		shops.add("buy4assassins", "buckler", 20);
+		shops.add("buy4assassins", "小圆盾", 20);
 		shops.add("buy4assassins", "aventail", 25);
 		shops.add("buy4assassins", "robins hat", 30);
 		shops.add("buy4assassins", "皮靴", 30);
 		shops.add("buy4assassins", "矮人斗篷", 60);
 		shops.add("buy4assassins", "矮人护甲", 17000);
 		shops.add("buy4assassins", "dwarvish legs", 15000);
-		shops.add("buy4assassins", "assassin dagger", 7000);
+		shops.add("buy4assassins", "刺客匕首", 7000);
 
 		// mountain dwarf buyer of odds and ends -3 ados abandoned keep)
 		shops.add("buyoddsandends", "shuriken", 20);
-		shops.add("buyoddsandends", "amulet", 800);
+		shops.add("buyoddsandends", "护身符", 800);
 		shops.add("buyoddsandends", "black pearl", 100);
-		shops.add("buyoddsandends", "lucky charm", 60);
+		shops.add("buyoddsandends", "幸运石", 60);
 		shops.add("buyoddsandends", "knife", 5);
 		shops.add("buyoddsandends", "dagger", 20);
 		shops.add("buyoddsandends", "skull ring", 250);
@@ -384,8 +384,8 @@ public final class ShopList {
 		shops.add("buykirdneharmor", "冰护甲", 19000);
 		shops.add("buykirdneharmor", "异种元素甲", 21000);
 		shops.add("buykirdneharmor", "野蛮人护甲", 5000);
-		shops.add("buykirdneharmor", "green dragon shield", 13000);
-		shops.add("buykirdneharmor", "xeno shield", 20000);
+		shops.add("buykirdneharmor", "绿龙盾", 13000);
+		shops.add("buykirdneharmor", "异域盾", 20000);
 
 
 		// amazon cloaks shop
@@ -428,13 +428,13 @@ public final class ShopList {
 		shops.add("buyblack", "黑斗篷", 20000);
 		shops.add("buyblack", "black helmet", 15000);
 		shops.add("buyblack", "black legs", 40000);
-		shops.add("buyblack", "black shield", 75000);
+		shops.add("buyblack", "黑盾", 75000);
 		shops.add("buyblack", "black sword", 20000);
 		shops.add("buyblack", "黑镰刀", 40000);
 		shops.add("buyblack", "黑戟", 30000);
 
 		// ados market
-		shops.add("buyadosarmors", "blue shield", 900);
+		shops.add("buyadosarmors", "蓝盾", 900);
 
 		// Athor ferry
 		shops.add("buypoisons", "poison", 40);

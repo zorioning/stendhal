@@ -53,7 +53,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> Maerion asks you fix his dark elf problem
  * <li> You go kill at least a 黑暗精灵弓箭手, captain, and thing
- * <li> The thing drops an amulet
+ * <li> The thing drops an 护身符
  * <li> Maerion checks your kills, takes the amulet and gives you a ring of life
  * as reward
  * </ul>
@@ -87,7 +87,7 @@ public class KillDarkElves extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I already asked you to kill every dark elf in the tunnel below the secret room. And bring me the amulet from the thing.",
+				"I already asked you to kill every dark elf in the tunnel below the secret room. And bring me the 护身符 from the thing.",
 				null);
 
 
@@ -95,7 +95,7 @@ public class KillDarkElves extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Thanks for your help. I am relieved to have the amulet back.",
+				"Thanks for your help. I am relieved to have the 护身符 back.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -115,7 +115,7 @@ public class KillDarkElves extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Good. Please kill every dark elf down there and get the amulet from the mutant thing.",
+			"Good. Please kill every dark elf down there and get the 护身符 from the mutant thing.",
 			new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -135,7 +135,7 @@ public class KillDarkElves extends AbstractQuest {
 	}
 
 	private void step_2() {
-		// Go kill the dark elves and get the amulet from the thing
+		// Go kill the dark elves and get the 护身符 from the thing
 	}
 
 	private void step_3() {
@@ -151,7 +151,7 @@ public class KillDarkElves extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, "start"),
 						new NotCondition(new KilledCondition("黑暗精灵弓箭手", "黑暗精灵队长", "thing"))),
 				ConversationStates.QUEST_STARTED,
-				"Don't you remember promising to sort out my dark elf problem? Kill every dark elf in the #secret room below - especially the snivelling 黑暗精灵队长 and any evil dark elf archers you find! And bring me the amulet from the mutant thing.",
+				"Don't you remember promising to sort out my dark elf problem? Kill every dark elf in the #secret room below - especially the snivelling 黑暗精灵队长 and any evil dark elf archers you find! And bring me the 护身符 from the mutant thing.",
 				null);
 
 		npc.add(ConversationStates.IDLE,
@@ -159,9 +159,9 @@ public class KillDarkElves extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
 						new KilledCondition("黑暗精灵弓箭手", "黑暗精灵队长", "thing"),
-						new NotCondition(new PlayerHasItemWithHimCondition("amulet")))
+						new NotCondition(new PlayerHasItemWithHimCondition("护身符")))
 				, ConversationStates.QUEST_STARTED
-				, "What happened to the amulet? Remember I need it back!"
+				, "What happened to the 护身符? Remember I need it back!"
 				, null);
 
 		npc.add(ConversationStates.IDLE,
@@ -169,11 +169,11 @@ public class KillDarkElves extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
 						new KilledCondition("黑暗精灵弓箭手", "黑暗精灵队长", "thing"),
-						new PlayerHasItemWithHimCondition("amulet"))
+						new PlayerHasItemWithHimCondition("护身符"))
 				, ConversationStates.ATTENDING
 				, "Many, many thanks. I am relieved to have that back. Here, take this ring. It can revive the powers of the dead.",
-				new MultipleActions(new DropItemAction("amulet"),
-						new EquipItemAction("emerald ring", 1, true),
+				new MultipleActions(new DropItemAction("护身符"),
+						new EquipItemAction("翡翠戒指", 1, true),
 						new IncreaseXPAction(10000),
 						new IncreaseKarmaAction(5.0),
 						new SetQuestAction(QUEST_SLOT, "done")));
@@ -201,7 +201,7 @@ public class KillDarkElves extends AbstractQuest {
 				" Kill every dark elf in the #secret room below - especially"+
 				" the ones who command, do magic or are archers." +
 				"  Don't forget the evil matronmother too."+
-				" And bring me the amulet from the mutant thing.",
+				" And bring me the 护身符 from the mutant thing.",
 				new ExamineChatAction("dark-elves-wanted.png", "Wanted!", ""));
 
 		npc.add(ConversationStates.IDLE,
@@ -209,20 +209,20 @@ public class KillDarkElves extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, completedQuestState),
 						new NotCondition(
-								new PlayerHasItemWithHimCondition("amulet")))
+								new PlayerHasItemWithHimCondition("护身符")))
 				, ConversationStates.QUEST_STARTED
-				, "What happened to the amulet? Remember I need it back!"
+				, "What happened to the 护身符? Remember I need it back!"
 				, null);
 
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, completedQuestState),
-						new PlayerHasItemWithHimCondition("amulet"))
+						new PlayerHasItemWithHimCondition("护身符"))
 				, ConversationStates.ATTENDING
 				, "Many, many thanks. I am relieved to have that back. Here, take this ring. It can revive the powers of the dead.",
-				new MultipleActions(new DropItemAction("amulet"),
-						new EquipItemAction("emerald ring", 1, true),
+				new MultipleActions(new DropItemAction("护身符"),
+						new EquipItemAction("翡翠戒指", 1, true),
 						new IncreaseXPAction(10000),
 						new IncreaseKarmaAction(5.0),
 						new SetQuestAction(QUEST_SLOT, "done")));
@@ -232,7 +232,7 @@ public class KillDarkElves extends AbstractQuest {
 			Arrays.asList("secret", "room", "secret room"),
 			null,
 			ConversationStates.ATTENDING,
-			"The room is below us. It has a grey roof and a evil face for a door. I need you to kill all the dark elves and bring me the amulet from the mutant thing.",
+			"The room is below us. It has a grey roof and a evil face for a door. I need you to kill all the dark elves and bring me the 护身符 from the mutant thing.",
 			null);
 	}
 
@@ -240,7 +240,7 @@ public class KillDarkElves extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Kill Dark Elves",
-				"Maerion, leader of Elves, wants to kill dark elves in the secret room to hide his plots and get back his amulet.",
+				"Maerion, leader of Elves, wants to kill dark elves in the secret room to hide his plots and get back his 护身符.",
 				false);
 		step_1();
 		step_2();
@@ -279,7 +279,7 @@ public class KillDarkElves extends AbstractQuest {
 			return history;
 		}
 		if ("done".equals(questState)) {
-			history.add("I completed Maerion's quest and got an emerald ring of life!");
+			history.add("I completed Maerion's quest and got an 翡翠戒指 of life!");
 			return history;
 		}
 
@@ -345,11 +345,11 @@ public class KillDarkElves extends AbstractQuest {
 		}
 
 		// for both old- and new-style quests
-		final boolean am = player.isEquipped("amulet");
+		final boolean am = player.isEquipped("护身符");
 		if (am) {
-			history.add("I have the amulet with me.");
+			history.add("I have the 护身符 with me.");
 		} else {
-			history.add("I have no amulet with me.");
+			history.add("I have no 护身符 with me.");
 		}
 
 		if (am && ak) {

@@ -57,7 +57,7 @@
       <item value="carbuncle" quantity="[1,1]" probability="3.0"/>
     </drops>
     <equips>
-      <slot name="rhand" item="dark dagger" quantity="1"/>
+      <slot name="rhand" item="暗之匕首" quantity="1"/>
     </equips>
     <ai>
       <says>
@@ -97,8 +97,8 @@
       <item value="greater potion" quantity="[1,1]" probability="30.0"/>
       <item value="money" quantity="[10,70]" probability="100.0"/>
       <item value="shadow legs" quantity="[1,1]" probability="0.5"/>
-      <item value="shadow shield" quantity="[1,1]" probability="0.05"/>
-      <item value="dark dagger" quantity="[1,1]" probability="0.050"/>
+      <item value="影盾" quantity="[1,1]" probability="0.05"/>
+      <item value="暗之匕首" quantity="[1,1]" probability="0.050"/>
     </drops>
     <equips>
     </equips>
@@ -128,7 +128,7 @@
       <item value="greater potion" quantity="[1,2]" probability="40.0"/>
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="影子靴子" quantity="[1,1]" probability="0.5"/>
-      <item value="shadow shield" quantity="[1,1]" probability="0.5"/>
+      <item value="影盾" quantity="[1,1]" probability="0.5"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.050"/>
     </drops>
     <equips>
@@ -160,7 +160,7 @@
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="附魔甲" quantity="[1,1]" probability="0.005"/>
       <item value="黄金双刃斧" quantity="[1,1]" probability="2.5"/>
-      <item value="demon fire sword" quantity="[1,1]" probability="0.0010"/>
+      <item value="赤魔剑" quantity="[1,1]" probability="0.0010"/>
     </drops>
     <equips>
     </equips>
@@ -195,7 +195,7 @@
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="golden shield" quantity="[1,1]" probability="0.5"/>
+      <item value="金盾" quantity="[1,1]" probability="0.5"/>
       <item value="soul dagger" quantity="[1,1]" probability="0.0050"/>
     </drops>
     <equips>
@@ -228,7 +228,7 @@
       <item value="money" quantity="[10,90]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="1.5"/>
-      <item value="golden shield" quantity="[1,1]" probability="1.5"/>
+      <item value="金盾" quantity="[1,1]" probability="1.5"/>
       <item value="soul dagger" quantity="[1,1]" probability="0.0080"/>
     </drops>
     <equips>
@@ -258,9 +258,9 @@
     <drops>
       <item value="mega potion" quantity="[1,1]" probability="20.0"/>
       <item value="money" quantity="[40,100]" probability="100.0"/>
-      <item value="shadow shield" quantity="[1,1]" probability="0.5"/>
+      <item value="影盾" quantity="[1,1]" probability="0.5"/>
       <item value="巫妖斗篷" quantity="[1,1]" probability="2.0"/>
-      <item value="black shield" quantity="[1,1]" probability="0.0010"/>
+      <item value="黑盾" quantity="[1,1]" probability="0.0010"/>
       <item value="soul dagger" quantity="[1,1]" probability="0.020"/>
     </drops>
     <equips>
@@ -297,7 +297,7 @@
       <item value="影子铠甲" quantity="[1,1]" probability="0.0050"/>
       <item value="影子靴子" quantity="[1,1]" probability="1.5"/>
       <item value="shadow helmet" quantity="[1,1]" probability="0.35"/>
-      <item value="fire sword" quantity="[1,1]" probability="0.5"/>
+      <item value="烈火剑" quantity="[1,1]" probability="0.5"/>
       <item value="night dagger" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -312,7 +312,7 @@
   
   <creature name="necrosophia">
     <type class="hybrid" subclass="necrosophia" tileid="hybrid.png:7"/>
-    <description>You see Necrosophia. She is a mighty beast, she will burn you with fire while you are disoriented by the rainbow beans.</description>
+    <description>You see Necrosophia. She is a mighty beast, she will burn you with fire while you are disoriented by the 彩虹豆.</description>
     <attributes>
       <atk value="1292"/>
       <def value="154"/>
@@ -331,7 +331,7 @@
       <item value="mainio helmet" quantity="[1,1]" probability="2.0"/>
       <item value="mainio legs" quantity="[1,1]" probability="2.5"/>
       <item value="很棒的靴子" quantity="[1,1]" probability="2.5"/>
-      <item value="mainio shield" quantity="[1,1]" probability="2.5"/>
+      <item value="奇妙之盾" quantity="[1,1]" probability="2.5"/>
       <item value="奇妙甲" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -402,7 +402,7 @@
       <item value="money" quantity="[5,33]" probability="100.0"/>
       <item value="护肩铁胸甲" quantity="[1,1]" probability="3.0"/>
       <item value="aventail" quantity="[1,1]" probability="1.0"/>
-      <item value="skull shield" quantity="[1,1]" probability="5.5"/>
+      <item value="骷髅盾" quantity="[1,1]" probability="5.5"/>
     </drops>
     <equips>
     </equips>
@@ -477,7 +477,7 @@
     <drops>
       <item value="money" quantity="[3,10]" probability="90.0"/>
       <item value="矮人护甲" quantity="[1,1]" probability="0.5"/>
-      <item value="buckler" quantity="[1,1]" probability="15.5"/>
+      <item value="小圆盾" quantity="[1,1]" probability="15.5"/>
       <item value="dagger" quantity="[1,1]" probability="10.5"/>
     </drops>
     <equips>
@@ -514,7 +514,7 @@
       <item value="黄金锁子甲" quantity="[1,1]" probability="4.0"/>
       <item value="护肩铁胸甲" quantity="[1,1]" probability="1.5"/>
       <item value="hammer" quantity="[1,1]" probability="1.0"/>
-      <item value="skull shield" quantity="[1,1]" probability="0.5"/>
+      <item value="骷髅盾" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -549,7 +549,7 @@
     <drops>
       <item value="money" quantity="[3,10]" probability="90.0"/>
       <item value="mace" quantity="[1,1]" probability="5.0"/>
-      <item value="skull shield" quantity="[1,1]" probability="3.0"/> 
+      <item value="骷髅盾" quantity="[1,1]" probability="3.0"/> 
       <item value="studded legs" quantity="[1,1]" probability="10.0"/>
       <item value="dagger" quantity="[1,1]" probability="5.5"/>
     </drops>
@@ -585,7 +585,7 @@
     <corpse name="bone_red" harmless="bone_red" />
     <drops>
       <item value="money" quantity="[3,30]" probability="90.0"/>
-      <item value="demon sword" quantity="[1,1]" probability="1.0"/>
+      <item value="恶魔剑" quantity="[1,1]" probability="1.0"/>
       <item value="hell dagger" quantity="[1,1]" probability="0.03"/>
     </drops>
     <equips>
@@ -810,7 +810,7 @@
       <item value="黑色盔甲" quantity="[1,1]" probability="1.0"/>
       <item value="black legs" quantity="[1,1]" probability="2.0"/>
       <item value="黑靴子" quantity="[1,1]" probability="1.0"/>
-      <item value="black shield" quantity="[1,1]" probability="1.0"/>
+      <item value="黑盾" quantity="[1,1]" probability="1.0"/>
       <item value="黑镰刀" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
@@ -854,8 +854,8 @@
       <item value="mega potion" quantity="[5,20]" probability="80.0"/>
       <item value="gold bar" quantity="[2,10]" probability="30.0"/>
       <item value="money" quantity="[8000,40000]" probability="100.0"/>
-      <item value="emerald ring" quantity="[1,1]" probability="2.0"/>
-      <item value="golden blade" quantity="[1,1]" probability="0.5"/>
+      <item value="翡翠戒指" quantity="[1,1]" probability="2.0"/>
+      <item value="黄金匕首" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>

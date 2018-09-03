@@ -36,7 +36,7 @@ public class HouseUtilities {
 		"0_ados_city_n",
 		"0_ados_city",
 		"0_ados_city_s",
-		"0_ados_wall",
+		"0_阿多斯_城墙",
 		"0_athor_island"
 	};
 

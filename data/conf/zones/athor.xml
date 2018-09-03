@@ -1417,7 +1417,7 @@ J，Q，K和大小王的点计10点。A 计11点，但如果你的手牌超过21
       <parameter name="color">#0c4774</parameter>
       <parameter name="weather">wave</parameter>
       <parameter name="life_support_environment">water</parameter>
-      <parameter name="life_support_failure_location"> 0_ados_coast_sw, 25, 72 </parameter>
+      <parameter name="life_support_failure_location"> 0_阿多斯_海岸_sw, 25, 72 </parameter>
    </attributes>
 
    <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />

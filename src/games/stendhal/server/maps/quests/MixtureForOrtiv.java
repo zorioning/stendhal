@@ -63,7 +63,7 @@ import games.stendhal.server.util.ItemCollection;
  * <ul>
  * <li>karma +35</li>
  * <li>5000 XP</li>
- * <li>a bounded assassin dagger</li>
+ * <li>a bounded 刺客匕首</li>
  * </ul>
  *
  * REPETITIONS:
@@ -208,7 +208,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 				new SayTextAction("非常感谢！，我现在能开始混合这些调料，有希望用制成品让我安全的呆在房子里，再没有刺客和盗贼从楼下跑上来。这一把刺客匕首给你，这是我我不得不从以前班里的一个学生手中收走它，现在你可以和他们对决并取胜."),
 				new IncreaseXPAction(5000),
 				new IncreaseKarmaAction(25),
-				new EquipItemAction("assassin dagger", 1 ,true)
+				new EquipItemAction("刺客匕首", 1 ,true)
 				);
 		/* add triggers for the item names */
 		final ItemCollection items = new ItemCollection();

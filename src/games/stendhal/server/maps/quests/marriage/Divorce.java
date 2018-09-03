@@ -59,7 +59,7 @@ class Divorce {
 					@Override
 					public boolean fire(final Player player, final Sentence sentence, final Entity npc) {
 						return (player.isQuestCompleted(marriage.getQuestSlot()))
-								&& player.isEquipped("wedding ring") && player.isEquipped("money",200*player.getLevel());
+								&& player.isEquipped("婚戒") && player.isEquipped("money",200*player.getLevel());
 					}
 				},
 				ConversationStates.QUESTION_3,
@@ -95,7 +95,7 @@ class Divorce {
 					  @Override
 					public boolean fire(final Player player, final Sentence sentence, final Entity npc) {
 						  return (player.isQuestCompleted(marriage.getQuestSlot()))
-							  && player.isEquipped("wedding ring") && !player.isEquipped("money",200*player.getLevel());
+							  && player.isEquipped("婚戒") && !player.isEquipped("money",200*player.getLevel());
 					  }
 				  },
 				  ConversationStates.QUESTION_3,
@@ -131,7 +131,7 @@ class Divorce {
 						public boolean fire(final Player player, final Sentence sentence, final Entity npc) {
 							return (player.hasQuest(marriage.getQuestSlot())
 									&& player.getQuest(marriage.getQuestSlot()).equals("just_married"))
-									&& player.isEquipped("wedding ring");
+									&& player.isEquipped("婚戒");
 						}
 					},
 					ConversationStates.QUESTION_3,
@@ -164,9 +164,9 @@ class Divorce {
 									(player.hasQuest(marriage.getQuestSlot()) && player.getQuest(marriage.getQuestSlot()).equals("just_married")));
 						}
 					},
-					new NotCondition(new PlayerHasItemWithHimCondition("wedding ring"))),
+					new NotCondition(new PlayerHasItemWithHimCondition("婚戒"))),
 				ConversationStates.ATTENDING,
-				"I apologise, but I need your wedding ring in order to divorce you. If you have lost yours, you can go to Ognir to make another.",
+				"I apologise, but I need your 婚戒 in order to divorce you. If you have lost yours, you can go to Ognir to make another.",
 				null);
 
 		// If they say no
@@ -198,8 +198,8 @@ class Divorce {
 								&& wife.hasQuest(marriage.getQuestSlot())
 								&& wife.getQuest(marriage.getSpouseQuestSlot()).equals(
 										husband.getName())) {
-							if (wife.isEquipped("wedding ring")) {
-								wife.drop("wedding ring");
+							if (wife.isEquipped("婚戒")) {
+								wife.drop("婚戒");
 							}
 							if (wife.isEquipped("money", 200*wife.getLevel())) {
 								wife.drop("money", 200*wife.getLevel());
@@ -220,7 +220,7 @@ class Divorce {
 							final int xp = (int) (husband.getXP() * 0.03);
 							husband.subXP(xp);
 						}
-						husband.drop("wedding ring");
+						husband.drop("婚戒");
 						husband.removeQuest(marriage.getQuestSlot());
 						husband.removeQuest(marriage.getSpouseQuestSlot());
 						npc.say("What a pity...what a pity...and you two were married so happily, too...");

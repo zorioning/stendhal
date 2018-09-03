@@ -59,7 +59,7 @@ public class Scroll extends StackableItem {
 
 		if (user.nextTo((Entity) base)) {
 			// We need to remove the scroll before using it. Makes space in
-			// the bag in the case of last empty scrolls, and prevents
+			// the bag in the case of last 空白卷轴s, and prevents
 			// the player getting free replacement scrolls from bank vaults.
 			// Save the necessary information for backtracking:
 			Scroll clone = (Scroll) clone();

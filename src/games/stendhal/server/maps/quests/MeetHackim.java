@@ -90,7 +90,7 @@ public class MeetHackim extends AbstractQuest {
 			yesTrigger,
 			null,
 			ConversationStates.INFORMATION_3,
-			"Ask him what he has to #offer, and look at what he will let you #buy and #sell. For instance, if you had a studded shield which you didn't want, you could #'sell studded shield'.",
+			"Ask him what he has to #offer, and look at what he will let you #buy and #sell. For instance, if you had a 镶嵌盾 which you didn't want, you could #'sell 镶嵌盾'.",
 			null);
 
 		final String answer = "Guessed who supplies Xin Blanca with the weapons he sells? Well, it's me! I have to avoid raising suspicion, though, so I can only smuggle him small weapons. If you want something more powerful, you'll have to venture into the dungeons and kill some of the creatures there for items.\n";
@@ -101,14 +101,14 @@ public class MeetHackim extends AbstractQuest {
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 
 		npc.add(ConversationStates.INFORMATION_3,
-				Arrays.asList("buy", "sell", "offer", "sell studded shield"),
+				Arrays.asList("buy", "sell", "offer", "sell 镶嵌盾"),
 				new QuestNotCompletedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
 				answer + "If anybody asks, you don't know me!",
 				new MultipleActions(reward));
 
 		npc.add(ConversationStates.INFORMATION_3,
-				Arrays.asList("buy", "sell", "offer", "sell studded shield"),
+				Arrays.asList("buy", "sell", "offer", "sell 镶嵌盾"),
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
 				answer + "Where did you get those weapons? A toy shop?",

@@ -11,7 +11,7 @@
     <attributes>
       <parameter name="color_method">time</parameter>
     </attributes>
-    <!--Don't allow teleporting in as we don't want marked scrolls made or 
+    <!--Don't allow teleporting in as we don't want 标记卷轴s made or 
       ring abused -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
@@ -27,7 +27,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.MessagingArea">
         <parameter name="coversZone">true</parameter>
-        <parameter name="enterMessage">The balloon lifts you into the air and through dark grey clouds. You land on a cloud that seems quite firm, and realise you can walk across the grey clouds ... but not for very long.</parameter>
+        <parameter name="enterMessage">The 气球 lifts you into the air and through dark grey clouds. You land on a cloud that seems quite firm, and realise you can walk across the grey clouds ... but not for very long.</parameter>
       </implementation>
     </entity>
     <portal x="29" y="6" ref="exit1">

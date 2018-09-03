@@ -43,7 +43,7 @@ import games.stendhal.server.maps.quests.logic.BringListOfItemsQuestLogic;
  * <ul>
  * <li> 20000 XP</li>
  * <li> Karma:25</li>
- * <li> ability to sell elvish stuff and also drow sword</li>
+ * <li> ability to sell elvish stuff and also 卓尔之剑</li>
  * </ul>
  *
  * REPETITIONS:
@@ -59,8 +59,8 @@ public class ElvishArmor extends AbstractQuest implements
 	private BringListOfItemsQuestLogic bringItems;
 
 	private static final List<String> NEEDEDITEMS = Arrays.asList(
-			"精灵护甲", "elvish legs", "精灵靴", "elvish sword",
-			"像小精灵的斗篷", "elvish shield");
+			"精灵护甲", "elvish legs", "精灵靴", "精灵之剑",
+			"像小精灵的斗篷", "精灵之盾");
 
 	@Override
 	public String getSlotName() {
@@ -232,7 +232,7 @@ public class ElvishArmor extends AbstractQuest implements
 				ConversationPhrases.OFFER_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"If you have found any more elvish items, I'd be glad if you would #sell them to me. I would buy 精灵护甲, shield, legs, boots, cloak or sword. I would also buy a drow sword if you have one.",
+				"If you have found any more elvish items, I'd be glad if you would #sell them to me. I would buy 精灵护甲, shield, legs, boots, cloak or sword. I would also buy a 卓尔之剑 if you have one.",
 				null);
 
 

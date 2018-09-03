@@ -28,7 +28,7 @@ public final class Region {
 	public static final String SEMOS_YETI_CAVE = "塞门雪人洞";
 	public static final String FADO_CITY = "法多城";
 	public static final String FADO_CAVES = "法多山洞";
-	public static final String NALWOR_CITY = "Nalwor City";
+	public static final String NALWOR_CITY = "纳尔沃城";
 	public static final String KIRDNEH = "Kirdneh";
 	public static final String KALAVAN = "Kalavan";
 	public static final String KOTOCH = "Kotoch";

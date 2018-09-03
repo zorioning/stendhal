@@ -60,7 +60,7 @@ import games.stendhal.server.util.ItemCollection;
  * <ul>
  * <li>1000 XP</li>
  * <li>25 karma</li>
- * <li>5 nalwor city scrolls</li>
+ * <li>5 纳尔沃城回城卷s</li>
  * </ul>
  *
  * REPETITIONS:
@@ -257,7 +257,7 @@ public class RestockFlowerShop extends AbstractQuest {
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new IncreaseXPAction(1000));
 		reward.add(new IncreaseKarmaAction(25.0));
-		reward.add(new EquipItemAction("nalwor city scroll", 5));
+		reward.add(new EquipItemAction("纳尔沃城回城卷", 5));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));
 		reward.add(new SayTextAction("非常感谢！现在我要开始忙了。"));

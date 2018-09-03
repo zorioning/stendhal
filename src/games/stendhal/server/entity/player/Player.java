@@ -591,9 +591,9 @@ public class Player extends RPEntity implements UseListener {
 		score = Math.floor(score / granularity) * granularity;
 
 		/*
-		 * with a lucky charm you use up less karma to be just as lucky
+		 * with a 幸运石 you use up less karma to be just as lucky
 		 */
-		if (this.isEquipped("lucky charm")) {
+		if (this.isEquipped("幸运石")) {
 			karma -= 0.5 * score;
 		} else {
 			karma -= score;

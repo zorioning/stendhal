@@ -29,7 +29,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.util.Area;
 
 /**
- * Configure Drow Tunnel -1 to include a Thing Creature who carries an amulet.
+ * Configure Drow Tunnel -1 to include a Thing Creature who carries an 护身符.
  * Then it should give an amulet that is bound to the player.
  */
 public class DrowCreatures implements ZoneConfigurator {

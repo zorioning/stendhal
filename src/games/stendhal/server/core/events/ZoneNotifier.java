@@ -70,7 +70,7 @@ public class ZoneNotifier {
             process(player, ZoneEventType.VISIT_MAGIC_CITY);
         } else if (destinationZone.equals("-1_塞门_山洞")) {
             process(player, ZoneEventType.VISIT_SEMOS_CAVES);
-        } else if (destinationZone.equals("int_ados_castle_entrance")) {
+        } else if (destinationZone.equals("int_阿多斯_城堡_入口")) {
             process(player, ZoneEventType.VISIT_ADOS_CASTLE);
 }
     }

@@ -151,7 +151,7 @@ public class PhotographerChatAction implements ChatAction {
 		if (player.hasVisitedZone(world.getZone("0_塞门_山_n_w2"))) {
 			photos.add(Integer.valueOf(5));
 		}
-		if (player.hasVisitedZone(world.getZone("0_ados_wall_n"))) {
+		if (player.hasVisitedZone(world.getZone("0_阿多斯_城墙_n"))) {
 			photos.add(Integer.valueOf(6));
 		}
 		if (player.hasVisitedZone(world.getZone("int_塞门_巫师_塔楼_basement"))) {
@@ -177,7 +177,7 @@ public class PhotographerChatAction implements ChatAction {
 			photos.add(Integer.valueOf(13));
 		}
 		*/
-		if (player.hasVisitedZone(world.getZone("0_nalwor_city"))) {
+		if (player.hasVisitedZone(world.getZone("0_纳尔沃_城"))) {
 			photos.add(Integer.valueOf(14));
 		}
 		if (player.hasVisitedZone(world.getZone("int_oni_palace_2"))) {

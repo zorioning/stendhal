@@ -65,7 +65,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** Quest slot for this quest, the Ultimate Collector */
 	private static final String QUEST_SLOT = "ultimate_collector";
 
-	/** Club of Thorns in Kotoch: The Orc Saman is the NPC */
+	/** 类牙棍 in Kotoch: The Orc Saman is the NPC */
 	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // kotoch
 
 	/** Vampire Sword quest: Hogart is the NPC */
@@ -80,7 +80,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** 黑曜石斗篷 quest: Ida is the NPC */
 	private static final String MITHRIL_CLOAK_QUEST_SLOT = "mithril_cloak"; // mithril
 
-	/** Mithril Shield quest: Baldemar is the NPC */
+	/** 黑曜石盾 quest: Baldemar is the NPC */
 	private static final String MITHRIL_SHIELD_QUEST_SLOT = "mithrilshield_quest"; // mithril
 
 	/** Cloak Collector 2nd quest: Josephine is the NPC (Completing 2nd requires 1st) */
@@ -209,7 +209,7 @@ public class UltimateCollector extends AbstractQuest {
 		final Map<String,Integer> items = new HashMap<String, Integer>();
 
 		// the numbers are based on depo's metric for rarity (bigger number = more rare) which may be out of date https://sourceforge.net/tracker/?func=detail&aid=2066597&group_id=1111&atid=973767
-		// nothing rarer than a demon fire sword, and not included items which are quest rewards elsewhere
+		// nothing rarer than a 赤魔剑, and not included items which are quest rewards elsewhere
 		items.put("nihonto",1); // 5169
 		items.put("魔法双刃斧",1); // 1010
 		items.put("imperator sword",1); // 2393
@@ -217,7 +217,7 @@ public class UltimateCollector extends AbstractQuest {
 		items.put("vulcano hammer",1); // 4474
 		items.put("xeno sword",1); // 1347
 		items.put("黑镰刀",1); // 3918 (pretty sure this is rarer now but a lot of old ones about to buy)
-		items.put("chaos dagger",1); // 1691
+		items.put("混沌匕首",1); // 1691
 		items.put("black sword",1); // 6285
 
 		// If all quests are completed, ask for an item

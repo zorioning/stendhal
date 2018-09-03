@@ -134,15 +134,15 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// club
 		items.put("木棍",1);
-		items.put("enhanced mace",1);
-		items.put("flail",1);
-		items.put("golden hammer",1);
-		items.put("golden mace",1);
+		items.put("加强狼牙棒",1);
+		items.put("连枷",1);
+		items.put("黄金战锤",1);
+		items.put("黄金狼牙棒",1);
 		items.put("hammer",1);
 		items.put("mace",1);
 		items.put("morning star",1);
 		items.put("staff",1);
-		items.put("war hammer",1);
+		items.put("战锤",1);
 
 		// container
 		items.put("eared bottle",3);
@@ -258,23 +258,23 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("木头",10);
 
 		// shield
-        items.put("blue shield",1);
-		items.put("buckler",1);
-		items.put("crown shield",1);
-		items.put("enhanced lion shield",1);
-		items.put("lion shield",1);
-		items.put("plate shield",1);
-		items.put("skull shield",1);
-		items.put("studded shield",1);
+        items.put("蓝盾",1);
+		items.put("小圆盾",1);
+		items.put("王冠之盾",1);
+		items.put("加强狮盾",1);
+		items.put("狮盾",1);
+		items.put("钢盾",1);
+		items.put("骷髅盾",1);
+		items.put("镶嵌盾",1);
 		items.put("独角盾",1);
 		items.put("木盾",1);
 
 		// sword
-		items.put("biting sword",1);
-		items.put("broadsword",1);
-		items.put("claymore",1);
+		items.put("突刺剑",1);
+		items.put("阔剑",1);
+		items.put("双刃剑",1);
 		items.put("dagger",1);
-		items.put("elvish sword",1);
+		items.put("精灵之剑",1);
 		items.put("katana",1);
 		items.put("knife",1);
 		items.put("scimitar",1);

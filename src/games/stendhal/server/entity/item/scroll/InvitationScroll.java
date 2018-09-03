@@ -52,7 +52,7 @@ public class InvitationScroll extends TeleportScroll {
 	}
 
 	/**
-	 * Try to teleport to a marked scroll infostring style place.
+	 * Try to teleport to a 标记卷轴 infostring style place.
 	 *
 	 * @param where
 	 *            A location in the form of <em>zone x y</em>.
@@ -126,7 +126,7 @@ public class InvitationScroll extends TeleportScroll {
 		} else if (info[0].equals("honeymoon")) {
 			return handleTeleportToHotel(player, info[1]);
 		} else {
-			player.sendPrivateText("Something seems to be wrong with this invitation scroll");
+			player.sendPrivateText("Something seems to be wrong with this 邀请函");
 			return false;
 		}
 	}
@@ -150,12 +150,12 @@ public class InvitationScroll extends TeleportScroll {
 	private boolean handleTeleportToHotel(final Player player, final String playerName) {
 		// check player was original recipient
 		if (!player.getTitle().equals(playerName)) {
-			player.sendPrivateText("That invitation scroll was given to " + playerName + ".");
+			player.sendPrivateText("That 邀请函 was given to " + playerName + ".");
 			return false;
 		}
 		// check player is inside a lovers room when they try to use it
 		if (!player.getZone().getName().startsWith("int_fado_lovers_room")) {
-			player.sendPrivateText("That invitation scroll is only to be used to exit a Fado lovers room.");
+			player.sendPrivateText("That 邀请函 is only to be used to exit a Fado lovers room.");
 			return false;
 		}
 		return teleportTo(HOTEL_ZONE + " " + HOTEL_SPOT, player);

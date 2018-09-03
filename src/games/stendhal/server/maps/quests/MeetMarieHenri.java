@@ -44,7 +44,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li>Karma +5</li>
- * <li>An empty scroll</li>
+ * <li>An 空白卷轴</li>
  * </ul>
  *
  * REPETITIONS:
@@ -200,7 +200,7 @@ public class MeetMarieHenri extends AbstractQuest {
 							// answer is correct -> get reward
 							npc.say("Yes, that's it! Here, take this empty sheet of paper as a reward. It is the most valuable item for thinkers like us.");
 							final Item reward = SingletonRepository
-									.getEntityManager().getItem("empty scroll");
+									.getEntityManager().getItem("空白卷轴");
 							reward.setBoundTo(player.getName());
 							player.equipOrPutOnGround(reward);
 							player.addXP(200);

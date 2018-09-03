@@ -39,7 +39,7 @@
     </equipable>
   </item>
   
-  <item name="amulet">
+  <item name="护身符">
     <type class="relic" subclass="amulet" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -56,9 +56,9 @@
     </equipable>
   </item>
   
-  <item name="ankh">
+  <item name="十字架">
     <type class="relic" subclass="ankh" tileid="-1"/>
-    <description>You see a mysterious ankh. You don't know what it is for.</description>
+    <description>发现一个神秘的十字架，不知道是干什么用的。</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

@@ -57,12 +57,12 @@ import games.stendhal.server.entity.player.Player;
  * <li> You bring the cloaks to Bario and give them to him.</li>
  * <li> Repeat until Bario received enough cloaks. (Of course you can bring up
  * all requi红斗篷s at the same time.)</li>
- * <li> Bario gives you a golden shield in exchange.</li>
+ * <li> Bario gives you a 金盾 in exchange.</li>
  * </ul>
  *
  * REWARD:
  * <ul>
- * <li> golden shield</li>
+ * <li> 金盾</li>
  * <li> 15000 XP</li>
  * <li> Karma: 25</li>
  * </ul>
@@ -195,7 +195,7 @@ public class CloaksForBario extends AbstractQuest {
 		// player says he has a 蓝灵斗篷 with him and it's the last one
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("蓝灵斗篷"));
-		reward.add(new EquipItemAction("golden shield", 1, true));
+		reward.add(new EquipItemAction("金盾", 1, true));
 		reward.add(new IncreaseXPAction(15000));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(25));
@@ -203,7 +203,7 @@ public class CloaksForBario extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "1"), new PlayerHasItemWithHimCondition("蓝灵斗篷")),
 				ConversationStates.ATTENDING,
-				"Thank you very much! Now I have enough cloaks to survive the winter. Here, take this golden shield as a reward.",
+				"Thank you very much! Now I have enough cloaks to survive the winter. Here, take this 金盾 as a reward.",
 				new MultipleActions(reward));
 
 		npc.add(ConversationStates.QUESTION_1,
@@ -239,7 +239,7 @@ public class CloaksForBario extends AbstractQuest {
 			int cloaks = MathHelper.parseIntDefault(player.getQuest(QUEST_SLOT),  REQUIRED_CLOAKS);
 			res.add("I need to bring Bario " + cloaks + "蓝灵斗篷"+ "one" + "." );
 		} else {
-			res.add("Bario gave me a precious golden shield in return for the 精灵斗篷s!");
+			res.add("Bario gave me a precious 金盾 in return for the 精灵斗篷s!");
 		}
 		return res;
 	}

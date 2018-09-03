@@ -22,7 +22,7 @@ import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * Represents the rainbow beans that takes the player to the dream world zone,
+ * Represents the 彩虹豆 that takes the player to the dream world zone,
  * after which it will teleport player to a random location in 0_塞门_草原_s.
  */
 public class RainbowBeansScroll extends TimedTeleportScroll {
@@ -67,7 +67,7 @@ public class RainbowBeansScroll extends TimedTeleportScroll {
 				// player used the beans within the last DELAY hours
 				// so are not allowed to go yet. but don't reset the last time taken.
 				// the private text doesn't get sent because events are lost on zone change. (marauroa bug)
-				player.sendPrivateText("You were just sick from overuse of the rainbow beans. Classy!");
+				player.sendPrivateText("You were just sick from overuse of the 彩虹豆. Classy!");
 				final Item sick = SingletonRepository.getEntityManager().getItem("vomit");
 				player.getZone().add(sick);
 				sick.setPosition(player.getX(), player.getY() + 1);
@@ -80,7 +80,7 @@ public class RainbowBeansScroll extends TimedTeleportScroll {
 				return super.useTeleportScroll(player);
 			}
 		} else {
-			// players can only buy rainbow beans from Pdiddi who stores the time bought in quest slot
+			// players can only buy 彩虹豆 from Pdiddi who stores the time bought in quest slot
 			// so if they didn't have the quest slot they got the beans ''illegally''
 			player.sendPrivateText("Those dodgy beans made you sick. Next time buy them from Pdiddi.");
 			this.removeOne();

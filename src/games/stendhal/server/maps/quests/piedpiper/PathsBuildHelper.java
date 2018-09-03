@@ -53,7 +53,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(115,43));
 		localroute.add(new Node(127,43));
 		fullPath.add(
-				new RPZonePath("0_ados_wall_n2",
+				new RPZonePath("0_阿多斯_城墙_n2",
 				new LinkedList<Node>(localroute)));
 
 		// market
@@ -462,7 +462,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(115,95));
 
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -475,7 +475,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -488,7 +488,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -504,7 +504,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 

@@ -135,7 +135,7 @@ public class WeddingRing extends Item {
 		if (spouseName == null) {
 			player.sendPrivateText("这个婚戒还没有刻上名字.");
 			logger.debug(player.getName()
-					+ "tried to use a wedding ring without a spouse name engraving.");
+					+ "tried to use a 婚戒 without a spouse name engraving.");
 			return false;
 		}
 
@@ -145,11 +145,11 @@ public class WeddingRing extends Item {
 			return false;
 		}
 
-		if (spouse.isEquipped("wedding ring")) {
+		if (spouse.isEquipped("婚戒")) {
 			// spouse is equipped with ring but could be divorced and
 			// have another
 
-			final Item weddingRing = spouse.getFirstEquipped("wedding ring");
+			final Item weddingRing = spouse.getFirstEquipped("婚戒");
 
 			if (weddingRing.getInfoString() == null) {
 				// divorced with ring and engaged again
@@ -218,10 +218,10 @@ public class WeddingRing extends Item {
 		final String spouseName = getInfoString();
 
 		if (spouseName != null) {
-			return "你看到一个 §'wedding ring'. 上面雕刻着: \"致 "
+			return "你看到一个 §'婚戒'. 上面雕刻着: \"致 "
 					+ spouseName + "\"永恒的爱.";
 		} else {
-			return "你看到 §'wedding ring'.";
+			return "你看到 §'婚戒'.";
 		}
 	}
 
@@ -273,7 +273,7 @@ public class WeddingRing extends Item {
 
 		new ItemLogger().destroy(player, slot, ring, "another ring");
 		ring.removeFromWorld();
-		logger.info("Destroyed a wedding ring: " + ring);
+		logger.info("Destroyed a 婚戒: " + ring);
 	}
 
 	/**

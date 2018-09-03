@@ -25,7 +25,7 @@ import marauroa.common.game.IRPZone;
 
 /**
  * An area is a specified place on a specified zone like (88, 78) to (109, 98)
- * in 0_ados_wall_n.
+ * in 0_阿多斯_城墙_n.
  *
  * @author hendrik
  */

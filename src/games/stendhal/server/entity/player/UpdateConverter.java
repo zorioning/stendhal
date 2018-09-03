@@ -42,7 +42,7 @@ public abstract class UpdateConverter {
 	private static Logger logger = Logger.getLogger(UpdateConverter.class);
 
 	private static final List<String> ITEM_NAMES_OLD = Arrays.asList(
-			"flail_+2", "leather_armor_+1", "leather_cuirass_+1",
+			"连枷_+2", "leather_armor_+1", "leather_cuirass_+1",
 			"chain_armor_+1", "scale_armor_+1", "chain_armor_+3",
 			"scale_armor_+2", "twoside_axe_+3", "elf_cloak_+2", "mace_+1",
 			"mace_+2", "hammer_+3", "chain_helmet_+2", "golden_helmet_+3",
@@ -51,9 +51,9 @@ public abstract class UpdateConverter {
 	private static final List<String> ITEM_NAMES_NEW = Arrays.asList(
 			"morning star", "鳞甲", "护肩皮胸甲",
 			"加固锁子甲", "铁鳞甲", "黄金锁子甲",
-			"护肩铁胸甲", "黄金双刃斧", "蓝灵斗篷", "enhanced mace",
-			"golden mace", "golden hammer", "aventail", "horned golden helmet",
-			"composite bow", "enhanced lion shield"
+			"护肩铁胸甲", "黄金双刃斧", "蓝灵斗篷", "加强狼牙棒",
+			"黄金狼牙棒", "黄金战锤", "aventail", "horned golden helmet",
+			"composite bow", "加强狮盾"
 	);
 
 	private static final List<String> ITEM_NAMES_OLD_0_66 = Arrays.asList(

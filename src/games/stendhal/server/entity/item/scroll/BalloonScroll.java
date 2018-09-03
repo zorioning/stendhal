@@ -66,19 +66,19 @@ public class BalloonScroll extends TimedTeleportScroll {
 	protected boolean useTeleportScroll(final Player player) {
 		if (!"6_kikareukin_islands".equals(player.getZone().getName())) {
 			if ("7_kikareukin_clouds".equals(player.getZone().getName())) {
-				player.sendPrivateText("Another balloon does not seem to lift you any higher.");
+				player.sendPrivateText("Another 气球 does not seem to lift you any higher.");
 			} else {
-				player.sendPrivateText("The balloon tried to float you away but the altitude was too low for it to even lift you. "
+				player.sendPrivateText("The 气球 tried to float you away but the altitude was too low for it to even lift you. "
 						+ "Try from somewhere higher up.");
 			}
 			return false;
 		}
 		long lastuse = -1;
-		if (player.hasQuest("balloon")) {
-			lastuse = Long.parseLong(player.getQuest("balloon"));
+		if (player.hasQuest("气球")) {
+			lastuse = Long.parseLong(player.getQuest("气球"));
 		}
 
-		player.setQuest("balloon", Long.toString(System.currentTimeMillis()));
+		player.setQuest("气球", Long.toString(System.currentTimeMillis()));
 
 		final long timeRemaining = (lastuse + DELAY) - System.currentTimeMillis();
 		if (timeRemaining > 0) {
