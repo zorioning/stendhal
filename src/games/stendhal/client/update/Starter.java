@@ -46,13 +46,9 @@ public class Starter {
 			if (Float.parseFloat(version) < 1.8f) {
 				JOptionPane.showMessageDialog(
 						null,
-<<<<<<< HEAD
-						"游戏需要JAVA版本至少为 Java 7。"
-=======
-						"You need at least Java 8 (also known as 1.8.0) but you only have "
->>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
+						"你的jre版本为"
 						+ version
-						+ ". 你可以在 https://java.com 下载");
+						+ ". 本游戏需要 Java 8 (也叫jre1.8.0) 运行环境，可以在 https://java.com 下载");
 			}
 		} catch (final RuntimeException e) {
 			// ignore

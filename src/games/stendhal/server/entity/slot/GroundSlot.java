@@ -82,7 +82,7 @@ public class GroundSlot extends EntitySlot {
 	public boolean isReachableForThrowingThingsIntoBy(Entity entity) {
 		// and in reach
 		if (entity.squaredDistance(x, y) > (8 * 8)) {
-			setErrorMessage("That is too far away.");
+			setErrorMessage("太远了.");
 			return false;
 		}
 

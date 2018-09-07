@@ -15,6 +15,7 @@ package games.stendhal.client.gui;
 import static games.stendhal.common.constants.Actions.COND_STOP;
 import static games.stendhal.common.constants.Actions.TYPE;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -22,6 +23,9 @@ import java.awt.Frame;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.Transparency;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.FocusAdapter;
@@ -29,6 +33,10 @@ import java.awt.event.FocusEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -43,6 +51,9 @@ import javax.swing.JTabbedPane;
 import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+import javax.swing.Timer;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.plaf.TabbedPaneUI;
 
 import org.apache.log4j.Logger;
@@ -75,6 +86,8 @@ import games.stendhal.client.gui.layout.SLayout;
 import games.stendhal.client.gui.map.MapPanelController;
 import games.stendhal.client.gui.spells.Spells;
 import games.stendhal.client.gui.stats.StatsPanelController;
+import games.stendhal.client.gui.styled.Style;
+import games.stendhal.client.gui.styled.StyleUtil;
 import games.stendhal.client.gui.styled.StyledTabbedPaneUI;
 import games.stendhal.client.gui.wt.core.SettingChangeAdapter;
 import games.stendhal.client.gui.wt.core.WtWindowManager;
@@ -89,6 +102,7 @@ import games.stendhal.common.MathHelper;
 import games.stendhal.common.NotificationType;
 import games.stendhal.common.constants.SoundLayer;
 import games.stendhal.common.constants.Testing;
+
 import marauroa.client.BannedAddressException;
 import marauroa.client.TimeoutException;
 import marauroa.client.net.IPerceptionListener;
@@ -969,7 +983,6 @@ public class j2DClient implements UserInterface {
 		}
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Create the chat log tabs.
 	 *
@@ -1079,7 +1092,7 @@ public class j2DClient implements UserInterface {
 	 */
 	private List<JComponent> createNotificationChannels() {
 		List<JComponent> list = new ArrayList<JComponent>();
-		channelManager = new NotificationChannelManager();
+		//channelManager = new NotificationChannelManager();
 		KTextEdit edit = new KTextEdit();
 		list.add(edit);
 
@@ -1109,7 +1122,8 @@ public class j2DClient implements UserInterface {
 		 * Give it a different background color to make it different from the
 		 * main chat log.
 		 */
-		edit.setDefaultBackground(Color.decode(PRIVATE_TAB_COLOR));
+		 
+		edit.setDefaultBackground(Color.decode("0xdcdcff"));
 		list.add(edit);
 		/*
 		 * Types shown by default in the private/group tab. Admin messages
@@ -1124,10 +1138,8 @@ public class j2DClient implements UserInterface {
 		return list;
 	}
 
-=======
 	
 	
->>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 	/**
 	 * Get the main window component.
 	 *

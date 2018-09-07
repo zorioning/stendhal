@@ -103,13 +103,8 @@ public class KillSpiders extends AbstractQuest {
 				});
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
-<<<<<<< HEAD
-		actions.add(new SetQuestAction(QUEST_SLOT, "started"));
-		//actions.add(new StartRecordingKillsAction(QUEST_SLOT,1,"蜘蛛", "毒蜘蛛", "巨型蜘蛛"));
-=======
 		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "started", 1.0));
-		//actions.add(new StartRecordingKillsAction(QUEST_SLOT,1,"spider", "poisonous spider", "giant spider"));
->>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
+		//actions.add(new StartRecordingKillsAction(QUEST_SLOT,1,"蜘蛛", "毒蜘蛛", "巨型蜘蛛"));
 
 
 		npc.add(ConversationStates.QUEST_OFFERED,

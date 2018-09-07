@@ -144,12 +144,12 @@ public class ConsumableItem extends StackableItem implements Comparable<Consumab
 				}
 
 				if (!user.nextTo((Entity) base)) {
-					user.sendPrivateText("The consumable item is too far away");
+					user.sendPrivateText("这个消耗品离你太远");
 					return false;
 				}
 			} else {
 				if (!nextTo(user)) {
-					user.sendPrivateText("The consumable item is too far away");
+					user.sendPrivateText("这个消耗品离你太远");
 					return false;
 				}
 			}

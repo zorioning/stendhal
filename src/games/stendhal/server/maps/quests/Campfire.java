@@ -198,13 +198,8 @@ public class Campfire extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-<<<<<<< HEAD
 			"Okay. 你去北方的森林找些木头，找够了10根就回来吧!",
-			new SetQuestAction(QUEST_SLOT, "start"));
-=======
-			"Okay. You can find wood in the forest north of here. Come back when you get ten pieces of wood!",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 2));
->>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 
 		// player is not willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,

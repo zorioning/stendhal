@@ -260,7 +260,7 @@ public class GroundContainer implements Inspector, MouseListener, MouseMotionLis
 			} else {
 				// Otherwise just give a message to the user and let the window
 				// be collected as garbage
-				j2DClient.get().addEventLine(new EventLine("", "The " + suspect.getType() + " is too far away.", NotificationType.CLIENT));
+				j2DClient.get().addEventLine(new EventLine("", suspect.getType() + " 离你太远.", NotificationType.CLIENT));
 				return null;
 			}
 		}

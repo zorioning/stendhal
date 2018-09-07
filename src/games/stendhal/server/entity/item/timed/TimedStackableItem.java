@@ -98,7 +98,7 @@ public abstract class TimedStackableItem extends StackableItem {
 
 	@Override
 	public String describe() {
-		String text = "你看见 " + getTitle() + ".";
+		String text = "这是 " + getTitle() + ".";
 		if (hasDescription()) {
 			text = getDescription();
 		}

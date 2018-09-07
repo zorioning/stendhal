@@ -120,7 +120,7 @@ public class OwnAction implements ActionListener {
 
 		if (path.isEmpty() && !entity.nextTo(player)) {
 			// The animal is too far away
-			player.sendPrivateText("That " + entity.getTitle() + " is too far away.");
+			player.sendPrivateText( entity.getTitle() + " 离你太远.");
 			return false;
 		}
 		return true;
@@ -135,13 +135,13 @@ public class OwnAction implements ActionListener {
 	private void own(final Player player, final DomesticAnimal animal) {
 		if (animal instanceof Sheep) {
 			if (player.getSheep() != null) {
-				player.sendPrivateText("You already own a sheep.");
+				player.sendPrivateText("你已有了一只羊.");
 			} else {
 				player.setSheep((Sheep) animal);
 			}
 		} else if (animal instanceof Pet) {
 			if (player.getPet() != null) {
-				player.sendPrivateText("You already own a pet.");
+				player.sendPrivateText("你已有了一只宠物.");
 			} else {
 				player.setPet((Pet) animal);
 			}

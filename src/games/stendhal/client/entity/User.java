@@ -117,15 +117,6 @@ public class User extends Player {
 		return userProxy.getServerRelease();
 	}
 
-<<<<<<< HEAD
-		String text;
-		if (message == null) {
-			text = "离开状开已取消";
-		} else {
-			text = "设置你的状态为离开";
-		}
-		ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(text, NotificationType.INFORMATION));
-=======
 	/**
 	 * is the specified charname a buddy of us?
 	 *
@@ -134,7 +125,6 @@ public class User extends Player {
 	 */
 	public static boolean hasBuddy(String name) {
 		return userProxy.hasBuddy(name);
->>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 	}
 
 	/**
@@ -304,23 +294,8 @@ public class User extends Player {
 	 *
 	 * @return zone name
 	 */
-<<<<<<< HEAD
-	public int getPetID() {
-		return rpObject.getInt("pet");
-	}
-
-	@Override
-	public void onHealed(final int amount) {
-		super.onHealed(amount);
-		ClientSingletonRepository.getUserInterface().addEventLine(
-				new HeaderLessEventLine(
-						getTitle() + " 治愈 "
-						+ amount + "生命值。",
-						NotificationType.HEAL));
-=======
 	public String getZoneName() {
 		return getID().getZoneID();
->>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 	}
 
 	/**
@@ -393,35 +368,10 @@ public class User extends Player {
 
 		// The first time we ignore it.
 		if (object != null) {
-<<<<<<< HEAD
-			if (changes.has("offline")) {
-				final String[] players = changes.get("offline").split(",");
-				for (final String playername : players) {
-						ClientSingletonRepository.getUserInterface().addEventLine(
-							new HeaderLessEventLine(
-							playername + " 已离开Stendhal游戏",
-							NotificationType.INFORMATION));
-				}
-			}
-
-			if (changes.has("online")) {
-				final String[] players = changes.get("online").split(",");
-				for (final String playerName : players) {
-					ClientSingletonRepository.getUserInterface().addEventLine(
-							new HeaderLessEventLine(
-							playerName + " 已上线Stendhal.",
-							NotificationType.INFORMATION));
-				}
-			}
-
-			if (changes.hasSlot("!ignore")) {
-				RPObject ign = changes.getSlot("!ignore").getFirst();
-=======
 			notifyUserAboutPlayerOnlineChanges(changes);
 
 			if (changes.hasSlot(IGNORE_SLOT)) {
 				RPObject ign = changes.getSlot(IGNORE_SLOT).getFirst();
->>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 				if (ign != null) {
 					addIgnore(ign);
 				}
@@ -443,8 +393,8 @@ public class User extends Player {
 	@Override
 	public void onHealed(final int amount) {
 		super.onHealed(amount);
-		String pointDesc = Grammar.quantityplnoun(amount, "health point");
-		notifyUser(getTitle() + " heals " + pointDesc + ".", NotificationType.HEAL);
+	//	String pointDesc = Grammar.quantityplnoun(amount, "health point");
+		notifyUser(getTitle() + " 恢复 " + amount + " 生命值.", NotificationType.HEAL);
 	}
 	
 	private void notifyUser(String message, NotificationType type) {
@@ -452,8 +402,8 @@ public class User extends Player {
 	}
 	
 	private void notifyUserAboutPlayerOnlineChanges(RPObject changes) {
-		notifyUserAboutPlayerStatus(changes, "offline", " has left Stendhal.");
-		notifyUserAboutPlayerStatus(changes, "online", " has joined Stendhal.");
+		notifyUserAboutPlayerStatus(changes, "offline", " 离开 Stendhal 游戏.");
+		notifyUserAboutPlayerStatus(changes, "online", " 加入 Stendhal 游戏.");
 	}
 	
 	private void notifyUserAboutPlayerStatus(RPObject changes, String status, String messageEnd) {

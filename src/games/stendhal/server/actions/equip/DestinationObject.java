@@ -191,7 +191,7 @@ class DestinationObject extends MoveableObject {
 				if (!isStackable) {
 					// entity cannot be stacked on top of another...
 					// so the equip is invalid
-					player.sendPrivateText("There is no space in there.");
+					player.sendPrivateText("里面装不下了.");
 					return false;
 				}
 			}
@@ -207,13 +207,13 @@ class DestinationObject extends MoveableObject {
 			if (entity instanceof Item) {
 				Item item = (Item) entity;
 				if (item.isBound() && rpslot.isTargetBoundCheckRequired()) {
-					player.sendPrivateText("You cannot put this special quest reward there because it can only be used by you.");
+					player.sendPrivateText("不能把特殊任务物品用在这里，它只能属于你");
 					return false;
 				}
 
 				// check if an item that is sent to a trade slot is not damaged
 				if ((item.getDeterioration() > 0) && rpslot.getName().equals("trade")) {
-					player.sendPrivateText("You must not trade a damaged item with other players.");
+					player.sendPrivateText("不能和对方交易损坏的物品.");
 					return false;
 				}
 			}
@@ -224,7 +224,7 @@ class DestinationObject extends MoveableObject {
 			if ((zone != null) && zone.simpleCollides(entity, x, y, entity.getWidth(), entity.getHeight())) {
 				logger.warn("object " + entity + " collides with " + x + "x"
 						+ y);
-				player.sendPrivateText("There is no space on there.");
+				player.sendPrivateText("没有空间了.");
 				return false;
 			}
 
@@ -233,7 +233,7 @@ class DestinationObject extends MoveableObject {
 					&& (entity.squaredDistance(x, y) > (8 * 8))) {
 				logger.warn("object " + entity + " is too far away from " + x
 						+ "," + y);
-				player.sendPrivateText("That is too far away.");
+				player.sendPrivateText("离得太远.");
 				return false;
 			}
 
@@ -243,7 +243,7 @@ class DestinationObject extends MoveableObject {
 						player.getX(), player.getY(), new Rectangle(x, y, 1, 1),
 						64 /* maxDestination * maxDestination */, false);
 				if (path.isEmpty()) {
-					player.sendPrivateText("There is no easy path to that place.");
+					player.sendPrivateText("没有路通向那里.");
 					return false;
 				}
 			}

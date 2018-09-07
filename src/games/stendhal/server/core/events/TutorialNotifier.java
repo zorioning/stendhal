@@ -42,7 +42,7 @@ public class TutorialNotifier {
 			// change)
 			// but we delay it for 2 seconds so that the player has some time to
 			// recognize the event
-			new DelayedPlayerTextSender(player, "教程: " + type.getMessage(), NotificationType.TUTORIAL, 2);
+			new DelayedPlayerTextSender(player, "提示: " + type.getMessage(), NotificationType.TUTORIAL, 2);
 
 		}
 	}
