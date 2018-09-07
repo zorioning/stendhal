@@ -29,7 +29,6 @@ import games.stendhal.server.entity.npc.action.EquipItemAction;
 import games.stendhal.server.entity.npc.action.InflictStatusOnNPCAction;
 import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SayTimeRemainingAction;
-import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.SetQuestAndModifyKarmaAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.NotCondition;
@@ -118,8 +117,13 @@ npc.add(ConversationStates.ATTENDING,
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
+<<<<<<< HEAD
 				"谢谢你！如果你找到一些，对我说 #drink ,我保证不会亏待你。",
 				new SetQuestAction(QUEST_SLOT, "start"));
+=======
+				"Thank you! If you have found some, say #drink to me so I know you have it. I'll be sure to give you a nice reward.",
+				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 3));
+>>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 
 		// Player says no, they've lost karma.
 		npc.add(ConversationStates.QUEST_OFFERED,

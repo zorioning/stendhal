@@ -15,7 +15,6 @@ package games.stendhal.client.gui;
 import static games.stendhal.common.constants.Actions.COND_STOP;
 import static games.stendhal.common.constants.Actions.TYPE;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -23,9 +22,6 @@ import java.awt.Frame;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.Transparency;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.FocusAdapter;
@@ -33,10 +29,6 @@ import java.awt.event.FocusEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
-import java.util.BitSet;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -51,9 +43,6 @@ import javax.swing.JTabbedPane;
 import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
-import javax.swing.Timer;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import javax.swing.plaf.TabbedPaneUI;
 
 import org.apache.log4j.Logger;
@@ -86,8 +75,6 @@ import games.stendhal.client.gui.layout.SLayout;
 import games.stendhal.client.gui.map.MapPanelController;
 import games.stendhal.client.gui.spells.Spells;
 import games.stendhal.client.gui.stats.StatsPanelController;
-import games.stendhal.client.gui.styled.Style;
-import games.stendhal.client.gui.styled.StyleUtil;
 import games.stendhal.client.gui.styled.StyledTabbedPaneUI;
 import games.stendhal.client.gui.wt.core.SettingChangeAdapter;
 import games.stendhal.client.gui.wt.core.WtWindowManager;
@@ -119,8 +106,6 @@ public class j2DClient implements UserInterface {
 
 	/** Scrolling speed when using the mouse wheel. */
 	private static final int SCROLLING_SPEED = 8;
-	/** Background color of the private chat tab. Light blue. */
-	private static final String PRIVATE_TAB_COLOR = "0xdcdcff";
 	/** Property name used to determine if scaling is wanted. */
 	private static final String SCALE_PREFERENCE_PROPERTY = "ui.scale_screen";
 
@@ -142,14 +127,13 @@ public class j2DClient implements UserInterface {
 
 	private JLayeredPane pane;
 
-	/** Chat channels. */
-	private NotificationChannelManager channelManager;
-
 	private ContainerPanel containerPanel;
 
 	private boolean gameRunning;
 
 	private final ChatTextController chatText = new ChatTextController();
+	/** Chat channels. */
+	private final NotificationChannelManager channelManager = new NotificationChannelManager();
 
 	/** the Character panel. */
 	private Character character;
@@ -326,7 +310,7 @@ public class j2DClient implements UserInterface {
 		/*
 		 * Game log
 		 */
-		final JTabbedPane chatLogArea = createLogArea();
+		final JComponent chatLogArea = new ChatLogArea(channelManager).getComponent();
 		chatLogArea.setPreferredSize(new Dimension(screen.getWidth(), 171));
 
 		// *** Key handling ***
@@ -985,6 +969,7 @@ public class j2DClient implements UserInterface {
 		}
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Create the chat log tabs.
 	 *
@@ -1139,6 +1124,10 @@ public class j2DClient implements UserInterface {
 		return list;
 	}
 
+=======
+	
+	
+>>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 	/**
 	 * Get the main window component.
 	 *

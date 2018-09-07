@@ -33,7 +33,7 @@ caiman.png            ???; ???; ???
 chicken.png           Daniel Eddeland (daneeklu); CC BY 3.0; https://opengameart.org/node/11629
 cobra.*               Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/20678
 crab.png              Dominik Gmiterko (ienze); CC BY 3.0; https://opengameart.org/node/6270
-deer.png              Calciumtrice, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/51561
+deer.*                Calciumtrice, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/51561
 dodo_bird.png         ???; ???; ???
 dog.png               ???; ???; ???
 elephant.*            lawnjelly, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/84509
@@ -47,7 +47,7 @@ pandabear.png         danielmahon; CC BY-SA 3.0; https://opengameart.org/node/21
 penguin.png           Kelvin Shadewing, Jordan Irwin (AntumDeluge); CC BY-SA 4.0; https://opengameart.org/node/83751; http://kyrodianlegends.com/
 pigeon.*              Onno Timmerman (Enquest), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/84675
 poisonous_spider.png  Groundhug McHamster (h4mt4ro); ???; https://sourceforge.net/p/arianne/patches/2804501
-reindeer.*            ???; ???; ???
+reindeer.*            Calciumtrice, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/51561
 snake.png             Charles Sanchez (CharlesGabriel, Antifarea); CC BY-SA 3.0; http://lpc.opengameart.org/static/lpc-style-guide/assets.html#creatures
 spider.png            Groundhug McHamster (h4mt4ro); ???; https://sourceforge.net/p/arianne/patches/2804501
 tiger.*               Kimmo Rundelin (kiheru); CC BY-SA 3.0; Stendhal
@@ -193,18 +193,18 @@ shark.png      ???; ???; ???
 
 data/sprites/monsters/giant_human/
 
-amazoness_giant.*           Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
-angel.png                   Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
-archangel.png               Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
-black_giant.*               Svetlana Kushnariova (Cabbit), NicholasJudy456, olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
-dark_angel.png              Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
-dark_archangel.png          Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
-fallen_angel.png            Svetlana Kushnariova (Cabbit), johnny_automatic, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
-giant.*                     Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
-giant_elder.*               Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
-ice_giant.png               Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
-imperial_general_giant.png  ???; ???; ???
-master_giant.png            ???; ???; ???
+amazoness_giant.*         Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
+angel.png                 Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
+archangel.png             Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
+black_giant.*             Svetlana Kushnariova (Cabbit), NicholasJudy456, olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
+dark_angel.png            Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
+dark_archangel.png        Svetlana Kushnariova (Cabbit), liftarn, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
+fallen_angel.png          Svetlana Kushnariova (Cabbit), johnny_automatic, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/83286
+giant.*                   Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
+giant_elder.*             Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
+ice_giant.png             Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
+imperial_general_giant.*  Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/84455
+master_giant.*            Svetlana Kushnariova (Cabbit), LokiF, David E. Gervais, Jordan Irwin (AntumDeluge); CC BY-SA 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/2529, http://pousse.rapiere.free.fr/tome/, https://opengameart.org/node/84455
 
 data/sprites/monsters/gnome/
 
@@ -221,9 +221,9 @@ veteran_goblin.png  ???; ???; ???
 
 data/sprites/monsters/golem/
 
-ice_golem.png     Stephen Challener (Redshrike); OGA BY 3.0; https://opengameart.org/node/6262
-stone_golem.png   Stephen Challener (Redshrike); OGA BY 3.0; https://opengameart.org/node/6262
-wooden_golem.png  ???; ???; ???
+ice_golem.png    Stephen Challener (Redshrike); OGA BY 3.0; https://opengameart.org/node/6262
+stone_golem.png  Stephen Challener (Redshrike); OGA BY 3.0; https://opengameart.org/node/6262
+wooden_golem.*   Kimmo Rundelin (kiheru), Jordan Irwin (AntumDeluge); CC BY-SA 3.0; Stendhal
 
 data/sprites/monsters/huge_animal/
 
@@ -245,17 +245,18 @@ twin_head_dragon.png      ZaPaper, Jordan Irwin (AntumDeluge); CC BY 3.0; https:
 data/sprites/monsters/human/
 
 apprentice_assassin.png    Svetlana Kushnariova (Cabbit), onu/olonu; OGA BY 3.0; https://sourceforge.net/p/arianne/patches/717/
-armored_leader.png         ???; ???; ???
-armored_warrior.png        ???; ???; ???
+armored_leader.png         Svetlana Kushnariova (Cabbit), Eldiran, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/87473
+armored_warrior.png        Svetlana Kushnariova (Cabbit), Eldiran, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/87473
 assassin.*                 Svetlana Kushnariova (Cabbit), diamonddmgirl, olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661
 bandit.png                 Svetlana Kushnariova (Cabbit), diamonddmgirl, olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661
 barbarian.*                Svetlana Kushnariova (Cabbit), olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/82377
 barbarian_chaman.*         Svetlana Kushnariova (Cabbit), Carl Olsson (surt), olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/82377, https://opengameart.org/node/2261
-barbarian_elite.*          ???; ???; ???
+barbarian_elite.*          Stephen Challener (Redshrike), Jianhui999, olonu; CC BY-SA 3.0; https://opengameart.org/node/2528, https://opengameart.org/node/69188
 barbarian_king.*           Svetlana Kushnariova (Cabbit), diamonddmgirl, Bart Kelsey, olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/3755
 barbarian_leader.png       ???; ???; ???
 barbarian_priest.png       ???; ???; ???
 barbarian_wolf.*           Svetlana Kushnariova (Cabbit), olonu; OGA BY 3.0; https://opengameart.org/node/72969
+blordrough.xcf.bz2         Svetlana Kushnariova (Cabbit), Eldiran, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/87473
 cannibal.*                 Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969
 cannibalwoman.*            Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969
 darkmonk.png               Svetlana Kushnariova (Cabbit), onu/olonu; OGA BY 3.0; https://github.com/arianne/stendhal/issues/124
@@ -301,11 +302,11 @@ soldier_knight.*           Svetlana Kushnariova (Cabbit), Stephen Challener (Red
 soldier_lieutenant.*       Svetlana Kushnariova (Cabbit), Stephen Challener (Redshrike), olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/11152
 soldier_sergeant.png       Svetlana Kushnariova (Cabbit), Stephen Challener (Redshrike), olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/11152
 soldier_wizard.png         Svetlana Kushnariova (Cabbit), onu/olonu; OGA BY 3.0; https://sourceforge.net/p/arianne/patches/716/
-super_human.png            ???; ???; ???
+super_human.png            Svetlana Kushnariova (Cabbit), Eldiran, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/87473
 
 data/sprites/monsters/hybrid/
 
-arachne.png          ???; ???; ???
+arachne.*            Svetlana Kushnariova (Cabbit), Stephen Challener (Redshrike), William.Thompsonj, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/21036
 blue_mohiko.*        Svetlana Kushnariova (Cabbit), bluecarrot16, Michael Williams (BizmasterStudios), olonu, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/24944, https://opengameart.org/node/36060, https://opengameart.org/node/77334
 brain_ahouga.png     Tuomo Untinen (Reemax); CC BY 3.0; https://opengameart.org/node/15590
 dark_aruthon.png     Kevin Smith (TKZ Productions); CC BY 3.0; https://opengameart.org/node/50703
@@ -314,7 +315,7 @@ grobble_monster.png  Stephen Challener (Redshrike); OGA BY 3.0; https://opengame
 mermaid.png          Svetlana Kushnariova (Cabbit); OGA BY 3.0; https://opengameart.org/node/72969
 mimic.*              Diligent Dodo/soniccuz; GPL 2.0; Stendhal
 mimic_idle.png       Diligent Dodo / soniccuz; GPL 2.0; Stendhal
-necrosophia.png      ???; ???; ???
+necrosophia.*        Wolf W. (Ouren), Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/45981
 red_roohako.*        Svetlana Kushnariova (Cabbit), Fabzy, olonu; CC BY-SA 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/23314
 robot_aruthon.png    Kevin Smith (TKZ Productions), Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/82760
 snarfkin.png         Kemono & Jordan Irwin (AntumDeluge); CC BY-SA 3.0; https://opengameart.org/node/82910
@@ -345,19 +346,19 @@ lutin_wench.png     ???; ???; ???
 
 data/sprites/monsters/madaram/
 
-kasarkutominubat.png       Svetlana Kushnariova (Cabbit), onu/olonu, NicholasJudy456; OGA BY 3.0; https://github.com/arianne/stendhal/issues/109
-madaram_archer.*           Svetlana Kushnariova (Cabbit), diamonddmgirl, David E. Gervais, olonu; CC BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/6622
-madaram_axeman.*           Svetlana Kushnariova (Cabbit), diamonddmgirl, GrumpyDiamond, olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/83728
-madaram_buster_blader.png  ???; ???; ???
-madaram_cavalry.*          Stephen Challener (Redshrike), wulax, olonu; CC BY-SA 3.0; https://opengameart.org/node/11152, https://opengameart.org/node/11165
-madaram_healer.png         ???; ???; ???
-madaram_hero.png           ???; ???; ???
-madaram_peasant.*          Svetlana Kushnariova (Cabbit), diamonddmgirl, olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; Stendhal, https://opengameart.org/node/24944, https://opengameart.org/node/83661
-madaram_queen.*            Svetlana Kushnariova (Cabbit), diamonddmgirl, olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661
-madaram_soldier.*          Svetlana Kushnariova (Cabbit), diamonddmgirl, Nila122, olonu; CC BY-SA 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/25629
-madaram_stalker.png        Svetlana Kushnariova (Cabbit), onu/olonu, Eldiran; ???; https://github.com/arianne/stendhal/issues/106
-madaram_trooper.png        Svetlana Kushnariova (Cabbit), onu/olonu, Michele Bucelli (Buch), Shawneth; OGA BY 3.0; https://github.com/arianne/stendhal/issues/111
-madaram_windwalker.png     ???; ???; ???
+kasarkutominubat.png     Svetlana Kushnariova (Cabbit), onu/olonu, NicholasJudy456; OGA BY 3.0; https://github.com/arianne/stendhal/issues/109
+madaram_archer.*         Svetlana Kushnariova (Cabbit), diamonddmgirl, David E. Gervais, olonu; CC BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/6622
+madaram_axeman.*         Svetlana Kushnariova (Cabbit), diamonddmgirl, GrumpyDiamond, olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/83728
+madaram_buster_blader.*  Svetlana Kushnariova (Cabbit), diamonddmgirl, Gwes, olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/10653
+madaram_cavalry.*        Stephen Challener (Redshrike), wulax, olonu; CC BY-SA 3.0; https://opengameart.org/node/11152, https://opengameart.org/node/11165
+madaram_healer.png       ???; ???; ???
+madaram_hero.png         ???; ???; ???
+madaram_peasant.*        Svetlana Kushnariova (Cabbit), diamonddmgirl, olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; Stendhal, https://opengameart.org/node/24944, https://opengameart.org/node/83661
+madaram_queen.*          Svetlana Kushnariova (Cabbit), diamonddmgirl, olonu; OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661
+madaram_soldier.*        Svetlana Kushnariova (Cabbit), diamonddmgirl, Nila122, olonu; CC BY-SA 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83661, https://opengameart.org/node/25629
+madaram_stalker.png      Svetlana Kushnariova (Cabbit), onu/olonu, Eldiran; ???; https://github.com/arianne/stendhal/issues/106
+madaram_trooper.png      Svetlana Kushnariova (Cabbit), onu/olonu, Michele Bucelli (Buch), Shawneth; OGA BY 3.0; https://github.com/arianne/stendhal/issues/111
+madaram_windwalker.png   ???; ???; ???
 
 data/sprites/monsters/minotaur/
 
@@ -377,7 +378,7 @@ cat_woman.png            ???; ???; ???
 glow_monster.png         Charles Sanchez (CharlesGabriel, Antifarea); CC BY 3.0; https://opengameart.org/node/4125
 high_naga.png            ???; ???; ???
 imperial_experiment.png  artisticdude, Tuomo Untinen (Reemax), onu/olonu; CC0; https://github.com/arianne/stendhal/issues/74
-imperial_mutant.*        ???; ???; ???
+imperial_mutant.*        Svetlana Kushnariova (Cabbit), Stephen Challener (Redshrike), William.Thompsonj, olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/20926
 lamia.*                  ???; ???; ???
 naga.png                 ???; ???; ???
 werewolf.png             yolkati, Svetlana Kushnariova (Cabbit), onu/olonu, Jordan Irwin (AntumDeluge); CC BY-SA 3.0; https://github.com/arianne/stendhal/issues/125
@@ -480,18 +481,18 @@ death_knight.*         Lori Angela Nagel (Jastiv); CC BY 3.0/4.0; https://openga
 demon_skeleton.png     artisticdude, Jordan Irwin (AntumDeluge); CC0; https://opengameart.org/node/83067
 devil_monk.png         Stephen Challener (Redshrike); OGA BY 3.0; https://opengameart.org/node/5215
 devil_queen.*          Svetlana Kushnariova (Cabbit), diamonddmgirl, johnny_automatic, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/24944, https://opengameart.org/node/66147, https://openclipart.org/detail/4365
-elder_skeleton.png     ???; ???; ???
+elder_skeleton.*       Stephen Challener (Redshirke), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/6262
 fallen_high_priest.*   Stephen Challener (Redshrike), olonu; OGA BY 3.0; https://opengameart.org/node/5215, https://opengameart.org/node/6262
 fallen_priest.*        Svetlana Kushnariova (Cabbit), Stephen Challener (Redshrike), olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/6262, Stendhal
 fallen_warrior.*       Lori Angela Nagel (Jastiv); CC BY 3.0/4.0; https://opengameart.org/node/82964; Copyright © Lori Angela Nagel 2018
 ghost.*                Kimmo Rundelin (kiheru); CC BY-SA 3.0; Stendhal
 ghosthound.png         Stephen Challener (Redshrike), William Thompson (William.Thompsonj); OGA BY 3.0; https://opengameart.org/node/20830
-green_phantom.png      ???; ???; ???
+green_phantom.*        Svetlana Kushnariova (Cabbit), Charles Gabriel, AlexCons, Jordan Irwin (AntumDeluge); CC BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/83035, https://opengameart.org/node/15360
 headless_monster.png   Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/82939
-high_lich.png          ???; ???; ???
+high_lich.*            Svetlana Kushnariova (Cabbit), Stephen Challener (Redshrike), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/72969, https://opengameart.org/node/6262, https://opengameart.org/node/84455
 incorporeal_armor.png  Stephen Challener (Redshrike), Svetlana Kushnariova (Cabbit), olonu, Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/11152
 invisible_man.png      ???; ???; ???
-lich.png               ???; ???; ???
+lich.*                 Stephen Challener (Redshrike), Lori Angela Nagel (Jastiv), artisticdude, olonu, Jordan Irwin (AntumDeluge); CC BY 3.0/4.0; https://opengameart.org/node/82964, https://opengameart.org/node/6262, https://opengameart.org/node/83067
 myling.*               Artisticdude; CC0; http://opengameart.org/node/14803
 rotten_zombie.png      Svetlana Kushnariova (Cabbit), Jordan Irwin (AntumDeluge); OGA BY 3.0; https://opengameart.org/node/82939
 skeleton.png           artisticdude, Jordan Irwin (AntumDeluge); CC0; https://opengameart.org/node/83067

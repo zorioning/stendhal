@@ -1,6 +1,5 @@
-/* $Id$ */
 /***************************************************************************
- *                      (C) Copyright 2003 - Marauroa                      *
+ *                    (C) Copyright 2003-2018 - Marauroa                   *
  ***************************************************************************
  ***************************************************************************
  *                                                                         *
@@ -12,7 +11,11 @@
  ***************************************************************************/
 package games.stendhal.server.entity;
 
+<<<<<<< HEAD
 //import static games.stendhal.server.core.engine.Translate.getText;
+=======
+import static games.stendhal.server.core.engine.Translate.getText;
+>>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -219,8 +222,12 @@ public abstract class Entity extends RPObject implements Killer {
 		if (has("description")) {
 			description = get("description");
 		}
+<<<<<<< HEAD
 //		return getText(description);
 		return description;
+=======
+		return getText(description);
+>>>>>>> 3afd5d892a4f0731e7d7cbc5707f8cca4a98b26f
 	}
 
 	/**
