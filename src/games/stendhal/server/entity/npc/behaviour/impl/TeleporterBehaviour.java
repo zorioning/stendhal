@@ -123,15 +123,15 @@ public class TeleporterBehaviour implements TurnListener {
 		// the following are too dangerous
 		badZones.add("0_纳尔沃_城");
 		badZones.add("0_orril_castle");
-		badZones.add("0_ados_swamp");
-		badZones.add("0_ados_outside_w");
+		badZones.add("0_阿多斯_沼泽");
+		badZones.add("0_阿多斯_郊外_w");
 		badZones.add("0_阿多斯_城墙_n");
 		badZones.add("0_fado_forest_se");
 		badZones.add("0_fado_forest_s_e2");
 		badZones.add("0_塞门_山_北_西4");
 		// the following have historically been very hard to find a path in
 		badZones.add("0_阿多斯_城_n");
-		badZones.add("0_ados_ocean_e");
+		badZones.add("0_阿多斯_海_e");
 		badZones.add("0_athor_island_w");
 		badZones.add("0_纳尔沃_森林_n");
 		badZones.add("0_纳尔沃_河_s");

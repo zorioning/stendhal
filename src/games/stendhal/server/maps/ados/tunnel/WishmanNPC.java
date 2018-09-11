@@ -19,7 +19,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Outside entrance to dragon lair in -1_ados_outside_w.
+ * Outside entrance to dragon lair in -1_阿多斯_郊外_w.
  */
 public class WishmanNPC implements ZoneConfigurator {
 

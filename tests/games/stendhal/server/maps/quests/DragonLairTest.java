@@ -50,7 +50,7 @@ public class DragonLairTest {
 
 		final StendhalRPZone zone = new StendhalRPZone("admin_test");
 		// must add the zone here as the wishman teleports player into dragon lair
-		MockStendlRPWorld.get().addRPZone(new StendhalRPZone("-1_ados_outside_w"));
+		MockStendlRPWorld.get().addRPZone(new StendhalRPZone("-1_阿多斯_郊外_w"));
 		new WishmanNPC().configureZone(zone, null);
 
 

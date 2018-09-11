@@ -259,7 +259,7 @@ public class SevenCherubs extends AbstractQuest {
 		npc = new CherubNPC("Zophiel", 16, 3);
 		zone.add(npc);
 
-		zone = world.getZone("0_ados_rock");
+		zone = world.getZone("0_阿多斯_巨石");
 		npc = new CherubNPC("Azazel", 67, 24);
 		zone.add(npc);
 	}

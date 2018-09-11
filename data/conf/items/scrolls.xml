@@ -295,7 +295,7 @@
     <description>发现一丛长相奇特的苔藓, 看起来像是有迷幻功能. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.TwilightMossScroll"/>
     <attributes>
-      <infostring value="int_ados_twilight_zone 12 20 10800 int_ados_sewing_room -1 -1"/>
+      <infostring value="int_阿多斯_昏暗_地带 12 20 10800 int_阿多斯_缝纫_店 -1 -1"/>
       <quantity value="1"/>
       <menu value="Use|Use"/>
     </attributes>

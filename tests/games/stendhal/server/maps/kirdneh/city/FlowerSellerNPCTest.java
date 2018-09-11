@@ -31,7 +31,7 @@ import utilities.ZonePlayerAndNPCTestImpl;
  */
 public class FlowerSellerNPCTest extends ZonePlayerAndNPCTestImpl {
 
-	private static final String ZONE_NAME = "int_ados_felinas_house";
+	private static final String ZONE_NAME = "int_阿多斯_菲琳娜_小屋";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

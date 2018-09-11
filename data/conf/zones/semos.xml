@@ -305,14 +305,14 @@
       <attribute name="resistance">0</attribute>
     </entity>
 
-    <!-- Caroline Shop signs for MINE TOWN WEEKS -->
+    <!-- 卡若琳 Shop signs for MINE TOWN WEEKS -->
     <entity x="60" y="105" condition="stendhal.minetown">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellrevivalweeks</parameter>
-        <parameter name="title">Carolines 副食商店(销售部)</parameter>
+        <parameter name="title">卡若琳s 副食商店(销售部)</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">Caroline sells snacks and drinks during the Mine Town Revival weeks.</parameter>
+        <parameter name="caption">卡若琳 sells snacks and drinks during the Mine Town Revival weeks.</parameter>
       </implementation>
       <attribute name="class">blackboard</attribute>
     </entity>
@@ -321,9 +321,9 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellrevivalweeks</parameter>
-        <parameter name="title">Carolines 副食商店 (销售部)</parameter>
+        <parameter name="title">卡若琳s 副食商店 (销售部)</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">Caroline sells snacks and drinks during the Mine Town Revival weeks.</parameter>
+        <parameter name="caption">卡若琳 sells snacks and drinks during the Mine Town Revival weeks.</parameter>
       </implementation>
       <attribute name="class">blackboard</attribute>
     </entity>

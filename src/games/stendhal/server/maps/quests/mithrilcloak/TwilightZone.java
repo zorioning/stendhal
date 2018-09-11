@@ -155,7 +155,7 @@ class TwilightZone {
 				new MultipleActions(
 								new DropItemAction("twilight elixir"),
 								new SetQuestAction(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
-								new TeleportAction("int_ados_sewing_room", 12, 20, Direction.DOWN)
+								new TeleportAction("int_阿多斯_缝纫_店", 12, 20, Direction.DOWN)
 								)
 				);
 

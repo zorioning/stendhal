@@ -56,7 +56,7 @@ public class HolidayingBoyNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hey.");
 				addHelp("I visited a tavern in the north with my parents yesterday. The 苹果s were really tasty...");
-				addOffer("Ooooh, have you seen the lovely cats from Felina? I hope my parents " +
+				addOffer("Ooooh, have you seen the lovely cats from 菲琳娜? I hope my parents " +
 						"will buy one for me. Would be a great holiday gift :-)");
 				addJob("Hey!! I am a little boy!");
 				addGoodbye("Good bye.");

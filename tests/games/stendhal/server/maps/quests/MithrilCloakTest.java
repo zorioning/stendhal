@@ -64,7 +64,7 @@ public class MithrilCloakTest {
 		BabyDragonTestHelper.generateRPClasses();
 
 		final StendhalRPZone zone = new StendhalRPZone("admin_test");
-		MockStendlRPWorld.get().addRPZone(new StendhalRPZone("int_ados_sewing_room"));
+		MockStendlRPWorld.get().addRPZone(new StendhalRPZone("int_阿多斯_缝纫_店"));
 		new games.stendhal.server.maps.ados.sewingroom.SeamstressNPC().configureZone(zone, null);
 		new games.stendhal.server.maps.ados.twilightzone.SeamstressNPC().configureZone(zone, null);
 		new BlacksmithNPC().configureZone(zone, null);

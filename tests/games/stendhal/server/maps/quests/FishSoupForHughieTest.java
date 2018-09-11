@@ -40,7 +40,7 @@ public class FishSoupForHughieTest {
 
 	@Before
 	public void setUp() {
-		final StendhalRPZone zone = new StendhalRPZone("int_ados_farm_house_1");
+		final StendhalRPZone zone = new StendhalRPZone("int_阿多斯_村庄_小屋_1");
 		MockStendlRPWorld.get().addRPZone(zone);
 
 		new MotherNPC().configureZone(zone, null);

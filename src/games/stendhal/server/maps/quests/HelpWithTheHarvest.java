@@ -239,7 +239,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 	 * Place the carts and targets into the zone
 	 */
 	private void placeCartsAndTargets() {
-		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_ados_forest_w2");
+		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("0_阿多斯_森林_w2");
 
 		ChatCondition c = constructHayCartsNotYetCompletedCondition();
 

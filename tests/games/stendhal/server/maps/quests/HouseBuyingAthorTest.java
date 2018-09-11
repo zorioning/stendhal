@@ -43,7 +43,7 @@ import utilities.ZonePlayerAndNPCTestImpl;
 public class HouseBuyingAthorTest extends ZonePlayerAndNPCTestImpl {
 
 	private static final String ZONE_NAME = "0_kalavan_city";
-	private static final String ZONE_NAME2 = "int_ados_town_hall_3";
+	private static final String ZONE_NAME2 = "int_阿多斯_市_政厅_3";
 	private static final String ZONE_NAME3 = "int_kirdneh_townhall";
 
 	private static final String[] CITY_ZONES = {
@@ -52,7 +52,7 @@ public class HouseBuyingAthorTest extends ZonePlayerAndNPCTestImpl {
 		"0_阿多斯_城_n",
 		"0_阿多斯_城",
 		"0_阿多斯_城_s",
-		"0_ados_wall",
+		"0_阿多斯_城墙",
 		"0_athor_island"	};
 
 	private LinkedList<HousePortal> portals = new LinkedList<HousePortal>();

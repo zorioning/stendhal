@@ -51,8 +51,8 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 	public void configureZone(final StendhalRPZone zone, final Map<String, String> attributes) {
 
 			final List<String> setZones = new ArrayList<String>();
-			setZones.add("0_ados_swamp");
-			setZones.add("0_ados_outside_w");
+			setZones.add("0_阿多斯_沼泽");
+			setZones.add("0_阿多斯_郊外_w");
 			setZones.add("0_阿多斯_城墙_n2");
 			setZones.add("0_阿多斯_城墙_s");
 			setZones.add("0_阿多斯_城_s");

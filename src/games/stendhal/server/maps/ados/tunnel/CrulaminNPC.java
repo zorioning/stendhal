@@ -19,7 +19,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * In recreation room of Blordrough's habitat in -1_ados_outside_w.
+ * In recreation room of Blordrough's habitat in -1_阿多斯_郊外_w.
  */
 public class CrulaminNPC implements ZoneConfigurator {
 

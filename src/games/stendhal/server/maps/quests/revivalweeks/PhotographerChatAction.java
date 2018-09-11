@@ -157,7 +157,7 @@ public class PhotographerChatAction implements ChatAction {
 		if (player.hasVisitedZone(world.getZone("int_塞门_巫师_塔楼_basement"))) {
 			photos.add(Integer.valueOf(7));
 		}
-		if (player.hasVisitedZone(world.getZone("-1_ados_outside_nw"))) {
+		if (player.hasVisitedZone(world.getZone("-1_阿多斯_郊外_nw"))) {
 			photos.add(Integer.valueOf(8));
 		}
 		if (player.hasVisitedZone(world.getZone("int_塞门_巫师_塔楼_9"))) {

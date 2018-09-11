@@ -35,7 +35,7 @@ public class HouseBuyingMain {
 	/** Athor house seller Zone name. */
 	private static final String ATHOR_ISLAND = "0_athor_island";
 	/** Ados house seller Zone name. */
-	private static final String ADOS_TOWNHALL = "int_ados_town_hall_3";
+	private static final String ADOS_TOWNHALL = "int_阿多斯_市_政厅_3";
 	/** Kirdneh house seller Zone name. */
 	private static final String KIRDNEH_TOWNHALL = "int_kirdneh_townhall";
 

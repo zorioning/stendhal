@@ -138,7 +138,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(9,4));
 		localroute.add(new Node(5,4));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall",
+				new RPZonePath("int_阿多斯_市_政厅",
 				new LinkedList<Node>(localroute)));
 
 		// 1 floor
@@ -151,7 +151,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(37,15));
 		localroute.add(new Node(37,3));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_1",
+				new RPZonePath("int_阿多斯_市_政厅_1",
 				new LinkedList<Node>(localroute)));
 
 		// 2 floor
@@ -162,7 +162,7 @@ public class PathsBuildHelper {
 		//localroute.add(new Node(26,14)); // very left point
 		//localroute.add(new Node(32,14)); // very right point
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_2",
+				new RPZonePath("int_阿多斯_市_政厅_2",
 				new LinkedList<Node>(localroute)));
 
 		return fullPath;
@@ -185,7 +185,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(26,3));
 		localroute.add(new Node(35,3));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_2",
+				new RPZonePath("int_阿多斯_市_政厅_2",
 				new LinkedList<Node>(localroute)));
 
 		// 1 floor
@@ -198,7 +198,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(2,4));
 		localroute.add(new Node(3,4));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_1",
+				new RPZonePath("int_阿多斯_市_政厅_1",
 				new LinkedList<Node>(localroute)));
 
 		// town hall
@@ -209,7 +209,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(22,8));
 		localroute.add(new Node(22,16));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall",
+				new RPZonePath("int_阿多斯_市_政厅",
 				new LinkedList<Node>(localroute)));
 		/*
 		// city central

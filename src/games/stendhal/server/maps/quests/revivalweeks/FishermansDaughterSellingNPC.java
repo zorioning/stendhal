@@ -26,13 +26,13 @@ import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 import games.stendhal.server.maps.ados.market.FishermansDaughterNPC;
 
 /**
- * Caroline during the 矿镇复兴展会周
+ * 卡若琳 during the 矿镇复兴展会周
  */
 public class FishermansDaughterSellingNPC implements LoadableContent {
 	private final ShopList shops = SingletonRepository.getShopList();
 	private void createFishermansDaughterSellingNPC() {
 		final StendhalRPZone zone2 = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
-		final SpeakerNPC npc2 = new SpeakerNPC("Caroline") {
+		final SpeakerNPC npc2 = new SpeakerNPC("卡若琳") {
 
 			@Override
 			protected void createPath() {
@@ -82,21 +82,21 @@ public class FishermansDaughterSellingNPC implements LoadableContent {
 
 	@Override
 	public void addToWorld() {
-		removeNPC("Caroline");
+		removeNPC("卡若琳");
 		createFishermansDaughterSellingNPC();
 	}
 
 
 	/**
-	 * removes Caroline from the Mine Town and places her back into her home in Ados.
+	 * removes 卡若琳 from the Mine Town and places her back into her home in Ados.
 	 *
 	 * @return <code>true</code>, if the content was removed, <code>false</code> otherwise
 	 */
 	@Override
 	public boolean removeFromWorld() {
-		removeNPC("Caroline");
+		removeNPC("卡若琳");
 
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_ados_carolines_house_0");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_阿多斯_卡若琳_小屋_0");
 		new FishermansDaughterNPC().createFishermansDaughterSellingNPC(zone);
 
 		return true;

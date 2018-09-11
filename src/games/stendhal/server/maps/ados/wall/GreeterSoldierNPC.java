@@ -59,23 +59,23 @@ public class GreeterSoldierNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hi, welcome to 阿多斯城!");
-				addReply("map", "Caption\n"
-					+ "1 Bank,   2 Goldsmith,   3 Bakery,   4 Haunted House,\n"
-					+ "5 Castle,   6 Felina's House,   7 Barracks \n"
-					+ "8 Bar,   9 Sewing Rooms, ida \n"
-					+ "10 Meat and Fish Huts,   11 Town Hall,   12 Library",
-					new ExamineChatAction("map-ados-city.png", "阿多斯城", "Map of 阿多斯城"));
-				addJob("I guard Ados against attacks, and #help visitors.");
-				addHelp("If you need a #map to guide you around Ados, just ask.");
-				addGoodbye("I hope you will enjoy your visit to Ados.");
+				addGreeting("Hi, 欢迎来到 阿多斯城!");
+				addReply("地图", "说明\n"
+					+ "1 银库,   2 金匠,   3 面包店,   4 闹鬼小屋,\n"
+					+ "5 城堡,   6 菲琳娜的家,   7 军营 \n"
+					+ "8 酒吧,   9 缝纫店, ida \n"
+					+ "10 鱼肉小屋,   11 市政厅,   12 图书馆",
+					new ExamineChatAction("map-ados-city.png", "阿多斯城", "阿多斯城地图"));
+				addJob("我在 阿多斯 城防御外部进攻, 顺便 #帮助 来访者.");
+				addHelp("如果你需要阿多斯城的 #地图 做指导, 只管问我.");
+				addGoodbye("希望你在阿多斯城玩的开心.");
 			}
 		};
 
 		npc.setEntityClass("youngsoldiernpc");
 		npc.setPosition(84, 109);
 		npc.initHP(100);
-		npc.setDescription("You see Julius, the soldier who guards the entrance to the town of Ados.");
+		npc.setDescription("你遇见了 Julius, 他是一位阿多斯城的入口驻守的卫兵.");
 		zone.add(npc);
 	}
 }

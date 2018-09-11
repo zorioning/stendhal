@@ -96,7 +96,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		texts.put("Eheneumniranin", "You'll have to find the half sickling elf on Ados farm, next. He is always busy while gathering grain.");
 		texts.put("Balduin", "The next person on your trail sits on top of a really windy mountain.");
 		texts.put("Rachel", "The next lady to find works in a bank and can tell you all about her job.");
-		texts.put("Fritz", "Please go and find the old fisherman in Ados who can tell you great stories about fish. He also has a daughter named Caroline.");
+		texts.put("Fritz", "Please go and find the old fisherman in Ados who can tell you great stories about fish. He also has a daughter named 卡若琳.");
 		texts.put("Alice Farmer", "The next person you'll have to seek out is on vacation in Ados, together with her whole family. She also knows everything about food and drinks.");
 		texts.put("伊丽莎白", "Now you have to find a young girl who plays on a playground in Kirdneh and loves chocolate.");
 		texts.put("Sue", "Please go and find the nice gardener who owns some greenhouses with tomatoes inside near Kalavan.");

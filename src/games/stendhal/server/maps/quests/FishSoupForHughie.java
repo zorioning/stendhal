@@ -225,7 +225,7 @@ public class FishSoupForHughie extends AbstractQuest {
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 				final Item soup = SingletonRepository.getEntityManager()
 				.getItem("fish soup");
-				final IRPZone zone = SingletonRepository.getRPWorld().getZone("int_ados_farm_house_1");
+				final IRPZone zone = SingletonRepository.getRPWorld().getZone("int_阿多斯_村庄_小屋_1");
 				// place on table
 				soup.setPosition(32, 5);
 				// only allow Hughie, our npc, to eat the soup

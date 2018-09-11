@@ -37,7 +37,7 @@ public class KillDhohrNuggetcutterTest extends ZonePlayerAndNPCTestImpl {
 	private Engine en = null;
 
 	private String questSlot;
-	private static final String ZONE_NAME = "-1_ados_abandoned_keep";
+	private static final String ZONE_NAME = "-1_阿多斯_废弃_要塞";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

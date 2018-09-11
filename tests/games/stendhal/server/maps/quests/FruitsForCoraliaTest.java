@@ -39,7 +39,7 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 	private Engine en = null;
 
 	private String questSlot;
-	private static final String ZONE_NAME = "int_ados_tavern_0";
+	private static final String ZONE_NAME = "int_阿多斯_旅馆_0";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

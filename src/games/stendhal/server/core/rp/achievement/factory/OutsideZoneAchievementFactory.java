@@ -51,7 +51,7 @@ public class OutsideZoneAchievementFactory extends AbstractAchievementFactory {
 		list.add(createAchievement("zone.special.bank", "Safe Deposit", "Visit all banks",
 									Achievement.MEDIUM_BASE_SCORE, true,
 									new PlayerVisitedZonesCondition("int_塞门_银库", "int_纳尔沃_银库", "int_kirdneh_bank",
-																	"int_fado_bank", "int_magic_bank", "int_ados_bank")));
+																	"int_fado_bank", "int_magic_bank", "int_阿多斯_银库")));
 		return list;
 	}
 

@@ -34,7 +34,7 @@ public class StendhalRPZoneTest {
 		final StendhalRPZone semos_dungeon = new StendhalRPZone("-3_semos_dungeon");
 		MockStendlRPWorld.get().addRPZone(semos_dungeon);
 
-		final StendhalRPZone ados_cave = new StendhalRPZone("-1_ados_caves");
+		final StendhalRPZone ados_cave = new StendhalRPZone("-1_阿多斯_洞穴");
 		MockStendlRPWorld.get().addRPZone(ados_cave);
 
 		final StendhalRPZone kikareukin_islands = new StendhalRPZone("6_kikareukin_islands");
@@ -54,7 +54,7 @@ public class StendhalRPZoneTest {
 		assertEquals(StendhalRPZone.describe("0_塞门_镇"),"in Semos city");
 		assertEquals(StendhalRPZone.describe("0_semos_mountain_n_w4"),"north west of Semos mountain");
 		assertEquals(StendhalRPZone.describe("-3_semos_dungeon"),"deep below ground level at Semos dungeon");
-		assertEquals(StendhalRPZone.describe("-1_ados_caves"),"below ground level at Ados caves");
+		assertEquals(StendhalRPZone.describe("-1_阿多斯_洞穴"),"below ground level at Ados caves");
 		assertEquals(StendhalRPZone.describe("6_kikareukin_islands"),"high above the ground level at Kikareukin islands");
 		assertEquals(StendhalRPZone.describe("hell"),"in Hell");
 	}

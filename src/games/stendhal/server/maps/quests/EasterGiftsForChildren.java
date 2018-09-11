@@ -44,14 +44,14 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Caroline who is working in her tavern in 阿多斯城</li>
+ * <li>卡若琳 who is working in her tavern in 阿多斯城</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Caroline wants to make children around Faiumoni happy with gifting easter baskets for them.</li>
- * <li>Players have to bring Caroline sweets like 巧克力棒s and chocolate eggs, as well as some fruit.</li>
- * <li>Children around Faiumoni will be happy with Carolines baskets.</li>
+ * <li>卡若琳 wants to make children around Faiumoni happy with gifting easter baskets for them.</li>
+ * <li>Players have to bring 卡若琳 sweets like 巧克力棒s and chocolate eggs, as well as some fruit.</li>
+ * <li>Children around Faiumoni will be happy with 卡若琳s baskets.</li>
  * </ul>
  *
  * REWARD:
@@ -79,25 +79,25 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I talked to Caroline in Ados. She is working in her tavern there.");
+		res.add("I talked to 卡若琳 in Ados. She is working in her tavern there.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("She asked me to bring her some sweets but I rejected her request.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("I promised to bring Caroline some sweets for children around Faiumoni as an Easter gift.");
+			res.add("I promised to bring 卡若琳 some sweets for children around Faiumoni as an Easter gift.");
 		}
 		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("小复活蛋", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
-			res.add("I got all the sweets and will take them to Caroline.");
+			res.add("I got all the sweets and will take them to 卡若琳.");
 		}
 		if ("done".equals(questState)) {
-			res.add("I took the sweets to Caroline. She gave me some nice Easter gifts for my travels as a real hero. :)");
+			res.add("I took the sweets to 卡若琳. She gave me some nice Easter gifts for my travels as a real hero. :)");
 		}
 		return res;
 	}
 
 	private void prepareRequestingStep() {
-		final SpeakerNPC npc = npcs.get("Caroline");
+		final SpeakerNPC npc = npcs.get("卡若琳");
 
 		npc.add(
 			ConversationStates.ATTENDING,
@@ -180,7 +180,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 	}
 
 	private void prepareBringingStep() {
-		final SpeakerNPC npc = npcs.get("Caroline");
+		final SpeakerNPC npc = npcs.get("卡若琳");
 
 		// player returns while quest is still active
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
@@ -249,7 +249,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Easter Gifts For Children",
-				"Caroline, the nice tavern owner in 阿多斯城, wants to make some children happy during Easter holidays.",
+				"卡若琳, the nice tavern owner in 阿多斯城, wants to make some children happy during Easter holidays.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -277,6 +277,6 @@ public class EasterGiftsForChildren extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Caroline";
+		return "卡若琳";
 	}
 }

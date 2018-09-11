@@ -81,12 +81,12 @@
     </portal>
     
   	<portal x="13" y="126" ref="keep1">
-  		<destination zone="-1_ados_abandoned_keep" ref="up1" />
+  		<destination zone="-1_阿多斯_废弃_要塞" ref="up1" />
   		<attribute name="face">north</attribute>
   	</portal>
   	
   	<portal x="14" y="126" ref="keep2">
-  		<destination zone="-1_ados_abandoned_keep" ref="up2" />
+  		<destination zone="-1_阿多斯_废弃_要塞" ref="up2" />
   		<attribute name="face">north</attribute>
   	</portal>
     
@@ -522,7 +522,7 @@
     
     <!-- Portals -->
     <portal x="67" y="78" ref="carolines_house_entrance">
-      <destination zone="int_ados_carolines_house_0" ref="entrance"/>
+      <destination zone="int_阿多斯_卡若琳_小屋_0" ref="entrance"/>
     </portal>
     
     <!-- Tables -->
@@ -633,7 +633,7 @@
     </entity>
     
     <portal x="75" y="50" ref="magician_house_entrance">
-      <destination zone="int_ados_magician_house" ref="entrance"/>
+      <destination zone="int_阿多斯_魔法_屋" ref="entrance"/>
     </portal>
     
     <point-of-interest x="56" y="95">
@@ -645,7 +645,7 @@
     
   </zone>
   
-  <zone name="int_ados_magician_house" file="interiors/ados/magician_house.tmx">
+  <zone name="int_阿多斯_魔法_屋" file="interiors/ados/magician_house.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.magician_house.WizardNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.magician_house.ItemsOnTable" />
@@ -689,7 +689,7 @@ areas.
     
   </zone>
   
-  <zone name="0_ados_outside_nw" level="0" x="500640" y="499872" file="Level 0/ados/outside_nw.tmx">
+  <zone name="0_阿多斯_郊外_nw" level="0" x="500640" y="499872" file="Level 0/ados/outside_nw.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -774,7 +774,7 @@ areas.
     </entity>
     
     <portal x="67" y="24" ref="0">
-      <destination zone="-1_ados_outside_nw" ref="0"/>
+      <destination zone="-1_阿多斯_郊外_nw" ref="0"/>
     </portal>
     
     <point-of-interest x="67" y="24">
@@ -803,16 +803,16 @@ Home for endangered animals
     </entity>
     
     <portal x="59" y="38" ref="sanctuary">
-      <destination zone="int_ados_pet_sanctuary" ref="in"/>
+      <destination zone="int_阿多斯_宠物_医院" ref="in"/>
     </portal>
     
   </zone>
   
-  <zone name="int_ados_pet_sanctuary" file="interiors/ados/pet_sanctuary.tmx">
+  <zone name="int_阿多斯_宠物_医院" file="interiors/ados/pet_sanctuary.tmx">
     <portal x="16" y="9" ref="door_right">
       <!-- sometime in future we might allow players in to get a pet out but for
            now, we lock the door into the pet area -->
-      <destination zone="int_ados_pet_sanctuary" ref="door_left" />
+      <destination zone="int_阿多斯_宠物_医院" ref="door_left" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
         <parameter name="key">pet sanctuary key</parameter>
         <parameter name="rejected">Restricted access: animal keepers and vets only.</parameter>
@@ -820,11 +820,11 @@ Home for endangered animals
     </portal>
     
     <portal x="13" y="9" ref="door_left">
-      <destination zone="int_ados_pet_sanctuary" ref="door_right" />
+      <destination zone="int_阿多斯_宠物_医院" ref="door_right" />
     </portal>
     
     <portal x="22" y="30" ref="in">
-      <destination zone="0_ados_outside_nw" ref="sanctuary"/>
+      <destination zone="0_阿多斯_郊外_nw" ref="sanctuary"/>
     </portal>
     
   </zone>
@@ -1103,19 +1103,19 @@ Home for endangered animals
     
     
     <portal x="60" y="16" ref="tavern_entrance_left">
-      <destination zone="int_ados_tavern_0" ref="entrance_left"/>
+      <destination zone="int_阿多斯_旅馆_0" ref="entrance_left"/>
     </portal>
     
     <portal x="65" y="16" ref="tavern_entrance_right">
-      <destination zone="int_ados_tavern_0" ref="entrance_right"/>
+      <destination zone="int_阿多斯_旅馆_0" ref="entrance_right"/>
     </portal>
     
     <portal x="38" y="52" ref="goldsmith_entrance">
-      <destination zone="int_ados_goldsmith" ref="entrance_goldsmith"/>
+      <destination zone="int_阿多斯_金匠" ref="entrance_goldsmith"/>
     </portal>
     
     <portal x="54" y="19" ref="6">
-      <destination zone="int_ados_bank" ref="0"/>
+      <destination zone="int_阿多斯_银库" ref="0"/>
     </portal>
     
     <point-of-interest x="54" y="19">
@@ -1126,11 +1126,11 @@ Home for endangered animals
     </point-of-interest>
     
     <portal x="27" y="39" ref="10">
-      <destination zone="int_ados_bakery" ref="0" />
+      <destination zone="int_阿多斯_面包店" ref="0" />
     </portal>
     
     <portal x="12" y="38" ref="11">
-      <destination zone="int_ados_haunted_house" ref="0" />
+      <destination zone="int_阿多斯_闹鬼_小屋" ref="0" />
     </portal>
     
     <portal x="7" y="74" ref="house_50">
@@ -1256,23 +1256,23 @@ Please leave my mail at my neighbour's house.
     </entity>
     
     <portal x="62" y="86" ref="storage_outside_1">
-      <destination zone="int_ados_storage" ref="storage_inside_left" />
+      <destination zone="int_阿多斯_储藏室" ref="storage_inside_left" />
     </portal>
     
     <portal x="63" y="86" ref="storage_outside_2">
-      <destination zone="int_ados_storage" ref="storage_inside_left" />
+      <destination zone="int_阿多斯_储藏室" ref="storage_inside_left" />
     </portal>
     
     <portal x="64" y="86" ref="storage_outside_3">
-      <destination zone="int_ados_storage" ref="storage_inside_left" />
+      <destination zone="int_阿多斯_储藏室" ref="storage_inside_left" />
     </portal>
     
     <portal x="65" y="86" ref="storage_outside_4">
-      <destination zone="int_ados_storage" ref="storage_inside_right" />
+      <destination zone="int_阿多斯_储藏室" ref="storage_inside_right" />
     </portal>
     
     <portal x="66" y="86" ref="storage_outside_5">
-      <destination zone="int_ados_storage" ref="storage_inside_right"/>
+      <destination zone="int_阿多斯_储藏室" ref="storage_inside_right"/>
     </portal>
     
     <entity x="74" y="14">
@@ -1365,11 +1365,11 @@ Please leave my mail at my neighbour's house.
     
   </zone>
   
-  <zone name="int_ados_reverse_arrow" file="interiors/ados/reverse_arrow.tmx">
+  <zone name="int_阿多斯_反转_箭" file="interiors/ados/reverse_arrow.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
   </zone>
   
-  <zone name="int_ados_bank" file="interiors/ados/bank.tmx">
+  <zone name="int_阿多斯_银库" file="interiors/ados/bank.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.bank.BankNPC" />
 
@@ -1551,7 +1551,7 @@ Please respect the privacy of other customers. Our customer advisor #Rachel will
     
   </zone>
   
-  <zone name="int_ados_haunted_house" file="interiors/ados/haunted_house.tmx">
+  <zone name="int_阿多斯_闹鬼_小屋" file="interiors/ados/haunted_house.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
       <parameter name="color">#808080</parameter>
@@ -1567,7 +1567,7 @@ Please respect the privacy of other customers. Our customer advisor #Rachel will
     </portal>
     
     <portal x="28" y="28" ref="downstairs">
-      <destination zone="int_ados_haunted_house_basement" ref="upstairs" />
+      <destination zone="int_阿多斯_闹鬼_小屋_地下室" ref="upstairs" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">80</parameter>
         <parameter name="rejected">You were about to walk down the stairs when someone or something held you back, whispering 'Beware the 巨型蜘蛛, for you are too weak!'</parameter>
@@ -1576,7 +1576,7 @@ Please respect the privacy of other customers. Our customer advisor #Rachel will
     
   </zone>
   
-  <zone name="int_ados_haunted_house_basement" file="interiors/ados/haunted_house_basement.tmx">
+  <zone name="int_阿多斯_闹鬼_小屋_地下室" file="interiors/ados/haunted_house_basement.tmx">
     <attributes>
       <parameter name="color_method">multiply</parameter>
       <parameter name="color">#808080</parameter>
@@ -1585,12 +1585,12 @@ Please respect the privacy of other customers. Our customer advisor #Rachel will
     
     <!-- Portals -->
     <portal x="14" y="14" ref="upstairs">
-      <destination zone="int_ados_haunted_house" ref="downstairs" />
+      <destination zone="int_阿多斯_闹鬼_小屋" ref="downstairs" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_bakery" file="interiors/ados/bakery.tmx">
+  <zone name="int_阿多斯_面包店" file="interiors/ados/bakery.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.bakery.BakerNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.bakery.ItemsOnTable" />
@@ -1615,7 +1615,7 @@ Please respect the privacy of other customers. Our customer advisor #Rachel will
     
   </zone>
   
-  <zone name="int_ados_library" file="interiors/ados/library.tmx">
+  <zone name="int_阿多斯_图书馆" file="interiors/ados/library.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.library.LibrarianNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.library.WriterNPC" />
@@ -1702,7 +1702,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     </portal>
   </zone>
   
-  <zone name="int_ados_tavern_0" file="interiors/ados/tavern_0.tmx">
+  <zone name="int_阿多斯_旅馆_0" file="interiors/ados/tavern_0.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.tavern.BarMaidNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.tavern.BarmanNPC" />
@@ -1765,7 +1765,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_goldsmith" file="interiors/ados/goldsmith.tmx">
+  <zone name="int_阿多斯_金匠" file="interiors/ados/goldsmith.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.goldsmith.GoldsmithNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.goldsmith.MithrilForgerNPC" />
@@ -1798,7 +1798,7 @@ You should never dive with a cold or severe allergy because, you may not be able
   </zone>
   -->
   
-  <zone name="int_ados_carolines_house_0" file="interiors/ados/carolines_house.tmx">
+  <zone name="int_阿多斯_卡若琳_小屋_0" file="interiors/ados/carolines_house.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.market.FishermansDaughterNPC" />
     
@@ -1809,7 +1809,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_felinas_house" file="interiors/ados/felinas_house.tmx">
+  <zone name="int_阿多斯_菲琳娜_小屋" file="interiors/ados/felinas_house.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.felinashouse.CatSellerNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.felinashouse.KittensNPC" />
@@ -2044,7 +2044,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_barracks_0" file="interiors/ados/barracks_0.tmx">
+  <zone name="int_阿多斯_军营_0" file="interiors/ados/barracks_0.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.barracks.BuyerNPC" />
     <!-- originally located in semos townhall hence package here - may move back -->
@@ -2086,7 +2086,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     </portal>
     
     <portal x="46" y="11" ref="upstairs_2">
-      <destination zone="int_ados_barracks_1" ref="downstairs_2" />
+      <destination zone="int_阿多斯_军营_1" ref="downstairs_2" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -2102,15 +2102,15 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_barracks_1" file="interiors/ados/barracks_1.tmx">
+  <zone name="int_阿多斯_军营_1" file="interiors/ados/barracks_1.tmx">
     <!-- Portals -->
     <portal x="36" y="4" ref="downstairs_2">
-      <destination zone="int_ados_barracks_0" ref="upstairs_2" />
+      <destination zone="int_阿多斯_军营_0" ref="upstairs_2" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_storage" file="interiors/ados/storage.tmx">
+  <zone name="int_阿多斯_储藏室" file="interiors/ados/storage.tmx">
     <!-- Portals -->
     <portal x="14" y="30" ref="storage_inside_left">
       <destination zone="0_阿多斯_城_n" ref="storage_outside_1"/>
@@ -2122,7 +2122,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone> 
   
-  <zone name="int_ados_sewing_room" file="interiors/ados/sewing_room.tmx">
+  <zone name="int_阿多斯_缝纫_店" file="interiors/ados/sewing_room.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.sewingroom.SeamstressNPC" />
     
@@ -2155,7 +2155,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone> 
   
-  <zone name="int_ados_twilight_zone" file="interiors/ados/sewing_room.tmx">
+  <zone name="int_阿多斯_昏暗_地带" file="interiors/ados/sewing_room.tmx">
     <attributes>
       <parameter name="color_method">screen</parameter>
       <!-- mid-grey -->
@@ -2191,7 +2191,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_bar" file="interiors/ados/bar.tmx">
+  <zone name="int_阿多斯_酒吧" file="interiors/ados/bar.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.bar.BarMaidNPC" />
     <configurator class-name="games.stendhal.server.maps.semos.tavern.StichardRallmanNPC" />
@@ -2203,26 +2203,26 @@ You should never dive with a cold or severe allergy because, you may not be able
     </portal>
     
     <portal x="28" y="2" ref="upstair_left">
-      <destination zone="int_ados_bar_1" ref="downstair" />
+      <destination zone="int_阿多斯_酒吧_1" ref="downstair" />
     </portal>
     
     <portal x="29" y="2" ref="upstair_right">
-      <destination zone="int_ados_bar_1" ref="downstair" />
+      <destination zone="int_阿多斯_酒吧_1" ref="downstair" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_bar_1" file="interiors/ados/bar_1.tmx">
+  <zone name="int_阿多斯_酒吧_1" file="interiors/ados/bar_1.tmx">
     <configurator class-name="games.stendhal.server.maps.ados.bar.ItemsOnTableUpstairs" />
     
     <!-- Portals -->
     <portal x="28" y="2" ref="downstair">
-      <destination zone="int_ados_bar" ref="upstair_left" />
+      <destination zone="int_阿多斯_酒吧" ref="upstair_left" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_town_hall" file="interiors/ados/buraucrazy_0.tmx">
+  <zone name="int_阿多斯_市_政厅" file="interiors/ados/buraucrazy_0.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.townhall.TaxmanNPC" />
     
@@ -2247,7 +2247,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     </portal>
     
     <portal x="4" y="4" ref="upstairs">
-      <destination zone="int_ados_town_hall_1" ref="downstairs" />
+      <destination zone="int_阿多斯_市_政厅_1" ref="downstairs" />
     </portal>
     
     <!-- Signs -->
@@ -2508,7 +2508,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone> 
   
-  <zone name="int_ados_town_hall_1" file="interiors/ados/buraucrazy_1.tmx">
+  <zone name="int_阿多斯_市_政厅_1" file="interiors/ados/buraucrazy_1.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.townhall.ClerkNPC" />
     
@@ -2539,16 +2539,16 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="36" y="3" ref="upstairs">
-      <destination zone="int_ados_town_hall_2" ref="downstairs" />
+      <destination zone="int_阿多斯_市_政厅_2" ref="downstairs" />
     </portal>
     
     <portal x="4" y="4" ref="downstairs">
-      <destination zone="int_ados_town_hall" ref="upstairs" />
+      <destination zone="int_阿多斯_市_政厅" ref="upstairs" />
     </portal>
     
   </zone> 
   
-  <zone name="int_ados_town_hall_2" file="interiors/ados/buraucrazy_2.tmx">
+  <zone name="int_阿多斯_市_政厅_2" file="interiors/ados/buraucrazy_2.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.townhall.MayorNPC" />
     
@@ -2575,11 +2575,11 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="36" y="3" ref="downstairs">
-      <destination zone="int_ados_town_hall_1" ref="upstairs" />
+      <destination zone="int_阿多斯_市_政厅_1" ref="upstairs" />
     </portal>
     
     <portal x="3" y="3" ref="upstairs">
-      <destination zone="int_ados_town_hall_3" ref="downstairs" />
+      <destination zone="int_阿多斯_市_政厅_3" ref="downstairs" />
     </portal>
     
     <!-- Signs -->
@@ -2597,7 +2597,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone> 
   
-  <zone name="int_ados_town_hall_3" file="interiors/ados/buraucrazy_3.tmx">
+  <zone name="int_阿多斯_市_政厅_3" file="interiors/ados/buraucrazy_3.tmx">
     <!-- Music/Ambiance -->
     <entity x="1" y="1">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
@@ -2641,12 +2641,12 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="3" y="3" ref="downstairs">
-      <destination zone="int_ados_town_hall_2" ref="upstairs" />
+      <destination zone="int_阿多斯_市_政厅_2" ref="upstairs" />
     </portal>
     
   </zone> 
   
-  <zone name="int_ados_fishermans_hut_west" file="interiors/ados/fishermans_hut_west.tmx">
+  <zone name="int_阿多斯_渔民_小屋_west" file="interiors/ados/fishermans_hut_west.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.fishermans_hut.TeacherNPC" />
     
@@ -2657,7 +2657,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_fishermans_hut_north" file="interiors/ados/fishermans_hut_north.tmx">
+  <zone name="int_阿多斯_渔民_小屋_north" file="interiors/ados/fishermans_hut_north.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.fishermans_hut.FishermanNPC" />
     
@@ -2668,7 +2668,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
   </zone>
   
-  <zone name="int_ados_meat_market" file="interiors/ados/meat_market.tmx">
+  <zone name="int_阿多斯_肉_市场" file="interiors/ados/meat_market.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.meat_market.BlacksheepHarryNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.meat_market.BlacksheepJoeNPC" />
@@ -3133,7 +3133,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_ross_house" file="interiors/ados/ross_house.tmx">
+  <zone name="int_阿多斯_罗斯_小屋" file="interiors/ados/ross_house.tmx">
     <!-- Portals -->
     <configurator class-name="games.stendhal.server.maps.ados.rosshouse.LittleGirlNPC" />    
     <configurator class-name="games.stendhal.server.maps.ados.rosshouse.FatherNPC" />
@@ -4101,7 +4101,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_forest_w2" level="0" x="500256" y="500000" file="Level 0/ados/forest_w2.tmx">
+  <zone name="0_阿多斯_森林_w2" level="0" x="500256" y="500000" file="Level 0/ados/forest_w2.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -4121,12 +4121,12 @@ My fee:
     </entity>
     
     <portal x="21" y="100" ref="farm">
-      <destination zone="int_ados_farm_house" ref="in" />
+      <destination zone="int_阿多斯_村庄_小屋" ref="in" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_farm_house" file="interiors/ados/farm_house.tmx">
+  <zone name="int_阿多斯_村庄_小屋" file="interiors/ados/farm_house.tmx">
     <configurator class-name="games.stendhal.server.maps.ados.farmhouse.FarmersWifeNPC" />
     
     <!-- Clock -->
@@ -4154,23 +4154,23 @@ My fee:
     
     <!-- Portals -->
     <portal x="22" y="23" ref="in">
-      <destination zone="0_ados_forest_w2" ref="farm" />
+      <destination zone="0_阿多斯_森林_w2" ref="farm" />
     </portal>
     
     <portal x="22" y="14" ref="up">
-      <destination zone="int_ados_farm_house_1" ref="down" />
+      <destination zone="int_阿多斯_村庄_小屋_1" ref="down" />
     </portal>
     
   </zone>
   
-  <zone name="int_ados_farm_house_1" file="interiors/ados/farm_house_1.tmx">
+  <zone name="int_阿多斯_村庄_小屋_1" file="interiors/ados/farm_house_1.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.farmhouse.MotherNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.farmhouse.BoyNPC"/>
     
     <!-- Portals -->
     <portal x="22" y="14" ref="down">
-      <destination zone="int_ados_farm_house" ref="up" />
+      <destination zone="int_阿多斯_村庄_小屋" ref="up" />
     </portal>
     
     <!-- Signs -->
@@ -4201,7 +4201,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_rock_w" level="0" x="500384" y="500000" file="Level 0/ados/rock_w.tmx">
+  <zone name="0_阿多斯_巨石_w" level="0" x="500384" y="500000" file="Level 0/ados/rock_w.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying(temperature=-1)</parameter>
@@ -4246,7 +4246,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_rock" level="0" x="500512" y="500000" file="Level 0/ados/rock.tmx">
+  <zone name="0_阿多斯_巨石" level="0" x="500512" y="500000" file="Level 0/ados/rock.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying(temperature=-1)</parameter>
@@ -4279,7 +4279,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_outside_w" level="0" x="500640" y="500000" file="Level 0/ados/outside_w.tmx">
+  <zone name="0_阿多斯_郊外_w" level="0" x="500640" y="500000" file="Level 0/ados/outside_w.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying(fog=+2)</parameter>
@@ -4392,15 +4392,15 @@ My fee:
     </portal>
     
     <portal x="101" y="22" ref="felina_entrance">
-      <destination zone="int_ados_felinas_house" ref="entrance" />
+      <destination zone="int_阿多斯_菲琳娜_小屋" ref="entrance" />
     </portal>
     
     <portal x="100" y="52" ref="barracks_entrance_left">
-      <destination zone="int_ados_barracks_0" ref="entrance_left" />
+      <destination zone="int_阿多斯_军营_0" ref="entrance_left" />
     </portal>
     
     <portal x="101" y="52" ref="barracks_entrance_center">
-      <destination zone="int_ados_barracks_0" ref="entrance_right" />
+      <destination zone="int_阿多斯_军营_0" ref="entrance_right" />
     </portal>
     
     <point-of-interest x="101" y="52">
@@ -4412,7 +4412,7 @@ My fee:
     </point-of-interest>
     
     <portal x="102" y="52" ref="barracks_entrance_right">
-      <destination zone="int_ados_barracks_0" ref="entrance_right" />
+      <destination zone="int_阿多斯_军营_0" ref="entrance_right" />
     </portal>
     
     <point-of-interest x="71" y="92">
@@ -4655,39 +4655,39 @@ My fee:
     </portal>
     
     <portal x="43" y="21" ref="library_entrance_left">
-      <destination zone="int_ados_library" ref="entrance_left" />
+      <destination zone="int_阿多斯_图书馆" ref="entrance_left" />
     </portal>
     
     <portal x="51" y="21" ref="library_entrance_right">
-      <destination zone="int_ados_library" ref="entrance_right" />
+      <destination zone="int_阿多斯_图书馆" ref="entrance_right" />
     </portal>
     
     <portal x="39" y="57" ref="sewing_entrance">
-      <destination zone="int_ados_sewing_room" ref="sewing_entrance_right" />
+      <destination zone="int_阿多斯_缝纫_店" ref="sewing_entrance_right" />
     </portal>
     
     <portal x="50" y="39" ref="bar">
-      <destination zone="int_ados_bar" ref="bar_entrance" />
+      <destination zone="int_阿多斯_酒吧" ref="bar_entrance" />
     </portal>
     
     <portal x="67" y="65" ref="fishermans_hut_west_entrance">
-      <destination zone="int_ados_fishermans_hut_west" ref="entrance_fishermans_hut_west" />
+      <destination zone="int_阿多斯_渔民_小屋_west" ref="entrance_fishermans_hut_west" />
     </portal>
     
     <portal x="75" y="61" ref="fishermans_hut_north_entrance">
-      <destination zone="int_ados_fishermans_hut_north" ref="entrance_fishermans_hut_north" />
+      <destination zone="int_阿多斯_渔民_小屋_north" ref="entrance_fishermans_hut_north" />
     </portal>
     
     <portal x="75" y="70" ref="meat_market_entrance">
-      <destination zone="int_ados_meat_market" ref="entrance_meat_market" />
+      <destination zone="int_阿多斯_肉_市场" ref="entrance_meat_market" />
     </portal>
     
     <portal x="34" y="110" ref="ross_house_entrance">
-      <destination zone="int_ados_ross_house" ref="entrance" />
+      <destination zone="int_阿多斯_罗斯_小屋" ref="entrance" />
     </portal>
     
     <portal x="42" y="93" ref="town_hall_entrance">
-      <destination zone="int_ados_town_hall" ref="entrance" />
+      <destination zone="int_阿多斯_市_政厅" ref="entrance" />
     </portal>
     
     <portal x="17" y="40" ref="castle_left_entrance">
@@ -4716,7 +4716,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_ocean_e" level="0" x="501024" y="500000" accessible="false" file="Level 0/ados/ocean_e.tmx">
+  <zone name="0_阿多斯_海_e" level="0" x="501024" y="500000" accessible="false" file="Level 0/ados/ocean_e.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -4726,7 +4726,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_swamp" level="0" x="500640" y="500128" file="Level 0/ados/swamp.tmx">
+  <zone name="0_阿多斯_沼泽" level="0" x="500640" y="500128" file="Level 0/ados/swamp.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying(fog=+2)</parameter>
@@ -4745,12 +4745,12 @@ My fee:
     
     <!-- Portals -->
     <portal x="81" y="29" ref="broken_bars_1">
-      <destination zone="0_ados_swamp" ref="broken_bars_2" />
+      <destination zone="0_阿多斯_沼泽" ref="broken_bars_2" />
       <attribute name="hidden" />
     </portal>
     
     <portal x="81" y="30" ref="broken_bars_2">
-      <destination zone="0_ados_swamp" ref="broken_bars_1" />
+      <destination zone="0_阿多斯_沼泽" ref="broken_bars_1" />
       <attribute name="hidden" />
     </portal>
     
@@ -4882,7 +4882,7 @@ My fee:
     </entity>
     
     <portal x="53" y="25" ref="church_entrance">
-      <destination zone="int_ados_church_0" ref="entrance_right" />
+      <destination zone="int_阿多斯_教堂_0" ref="entrance_right" />
     </portal>
     
     <!-- Houses not ready for sale
@@ -4944,7 +4944,7 @@ My fee:
     -->
 
     <portal x="107" y="98" ref="fishermans_hut_south_entrance">
-      <destination zone="int_ados_fishermans_hut_south" ref="entrance_fishermans_hut_south" />
+      <destination zone="int_阿多斯_渔民_小屋_south" ref="entrance_fishermans_hut_south" />
     </portal>
 
     <!-- Signs -->
@@ -4958,7 +4958,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_church_0" file="interiors/ados/church_0.tmx">
+  <zone name="int_阿多斯_教堂_0" file="interiors/ados/church_0.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.church.VergerNPC" />
     
@@ -4984,7 +4984,7 @@ My fee:
     </portal>
     
     <portal x="2" y="2" ref="upstairs">
-      <destination zone="int_ados_church_1" ref="downstairs" />
+      <destination zone="int_阿多斯_教堂_1" ref="downstairs" />
     </portal>
     
     <!-- Signs -->
@@ -4999,7 +4999,7 @@ My fee:
     
   </zone>
   
-  <zone name="int_ados_church_1" file="interiors/ados/church_1.tmx">
+  <zone name="int_阿多斯_教堂_1" file="interiors/ados/church_1.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.church.HealerNPC" />
     
@@ -5013,7 +5013,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="4" y="4" ref="downstairs">
-      <destination zone="int_ados_church_0" ref="upstairs" />
+      <destination zone="int_阿多斯_教堂_0" ref="upstairs" />
     </portal>
     
   </zone>
@@ -5127,7 +5127,7 @@ My fee:
   </zone>
   -->
   
-  <zone name="int_ados_fishermans_hut_south" file="interiors/ados/fishermans_hut_south.tmx">
+  <zone name="int_阿多斯_渔民_小屋_south" file="interiors/ados/fishermans_hut_south.tmx">
     
     <!-- Portals -->
     <portal x="8" y="14" ref="entrance_fishermans_hut_south">
@@ -5187,7 +5187,7 @@ My fee:
   <!--  Level -1 -->
   
   
-  <zone name="-1_ados_abandoned_keep" level="-1" x="500512" y="499744" file="Level -1/ados/abandoned_keep.tmx">
+  <zone name="-1_阿多斯_废弃_要塞" level="-1" x="500512" y="499744" file="Level -1/ados/abandoned_keep.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.abandonedkeep.OrcWeaponArmorGuyNPC" />
     <configurator class-name="games.stendhal.server.maps.ados.abandonedkeep.OrcKillGiantDwarfNPC" />
@@ -5215,7 +5215,7 @@ My fee:
   	</portal>
   	
   	<portal x="2" y="30" ref="down">
-  		<destination zone="-2_ados_abandoned_keep" ref="up" />
+  		<destination zone="-2_阿多斯_废弃_要塞" ref="up" />
   		<attribute name="face">east</attribute>
   	</portal>
   </zone>
@@ -5226,10 +5226,10 @@ My fee:
   <zone name="-1_ados_tunnel_w2" level="-1" x="500640" y="499744" file="Level -1/ados/tunnel_w2.tmx">
   </zone>
   
-  <zone name="-1_ados_caves" level="-1" x="500384" y="499872" file="Level -1/ados/caves.tmx">
+  <zone name="-1_阿多斯_洞穴" level="-1" x="500384" y="499872" file="Level -1/ados/caves.tmx">
   </zone>
   
-  <zone name="-1_ados_caves_e" level="-1" x="500512" y="499872" file="Level -1/ados/caves_e.tmx">
+  <zone name="-1_阿多斯_洞穴_e" level="-1" x="500512" y="499872" file="Level -1/ados/caves_e.tmx">
     <!-- Portals -->
     <portal x="71" y="62" ref="pit_entrance">
       <destination zone="-2_ados_snake_pit" ref="pit_exit" />
@@ -5240,11 +5240,11 @@ My fee:
     </portal>
     
     <portal x="53" y="59" ref="jump_down_l">
-      <destination zone="-1_ados_caves_e" ref="land_l" />
+      <destination zone="-1_阿多斯_洞穴_e" ref="land_l" />
     </portal>
     
     <portal x="54" y="59" ref="jump_down_r">
-      <destination zone="-1_ados_caves_e" ref="land_r" />
+      <destination zone="-1_阿多斯_洞穴_e" ref="land_r" />
     </portal>
     
     <portal x="53" y="61" ref="land_l">
@@ -5257,20 +5257,20 @@ My fee:
     
   </zone>
   
-  <zone name="-1_ados_caves_s" level="-1" x="500384" y="500000" file="Level -1/ados/caves_s.tmx">
+  <zone name="-1_阿多斯_洞穴_s" level="-1" x="500384" y="500000" file="Level -1/ados/caves_s.tmx">
   </zone>
   
-  <zone name="-1_ados_caves_se" level="-1" x="500512" y="500000" file="Level -1/ados/caves_se.tmx">
+  <zone name="-1_阿多斯_洞穴_se" level="-1" x="500512" y="500000" file="Level -1/ados/caves_se.tmx">
     <!-- Portals -->
     <portal x="123" y="107" ref="0">
-      <destination zone="0_ados_rock" ref="caves_exit" />
+      <destination zone="0_阿多斯_巨石" ref="caves_exit" />
     </portal>
     
   </zone>
   
-  <zone name="-1_ados_outside_nw" level="-1" x="500640" y="499872" file="Level -1/ados/outside_nw.tmx">
+  <zone name="-1_阿多斯_郊外_nw" level="-1" x="500640" y="499872" file="Level -1/ados/outside_nw.tmx">
     <portal x="4" y="23" ref="0">
-      <destination zone="0_ados_outside_nw" ref="0" />
+      <destination zone="0_阿多斯_郊外_nw" ref="0" />
     </portal>
     
   </zone>
@@ -5321,7 +5321,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="100" y="54" ref="up">
-      <destination zone="int_ados_barracks_0" ref="down" />
+      <destination zone="int_阿多斯_军营_0" ref="down" />
     </portal>
     
     <!-- Music/Ambiance -->
@@ -5388,7 +5388,7 @@ My fee:
     
   </zone>
   
-  <zone name="-1_ados_outside_w" level="-1" x="500640" y="500000" file="Level -1/ados/outside_w.tmx">
+  <zone name="-1_阿多斯_郊外_w" level="-1" x="500640" y="500000" file="Level -1/ados/outside_w.tmx">
     <entity x="0" y="0">
       <implementation class-name="games.stendhal.server.entity.mapstuff.area.NoLoginArea">
         <parameter name="width">27</parameter>
@@ -5428,11 +5428,11 @@ My fee:
     
     <!-- Portals -->
     <portal x="25" y="28" ref="dragonlairinside">
-      <destination zone="-1_ados_outside_w" ref="dragonlairoutside" />
+      <destination zone="-1_阿多斯_郊外_w" ref="dragonlairoutside" />
     </portal>
     
     <portal x="28" y="28" ref="dragonlairoutside">
-      <destination zone="-1_ados_outside_w" ref="dragonlairinside" />
+      <destination zone="-1_阿多斯_郊外_w" ref="dragonlairinside" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.ConditionAndActionPortal">
         <parameter name="condition">new QuestActiveCondition("dragon_lair")</parameter>
         <parameter name="action">new MultipleActions([new SetQuestAction("dragon_lair", "done;"), new SetQuestToTimeStampAction("dragon_lair", 1)])</parameter>
@@ -5446,15 +5446,15 @@ My fee:
   <!-- Level -2 -->
   
   
-  <zone name="-2_ados_abandoned_keep" level="-2" x="500512" y="499744" file="Level -2/ados/abandoned_keep.tmx">
+  <zone name="-2_阿多斯_废弃_要塞" level="-2" x="500512" y="499744" file="Level -2/ados/abandoned_keep.tmx">
   	<!-- Portals -->
   	<portal x="2" y="30" ref="up">
-  		<destination zone="-1_ados_abandoned_keep" ref="down" />
+  		<destination zone="-1_阿多斯_废弃_要塞" ref="down" />
   		<attribute name="face">east</attribute>
   	</portal>
   </zone>
   
-  <zone name="-2_ados_outside_nw" level="-2" x="500640" y="499872" file="Level -2/ados/outside_nw.tmx">
+  <zone name="-2_阿多斯_郊外_nw" level="-2" x="500640" y="499872" file="Level -2/ados/outside_nw.tmx">
   </zone>
   
   <zone name="-2_ados_snake_pit" level="-2" x="500512" y="499808" file="Level -2/ados/snake_pit.tmx">
@@ -5473,7 +5473,7 @@ East Tunnel: Uncharted</attribute>
     
     <!-- Portals -->
     <portal x="14" y="4" ref="pit_exit">
-      <destination zone="-1_ados_caves_e" ref="pit_entrance" />
+      <destination zone="-1_阿多斯_洞穴_e" ref="pit_entrance" />
     </portal>
     
     <portal x="27" y="3" ref="pit2_escape_down">
@@ -5485,7 +5485,7 @@ East Tunnel: Uncharted</attribute>
     </portal>
     
     <portal x="59" y="3" ref="pit_escape_up">
-      <destination zone="-1_ados_caves_e" ref="pit_escape_down" />
+      <destination zone="-1_阿多斯_洞穴_e" ref="pit_escape_down" />
     </portal>
     
     <entity x="0" y="0">
@@ -5559,7 +5559,7 @@ East Tunnel: Uncharted</attribute>
   <!--  Level -3 -->
   
   
-  <zone name="-3_ados_abandoned_keep" level="-3" x="500512" y="499744" file="Level -3/ados/abandoned_keep.tmx">
+  <zone name="-3_阿多斯_废弃_要塞" level="-3" x="500512" y="499744" file="Level -3/ados/abandoned_keep.tmx">
     <configurator class-name="games.stendhal.server.maps.ados.abandonedkeep.DwarfBuyerGuyNPC" />
     
     <!-- Signs -->
@@ -5574,17 +5574,17 @@ East Tunnel: Uncharted</attribute>
     
     <!--  Portals -->
     <portal x="17" y="0" ref="down1">
-    	<destination zone="-4_ados_abandoned_keep" ref="up1" />
+    	<destination zone="-4_阿多斯_废弃_要塞" ref="up1" />
     	<attribute name="face">south</attribute>
     </portal>
     
     <portal x="18" y="0" ref="down2">
-    	<destination zone="-4_ados_abandoned_keep" ref="up2" />
+    	<destination zone="-4_阿多斯_废弃_要塞" ref="up2" />
     	<attribute name="face">south</attribute>
     </portal>
   </zone>
   
-  <zone name="-3_ados_outside_nw" level="-3" x="500640" y="499872" file="Level -3/ados/outside_nw.tmx">
+  <zone name="-3_阿多斯_郊外_nw" level="-3" x="500640" y="499872" file="Level -3/ados/outside_nw.tmx">
     <configurator class-name="games.stendhal.server.maps.ados.outside.CloaksCollectorNPC" />
     
     <!-- This must be after the NPC configurator -->
@@ -5759,7 +5759,7 @@ It has been three days since I decided to explore the lower levels of the caves 
   <!--  Level -4 -->
   
   
-  <zone name="-4_ados_abandoned_keep" level="-4" x="500512" y="499744" file="Level -4/ados/abandoned_keep.tmx">
+  <zone name="-4_阿多斯_废弃_要塞" level="-4" x="500512" y="499744" file="Level -4/ados/abandoned_keep.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.ados.abandonedkeep.DwarfWeaponArmorGuyNPC"/>
     
@@ -5776,22 +5776,22 @@ It has been three days since I decided to explore the lower levels of the caves 
     
     <!-- Portals -->
     <portal x="17" y="0" ref="up1">
-    	<destination zone="-3_ados_abandoned_keep" ref="down1" />
+    	<destination zone="-3_阿多斯_废弃_要塞" ref="down1" />
     	<attribute name="face">south</attribute>
     </portal>
     
     <portal x="18" y="0" ref="up2">
-    	<destination zone="-3_ados_abandoned_keep" ref="down2" />
+    	<destination zone="-3_阿多斯_废弃_要塞" ref="down2" />
     	<attribute name="face">south</attribute>
     </portal>
     
     <portal x="28" y="15" ref="down1">
-    	<destination zone="-5_ados_abandoned_keep" ref="up1" />
+    	<destination zone="-5_阿多斯_废弃_要塞" ref="up1" />
     	<attribute name="face">west</attribute>
     </portal>
     
     <portal x="28" y="16" ref="down2">
-    	<destination zone="-5_ados_abandoned_keep" ref="up2" />
+    	<destination zone="-5_阿多斯_废弃_要塞" ref="up2" />
     	<attribute name="face">west</attribute>
     </portal>
   </zone>
@@ -5800,28 +5800,28 @@ It has been three days since I decided to explore the lower levels of the caves 
   <!--  Level -5 -->
   
   
-  <zone name="-5_ados_abandoned_keep" level="-5" x="500512" y="499744" file="Level -5/ados/abandoned_keep.tmx">
+  <zone name="-5_阿多斯_废弃_要塞" level="-5" x="500512" y="499744" file="Level -5/ados/abandoned_keep.tmx">
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     
     <!-- Portals -->
     <portal x="28" y="15" ref="up1">
-    	<destination zone="-4_ados_abandoned_keep" ref="down1" />
+    	<destination zone="-4_阿多斯_废弃_要塞" ref="down1" />
     	<attribute name="face">west</attribute>
     </portal>
     
     <portal x="28" y="16" ref="up2">
-    	<destination zone="-4_ados_abandoned_keep" ref="down2" />
+    	<destination zone="-4_阿多斯_废弃_要塞" ref="down2" />
     	<attribute name="face">west</attribute>
     </portal>
     
     <portal x="15" y="30" ref="down1">
-    	<destination zone="-6_ados_abandoned_keep" ref="up1" />
+    	<destination zone="-6_阿多斯_废弃_要塞" ref="up1" />
     	<attribute name="face">north</attribute>
     	<attribute name="offset">1</attribute>
     </portal>
     
     <portal x="16" y="30" ref="down2">
-    	<destination zone="-6_ados_abandoned_keep" ref="up2" />
+    	<destination zone="-6_阿多斯_废弃_要塞" ref="up2" />
     	<attribute name="face">north</attribute>
     	<attribute name="offset">1</attribute>
     </portal>
@@ -5831,15 +5831,15 @@ It has been three days since I decided to explore the lower levels of the caves 
   <!--  Level -6 -->
   
   
-  <zone name="-6_ados_abandoned_keep" level="-6" x="500512" y="499744" file="Level -6/ados/abandoned_keep.tmx">
+  <zone name="-6_阿多斯_废弃_要塞" level="-6" x="500512" y="499744" file="Level -6/ados/abandoned_keep.tmx">
     <!-- Portals -->
     <portal x="15" y="30" ref="up1">
-    	<destination zone="-5_ados_abandoned_keep" ref="down1" />
+    	<destination zone="-5_阿多斯_废弃_要塞" ref="down1" />
     	<attribute name="face">north</attribute>
     </portal>
     
     <portal x="16" y="30" ref="up2">
-    	<destination zone="-5_ados_abandoned_keep" ref="down2" />
+    	<destination zone="-5_阿多斯_废弃_要塞" ref="down2" />
     	<attribute name="face">north</attribute>
     </portal>
   </zone>

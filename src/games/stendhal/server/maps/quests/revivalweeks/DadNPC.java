@@ -82,7 +82,7 @@ public class DadNPC implements LoadableContent {
 	public boolean removeFromWorld() {
 		removeNPC("Mr Ross");
 
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_ados_ross_house");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_阿多斯_罗斯_小屋");
 		new FatherNPC().createDadNPC(zone);
 
 		return true;

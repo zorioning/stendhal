@@ -61,7 +61,7 @@ public class ReverseArrow extends AbstractQuest implements
 	// constants
 	private static final String QUEST_SLOT = "reverse_arrow";
 
-	private static final String ZONE_NAME = "int_ados_reverse_arrow";
+	private static final String ZONE_NAME = "int_阿多斯_反转_箭";
 
 	/** Time (in Seconds) to solve the puzzle. */
 	private static final int TIME = 60;

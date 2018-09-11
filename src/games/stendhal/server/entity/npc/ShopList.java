@@ -451,7 +451,7 @@ public final class ShopList {
 		//Scuba Instructor Edward
 		shops.add("sellScubaStuff", "scuba gear", 22000);
 
-		// 矿镇复兴展会周 Caroline
+		// 矿镇复兴展会周 卡若琳
 		shops.add("sellrevivalweeks", "cherry pie", 195);
 		shops.add("sellrevivalweeks", "苹果派", 195);
 		shops.add("sellrevivalweeks", "vanilla shake", 120);

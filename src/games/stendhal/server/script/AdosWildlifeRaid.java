@@ -127,12 +127,12 @@ public class AdosWildlifeRaid implements TurnListener {
 
 	public void createPortal() {
 		StendhalRPZone zone1 = (StendhalRPZone) StendhalRPWorld.get().getRPZone(new IRPZone.ID("0_塞门_镇"));
-		StendhalRPZone zone2 = (StendhalRPZone) StendhalRPWorld.get().getRPZone(new IRPZone.ID("0_ados_outside_nw"));
+		StendhalRPZone zone2 = (StendhalRPZone) StendhalRPWorld.get().getRPZone(new IRPZone.ID("0_阿多斯_郊外_nw"));
 
 		portal = new Portal();
 		zone1.assignRPObjectID(portal);
 		portal.setPosition(9, 41);
-		portal.setDestination("0_ados_outside_nw", "wildlife");
+		portal.setDestination("0_阿多斯_郊外_nw", "wildlife");
 		zone1.add(portal);
 
 		portalDestination = new OneWayPortalDestination();
@@ -151,7 +151,7 @@ public class AdosWildlifeRaid implements TurnListener {
 
 
 	public void addToWorld() {
-		StendhalRPZone zone = StendhalRPWorld.get().getZone("0_ados_outside_nw");
+		StendhalRPZone zone = StendhalRPWorld.get().getZone("0_阿多斯_郊外_nw");
 		createSoldiers(zone);
 		createSheep(zone);
 		createPortal();

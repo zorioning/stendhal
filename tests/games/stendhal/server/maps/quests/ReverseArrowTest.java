@@ -35,7 +35,7 @@ public class ReverseArrowTest {
 	public static void setUpBeforeClass() throws Exception {
 		MockStendlRPWorld.get();
 		QuestHelper.setUpBeforeClass();
-		StendhalRPZone zone = new StendhalRPZone("int_ados_reverse_arrow");
+		StendhalRPZone zone = new StendhalRPZone("int_阿多斯_反转_箭");
 		MockStendlRPWorld.get().addRPZone(zone);
 		MockStendlRPWorld.get().addRPZone(new StendhalRPZone("0_semos_mountain_n2"));
 

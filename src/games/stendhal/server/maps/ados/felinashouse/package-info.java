@@ -1,5 +1,5 @@
 /**
- * logic for Felina's house in Ados.
+ * logic for 菲琳娜's house in Ados.
  */
 package games.stendhal.server.maps.ados.felinashouse;
 

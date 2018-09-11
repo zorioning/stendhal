@@ -269,7 +269,7 @@ public class FoundGirl implements LoadableContent {
 	public boolean removeFromWorld() {
 		removeNPC("Susi");
 
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_ados_ross_house");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_阿多斯_罗斯_小屋");
 		new LittleGirlNPC().createGirlNPC(zone);
 
 		return true;

@@ -71,7 +71,7 @@ public class MineTown extends ScriptImpl {
 }
 // TODO: these should not be done manually but added and removed as part of the script load and unload
 // Mine Town Weeks information
-// Loading mountain_n2_mine_town_weeks.tmx and 塞门镇 halloween.city.tmx . Both contain several walkblockers for tables, Carolines shop and signs.
+// Loading mountain_n2_mine_town_weeks.tmx and 塞门镇 halloween.city.tmx . Both contain several walkblockers for tables, 卡若琳s shop and signs.
 
 // Mine Town map:
 // Walkblockers for tables at:
@@ -80,9 +80,9 @@ public class MineTown extends ScriptImpl {
 //<attribute name="width">4</attribute>
 //<attribute name="height">2</attribute>
 
-// Carolines shop signs at:
+// 卡若琳s shop signs at:
 // x="60" y="105", x="55" y="105"
-// <parameter name="shop">sellrevivalweeks</parameter>, <parameter name="title">Carolines snacks and drinks shop (sells)</parameter>
+// <parameter name="shop">sellrevivalweeks</parameter>, <parameter name="title">卡若琳s snacks and drinks shop (sells)</parameter>
 
 // Wooden arch at:
 // x="94" y="118", x="95" y="119", x="96" y="119"

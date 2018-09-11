@@ -37,7 +37,7 @@ import games.stendhal.server.entity.player.Player;
 
 public class AnimalKeeperNPC implements ZoneConfigurator {
 
-	private static final String ZONE_NAME = "int_ados_pet_sanctuary";
+	private static final String ZONE_NAME = "int_阿多斯_宠物_医院";
 
 	/**
 	 * Configure a zone.
