@@ -4,7 +4,7 @@
 
   <item name="重斧">
     <type class="axe" subclass="axe" tileid="-1"/>
-    <description>这是一把生锈的重斧，它很重但不锋利。</description>
+    <description>这是一把生锈的重斧, 它很重但不锋利. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="12"/>
@@ -24,7 +24,7 @@
 
   <item name="大砍刀">
     <type class="axe" subclass="bardiche" tileid="-1"/>
-    <description>这是一把稀有且有力的大砍刀。</description>
+    <description>这是一把稀有且有力的大砍刀. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="33"/>
@@ -45,7 +45,7 @@
   
   <item name="战斧">
     <type class="axe" subclass="battle_axe" tileid="-1"/>
-    <description>这是一把战斧。制造精良且历久弥新。</description>
+    <description>这是一把战斧. 制造精良且历久弥新. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="15"/>
@@ -65,7 +65,7 @@
   
   <item name="黑戟">
     <type class="axe" subclass="black_halberd" tileid="-1"/>
-    <description>这是一把黑戟。非常重，会造成巨大的破坏，但是冷却时间很长。</description>
+    <description>这是一把黑戟. 非常重, 会造成巨大的破坏, 但是冷却时间很长. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="57"/>
@@ -87,7 +87,7 @@
   
   <item name="黑镰刀">
     <type class="axe" subclass="black_axe" tileid="-1"/>
-    <description>这是一把黑镰刀。对于一种农具来说，它的攻击力是惊人的。</description>
+    <description>这是一把黑镰刀. 对于一种农具来说, 它的攻击力是惊人的. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="42"/>
@@ -109,7 +109,7 @@
   
   <item name="混沌斧">
     <type class="axe" subclass="chaos_axe" tileid="-1"/>
-    <description>这是一把混沌斧。斧柄是认不出来的一些合金，斧刃是金黄色的。但是思考太久会让你感到困惑。</description>
+    <description>这是一把混沌斧. 斧柄是认不出来的一些合金, 斧刃是金黄色的. 但是思考太久会让你感到困惑. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>    
     <attributes>
       <atk value="52"/>
@@ -131,7 +131,7 @@
   
   <item name="都灵之斧">
     <type class="axe" subclass="durin_axe" tileid="-1"/>
-    <description>这是一把都灵之斧，小矮人的大奖。</description>
+    <description>这是一把都灵之斧, 小矮人的大奖. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="47"/>
@@ -152,7 +152,7 @@
   
   <item name="黄金双刃斧">
     <type class="axe" subclass="golden_twosided_poleaxe" tileid="-1"/>
-    <description>这是一把黄金双刃斧，非常稀有。</description>
+    <description>这是一把黄金双刃斧, 非常稀有. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="35"/>
@@ -173,7 +173,7 @@
 
   <item name="战戟">
     <type class="axe" subclass="halberd" tileid="-1"/>
-    <description>这是一把非常稀有的战戟，斧柄固定在轴上，既重又锋利。</description>
+    <description>这是一把非常稀有的战戟, 斧柄固定在轴上, 既重又锋利. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -194,7 +194,7 @@
 
   <item name="手斧">
     <type class="axe" subclass="hand_axe" tileid="-1"/>
-    <description>这是一把手斧，历经多年使用，但是可能会有用。</description>
+    <description>这是一把手斧, 历经多年使用, 但是可能会有用. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="9"/>
@@ -214,7 +214,7 @@
   
   <item name="魔法双刃斧">
     <type class="axe" subclass="magic_twosided_poleaxe" tileid="-1"/>
-    <description>这是一把魔法双刃斧，但你并不明白魔法的本质。</description>
+    <description>这是一把魔法双刃斧, 但你并不明白魔法的本质. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="40"/>
@@ -236,7 +236,7 @@
   
   <item name="旧的大镰刀">
     <type class="axe" subclass="oldscythe" tileid="-1"/>
-    <description>这是一把旧的大镰刀，原来是死神的武器，但是现在只能当作农具。</description>
+    <description>这是一把旧的大镰刀, 原来是死神的武器, 但是现在只能当作农具. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="2"/>
@@ -256,7 +256,7 @@
   
   <item name="大镰刀">
     <type class="axe" subclass="scythe" tileid="-1"/>
-    <description>这是死神的武器大镰刀。看起来很危险，但也能当作农具。</description>
+    <description>这是死神的武器大镰刀. 看起来很危险, 但也能当作农具. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="19"/>
@@ -277,7 +277,7 @@
   
   <item name="镰刀">
     <type class="axe" subclass="sickle" tileid="-1"/>
-    <description>这是一把镰刀，是有用的农具。</description>
+    <description>这是一把镰刀, 是有用的农具. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="2"/>
@@ -297,7 +297,7 @@
 
   <item name="小斧头">
     <type class="axe" subclass="small_axe" tileid="-1"/>
-    <description>这是一把小斧头，看起来制造精良，但是你怀疑它太轻了而不能造成太大的伤害。</description>
+    <description>这是一把小斧头, 看起来制造精良, 但是你怀疑它太轻了而不能造成太大的伤害. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="7"/>
@@ -317,7 +317,7 @@
 
   <item name="双刃斧">
     <type class="axe" subclass="twosided_poleaxe" tileid="-1"/>
-    <description>这是一把制造精良的双刃斧。</description>
+    <description>这是一把制造精良的双刃斧. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="29"/>

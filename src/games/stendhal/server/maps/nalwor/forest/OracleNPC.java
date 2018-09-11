@@ -49,7 +49,7 @@ public class OracleNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Zinnia") {
 			@Override
 			public void createDialog() {
-				addGreeting("你好，我们最好小声说话，不要嗨到精灵们");
+				addGreeting("你好, 我们最好小声说话, 不要嗨到精灵们");
 
 				// use a standard action to list the names of NPCs for quests which haven't been started in this region
 				addReply(ConversationPhrases.HELP_MESSAGES, null, new SayNPCNamesForUnstartedQuestsAction(regions));
@@ -61,15 +61,15 @@ public class OracleNPC implements ZoneConfigurator {
 						ConversationStates.ATTENDING,
 						null,
 						new SayUnstartedQuestDescriptionFromNPCNameAction(regions));
-				addQuest("在 " + regions + " 附近有几个城镇，冒险者们可在那里得到帮助 #help ");
-				addJob("我只是在这闲逛，这里能感到些许魔力。");
+				addQuest("在 " + regions + " 附近有几个城镇, 冒险者们可在那里得到帮助 #help ");
+				addJob("我只是在这闲逛, 这里能感到些许魔力. ");
 				addOffer("就像我的姐妹们 #sisters, 我能 #help 你知道怎么帮助 #help 其他人.");
-				addReply("sisters", "我的姐妹们住的很远，找到她们学会如何帮助 #help 附近的人们. 和我一样，她们每人都有一个花名 #name .");
-				addReply("name", "Zinnia 是一种颜色和我的衣服一样，像翡翠绿的花, 我觉得也像我喜欢绿色森林一样");
+				addReply("sisters", "我的姐妹们住的很远, 找到她们学会如何帮助 #help 附近的人们. 和我一样, 她们每人都有一个花名 #name .");
+				addReply("name", "Zinnia 是一种颜色和我的衣服一样, 像翡翠绿的花, 我觉得也像我喜欢绿色森林一样");
 
 				// just to be nice :)
 				addEmotionReply("hugs", "hugs");
-				addGoodbye("谢谢你，在这片魔法森林行走要小心.");
+				addGoodbye("谢谢你, 在这片魔法森林行走要小心.");
 			}
 
 			@Override

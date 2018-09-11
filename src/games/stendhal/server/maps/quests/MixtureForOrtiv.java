@@ -88,7 +88,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我见到了 Ortiv Milquetoast, 一位退休的老教师，他住在 Kirdneh River 的一所房子里，我需要他的帮忙.");
+		res.add("我见到了 Ortiv Milquetoast, 一位退休的老教师, 他住在 Kirdneh River 的一所房子里, 我需要他的帮忙.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("我现在不想帮助 Ortiv . 他应该出去自己拿配料.");
@@ -97,7 +97,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 			missingItems.addFromQuestStateString(questState);
 			res.add("我要带给 " + missingItems.toStringList() + ".");
 		} else {
-			res.add("我帮了 Ortiv. 现在他又能安静的睡觉了。他给了我一些 xp 和一个刺客匕首作为报答.");
+			res.add("我帮了 Ortiv. 现在他又能安静的睡觉了. 他给了我一些 xp 和一个刺客匕首作为报答.");
 		}
 		return res;
 	}
@@ -111,7 +111,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 					new QuestNotStartedCondition(QUEST_SLOT),
 					new NotCondition(new QuestInStateCondition(QUEST_SLOT,"rejected"))),
 			ConversationStates.QUESTION_1,
-			"Ohh 我发现一个陌生人藏在我的房子里，也许你能帮我做点事?", null);
+			"Ohh 我发现一个陌生人藏在我的房子里, 也许你能帮我做点事?", null);
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
@@ -124,7 +124,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"我目前一直忙于把一群吵闹的家伙们赶到楼下，也许你可以在稍后的时间帮我弄一些配料 #ingredients ,我以后要用.",
+			"我目前一直忙于把一群吵闹的家伙们赶到楼下, 也许你可以在稍后的时间帮我弄一些配料 #ingredients ,我以后要用.",
 			null);
 
 		npc.add(
@@ -132,7 +132,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"我目前一直忙于把一群吵闹的家伙们赶到楼下，也许你可以在稍后的时间帮我弄一些配料 #ingredients ,我以后要用.",
+			"我目前一直忙于把一群吵闹的家伙们赶到楼下, 也许你可以在稍后的时间帮我弄一些配料 #ingredients ,我以后要用.",
 			null);
 
 		npc.add(
@@ -140,7 +140,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 			"ingredients",
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"以前我是练金教师。现在我努力把它们混合在一起，为此我需要一些原料，希望你能帮我，好吗？",
+			"以前我是练金教师. 现在我努力把它们混合在一起, 为此我需要一些原料, 希望你能帮我, 好吗？",
 			null);
 
 		npc.add(
@@ -150,34 +150,34 @@ public class MixtureForOrtiv extends AbstractQuest {
 			ConversationStates.ATTENDING,
 			null,
 			new MultipleActions(new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS),
-							    new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Oh 那太好了，陌生人！，你救了我的命！请给我带点 [items].")));
+							    new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "Oh 那太好了, 陌生人！, 你救了我的命！请给我带点 [items].")));
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"我以为你能帮我，但我错了，就像我当老师时，和学生一样明显的错误。",
+			"我以为你能帮我, 但我错了, 就像我当老师时, 和学生一样明显的错误. ",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
-		npc.addReply("苹果", "苹果是刺客最爱的食物。我在Semon城东,Orril和Halwor河的旁边见过一些苹果树" );
+		npc.addReply("苹果", "苹果是刺客最爱的食物. 我在Semon城东,Orril和Halwor河的旁边见过一些苹果树" );
 
 			npc.addReply("瓶子", "我听说一个年轻的女人在Semo卖这东西.");
 
-			npc.addReply("toadstool", "Toadstools 毒性很强，我听说曾有猎人在森林吃了一点，就病了好几天.");
+			npc.addReply("toadstool", "Toadstools 毒性很强, 我听说曾有猎人在森林吃了一点, 就病了好几天.");
 
-			npc.addReply("arandula", "像是一些旧友跟我说过，塞门镇的北面, 离小树林很近的地方，生找着一种名叫 arandula 的药草");
+			npc.addReply("arandula", "像是一些旧友跟我说过, 塞门镇的北面, 离小树林很近的地方, 生找着一种名叫 arandula 的药草");
 
-			npc.addReply("red lionfish","Red lionfish 很难找到，它们体外有红白相门的条纹，红是紫红色 " +
-					"或棕色。我曾听说在Faiumoni的一个地方，你可以钓到它们，但要小心，每条 lionfish  都有毒!");
+			npc.addReply("red lionfish","Red lionfish 很难找到, 它们体外有红白相门的条纹, 红是紫红色 " +
+					"或棕色. 我曾听说在Faiumoni的一个地方, 你可以钓到它们, 但要小心, 每条 lionfish  都有毒!");
 
-			npc.addReply("kokuda","Kokuda 相当难找。如果你在别的岛能抓住一条我会很开心...");
+			npc.addReply("kokuda","Kokuda 相当难找. 如果你在别的岛能抓住一条我会很开心...");
 
-			npc.addReply("licorice", "在魔法城市有一个好看的小酒吧，里面年轻的女孩销售这种好吃的甜品.");
+			npc.addReply("licorice", "在魔法城市有一个好看的小酒吧, 里面年轻的女孩销售这种好吃的甜品.");
 
-			npc.addReply("wine", "Mmmmm..没有比把喜人的杯子和红酒混合在一起更好的东西了，咳咳 *cough* 当然为我的混合物需要它... 我打赌，你可能在旅店或酒吧的某地买到酒...");
+			npc.addReply("wine", "Mmmmm..没有比把喜人的杯子和红酒混合在一起更好的东西了, 咳咳 *cough* 当然为我的混合物需要它... 我打赌, 你可能在旅店或酒吧的某地买到酒...");
 
-			npc.addReply("garlic", "我知道, 刺客和强盗们不是吸血鬼，但我会尽量好好使用它对抗他们。城里的花园里有个漂亮的园丁，她销售自己种的大蒜.");
+			npc.addReply("garlic", "我知道, 刺客和强盗们不是吸血鬼, 但我会尽量好好使用它对抗他们. 城里的花园里有个漂亮的园丁, 她销售自己种的大蒜.");
 
 			npc.addReply(Arrays.asList("pestle","mortar","pestle and mortar"), "可能一些面包师或厨师用得着这些.");
 	}
@@ -189,7 +189,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestActiveCondition(QUEST_SLOT)),
 				ConversationStates.QUESTION_2,
-				"你好! 很高兴见到你，你带给我一些混合物的调料了吗? #ingredients ",
+				"你好! 很高兴见到你, 你带给我一些混合物的调料了吗? #ingredients ",
 				null);
 
 		/* player asks what exactly is missing (says ingredients) */
@@ -205,7 +205,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 
 		ChatAction completeAction = new  MultipleActions(
 				new SetQuestAction(QUEST_SLOT, "done"),
-				new SayTextAction("非常感谢！，我现在能开始混合这些调料，有希望用制成品让我安全的呆在房子里，再没有刺客和盗贼从楼下跑上来。这一把刺客匕首给你，这是我我不得不从以前班里的一个学生手中收走它，现在你可以和他们对决并取胜."),
+				new SayTextAction("非常感谢！, 我现在能开始混合这些调料, 有希望用制成品让我安全的呆在房子里, 再没有刺客和盗贼从楼下跑上来. 这一把刺客匕首给你, 这是我我不得不从以前班里的一个学生手中收走它, 现在你可以和他们对决并取胜."),
 				new IncreaseXPAction(5000),
 				new IncreaseKarmaAction(25),
 				new EquipItemAction("刺客匕首", 1 ,true)
@@ -226,7 +226,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.NO_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Ok, 现在我要保持一点耐心。不管我能帮助你做点什么，就告诉我 #help .",
+				"Ok, 现在我要保持一点耐心. 不管我能帮助你做点什么, 就告诉我 #help .",
 				null);
 
 		/* player says he didn't bring any items to different question */
@@ -234,14 +234,14 @@ public class MixtureForOrtiv extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Ok, 现在我要保持一点耐心。不管我能帮助你做点什么，就告诉我 #help .", null);
+				"Ok, 现在我要保持一点耐心. 不管我能帮助你做点什么, 就告诉我 #help .", null);
 
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestCompletedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"非常感谢！我能平安的睡觉了，你救了我！", null);
+				"非常感谢！我能平安的睡觉了, 你救了我！", null);
 	}
 
 
@@ -249,7 +249,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Mixture for Ortiv",
-				"Ortiv 要制作混合物还需要一些调料，制成后会帮他让刺客和盗贼困在楼下",
+				"Ortiv 要制作混合物还需要一些调料, 制成后会帮他让刺客和盗贼困在楼下",
 				true);
 		prepareRequestingStep();
 		prepareBringingStep();

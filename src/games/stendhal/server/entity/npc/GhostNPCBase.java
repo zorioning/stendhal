@@ -84,7 +84,7 @@ public abstract class GhostNPCBase extends SpeakerNPC {
 				// compatibility with older broken quest slots. fix them.
 				logger.warn("玩家 " + player.getTitle() + " found with find_ghosts quest slot in state " + player.getQuest(QUEST_SLOT) + " - now setting this to done.");
 				player.setQuest(QUEST_SLOT, "done");
-				npc.say("请，请死者安息.");
+				npc.say("请, 请死者安息.");
 			}
 		}
 	}

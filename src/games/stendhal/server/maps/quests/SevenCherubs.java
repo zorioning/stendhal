@@ -110,7 +110,7 @@ public class SevenCherubs extends AbstractQuest {
 				}
 			}
 			if (isCompleted(player)) {
-				res.add("完成，我发现了所有的天使!");
+				res.add("完成, 我发现了所有的天使!");
 			}
 		}
 		return res;
@@ -162,7 +162,7 @@ public class SevenCherubs extends AbstractQuest {
 							if (left > -1) {
 								raiser.say("找出其他的天使能得到奖励!");
 							} else {
-								raiser.say("汝的眼睛能看到这七个天使！ 现在，这是汝应得了奖赏.");
+								raiser.say("汝的眼睛能看到这七个天使！ 现在, 这是汝应得了奖赏.");
 							}
 						} else {
 							player.setQuest(QUEST_SLOT, npcDoneText + ";"
@@ -181,7 +181,7 @@ public class SevenCherubs extends AbstractQuest {
 									player.addXP((7 - left + 1) * 200);
 								}
 							} else {
-								raiser.say("这已证明了你的勇敢，你已具体配戴这个上古神器了！");
+								raiser.say("这已证明了你的勇敢, 你已具体配戴这个上古神器了！");
 
 								/*
 								 * Proposal by Daniel Herding (mort): once
@@ -230,7 +230,7 @@ public class SevenCherubs extends AbstractQuest {
 		fillHistoryMap();
 		fillQuestInfo(
 				"七个天使",
-				"七个天使留在了这个世界上，找到他们并赢取奖励",
+				"七个天使留在了这个世界上, 找到他们并赢取奖励",
 				false);
 		StendhalRPZone zone;
 		SpeakerNPC npc;

@@ -97,7 +97,7 @@ public class AdosDeathmatch extends AbstractQuest {
 	public void createHelmet(final int x, final int y) {
 		final Item helmet = SingletonRepository.getEntityManager()
 				.getItem("trophy helmet");
-		helmet.setDescription("这是给本次死亡大赛优胜者郑重的奖励，对通过死亡大赛的每位选手增加一点防御！");
+		helmet.setDescription("这是给本次死亡大赛优胜者郑重的奖励, 对通过死亡大赛的每位选手增加一点防御！");
 		helmet.setPosition(x, y);
 		zone.add(helmet, false);
 	}
@@ -129,7 +129,7 @@ public class AdosDeathmatch extends AbstractQuest {
 						new AndCondition(new GreetingMatchesNameCondition(name),
 								new NotCondition(new PlayerInAreaCondition(arena))),
 						ConversationStates.INFORMATION_1,
-						"欢迎来到 Ados Deathmatch! 如果你想加入，请和 #Thonatus 谈.",
+						"欢迎来到 Ados Deathmatch! 如果你想加入, 请和 #Thonatus 谈.",
 						null);
 				add(
 						ConversationStates.INFORMATION_1,
@@ -144,7 +144,7 @@ public class AdosDeathmatch extends AbstractQuest {
 					Arrays.asList("沼泽", "swamp"),
 					null,
 					ConversationStates.INFORMATION_1,
-					"是的,这里的西南方向，就像我说的，要小心，沼泽地聚集了一些邪恶的生物.",
+					"是的,这里的西南方向, 就像我说的, 要小心, 沼泽地聚集了一些邪恶的生物.",
 					null);
 
 
@@ -153,7 +153,7 @@ public class AdosDeathmatch extends AbstractQuest {
 					"死记录大赛",
 					null,
 					ConversationStates.INFORMATION_1,
-					"如果你接受了 #Thonatus 所讲的比赛规则 #challenge , 你会到达那里，强太的敌人会包围你，你必须全部杀死他们才能宣布胜利 #victory.",
+					"如果你接受了 #Thonatus 所讲的比赛规则 #challenge , 你会到达那里, 强太的敌人会包围你, 你必须全部杀死他们才能宣布胜利 #victory.",
 					null);
 
                 add( 
@@ -161,7 +161,7 @@ public class AdosDeathmatch extends AbstractQuest {
                     Arrays.asList("比赛", "挑战","challenge"),
                     null,
                     ConversationStates.INFORMATION_1,
-                    "记住在 #死亡大赛 中的名字. 除非你觉得你有很高的防御才能不接受挑战. 并且一定要检查里面没有任何精英战士，与强大的野兽搏斗！ And be sure to check that there is not any elite warrior already inside, battling strong beasts!",
+                    "记住在 #死亡大赛 中的名字. 除非你觉得你有很高的防御才能不接受挑战. 并且一定要检查里面没有任何精英战士, 与强大的野兽搏斗！ And be sure to check that there is not any elite warrior already inside, battling strong beasts!",
                     null);
 
 				add(
@@ -169,7 +169,7 @@ public class AdosDeathmatch extends AbstractQuest {
                     Arrays.asList("胜利", "取胜", "victory"),
                     null,
                     ConversationStates.INFORMATION_1,
-                    "奖品就是你所见的这种头盔，它的防御会随着你在死亡大赛中撑过的回合提升最大值。",
+                    "奖品就是你所见的这种头盔, 它的防御会随着你在死亡大赛中撑过的回合提升最大值. ",
                     null);
 
 				// player is inside
@@ -179,21 +179,21 @@ public class AdosDeathmatch extends AbstractQuest {
 								new PlayerInAreaCondition(arena)),
 						ConversationStates.ATTENDING,
 						"欢迎来到 Ados 死亡大赛！你需要 #帮助吗 #help ?", null);
-				addJob("我是本次 ＃死亡大赛 的助理，如果想参赛并需要 #帮助 的话就告诉我。");
-				addHelp("当你准备好时对我说 #开始 '#start' ！要杀死 #所有 #出现 的对手。如果你坚持到最后，高喊 '#胜利 #victory' 取得最终 #胜利 .");
+				addJob("我是本次 ＃死亡大赛 的助理, 如果想参赛并需要 #帮助 的话就告诉我. ");
+				addHelp("当你准备好时对我说 #开始 '#start' ！要杀死 #所有 #出现 的对手. 如果你坚持到最后, 高喊 '#胜利 #victory' 取得最终 #胜利 .");
 				addGoodbye("祝你在死亡大赛中玩的开心！");
 
 				add(
 						ConversationStates.ATTENDING,
 						Arrays.asList("所有", "出现", "死亡大赛"),
 						ConversationStates.ATTENDING,
-						"每一轮你会面对更强大的敌人。做好防御，杀死他们，或者想放弃比赛就对我说 #认输 #投降 #bail!",
+						"每一轮你会面对更强大的敌人. 做好防御, 杀死他们, 或者想放弃比赛就对我说 #认输 #投降 #bail!",
 						null);
 				add(
 						ConversationStates.ATTENDING,
 						Arrays.asList("头盔", "helm", "helmet"),
 						ConversationStates.ATTENDING,
-						"如果你在死亡大赛中取胜，我们会奖励给你一件战利品头盔 helmet. 每次 #胜利 都会给这个头盔增加强度。",
+						"如果你在死亡大赛中取胜, 我们会奖励给你一件战利品头盔 helmet. 每次 #胜利 都会给这个头盔增加强度. ",
 						null);
 
 				// 'start' command will start spawning creatures
@@ -221,7 +221,7 @@ public class AdosDeathmatch extends AbstractQuest {
 
 		npc.setEntityClass("noimagenpc"); /* darkwizardnpc */
 		npc.setPosition(x, y);
-		npc.setDescription("你遇见了 Thanatos. 与这个死亡大赛参赛队员相比，他还是比较强壮的.");
+		npc.setDescription("你遇见了 Thanatos. 与这个死亡大赛参赛队员相比, 他还是比较强壮的.");
 		npc.setDirection(Direction.DOWN);
 		npc.initHP(100);
 		// The assistant is near the spikes, so give him better ears for the
@@ -254,14 +254,14 @@ public class AdosDeathmatch extends AbstractQuest {
 							 dmplayernames.add(dmplayer.getName());
 						 }
 						 // List the players inside deathmatch
-						 npc.say("本次死亡大赛中的英雄们正在战斗中，如果你想加入 "
-								 + dmplayernames + " 的队伍中，然后才可 #challenge.");
+						 npc.say("本次死亡大赛中的英雄们正在战斗中, 如果你想加入 "
+								 + dmplayernames + " 的队伍中, 然后才可 #challenge.");
 					 }
 				 });
 
 		npc2.add(ConversationStates.ATTENDING, Arrays.asList("heroes", "who", "hero", "status") , new DeathMatchEmptyCondition(),
 				 ConversationStates.ATTENDING,
-				 "你是一个英雄吗？如果你想加入本次死亡比赛，请接受 ＃挑战 #challenge 。", null);
+				 "你是一个英雄吗？如果你想加入本次死亡比赛, 请接受 ＃挑战 #challenge . ", null);
 
 		npc2.add(ConversationStates.ATTENDING, Arrays.asList("比赛", "挑战","challenge"),
 				 new AndCondition(new LevelGreaterThanCondition(19),
@@ -285,7 +285,7 @@ public class AdosDeathmatch extends AbstractQuest {
 							 dmplayernames.add(dmplayer.getName());
 						 }
 						 // List the players inside deathmatch
-						 npc.say("这次的死亡比赛中正有英雄在努力战斗中，所以现在比较危险，你要加入到 "
+						 npc.say("这次的死亡比赛中正有英雄在努力战斗中, 所以现在比较危险, 你要加入到 "
 								 + dmplayernames + " 的战场吗?");
 					 }
 				 });
@@ -293,7 +293,7 @@ public class AdosDeathmatch extends AbstractQuest {
 		npc2.add(ConversationStates.ATTENDING, Arrays.asList("比赛", "挑战","challenge"),
 			 new AndCondition(new LevelGreaterThanCondition(19),
 					  new PlayerHasPetOrSheepCondition()),
-			 ConversationStates.ATTENDING, "抱歉，你带的宠物可能会在战场中受惊.",
+			 ConversationStates.ATTENDING, "抱歉, 你带的宠物可能会在战场中受惊.",
 				 null);
 
 
@@ -303,12 +303,12 @@ public class AdosDeathmatch extends AbstractQuest {
 
 
 		npc2.add(ConversationStates.QUESTION_1, ConversationPhrases.NO_MESSAGES, null,
-				 ConversationStates.ATTENDING, "有点挤，但没办法，如果还有别的事，尽管说.",
+				 ConversationStates.ATTENDING, "有点挤, 但没办法, 如果还有别的事, 尽管说.",
 				 null);
 
 		npc2.add(ConversationStates.ATTENDING, Arrays.asList("比赛", "挑战","challenge"),
 				 new LevelLessThanCondition(20),
-				 ConversationStates.ATTENDING, "抱歉，我现在太弱，还不适合参加 #死亡大赛，等你20级后再回来吧",
+				 ConversationStates.ATTENDING, "抱歉, 我现在太弱, 还不适合参加 #死亡大赛, 等你20级后再回来吧",
 				 null);
 	}
 
@@ -318,7 +318,7 @@ public class AdosDeathmatch extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Ados 死亡大赛",
-				"Thanatos 在死亡大赛中负责查找投入战斗的英雄们。",
+				"Thanatos 在死亡大赛中负责查找投入战斗的英雄们. ",
 				true);
 		recruiterInformation();
 	}

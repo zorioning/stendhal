@@ -207,7 +207,7 @@ class DestinationObject extends MoveableObject {
 			if (entity instanceof Item) {
 				Item item = (Item) entity;
 				if (item.isBound() && rpslot.isTargetBoundCheckRequired()) {
-					player.sendPrivateText("不能把特殊任务物品用在这里，它只能属于你");
+					player.sendPrivateText("不能把特殊任务物品用在这里, 它只能属于你");
 					return false;
 				}
 

@@ -35,7 +35,7 @@ public class Fire extends Entity implements UseListener {
 	 *            height in grid units
 	 */
 	public Fire(final int width, final int height) {
-		setDescription("你看到一些光在闪烁，你好奇的摸了摸它.");
+		setDescription("你看到一些光在闪烁, 你好奇的摸了摸它.");
 		setRPClass("fire");
 		put("type", "fire");
 

@@ -96,7 +96,7 @@ public class ProducerRegister {
 					String timeleft = behaviour.getApproximateRemainingTime(player);
 					// put all ongoing orders last
 					sb.append("\n" + npcName + " is " + activity
-							+ " " +  product  + " ，并且会在 " + timeleft + " 时间内准备好.");
+							+ " " +  product  + " , 并且会在 " + timeleft + " 时间内准备好.");
 				}
 			}
 		}
@@ -283,7 +283,7 @@ public class ProducerRegister {
 						String timeleft = behaviour.getApproximateRemainingTime(player);
 						// put all ongoing orders last
 						res.add("\n" + npcName + " 是 " + activity
-							+ " " + product + " ，并且会在 " + timeleft + "时间内准备好.");
+							+ " " + product + " , 并且会在 " + timeleft + "时间内准备好.");
 					}
 				}
 			}
@@ -308,7 +308,7 @@ public class ProducerRegister {
                         String timeleft = behaviour.getApproximateRemainingTime(player);
                         // put all ongoing orders last
 						res.add("\n" + npcName + " 是 " + activity
-							+ " " + product + " ，并且会在 " + timeleft + "内准备好.");
+							+ " " + product + " , 并且会在 " + timeleft + "内准备好.");
                     }
                 }
 			}

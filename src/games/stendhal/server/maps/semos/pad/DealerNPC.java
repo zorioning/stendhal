@@ -70,9 +70,9 @@ public class DealerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addJob("我想你知道我是什么的.");
-				addHelp("说实话，我不能帮你什么，你可以在城镇里生活的更好.");
-				addQuest("朋友，没有你要的东西.");
-				addOffer("哈! 这个门上的标志是只个封面画！不是酒馆。如果你想喝一杯，最好回到镇上.");
+				addHelp("说实话, 我不能帮你什么, 你可以在城镇里生活的更好.");
+				addQuest("朋友, 没有你要的东西.");
+				addOffer("哈! 这个门上的标志是只个封面画！不是酒馆. 如果你想喝一杯, 最好回到镇上.");
 				addGoodbye("Bye.");
 			}
 		};

@@ -43,7 +43,7 @@ public class ShowOffersChatAction implements ChatAction {
 	@Override
 	public void fire(Player player, Sentence sentence, EventRaiser npc) {
 		if (sentence.hasError()) {
-			npc.say("抱歉，我听不懂你说什么. "
+			npc.say("抱歉, 我听不懂你说什么. "
 					+ sentence.getErrorString());
 			npc.setCurrentState(ConversationStates.ATTENDING);
 		} else if (sentence.getExpressions().iterator().next().toString().equals("show")){
@@ -196,7 +196,7 @@ public class ShowOffersChatAction implements ChatAction {
 			if (counter > MAX_SHOWN_OFFERS) {
 				message.append("一页只显示 " + MAX_SHOWN_OFFERS + " 种代销商品.");
 				if (!usingFilter) {
-					message.append(" 你可以分类显示代销列表，比如 #show #肉块 就会只显示肉块类商品.");
+					message.append(" 你可以分类显示代销列表, 比如 #show #肉块 就会只显示肉块类商品.");
 				}
 				return counter;
 			}

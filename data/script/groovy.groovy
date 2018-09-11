@@ -25,7 +25,7 @@ if(game.setZone(myZone))   // if zone exists
   sign=new Sign()
   sign.setX(8)
   sign.setY(47)
-  sign.setText("欢迎进入Stendhal世界!\n如遇到游戏卡住剖，请向下面网圵报告问题.\nhttps://stendhalgame.org ")
+  sign.setText("欢迎进入Stendhal世界!\n如遇到游戏卡住剖, 请向下面网圵报告问题.\nhttps://stendhalgame.org ")
   
   // Add our new Object to the game world
   game.add(sign)

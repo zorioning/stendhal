@@ -62,7 +62,7 @@ public class BowAndArrowSellerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting();
 				addJob("我有一些弓和箭要卖");
-				addHelp("本人只销售几种物品，要问详细请讲 #offer.");
+				addHelp("本人只销售几种物品, 要问详细请讲 #offer.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellrangedstuff")));
 				addGoodbye();
 			}

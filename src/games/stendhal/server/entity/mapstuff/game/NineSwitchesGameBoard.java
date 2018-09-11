@@ -73,7 +73,7 @@ public class NineSwitchesGameBoard implements TurnListener {
 		}
 
 		if (!user.getName().equals(playerName)) {
-			user.sendPrivateText(npc.getName() + ": Hey " + user.getName() + ", " + playerName + " 正没玩结束呢，请等一会.");
+			user.sendPrivateText(npc.getName() + ": Hey " + user.getName() + ", " + playerName + " 正没玩结束呢, 请等一会.");
 			return;
 		}
 

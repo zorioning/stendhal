@@ -143,11 +143,11 @@ public class ObsidianKnife extends AbstractQuest {
 		if (questState.equals("food_brought")) {
 			return res;
 		}
-		res.add("我需要到图书管中帮助 Alrak 问出关于宝石书。");
+		res.add("我需要到图书管中帮助 Alrak 问出关于宝石书. ");
 		if (questState.equals("seeking_book")) {
 			return res;
 		}
-		res.add("我拿到了Alrak 想要的 宝石书。");
+		res.add("我拿到了Alrak 想要的 宝石书. ");
 		if (questState.equals("got_book")) {
 			return res;
 		}
@@ -155,16 +155,16 @@ public class ObsidianKnife extends AbstractQuest {
 		if (questState.startsWith("reading")) {
 			return res;
 		}
-		res.add("Alrak 说这本书已教会他如何制作一把刀，听起来很不错。");
+		res.add("Alrak 说这本书已教会他如何制作一把刀, 听起来很不错. ");
 		if (questState.equals("book_read")) {
 			return res;
 		}
-		res.add("Alrak 说如果我杀了一条黑龙，并找到一个 cod 和一个 obsidian , 他会给我制作一把刀。");
+		res.add("Alrak 说如果我杀了一条黑龙, 并找到一个 cod 和一个 obsidian , 他会给我制作一把刀. ");
 		if (questState.equals("knife_offered")
 		&& !player.hasKilled("black dragon")) {
 			return res;
 		}
-		res.add("我杀掉了一条黑龙。");
+		res.add("我杀掉了一条黑龙. ");
 		if (questState.equals("knife_offered")
 				&& player.hasKilled("black dragon")) {
 			return res;
@@ -175,7 +175,7 @@ public class ObsidianKnife extends AbstractQuest {
 				&& player.isEquipped(FISH))  {
 			return res;
 		}
-		res.add("我把 cod 和 obsidian 带给 Alrak. 他现在正在给我打造一把刀。");
+		res.add("我把 cod 和 obsidian 带给 Alrak. 他现在正在给我打造一把刀. ");
 		if (questState.startsWith("forging")) {
 			return res;
 		}
@@ -198,21 +198,21 @@ public class ObsidianKnife extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"你知道，附近很难找到吃的，过了年我可能就没有任何吃的了",
+				"你知道, 附近很难找到吃的, 过了年我可能就没有任何吃的了",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"我又有工作的激情了！我现在为 Wrvil 制作东西。谢谢你鼓励我重新对锻造产生了兴趣。",
+				"我又有工作的激情了！我现在为 Wrvil 制作东西. 谢谢你鼓励我重新对锻造产生了兴趣. ",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestInStateCondition(QUEST_SLOT, "food_brought"),
 				ConversationStates.QUEST_ITEM_BROUGHT,
-				"我现在不再担心食物，我觉得自已太无聊。这是一本我爱读的书 #book 。",
+				"我现在不再担心食物, 我觉得自已太无聊. 这是一本我爱读的书 #book . ",
 				null);
 
 		// any other state than above
@@ -220,7 +220,7 @@ public class ObsidianKnife extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT), new QuestNotInStateCondition(QUEST_SLOT, "food_brought")),
 				ConversationStates.ATTENDING,
-				"我相信我想让你为我做点事。",
+				"我相信我想让你为我做点事. ",
 				null);
 
 
@@ -236,8 +236,8 @@ public class ObsidianKnife extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final String food = player.getQuest(QUEST_SLOT);
-					npc.say("谢谢你！我希望不用花太长时间收集。当你凑够了吃的，不要忘了对我说 '"
-						+ food + "。");
+					npc.say("谢谢你！我希望不用花太长时间收集. 当你凑够了吃的, 不要忘了对我说 '"
+						+ food + ". ");
 					// player.setQuest(QUEST_SLOT, food);
 					// set food to null?
 				}
@@ -249,7 +249,7 @@ public class ObsidianKnife extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"我不确定我明年还能活着。再见，见死不救的家伙!",
+				"我不确定我明年还能活着. 再见, 见死不救的家伙!",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		// Player asks what supplies he needs, and a random choice of what he
@@ -311,21 +311,21 @@ public class ObsidianKnife extends AbstractQuest {
 				"book",
 				null,
 				ConversationStates.QUEST_ITEM_BROUGHT,
-				"它是关于宝石 gems 和 minerals的一本书. 我敢说你一定感兴趣。。。但你觉得你怎么能得到它？",
+				"它是关于宝石 gems 和 minerals的一本书. 我敢说你一定感兴趣. . . 但你觉得你怎么能得到它？",
 				null);
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"你这是侮辱, 我真的喜欢学习关于那些特殊的石头，好吧，再见!",
+				"你这是侮辱, 我真的喜欢学习关于那些特殊的石头, 好吧, 再见!",
 				null);
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"谢谢，可以试着去某个图书管问问 'gem book'.",
+				"谢谢, 可以试着去某个图书管问问 'gem book'.",
 				new SetQuestAction(QUEST_SLOT, "seeking_book"));
 	}
 
@@ -343,7 +343,7 @@ public class ObsidianKnife extends AbstractQuest {
 				"gem book",
 				new QuestInStateCondition(QUEST_SLOT, "seeking_book"),
 				ConversationStates.QUESTION_1,
-				"你太走运了！上周 Ognir 刚把这本书还了回来，现在它是给谁的？?",
+				"你太走运了！上周 Ognir 刚把这本书还了回来, 现在它是给谁的？?",
 				null);
 
 		npc.add(ConversationStates.QUESTION_1,
@@ -365,7 +365,7 @@ public class ObsidianKnife extends AbstractQuest {
 				"",
 				new NotCondition(new TriggerInListCondition(NAME.toLowerCase())),
 				ConversationStates.QUESTION_1,
-				"Hm, 你最好确认下这本书给谁。",
+				"Hm, 你最好确认下这本书给谁. ",
 				null);
 	}
 

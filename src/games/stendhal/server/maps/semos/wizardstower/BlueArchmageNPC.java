@@ -79,19 +79,19 @@ public class BlueArchmageNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("你好，冒险者！");
-				addHelp("所有的魔法类型都有一个 #相克 的魔法以维持平衡。牢记这条很重要。");
-				addJob("我是 Erastus。我的职责是联合并领导圈子中的巫师。");
-				addOffer("我什么都不卖。不过 Zekiel 和 巫师们应该可以帮到你！");
-				addReply("相克", "想打败火系当然用水系。但相克不只是针锋相对。" +
-						"我见过 大法师 能够融合它们，并创建出更强大的魔法。");
-				addQuest("是的我有个请求，但你需要首先从巫师圈里学会点魔法知识。当你完成我的请求时，我会把这个给你。");
-				addGoodbye("再见，冒险者！");
+				addGreeting("你好, 冒险者！");
+				addHelp("所有的魔法类型都有一个 #相克 的魔法以维持平衡. 牢记这条很重要. ");
+				addJob("我是 Erastus. 我的职责是联合并领导圈子中的巫师. ");
+				addOffer("我什么都不卖. 不过 Zekiel 和 巫师们应该可以帮到你！");
+				addReply("相克", "想打败火系当然用水系. 但相克不只是针锋相对. " +
+						"我见过 大法师 能够融合它们, 并创建出更强大的魔法. ");
+				addQuest("是的我有个请求, 但你需要首先从巫师圈里学会点魔法知识. 当你完成我的请求时, 我会把这个给你. ");
+				addGoodbye("再见, 冒险者！");
 
 			} //remaining behaviour defined in maps.quests.ArchmageErastusQuest
 		};
 
-		erastus.setDescription("你遇见 Erastus，他是全能级法术大师。");
+		erastus.setDescription("你遇见 Erastus, 他是全能级法术大师. ");
 		erastus.setEntityClass("blueoldwizardnpc");
 		erastus.setPosition(21, 36);
 		erastus.initHP(100);

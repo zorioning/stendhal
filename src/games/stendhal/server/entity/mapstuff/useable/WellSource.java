@@ -57,7 +57,7 @@ public class WellSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "well_source");
 		setMenu("Make a wish|Use");
-		setDescription("你看到一口许原井，里面有些东西吸引着你");
+		setDescription("你看到一口许原井, 里面有些东西吸引着你");
 		setResistance(0);
 	}
 
@@ -167,7 +167,7 @@ public class WellSource extends PlayerActivityEntity {
 			player.equipOrPutOnGround(item);
 			player.incObtainedForItem(item.getName(), item.getQuantity());
 			SingletonRepository.getAchievementNotifier().onObtain(player);
-			player.sendPrivateText("你真走运，发现了 "
+			player.sendPrivateText("你真走运, 发现了 "
 					+ amount + itemName + ".");
 		} else {
 			player.sendPrivateText("你的许愿没有成真.");
@@ -185,6 +185,6 @@ public class WellSource extends PlayerActivityEntity {
 		// remove 30 money from player as they throw a coin into the
 		// well
 		player.drop("money", 30);
-		player.sendPrivateText("你把30枚金币扔到井里，并许愿。");
+		player.sendPrivateText("你把30枚金币扔到井里, 并许愿. ");
 	}
 }

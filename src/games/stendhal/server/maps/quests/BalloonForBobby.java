@@ -105,7 +105,7 @@ public class BalloonForBobby extends AbstractQuest {
 								new PlayerIsWearingOutfitCondition(balloonList[2]),
 								new PlayerIsWearingOutfitCondition(balloonList[3]))),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"你好，这个气球是给我的吗?",
+				"你好, 这个气球是给我的吗?",
 				null);
 	}
 
@@ -152,8 +152,8 @@ public class BalloonForBobby extends AbstractQuest {
 				"气球",
 				new SystemPropertyCondition("stendhal.minetown"),
 				ConversationStates.ATTENDING,
-				"从天上的云可以得知，矿镇复兴展会还会继续。"
-				+ " 我会有很多气球。"
+				"从天上的云可以得知, 矿镇复兴展会还会继续. "
+				+ " 我会有很多气球. "
 				+ " 当矿镇复兴展会周结束后再来看看 :)",
 				null);
 	}

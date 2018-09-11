@@ -126,7 +126,7 @@ public class WeddingRing extends Item {
 	private boolean teleportToSpouse(final Player player) {
 		// check if pets and sheep are near
 		if (!player.isZoneChangeAllowed()) {
-			player.sendPrivateText("你是在对着你的宠物说话，对吗？");
+			player.sendPrivateText("你是在对着你的宠物说话, 对吗？");
 			return false;
 		}
 
@@ -155,12 +155,12 @@ public class WeddingRing extends Item {
 				// divorced with ring and engaged again
 				player.sendPrivateText("抱歉, "
 						+ spouseName
-						+ " 已和你离婚，并与其他人订了婚.");
+						+ " 已和你离婚, 并与其他人订了婚.");
 				return false;
 			} else if (!(weddingRing.getInfoString().equals(player.getName()))) {
 				// divorced and remarried
 				player.sendPrivateText("Sorry, " + spouseName
-						+ " 已和你离婚，并且马上又再婚了.");
+						+ " 已和你离婚, 并且马上又再婚了.");
 
 				return false;
 			}
@@ -174,7 +174,7 @@ public class WeddingRing extends Item {
 
 		final int secondsNeeded = getLastUsed() + getCoolingPeriod(player, spouse) - (int) (System.currentTimeMillis() / 1000);
 		if (secondsNeeded > 0) {
-			player.sendPrivateText("戒指还没有恢复能量，你觉得它可能在 "
+			player.sendPrivateText("戒指还没有恢复能量, 你觉得它可能在 "
 					+ TimeUtil.approxTimeUntil(secondsNeeded) + "时间后恢复.");
 
 			return false;
@@ -190,7 +190,7 @@ public class WeddingRing extends Item {
 		final int x = spouse.getX();
 		final int y = spouse.getY();
 		if (!destinationZone.isTeleportInAllowed(x, y)) {
-			player.sendPrivateText("目的地的有强列的反魔法环境，阻止了婚戒的正常使用!");
+			player.sendPrivateText("目的地的有强列的反魔法环境, 阻止了婚戒的正常使用!");
 			return false;
 		}
 

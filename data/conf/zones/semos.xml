@@ -84,7 +84,7 @@
     <point-of-interest x="65" y="85">
       <name>塞门雪人洞</name>
       <type>dungeon</type>
-      <description>进放这里之前最好换一身厚点的衣服。(Player Level 80 - 200)</description>
+      <description>进放这里之前最好换一身厚点的衣服. (Player Level 80 - 200)</description>
       <url>https://stendhalgame.org/dungeon/semos_yeti_cave.html</url>
     </point-of-interest>
 
@@ -180,7 +180,7 @@
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">亲爱的 克拉丝,
 
-不幸的事我今年不能拜访 Athor 了，我运气太差。可能. 或许情况好转后我会再找你一谈。</attribute>
+不幸的事我今年不能拜访 Athor 了, 我运气太差. 可能. 或许情况好转后我会再找你一谈. </attribute>
       <attribute name="class">transparent</attribute>
     </entity>
 
@@ -192,7 +192,7 @@
         <parameter name="radius">40</parameter>
       </implementation>
       <attribute name="height">1</attribute>
-      <attribute name="description">一个吉他，能演奏些旋律.</attribute>
+      <attribute name="description">一个吉他, 能演奏些旋律.</attribute>
     </entity>
 
   </zone>
@@ -357,14 +357,14 @@
     <entity x="56" y="117" condition="stendhal.minetown">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="62" y="117" condition="stendhal.minetown">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
     
@@ -538,7 +538,7 @@
     </portal>
     <entity x="39" y="23">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">警告：山路滑坡，此路不通！</attribute>
+      <attribute name="text">警告：山路滑坡, 此路不通！</attribute>
     </entity>
     <entity x="40" y="111">
       <implementation
@@ -1315,36 +1315,36 @@
     <point-of-interest x="92" y="101">
       <name>塞门塞地</name>
       <type>dungeon</type>
-      <description>塞门墓地中有一个洞，也许你要自已准备好对抗不死生物了。</description>
+      <description>塞门墓地中有一个洞, 也许你要自已准备好对抗不死生物了. </description>
       <url>https://stendhalgame.org/dungeon/semos_catacombs.html</url>
     </point-of-interest>
 
     <entity x="77" y="66">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
+      <attribute name="text">这块土地也施肥, 可以在这种下种子了. 找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的, 所以一旦你种下花种, 其他人也能采走. 感谢种下这么漂亮的花, 祝你开心. </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
 
     <entity x="59" y="58">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
+      <attribute name="text">这块土地也施肥, 可以在这种下种子了. 找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的, 所以一旦你种下花种, 其他人也能采走. 感谢种下这么漂亮的花, 祝你开心. </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
 
     <entity x="68" y="43">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">这块土地也施肥，可以在这种下种子了。找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的，所以一旦你种下花种，其他人也能采走。感谢种下这么漂亮的花，祝你开心。</attribute>
+      <attribute name="text">这块土地也施肥, 可以在这种下种子了. 找(詹妮 from the Mill)买一些种子吧！注意：这块地是开放的, 所以一旦你种下花种, 其他人也能采走. 感谢种下这么漂亮的花, 祝你开心. </attribute>
       <attribute name="class">signpost</attribute>
     </entity>
 
     <entity x="70" y="50">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-当你看到这个提示，你就会明白这些花象征的意义... 
+当你看到这个提示, 你就会明白这些花象征的意义... 
 
-如果你种下一朵花，你应该不是为了自已，而是为了送给其他人。人们常说：“噢，那是我的花，其他人不能碰！”...这让想摘走花的人常常感到很失望。你需要用花给其他玩家制作礼物，那么某一天你也会收到一些作为回报的花，而其他人也会为别人种一些花作为礼物。:)
-如果你都种下和你摘走一样多的花，世界将会多么美好。所以你种下的花比采走的多一些，那么最终你会得到比你的需求更多的花。:)
-如果每个人都这么想，我们会得到一个更加美好的世界。
+如果你种下一朵花, 你应该不是为了自已, 而是为了送给其他人. 人们常说：“噢, 那是我的花, 其他人不能碰！”...这让想摘走花的人常常感到很失望. 你需要用花给其他玩家制作礼物, 那么某一天你也会收到一些作为回报的花, 而其他人也会为别人种一些花作为礼物. :)
+如果你都种下和你摘走一样多的花, 世界将会多么美好. 所以你种下的花比采走的多一些, 那么最终你会得到比你的需求更多的花. :)
+如果每个人都这么想, 我们会得到一个更加美好的世界. 
 If everybody would think so, we were on the way to a better world...
 
  - signed by S.</attribute>
@@ -1467,8 +1467,8 @@ If everybody would think so, we were on the way to a better world...
     <entity x="17" y="12">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">如何杀掉怪兽 海云那冉 蓍
-我的人民总是喜欢右击鼠标，选择攻击来打怪。你不能也搞错！
-你第一反应是直接对着怪物点鼠标，就是这么简单粗暴！
+我的人民总是喜欢右击鼠标, 选择攻击来打怪. 你不能也搞错！
+你第一反应是直接对着怪物点鼠标, 就是这么简单粗暴！
 </attribute>
       <attribute name="class">book_red</attribute>
     </entity>
@@ -1477,7 +1477,7 @@ If everybody would think so, we were on the way to a better world...
     <entity x="4" y="12">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">这是 海云那冉 的最好的盾牌，现在落满的灰尘。</attribute>
+      <attribute name="text">这是 海云那冉 的最好的盾牌, 现在落满的灰尘. </attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
     </entity>
@@ -1485,7 +1485,7 @@ If everybody would think so, we were on the way to a better world...
     <entity x="3" y="13">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">这是刚被清理干净的盔甲，它闪闪发光引人注目，你想借走，但被牢牢钉在了架子上。</attribute>
+      <attribute name="text">这是刚被清理干净的盔甲, 它闪闪发光引人注目, 你想借走, 但被牢牢钉在了架子上. </attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
     </entity>
@@ -1493,7 +1493,7 @@ If everybody would think so, we were on the way to a better world...
     <entity x="4" y="14">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">这是一件不常见的板甲，使用一些你没见过的罕见的金属打造而成</attribute>
+      <attribute name="text">这是一件不常见的板甲, 使用一些你没见过的罕见的金属打造而成</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
     </entity>
@@ -1604,21 +1604,21 @@ If everybody would think so, we were on the way to a better world...
     <entity x="43" y="40">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-和 赛特 说话卖出人的羊。他出的价不很高，但不幸的是没有买家市场...他只收购大个的羊(一般只收体重达到100的羊).
+和 赛特 说话卖出人的羊. 他出的价不很高, 但不幸的是没有买家市场...他只收购大个的羊(一般只收体重达到100的羊).
    </attribute>
     </entity>
 
     <entity x="55" y="43">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-卖羊在 塞门，就找 赛特 谈.
+卖羊在 塞门, 就找 赛特 谈.
    </attribute>
     </entity>
 
     <entity x="55" y="48">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-卖羊在 塞门，就找 赛特 谈.
+卖羊在 塞门, 就找 赛特 谈.
    </attribute>
     </entity>
 

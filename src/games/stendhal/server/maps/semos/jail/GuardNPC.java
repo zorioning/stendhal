@@ -70,14 +70,14 @@ public class GuardNPC implements ZoneConfigurator  {
 						ConversationPhrases.JOB_MESSAGES,
 						new InJailCondition(),
 						ConversationStates.ATTENDING,
-						"我是这个监狱的看守，由于你的违法行为，你已被限制自由.",
+						"我是这个监狱的看守, 由于你的违法行为, 你已被限制自由.",
 						null);
 
 				add(ConversationStates.ATTENDING,
 						ConversationPhrases.HELP_MESSAGES,
 						new InJailCondition(),
 						ConversationStates.ATTENDING,
-						"请等管理员来这，给你出处理决定。在此期间不能逃跑。如果你下线，关押时间会从0重新计时。",
+						"请等管理员来这, 给你出处理决定. 在此期间不能逃跑. 如果你下线, 关押时间会从0重新计时. ",
 						null);
 
 				add(ConversationStates.ATTENDING,
@@ -90,7 +90,7 @@ public class GuardNPC implements ZoneConfigurator  {
 				addGoodbye();
 			}};
 			npc.setPosition(9, 7);
-			npc.setDescription("你遇到了 塞门镇 监狱的看守，Marcus.");
+			npc.setDescription("你遇到了 塞门镇 监狱的看守, Marcus.");
 			npc.setEntityClass("youngsoldiernpc");
 			zone.add(npc);
 	}

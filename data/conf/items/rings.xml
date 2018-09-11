@@ -67,7 +67,7 @@
   
   <item name="婚戒">
     <type class="ring" subclass="wedding" tileid="-1"/>
-    <description>一枚黄金婚戒，象征爱情.</description>
+    <description>一枚黄金婚戒, 象征爱情.</description>
     <implementation class-name="games.stendhal.server.entity.item.WeddingRing"/>
     <attributes>
     </attributes>
@@ -85,7 +85,7 @@
 
   <item name="订婚戒指">
     <type class="ring" subclass="engagement_ring" tileid="-1"/>
-    <description>一枚钻石订婚戒指，象征爱情或是财富？</description>
+    <description>一枚钻石订婚戒指, 象征爱情或是财富？</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -103,7 +103,7 @@
 
   <item name="翡翠戒指">
     <type class="ring" subclass="emerald-ring" tileid="-1"/>
-    <description>一枚翡翠戒指, 象征生命。戴上它就能降低死亡风险。</description>
+    <description>一枚翡翠戒指, 象征生命. 戴上它就能降低死亡风险. </description>
     <implementation class-name="games.stendhal.server.entity.item.RingOfLife"/>
     <attributes>
       <amount value="1"/>

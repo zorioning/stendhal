@@ -68,14 +68,14 @@ public class SheepSellerNPC implements ZoneConfigurator {
 					@Override
 					public boolean transactAgreedDeal(ItemParserResult res, final EventRaiser seller, final Player player) {
 						if (res.getAmount() > 1) {
-							seller.say("Hmm... 我不认为你能立刻放弃照看整个羊群。");
+							seller.say("Hmm... 我不认为你能立刻放弃照看整个羊群. ");
 							return false;
 						} else if (!player.hasSheep()) {
 							if (!player.drop("money", getCharge(res, player))) {
 								seller.say("看来你的钱不够.");
 								return false;
 							}
-							seller.say("你带走吧，一只毛绒绒的小羊！要照顾好它......");
+							seller.say("你带走吧, 一只毛绒绒的小羊！要照顾好它......");
 
 							final Sheep sheep = new Sheep(player);
 							StendhalRPAction.placeat(seller.getZone(), sheep, seller.getX(), seller.getY() + 1);
@@ -84,7 +84,7 @@ public class SheepSellerNPC implements ZoneConfigurator {
 
 							return true;
 						} else {
-							say("好吧，为什么不确信你能看好你之前带走的羊？");
+							say("好吧, 为什么不确信你能看好你之前带走的羊？");
 							return false;
 						}
 					}
@@ -95,22 +95,22 @@ public class SheepSellerNPC implements ZoneConfigurator {
 
 				addGreeting();
 				addJob("我是牧羊人.");
-				addHelp("我销售羊只，要买的话，只要告诉我你想买羊 #买 #sheep. 如果你没做过这行，我能告诉你如何 #放羊, 只要小心 #照看 它，最后可以卖出个好价钱。如果你在野外偶然发现羊，也可以使用支配 #own 把羊牵走.");
+				addHelp("我销售羊只, 要买的话, 只要告诉我你想买羊 #买 #sheep. 如果你没做过这行, 我能告诉你如何 #放羊, 只要小心 #照看 它, 最后可以卖出个好价钱. 如果你在野外偶然发现羊, 也可以使用支配 #own 把羊牵走.");
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SheepSellerBehaviour(items));
 				addReply("照看",
-						"羊儿特别喜爱吃这些长在矮树丛的红树莓，只要站在树莓附近，你的羊经过时会自已去吃它. 你可以随时鼠标右击羊，然后选择查看去了解羊的体重；每吃一颗树莓会增加1点体重。");
+						"羊儿特别喜爱吃这些长在矮树丛的红树莓, 只要站在树莓附近, 你的羊经过时会自已去吃它. 你可以随时鼠标右击羊, 然后选择查看去了解羊的体重；每吃一颗树莓会增加1点体重. ");
 				addReply("放羊",
-						"你需要把羊保持在离你不太远的地方，当你切换地区时，羊要在附近才行；你可以呼出 #sheep 去喊羊回来。如果你决定放生它，你可以鼠标右键，然后选择离开；但坦白的说，我认为这样的行为很不负责.");
+						"你需要把羊保持在离你不太远的地方, 当你切换地区时, 羊要在附近才行；你可以呼出 #sheep 去喊羊回来. 如果你决定放生它, 你可以鼠标右键, 然后选择离开；但坦白的说, 我认为这样的行为很不负责.");
 				addReply("sell",
-						"一旦你把羊放到100的体重，你可以把它给 塞门镇上的 Sato；他会收购你的羊.");
+						"一旦你把羊放到100的体重, 你可以把它给 塞门镇上的 Sato；他会收购你的羊.");
 				addReply("own",
-						"如果你发现一只被放生的羊，可以点击鼠标右键，并选择 own 驯服它，羊需要人的照料!");
+						"如果你发现一只被放生的羊, 可以点击鼠标右键, 并选择 own 驯服它, 羊需要人的照料!");
 			}
 		};
 
 		npc.setEntityClass("sellernpc");
-		npc.setDescription("尼世亚 在路上巡逻并照料着他的羊，你可以从他那里买一只.");
+		npc.setDescription("尼世亚 在路上巡逻并照料着他的羊, 你可以从他那里买一只.");
 		npc.setPosition(33, 44);
 		npc.initHP(100);
 		npc.setSounds(Arrays.asList("cough-11", "cough-2", "cough-3"));

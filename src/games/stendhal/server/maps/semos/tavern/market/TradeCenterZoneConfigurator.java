@@ -72,7 +72,7 @@ public class TradeCenterZoneConfigurator implements ZoneConfigurator {
 		speaker.setEntityClass("tradecenteradvisornpc");
 		speaker.setOutfit(new Outfit(0, 5, 1, 34, 1));
 		speaker.initHP(100);
-		speaker.setDescription("Harold 待人友善，他为别人代销货物...");
+		speaker.setDescription("Harold 待人友善, 他为别人代销货物...");
 		zone.add(speaker);
 	}
 

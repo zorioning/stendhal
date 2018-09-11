@@ -131,7 +131,7 @@ public class FishSoup extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestNotStartedCondition(QUEST_SLOT)),
 			ConversationStates.INFORMATION_1,
-			"你好，欢迎来到 Ados 市场! 我有一些好吃的，你要要点什么 #revive 。",
+			"你好, 欢迎来到 Ados 市场! 我有一些好吃的, 你要要点什么 #revive . ",
 			null);
 
 		// player returns after finishing the quest (it is repeatable) after the
@@ -143,7 +143,7 @@ public class FishSoup extends AbstractQuest {
 					new QuestCompletedCondition(QUEST_SLOT),
 					new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
 			ConversationStates.QUEST_OFFERED,
-			"再次欢迎，你是因为我的鲜鱼汤而再次光临吗？",
+			"再次欢迎, 你是因为我的鲜鱼汤而再次光临吗？",
 			null);
 
 		// player returns after finishing the quest (it is repeatable) before
@@ -155,7 +155,7 @@ public class FishSoup extends AbstractQuest {
 						new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES , "Oh 抱歉。再次做汤之前，我需要首先洗净炊具，请回来 在")
+				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES , "Oh 抱歉. 再次做汤之前, 我需要首先洗净炊具, 请回来 在")
 			);
 
 		// player responds to word 'revive'
@@ -168,10 +168,10 @@ public class FishSoup extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					if (player.hasQuest(QUEST_SLOT) && player.isQuestCompleted(QUEST_SLOT)) {
-						npc.say("现在我已经弄清了做好鱼汤的密诀。");
+						npc.say("现在我已经弄清了做好鱼汤的密诀. ");
 						npc.setCurrentState(ConversationStates.ATTENDING);
 					} else {
-						npc.say("我的密制鱼汤有魔法伤。 "
+						npc.say("我的密制鱼汤有魔法伤.  "
 								+ "我需要你云带来一些 #ingredients.");
 					}
 				}
@@ -184,7 +184,7 @@ public class FishSoup extends AbstractQuest {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final List<String> needed = missingFood(player, true);
-					npc.say("做汤之前，我需要 "
+					npc.say("做汤之前, 我需要 "
 							+ needed.size() + 
 									"ingredient"
 							+ " : "
@@ -197,14 +197,14 @@ public class FishSoup extends AbstractQuest {
 		npc.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES, null,
 			ConversationStates.QUESTION_1,
-			"虽然你有其他选择，但我求你不要让我失望。你还有其他我需要的东西吗？",
+			"虽然你有其他选择, 但我求你不要让我失望. 你还有其他我需要的东西吗？",
 			new SetQuestAction(QUEST_SLOT, ""));
 
 		// player is not willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Oh, 我希望你能改变主意。太让人失望了！", null);
+				"Oh, 我希望你能改变主意. 太让人失望了！", null);
 
 		// players asks about the ingredients individually
 		npc.add(
@@ -212,8 +212,8 @@ public class FishSoup extends AbstractQuest {
 			Arrays.asList("surgeonfish","cod", "char", "roach", "clownfish", "mackerel", "perch"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"在Faiumoni周围，遍布着可以钓鱼的地方。你可以找到适合你的很多地方，在那里你能钓到不同的鱼。" +
-			" 经过Ados时可以看看图书管，你得到了什么配方吗？",
+			"在Faiumoni周围, 遍布着可以钓鱼的地方. 你可以找到适合你的很多地方, 在那里你能钓到不同的鱼. " +
+			" 经过Ados时可以看看图书管, 你得到了什么配方吗？",
 			null);
 
 		// players asks about the ingredients individually
@@ -222,7 +222,7 @@ public class FishSoup extends AbstractQuest {
 			Arrays.asList("leek", "onion"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"你在Fado能找到配料的一些成份。所以你可以去取一些配料吗？",
+			"你在Fado能找到配料的一些成份. 所以你可以去取一些配料吗？",
 			null);
 
 		// players asks about the ingredients individually
@@ -231,7 +231,7 @@ public class FishSoup extends AbstractQuest {
 			Arrays.asList("tomato", "garlic"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"在 Kalavan 市的 Sue，那里有个漂亮的花园， 花园里出售 tomatoes 和 garlic. "
+			"在 Kalavan 市的 Sue, 那里有个漂亮的花园, 花园里出售 tomatoes 和 garlic. "
 			+ "所以你可以把配料取来吗？", null);
 	}
 
@@ -298,8 +298,8 @@ public class FishSoup extends AbstractQuest {
 									player.addXP(50);
 									placeSoupFor(player);
 									player.getStatusList().removeAll(PoisonStatus.class);
-									npc.say("鱼汤已放在市场的桌子上了，喝了它可以让你健康。"
-											+ "我的密制鱼汤，也能带给你一点好运。");
+									npc.say("鱼汤已放在市场的桌子上了, 喝了它可以让你健康. "
+											+ "我的密制鱼汤, 也能带给你一点好运. ");
 									player.setQuest(QUEST_SLOT, "done;"
 											+ System.currentTimeMillis());
 									player.notifyWorldAboutChanges();

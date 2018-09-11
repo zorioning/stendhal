@@ -231,7 +231,7 @@ public class MealForGroongo extends AbstractQuest {
     public void addToWorld() {
         fillQuestInfo(
             "Meal for Groongo Rahnnt",
-            "Groongo 饿了，他想在 Fado 的酒店吃一顿大餐.",
+            "Groongo 饿了, 他想在 Fado 的酒店吃一顿大餐.",
             true);
         stageBeginQuest();
         stageCollectIngredientsForMainDish();
@@ -268,7 +268,7 @@ public class MealForGroongo extends AbstractQuest {
             );
             if (isRepeatable(player)) {
                 // enough time has passed, inform that the quest is available to be taken.
-                res.add("如果他吃的节制一点，可能我还会问他.");
+                res.add("如果他吃的节制一点, 可能我还会问他.");
             } else {
                 // inform about how much time has to pass before the quest can be taken again.
                 long timestamp;
@@ -293,14 +293,14 @@ public class MealForGroongo extends AbstractQuest {
                 missingIngredients.addFromQuestStateString(ingredients);
                 res.add("Groongo 想要 " +
                     getRequiredMainDishFancyName(player.getQuest(QUEST_SLOT, 2)) + 
-                    " 当做盘子，我正帮 Chef Stefan 寻找配作它的零件。." +
+                    " 当做盘子, 我正帮 Chef Stefan 寻找配作它的零件. ." +
                     " I still have to bring " +
                     missingIngredients.toStringList() + "."
                 );
             } else if ("check_dessert".equals(questState)) {
                 res.add("Groongo 想要 " +
                     getRequiredMainDishFancyName(player.getQuest(QUEST_SLOT, 2)) +
-                    " 作为盘子，Chef Stefan 已经准备好了它."
+                    " 作为盘子, Chef Stefan 已经准备好了它."
                 );
                 res.add("我现在要问 Groongo" +
                     " 接下来他喜欢哪种甜点."
@@ -665,7 +665,7 @@ public class MealForGroongo extends AbstractQuest {
                     "很好！我立即开始准备 " +
                             getRequiredMainDishFancyName(
                                     player.getQuest(QUEST_SLOT, 2)) + " ." +
-                    " 同时，请问下我们的多事的顾客" +
+                    " 同时, 请问下我们的多事的顾客" +
                     " 随后他想要哪种甜点 #dessert !");
             } else if ("tell_dessert".equals(player.getQuest(QUEST_SLOT, 0))) {
                 player.setQuest(QUEST_SLOT, 0, "fetch_dessert");
@@ -697,8 +697,8 @@ public class MealForGroongo extends AbstractQuest {
                     player.setQuest(QUEST_SLOT, 0, "deliver_decentmeal");
                     SpeakerNPC.say(
                         "Here you are! I've just finished preparing " + decentMealDescription +
-                        " 你现在应该立刻带着这个适量大餐给我们的多事顾客。" +
-                        " 你走路时要非常小心，不能弄坏了或者摔掉地上!"
+                        " 你现在应该立刻带着这个适量大餐给我们的多事顾客. " +
+                        " 你走路时要非常小心, 不能弄坏了或者摔掉地上!"
                     );
                 } else {
                     SpeakerNPC.say(
@@ -785,7 +785,7 @@ public class MealForGroongo extends AbstractQuest {
             player.setQuest(QUEST_SLOT, 5, requiredIngredientsForDessert);
 
             SpeakerNPC.say(
-                    "确实，我不应忘记 " +
+                    "确实, 我不应忘记 " +
                     getRequiredMainDishFancyName(requiredMainDish) +
                     " 我会尽量 " +
                     getRequiredDessertFancyName(requiredDessert) +
@@ -929,7 +929,7 @@ public class MealForGroongo extends AbstractQuest {
                 raiser.say(
                     "Uh oh! For preparing " +
                         getWhatToPrepare(player, questState) +
-                    " 我现在就要全部的配料，你好像没有带来 " +
+                    " 我现在就要全部的配料, 你好像没有带来 " +
                         missingIngredientsToFetch.toStringListWithHash() +
                     " ."
                 );
@@ -985,7 +985,7 @@ public class MealForGroongo extends AbstractQuest {
                 new QuestInStateCondition(QUEST_SLOT, 0, "rejected")),
             ConversationStates.QUEST_OFFERED,
             "Gah! [insults player]" +
-            " 等了那么久，我身上都落满了灰尘..." +
+            " 等了那么久, 我身上都落满了灰尘..." +
             " 你准备带给我一些正餐 #meal ?",
             null
         );
@@ -998,7 +998,7 @@ public class MealForGroongo extends AbstractQuest {
                 new QuestCompletedCondition(QUEST_SLOT),
                 new TimePassedCondition(QUEST_SLOT, 6, REPEATQUEST_DELAY)),
             ConversationStates.QUEST_OFFERED,
-            "Oh, 你还在绕图，我明白！你带来了其他正餐 #meal?",
+            "Oh, 你还在绕图, 我明白！你带来了其他正餐 #meal?",
             null
         );
 
@@ -1013,7 +1013,7 @@ public class MealForGroongo extends AbstractQuest {
             ConversationStates.ATTENDING,
             null,
             new SayTimeRemainingAction(QUEST_SLOT, 6, REPEATQUEST_DELAY,
-                "我太饿了现在。。。我I'm not so hungry now... I will be fine for at least")
+                "我太饿了现在. . . 我I'm not so hungry now... I will be fine for at least")
         );
 
         // Player asks Groongo for a quest, 1st time!

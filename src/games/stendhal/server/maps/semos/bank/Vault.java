@@ -58,13 +58,13 @@ public class Vault extends StendhalRPZone {
 		WalkBlocker walkblocker = new WalkBlocker();
 		walkblocker.setPosition(2, 5);
 		walkblocker
-				.setDescription("你看到一个垃圾桶。请把不用的垃圾扔到里面.");
+				.setDescription("你看到一个垃圾桶. 请把不用的垃圾扔到里面.");
 		add(walkblocker);
 		// Add a sign explaining about equipped items
 		final Sign book = new Sign();
 		book.setPosition(2, 2);
 		book
-				.setText("就像物品被装备错误了一样，物品扔到地面后会在你离开仓库时返回到你的背包。另外，垃圾箱提供了你想扔掉的存放地，它会在你离开仓库时被自动清空.");
+				.setText("就像物品被装备错误了一样, 物品扔到地面后会在你离开仓库时返回到你的背包. 另外, 垃圾箱提供了你想扔掉的存放地, 它会在你离开仓库时被自动清空.");
 		book.setEntityClass("book_blue");
 		book.setResistance(0);
 		add(book);
@@ -117,7 +117,7 @@ public class Vault extends StendhalRPZone {
 								new ItemLogger().equipAction(player, item, new String[] {"ground", zone.getName(), item.getX() + " " + item.getY()}, new String[] {"slot", "a bank chest", "content"});
 							} else {
 								// the player lost their items
-								message = "你在扔在仓库地面上的物品 " + item.getName() + " 已被清空，因为你的背包和银行箱子里没有空间装下它们。";
+								message = "你在扔在仓库地面上的物品 " + item.getName() + " 已被清空, 因为你的背包和银行箱子里没有空间装下它们. ";
 
 								// the timeout method enters the zone and coords of item, this is useful we will know it was in vault
 								new ItemLogger().timeout(item);

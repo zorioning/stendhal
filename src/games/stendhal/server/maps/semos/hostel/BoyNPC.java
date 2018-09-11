@@ -74,7 +74,7 @@ public class BoyNPC implements ZoneConfigurator {
 						ConversationPhrases.GREETING_MESSAGES,
 						new GreetingMatchesNameCondition(getName()), true,
 				        ConversationStates.ATTENDING,
-				        "*sniff* *sniff* 我病了，快帮我把药 #favour 拿来.",
+				        "*sniff* *sniff* 我病了, 快帮我把药 #favour 拿来.",
 				        null);
 
 				add(ConversationStates.IDLE,
@@ -83,7 +83,7 @@ public class BoyNPC implements ZoneConfigurator {
 								new QuestCompletedCondition("introduce_players")),
 				        ConversationStates.ATTENDING,
 				        null,
-				        new SayTextAction("又见面了, [name]! 再次感谢，现在我觉得好多了."));
+				        new SayTextAction("又见面了, [name]! 再次感谢, 现在我觉得好多了."));
 
 				addGoodbye();
 			}
@@ -110,7 +110,7 @@ public class BoyNPC implements ZoneConfigurator {
 		});
 
 		npc.setEntityClass("childnpc");
-		npc.setDescription("这个年轻的男孩叫 泰德. 他的脸色苍白，看起来病得很重.");
+		npc.setDescription("这个年轻的男孩叫 泰德. 他的脸色苍白, 看起来病得很重.");
 
 		npc.setPosition(18, 21);
 		npc.setDirection(Direction.LEFT);

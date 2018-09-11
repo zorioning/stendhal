@@ -27,14 +27,14 @@ public class RepairingBehaviourAction extends AbstractBehaviourAction<RepairerBe
 		if(behaviour.canDealWith(chosen)) {
 			npc.say("修好要花些钱");
 		} else {
-			npc.say("抱歉，我不能修好你的 " + res.getChosenItemName() + ".");
+			npc.say("抱歉, 我不能修好你的 " + res.getChosenItemName() + ".");
 		}
 	}
 
 	@Override
 	public void fireRequestError(ItemParserResult res, Player player,
 			Sentence sentence, EventRaiser npc) {
-		npc.say("抱歉，你说的我不太明白.");
+		npc.say("抱歉, 你说的我不太明白.");
 	}
 
 }

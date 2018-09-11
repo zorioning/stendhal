@@ -89,7 +89,7 @@ public class SheepFood extends PassiveEntityRespawnPoint {
 	public String describe() {
 		final String text = "树上结有 "
 				+ getAmount()+ " 个树莓"
-				+ "，羊喜欢吃.";
+				+ ", 羊喜欢吃.";
 		return text;
 	}
 

@@ -98,12 +98,12 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				// TODO: this was copy pasted change as needed
 				addGreeting("唉呀!");
-				addJob("嗯，我不确信你的意思，现在我在等我妈妈从 #商店 买东西回来。");
-				addHelp("我有一些关于市场那边的 #消息。");
-				addOffer("我不卖东西，我只等妈妈回来。如果你想听，我可以告诉你一些 #消息 。");
+				addJob("嗯, 我不确信你的意思, 现在我在等我妈妈从 #商店 买东西回来. ");
+				addHelp("我有一些关于市场那边的 #消息. ");
+				addOffer("我不卖东西, 我只等妈妈回来. 如果你想听, 我可以告诉你一些 #消息 . ");
 				// quest: FindJefsMom , quest sentence given there
-				addReply("消息", "有一些商人马上要来市场开店了！这太棒了，目前太多商铺空着，太可惜了.");
-				addReply("商店", "是的，她必须去镇上。我们种的花都在销往那里。还有，那边的市场有些 #消息...");
+				addReply("消息", "有一些商人马上要来市场开店了！这太棒了, 目前太多商铺空着, 太可惜了.");
+				addReply("商店", "是的, 她必须去镇上. 我们种的花都在销往那里. 还有, 那边的市场有些 #消息...");
 				addGoodbye("再会.");
 
 				// if player already has one rented ask how may help
@@ -137,7 +137,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 						public void fire(Player player, Sentence sentence, EventRaiser npc) {
 							long diff = rentHelper.getNextExpiryTime(zone.getName()) - System.currentTimeMillis();
 
-							npc.say("抱歉，现在没有空房了，请在 " + TimeUtil.approxTimeUntil((int) (diff / 1000L)) + " 时间后再来咨询.");
+							npc.say("抱歉, 现在没有空房了, 请在 " + TimeUtil.approxTimeUntil((int) (diff / 1000L)) + " 时间后再来咨询.");
 						}
 				});
 
@@ -163,7 +163,7 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 							String reply = allotments.toString();
 
 							npc.say("你喜欢哪一间? 我看看... " +  "还有" + " "
-									+ reply + " 是可以租的空房，你再犹豫可能就 没了。");
+									+ reply + " 是可以租的空房, 你再犹豫可能就 没了. ");
 						}
 					});
 
@@ -190,24 +190,24 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 							//TODO: get payment
 							if (!rentHelper.isValidAllotment(zone.getName(), allotmentNumber)) {
-								npc.say("恐怕你选的房间不存在。");
+								npc.say("恐怕你选的房间不存在. ");
 							} else {
 								if (rentHelper.getAvailableAllotments(zone.getName()).contains(allotmentNumber)) {
 									if(rentHelper.setExpirationTime(zone.getName(), allotmentNumber, player.getName())) {
-										npc.say("这是你的 " + allotmentNumber + " 号房间的钥匙。以后就使用房间至 "
+										npc.say("这是你的 " + allotmentNumber + " 号房间的钥匙. 以后就使用房间至 "
 												+ TimeUtil.approxTimeUntil((int) (AllotmentUtilities.RENTAL_TIME / 1000L)) + " 的时间.");
 
 										if (!player.equipToInventoryOnly(rentHelper.getKey(zone.getName(), player.getName()))) {
-											npc.say("Oh, 你好像放的东西太多了，在你回来前，我会保证东西的安全。只用问下你租的房间. Just ask about your #allotment.");
+											npc.say("Oh, 你好像放的东西太多了, 在你回来前, 我会保证东西的安全. 只用问下你租的房间. Just ask about your #allotment.");
 										}
 
 										new SetQuestAction(QUEST_SLOT, 1, Long.toString(AllotmentUtilities.RENTAL_TIME + System.currentTimeMillis())).fire(player, sentence, npc);
 									} else {
 										// error? shouldn't happen
-										npc.say("Uh oh! 有些你的记录有些问题，请再等一会。");
+										npc.say("Uh oh! 有些你的记录有些问题, 请再等一会. ");
 									}
 								} else {
-									npc.say("抱歉，分配房子的已被取走, that allotment is already taken.");
+									npc.say("抱歉, 分配房子的已被取走, that allotment is already taken.");
 								}
 							}
 						}
@@ -227,12 +227,12 @@ public class AllotmentLessorNPC implements ZoneConfigurator {
 
 							if (key != null) {
 								if (player.equipToInventoryOnly(key)) {
-									npc.say("这是你的钥匙，happy planting.");
+									npc.say("这是你的钥匙, happy planting.");
 								} else {
-									npc.say("在你能带更多钥匙多前，你不能再拿走这把了。");
+									npc.say("在你能带更多钥匙多前, 你不能再拿走这把了. ");
 								}
 							} else {
-								npc.say("文件太多不好整理，它提示你没有租用过房子. It appears you haven't rented out an allotment.");
+								npc.say("文件太多不好整理, 它提示你没有租用过房子. It appears you haven't rented out an allotment.");
 							}
 						}
 					});

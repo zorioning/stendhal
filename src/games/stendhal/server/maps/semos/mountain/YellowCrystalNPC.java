@@ -49,9 +49,9 @@ public class YellowCrystalNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Hello, 希望你喜欢这里的自然风景.");
-				addHelp("这个漂亮的塔建在大山中，太壮观了!");
+				addHelp("这个漂亮的塔建在大山中, 太壮观了!");
 				addJob("我是一个水晶. 我还能说什么呢?");
-				addGoodbye("再会，需要我帮忙时随时回来.");
+				addGoodbye("再会, 需要我帮忙时随时回来.");
 
 			}
 		};

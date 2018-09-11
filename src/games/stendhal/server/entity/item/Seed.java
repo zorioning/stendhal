@@ -69,7 +69,7 @@ public class Seed extends StackableItem {
 			return true;
 		}
 		// the 种子 was 'contained' in a slot and so it cannot be planted
-		user.sendPrivateText("你把 " + this.getName() + " 直接放在地面上，笨!");
+		user.sendPrivateText("你把 " + this.getName() + " 直接放在地面上, 笨!");
 		return false;
 	}
 
@@ -79,9 +79,9 @@ public class Seed extends StackableItem {
 
 		if (flowerName != null) {
 			return "你看到 " + flowerName + " " + this.getName() + "."
-                + "可以把它种在其他地方，但它只能种在肥沃松软的土中.";
+                + "可以把它种在其他地方, 但它只能种在肥沃松软的土中.";
 		} else {
-			return "一粒种子. 可以把它种在其他地方，但它只能种在肥沃松软的土中.";
+			return "一粒种子. 可以把它种在其他地方, 但它只能种在肥沃松软的土中.";
 		}
 	}
 }

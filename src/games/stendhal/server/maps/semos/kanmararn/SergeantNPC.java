@@ -53,15 +53,15 @@ public class SergeantNPC implements ZoneConfigurator  {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("天气不错，冒险家!");
+				addGreeting("天气不错, 冒险家!");
 				addJob("我是这个军队的军士长.");
-				addGoodbye("最好小心你背后的这些矮人，祝好运！");
+				addGoodbye("最好小心你背后的这些矮人, 祝好运！");
 				// all other behaviour is defined in the quest.
 			}
 		};
 
 		npc.setEntityClass("royalguardnpc");
-		npc.setDescription("Sergeant James 是 塞门镇军队的军士长。他看起来有点失落...");
+		npc.setDescription("Sergeant James 是 塞门镇军队的军士长. 他看起来有点失落...");
 		npc.setPosition(66, 46);
 		npc.setBaseHP(100);
 		npc.initHP(75);

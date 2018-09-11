@@ -79,7 +79,7 @@ public class TicTacToeBoard extends GameBoard implements TokenMoveListener<Board
 		}
 
 		if (checkForTie()) {
-			npc.say("抱歉，这个回合无人胜出.");
+			npc.say("抱歉, 这个回合无人胜出.");
 			endGame();
 			return;
 		}

@@ -98,7 +98,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 				if (seller.getEntity().squaredDistance(sheep) > 5 * 5) {
 					seller.say("*drool* 新鲜的羊！带到这儿!");
 				} else {
-					seller.say("Mmm... 看着就好吃! 来，给你钱!");
+					seller.say("Mmm... 看着就好吃! 来, 给你钱!");
 					payPlayer(res, player);
 
 					player.removeSheep(sheep);

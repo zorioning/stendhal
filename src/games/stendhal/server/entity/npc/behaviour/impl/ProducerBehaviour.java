@@ -352,7 +352,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 					+ getProductionActivity()
 					+ " "
 					+  getProductName()
-					+ " 为你 , 但做好它需要花点时间，请等 "
+					+ " 为你 , 但做好它需要花点时间, 请等 "
 					+ getApproximateRemainingTime(player) + " 时间后再来取.");
 			return true;
 		}
@@ -389,7 +389,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 			}
 
 			if (player.equipToInventoryOnly(products)) {
-				npc.say("欢迎回来! 你的东西我做好了，把 "
+				npc.say("欢迎回来! 你的东西我做好了, 把 "
 					+ getProductName() + " 拿走吧.");
 				player.setQuest(questSlot, "done");
 				// give some XP as a little bonus for industrious workers
@@ -398,7 +398,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 				player.incProducedCountForItem(getProductName(), products.getQuantity());
 				SingletonRepository.getAchievementNotifier().onProduction(player);
 			} else {
-				npc.say("欢迎回来！你的东西我已做好，但你的背包满了，等你背包有空时再来取 "
+				npc.say("欢迎回来！你的东西我已做好, 但你的背包满了, 等你背包有空时再来取 "
 						+ getProductName()
 						);
 			}

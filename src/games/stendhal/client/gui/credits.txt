@@ -1,5 +1,5 @@
 感谢每位制作成员! 游戏的完成要归功于：: 
-汉化人员：Andersen , Hatsune Miku , VE ，zorion , 艾N , 天冷请加衣服
+汉化人员：Andersen , Hatsune Miku , VE , zorion , 艾N , 天冷请加衣服
 汉化人员共翻译客户端和服务端共7000行左右的文本 
 
 Aldrin, Alexander, Diehelm Brui, Hunel, Ida, Mrotho, Pjotr Yearl, Vonda, Wrvil and Woody 

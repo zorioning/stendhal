@@ -72,9 +72,9 @@ public class GroupPanelController implements GameObjects.GameObjectListener {
 			@Override
 			public void run() {
 				if (members == null) {
-					panel.showHeader("<html>你不在队伍中。<html>");
+					panel.showHeader("<html>你不在队伍中. <html>");
 					if (grouped) {
-						String message = "你还没有加入过任何队伍。";
+						String message = "你还没有加入过任何队伍. ";
 						ClientSingletonRepository.getUserInterface().addEventLine(
 								new HeaderLessEventLine(message, NotificationType.CLIENT));
 						grouped = false;

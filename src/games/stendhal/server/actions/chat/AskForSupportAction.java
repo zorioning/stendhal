@@ -62,7 +62,7 @@ public class AskForSupportAction  implements ActionListener {
 				// the player have to wait one minute since the last support
 				// message was sent
 				if (timeLastMsg < 60000) {
-					player.sendPrivateText("一分钟只能发一条，请把你的问题一次性写完再发.");
+					player.sendPrivateText("一分钟只能发一条, 请把你的问题一次性写完再发.");
 					return;
 				}
 			}
@@ -83,7 +83,7 @@ public class AskForSupportAction  implements ActionListener {
 
 		player.sendPrivateText(NotificationType.SUPPORT, "你的申请: "
 				+ action.get(TEXT)
-				+ "\n正在受理，但还需要一点时间");
+				+ "\n正在受理, 但还需要一点时间");
 		player.notifyWorldAboutChanges();
 	}
 }

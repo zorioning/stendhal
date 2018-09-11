@@ -4,7 +4,7 @@
 	
   <item name="黑盾">
     <type class="shield" subclass="black_shield" tileid="-1"/>
-    <description>一面黑盾，可以保护你不受伤害</description>
+    <description>一面黑盾, 可以保护你不受伤害</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="42"/>
@@ -26,7 +26,7 @@
   
   <item name="蓝盾">
     <type class="shield" subclass="blue_shield" tileid="-1"/>
-    <description>一面蓝盾，轻便但防御力优秀。</description>
+    <description>一面蓝盾, 轻便但防御力优秀. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="30"/>
@@ -46,7 +46,7 @@
   
   <item name="小圆盾">
     <type class="shield" subclass="buckler" tileid="-1"/>
-    <description>一面小圆盾, 能抵挡利剑和棍棒的进攻，但很难抵挡强力武器的攻击</description>
+    <description>一面小圆盾, 能抵挡利剑和棍棒的进攻, 但很难抵挡强力武器的攻击</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -65,7 +65,7 @@
   
   <item name="chaos shield">
     <type class="shield" subclass="chaos_shield" tileid="-1"/>
-    <description>一面混乱之盾, 上面特殊的花纹可以迷惑敌人。</description>
+    <description>一面混乱之盾, 上面特殊的花纹可以迷惑敌人. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="39"/>
@@ -85,7 +85,7 @@
   
    <item name="王冠之盾">
     <type class="shield" subclass="crown_shield" tileid="-1"/>
-    <description>一面王冠之盾, 防御性能完美。</description>
+    <description>一面王冠之盾, 防御性能完美. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="24"/>
@@ -105,7 +105,7 @@
     
     <item name="精灵之盾">
     <type class="shield" subclass="elvish_shield" tileid="-1"/>
-    <description>一面精灵之盾, 看起来像片大树叶。</description>
+    <description>一面精灵之盾, 看起来像片大树叶. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="32"/>
@@ -125,7 +125,7 @@
   
   <item name="加强狮盾">
     <type class="shield" subclass="enhanced_lion_shield" tileid="-1"/>
-    <description>一面闪闪发光的加强狮盾, 它会很好的保护你。</description>
+    <description>一面闪闪发光的加强狮盾, 它会很好的保护你. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="20"/>
@@ -185,7 +185,7 @@
 
   <item name="狮盾">
     <type class="shield" subclass="lion_shield" tileid="-1"/>
-    <description>一面价值不菲的狮盾, 很重且可以抵挡强力攻击。</description>
+    <description>一面价值不菲的狮盾, 很重且可以抵挡强力攻击. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="16"/>
@@ -204,7 +204,7 @@
   
   <item name="附魔钢盾">
     <type class="shield" subclass="lion_clan_shield" tileid="-1"/>
-    <description>一面附魔钢盾, 上面带着魔法。</description>
+    <description>一面附魔钢盾, 上面带着魔法. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="40"/>
@@ -228,7 +228,7 @@
   
   <item name="奇妙之盾">
     <type class="shield" subclass="mainio_shield" tileid="-1"/>
-    <description>一面外观奇特的奇妙之盾. 也不知是用什么制成，但能够分散敌人的注意力从而保护你。</description>
+    <description>一面外观奇特的奇妙之盾. 也不知是用什么制成, 但能够分散敌人的注意力从而保护你. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="37"/>
@@ -248,7 +248,7 @@
   
   <item name="黑曜石盾">
     <type class="shield" subclass="mithril_shield" tileid="-1"/>
-    <description>一面黑曜石盾, 它可能提供最大的防护。</description>
+    <description>一面黑曜石盾, 它可能提供最大的防护. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="45"/>
@@ -270,7 +270,7 @@
   
   <item name="钢盾">
     <type class="shield" subclass="plate_shield" tileid="-1"/>
-    <description>一面钢盾, 性能良好，值点小钱。</description>
+    <description>一面钢盾, 性能良好, 值点小钱. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="14"/>
@@ -289,7 +289,7 @@
   
   <item name="红盾">
     <type class="shield" subclass="red_shield" tileid="-1"/>
-    <description>一面红盾, 带有迷人的深红色。</description>
+    <description>一面红盾, 带有迷人的深红色. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="27"/>
@@ -309,7 +309,7 @@
   
   <item name="影盾">
     <type class="shield" subclass="shadow_shield" tileid="-1"/>
-    <description>一面影盾, 不反光,反而吸收光。</description>
+    <description>一面影盾, 不反光,反而吸收光. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="36"/>
@@ -331,7 +331,7 @@
  
   <item name="骷髅盾">
     <type class="shield" subclass="skull_shield" tileid="-1"/>
-    <description>骷髅盾上的骷髅面孔怒视着你。</description>
+    <description>骷髅盾上的骷髅面孔怒视着你. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="22"/>
@@ -351,7 +351,7 @@
   
   <item name="镶嵌盾">
     <type class="shield" subclass="studded_shield" tileid="-1"/>
-    <description>一面镶嵌盾, 表面有些凹痕但是足够坚固。</description>
+    <description>一面镶嵌盾, 表面有些凹痕但是足够坚固. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="12"/>

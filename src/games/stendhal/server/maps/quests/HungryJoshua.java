@@ -87,7 +87,7 @@ public class HungryJoshua extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我找到塞门镇铁匠铺的 Xoderos， 如果他有任务就交给我.");
+		res.add("我找到塞门镇铁匠铺的 Xoderos, 如果他有任务就交给我.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
 			res.add("我不想帮助 Xoderos 和 Joshua.");

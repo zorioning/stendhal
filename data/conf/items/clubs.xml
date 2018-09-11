@@ -26,7 +26,7 @@
   
   <item name="木棍">
     <type class="club" subclass="club" tileid="-1"/>
-    <description>这是一个木棍，拿着它总比空手强.</description>
+    <description>这是一个木棍, 拿着它总比空手强.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="6"/>
@@ -47,7 +47,7 @@
 
   <item name="类牙棍">
     <type class="club" subclass="club_of_thorns" tileid="-1"/>
-    <description>这是一根尖牙棍，上面沾满了受刑人的鲜血，它非常强大但是使用它会消耗你的生命值</description>
+    <description>这是一根尖牙棍, 上面沾满了受刑人的鲜血, 它非常强大但是使用它会消耗你的生命值</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="48"/>
@@ -68,7 +68,7 @@
 
   <item name="加强狼牙棒">
     <type class="club" subclass="enhanced_mace" tileid="-1"/>
-    <description>这是一个狼牙棒，它沉重的末端导致它很难掌控。</description>
+    <description>这是一个狼牙棒, 它沉重的末端导致它很难掌控. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="19"/>
@@ -88,7 +88,7 @@
   
   <item name="连枷">
     <type class="club" subclass="flail" tileid="-1"/>
-    <description>这是一个连枷，转着圈摆动它会很累但却是个很有效的武器。</description>
+    <description>这是一个连枷, 转着圈摆动它会很累但却是个很有效的武器. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="19"/>
@@ -108,7 +108,7 @@
   
   <item name="黄金战锤">
     <type class="club" subclass="golden_hammer" tileid="-1"/>
-    <description>黄金战锤，这个黄金打造的武器,某些人觉得很超值，攻击速率很慢。</description>
+    <description>黄金战锤, 这个黄金打造的武器,某些人觉得很超值, 攻击速率很慢. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="36"/>
@@ -129,7 +129,7 @@
 
   <item name="黄金狼牙棒">
     <type class="club" subclass="golden_mace" tileid="-1"/>
-    <description>一根华丽的黄金狼牙棒,  虽然看着像装饰品,但它的破坏力很强.</description>
+    <description>一根华丽的黄金狼牙棒, 虽然看着像装饰品,但它的破坏力很强.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="22"/>

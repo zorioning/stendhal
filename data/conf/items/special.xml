@@ -3,7 +3,7 @@
 	xsi:schemaLocation="stendhal ../items.xsd ">
   <item name="幸运石">
     <type class="special" subclass="lucky_charm" tileid="-1"/>
-    <description>一枚幸运宝石，有些人认为它会带来好运，有些人觉得纯属迷信。</description>
+    <description>一枚幸运宝石, 有些人认为它会带来好运, 有些人觉得纯属迷信. </description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -26,7 +26,7 @@
 
    <item name="黑曜石胸针">
     <type class="special" subclass="mithril_clasp" tileid="-1"/>
-    <description>一枚黑曜石胸针，可以用它系紧斗篷。</description>
+    <description>一枚黑曜石胸针, 可以用它系紧斗篷. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -65,7 +65,7 @@
 
   <item name="附魔蛋壳">
     <type class="special" subclass="eggshells" tileid="-1"/>
-    <description>一些传说之卵的蛋壳碎片，它们具有魔力。</description>
+    <description>一些传说之卵的蛋壳碎片, 它们具有魔力. </description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

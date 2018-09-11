@@ -117,7 +117,7 @@ public final class KarmaIndicator extends StatusDisplayBar implements PropertyCh
 		} else if (karma > -499) {
 			return "你的运行很差";
 		}
-		return "倒霉鬼附身，要小心了";
+		return "倒霉鬼附身, 要小心了";
 	}
 
 	@Override

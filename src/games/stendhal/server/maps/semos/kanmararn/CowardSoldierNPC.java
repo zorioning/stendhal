@@ -51,10 +51,10 @@ public class CowardSoldierNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Ssshh! 小声点，否则你会引起更多矮人 #dwarves 的注意.");
+				addGreeting("Ssshh! 小声点, 否则你会引起更多矮人 #dwarves 的注意.");
 				addJob("我是军队的一名士兵.");
-				addGoodbye("要小心周围的矮人，再见!");
-				addHelp("我需要自救，我与队友分散了 #group ，现在只剩我一个人.");
+				addGoodbye("要小心周围的矮人, 再见!");
+				addHelp("我需要自救, 我与队友分散了 #group , 现在只剩我一个人.");
 				addReply(Arrays.asList("dwarf", "dwarves"),
 					"到处都有矮人！他们的王国 #kingdom 一定在附近.");
 				addReply(Arrays.asList("kingdom", "Kanmararn"),
@@ -62,14 +62,14 @@ public class CowardSoldierNPC implements ZoneConfigurator {
 				addReply("group",
 					"一般会派一组5个人到这个地区探寻财宝 #treasure.");
 				addReply("treasure",
-					"传闻在这个地牢下某处 #somewhere ，有一个大宝藏。.");
-				addReply("somewhere", "如果你能帮 #help 我，我可以给你一点线索.");
+					"传闻在这个地牢下某处 #somewhere , 有一个大宝藏. .");
+				addReply("somewhere", "如果你能帮 #help 我, 我可以给你一点线索.");
 			}
 			// remaining behaviour is defined in maps.quests.KanmararnSoldiers.
 		};
 
 		npc.setEntityClass("youngsoldiernpc");
-		npc.setDescription("你遇见了 Henry. 他是 Smemos 镇的一个失散的士兵，现在藏在黑暗的洞窟中...");
+		npc.setDescription("你遇见了 Henry. 他是 Smemos 镇的一个失散的士兵, 现在藏在黑暗的洞窟中...");
 		npc.setPosition(57, 113);
 		npc.setBaseHP(100);
 		npc.initHP(20);

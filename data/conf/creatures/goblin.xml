@@ -6,7 +6,7 @@
   
   <creature name="小妖精">
     <type class="goblin" subclass="goblin" tileid="goblin.png:0"/>
-    <description>这是一个妖精，它是一个邪恶的恶作剧的生物。</description>
+    <description>这是一个妖精, 它是一个邪恶的恶作剧的生物. </description>
     <attributes>
       <atk value="88"/>
       <def value="11"/>
@@ -33,7 +33,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="嗯!美味的肉。" />
+        <noise state="idle follow fight" value="嗯!美味的肉. " />
         <sound value="saur-3" />
         <sound value="saur-4" />
       </says>
@@ -45,7 +45,7 @@
   
   <creature name="老妖精">
     <type class="goblin" subclass="veteran_goblin" tileid="goblin.png:2"/>
-    <description>这是一个老妖精，一个老武士……</description>
+    <description>这是一个老妖精, 一个老武士……</description>
     <attributes>
       <atk value="106"/>
       <def value="14"/>
@@ -84,7 +84,7 @@
   
   <creature name="士兵妖精">
     <type class="goblin" subclass="soldier_goblin" tileid="goblin.png:1"/>
-    <description>这是一个小妖精，一个年轻的战士。</description>
+    <description>这是一个小妖精, 一个年轻的战士. </description>
     <attributes>
       <atk value="127"/>
       <def value="39"/>

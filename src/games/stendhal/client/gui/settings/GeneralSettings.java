@@ -70,7 +70,7 @@ class GeneralSettings {
 
 		// raising corpses
 		JCheckBox autoRaiseToggle = SettingsComponentFactory.createSettingsToggle(GAMESCREEN_AUTORAISECORPSE, "true",
-				"自动搜尸", "当尸体里发现物品时，自动打开物品清单");
+				"自动搜尸", "当尸体里发现物品时, 自动打开物品清单");
 		page.add(autoRaiseToggle);
 
 		// show healing messages
@@ -91,7 +91,7 @@ class GeneralSettings {
 
 		// Continuous movement
 		final JCheckBox moveContinuousToggle = SettingsComponentFactory.createSettingsToggle(MOVE_CONTINUOUS_PROPERTY, "false",
-										"保持行走", "当转换地图或传送时，行走状态保持不变");
+										"保持行走", "当转换地图或传送时, 行走状态保持不变");
 		moveContinuousToggle.addItemListener(new ItemListener() {
 			@Override
 			public void itemStateChanged(ItemEvent e) {

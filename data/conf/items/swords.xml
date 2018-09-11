@@ -4,7 +4,7 @@
 	
   <item name="刺客匕首">
     <type class="sword" subclass="assassin_dagger" tileid="-1"/>
-    <description>一把刺客匕首, 需要使用时方便拿出。</description>
+    <description>一把刺客匕首, 需要使用时方便拿出. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="6"/>
@@ -25,7 +25,7 @@
 
   <item name="突刺剑">
     <type class="sword" subclass="biting_sword" tileid="-1"/>
-    <description>这把突刺剑会使人丧命, 可以很好的辅助你。</description>
+    <description>这把突刺剑会使人丧命, 可以很好的辅助你. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="25"/>
@@ -68,7 +68,7 @@
 
   <item name="阔剑">
     <type class="sword" subclass="broadsword" tileid="-1"/>
-    <description>一把威武的阔剑, 只要亮剑即是敌人的死期。</description>
+    <description>一把威武的阔剑, 只要亮剑即是敌人的死期. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="34"/>
@@ -110,7 +110,7 @@
 
   <item name="混沌匕首">
     <type class="sword" subclass="chaos_dagger" tileid="-1"/>
-    <description>一把混沌匕首, 重量轻但锋利。可以在伤及敌人的同时吸取生命。</description>
+    <description>一把混沌匕首, 重量轻但锋利. 可以在伤及敌人的同时吸取生命. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
      <atk value="7"/>
@@ -132,7 +132,7 @@
 
   <item name="混沌之剑">
     <type class="sword" subclass="chaos_sword" tileid="-1"/>
-    <description>一把混沌之剑, 可以重创对手并吸取生命。</description>
+    <description>一把混沌之剑, 可以重创对手并吸取生命. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="32"/>
@@ -371,7 +371,7 @@
 
   <item name="巨剑">
     <type class="sword" subclass="great_sword" tileid="-1"/>
-    <description>这把罕见的有着优良工的巨剑非常沉重,  挥砍时速度很慢</description>
+    <description>这把罕见的有着优良工的巨剑非常沉重, 挥砍时速度很慢</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="60"/>

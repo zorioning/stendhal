@@ -121,13 +121,13 @@ public class ElvishArmor extends AbstractQuest implements
 
 	@Override
 	public String welcomeBeforeStartingQuest() {
-		return "Greetings, traveller. 我明白你从远处到此。"
-			+ "我对遇到我们家族的人 感兴趣。I am interested in anyone who has encountered our kin, the green elves of Nalwor. They guard their #secrets closely.";
+		return "Greetings, traveller. 我明白你从远处到此. "
+			+ "我对遇到我们家族的人 感兴趣. I am interested in anyone who has encountered our kin, the green elves of Nalwor. They guard their #secrets closely.";
 	}
 
 	@Override
 	public String respondToQuest() {
-		return "他们不分享如何建立绿色盔甲、盾和与此类似装备的相关知识，你应该称他们 elvish 装备. "
+		return "他们不分享如何建立绿色盔甲、盾和与此类似装备的相关知识, 你应该称他们 elvish 装备. "
 			+ "我想I wonder if a traveller like you could bring me any?";
 	}
 

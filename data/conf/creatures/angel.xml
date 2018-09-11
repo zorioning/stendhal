@@ -259,7 +259,7 @@
     </abilities>
     <ai>
       <says>
-        <noise state="idle follow fight" value="别烦我，再晚要你好看"/>
+        <noise state="idle follow fight" value="别烦我, 再晚要你好看"/>
         <noise state="idle follow fight" value="你的命运不应如此"/>
         <noise state="idle follow fight" value="天地之广, 然无汝归处"/>
       </says>

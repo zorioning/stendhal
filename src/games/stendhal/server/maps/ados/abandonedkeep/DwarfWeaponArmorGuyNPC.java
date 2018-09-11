@@ -68,7 +68,7 @@ public class DwarfWeaponArmorGuyNPC implements ZoneConfigurator {
 				addHelp("可以看看本店的盔甲和武器. #offer ");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellbetterstuff2")), false);
 				addOffer("黑板上可以看看我卖的好东西 #offer.");
-				addQuest("谢谢你的好意。但我很好.");
+				addQuest("谢谢你的好意. 但我很好.");
 				addGoodbye();
 			}
 		};

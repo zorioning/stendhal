@@ -48,7 +48,7 @@ public class Starter {
 						null,
 						"你的jre版本为"
 						+ version
-						+ ". 本游戏需要 Java 8 (也叫jre1.8.0) 运行环境，可以在 https://java.com 下载");
+						+ ". 本游戏需要 Java 8 (也叫jre1.8.0) 运行环境, 可以在 https://java.com 下载");
 			}
 		} catch (final RuntimeException e) {
 			// ignore

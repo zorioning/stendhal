@@ -72,9 +72,9 @@ public class RingOfLife extends Item {
 	public String describe() {
 		String text;
 		if (isBroken()) {
-			text = "你看到 §'翡翠戒指', 看起来是生命戒指. 但上面宝石不再发光，已失去能量.";
+			text = "你看到 §'翡翠戒指', 看起来是生命戒指. 但上面宝石不再发光, 已失去能量.";
 		} else {
-			text = "你看到 §'翡翠戒指', 看起来是生命戒指. 戴着它，能提高生存机率。";
+			text = "你看到 §'翡翠戒指', 看起来是生命戒指. 戴着它, 能提高生存机率. ";
 		}
 
 		if (isBound()) {

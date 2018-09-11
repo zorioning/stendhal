@@ -83,7 +83,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 	 * plural.
 	 */
 	private static final String[] LINE_STARTS = new String[] { "Oh 是的,我知道 %s!",
-		"当我在你这个年纪，我杀了很多 %S!",
+		"当我在你这个年纪, 我杀了很多 %S!",
 		"这些 %S 是我喜欢的一种!",
 		"让我想想...%s...我想起来了!",
 		"上次我差点被 %a 杀死!",
@@ -123,9 +123,9 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 		dangerLiterals.put(1.7,
 		"%S 对你有危险, 记得及时补血!");
 		dangerLiterals.put(1.2,
-		"它对你有点危险，注意血量!");
+		"它对你有点危险, 注意血量!");
 		dangerLiterals.put(0.8,
-		"要杀死它，很有挑战性!");
+		"要杀死它, 很有挑战性!");
 		dangerLiterals.put(0.5, "杀死 %s 对你来说很平常.");
 		dangerLiterals.put(0.3, "杀死 %s 应该很容易.");
 		dangerLiterals.put(0.0, "%s 不对你构成危协.");
@@ -136,7 +136,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 	 */
 	private static final String[] RESPAWN_TEXTS = new String[] {
 		"如果你在正确的地点等待 %1, 应该可能见到一只.",
-		"可能只有 %1 的机会能发现一只.", "猎杀它们能达到 %1 ，对你来说就是个好机会." };
+		"可能只有 %1 的机会能发现一只.", "猎杀它们能达到 %1 , 对你来说就是个好机会." };
 
 	/**
 	 * %1 = list of items dropped.

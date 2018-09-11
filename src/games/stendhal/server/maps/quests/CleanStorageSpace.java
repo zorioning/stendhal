@@ -119,7 +119,7 @@ public class CleanStorageSpace extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Oh, 谢谢你! 我在上面等着, 如果有老鼠想逃跑，我会拿扫把打死它!",
+				"Oh, 谢谢你! 我在上面等着, 如果有老鼠想逃跑, 我会拿扫把打死它!",
 				new MultipleActions(start));
 
 		npc.add(ConversationStates.QUEST_OFFERED, ConversationPhrases.NO_MESSAGES, null,
@@ -132,7 +132,7 @@ public class CleanStorageSpace extends AbstractQuest {
 				Arrays.asList("地下室", "储藏室"),
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"是的, 就是楼梯下面，都是一群群恶心的老鼠, 还有蛇！你要小心点...可以帮帮我吗?",
+				"是的, 就是楼梯下面, 都是一群群恶心的老鼠, 还有蛇！你要小心点...可以帮帮我吗?",
 				null);
 	}
 

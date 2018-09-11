@@ -2157,7 +2157,7 @@ System.out.printf("  drop: %2d %2d\n", attackerRoll, defenderRoll);
 		} else {
 			item.setPosition(getX(), getY());
 			getZone().add(item);
-			this.sendPrivateText("因为背包已满，你把刚捡的物品丢在了地上.");
+			this.sendPrivateText("因为背包已满, 你把刚捡的物品丢在了地上.");
 			return false;
 		}
 	}

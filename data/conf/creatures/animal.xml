@@ -83,7 +83,7 @@
   
   <creature name="蜘蛛">
     <type class="animal" subclass="spider" tileid="animal.png:18"/>
-    <description>一只蜘蛛，它织了一张大网正等着你</description>
+    <description>一只蜘蛛, 它织了一张大网正等着你</description>
     <attributes>
       <atk value="213"/>
       <def value="56"/>
@@ -108,7 +108,7 @@
   
   <creature name="毒蜘蛛">
     <type class="animal" subclass="poisonous_spider" tileid="animal.png:17"/>
-    <description>一只毒蜘蛛，它毒性很强，一量中毒有可能要了你的小命</description>
+    <description>一只毒蜘蛛, 它毒性很强, 一量中毒有可能要了你的小命</description>
     <attributes>
       <atk value="244"/>
       <def value="61"/>
@@ -138,7 +138,7 @@
   
   <creature name="巨型蜘蛛">
     <type class="huge_animal" subclass="giant_spider" tileid="huge_animal.png:5"/>
-    <description>一只巨型蜘蛛，长着八只大长腿，非常危险。</description>
+    <description>一只巨型蜘蛛, 长着八只大长腿, 非常危险. </description>
     <attributes>
       <atk value="709"/>
       <def value="94"/>
@@ -174,7 +174,7 @@
   
   <creature name="螃蟹">
     <type class="animal" subclass="crab" tileid="animal.png:8"/>
-    <description>一只生活在海滩的螃蟹，小心它的螯</description>
+    <description>一只生活在海滩的螃蟹, 小心它的螯</description>
     <attributes>
       <atk value="8"/>
       <def value="4"/>
@@ -242,7 +242,7 @@
   
   <creature name="鸡">
     <type class="animal" subclass="chicken" tileid="animal.png:25"/>
-    <description>一只鸡，不好看吗？</description>
+    <description>一只鸡, 不好看吗？</description>
     <attributes>
       <atk value="32"/>
       <def value="7"/>
@@ -305,7 +305,7 @@
   
   <creature name="老母鸡">
     <type class="farm_animal" subclass="hen" tileid="farm_animal.png:6"/>
-    <description>一只母鸡,只要你不动小鸡，它不会伤害你</description>
+    <description>一只母鸡,只要你不动小鸡, 它不会伤害你</description>
     <attributes>
       <atk value="29"/>
       <def value="6"/>
@@ -336,7 +336,7 @@
   
   <creature name="企鹅">
     <type class="animal" subclass="penguin" tileid="animal.png:16"/>
-    <description>一只企鹅，虽然聪明但行动迟缓。</description>
+    <description>一只企鹅, 虽然聪明但行动迟缓. </description>
     <attributes>
       <atk value="36"/>
       <def value="7"/>
@@ -369,7 +369,7 @@
   
   <creature name="鸽子">
     <type class="animal" subclass="pigeon" tileid="animal.png:23"/>
-    <description>一只鸽子，它喜欢吃种子</description>
+    <description>一只鸽子, 它喜欢吃种子</description>
     <attributes>
       <atk value="36"/>
       <def value="7"/>
@@ -404,7 +404,7 @@
   
   <creature name="杀人蜂">
     <type class="animal" subclass="killer_bee" tileid="animal.png:27"/>
-    <description>一只杀人蜂，惹了它会被叮</description>
+    <description>一只杀人蜂, 惹了它会被叮</description>
     <attributes>
       <atk value="170"/>
       <def value="25"/>
@@ -443,7 +443,7 @@
   
   <creature name="鹿" condition="!stendhal.christmas">
     <type class="animal" subclass="deer" tileid="animal.png:9"/>
-    <description>一只不设防的鹿，不用害怕它们。</description>
+    <description>一只不设防的鹿, 不用害怕它们. </description>
     <attributes>
       <atk value="8"/>
       <def value="3"/>
@@ -472,7 +472,7 @@
   
   <creature name="驯鹿" condition="stendhal.christmas">
     <type class="animal" subclass="reindeer" tileid="animal.png:9"/>
-    <description>一匹自由自在的鹿，它是圣诞老人的好帮手。</description>
+    <description>一匹自由自在的鹿, 它是圣诞老人的好帮手. </description>
     <attributes>
       <atk value="8"/>
       <def value="3"/>
@@ -532,7 +532,7 @@
   
   <creature name="老鼠">
     <type class="small_animal" subclass="rat" tileid="small_animal.png:1"/>
-    <description>一只老鼠，它看起来饿极了</description>
+    <description>一只老鼠, 它看起来饿极了</description>
     <attributes>
       <atk value="8"/>
       <def value="3"/>
@@ -566,7 +566,7 @@
   
   <creature name="蝙蝠">
     <type class="animal" subclass="bat" tileid="animal.png:0"/>
-    <description>一只蝙蝠,它正窥视你的鲜血，小心点。</description>
+    <description>一只蝙蝠,它正窥视你的鲜血, 小心点. </description>
     <attributes>
       <atk value="36"/>
       <def value="7"/>
@@ -597,7 +597,7 @@
   
   <creature name="洞穴老鼠">
     <type class="small_animal" subclass="caverat" tileid="small_animal.png:0"/>
-    <description>一只洞穴老鼠，浑身脏臭喜欢呆在地牢中。</description>
+    <description>一只洞穴老鼠, 浑身脏臭喜欢呆在地牢中. </description>
     <attributes>
       <atk value="34"/>
       <def value="6"/>
@@ -717,7 +717,7 @@
   
   <creature name="大灰狼">
     <type class="animal" subclass="wolf" tileid="animal.png:26"/>
-	<description>一只大灰狼. 还是头饿狼，相当危险！</description>
+	<description>一只大灰狼. 还是头饿狼, 相当危险！</description>
     <attributes>
       <atk value="46"/>
       <def value="9"/>
@@ -753,7 +753,7 @@
   
   <creature name="野猪">
     <type class="animal" subclass="boar" tileid="animal.png:4"/>
-    <description>一只野猪，相当的野</description>
+    <description>一只野猪, 相当的野</description>
     <attributes>
       <atk value="53"/>
       <def value="7"/>
@@ -784,7 +784,7 @@
   
   <creature name="公牛">
     <type class="farm_animal" subclass="bull" tileid="farm_animal.png:1"/>
-    <description>一头公年，快跑！</description>
+    <description>一头公年, 快跑！</description>
     <attributes>
       <atk value="47"/>
       <def value="9"/>
@@ -814,7 +814,7 @@
   
   <creature name="母牛">
     <type class="farm_animal" subclass="cow" tileid="farm_animal.png:3"/>
-    <description>一头母牛，尝尝它的牛奶</description>
+    <description>一头母牛, 尝尝它的牛奶</description>
     <attributes>
       <atk value="51"/>
       <def value="9"/>
@@ -844,7 +844,7 @@
   
   <creature name="狐狸">
     <type class="animal" subclass="fox" tileid="animal.png:24"/>
-	<description>一只狐狸，很少见，快灭绝了</description>
+	<description>一只狐狸, 很少见, 快灭绝了</description>
     <attributes>
       <atk value="55"/>
       <def value="8"/>
@@ -870,7 +870,7 @@
   
   <creature name="山羊">
     <type class="farm_animal" subclass="goat" tileid="farm_animal.png:4"/>
-    <description>一只生活在山林中的山羊。</description>
+    <description>一只生活在山林中的山羊. </description>
     <attributes>
       <atk value="52"/>
       <def value="9"/>
@@ -900,7 +900,7 @@
   
   <creature name="马">
     <type class="farm_animal" subclass="horse" tileid="farm_animal.png:7"/>
-    <description>一匹马，不要乱拍，它可能乱跑！</description>
+    <description>一匹马, 不要乱拍, 它可能乱跑！</description>
     <attributes>
       <atk value="48"/>
       <def value="10"/>
@@ -931,7 +931,7 @@
   
   <creature name="猴子">
     <type class="animal" subclass="monkey" tileid="animal.png:15"/>
-    <description>一只猴子，要给他根香蕉吗？?</description>
+    <description>一只猴子, 要给他根香蕉吗？?</description>
     <attributes>
       <atk value="55"/>
       <def value="9"/>
@@ -965,7 +965,7 @@
   
   <creature name="大熊猫">
     <type class="animal" subclass="pandabear" tileid="animal.png:22"/>
-    <description>一只大熊猫，这是国宝，不要伤害它！</description>
+    <description>一只大熊猫, 这是国宝, 不要伤害它！</description>
     <attributes>
       <atk value="48"/>
       <def value="7"/>
@@ -995,7 +995,7 @@
   
   <creature name="公羊">
     <type class="farm_animal" subclass="ram" tileid="farm_animal.png:10"/>
-    <description>一只公羊，也许你可以剪羊毛？?</description>
+    <description>一只公羊, 也许你可以剪羊毛？?</description>
     <attributes>
       <atk value="52"/>
       <def value="7"/>
@@ -1025,7 +1025,7 @@
   
   <creature name="白马">
     <type class="farm_animal" subclass="white_horse" tileid="farm_animal.png:11"/>
-    <description>一匹白马，它们喜欢和棕马呆在一起。</description>
+    <description>一匹白马, 它们喜欢和棕马呆在一起. </description>
     <attributes>
       <atk value="50"/>
       <def value="9"/>
@@ -1090,7 +1090,7 @@
   
   <creature name="熊">
     <type class="animal" subclass="bear" tileid="animal.png:1"/>
-    <description>这是了一只熊，幸运的是它睡着了。</description>
+    <description>这是了一只熊, 幸运的是它睡着了. </description>
     <attributes>
       <atk value="80"/>
       <def value="14"/>
@@ -1155,7 +1155,7 @@
   
   <creature name="大象">
     <type class="animal" subclass="elephant" tileid="animal.png:11"/>
-    <description>这是了一只大象，这只巨型生物大腿很粗壮。?</description>
+    <description>这是了一只大象, 这只巨型生物大腿很粗壮. ?</description>
     <attributes>
       <atk value="73"/>
       <def value="6"/>
@@ -1189,7 +1189,7 @@
   
   <creature name="老虎">
     <type class="animal" subclass="tiger" tileid="animal.png:19"/>
-    <description>这是一只老虎，它喜欢吃鹿和人类。</description>
+    <description>这是一只老虎, 它喜欢吃鹿和人类. </description>
     <attributes>
       <atk value="88"/>
       <def value="15"/>
@@ -1221,7 +1221,7 @@
   
   <creature name="毒液鼠">
     <type class="small_animal" subclass="venomrat" tileid="small_animal.png:3"/>
-    <description>Y这是一只毒液鼠，它有剧毒。</description>
+    <description>Y这是一只毒液鼠, 它有剧毒. </description>
     <attributes>
       <atk value="89"/>
       <def value="14"/>
@@ -1255,7 +1255,7 @@
   
   <creature name="食人蝙蝠">
     <type class="animal" subclass="killer_bat" tileid="animal.png:13"/>
-    <description>这是一只食人蝙蝠，它会吸干你的血！</description>
+    <description>这是一只食人蝙蝠, 它会吸干你的血！</description>
     <attributes>
       <atk value="104"/>
       <def value="19"/>
@@ -1287,7 +1287,7 @@
   
   <creature name="黑熊">
     <type class="animal" subclass="black_bear" tileid="animal.png:2"/>
-    <description>这是一只强壮的黑熊，他正在冬眠。</description>
+    <description>这是一只强壮的黑熊, 他正在冬眠. </description>
     <attributes>
       <atk value="119"/>
       <def value="16"/>
@@ -1320,7 +1320,7 @@
   
   <creature name="利齿鼠">
     <type class="small_animal" subclass="razorrat" tileid="small_animal.png:2"/>
-    <description>这是一只利齿鼠，它发出的噪音会让人发疯！</description>
+    <description>这是一只利齿鼠, 它发出的噪音会让人发疯！</description>
     <attributes>
       <atk value="119"/>
       <def value="28"/>
@@ -1351,7 +1351,7 @@
   
   <creature name="巨型鼠">
     <type class="giant_animal" subclass="giantrat" tileid="giant_animal.png:1"/>
-    <description>这是一只巨型鼠。看起来它从一个失败的实验中活了下来。</description>
+    <description>这是一只巨型鼠. 看起来它从一个失败的实验中活了下来. </description>
     <attributes>
       <atk value="173"/>
       <def value="30"/>
@@ -1389,7 +1389,7 @@
   
   <creature name="独角兽">
     <type class="mythical_being" subclass="unicorn" tileid="mythical_being.png:1"/>
-    <description>这是一只独角兽，以前只出现在神话中。</description>
+    <description>这是一只独角兽, 以前只出现在神话中. </description>
     <attributes>
       <atk value="308"/>
       <def value="108"/>
@@ -1419,7 +1419,7 @@
   
   <creature name="半人马">
     <type class="mythical_being" subclass="centaur" tileid="mythical_being.png:0"/>
-    <description> 这是一只半人马，上半身是人，下半身是马。他看起来破坏力很大，但似乎对你没有恶意。</description>
+    <description> 这是一只半人马, 上半身是人, 下半身是马. 他看起来破坏力很大, 但似乎对你没有恶意. </description>
     <attributes>
       <atk value="449"/>
       <def value="76"/>
@@ -1451,7 +1451,7 @@
   
   <creature name="飞马">
     <type class="mythical_being" subclass="pegasus" tileid="mythical_being.png:2"/>
-    <description>这是一只天马，长了双翅的马。他的名字意味着迅雷不及掩耳的速度。</description>
+    <description>这是一只天马, 长了双翅的马. 他的名字意味着迅雷不及掩耳的速度. </description>
     <attributes>
       <atk value="1590"/>
       <def value="214"/>
@@ -1485,7 +1485,7 @@
   
   <creature name="凯门鳄">
     <type class="animal" subclass="caiman" tileid="animal.png:6"/>
-    <description>这是一只凯门鳄，它藏在水里。</description>
+    <description>这是一只凯门鳄, 它藏在水里. </description>
     <attributes>
       <atk value="49"/>
       <def value="9"/>
@@ -1519,7 +1519,7 @@
   
   <creature name="草蛇">
     <type class="farm_animal" subclass="grass_snake" tileid="farm_animal.png:5"/>
-    <description>这是一只危险的草蛇。</description>
+    <description>这是一只危险的草蛇. </description>
     <attributes>
       <atk value="68"/>
       <def value="15"/>
@@ -1551,7 +1551,7 @@
   
   <creature name="蛇">
     <type class="animal" subclass="snake" tileid="animal.png:7"/>
-    <description>这是一只蛇，来自森林，有毒。</description>
+    <description>这是一只蛇, 来自森林, 有毒. </description>
     <attributes>
       <atk value="67"/>
       <def value="13"/>
@@ -1583,7 +1583,7 @@
   
   <creature name="鳄鱼">
     <type class="giant_animal" subclass="crocodile" tileid="giant_animal.png:0"/>
-    <description>这是一只鳄鱼，它出现在河水的深处。</description>
+    <description>这是一只鳄鱼, 它出现在河水的深处. </description>
     <attributes>
       <atk value="172"/>
       <def value="30"/>
@@ -1647,7 +1647,7 @@
   
   <creature name="眼镜蛇王">
     <type class="huge_animal" subclass="king_cobra" tileid="huge_animal.png:9"/>
-    <description>这是一只眼镜蛇王，他的剧毒让人不寒而栗。</description>
+    <description>这是一只眼镜蛇王, 他的剧毒让人不寒而栗. </description>
     <attributes>
       <atk value="750"/>
       <def value="102"/>

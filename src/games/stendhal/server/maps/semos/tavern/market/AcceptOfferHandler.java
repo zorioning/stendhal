@@ -50,7 +50,7 @@ public class AcceptOfferHandler extends OfferHandler {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (sentence.hasError()) {
-				npc.say("抱歉，我没听明白. "
+				npc.say("抱歉, 我没听明白. "
 						+ sentence.getErrorString());
 			} else {
 				handleSentence(sentence, npc);
@@ -76,9 +76,9 @@ public class AcceptOfferHandler extends OfferHandler {
 						return;
 					}
 				}
-				npc.say("抱歉，请在我给出的价目表中选择一个序号。");
+				npc.say("抱歉, 请在我给出的价目表中选择一个序号. ");
 			} catch (NumberFormatException e) {
-				npc.say("抱歉，请说 #买 #数量  或者  #accept #number");
+				npc.say("抱歉, 请说 #买 #数量  或者  #accept #number");
 			}
 		}
 	}
@@ -106,11 +106,11 @@ public class AcceptOfferHandler extends OfferHandler {
 				// Trade failed for some reason. Check why, and inform the player
 				if (!m.contains(offer)) {
 					int quantity = getQuantity(offer.getItem());
-					npc.say("抱歉，但 " + quantity + " 个 "
+					npc.say("抱歉, 但 " + quantity + " 个 "
 							+ offer.getItem().getName()
 							+ " 已下架.");
 				} else {
-					npc.say("抱歉，你的钱不够!");
+					npc.say("抱歉, 你的钱不够!");
 				}
 			}
 		}

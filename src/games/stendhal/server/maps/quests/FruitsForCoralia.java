@@ -133,7 +133,7 @@ public class FruitsForCoralia extends AbstractQuest {
 
 		if ("rejected".equals(questState)) {
 			// quest rejected
-			res.add("我决定不帮她找，我还有别的事要做.");
+			res.add("我决定不帮她找, 我还有别的事要做.");
 		} else if (!player.isQuestCompleted(QUEST_SLOT)) {
 			// not yet finished
 			final ItemCollection missingItems = new ItemCollection();
@@ -141,10 +141,10 @@ public class FruitsForCoralia extends AbstractQuest {
 			res.add("我仍需要把 " + missingItems.toStringList() + " 带给 Coralia.");
 		} else if (isRepeatable(player)) {
 			// may be repeated now
-			res.add("上次为 Coralia 的帽子找到的水果已经过去一段时间，我想知道水果是否已经干枯了。");
+			res.add("上次为 Coralia 的帽子找到的水果已经过去一段时间, 我想知道水果是否已经干枯了. ");
         } else {
         	// not (currently) repeatable
-        	res.add("我把水果带给了 Coralia ，她把水果恢复到刚长成的样子。");
+        	res.add("我把水果带给了 Coralia , 她把水果恢复到刚长成的样子. ");
 		}
 		return res;
 	}
@@ -179,7 +179,7 @@ public class FruitsForCoralia extends AbstractQuest {
             	new QuestCompletedCondition(QUEST_SLOT),
             	new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
             ConversationStates.QUEST_OFFERED,
-            "我对此歉意，你给我的帽子找的水果不新鲜了, " +
+            "我对此歉意, 你给我的帽子找的水果不新鲜了, " +
             "你能再次为我找一些吗?",
             null);
 
@@ -190,7 +190,7 @@ public class FruitsForCoralia extends AbstractQuest {
         		new QuestCompletedCondition(QUEST_SLOT),
         		new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
         	ConversationStates.ATTENDING,
-        	"我的帽子看起来不新鲜？我不再需要新鲜水果了。但还是谢谢你的关心!",
+        	"我的帽子看起来不新鲜？我不再需要新鲜水果了. 但还是谢谢你的关心!",
         	null);
 
     	// end of quest introductions
@@ -203,7 +203,7 @@ public class FruitsForCoralia extends AbstractQuest {
         		new QuestNotStartedCondition(QUEST_SLOT),
         		new QuestNotInStateCondition(QUEST_SLOT, "rejected")),
         	ConversationStates.ATTENDING,
-        	"有点歉意，你找的这些水果都干枯了，最好还是新鲜的 #水果...",
+        	"有点歉意, 你找的这些水果都干枯了, 最好还是新鲜的 #水果...",
         	null);
 
     	// accept quest response
@@ -214,14 +214,14 @@ public class FruitsForCoralia extends AbstractQuest {
     		null,
 			new MultipleActions(
 				new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS),
-				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "太好了，我喜欢这些新鲜水果: [items].")));
+				new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "太好了, 我喜欢这些新鲜水果: [items].")));
 
     	// reject quest response
     	npc.add(ConversationStates.QUEST_OFFERED,
         	ConversationPhrases.NO_MESSAGES,
         	null,
         	ConversationStates.ATTENDING,
-        	"这些外来的老鼠不能管好自已，你明白的...",
+        	"这些外来的老鼠不能管好自已, 你明白的...",
         	new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
     	// meet again during quest
@@ -231,7 +231,7 @@ public class FruitsForCoralia extends AbstractQuest {
 				new QuestActiveCondition(QUEST_SLOT),
 				new GreetingMatchesNameCondition(npc.getName())),
 			ConversationStates.ATTENDING,
-			"欢迎回来，如果你为我的 #帽子 找来新鲜水果，我会乐意接受。!",
+			"欢迎回来, 如果你为我的 #帽子 找来新鲜水果, 我会乐意接受. !",
 			null);
 
 
@@ -248,7 +248,7 @@ public class FruitsForCoralia extends AbstractQuest {
             "香蕉",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "来自小岛的格外异域风情香蕉。一直往西走，穿过。。还是说香蕉的事吧，它肉多且够新鲜.",
+            "来自小岛的格外异域风情香蕉. 一直往西走, 穿过. . 还是说香蕉的事吧, 它肉多且够新鲜.",
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
@@ -262,28 +262,28 @@ public class FruitsForCoralia extends AbstractQuest {
             "grapes",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "塞门镇北面的山上有一个漂亮的小教堂，上面爬满了葡萄藤!  还听说 Or'ril山上有些旧房子.",
+            "塞门镇北面的山上有一个漂亮的小教堂, 上面爬满了葡萄藤!  还听说 Or'ril山上有些旧房子.",
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
         	"梨子",
         	new QuestActiveCondition(QUEST_SLOT),
         	ConversationStates.QUESTION_1,
-        	"在北方山上有个漂亮的瀑布，我看到过那里有梨树.",
+        	"在北方山上有个漂亮的瀑布, 我看到过那里有梨树.",
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
             "西瓜",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "Kalavan 花园里有一个大西瓜，可以为我的帽子做成漂亮的装饰",
+            "Kalavan 花园里有一个大西瓜, 可以为我的帽子做成漂亮的装饰",
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
             "pomegranate",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
-            "我没见过长在野外的石榴树，但我听说一个住在南方大河的人在自家花园里种它们.",
+            "我没见过长在野外的石榴树, 但我听说一个住在南方大河的人在自家花园里种它们.",
             null);
     }
 

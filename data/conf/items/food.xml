@@ -1392,7 +1392,7 @@
     <!-- dropped -->
 	<item name="干酪">
 		<type class="food" subclass="cheese" tileid="-1" />
-		<description>干酪，不知吃下会如何?</description>
+		<description>干酪, 不知吃下会如何?</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="20" />
@@ -1415,7 +1415,7 @@
 
 	<item name="鸡腿">
 		<type class="food" subclass="chicken" tileid="-1" />
-		<description>一只可口的大鸡腿。</description>
+		<description>一只可口的大鸡腿. </description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="50" />

@@ -84,20 +84,20 @@ npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"我在寻找一种饮品，最好是外来品，你能帮我找来一支吗？",
+				"我在寻找一种饮品, 最好是外来品, 你能帮我找来一支吗？",
 				null);
 npc.add(ConversationStates.ATTENDING,
 		ConversationPhrases.QUEST_MESSAGES,
 		new QuestCompletedCondition(QUEST_SLOT),
 		ConversationStates.ATTENDING,
-		"我喝过了，谢谢你！",
+		"我喝过了, 谢谢你！",
 		null);
 
 npc.add(ConversationStates.ATTENDING,
 		ConversationPhrases.QUEST_MESSAGES,
 		new AndCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES), new QuestStateStartsWithCondition(QUEST_SLOT, "drinking;")),
 		ConversationStates.QUEST_OFFERED,
-		"上次你带来的鸡尾酒真的好喝，你还能带给我另一种饮品吗?",
+		"上次你带来的鸡尾酒真的好喝, 你还能带给我另一种饮品吗?",
 		null);
 
 npc.add(ConversationStates.ATTENDING,
@@ -110,20 +110,20 @@ npc.add(ConversationStates.ATTENDING,
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"我喜欢这些外来饮料，但我不记得我喜欢的饮料的名字了。",
+				"我喜欢这些外来饮料, 但我不记得我喜欢的饮料的名字了. ",
 				null);
 
 // Player agrees to get the drink
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"谢谢你！如果你找到一些，对我说 #drink ,我保证不会亏待你。",
+				"谢谢你！如果你找到一些, 对我说 #drink ,我保证不会亏待你. ",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 3));
 
 		// Player says no, they've lost karma.
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null, ConversationStates.IDLE,
-				"Oh，没你法，再见了。",
+				"Oh, 没你法, 再见了. ",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -10.0));
 	}
 
@@ -151,7 +151,7 @@ npc.add(ConversationStates.ATTENDING,
 								npc.say("谢谢你！拿着厨师做的这 " +
 										pieAmount + " 个 " +
 										 "fish pie" +
-										" ，还有我的～吻。");
+										" , 还有我的～吻. ");
 								new SetQuestAndModifyKarmaAction(getSlotName(), "drinking;"
 																 + System.currentTimeMillis(), 15.0).fire(player, sentence, npc);
 							}
@@ -163,7 +163,7 @@ npc.add(ConversationStates.ATTENDING,
 			ConversationStates.ATTENDING, triggers,
 			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("pina colada"))),
 			ConversationStates.ATTENDING,
-			"你没有带来我喜欢的饮品，去弄一些外来的品种！",
+			"你没有带来我喜欢的饮品, 去弄一些外来的品种！",
 			null);
 
 		npc.add(
@@ -178,7 +178,7 @@ npc.add(ConversationStates.ATTENDING,
 	public void addToWorld() {
 		fillQuestInfo(
 				"Amazon 公主",
-				"一个想喝饮料的公主。",
+				"一个想喝饮料的公主. ",
 				true);
 		offerQuestStep();
 		bringCocktailStep();
@@ -191,22 +191,22 @@ npc.add(ConversationStates.ATTENDING,
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Princess Esclara 欢迎我到来到她在 Amazon 岛上的家。");
+		res.add("Princess Esclara 欢迎我到来到她在 Amazon 岛上的家. ");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("她让我找一些饮品，但我觉得她应该没喝过.");
+			res.add("她让我找一些饮品, 但我觉得她应该没喝过.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
-			res.add("公主很渴，我答应给她找一个异域饮品，找到后对她说 'drink' 。");
+			res.add("公主很渴, 我答应给她找一个异域饮品, 找到后对她说 'drink' . ");
 		}
 		if ("start".equals(questState) && player.isEquipped("pina colada") || isCompleted(player)) {
-			res.add("我为公主找到一种 pina colada 的饮料，我觉得她会喜欢喝。");
+			res.add("我为公主找到一种 pina colada 的饮料, 我觉得她会喜欢喝. ");
 		}
         if (isCompleted(player)) {
             if (isRepeatable(player)) {
-                res.add("我把 pina colada 带给公主，但我打赌她肯定会再要，也许我应该弄到更多的 fish pies.");
+                res.add("我把 pina colada 带给公主, 但我打赌她肯定会再要, 也许我应该弄到更多的 fish pies.");
             } else {
-                res.add("公主 Esclara 很爱我带给她的 pina colada ，她不再感到口渴了。她把 fish pies 送给了我，还有一个香吻!");
+                res.add("公主 Esclara 很爱我带给她的 pina colada , 她不再感到口渴了. 她把 fish pies 送给了我, 还有一个香吻!");
             }
 		}
 		return res;

@@ -92,9 +92,9 @@ import marauroa.common.Pair;
 		super();
 		// fill monster types map
 		enemyForces.put("blordrough",
-				new Pair<Integer, String>(50,"Blordrough warriors 现在驻扎在 Ados 地下通道. 他们在战斗中十分强悍，这是 Blordrough 能占领 Deniran 的领土的原因。"));
+				new Pair<Integer, String>(50,"Blordrough warriors 现在驻扎在 Ados 地下通道. 他们在战斗中十分强悍, 这是 Blordrough 能占领 Deniran 的领土的原因. "));
 		enemyForces.put("madaram",
-				new Pair<Integer, String>(100,"他们的攻事建在了Fado 的地下，他们真是丑恶."));
+				new Pair<Integer, String>(100,"他们的攻事建在了Fado 的地下, 他们真是丑恶."));
 		enemyForces.put("dark elf",
 				new Pair<Integer, String>(100,"Drows, or dark elves as they are commonly called, can be found under Nalwor. They use poison in battles, gathering it from different poisonous creatures."));
 		enemyForces.put("chaos",
@@ -304,10 +304,10 @@ import marauroa.common.Pair;
 		@Override
 		public void fire(final Player player, final Sentence sentence, final EventRaiser speakerNPC) {
 			final String monstersType = chooseRandomEnemys();
-			speakerNPC.say("我需要帮助，要打败敌军 #enemy " + monstersType +
+			speakerNPC.say("我需要帮助, 要打败敌军 #enemy " + monstersType +
 					" . 下面要发热誓. 杀掉至少 " + enemyForces.get(monstersType).first()+
 					" 的任何 "+ monstersType +
-					" soldiers ,我会奖励你。");
+					" soldiers ,我会奖励你. ");
 			final HashMap<String, Pair<Integer, Integer>> toKill = new HashMap<String, Pair<Integer, Integer>>();
 			List<String> sortedcreatures = enemys.get(monstersType);
 			player.setQuest(QUEST_SLOT, 0, "start");
@@ -556,11 +556,11 @@ import marauroa.common.Pair;
 			if(killedNumber == 0) {
 				kn="no";
 			}
-			history.add("目前，你已杀了 "+
+			history.add("目前, 你已杀了 "+
 					kn +" "+
 					killedNumber +" "+ givenEnemies);
 			if(new KilledInSumForQuestCondition(QUEST_SLOT, 2, givenNumber).fire(player, null, null)) {
-				history.add("现在我已杀了足够的生物去答复。");
+				history.add("现在我已杀了足够的生物去答复. ");
 			} else {
 				history.add("还有" + (givenNumber-killedNumber) + " 的 "+
 						 givenEnemies + " 要杀.");

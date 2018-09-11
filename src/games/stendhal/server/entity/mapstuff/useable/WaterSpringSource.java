@@ -61,7 +61,7 @@ public class WaterSpringSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "water_source");
 		setMenu("Fill|Use");
-		setDescription("你在水中看到一些朋友，就像你发现一口喷泉。");
+		setDescription("你在水中看到一些朋友, 就像你发现一口喷泉. ");
 		setResistance(0);
 	}
 
@@ -110,7 +110,7 @@ public class WaterSpringSource extends PlayerActivityEntity {
 		if (player.isEquipped("瓶子")) {
 			return true;
 		} else {
-			player.sendPrivateText("需要一个瓶子才能装水。");
+			player.sendPrivateText("需要一个瓶子才能装水. ");
 			return false;
 		}
 	}
@@ -175,7 +175,7 @@ public class WaterSpringSource extends PlayerActivityEntity {
             this.addEvent(new SoundEvent(failSound, SOUND_RADIUS, 100, SoundLayer.AMBIENT_SOUND));
     		this.notifyWorldAboutChanges();
 
-			player.sendPrivateText("Oh 不要! 你装满水后却不小心把瓶子掉了地上摔碎了。");
+			player.sendPrivateText("Oh 不要! 你装满水后却不小心把瓶子掉了地上摔碎了. ");
 		}
 		notifyWorldAboutChanges();
 	}
@@ -194,6 +194,6 @@ public class WaterSpringSource extends PlayerActivityEntity {
 
 		// remove 瓶子 from player as they try to fill it.
 		player.drop("瓶子");
-		player.sendPrivateText("你把泉水装进了空瓶子，希望不要从手中滑落!");
+		player.sendPrivateText("你把泉水装进了空瓶子, 希望不要从手中滑落!");
 	}
 }

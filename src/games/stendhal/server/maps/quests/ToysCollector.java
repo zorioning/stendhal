@@ -66,7 +66,7 @@ public class ToysCollector extends AbstractQuest implements
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
 			if (!"done".equals(questState)) {
-				res.add("Anna 想要一些玩具，我需要怎么能哄那个小女孩开心!");
+				res.add("Anna 想要一些玩具, 我需要怎么能哄那个小女孩开心!");
 			} else {
 				res.add("我拿到一个有趣的玩具给 Anna, Jens 和 George 玩.");
 			}
@@ -83,7 +83,7 @@ public class ToysCollector extends AbstractQuest implements
 	public void addToWorld() {
 		fillQuestInfo(
 				"Toys Collector",
-				"Anna 很无聊，找一些玩具和她一起玩.",
+				"Anna 很无聊, 找一些玩具和她一起玩.",
 				false);
 		setupAbstractQuest();
 		specialStuff();
@@ -131,17 +131,17 @@ public class ToysCollector extends AbstractQuest implements
 
 	@Override
 	public String welcomeBeforeStartingQuest() {
-		return "妈妈说，我们不许和陌生人说话，但我很无聊，我想要玩具 #toys!";
+		return "妈妈说, 我们不许和陌生人说话, 但我很无聊, 我想要玩具 #toys!";
 	}
 
 	@Override
 	public String welcomeDuringActiveQuest() {
-		return "Hello! 我还是无聊，你把玩具带来了吗?";
+		return "Hello! 我还是无聊, 你把玩具带来了吗?";
 	}
 
 	@Override
 	public String welcomeAfterQuestIsCompleted() {
-		return "Hi! 我正和我的玩具玩，没有大人的份";
+		return "Hi! 我正和我的玩具玩, 没有大人的份";
 	}
 
 	@Override
@@ -151,12 +151,12 @@ public class ToysCollector extends AbstractQuest implements
 
 	@Override
 	public String respondToQuest() {
-		return "我不确定什么玩具，但不管什么好玩的，你都可以带给我,好吗";
+		return "我不确定什么玩具, 但不管什么好玩的, 你都可以带给我,好吗";
 	}
 
 	@Override
 	public String respondToQuestAfterItHasAlreadyBeenCompleted() {
-		return "这个玩具太好了，谢谢";
+		return "这个玩具太好了, 谢谢";
 	}
 
 	@Override
@@ -172,7 +172,7 @@ public class ToysCollector extends AbstractQuest implements
 	// not used
 	@Override
 	public String firstAskForMissingItems(final List<String> missingItems) {
-		return "我不确定什么玩具，但不管什么好玩的东西，都请你把它带给我，好吗？";
+		return "我不确定什么玩具, 但不管什么好玩的东西, 都请你把它带给我, 好吗？";
 	}
 
 	@Override
@@ -197,7 +197,7 @@ public class ToysCollector extends AbstractQuest implements
 
 	@Override
 	public String respondToLastItemBrought() {
-		return "这些玩具让我很开心，请拿这个 pies . Arlindo 给我们烤的，但我觉得你应该有了.";
+		return "这些玩具让我很开心, 请拿这个 pies . Arlindo 给我们烤的, 但我觉得你应该有了.";
 	}
 
 	@Override
@@ -213,7 +213,7 @@ public class ToysCollector extends AbstractQuest implements
 	@Override
 	public String respondToOfferOfNotExistingItem(final String itemName) {
 		return "Hey! 说谎不好! 你根本没有 "
-				+ itemName + " 。";
+				+ itemName + " . ";
 	}
 
 	@Override

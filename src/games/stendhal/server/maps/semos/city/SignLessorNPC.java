@@ -76,7 +76,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Hi, 我 #租用 标牌，同时也 #移除 旧标牌.");
+				addGreeting("Hi, 我 #租用 标牌, 同时也 #移除 旧标牌.");
 				addJob("一次 #租用 标牌一天.");
 				addHelp("如果你想 #租用 一个标牌, 只用告诉我需要写的标牌名字.");
 				setPlayerChatTimeout(CHAT_TIMEOUT);
@@ -84,13 +84,13 @@ public class SignLessorNPC implements ZoneConfigurator {
 				add(ConversationStates.ATTENDING, "",
 					new AndCondition(getRentMatchCond(), new LevelLessThanCondition(6)),
 					ConversationStates.ATTENDING,
-					"Oh 抱歉，我不给经验像你一样少的人提供广告标牌出租服务。",
+					"Oh 抱歉, 我不给经验像你一样少的人提供广告标牌出租服务. ",
 					null);
 
 				add(ConversationStates.ATTENDING, "",
 					new AndCondition(getRentMatchCond(), new LevelGreaterThanCondition(5), new NotCondition(new TextHasParameterCondition())),
 					ConversationStates.ATTENDING,
-					"只要告诉我你想 #租用  ，接下来再告诉我需要写的标识名字。",
+					"只要告诉我你想 #租用  , 接下来再告诉我需要写的标识名字. ",
 					null);
 
 				add(ConversationStates.ATTENDING, "",
@@ -102,10 +102,10 @@ public class SignLessorNPC implements ZoneConfigurator {
 						public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 							text = sentence.getOriginalText().substring(5).trim();
 
-							String reply = "广告标牌24小时要花费 " + MONEY + " 钱，你想租吗？";
+							String reply = "广告标牌24小时要花费 " + MONEY + " 钱, 你想租吗？";
 
 							if (rentedSignList.getByName(player.getName()) != null) {
-								reply = reply + " 请写下标牌名称，我会替换掉你的旧标牌.";
+								reply = reply + " 请写下标牌名称, 我会替换掉你的旧标牌.";
 							}
 
 							npc.say(reply);
@@ -121,7 +121,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 					ConversationPhrases.YES_MESSAGES,
 					new NotCondition(new PlayerHasItemWithHimCondition("money", MONEY)),
 					ConversationStates.ATTENDING,
-					"抱歉，你没有足够的钱", null);
+					"抱歉, 你没有足够的钱", null);
 
 				add(ConversationStates.BUY_PRICE_OFFERED,
 					ConversationPhrases.YES_MESSAGES,
@@ -132,7 +132,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 				add(ConversationStates.BUY_PRICE_OFFERED,
 					ConversationPhrases.NO_MESSAGES, null,
 					ConversationStates.ATTENDING,
-					"如果你改变主意，再告诉我就行。", null);
+					"如果你改变主意, 再告诉我就行. ", null);
 
 				add(ConversationStates.ATTENDING, "陊除",
 					new PlayerHasStorableEntityCondition(rentedSignList),
@@ -143,7 +143,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 				add(ConversationStates.ATTENDING, "陊除",
 					new NotCondition(new PlayerHasStorableEntityCondition(rentedSignList)),
 					ConversationStates.ATTENDING,
-					"你没有任何的标牌，所以我不能移除.", null);
+					"你没有任何的标牌, 所以我不能移除.", null);
 
 				// admins may remove signs (even low level admins)
 				add(ConversationStates.ATTENDING, "delete",
@@ -243,7 +243,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 				logger.log(Level.toLevel(System.getProperty("stendhal.support.loglevel"), Level.DEBUG), message);
 				new GameEvent(player.getName(), "租用", "标牌", text).raise();
 			} else {
-				npc.say("抱歉，现在没有更多的标牌位，没有空间能写下了.");
+				npc.say("抱歉, 现在没有更多的标牌位, 没有空间能写下了.");
 			}
 		}
 

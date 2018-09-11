@@ -3,7 +3,7 @@
 	xsi:schemaLocation="stendhal ../items.xsd ">
   <item name="黑色的书">
     <type class="book" subclass="book_black" tileid="-1"/>
-    <description>这是一本 Jynath 拒绝了很久的黑色的书。</description>
+    <description>这是一本 Jynath 拒绝了很久的黑色的书. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -19,7 +19,7 @@
   
   <item name="蓝色的书">
     <type class="book" subclass="book_blue" tileid="-1"/>
-    <description>Y这本书的封面上写着「细菌和矿物」。</description>
+    <description>Y这本书的封面上写着「细菌和矿物」. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

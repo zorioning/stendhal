@@ -126,7 +126,7 @@ public class Block extends ActiveEntity implements ZoneEnterExitListener,
 		this.sounds = sounds;
 		// Count as collision for the client and pathfinder
 		setResistance(100);
-		setDescription("你看到了一个坚硬的石砖，你能搬起它吗？");
+		setDescription("你看到了一个坚硬的石砖, 你能搬起它吗？");
 		if (style != null) {
 			put("name", style);
 		} else {

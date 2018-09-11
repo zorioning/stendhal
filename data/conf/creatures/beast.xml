@@ -6,7 +6,7 @@
   
   <creature name="小邪眼怪">
     <type class="beholder" subclass="young_beholder" tileid="beholder.png:2"/>
-    <description>这是一只小邪眼怪。他巨大的眼睛会一直盯着你！</description>
+    <description>这是一只小邪眼怪. 他巨大的眼睛会一直盯着你！</description>
     <attributes>
       <atk value="96"/>
       <def value="16"/>
@@ -35,7 +35,7 @@
   
   <creature name="邪眼怪">
     <type class="beholder" subclass="beholder" tileid="beholder.png:0"/>
-    <description>这是一只邪眼怪，它巨大的眼睛一只盯着你...</description>
+    <description>这是一只邪眼怪, 它巨大的眼睛一只盯着你...</description>
     <attributes>
       <atk value="126"/>
       <def value="20"/>
@@ -61,7 +61,7 @@
   
   <creature name="大邪眼怪">
     <type class="beholder" subclass="elder_beholder" tileid="beholder.png:1"/>
-    <description>这是一只大邪眼怪，那令人讨厌的眼睛会吓尿你。</description>
+    <description>这是一只大邪眼怪, 那令人讨厌的眼睛会吓尿你. </description>
     <attributes>
       <atk value="172"/>
       <def value="53"/>

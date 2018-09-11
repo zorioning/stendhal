@@ -79,13 +79,13 @@ public class BlacksmithAssistantNPC implements ZoneConfigurator  {
 						new AndCondition(new GreetingMatchesNameCondition(getName()),
 								new QuestNotStartedCondition("meet_hackim")),
 				        ConversationStates.ATTENDING,
-				        "Hi 陌生人，我是 Hackim Easso, 铁匠铺的助理，你来这是想买些武器吗？",
+				        "Hi 陌生人, 我是 Hackim Easso, 铁匠铺的助理, 你来这是想买些武器吗？",
 				        new SetQuestAction("meet_hackim","start"));
 
 				addGreeting(null, new SayTextAction("Hi 又见面了, [name]. 现在能帮我个忙吗 #help ?"));
 
-				addHelp("我是铁匠铺的助理，告诉我...你来这是要买武器吗？");
-				addJob("我帮助 Xoderos 在铁匠铺为 Deniran 的军队制作武器. 我大部分工作是给火添煤，或者把武器放到架子上。偶尔当 Xoderos 不注意时，我喜欢用其中一把剑，假装是一个著名的冒险家!");
+				addHelp("我是铁匠铺的助理, 告诉我...你来这是要买武器吗？");
+				addJob("我帮助 Xoderos 在铁匠铺为 Deniran 的军队制作武器. 我大部分工作是给火添煤, 或者把武器放到架子上. 偶尔当 Xoderos 不注意时, 我喜欢用其中一把剑, 假装是一个著名的冒险家!");
 				addOffer("你可以问问 Xoderos. 他销售一些自制武器.");
 				addGoodbye();
 			}

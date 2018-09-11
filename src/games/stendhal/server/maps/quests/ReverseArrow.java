@@ -165,9 +165,9 @@ public class ReverseArrow extends AbstractQuest implements
 		public void onTurnReached(final int currentTurn) {
 			if (checkBoard() && moveCount <= MAX_MOVES) {
 				if (player.isQuestCompleted(QUEST_SLOT)) {
-					npc.say("祝贺, 你又解开了迷题。但不幸的是我没有东西作为奖励.");
+					npc.say("祝贺, 你又解开了迷题. 但不幸的是我没有东西作为奖励.");
 				} else {
-					npc.say("祝贺, 你解开了迷题。");
+					npc.say("祝贺, 你解开了迷题. ");
 					final StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem(
 									"money");
 					money.setQuantity(50);
@@ -179,7 +179,7 @@ public class ReverseArrow extends AbstractQuest implements
 				if (!player.isQuestCompleted(QUEST_SLOT)) {
 					player.setQuest(QUEST_SLOT, "failed");
 				}
-				npc.say("抱歉,这看起来不像是指向我的箭头。");
+				npc.say("抱歉,这看起来不像是指向我的箭头. ");
 			}
 
 			// teleport the player out after 2 seconds of delay
@@ -392,20 +392,20 @@ public class ReverseArrow extends AbstractQuest implements
 							new QuestCompletedCondition(QUEST_SLOT)),
 					ConversationStates.ATTENDING,
 					null,
-					new SayTextAction("又见面了, [name]. 我记得你已解开过这个问题，你当然可以再次做对."));
+					new SayTextAction("又见面了, [name]. 我记得你已解开过这个问题, 你当然可以再次做对."));
 
 			add(ConversationStates.IDLE,
 					ConversationPhrases.GREETING_MESSAGES,
 					new AndCondition(new GreetingMatchesNameCondition(getName()),
 							new QuestNotCompletedCondition(QUEST_SLOT)),
 					ConversationStates.ATTENDING,
-					"Hi, 欢迎来玩这们的小游戏。你的任务是让这个箭头指向上，三个游戏币开始游戏.",
+					"Hi, 欢迎来玩这们的小游戏. 你的任务是让这个箭头指向上, 三个游戏币开始游戏.",
 					null);
 
-			addHelp("要移动它，你要站在标记那边.");
+			addHelp("要移动它, 你要站在标记那边.");
 			addJob("这是这个游戏的监督员.");
 			addGoodbye("很高兴见到你.");
-			addQuest("你在游戏中的任务是，在" + TIME + " seconds 内用3个游戏币把这个箭头指向反方向"	);
+			addQuest("你在游戏中的任务是, 在" + TIME + " seconds 内用3个游戏币把这个箭头指向反方向"	);
 		}
 
 		@Override
@@ -436,7 +436,7 @@ public class ReverseArrow extends AbstractQuest implements
 
 		final Sign sign = new Sign();
 		sign.setPosition(97, 102);
-		sign.setText("如果门关闭了，你得等到前一个玩家玩结束。");
+		sign.setText("如果门关闭了, 你得等到前一个玩家玩结束. ");
 		entranceZone.add(sign);
 	}
 
@@ -461,14 +461,14 @@ public class ReverseArrow extends AbstractQuest implements
 			npc.say("我是你的第 " + moveCount + " 次移动.");
 		} else if (moveCount == MAX_MOVES) {
 			npc.say("我是你的第 " + moveCount
-					+ " 次，也是最后一次移动，让我核对一下.");
+					+ " 次, 也是最后一次移动, 让我核对一下.");
 			// notify in 2 seconds
 			SingletonRepository.getTurnNotifier().notifyInTurns(6, new ReverseArrowCheck());
 			if (timer != null) {
 				SingletonRepository.getTurnNotifier().dontNotify(timer);
 			}
 		} else {
-			npc.say("抱歉，你只能移动 " + MAX_MOVES + " 次");
+			npc.say("抱歉, 你只能移动 " + MAX_MOVES + " 次");
 		}
 	}
 

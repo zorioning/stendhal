@@ -128,7 +128,7 @@ public class OfferExpirer implements TurnListener{
 			builder.append(" 已到期. 你还有 ");
 			builder.append(TimeUtil.approxTimeUntil((int) (offer.getTimestamp()
 					- System.currentTimeMillis()) / 1000 + TIME_TO_REMOVING));
-			builder.append(" 剩余的商品可以取回，或重新续期上架.");
+			builder.append(" 剩余的商品可以取回, 或重新续期上架.");
 			sendMessage(offer.getOfferer(), builder);
 		}
 	}
@@ -189,7 +189,7 @@ public class OfferExpirer implements TurnListener{
 			StringBuilder builder = new StringBuilder();
 			builder.append("你赚的 ");
 			builder.append(earning.getValue());
-			builder.append(" 钱已过期，不能再被取走了.");
+			builder.append(" 钱已过期, 不能再被取走了.");
 			sendMessage(earning.getSeller(), builder);
 		}
 

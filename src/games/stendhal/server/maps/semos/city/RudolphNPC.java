@@ -63,9 +63,9 @@ public class RudolphNPC implements ZoneConfigurator {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Hi, 你好朋友。这是一年中最美妙的时光啊！");
-				addHelp("Oh, 我的，我不能帮助你，抱歉，我变成 Santa 圣诞老人吧.");
-				addJob("我把 Santa 的雪撬在圣诞夜装上，点亮的我鼻子，让我快乐, 还能让圣诞老人能看到他的路.");
+				addGreeting("Hi, 你好朋友. 这是一年中最美妙的时光啊！");
+				addHelp("Oh, 我的, 我不能帮助你, 抱歉, 我变成 Santa 圣诞老人吧.");
+				addJob("我把 Santa 的雪撬在圣诞夜装上, 点亮的我鼻子, 让我快乐, 还能让圣诞老人能看到他的路.");
 				addGoodbye("很高兴见到你.");
 
 				// remaining behaviour defined in games.stendhal.server.maps.quests.GoodiesForRudolph
@@ -80,7 +80,7 @@ public class RudolphNPC implements ZoneConfigurator {
 		};
 		npc.setPosition(2, 3);
 		npc.setDirection(Direction.DOWN);
-		npc.setDescription("你见到红鼻子驯鹿 Reindeer. 他的鼻子很大，还闪着光.");
+		npc.setDescription("你见到红鼻子驯鹿 Reindeer. 他的鼻子很大, 还闪着光.");
 		npc.setBaseSpeed(1);
 		npc.setEntityClass("rudolphnpc");
 		npc.setCollisionAction(CollisionAction.REVERSE);

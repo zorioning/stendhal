@@ -469,7 +469,7 @@
   
   <creature name="老树精">      
    <type class="ent" subclass="old_ent" tileid="ent.png:1"/>
-   <description>这是一个老树精。它经历了许多年的风风雨雨。你可以看到它很老了，因为它已经失去了所有的叶子，大部分树皮都被折断了…… </description>    
+   <description>这是一个老树精. 它经历了许多年的风风雨雨. 你可以看到它很老了, 因为它已经失去了所有的叶子, 大部分树皮都被折断了…… </description>    
    <attributes>      
     <atk value="573"/>   
     <def value="128"/>   
@@ -508,7 +508,7 @@
   
   <creature name="树精妻子">
     <type class="ent" subclass="entwife" tileid="ent.png:3"/>
-    <description>这是一个树妻。它比树精强壮，生活在古老的森林里。</description>
+    <description>这是一个树妻. 它比树精强壮, 生活在古老的森林里. </description>
     <attributes>
       <atk value="719"/>
       <def value="93"/>

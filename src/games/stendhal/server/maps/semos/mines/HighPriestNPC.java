@@ -52,12 +52,12 @@ public class HighPriestNPC implements ZoneConfigurator {
 				addGreeting(null, new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-						String reply = "我正架起一排栅栏，不让 #balrog 靠近.";
+						String reply = "我正架起一排栅栏, 不让 #balrog 靠近.";
 
 						if (player.getLevel() < 150) {
-							reply += " balrog 可能会秒杀你，快跑!";
+							reply += " balrog 可能会秒杀你, 快跑!";
 						} else {
-							reply += " 我会尽量维持栅栏的防护力，用以保卫 Faiumoni. 杀了它.";
+							reply += " 我会尽量维持栅栏的防护力, 用以保卫 Faiumoni. 杀了它.";
 						}
 						raiser.say(reply);
 					}
@@ -100,7 +100,7 @@ public class HighPriestNPC implements ZoneConfigurator {
 			});
 
 		npc.setEntityClass("highpriestnpc");
-		npc.setDescription("你遇见 Aenihata. 他是个高级牧师，他用他的魔法技能尽力保护着。");
+		npc.setDescription("你遇见 Aenihata. 他是个高级牧师, 他用他的魔法技能尽力保护着. ");
 		npc.setPosition(23, 44);
 		npc.setDirection(Direction.LEFT);
 		npc.initHP(85);

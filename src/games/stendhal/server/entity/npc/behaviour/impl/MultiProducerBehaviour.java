@@ -325,7 +325,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
             npc.say("如果你把"
                     + getRequiredResourceNamesWithHashes(productName, amount) + " 带给我."
 					+ "我会为你 " + getProductionActivity() + " "
-                    +  productName + " 。" );
+                    +  productName + " . " );
             return false;
         } else {
 			res.setAmount(amount);
@@ -333,7 +333,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
                     + getRequiredResourceNamesWithHashes(productName, amount)
 					+ " 带给我, 然后完成订单要花 "
                     + TimeUtil.approxTimeUntil(getProductionTime(productName, amount))
-                    + " 的时间。你找到我要的东西了吗?");
+                    + " 的时间. 你找到我要的东西了吗?");
 
             return true;
         }
@@ -370,7 +370,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
                     + getProductionActivity()
                     + " "
                     + amount + productName
-                    + " ，但要花点时间，请等 "
+                    + " , 但要花点时间, 请等 "
                     + getApproximateRemainingTime(player) + "后再来拿.");
             return true;
         }
@@ -394,9 +394,9 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
         final String productName = order[1];
 
 		if (!isOrderReady(player)) {
-			npc.say("欢迎回来，我正忙着你 "
+			npc.say("欢迎回来, 我正忙着你 "
 					+ getProductionActivity() + " " + numberOfProductItems + productName
-					+ " 的事情，再过 "
+					+ " 的事情, 再过 "
 					+ getApproximateRemainingTime(player) + " 就完成了.");
 		} else {
 			final StackableItem products = (StackableItem) SingletonRepository.getEntityManager().getItem(productName);
@@ -407,7 +407,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
 			}
 
 			if (player.equipToInventoryOnly(products)) {
-				npc.say("欢迎回来！你的事情我弄好了，这个 "
+				npc.say("欢迎回来！你的事情我弄好了, 这个 "
 					+ numberOfProductItems + productName + "给你.");
 				player.setQuest(questSlot, "done");
 				// give some XP as a little bonus for industrious workers
@@ -416,7 +416,7 @@ public class MultiProducerBehaviour extends TransactionBehaviour {
 				player.incProducedCountForItem(productName, products.getQuantity());
 				SingletonRepository.getAchievementNotifier().onProduction(player);
 			} else {
-				npc.say("欢迎回来！你的订单已经完成了，但现在你的背包太满，无法拿走 "
+				npc.say("欢迎回来！你的订单已经完成了, 但现在你的背包太满, 无法拿走 "
 						+ numberOfProductItems + productName
 						+ ". 等你身上有空再回来拿吧.");
 			}

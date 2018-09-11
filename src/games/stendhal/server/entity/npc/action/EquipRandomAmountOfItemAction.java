@@ -78,7 +78,7 @@ public class EquipRandomAmountOfItemAction implements ChatAction {
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 		if ( (increment <= 0) || ((increment > max) && ((increment > min)) ) ){
-			logger.error("增加值 '" + increment + "' 无效，因最大值是 '" + max + "'.", new Throwable());
+			logger.error("增加值 '" + increment + "' 无效, 因最大值是 '" + max + "'.", new Throwable());
 		} else if ((min <= 0) || (max <= 0)){
 			logger.error("Invalid min/max values '" + min + "', '" + max + "'.", new Throwable());
 		} else{

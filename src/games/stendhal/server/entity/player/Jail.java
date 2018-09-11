@@ -153,7 +153,7 @@ public class Jail implements ZoneConfigurator, LoginListener {
 			+ ".");
 
 		if (criminal == null) {
-			final String text = "玩家 " + criminalName + " 不在线，但据捕证已生效.";
+			final String text = "玩家 " + criminalName + " 不在线, 但据捕证已生效.";
 			policeman.sendPrivateText(text);
 			LOGGER.info(text);
 		} else {
@@ -241,7 +241,7 @@ public class Jail implements ZoneConfigurator, LoginListener {
 
 			inmate.teleport(exitZone, 8, 7, Direction.LEFT, null);
 			inmate.sendPrivateText(NotificationType.SUPPORT,
-					"你的据捕时间已结束，现在你可以出去了。");
+					"你的据捕时间已结束, 现在你可以出去了. ");
 			LOGGER.info("玩家 " + inmate.getName() + " 被释放.");
 		} else {
 			LOGGER.info("Tried to release player " + inmate.getName() + ", but " + inmate.getName() + " is not in jail.");
@@ -334,7 +334,7 @@ public class Jail implements ZoneConfigurator, LoginListener {
 				if (arrestWarrant.isStarted()) {
 					// Notify player that his sentences is starting again because he tried to escape by logging out
 					player.sendPrivateText(NotificationType.SUPPORT,
-							"因为你企图逃狱，"
+							"因为你企图逃狱, "
 							+ "虽然你已被关了一段时间"
 							+ "但你的判决将重新计时 ");
 				} else {

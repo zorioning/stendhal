@@ -202,7 +202,7 @@ public class SokobanBoard extends AreaEntity implements TurnListener, Availabili
 		Block block = new Block(true, "pumpkin_halloween");
 		block.setPosition(this.getX() + x, this.getY() + y);
 		block.setResetBlock(false);
-		block.setDescription("你看到一个南瓜，把它移到篮子里.");
+		block.setDescription("你看到一个南瓜, 把它移到篮子里.");
 		this.getZone().add(block);
 		entitiesToCleanup.add(block);
 		boxes.add(block);

@@ -88,7 +88,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"我不能使用木头来做烘烤大餐，我需要一些真正的石煤炭保持高温，但剩下不多了，问题是我不能自已取，因为我的牛排会烤焦，所以我只能呆在这.你能带过来 25 块煤炭 #coal 吗?",
+				"我不能使用木头来做烘烤大餐, 我需要一些真正的石煤炭保持高温, 但剩下不多了, 问题是我不能自已取, 因为我的牛排会烤焦, 所以我只能呆在这.你能带过来 25 块煤炭 #coal 吗?",
 				null);
 
 		npc.add(
@@ -96,7 +96,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				Arrays.asList("coal"),
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"Coal 煤炭不易找到，通常可以在地下的某处找到，但也有可能在 塞门镇 的旧矿区通道内找到...",
+				"Coal 煤炭不易找到, 通常可以在地下的某处找到, 但也有可能在 塞门镇 的旧矿区通道内找到...",
 				null);
 
         // player has completed the quest (doesn't happen here)
@@ -104,7 +104,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"我能继续制作可口的烤牛排了，谢谢你!",
+				"我能继续制作可口的烤牛排了, 谢谢你!",
 				null);
 
 		// player asks about quest which he has done already and he is allowed to repeat it
@@ -112,7 +112,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES), new QuestStateStartsWithCondition(QUEST_SLOT, "waiting;")),
 				ConversationStates.QUEST_OFFERED,
-				"上次你带来的煤炭快要用过错了，你能再带一些来吗？",
+				"上次你带来的煤炭快要用过错了, 你能再带一些来吗？",
 				null);
 
 		// player asks about quest which he has done already but it is not time to repeat it
@@ -121,19 +121,19 @@ public class CoalForHaunchy extends AbstractQuest {
 				new AndCondition(new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)), new QuestStateStartsWithCondition(QUEST_SLOT, "waiting;")),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "这些煤炭起远远超过我的计划，我不需要更多了"));
+				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "这些煤炭起远远超过我的计划, 我不需要更多了"));
 
 		// Player agrees to get the coal, increase 5 karma
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"谢谢你！如果你找到 25 块煤炭，请对我说 #coal 我就收到了，我会给你相当不错的奖励.",
+				"谢谢你！如果你找到 25 块煤炭, 请对我说 #coal 我就收到了, 我会给你相当不错的奖励.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 5));
 
 		// Player says no, they've lost karma.
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null, ConversationStates.IDLE,
-				"Oh, 没办法，我想你失去了一次吃烘烤大餐的机会. 再见了.",
+				"Oh, 没办法, 我想你失去了一次吃烘烤大餐的机会. 再见了.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -10.0));
 	}
 
@@ -179,7 +179,7 @@ public class CoalForHaunchy extends AbstractQuest {
 				ConversationStates.ATTENDING, triggers,
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("coal",25))),
 				ConversationStates.ATTENDING,
-				"你给的煤不够我用的。还请再去捡点回来！",
+				"你给的煤不够我用的. 还请再去捡点回来！",
 				null);
 
 		npc.add(
@@ -194,7 +194,7 @@ public class CoalForHaunchy extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Haunchy 的煤炭",
-				"Haunchy Meatoch 担心他的烧烤大餐。他准备的煤炭能够持续到他的烧烤结束吗？或许他准备的不够?",
+				"Haunchy Meatoch 担心他的烧烤大餐. 他准备的煤炭能够持续到他的烧烤结束吗？或许他准备的不够?",
 				true);
 		offerQuestStep();
 		bringCoalStep();
@@ -210,13 +210,13 @@ public class CoalForHaunchy extends AbstractQuest {
 		res.add("Haunchy Meatoch 欢迎我来到 Ados 集市");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("他让我去弄些煤炭，但我没时间做这些。");
+			res.add("他让我去弄些煤炭, 但我没时间做这些. ");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
-			res.add("烧烤大餐的铁架温度不够，我答应为 Haunchy 去找 25 块煤炭。");
+			res.add("烧烤大餐的铁架温度不够, 我答应为 Haunchy 去找 25 块煤炭. ");
 		}
 		if ("start".equals(questState) && player.isEquipped("coal",25) || isCompleted(player)) {
-			res.add("我找到了 25 块煤炭，我想 Haunchy 一定会很高兴");
+			res.add("我找到了 25 块煤炭, 我想 Haunchy 一定会很高兴");
 		}
 		if (isCompleted(player)) {
 			if (isRepeatable(player)) {

@@ -49,7 +49,7 @@ class AddBuddyAction implements ActionListener, TurnListener {
 	@Override
 	public void onAction(final Player player, final RPAction action) {
 		if (countBuddies(player) > 500) {
-			player.sendPrivateText(NotificationType.ERROR, "抱歉，你的好友太多了");
+			player.sendPrivateText(NotificationType.ERROR, "抱歉, 你的好友太多了");
 			return;
 		}
 

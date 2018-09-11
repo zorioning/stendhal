@@ -71,17 +71,17 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 			protected void createDialog() {
 	        	addGreeting("你想要做什么?");
 			    addJob("我宁愿自已留着.");
-			    addHelp("快点看，我必须马上走，如果你手上有 #黑珍珠 ，我会用魔法 #箭 和你交换。介意 #买 些 #箭 吗?");
-			    addOffer("快点看，我必须马上走，如果你手上有 #黑珍珠 ，我可以魔法 #箭 和你交换，介意 #买 些 #箭 吗?");
+			    addHelp("快点看, 我必须马上走, 如果你手上有 #黑珍珠 , 我会用魔法 #箭 和你交换. 介意 #买 些 #箭 吗?");
+			    addOffer("快点看, 我必须马上走, 如果你手上有 #黑珍珠 , 我可以魔法 #箭 和你交换, 介意 #买 些 #箭 吗?");
 			    addGoodbye("快走... 你这垃圾在这乱转我都不能干活了.");
 
-			    addReply("箭","我把魔法能量注入到箭里，魔法能量有 #冰 , #火 和 #电 .");
+			    addReply("箭","我把魔法能量注入到箭里, 魔法能量有 #冰 , #火 和 #电 .");
 			    addReply(Arrays.asList("冰", "冰箭", "火", "火箭"),
-	                    "一颗黑珍珠，可以换一只箭.");
+	                    "一颗黑珍珠, 可以换一只箭.");
 			    addReply(Arrays.asList("电", "电箭w"),
-	                    "电箭最快，每两颗黑珍珠只能换一只箭.");
+	                    "电箭最快, 每两颗黑珍珠只能换一只箭.");
 			    addReply(Arrays.asList("黑珍珠", "珍珠"),
-	                    "对我来说，他们制作了不错的法宝。我常可以在那些垃圾刺客中找到他们.");
+	                    "对我来说, 他们制作了不错的法宝. 我常可以在那些垃圾刺客中找到他们.");
 			    // the rest is in the MessageInABottle quest
 
 
@@ -195,7 +195,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				    				player.incProducedCountForItem(productName, products.getQuantity());
 				    				SingletonRepository.getAchievementNotifier().onProduction(player);
 				    			} else {
-				    				npc.say("欢迎回来！你的事我完成了。但现在你还不能拿走 "
+				    				npc.say("欢迎回来！你的事我完成了. 但现在你还不能拿走 "
 				    						+  productName
 				    						+ ". 等你背包有空间时再回来拿.");
 				    			}
@@ -206,7 +206,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				                    + getProductionActivity()
 				                    + " "
 				                    +  productName
-				                    + " , 但要花些时间，请在 "
+				                    + " , 但要花些时间, 请在 "
 				                    + getApproximateRemainingTime(player) + " 时间后回来.");
 				            		return true;
 				            	}
@@ -233,7 +233,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 		mizuno.initHP(100);
 		mizuno.setHP(80);
 		mizuno.setCollisionAction(CollisionAction.REVERSE);
-		mizuno.setDescription("你遇见 Mizuno. 他像一个灵魂游荡在 Ados 的无人地带，不知道他做些什么.");
+		mizuno.setDescription("你遇见 Mizuno. 他像一个灵魂游荡在 Ados 的无人地带, 不知道他做些什么.");
 
 		// start in int_semos_house
 		final StendhalRPZone	zone = SingletonRepository.getRPWorld().getZone("int_semos_house");

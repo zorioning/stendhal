@@ -55,7 +55,7 @@ public class PlayerVsPlayerChallengeManager  implements TurnListener, LogoutList
 		this.currentChallenges.add(newChallenge);
 		raiseGameEvent(newChallenge, "challenge-create");
 		challenger.sendPrivateText(String.format("你在比赛中战胜了 %s!", challenged.getName()));
-		challenged.sendPrivateText(String.format("%s 给你发出了挑战. 如果接受，你们将进行决斗.", challenger.getName()));
+		challenged.sendPrivateText(String.format("%s 给你发出了挑战. 如果接受, 你们将进行决斗.", challenger.getName()));
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class PlayerVsPlayerChallengeManager  implements TurnListener, LogoutList
 			raiseGameEvent(openChallenge, "challenge-accept");
 			logger.debug(String.format("%s 接受了 %s 的挑战.", challenged.getName(), challenger.getName()));
 		} else {
-			logger.debug(String.format("%s 试着接受一场与 %s 的决斗，但这场比赛不存在.", challenged.getName(), challenger.getName()));
+			logger.debug(String.format("%s 试着接受一场与 %s 的决斗, 但这场比赛不存在.", challenged.getName(), challenger.getName()));
 		}
 	}
 

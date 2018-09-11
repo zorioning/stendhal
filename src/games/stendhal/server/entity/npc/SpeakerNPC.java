@@ -891,7 +891,7 @@ public class SpeakerNPC extends NPC {
 	}
 
 	public void addGoodbye() {
-		addGoodbye("再见。");
+		addGoodbye("再见. ");
 	}
 
 	public void addGoodbye(final String text) {
@@ -971,9 +971,9 @@ public class SpeakerNPC extends NPC {
 		addWaitMessage(null, new ChatAction() {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-				npc.say("请稍等，" + player.getTitle()
+				npc.say("请稍等, " + player.getTitle()
 						+ "! 我正在和 "
-						+ npc.getAttending().getTitle() + " 说点事。");
+						+ npc.getAttending().getTitle() + " 说点事. ");
 			}
 		});
 	}

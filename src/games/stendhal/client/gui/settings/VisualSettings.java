@@ -140,7 +140,7 @@ class VisualSettings {
 		page.add(showCreatureSpeechToggle);
 
 		final JCheckBox scaleScreenToggle = SettingsComponentFactory.createSettingsToggle(SCALE_SCREEN_PROPERTY,
-				"true", "拉伸画面适应窗口大小", "<html>选中后，游戏画面会填满可用空间<br>默认此项启用</html>");
+				"true", "拉伸画面适应窗口大小", "<html>选中后, 游戏画面会填满可用空间<br>默认此项启用</html>");
 		page.add(scaleScreenToggle);
 		page.add(Box.createHorizontalStrut(SBoxLayout.COMMON_PADDING));
 
@@ -201,8 +201,8 @@ class VisualSettings {
 		final JComboBox<String> selector = new JComboBox<>();
 		final String[][] data = {
 				{"Automatic (default)", "auto", "这个模式会基于电脑性能自动配置"},
-				{"Full translucency", "translucent", "使用半透明图像，用于一些特殊电脑"},
-				{"Simple transparency", "bitmask", "使用简单透明，适用于旧电脑,如果游戏不正常请打开此项"}
+				{"Full translucency", "translucent", "使用半透明图像, 用于一些特殊电脑"},
+				{"Simple transparency", "bitmask", "使用简单透明, 适用于旧电脑,如果游戏不正常请打开此项"}
 		};
 
 		// Convenience mapping for getting the data rows from either short or
@@ -313,8 +313,8 @@ class VisualSettings {
 		JComponent selector = createStyleSelector();
 		selector.setName("defined");
 		definedStylesHBox.add(selector);
-		definedStylesHBox.setToolTipText("<html>主题会应用在游戏控制面板上。"
-				+ "<p>仅仅是改变显示，而不会改变游戏内容</html>");
+		definedStylesHBox.setToolTipText("<html>主题会应用在游戏控制面板上. "
+				+ "<p>仅仅是改变显示, 而不会改变游戏内容</html>");
 		/*
 		styleBox.add(definedStyleSelector);*/
 		styleBox.add(definedStylesHBox);

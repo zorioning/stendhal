@@ -52,7 +52,7 @@ public class ProlongOfferHandler extends OfferHandler {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (sentence.hasError()) {
-				npc.say("抱歉，我不明白 "
+				npc.say("抱歉, 我不明白 "
 						+ sentence.getErrorString());
 			} else if (sentence.getExpressions().iterator().next().toString().equals("prolong")){
 				handleSentence(player, sentence, npc);
@@ -94,22 +94,22 @@ public class ProlongOfferHandler extends OfferHandler {
 							message.append(o.getItemName());
 							message.append(" 的价格为 ");
 							message.append(o.getPrice());
-							message.append(" ，要支付手续费 ");
+							message.append(" , 要支付手续费 ");
 							message.append(TradingUtility.calculateFee(player, o.getPrice()).intValue());
 							message.append(" 钱?");
 						}
 						npc.say(message.toString());
 						npc.setCurrentState(ConversationStates.SERVICE_OFFERED);
 					} else {
-						npc.say("你只能延长自已的代销商品，请说 #show #mine 查看你供应的商品.");
+						npc.say("你只能延长自已的代销商品, 请说 #show #mine 查看你供应的商品.");
 					}
 				} else {
-					npc.say("抱歉，请选择一个数量给你要延长的商品.");
+					npc.say("抱歉, 请选择一个数量给你要延长的商品.");
 					return;
 				}
 			} catch (NumberFormatException e) {
 				if (!handleProlongAll(player, sentence, npc)) {
-					npc.say("抱歉，请说 #prolong #number");
+					npc.say("抱歉, 请说 #prolong #number");
 				}
 			}
 		}
@@ -122,7 +122,7 @@ public class ProlongOfferHandler extends OfferHandler {
 				if ("all".equals(expr.toString())) {
 					Collection<Offer> offers = manager.getOfferMap().values();
 					if (offers.isEmpty()) {
-						npc.say("抱歉，你必须指定需要延长的代销商品的序号.");
+						npc.say("抱歉, 你必须指定需要延长的代销商品的序号.");
 						return true;
 					}
 					int price = 0;
@@ -130,7 +130,7 @@ public class ProlongOfferHandler extends OfferHandler {
 					List<String> offerDesc = new ArrayList<>(numOffers);
 					for (Offer o : offers) {
 						if (!o.getOfferer().equals(player.getName())) {
-							npc.say("你只能延长你自已的代销商品，请说 #show #mine 或者 #show #expired 查看你的代销商品.");
+							npc.say("你只能延长你自已的代销商品, 请说 #show #mine 或者 #show #expired 查看你的代销商品.");
 							return true;
 						}
 						int quantity = 1;
@@ -164,9 +164,9 @@ public class ProlongOfferHandler extends OfferHandler {
 				if (player.isEquipped("money", fee)) {
 					if (prolongOffer(player, offer)) {
 						TradingUtility.substractTradingFee(player, offer.getPrice());
-						npc.say("我已延长了你的上架时间，收取了 "+fee.toString()+" 的手续费.");
+						npc.say("我已延长了你的上架时间, 收取了 "+fee.toString()+" 的手续费.");
 					} else {
-						npc.say("抱歉，你供的货物已从市场下架.");
+						npc.say("抱歉, 你供的货物已从市场下架.");
 					}
 					// Changed the status, or it has been changed by expiration. Obsolete the offers
 					((MarketManagerNPC) npc.getEntity()).getOfferMap().clear();
@@ -174,7 +174,7 @@ public class ProlongOfferHandler extends OfferHandler {
 					npc.say("你不能负担起这些手续费 "+fee.toString());
 				}
 			} else {
-				npc.say("抱歉，你最多只能同时上架 " + TradingUtility.MAX_NUMBER_OFF_OFFERS
+				npc.say("抱歉, 你最多只能同时上架 " + TradingUtility.MAX_NUMBER_OFF_OFFERS
 						+ " 种商品.");
 			}
 		}
@@ -242,9 +242,9 @@ public class ProlongOfferHandler extends OfferHandler {
 						if (prolongOffer(player, offer)) {
 							TradingUtility.substractTradingFee(player, offer.getPrice());
 							npc.say("我延长了你的代销商品 " + offerDesc
-									+ " ，并收取手续费" + fee.toString() + ".");
+									+ " , 并收取手续费" + fee.toString() + ".");
 						} else {
-							npc.say("抱歉，商品 " + offerDesc + " 已从市场下架.");
+							npc.say("抱歉, 商品 " + offerDesc + " 已从市场下架.");
 						}
 						clear = true;
 					} else {

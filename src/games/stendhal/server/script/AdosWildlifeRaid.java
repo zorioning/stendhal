@@ -73,7 +73,7 @@ public class AdosWildlifeRaid implements TurnListener {
 		switch (turnCounter) {
 
 			case 0:
-				shout("Katinka 喊道: 救命. 两个兽人接近我们的野外营地。");
+				shout("Katinka 喊道: 救命. 两个兽人接近我们的野外营地. ");
 				wait = 5 * 3;
 				break;
 
@@ -82,16 +82,16 @@ public class AdosWildlifeRaid implements TurnListener {
 				break;
 
 			case 2:
-				shout("士兵头领说: 我会派几个 Marcus 士兵帮助你。");
+				shout("士兵头领说: 我会派几个 Marcus 士兵帮助你. ");
 				wait = 60 * 3;
 				break;
 
 			case 3:
-				shout("Marcus 士兵: 我杀了这两个兽人，但从探子的消息看出:");
+				shout("Marcus 士兵: 我杀了这两个兽人, 但从探子的消息看出:");
 				break;
 
 			case 4:
-				shout("Marcus 士兵: 他们两个只是一支强大兽人部队的前锋。.");
+				shout("Marcus 士兵: 他们两个只是一支强大兽人部队的前锋. .");
 				break;
 
 			case 5:
@@ -100,7 +100,7 @@ public class AdosWildlifeRaid implements TurnListener {
 				break;
 
 			case 6:
-				shout("Io Flotto 说: 我在Semons村西面临近Carmen的地方修建了一个通道。");
+				shout("Io Flotto 说: 我在Semons村西面临近Carmen的地方修建了一个通道. ");
 				break;
 
 			case 7:
@@ -109,7 +109,7 @@ public class AdosWildlifeRaid implements TurnListener {
 				break;
 
 			case 8:
-				shout("Katinka 大喊: 啊! 他们吃了我们的船，快救救我们!");
+				shout("Katinka 大喊: 啊! 他们吃了我们的船, 快救救我们!");
 				// shout("Dr. Feelgood shouts: Help! Help us! The Ados Wildlife Refuge is under heavy attack by a bunch of hungry Orc Warriors.");
 				wait = 600 * 3;
 				break;

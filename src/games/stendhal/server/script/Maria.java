@@ -101,12 +101,12 @@ public class Maria extends ScriptImpl {
 		npc.behave("greet", "Hi, 我能帮你做些什么?");
 		npc.behave(
 				"job",
-				"我 塞门镇 #酒吧 的酒娘，现任大厅经理. 本店销售 #sell 上等啤酒和食品.");
+				"我 塞门镇 #酒吧 的酒娘, 现任大厅经理. 本店销售 #sell 上等啤酒和食品.");
 		npc.behave("酒吧",
 //			"I have a #coupon for a free 啤酒 in 塞门镇' tavern. "+
 			"酒吧就在神庙隔壁的左边.");
 		npc.behave("help",
-				"你可以看看本店的服务 #offer ,或者住宿，或者交结新朋友!");
+				"你可以看看本店的服务 #offer ,或者住宿, 或者交结新朋友!");
 		npc.behave("bye", "Bye bye!");
 		try {
 			npc.behave("sell", SingletonRepository.getShopList().get(shop));
@@ -145,7 +145,7 @@ public class Maria extends ScriptImpl {
 							new NakedCondition(),
 							new QuestNotInStateCondition(QUEST_SLOT, 0,"seen_naked")),
 					ConversationStates.ATTENDING,
-					"你是? 啊啊iiieeeee!!! 你怎么在祼奔! 快点, 鼠标右键自已选件衣服穿上！ 如果你再这样，我叫警察了！",
+					"你是? 啊啊iiieeeee!!! 你怎么在祼奔! 快点, 鼠标右键自已选件衣服穿上！ 如果你再这样, 我叫警察了！",
 					new MultipleActions(
 							new SetQuestAction(QUEST_SLOT,0, "seen_naked"),
 							new SetQuestToTimeStampAction(QUEST_SLOT,1)));
@@ -159,12 +159,12 @@ public class Maria extends ScriptImpl {
 							new QuestInStateCondition(QUEST_SLOT, 0, "seen_naked")),
 					ConversationStates.ATTENDING,
 					// this message doesn't get seen by the player himself as he gets sent to jail, but it would explain to bystanders why he is gone
-					"呸！你还是光着，等着警察吧!",
+					"呸！你还是光着, 等着警察吧!",
 					// Jail the player
 					new MultipleActions(
 							new SetQuestAction(QUEST_SLOT,0, "seen_naked"),
 							new SetQuestToTimeStampAction(QUEST_SLOT,1),
-							new JailAction(JAIL_TIME, "Maria 举报了你，因为你是暴露狂!")));
+							new JailAction(JAIL_TIME, "Maria 举报了你, 因为你是暴露狂!")));
 	}
 
 }

@@ -80,7 +80,7 @@ public class GrainField extends GrowingPassiveEntityRespawnPoint implements
 		String text;
 		switch (getRipeness()) {
 		case 0:
-			text = "已被收获的 " + grainName + " 。";
+			text = "已被收获的 " + grainName + " . ";
 			break;
 		case RIPE:
 			text = "成熟的 " + grainName + ".";
@@ -100,17 +100,17 @@ public class GrainField extends GrowingPassiveEntityRespawnPoint implements
 	@Override
 	public boolean onUsed(final RPEntity entity) {
 		if (!entity.nextTo(this)) {
-			entity.sendPrivateText("不能从这够到 " + grainName + " 。");
+			entity.sendPrivateText("不能从这够到 " + grainName + " . ");
 			return false;
 		}
 
 		if (getRipeness() != RIPE) {
-			entity.sendPrivateText("这些 " + grainName + " 未成熟而不能收割。");
+			entity.sendPrivateText("这些 " + grainName + " 未成熟而不能收割. ");
 			return false;
 		}
 
 		if (!isNeededToolEquipped(entity)) {
-			entity.sendPrivateText("需要用 " + tools.get(0) +" 收割这些 " + grainName + " 。");
+			entity.sendPrivateText("需要用 " + tools.get(0) +" 收割这些 " + grainName + " . ");
 			return false;
 		}
 

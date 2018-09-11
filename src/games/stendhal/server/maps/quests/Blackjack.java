@@ -185,16 +185,16 @@ public class Blackjack extends AbstractQuest {
 				+ bankCards);
 		bankCardsItem.notifyWorldAboutChanges();
 		if (!playerStands) {
-			messagebuf.append("你有 " + playerSum + "点。\n");
+			messagebuf.append("你有 " + playerSum + "点. \n");
 			if (playerSum == 21) {
 				playerStands = true;
 			}
 		}
 		if (!bankStands) {
-			messagebuf.append("庄家有 " + bankSum + "点。\n");
+			messagebuf.append("庄家有 " + bankSum + "点. \n");
 			if ((bankSum >= 17) && (bankSum <= 21) && (bankSum >= playerSum)) {
 				bankStands = true;
-				messagebuf.append("庄家胜。\n");
+				messagebuf.append("庄家胜. \n");
 			}
 		}
 		final String message2 = analyze(rpEntity);
@@ -238,7 +238,7 @@ public class Blackjack extends AbstractQuest {
 			} else if (!bankStands) {
 				letBankDrawAfterPause(ramon.getAttending().getName());
 			} else if (bankSum > playerSum) {
-				message = "庄家胜，祝下次好运!";
+				message = "庄家胜, 祝下次好运!";
 			} else if (bankSum == playerSum) {
 				message = "平局";
 				message += payOff(rpEntity, 1);
@@ -280,10 +280,10 @@ public class Blackjack extends AbstractQuest {
 		money.setQuantity(factor * stake);
 		rpEntity.equipOrPutOnGround(money);
 		if (factor == 1) {
-			return "取回你的筹码。";
+			return "取回你的筹码. ";
 		} else {
 			return "你的筹码, 增加 " + (factor - 1) * stake
-					+ " 筹码。";
+					+ " 筹码. ";
 		}
 	}
 
@@ -302,12 +302,12 @@ public class Blackjack extends AbstractQuest {
 			@Override
 			protected void createDialog() {
 
-				addGreeting("欢迎来到 #二十一点 牌桌! 在船出发之前，你可以在这里玩玩 #play 牌打发时间。");
-				addJob("我是塞门镇酒吧的发牌手，但我没有参与打牌的权力，但我哥哥里卡多也在这个酒吧工作。");
+				addGreeting("欢迎来到 #二十一点 牌桌! 在船出发之前, 你可以在这里玩玩 #play 牌打发时间. ");
+				addJob("我是塞门镇酒吧的发牌手, 但我没有参与打牌的权力, 但我哥哥里卡多也在这个酒吧工作. ");
 				addReply(
 						"二十一点",
-						"二十一点 玩法简单，不懂可以在墙上读读规则说明。.");
-				addHelp("不要太专注于玩牌而赶不上船，注意听通知");
+						"二十一点 玩法简单, 不懂可以在墙上读读规则说明. .");
+				addHelp("不要太专注于玩牌而赶不上船, 注意听通知");
 				addGoodbye("再见!");
 			}
 
@@ -380,7 +380,7 @@ public class Blackjack extends AbstractQuest {
 						if (stake < MIN_STAKE) {
 							npc.say("你必须最少压 " + MIN_STAKE + " 的金子");
 						} else if (stake > MAX_STAKE) {
-							npc.say("你不能压多少 " + MAX_STAKE + " 的金子。");
+							npc.say("你不能压多少 " + MAX_STAKE + " 的金子. ");
 						} else if (player.drop("money", stake)) {
 							startNewGame(player);
 						} else {
@@ -420,7 +420,7 @@ public class Blackjack extends AbstractQuest {
 
 		fillQuestInfo(
 				"二十一点",
-				"不你在Athor码头等船时，可以玩几局Blackjack（二十一点）打发时间.",
+				"不你在Athor码头等船时, 可以玩几局Blackjack（二十一点）打发时间.",
 				true);
 	}
 

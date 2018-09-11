@@ -62,12 +62,12 @@ public class OracleNPC implements ZoneConfigurator {
 						ConversationStates.ATTENDING,
 						null,
 						new SayUnstartedQuestDescriptionFromNPCNameAction(regions));
-				addQuest("Oh, 在 " + regions + " 从来没有如此多需要帮助的人们，我不想再问你什么了.");
-				addJob("我不工件，但我会给你展示怎么帮助 #help 其他人, 特别是在 " + regions + ".");
-				addOffer("*giggles* 嘻嘻，我不卖东西，如果你喜欢，我可以告诉你我和我姐妹们 #sisters 的名字 #name。");
-				addReply("sisters", "我姐妹住在另一个城市，找到他们学会如何帮助 #help 这些附近的人.");
+				addQuest("Oh, 在 " + regions + " 从来没有如此多需要帮助的人们, 我不想再问你什么了.");
+				addJob("我不工件, 但我会给你展示怎么帮助 #help 其他人, 特别是在 " + regions + ".");
+				addOffer("*giggles* 嘻嘻, 我不卖东西, 如果你喜欢, 我可以告诉你我和我姐妹们 #sisters 的名字 #name. ");
+				addReply("sisters", "我姐妹住在另一个城市, 找到他们学会如何帮助 #help 这些附近的人.");
 				addReply("name", "我和我的姐妹 #sisters 们都有一个花名. " +
-						"我叫 Calla, 是一种百合花，花的颜色和我衣服一样，很可爱吧。");
+						"我叫 Calla, 是一种百合花, 花的颜色和我衣服一样, 很可爱吧. ");
 
 				// just to be nice :)
 				addEmotionReply("hugs", "hugs");

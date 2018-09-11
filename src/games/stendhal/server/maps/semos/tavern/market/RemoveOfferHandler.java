@@ -40,7 +40,7 @@ public class RemoveOfferHandler extends OfferHandler {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (sentence.hasError()) {
-				npc.say("抱歉，我不明白你的话. "
+				npc.say("抱歉, 我不明白你的话. "
 						+ sentence.getErrorString());
 			} else if (sentence.getExpressions().iterator().next().toString().equals("remove")){
 				handleSentence(player, sentence, npc);
@@ -75,12 +75,12 @@ public class RemoveOfferHandler extends OfferHandler {
 						}
 						return;
 					}
-					npc.say("你只能删除自已的商品，请对我说 #show #mine 查看自已的代销货物.");
+					npc.say("你只能删除自已的商品, 请对我说 #show #mine 查看自已的代销货物.");
 					return;
 				}
-				npc.say("抱歉，请在以上列表中选择要删除商品的序号。.");
+				npc.say("抱歉, 请在以上列表中选择要删除商品的序号. .");
 			} catch (NumberFormatException e) {
-				npc.say("抱歉，请对我说 #remove #number");
+				npc.say("抱歉, 请对我说 #remove #number");
 			}
 		}
 	}

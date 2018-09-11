@@ -82,7 +82,7 @@ public class HouseBuyingMain {
 	public LinkedList<String> getHistory(final Player player) {
 		LinkedList<String> hist = new LinkedList<String>();
 		if(!player.hasQuest("house")) {
-			hist.add("我还没买过房子。");
+			hist.add("我还没买过房子. ");
 			return(hist);
 		}
 		hist.add("我买 " +  HouseUtilities.getHousePortal(MathHelper.parseInt(player.getQuest("house"))).getDoorId() + ".");
@@ -90,12 +90,12 @@ public class HouseBuyingMain {
 		if(playerHousePortal!=null) {
 			int unpaidPeriods = houseTax.getUnpaidTaxPeriods(player);
 			if (unpaidPeriods>0) {
-				hist.add("我拥有 " + unpaidPeriods + "month" + " 的税款。");
+				hist.add("我拥有 " + unpaidPeriods + "month" + " 的税款. ");
 			} else {
 				hist.add("我交的房产税到期日期为.");
 			}
 		} else {
-			hist.add("我不再拥有那个房屋了。");
+			hist.add("我不再拥有那个房屋了. ");
 		}
 		return(hist);
 	}

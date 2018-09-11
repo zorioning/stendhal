@@ -41,14 +41,14 @@ public class ViewChangeEntity extends UseableEntity {
 
 	@Override
 	public String describe() {
-		return "这是一颗水晶球，上面显示 \"使用费用 " + COST
-			+ " 钱。观看时请保持注意\".";
+		return "这是一颗水晶球, 上面显示 \"使用费用 " + COST
+			+ " 钱. 观看时请保持注意\".";
 	}
 
 	@Override
 	public boolean onUsed(RPEntity user) {
 		if (!nextTo(user)) {
-			user.sendPrivateText("从这里不能够到它。");
+			user.sendPrivateText("从这里不能够到它. ");
 			return false;
 		}
 		if (user instanceof Player) {
@@ -62,7 +62,7 @@ public class ViewChangeEntity extends UseableEntity {
 					player.sendPrivateText("你的钱好像不够.");
 				}
 			} else {
-				player.sendPrivateText("你不知道该如何使用这古怪的玩意。");
+				player.sendPrivateText("你不知道该如何使用这古怪的玩意. ");
 			}
 		}
 		return false;

@@ -214,7 +214,7 @@ public class CreateAccountDialog extends JDialog {
 		grid.add(showPWToggle);
 
 		// Warning label
-		JLabel logLabel = new JLabel("<html><body><p>通过网络发送的登陆信息会被记录（比如一些猜测密码等一些黑客行为引发的事故）<br>另外，游戏中全部的事件和行为（比如打怪和做任务）都会被记录<br>此消息也用于记录不常见的游戏错误</p></body></html>");
+		JLabel logLabel = new JLabel("<html><body><p>通过网络发送的登陆信息会被记录（比如一些猜测密码等一些黑客行为引发的事故）<br>另外, 游戏中全部的事件和行为（比如打怪和做任务）都会被记录<br>此消息也用于记录不常见的游戏错误</p></body></html>");
 		// Add a bit more empty space around it
 		logLabel.setBorder(BorderFactory.createEmptyBorder(padding, padding, padding, padding));
 		logLabel.setAlignmentX(CENTER_ALIGNMENT);
@@ -278,7 +278,7 @@ public class CreateAccountDialog extends JDialog {
 			port = Integer.parseInt(serverPortField.getText());
 		} catch (final NumberFormatException ex) {
 			JOptionPane.showMessageDialog(getOwner(),
-					"端口号不可用，请重新填写后再试",
+					"端口号不可用, 请重新填写后再试",
 					"Invalid Port", JOptionPane.WARNING_MESSAGE);
 			return;
 		}
@@ -313,7 +313,7 @@ public class CreateAccountDialog extends JDialog {
 					setEnabled(true);
 					JOptionPane.showMessageDialog(
 							getOwner(),
-							"连接服务器失败，创建用户失败，服务器可能己关闭, " +
+							"连接服务器失败, 创建用户失败, 服务器可能己关闭, " +
 							"也可能你填入的服务器地圵或端口不正确");
 
 					LOGGER.error(ex, ex);
@@ -368,7 +368,7 @@ public class CreateAccountDialog extends JDialog {
 					setEnabled(true);
 					JOptionPane.showMessageDialog(
 							owner,
-							"创建用户失败，可能服务器已关闭，或是你填入的服务器地址或端口不正确。",
+							"创建用户失败, 可能服务器已关闭, 或是你填入的服务器地址或端口不正确. ",
 							"Error Creating Account", JOptionPane.ERROR_MESSAGE);
 				} catch (final InvalidVersionException e) {
 					progressBar.cancel();
@@ -382,7 +382,7 @@ public class CreateAccountDialog extends JDialog {
 					setEnabled(true);
 					JOptionPane.showMessageDialog(
 							owner,
-							"你的IP被拒绝。",
+							"你的IP被拒绝. ",
 							"IP Banned", JOptionPane.ERROR_MESSAGE);
 				} catch (final LoginFailedException e) {
 					progressBar.cancel();
@@ -409,7 +409,7 @@ public class CreateAccountDialog extends JDialog {
 		final Window owner = getOwner();
 		if (!password.equals(passwordretype)) {
 			JOptionPane.showMessageDialog(owner,
-					"密码不正确，请重新输入。",
+					"密码不正确, 请重新输入. ",
 					"Password Mismatch", JOptionPane.WARNING_MESSAGE);
 			return false;
 		}
@@ -439,7 +439,7 @@ public class CreateAccountDialog extends JDialog {
 		//
 		final String email = (emailField.getText()).trim();
 		if  (!validateEmail(email)) {
-			final String warning = badEmailReason + "邮件地圵只用于管理员与你联系，\n如果你没有正确填入邮件，一些安全功能将不可用! 比如:\n- 你忘记密码.\n- 其他用户盗用了你的密码并修改, 密码将无法找回\n你确定不输入邮件地圵?";
+			final String warning = badEmailReason + "邮件地圵只用于管理员与你联系, \n如果你没有正确填入邮件, 一些安全功能将不可用! 比如:\n- 你忘记密码.\n- 其他用户盗用了你的密码并修改, 密码将无法找回\n你确定不输入邮件地圵?";
 			final int i = JOptionPane.showOptionDialog(owner, warning, badEmailTitle,
 					JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
 					null, null, 1);
@@ -512,7 +512,7 @@ public class CreateAccountDialog extends JDialog {
 				allNumbers = false;
 			}
 			if (allNumbers) {
-				badPasswordReason = "只使用数字做为密码，这非常不安全\n"
+				badPasswordReason = "只使用数字做为密码, 这非常不安全\n"
 						+ "确定使用这个密码?";
 			}
 
@@ -525,7 +525,7 @@ public class CreateAccountDialog extends JDialog {
 			if (!hasUsername) {
 				// now we'll do some more checks to see if the password
 				// contains more than three letters of the username
-				debug("密码部分与用户名重复，会导致密码泄漏");
+				debug("密码部分与用户名重复, 会导致密码泄漏");
 				final int minUserLength = 3;
 				for (int i = 1; i < username.length(); i++) {
 					final String subuser = username.substring(0, username.length()
@@ -544,7 +544,7 @@ public class CreateAccountDialog extends JDialog {
 
 				if (!hasUsername) {
 					// now from the end of the password..
-					debug("检查密码包含用户名字符，trimming from the front...");
+					debug("检查密码包含用户名字符, trimming from the front...");
 					for (int i = 0; i < username.length(); i++) {
 						final String subuser = username.substring(i);
 						debug("\tchecking for \"" + subuser + "\"...");
@@ -561,13 +561,13 @@ public class CreateAccountDialog extends JDialog {
 			}
 
 			if (hasUsername) {
-				badPasswordReason = "你使用了包含用户名信息的密码，这不是安全的做法\n"
+				badPasswordReason = "你使用了包含用户名信息的密码, 这不是安全的做法\n"
 						+ " 确定这样设置密码?";
 				return false;
 			}
 
 		} else {
-			final String text = "密码长度太短，最少应为6个字符";
+			final String text = "密码长度太短, 最少应为6个字符";
 			if (isVisible()) {
 				JOptionPane.showMessageDialog(getOwner(), text);
 			} else {

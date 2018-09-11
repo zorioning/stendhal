@@ -64,7 +64,7 @@
 
   <item name="纳尔沃城回城卷">
     <type class="scroll" subclass="nalwor" tileid="-1"/>
-    <description>一个纳尔沃城回城卷，它会带你回到纳尔沃城。</description>
+    <description>一个纳尔沃城回城卷, 它会带你回到纳尔沃城. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
       <infostring value="0_纳尔沃_城 40 60"/>
@@ -250,7 +250,7 @@
 
   <item name="彩虹豆">
     <type class="scroll" subclass="rainbow_beans" tileid="-1"/>
-    <description>一小堆彩虹豆，奇怪的存在。</description>
+    <description>一小堆彩虹豆, 奇怪的存在. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.RainbowBeansScroll"/>
     <attributes>
       <infostring value="1_dreamscape 77 35 5400 0_塞门_草原_s -1 -1"/>
@@ -271,7 +271,7 @@
 
   <item name="气球">
     <type class="scroll" subclass="balloon" tileid="-1"/>
-    <description>发现一只亮红色气球，可以把它放飞。</description>
+    <description>发现一只亮红色气球, 可以把它放飞. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.BalloonScroll"/>
     <attributes>
       <infostring value="7_kikareukin_clouds 31 12 10800 6_kikareukin_islands -1 -1"/>
@@ -292,7 +292,7 @@
 
   <item name="暮光苔藓">
     <type class="scroll" subclass="twilightmoss" tileid="-1"/>
-    <description>发现一丛长相奇特的苔藓，看起来像是有迷幻功能。</description>
+    <description>发现一丛长相奇特的苔藓, 看起来像是有迷幻功能. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.TwilightMossScroll"/>
     <attributes>
       <infostring value="int_ados_twilight_zone 12 20 10800 int_ados_sewing_room -1 -1"/>

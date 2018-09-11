@@ -79,19 +79,19 @@ public class ArmorForDagobert extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我见到了 Dagobert. 他是 塞门镇 银行的顾问。");
+		res.add("我见到了 Dagobert. 他是 塞门镇 银行的顾问. ");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("他让我找一件 皮胸甲 ，但我拒绝了他的请求。");
+			res.add("他让我找一件 皮胸甲 , 但我拒绝了他的请求. ");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
-			res.add("我答应给他找一件 皮胸甲，因为他被抢劫过。");
+			res.add("我答应给他找一件 皮胸甲, 因为他被抢劫过. ");
 		}
 		if ("start".equals(questState) && (player.isEquipped("皮胸甲") || player.isEquipped("护肩皮胸甲")) || "done".equals(questState)) {
-			res.add("我找到了一件 皮胸甲 ，然后会把它带给 Dagobert.");
+			res.add("我找到了一件 皮胸甲 , 然后会把它带给 Dagobert.");
 		}
 		if ("done".equals(questState)) {
-			res.add("我把 皮胸甲 带给 Dagobert. 作为答谢，他允许我使用私人仓库。");
+			res.add("我把 皮胸甲 带给 Dagobert. 作为答谢, 他允许我使用私人仓库. ");
 		}
 		return res;
 	}
@@ -104,7 +104,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"我太怕被抢了。我没有任何保护，你可以帮帮我吗?",
+			"我太怕被抢了. 我没有任何保护, 你可以帮帮我吗?",
 			null);
 
 		npc.add(
@@ -112,7 +112,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"感觉感谢你能带来盔甲，暂时没有其他需要你帮忙的地方了.",
+			"感觉感谢你能带来盔甲, 暂时没有其他需要你帮忙的地方了.",
 			null);
 
 		// player is willing to help
@@ -121,7 +121,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"之前我有一件完好的 #'皮胸甲', 但因最近的一次抢劫事件被弄坏了，如果你能拿个新的给我，我一定会报答你。",
+			"之前我有一件完好的 #'皮胸甲', 但因最近的一次抢劫事件被弄坏了, 如果你能拿个新的给我, 我一定会报答你. ",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		// player is not willing to help
@@ -129,7 +129,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.NO_MESSAGES, null,
 			ConversationStates.ATTENDING,
-			"好吧，我猜以后我只能靠躲了。",
+			"好吧, 我猜以后我只能靠躲了. ",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		// player wants to know what a 皮胸甲 is
@@ -138,7 +138,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			Arrays.asList("皮胸甲", "leather", "cuirass"),
 			null,
 			ConversationStates.ATTENDING,
-			"皮胸甲 是独眼巨人的常备护甲。一些独眼巨人生活在城市下的地窂深处。",
+			"皮胸甲 是独眼巨人的常备护甲. 一些独眼巨人生活在城市下的地窂深处. ",
 			null);
 	}
 
@@ -153,7 +153,7 @@ public class ArmorForDagobert extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("皮胸甲"),
 					new PlayerHasItemWithHimCondition("护肩皮胸甲"))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"打扰一下，我看到你拿了一件 皮胸甲 ，是给我的吗?",
+			"打扰一下, 我看到你拿了一件 皮胸甲 , 是给我的吗?",
 			null);
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
@@ -163,7 +163,7 @@ public class ArmorForDagobert extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("皮胸甲"),
 					new PlayerHasItemWithHimCondition("护肩皮胸甲")))),
 			ConversationStates.ATTENDING,
-			"太幸运了，你走后我还没被抢过。很高兴收到你的 皮胸甲. 还有，我能 #帮助 你做点什么？",
+			"太幸运了, 你走后我还没被抢过. 很高兴收到你的 皮胸甲. 还有, 我能 #帮助 你做点什么？",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
@@ -181,7 +181,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			// make sure the player isn't cheating by putting the armor
 			// away and then saying "yes"
 			new PlayerHasItemWithHimCondition("皮胸甲"),
-			ConversationStates.ATTENDING, "Oh, 太感谢了！这里有一些金币，...嗯...另外，现在你已被认可为受信客户，可以随时开通自已的私人 #金库 了.",
+			ConversationStates.ATTENDING, "Oh, 太感谢了！这里有一些金币, ...嗯...另外, 现在你已被认可为受信客户, 可以随时开通自已的私人 #金库 了.",
 			new MultipleActions(reward1));
 
 		final List<ChatAction> reward2 = new LinkedList<ChatAction>(reward);
@@ -194,7 +194,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			new AndCondition(
 				new NotCondition(new PlayerHasItemWithHimCondition("皮胸甲")),
 				new PlayerHasItemWithHimCondition("护肩皮胸甲")),
-			ConversationStates.ATTENDING, "Oh, 太感谢了！这里有一些金币，...嗯...另外，现在你已被认可为受信客户，可以随时开通自已的私人 #金库 了.",
+			ConversationStates.ATTENDING, "Oh, 太感谢了！这里有一些金币, ...嗯...另外, 现在你已被认可为受信客户, 可以随时开通自已的私人 #金库 了.",
 			new MultipleActions(reward2));
 
 		npc.add(
@@ -202,7 +202,7 @@ public class ArmorForDagobert extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"好吧，希望我下次被抢劫之前，你能再找一件多的给我.",
+			"好吧, 希望我下次被抢劫之前, 你能再找一件多的给我.",
 			null);
 	}
 
@@ -210,7 +210,7 @@ public class ArmorForDagobert extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Dagobert的皮胸甲",
-				"Dagobert, 塞门镇的银行顾问，需要安全保护.",
+				"Dagobert, 塞门镇的银行顾问, 需要安全保护.",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();

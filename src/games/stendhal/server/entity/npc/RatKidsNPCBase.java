@@ -74,7 +74,7 @@ public abstract class RatKidsNPCBase extends SpeakerNPC {
 					} else if ( npcDoneText.length > 1) {
 						player.setQuest(QUEST_SLOT, lookStr + ";" + npcName
 								+ ":" + saidStr);//
-						npc.say("你好，我叫 " + npc.getName() + ". 请告诉我妈妈我很好.");
+						npc.say("你好, 我叫 " + npc.getName() + ". 请告诉我妈妈我很好.");
 						player.addXP(500);
 					} else {
 						npc.say("妈妈说一定不要和陌生人说话.");
