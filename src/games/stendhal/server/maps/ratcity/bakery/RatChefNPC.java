@@ -71,8 +71,8 @@ public class RatChefNPC implements ZoneConfigurator {
                  */
 				addReply(Arrays.asList("chocolate", "巧克力棒", "巧克力棒s"),
                     "A rarity. It seems only very nasty and murderous folks carry some in their pockets.");
-				addReply("flour",
-                    "I stea.. ahem.. get all my supplies of flour from the nearby 塞门镇.");
+				addReply("面粉",
+                    "I stea.. ahem.. get all my supplies of 面粉 from the nearby 塞门镇.");
 				addReply("egg",
                     "I'd look for one where hens scratch about.");
 				addReply("milk",
@@ -95,7 +95,7 @@ public class RatChefNPC implements ZoneConfigurator {
 				addGoodbye("Au revoir voyageur... And come back to visit me anytime you like!");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("flour", 1);
+				requiredResources.put("面粉", 1);
 				requiredResources.put("egg", 1);
 				requiredResources.put("butter", 1);
 				requiredResources.put("milk", 1);

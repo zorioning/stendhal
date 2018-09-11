@@ -249,8 +249,8 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// resource
 		items.put("coal",10);
-		items.put("flour",5);
-		items.put("grain",20);
+		items.put("面粉",5);
+		items.put("小麦",20);
 		items.put("gold bar",5);
 		items.put("gold nugget",10);
 		items.put("iron",5);

@@ -1483,8 +1483,8 @@
 	</item>
 
 	<item name="火腿">
-		<type class="food" subclass="火腿" tileid="-1" />
-		<description>You see a juicy ham.</description>
+		<type class="food" subclass="ham" tileid="-1" />
+		<description>这是一块新鲜火腿.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="80" />
@@ -1555,7 +1555,7 @@
 
 	<item name="小复活蛋">
 		<type class="food" subclass="small_easter_egg" tileid="-1" />
-		<description>You see a small chocolate 复活蛋. Yummy!</description>
+		<description>一颗巧克力做的小复活蛋. 好吃!</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="100" />

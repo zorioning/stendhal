@@ -60,7 +60,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> 50 XP </li>
  * <li> some karma (5 + (2 | -2)) </li>
- * <li> between 10 and 20 <item>grain</item> </li>
+ * <li> between 10 and 20 <item>小麦</item> </li>
  * </ul>
  *
  * REPETITIONS:
@@ -181,7 +181,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("done"),
 				createTaskFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Thank you for helping me with the harvest. Here is your reward. Maybe you can bring the grain to #詹妮 who can mill #flour from it.",
+				"Thank you for helping me with the harvest. Here is your reward. Maybe you can bring the 小麦 to #詹妮 who can mill #面粉 from it.",
 				createReward());
 		/*
 		 * Player has finished the quest and can get additional information
@@ -190,14 +190,14 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("詹妮"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"You can find #詹妮 near 塞门镇 at the mill. She mills grain into #flour for you if you bring her a few sheaves.",
+				"You can find #詹妮 near 塞门镇 at the mill. She mills 小麦 into #面粉 for you if you bring her a few sheaves.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("flour"),
+				Arrays.asList("面粉"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"#詹妮 will mill the grain I gave you as reward to flour which you could maybe use for #面包?",
+				"#詹妮 will mill the 小麦 I gave you as reward to 面粉 which you could maybe use for #面包?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -225,7 +225,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("erna"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Erna is the assistant to #Leander in the bakery. If you bring her #flour, she will bake #面包 for you.",
+				"Erna is the assistant to #Leander in the bakery. If you bring her #面粉, she will bake #面包 for you.",
 				null);
 
         /*
@@ -308,7 +308,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 		return new MultipleActions(
 					new IncreaseKarmaAction(5),
 					new IncreaseXPAction(50),
-					new EquipRandomAmountOfItemAction("grain", 10, 20),
+					new EquipRandomAmountOfItemAction("小麦", 10, 20),
 					new SetQuestAction(QUEST_SLOT, "done"));
 	}
 

@@ -42,7 +42,7 @@ public final class ShopList {
 		shops.add("buyfood", "肉", 10);
 		shops.add("buyfood", "spinach", 15);
 		shops.add("buyfood", "火腿", 20);
-		shops.add("buyfood", "flour", 25);
+		shops.add("buyfood", "面粉", 25);
 		shops.add("buyfood", "porcini", 30);
 
 		shops.add("healing", "antidote", 50);
@@ -126,7 +126,7 @@ public final class ShopList {
 		// shops.add("selltools", "pick", 50);
 		// shops.add("selltools", "shovel", 50);
 		shops.add("selltools", "hammer", 60);
-		// used for harvest grain.
+		// used for harvest 小麦.
 		shops.add("selltools", "旧的大镰刀", 120);
         // for harvesting cane fields
 		shops.add("selltools", "镰刀", 80);
@@ -134,7 +134,7 @@ public final class ShopList {
 
 		shops.add("buyiron", "iron", 75);
 
-		shops.add("buygrain", "grain", 1);
+		shops.add("buygrain", "小麦", 1);
 
 		shops.add("sellrings", "订婚戒指", 5000);
 		// gold and gemstones

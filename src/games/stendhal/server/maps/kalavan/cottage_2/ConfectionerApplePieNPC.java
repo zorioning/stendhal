@@ -62,8 +62,8 @@ public class ConfectionerApplePieNPC implements ZoneConfigurator {
 					"You should look for the local beekeeper a little north and then west of here...");
 				addReply("milk",
 					"Perhaps you should visit some farm where you see they have cows...");
-				addReply("flour",
-					"Ahh... I get all my flour at the mill just north of 塞门镇!");
+				addReply("面粉",
+					"Ahh... I get all my 面粉 at the mill just north of 塞门镇!");
 				addReply("egg",
 					"Find some hens and you'll easily find some eggs, too!");
 				addReply("苹果",
@@ -81,7 +81,7 @@ public class ConfectionerApplePieNPC implements ZoneConfigurator {
 
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("flour", Integer.valueOf(2));
+				requiredResources.put("面粉", Integer.valueOf(2));
 				requiredResources.put("honey", Integer.valueOf(1));
 				requiredResources.put("milk", Integer.valueOf(1));
 				requiredResources.put("egg", Integer.valueOf(1));

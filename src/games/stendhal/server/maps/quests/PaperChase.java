@@ -74,7 +74,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		// Each greeting is said by the previous NPC to point to the NPC in the key.
 		greetings.put("Marcus", "My sheep knew that you were on the way to me. ");
 		greetings.put("Eheneumniranin", "Long time ago that someone visited me here. Nice that you found me. ");
-		greetings.put("Balduin", "Ahh, you found me while gathering sheaves of grain with my 镰刀. Great! ");
+		greetings.put("Balduin", "Ahh, you found me while gathering sheaves of 小麦 with my 镰刀. Great! ");
 		greetings.put("Rachel", "It's windy here, isn't it? Hope the latest hint how to find me wasn't too easy. ");
 		greetings.put("Fritz", "Oh I love customers of Ados bank! They are so sweet! ");
 		greetings.put("Alice Farmer", "Smelling fish here, right? That's the spirit of the ocean! ");
@@ -93,7 +93,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 	private void setupTexts() {
 		texts.put("Marcus", "The next person you should find takes care of thieves and other criminals. "
 				  + "He works in a fort near 塞门镇.");
-		texts.put("Eheneumniranin", "You'll have to find the half sickling elf on Ados farm, next. He is always busy while gathering grain.");
+		texts.put("Eheneumniranin", "You'll have to find the half sickling elf on Ados farm, next. He is always busy while gathering 小麦.");
 		texts.put("Balduin", "The next person on your trail sits on top of a really windy mountain.");
 		texts.put("Rachel", "The next lady to find works in a bank and can tell you all about her job.");
 		texts.put("Fritz", "Please go and find the old fisherman in Ados who can tell you great stories about fish. He also has a daughter named 卡若琳.");

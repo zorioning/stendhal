@@ -27,7 +27,7 @@ import utilities.QuestHelper;
 import utilities.ZonePlayerAndNPCTestImpl;
 
 /**
- * Test for MillerNPC: mill grain to flour.
+ * Test for MillerNPC: mill 小麦 to flour.
  *
  * @author Martin Fuchs
  */
@@ -58,7 +58,7 @@ public class MillerNPCTest extends ZonePlayerAndNPCTestImpl {
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi Jenny"));
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 
 		assertTrue(en.step(player, "bye"));
 		assertEquals("Bye.", getReply(npc));
@@ -73,25 +73,25 @@ public class MillerNPCTest extends ZonePlayerAndNPCTestImpl {
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi"));
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 
 		assertTrue(en.step(player, "job"));
-		assertEquals("I run this windmill, where I can #mill people's #grain into flour for them. I also supply the bakery in Semos.", getReply(npc));
+		assertEquals("I run this windmill, where I can #mill people's #小麦 into flour for them. I also supply the bakery in Semos.", getReply(npc));
 
-		assertTrue(en.step(player, "grain"));
+		assertTrue(en.step(player, "小麦"));
 		assertEquals("There's a farm nearby; they usually let people harvest there. You'll need a scythe, of course.", getReply(npc));
 
 		assertTrue(en.step(player, "help"));
 		assertEquals("Do you know the bakery in Semos? I'm proud to say they use my flour. But the wolves ate my delivery boy again recently... they're probably running out.", getReply(npc));
 
 		assertTrue(en.step(player, "mill"));
-		assertEquals("I can only mill a sack of flour if you bring me 5 #'sheaves of grain'.", getReply(npc));
+		assertEquals("I can only mill a sack of flour if you bring me 5 #'sheaves of 小麦'.", getReply(npc));
 
 		assertTrue(en.step(player, "mill flour"));
-		assertEquals("I can only mill a sack of flour if you bring me 5 #'sheaves of grain'.", getReply(npc));
+		assertEquals("I can only mill a sack of flour if you bring me 5 #'sheaves of 小麦'.", getReply(npc));
 
 		assertTrue(en.step(player, "mill two sacks of flour"));
-		assertEquals("I can only mill 2 sacks of flour if you bring me 10 #'sheaves of grain'.", getReply(npc));
+		assertEquals("I can only mill 2 sacks of flour if you bring me 10 #'sheaves of 小麦'.", getReply(npc));
 
 		assertTrue(en.step(player, "mill grain"));
 		assertEquals("Sorry, I don't produce sheaves of grain.", getReply(npc));

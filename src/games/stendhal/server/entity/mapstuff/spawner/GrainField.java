@@ -22,7 +22,7 @@ import games.stendhal.server.entity.item.Item;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * A grain field can be harvested by players who have a 大斧头. After that, it
+ * A 小麦 field can be harvested by players who have a 大斧头. After that, it
  * will slowly regrow; there are several regrowing steps in which the graphics
  * will change to show the progress.
  *

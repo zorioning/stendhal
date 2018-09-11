@@ -162,7 +162,7 @@ public class ZooFood extends AbstractQuest {
 	    items.put("干酪",10);
 	    items.put("cherry",5);
 	    items.put("egg",5);
-		items.put("grain",20);
+		items.put("小麦",20);
 	    items.put("火腿",10);
 	    items.put("honey",5);
 		items.put("肉",15);

@@ -37,7 +37,7 @@ public class PlayerMinedNumberOfItemsConditionTest {
 		assertThat(actual.hashCode(), is(actual.hashCode()));
 		assertThat(actual, is(new PlayerMinedNumberOfItemsCondition(1, "gold")));
 		assertThat(actual.hashCode(), is(new PlayerMinedNumberOfItemsCondition(1, "gold").hashCode()));
-		assertThat(actual, not(is(new PlayerMinedNumberOfItemsCondition(1, "flour"))));
+		assertThat(actual, not(is(new PlayerMinedNumberOfItemsCondition(1, "面粉"))));
 	}
 
 	@Test

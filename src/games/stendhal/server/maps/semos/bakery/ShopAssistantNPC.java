@@ -92,14 +92,14 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 			@Override
 			public void createDialog() {
 				addJob("我是本面包店的助理.");
-				addReply("flour",
-				"我们用的面粉 #flour 是采用东北方的磨坊生产的,本地麦子磨的面粉. 但狼群吃了他们的送货员！如果你能帮匀们带一些过来, 我们能烘焙 #bake 些好吃的面包给你.");
+				addReply("面粉",
+				"我们用的面粉 #面粉 是采用东北方的磨坊生产的,本地麦子磨的面粉. 但狼群吃了他们的送货员！如果你能帮匀们带一些过来, 我们能烘焙 #bake 些好吃的面包给你.");
 				addHelp("面包对你很好, 尤其在你外出冒险时, 不能总吞下红色的生肉. 我的老板 Leander 是这个岛上做的三明治 三明治es 最好的面包师!");
 				addGoodbye();
 
-				// Erna bakes 面包 if you bring her flour.
+				// Erna bakes 面包 if you bring her 面粉.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("flour", 2);
+				requiredResources.put("面粉", 2);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("erna_bake_bread",
 						"bake", "面包", requiredResources, 10 * 60);

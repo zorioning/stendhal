@@ -58,7 +58,7 @@ public class ProducerRegisterTest {
 		assertTrue(producerRegister.getProducers().isEmpty());
 
 		final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-		requiredResources.put("flour", 1);
+		requiredResources.put("面粉", 1);
 		requiredResources.put("cod", 2);
 		requiredResources.put("mackerel", 1);
 		requiredResources.put("leek", 1);

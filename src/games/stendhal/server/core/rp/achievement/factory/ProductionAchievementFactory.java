@@ -66,14 +66,14 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 
 	    final List<String> resourcelist = producerRegister.getProducedItemNames("resource");
 		final String[] resources = resourcelist.toArray(new String[resourcelist.size()]);
-		// at time of writing: gold bar, mithril bar, flour, iron
+		// at time of writing: gold bar, mithril bar, 面粉, iron
 		achievements.add(createAchievement("production.class.resource", "Alchemist", "Produce 5 of each kind of precious metal and resource",
 				Achievement.HARD_BASE_SCORE, true,
 				new PlayerProducedNumberOfItemsCondition(5, resources)));
 
-		achievements.add(createAchievement("production.flour.1000", "詹妮's Assistant", "Produce 1000 flour",
+		achievements.add(createAchievement("production.flour.1000", "詹妮's Assistant", "Produce 1000 面粉",
 				Achievement.EASY_BASE_SCORE, true,
-				new PlayerProducedNumberOfItemsCondition(1000, "flour")));
+				new PlayerProducedNumberOfItemsCondition(1000, "面粉")));
 
 		return achievements;
 	}

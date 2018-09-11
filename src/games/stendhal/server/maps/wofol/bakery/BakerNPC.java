@@ -83,7 +83,7 @@ public class BakerNPC implements ZoneConfigurator {
 				addJob("I #make #pizza. I have learn from the great baker #Leander.");
 				addReply(Arrays.asList("button mushroom", "porcini"),
 				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
-				addReply("flour", "Mill near 塞门镇 produce from grain.");
+				addReply("面粉", "Mill near 塞门镇 produce from 小麦.");
 				addReply("干酪", "Cheese? I know not.");
 				addReply("tomato", "This grow in glass houses.");
 				addReply("火腿", "The pig animal have ham.");
@@ -92,10 +92,10 @@ public class BakerNPC implements ZoneConfigurator {
 				addQuest("#Leander need pizza send. I #make #pizza, you have ingredients.");
 				addGoodbye("You no take candle!");
 
-				// makes a pizza if you bring flour cheese mushroom porcini and ham
+				// makes a pizza if you bring 面粉 cheese mushroom porcini and ham
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("flour", 2);
+				requiredResources.put("面粉", 2);
 				requiredResources.put("干酪", 1);
 				requiredResources.put("tomato", 1);
 				requiredResources.put("button mushroom", 2);
