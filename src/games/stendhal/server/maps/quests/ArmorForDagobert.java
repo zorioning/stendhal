@@ -209,7 +209,7 @@ public class ArmorForDagobert extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Dagobert的皮胸甲,
+				"Dagobert的皮胸甲",
 				"Dagobert, 塞门镇的银行顾问，需要安全保护.",
 				false);
 		prepareRequestingStep();
