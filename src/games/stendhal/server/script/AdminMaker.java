@@ -147,7 +147,7 @@ public class AdminMaker extends ScriptImpl {
 		private final List<Destination> DESTINATIONS = Arrays.asList(
 			new Destination("0_纳尔沃_城", 88, 85),
 			new Destination("-1_纳尔沃_昏暗_遂道_n", 58, 44),
-			new Destination("0_ados_city", 30, 57),
+			new Destination("0_阿多斯_城", 30, 57),
 			new Destination("0_orril_forest_e", 107, 7),
 			new Destination("0_阿多斯_山脉_n2_w2", 10, 100),
 			new Destination("0_塞门_山_北2_e2", 86, 71),

@@ -34,7 +34,7 @@ import utilities.ZonePlayerAndNPCTestImpl;
  */
 public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 
-	private static final String ZONE_NAME = "int_semos_tavern_0";
+	private static final String ZONE_NAME = "int_塞门_酒馆_0";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

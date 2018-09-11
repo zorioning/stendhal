@@ -18,7 +18,7 @@ import games.stendhal.server.pathfinder.Path
 logger.debug("Starting Stendhal Groovy Script") 
                               
 // Adding a sign to the game world that shows Groovy is active
-myZone = "0_semos_city"
+myZone = "0_塞门_镇"
 if(game.setZone(myZone))   // if zone exists
   {  
   // We create now a sign and place it on position 31,50 with some text

@@ -35,7 +35,7 @@ import utilities.ZonePlayerAndNPCTestImpl;
 
 public class GoodiesForRudolphTest extends ZonePlayerAndNPCTestImpl {
 
-	private static final String ZONE_SEMOS = "0_semos_city";
+	private static final String ZONE_SEMOS = "0_塞门_镇";
 
 	private static final String NPC_RUDOLPH = "Rudolph";
 

@@ -67,7 +67,7 @@ public class HatForMonogenesTest {
 		en = npc.getEngine();
 
 		final ZoneConfigurator zoneConf = new TraderNPC();
-		zoneConf.configureZone(new StendhalRPZone("int_semos_tavern"), null);
+		zoneConf.configureZone(new StendhalRPZone("int_塞门_酒馆"), null);
 		npcXin = SingletonRepository.getNPCList().get("Xin Blanca");
 		enXin = npcXin.getEngine();
 

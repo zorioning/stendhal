@@ -110,7 +110,7 @@ public class FishSoup extends AbstractQuest {
 	private void placeSoupFor(final Player player) {
 		final Item soup = SingletonRepository.getEntityManager()
 				.getItem("fish soup");
-		final IRPZone zone = SingletonRepository.getRPWorld().getZone("0_ados_city_n2");
+		final IRPZone zone = SingletonRepository.getRPWorld().getZone("0_阿多斯_城_n2");
 		// place on market table
 		soup.setPosition(64, 15);
 		// only allow player who made soup to eat the soup

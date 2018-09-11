@@ -50,9 +50,9 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 	private static final String[] CITY_ZONES = {
 		"0_kalavan_city",
 		"0_kirdneh_city",
-		"0_ados_city_n",
-		"0_ados_city",
-		"0_ados_city_s",
+		"0_阿多斯_城_n",
+		"0_阿多斯_城",
+		"0_阿多斯_城_s",
 		"0_ados_wall",
 		"0_athor_island"	};
 
@@ -196,7 +196,7 @@ public class HouseBuyingTest extends ZonePlayerAndNPCTestImpl {
 		housePortal = new HousePortal("ados house 50");
 		housePortal.setIdentifier("keep rpzone happy");
 		housePortal.setDestination(ZONE_NAME, "dest");
-		SingletonRepository.getRPWorld().getRPZone("0_ados_city").add(housePortal);
+		SingletonRepository.getRPWorld().getRPZone("0_阿多斯_城").add(housePortal);
 		HouseUtilities.clearCache();
 
 		assertTrue(en.step(player, "50"));

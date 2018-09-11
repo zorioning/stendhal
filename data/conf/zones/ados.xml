@@ -129,7 +129,7 @@
     </attributes>
   </zone>
   
-  <zone name="0_ados_city_n2" level="0" x="500896" y="499744" file="Level 0/ados/city_n2.tmx">
+  <zone name="0_阿多斯_城_n2" level="0" x="500896" y="499744" file="Level 0/ados/city_n2.tmx">
  	  <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -947,7 +947,7 @@ Home for endangered animals
     
   </zone>
   
-  <zone name="0_ados_city_n" level="0" x="500896" y="499872" file="Level 0/ados/city_n.tmx">
+  <zone name="0_阿多斯_城_n" level="0" x="500896" y="499872" file="Level 0/ados/city_n.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -1382,7 +1382,7 @@ Please leave my mail at my neighbour's house.
 	</entity>
     
     <portal x="22" y="17" ref="0">
-      <destination zone="0_ados_city_n" ref="6" />
+      <destination zone="0_阿多斯_城_n" ref="6" />
     </portal>
     
     <entity x="3" y="11">
@@ -1563,7 +1563,7 @@ Please respect the privacy of other customers. Our customer advisor #Rachel will
     
     <!-- Portals -->
     <portal x="15" y="30" ref="0">
-      <destination zone="0_ados_city_n" ref="11" />
+      <destination zone="0_阿多斯_城_n" ref="11" />
     </portal>
     
     <portal x="28" y="28" ref="downstairs">
@@ -1610,7 +1610,7 @@ Please respect the privacy of other customers. Our customer advisor #Rachel will
     
     <!-- Portals -->
     <portal x="26" y="14" ref="0">
-      <destination zone="0_ados_city_n" ref="10" />
+      <destination zone="0_阿多斯_城_n" ref="10" />
     </portal>
     
   </zone>
@@ -1694,11 +1694,11 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="8" y="30" ref="entrance_left">
-      <destination zone="0_ados_city" ref="library_entrance_left" />
+      <destination zone="0_阿多斯_城" ref="library_entrance_left" />
     </portal>
     
     <portal x="21" y="30" ref="entrance_right">
-      <destination zone="0_ados_city" ref="library_entrance_right"/>
+      <destination zone="0_阿多斯_城" ref="library_entrance_right"/>
     </portal>
   </zone>
   
@@ -1710,11 +1710,11 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="12" y="17" ref="entrance_left">
-      <destination zone="0_ados_city_n" ref="tavern_entrance_left" />
+      <destination zone="0_阿多斯_城_n" ref="tavern_entrance_left" />
     </portal>
     
     <portal x="27" y="17" ref="entrance_right">
-      <destination zone="0_ados_city_n" ref="tavern_entrance_right" />
+      <destination zone="0_阿多斯_城_n" ref="tavern_entrance_right" />
     </portal>
     
   </zone>
@@ -1722,7 +1722,7 @@ You should never dive with a cold or severe allergy because, you may not be able
   <zone name="int_ados_zaras_house_0" file="interiors/ados/zaras_house_0.tmx">
     <!-- Portals -->
     <portal x="8" y="14" ref="entrance_zaras_house">
-      <destination zone="0_ados_city_n" ref="zaras_house_entrance" />
+      <destination zone="0_阿多斯_城_n" ref="zaras_house_entrance" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
         <parameter name="key">small key</parameter>
         <parameter name="rejected">Zara would be angry if you forgot the key inside her house.</parameter>
@@ -1772,7 +1772,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="4" y="14" ref="entrance_goldsmith">
-      <destination zone="0_ados_city_n" ref="goldsmith_entrance"/>
+      <destination zone="0_阿多斯_城_n" ref="goldsmith_entrance"/>
     </portal>
     
   </zone>
@@ -1804,7 +1804,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="10" y="14" ref="entrance">
-   	  <destination zone="0_ados_city_n2" ref="carolines_house_entrance" />
+   	  <destination zone="0_阿多斯_城_n2" ref="carolines_house_entrance" />
     </portal>
     
   </zone>
@@ -2113,11 +2113,11 @@ You should never dive with a cold or severe allergy because, you may not be able
   <zone name="int_ados_storage" file="interiors/ados/storage.tmx">
     <!-- Portals -->
     <portal x="14" y="30" ref="storage_inside_left">
-      <destination zone="0_ados_city_n" ref="storage_outside_1"/>
+      <destination zone="0_阿多斯_城_n" ref="storage_outside_1"/>
     </portal>
     
     <portal x="15" y="30" ref="storage_inside_right">
-      <destination zone="0_ados_city_n" ref="storage_outside_5" />
+      <destination zone="0_阿多斯_城_n" ref="storage_outside_5" />
     </portal>
     
   </zone> 
@@ -2127,11 +2127,11 @@ You should never dive with a cold or severe allergy because, you may not be able
     <configurator class-name="games.stendhal.server.maps.ados.sewingroom.SeamstressNPC" />
     
     <portal x="6" y="18" ref="sewing_entrance_left">
-      <destination zone="0_ados_city" ref="sewing_entrance" />
+      <destination zone="0_阿多斯_城" ref="sewing_entrance" />
     </portal>
     
     <portal x="7" y="18" ref="sewing_entrance_right">
-      <destination zone="0_ados_city" ref="sewing_entrance" />
+      <destination zone="0_阿多斯_城" ref="sewing_entrance" />
     </portal>
     
     <!-- Signs -->
@@ -2174,7 +2174,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="6" y="18" ref="twilight_door_left">
-      <destination zone="0_ados_city" ref="sewing_entrance" />
+      <destination zone="0_阿多斯_城" ref="sewing_entrance" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.QuestCompletedPortal">
         <parameter name="quest">mithril_cloak</parameter>
         <parameter name="rejected">The only way out is to help Ida by making her well again. Find the elixir she needs.</parameter>
@@ -2182,7 +2182,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     </portal>
     
     <portal x="7" y="18" ref="twilight_door_right">
-      <destination zone="0_ados_city" ref="sewing_entrance" />
+      <destination zone="0_阿多斯_城" ref="sewing_entrance" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.QuestCompletedPortal">
         <parameter name="quest">mithril_cloak</parameter>
         <parameter name="rejected">The only way out is to help Ida by making her well again. Find the elixir she needs.</parameter>
@@ -2199,7 +2199,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="15" y="30" ref="bar_entrance">
-      <destination zone="0_ados_city" ref="bar" />
+      <destination zone="0_阿多斯_城" ref="bar" />
     </portal>
     
     <portal x="28" y="2" ref="upstair_left">
@@ -2243,7 +2243,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="22" y="17" ref="entrance">
-      <destination zone="0_ados_city" ref="town_hall_entrance" />
+      <destination zone="0_阿多斯_城" ref="town_hall_entrance" />
     </portal>
     
     <portal x="4" y="4" ref="upstairs">
@@ -2652,7 +2652,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="8" y="14" ref="entrance_fishermans_hut_west">
-      <destination zone="0_ados_city" ref="fishermans_hut_west_entrance" />
+      <destination zone="0_阿多斯_城" ref="fishermans_hut_west_entrance" />
     </portal>
     
   </zone>
@@ -2663,7 +2663,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     
     <!-- Portals -->
     <portal x="8" y="14" ref="entrance_fishermans_hut_north">
-      <destination zone="0_ados_city" ref="fishermans_hut_north_entrance" />
+      <destination zone="0_阿多斯_城" ref="fishermans_hut_north_entrance" />
     </portal>
     
   </zone>
@@ -2725,7 +2725,7 @@ My fee:
     
     <!-- Portals --> 
     <portal x="8" y="14" ref="entrance_meat_market">
-      <destination zone="0_ados_city" ref="meat_market_entrance" />
+      <destination zone="0_阿多斯_城" ref="meat_market_entrance" />
     </portal>
     
   </zone>
@@ -2733,11 +2733,11 @@ My fee:
   <zone name="int_阿多斯_城堡_入口" file="interiors/ados/castle_entrance.tmx">
     <!-- entrance -->
     <portal x="15" y="30" ref="entranceleft">
-      <destination zone="0_ados_city" ref="castle_left_entrance" />
+      <destination zone="0_阿多斯_城" ref="castle_left_entrance" />
     </portal>
     
     <portal x="16" y="30" ref="entranceright">
-      <destination zone="0_ados_city" ref="castle_left_entrance" />
+      <destination zone="0_阿多斯_城" ref="castle_left_entrance" />
     </portal>
     
     <!--hallway-->
@@ -3099,15 +3099,15 @@ My fee:
     
     <!-- garden --> 
     <portal x="15" y="29" ref="outgardenleft">
-      <destination zone="0_ados_city" ref="ingardenleft" />
+      <destination zone="0_阿多斯_城" ref="ingardenleft" />
     </portal>
     
     <portal x="16" y="29" ref="outgardencenter">
-      <destination zone="0_ados_city" ref="ingardenright" />
+      <destination zone="0_阿多斯_城" ref="ingardenright" />
     </portal>
     
     <portal x="17" y="29" ref="outgardenright">
-      <destination zone="0_ados_city" ref="ingardenright" />
+      <destination zone="0_阿多斯_城" ref="ingardenright" />
     </portal>
     
     <!-- secret dungeon-->
@@ -3120,7 +3120,7 @@ My fee:
   <zone name="int_阿多斯_城堡_地牢" file="interiors/ados/castle_dungeons.tmx">
     <!-- Portals -->
     <portal x="33" y="29" ref="entrance1">
-      <destination zone="0_ados_city" ref="castledungeons" />
+      <destination zone="0_阿多斯_城" ref="castledungeons" />
     </portal>
     
     <portal x="46" y="3" ref="entrance2">
@@ -3128,7 +3128,7 @@ My fee:
     </portal>
     
     <portal x="9" y="27" ref="crawlyspacedown">
-      <destination zone="-1_ados_city" ref="crawlyspaceup" />
+      <destination zone="-1_阿多斯_城" ref="crawlyspaceup" />
     </portal>
     
   </zone>
@@ -3141,7 +3141,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="entrance">
-      <destination zone="0_ados_city" ref="ross_house_entrance" />
+      <destination zone="0_阿多斯_城" ref="ross_house_entrance" />
     </portal>
     
   </zone>
@@ -3161,7 +3161,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_50" />
+      <destination zone="0_阿多斯_城_n" ref="house_50" />
     </portal>
     
     <portal x="12" y="14" ref="up">
@@ -3212,7 +3212,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_51" />
+      <destination zone="0_阿多斯_城_n" ref="house_51" />
     </portal>
     
     <portal x="3" y="1" ref="up">
@@ -3264,7 +3264,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_52"/>
+      <destination zone="0_阿多斯_城_n" ref="house_52"/>
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3305,7 +3305,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_53" />
+      <destination zone="0_阿多斯_城_n" ref="house_53" />
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3339,11 +3339,11 @@ My fee:
     
     <!-- Portals -->
     <portal x="9" y="14" ref="in_left">
-      <destination zone="0_ados_city_n" ref="house_54"/>
+      <destination zone="0_阿多斯_城_n" ref="house_54"/>
     </portal>
     
     <portal x="10" y="14" ref="in_right">
-      <destination zone="0_ados_city_n" ref="house_54"/>
+      <destination zone="0_阿多斯_城_n" ref="house_54"/>
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3389,11 +3389,11 @@ My fee:
     
     <!-- Portals -->
     <portal x="9" y="14" ref="in_left">
-      <destination zone="0_ados_city_n" ref="house_55" />
+      <destination zone="0_阿多斯_城_n" ref="house_55" />
     </portal>
     
     <portal x="10" y="14" ref="in_right">
-      <destination zone="0_ados_city_n" ref="house_55" />
+      <destination zone="0_阿多斯_城_n" ref="house_55" />
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3442,7 +3442,7 @@ My fee:
     </configurator>
     
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_56" />
+      <destination zone="0_阿多斯_城_n" ref="house_56" />
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3485,7 +3485,7 @@ My fee:
     </configurator>
     
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_57" />
+      <destination zone="0_阿多斯_城_n" ref="house_57" />
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3539,7 +3539,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_58"/>
+      <destination zone="0_阿多斯_城_n" ref="house_58"/>
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3603,7 +3603,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_59" />
+      <destination zone="0_阿多斯_城_n" ref="house_59" />
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3644,7 +3644,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_60"/>
+      <destination zone="0_阿多斯_城_n" ref="house_60"/>
     </portal>
     <portal x="3" y="3" ref="up">
       <destination zone="int_阿多斯_公寓_60_1" ref="down"/>
@@ -3696,7 +3696,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_61"/>
+      <destination zone="0_阿多斯_城_n" ref="house_61"/>
     </portal>
     <portal x="3" y="3" ref="up">
       <destination zone="int_阿多斯_公寓_61_1" ref="down"/>
@@ -3760,7 +3760,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="7" y="14" ref="in">
-      <destination zone="0_ados_city_n" ref="house_62" />
+      <destination zone="0_阿多斯_城_n" ref="house_62" />
     </portal>
     
     <portal x="3" y="3" ref="up">
@@ -3804,7 +3804,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="21" y="17" ref="in">
-      <destination zone="0_ados_city" ref="house_63" />
+      <destination zone="0_阿多斯_城" ref="house_63" />
     </portal>
     
   </zone>
@@ -3824,7 +3824,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="21" y="17" ref="in">
-      <destination zone="0_ados_city" ref="house_64" />
+      <destination zone="0_阿多斯_城" ref="house_64" />
     </portal>
     
   </zone>
@@ -3844,7 +3844,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="21" y="18" ref="in">
-      <destination zone="0_ados_city" ref="house_65"/>
+      <destination zone="0_阿多斯_城" ref="house_65"/>
     </portal>
     
   </zone>
@@ -3864,7 +3864,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="20" y="19" ref="in">
-      <destination zone="0_ados_city" ref="house_66"/>
+      <destination zone="0_阿多斯_城" ref="house_66"/>
     </portal>
     
     <!-- Tables -->
@@ -3921,7 +3921,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="11" y="21" ref="in">
-      <destination zone="0_ados_city" ref="house_67" />
+      <destination zone="0_阿多斯_城" ref="house_67" />
     </portal>
     
   </zone>
@@ -3935,7 +3935,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="13" y="21" ref="in">
-      <destination zone="0_ados_city" ref="house_68"/>
+      <destination zone="0_阿多斯_城" ref="house_68"/>
     </portal>
     
   </zone>
@@ -3949,7 +3949,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="1" y="15" ref="in">
-      <destination zone="0_ados_city" ref="house_69" />
+      <destination zone="0_阿多斯_城" ref="house_69" />
     </portal>
     
     <!-- Interactive sounds -->
@@ -3986,7 +3986,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="12" y="22" ref="in">
-      <destination zone="0_ados_city" ref="house_70"/>
+      <destination zone="0_阿多斯_城" ref="house_70"/>
       <attribute name="resistance">0</attribute>
     </portal>
     
@@ -4425,7 +4425,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_city" level="0" x="500896" y="500000" file="Level 0/ados/city.tmx">
+  <zone name="0_阿多斯_城" level="0" x="500896" y="500000" file="Level 0/ados/city.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -4782,7 +4782,7 @@ My fee:
     
   </zone>
   
-  <zone name="0_ados_city_s" level="0" x="500896" y="500128" file="Level 0/ados/city_s.tmx">
+  <zone name="0_阿多斯_城_s" level="0" x="500896" y="500128" file="Level 0/ados/city_s.tmx">
     <attributes>
       <parameter name="color_method">time</parameter>
       <parameter name="weather">varying</parameter>
@@ -4972,15 +4972,15 @@ My fee:
     
     <!-- Portals -->
     <portal x="19" y="19" ref="entrance_left">
-      <destination zone="0_ados_city_s" ref="church_entrance" />
+      <destination zone="0_阿多斯_城_s" ref="church_entrance" />
     </portal>
     
     <portal x="20" y="19" ref="entrance_centre">
-      <destination zone="0_ados_city_s" ref="church_entrance" />
+      <destination zone="0_阿多斯_城_s" ref="church_entrance" />
     </portal>
     
     <portal x="21" y="19" ref="entrance_right">
-      <destination zone="0_ados_city_s" ref="church_entrance" />
+      <destination zone="0_阿多斯_城_s" ref="church_entrance" />
     </portal>
     
     <portal x="2" y="2" ref="upstairs">
@@ -5027,7 +5027,7 @@ My fee:
     </configurator>
     
     <portal x="" y="" ref="in">
-      <destination zone="0_ados_city_s" ref="house_78" />
+      <destination zone="0_阿多斯_城_s" ref="house_78" />
     </portal>
     
   </zone>
@@ -5040,7 +5040,7 @@ My fee:
     </configurator>
     
     <portal x="" y="" ref="in">
-      <destination zone="0_ados_city_s" ref="house_79" />
+      <destination zone="0_阿多斯_城_s" ref="house_79" />
     </portal>
     
     <entity x="4" y="6">
@@ -5069,7 +5069,7 @@ My fee:
     </configurator>
     
     <portal x="" y="" ref="in">
-      <destination zone="0_ados_city_s" ref="house_80" />
+      <destination zone="0_阿多斯_城_s" ref="house_80" />
     </portal>
     
   </zone>
@@ -5082,7 +5082,7 @@ My fee:
     </configurator>
     
     <portal x="" y="" ref="in">
-      <destination zone="0_ados_city_s" ref="house_81" />
+      <destination zone="0_阿多斯_城_s" ref="house_81" />
     </portal>
     
   </zone>
@@ -5095,7 +5095,7 @@ My fee:
     </configurator>
     
     <portal x="" y="" ref="in">
-      <destination zone="0_ados_city_s" ref="house_82" />
+      <destination zone="0_阿多斯_城_s" ref="house_82" />
     </portal>
     
   </zone>
@@ -5108,7 +5108,7 @@ My fee:
     </configurator>
     
     <portal x="" y="" ref="in">
-      <destination zone="0_ados_city_s" ref="house_83" />
+      <destination zone="0_阿多斯_城_s" ref="house_83" />
     </portal>
     
   </zone>
@@ -5121,7 +5121,7 @@ My fee:
     </configurator>
     
     <portal x="" y="" ref="in">
-      <destination zone="0_ados_city_s" ref="house_84"/>
+      <destination zone="0_阿多斯_城_s" ref="house_84"/>
     </portal>
     
   </zone>
@@ -5131,7 +5131,7 @@ My fee:
     
     <!-- Portals -->
     <portal x="8" y="14" ref="entrance_fishermans_hut_south">
-      <destination zone="0_ados_city_s" ref="fishermans_hut_south_entrance" />
+      <destination zone="0_阿多斯_城_s" ref="fishermans_hut_south_entrance" />
     </portal>
     
   </zone>
@@ -5293,7 +5293,7 @@ My fee:
     
   </zone>
   
-  <zone name="-1_ados_city_n" level="-1" x="500896" y="499872" file="Level -1/ados/city_n.tmx">
+  <zone name="-1_阿多斯_城_n" level="-1" x="500896" y="499872" file="Level -1/ados/city_n.tmx">
     <attributes>
       <!-- dingy green -->
       <parameter name="color_method">multiply</parameter>
@@ -5334,7 +5334,7 @@ My fee:
     
   </zone>
   
-  <zone name="-1_ados_city" level="-1" x="500896" y="500000" file="Level -1/ados/city.tmx">  
+  <zone name="-1_阿多斯_城" level="-1" x="500896" y="500000" file="Level -1/ados/city.tmx">  
     <attributes>
       <!-- dingy green -->
       <parameter name="color_method">multiply</parameter>
@@ -5370,7 +5370,7 @@ My fee:
   </zone>
   -->
   
-  <zone name="-1_ados_city_s" level="-1" x="500896" y="500128" file="Level -1/ados/city_s.tmx">
+  <zone name="-1_阿多斯_城_s" level="-1" x="500896" y="500128" file="Level -1/ados/city_s.tmx">
     <attributes>
       <!-- dingy green -->
       <parameter name="color_method">multiply</parameter>

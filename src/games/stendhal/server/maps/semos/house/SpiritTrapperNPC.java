@@ -55,7 +55,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 			setZones.add("0_ados_outside_w");
 			setZones.add("0_阿多斯_城墙_n2");
 			setZones.add("0_阿多斯_城墙_s");
-			setZones.add("0_ados_city_s");
+			setZones.add("0_阿多斯_城_s");
         	new TeleporterBehaviour(buildSemosHouseArea(), setZones, "0_ados", "..., ....");
 	}
 

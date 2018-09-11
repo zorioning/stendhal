@@ -49,9 +49,9 @@ public class HouseBuyingAthorTest extends ZonePlayerAndNPCTestImpl {
 	private static final String[] CITY_ZONES = {
 		"0_kalavan_city",
 		"0_kirdneh_city",
-		"0_ados_city_n",
-		"0_ados_city",
-		"0_ados_city_s",
+		"0_阿多斯_城_n",
+		"0_阿多斯_城",
+		"0_阿多斯_城_s",
 		"0_ados_wall",
 		"0_athor_island"	};
 

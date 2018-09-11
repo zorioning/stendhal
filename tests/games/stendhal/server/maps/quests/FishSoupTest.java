@@ -46,7 +46,7 @@ public class FishSoupTest {
 
 	@Before
 	public void setUp() {
-		final StendhalRPZone zone = new StendhalRPZone("0_ados_city_n2");
+		final StendhalRPZone zone = new StendhalRPZone("0_阿多斯_城_n2");
 		MockStendlRPWorld.get().addRPZone(zone);
 		new FishSoupMakerNPC().configureZone(zone, null);
 

@@ -88,7 +88,7 @@
     <description>You see a 阿多斯城回城卷, it will take you back to 阿多斯城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
-      <infostring value="0_ados_city_n 50 50"/>
+      <infostring value="0_阿多斯_城_n 50 50"/>
       <quantity value="1"/>
       <menu value="Use|Use"/>
     </attributes>

@@ -41,14 +41,14 @@ public class TPPTestHelper implements ITPPQuestConstants {
 
 		final StendhalRPZone playerzone = new StendhalRPZone("int_semos_guard_house");
 		SingletonRepository.getRPWorld().addRPZone(playerzone);
-		final StendhalRPZone piperzone = new StendhalRPZone("0_ados_city_n",100,100);
+		final StendhalRPZone piperzone = new StendhalRPZone("0_阿多斯_城_n",100,100);
 		SingletonRepository.getRPWorld().addRPZone(piperzone);
 
 		// this is for piper movements
 		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("0_ados_wall_n2",100,100));
-		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("0_ados_city_n2",100,100));
-		//SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("0_ados_city_n",100,100));
-		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("0_ados_city",100,100));
+		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("0_阿多斯_城_n2",100,100));
+		//SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("0_阿多斯_城_n",100,100));
+		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("0_阿多斯_城",100,100));
 		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("int_ados_town_hall",100,100));
 		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("int_ados_town_hall_1",100,100));
 		SingletonRepository.getRPWorld().addRPZone(new StendhalRPZone("int_ados_town_hall_2",100,100));

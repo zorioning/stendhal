@@ -36,7 +36,7 @@ import utilities.ZonePlayerAndNPCTestImpl;
 public class CoalForHaunchyTest extends ZonePlayerAndNPCTestImpl {
 
 	private String questSlot;
-	private static final String ZONE_NAME = "0_ados_city_n2";
+	private static final String ZONE_NAME = "0_阿多斯_城_n2";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

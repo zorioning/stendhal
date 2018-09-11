@@ -92,9 +92,9 @@ public interface ITPPQuestConstants {
 			"int_ados_town_hall_1",
 			"int_ados_town_hall_2",
 			"int_ados_town_hall_3",
-			"0_ados_city_n",
-			"0_ados_city",
-			"0_ados_city_s");
+			"0_阿多斯_城_n",
+			"0_阿多斯_城",
+			"0_阿多斯_城_s");
 
 	/**
 	 * List of creatures types to create.

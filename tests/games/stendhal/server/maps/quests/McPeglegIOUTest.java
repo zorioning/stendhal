@@ -37,7 +37,7 @@ public class McPeglegIOUTest extends ZonePlayerAndNPCTestImpl {
 	private Engine en = null;
 
 	private String questSlot;
-	private static final String ZONE_NAME = "int_semos_tavern_1";
+	private static final String ZONE_NAME = "int_塞门_酒馆_1";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
