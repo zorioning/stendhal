@@ -64,17 +64,23 @@ public class HealerNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-			        addGreeting("Greetings. Can I #help you?");
-				addJob("I practise alchemy and have the ability to #heal others.");
+			        //addGreeting("Greetings. Can I #help you?");
+				addGreeting("你好， 我可以 #帮助 你吗?");
+				//addJob("I practise alchemy and have the ability to #heal others.");
+				addJob("我练习炼金术，有能力 #heal others.");
 				new HealerAdder().addHealer(this, 500);
-				addReply("magical", "We're all capable of magic here. There are different kinds, of course. My favourite is the Sunlight Spell to keep grass and flowers growing underground.");
-				addHelp("I have #magical powers to #heal your ailments.");
-				addQuest("I need nothing, thank you.");
- 				addGoodbye("Fare thee well.");
+				//addReply("magical", "We're all capable of magic here. There are different kinds, of course. My favourite is the Sunlight Spell to keep grass and flowers growing underground.");
+				addReply("magical", "我们都拥有魔力。 当然，他们有着不同的种类。 我最爱的是让花草能在地下生长的阳光法术。");
+				//addHelp("I have #magical powers to #heal your ailments.");
+				addHelp("我有 #magical 力量 来 #heal 你的疾病。");
+				//addQuest("I need nothing, thank you.");
+				addQuest("我什么都不需要，谢谢你。");
+				//addGoodbye("Fare thee well.");
+ 				addGoodbye("祝你好运，");
 			}
 		};
-
-		npc.setDescription("You see a quiet woman with a benign face.");
+		//npc.setDescription("You see a quiet woman with a benign face.");
+		npc.setDescription("你看见了一个有着善良面庞的安静的女人");
 		npc.setEntityClass("cloakedwomannpc");
 		npc.setPosition(5, 25);
 		npc.initHP(100);
