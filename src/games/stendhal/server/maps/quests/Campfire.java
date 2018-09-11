@@ -263,7 +263,7 @@ public class Campfire extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Campfire",
+				"营火",
 				"莎丽 想做一顿野餐，但木材不太够",
 				true);
 		prepareRequestingStep();
@@ -272,7 +272,7 @@ public class Campfire extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "Campfire";
+		return "营火";
 	}
 
 	@Override

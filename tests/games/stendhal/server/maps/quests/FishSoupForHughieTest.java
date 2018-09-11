@@ -78,7 +78,7 @@ public class FishSoupForHughieTest {
 		en.step(player, "help");
 		assertEquals("I can sell you a bottle of milk or some butter from our dairy cows if you like.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("If you can write Junit tests then my daughter needs you. Just ask Diogenes how to help the project.", getReply(npc));
+		assertEquals("If you can write Junit tests then my daughter needs you. Just ask 迪金斯 how to help the project.", getReply(npc));
 		en.step(player, "job");
 		assertEquals("My husband runs this farm, and mostly I look after his younger sister and her boy, they are upstairs. If you could check on them that'd be a help, I heard her crying earlier.", getReply(npc));
 		en.step(player, "bye");

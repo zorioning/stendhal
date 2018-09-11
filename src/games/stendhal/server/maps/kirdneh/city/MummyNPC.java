@@ -54,14 +54,14 @@ public class MummyNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				//Greeting message in quest given (ChocolateForElisabeth)
+				//Greeting message in quest given (ChocolateFor伊丽莎白)
 				addJob("I'm a fulltime mom and I love it.");
 				addHelp("I've heard that some of the #houses around the town are still for sale.");
 				addReply("houses", "They are huge! A friend of mine owns one and invited me a few times.");
 				addOffer("Oh I have no #offers for you, sorry.");
 				addReply("offers", "Did you visit the Kirdneh market already? It smells nice there.");
-				addQuest("I don't have a quest for you but my daughter #Elisabeth searches for chocolate.");
-				addReply("Elisabeth", "She is such a lovely child, I will always care of her!");
+				addQuest("I don't have a quest for you but my daughter #伊丽莎白 searches for chocolate.");
+				addReply("伊丽莎白", "She is such a lovely child, I will always care of her!");
 				addGoodbye("Thank you for meeting us here.");
 			}
 
@@ -74,7 +74,7 @@ public class MummyNPC implements ZoneConfigurator {
 		npc.setEntityClass("mothernpc");
 		npc.setPosition(84, 9);
 		npc.initHP(100);
-		npc.setDescription("You see Carey. She takes care of her daughter Elisabeth.");
+		npc.setDescription("You see Carey. She takes care of her daughter 伊丽莎白.");
 		zone.add(npc);
 	}
 }

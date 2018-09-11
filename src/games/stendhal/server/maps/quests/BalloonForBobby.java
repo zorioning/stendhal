@@ -128,7 +128,7 @@ public class BalloonForBobby extends AbstractQuest {
 								new PlayerIsWearingOutfitCondition(balloonList[2]),
 								new PlayerIsWearingOutfitCondition(balloonList[3]))),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Is that 气球 for me?",
+				"这气球是给我的吗?",
 				null);
 
 		npc.add(

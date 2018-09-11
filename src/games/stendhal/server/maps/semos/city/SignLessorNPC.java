@@ -51,7 +51,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.util.StringUtils;
 
 /**
- * A merchant (original name: Gordon) who rents signs to players.
+ * A merchant (original name: 哥尔丹) who rents signs to players.
  *
  * The player has to have at least level 5 to prevent abuse by newly created characters.
  */
@@ -72,25 +72,25 @@ public class SignLessorNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Gordon") {
+		final SpeakerNPC npc = new SpeakerNPC("哥尔丹") {
 
 			@Override
 			public void createDialog() {
-				addGreeting("Hi, 我出租 #rent 标识，同时也移除 #remove 旧标识.");
-				addJob("一次出租 #rent 标识一天.");
-				addHelp("如果你想阻用 #rent 一个标识, 只用告诉我需要写的标识名字.");
+				addGreeting("Hi, 我 #租用 标牌，同时也 #移除 旧标牌.");
+				addJob("一次 #租用 标牌一天.");
+				addHelp("如果你想 #租用 一个标牌, 只用告诉我需要写的标牌名字.");
 				setPlayerChatTimeout(CHAT_TIMEOUT);
 
 				add(ConversationStates.ATTENDING, "",
 					new AndCondition(getRentMatchCond(), new LevelLessThanCondition(6)),
 					ConversationStates.ATTENDING,
-					"Oh 抱歉，我不给经验像你一样少的人提供标识出租服务。",
+					"Oh 抱歉，我不给经验像你一样少的人提供广告标牌出租服务。",
 					null);
 
 				add(ConversationStates.ATTENDING, "",
 					new AndCondition(getRentMatchCond(), new LevelGreaterThanCondition(5), new NotCondition(new TextHasParameterCondition())),
 					ConversationStates.ATTENDING,
-					"只要告诉我你想租用 #rent ，接下来再告诉我需要写的标识名字。",
+					"只要告诉我你想 #租用  ，接下来再告诉我需要写的标识名字。",
 					null);
 
 				add(ConversationStates.ATTENDING, "",
@@ -102,10 +102,10 @@ public class SignLessorNPC implements ZoneConfigurator {
 						public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 							text = sentence.getOriginalText().substring(5).trim();
 
-							String reply = "标上标识24小时要花费 " + MONEY + " 钱，你想租吗？";
+							String reply = "广告标牌24小时要花费 " + MONEY + " 钱，你想租吗？";
 
 							if (rentedSignList.getByName(player.getName()) != null) {
-								reply = reply + " 请写下标识名称，我会替换掉你的旧标识.";
+								reply = reply + " 请写下标牌名称，我会替换掉你的旧标牌.";
 							}
 
 							npc.say(reply);
@@ -134,16 +134,16 @@ public class SignLessorNPC implements ZoneConfigurator {
 					ConversationStates.ATTENDING,
 					"如果你改变主意，再告诉我就行。", null);
 
-				add(ConversationStates.ATTENDING, "remove",
+				add(ConversationStates.ATTENDING, "陊除",
 					new PlayerHasStorableEntityCondition(rentedSignList),
 					ConversationStates.ATTENDING,
-					"Ok, 我马上移除你的标识.",
+					"Ok, 我马上移除你的标牌.",
 					new RemoveStorableEntityAction(rentedSignList));
 
-				add(ConversationStates.ATTENDING, "remove",
+				add(ConversationStates.ATTENDING, "陊除",
 					new NotCondition(new PlayerHasStorableEntityCondition(rentedSignList)),
 					ConversationStates.ATTENDING,
-					"你没有任何的标识，所以我不能移除.", null);
+					"你没有任何的标牌，所以我不能移除.", null);
 
 				// admins may remove signs (even low level admins)
 				add(ConversationStates.ATTENDING, "delete",
@@ -158,11 +158,11 @@ public class SignLessorNPC implements ZoneConfigurator {
 							}
 							final String playerName = sentence.getOriginalText().substring("delete ".length()).trim();
 							if (rentedSignList.removeByName(playerName)) {
-								final String message = player.getName() + " 从 " + playerName + " 删除标识";
+								final String message = player.getName() + " 从 " + playerName + " 删除标牌";
 								SingletonRepository.getRuleProcessor().sendMessageToSupporters("SignLessorNPC", message);
 								new GameEvent(player.getName(), "sign", "deleted", playerName).raise();
 							} else {
-								player.sendPrivateText("找不到 " + playerName +" 的标识");
+								player.sendPrivateText("找不到 " + playerName +" 的标牌");
 							}
 						}
 
@@ -190,7 +190,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.setEntityClass("signguynpc");
 		zone.add(npc);
-		npc.setDescription("你见到了 Gordon. 他一直盯着经过他身边人们的标识看");
+		npc.setDescription("你见到了 哥尔丹. 他一直盯着经过他身边人们的标识看");
 	}
 
 	private static ChatCondition getRentMatchCond() {
@@ -200,7 +200,7 @@ public class SignLessorNPC implements ZoneConfigurator {
 				String txt = sentence.getOriginalText();
 
             	//TODO replaced by using sentence matching "[you] rent"
-				if (txt.startsWith("rent") || txt.startsWith("you rent")) {
+				if (txt.startsWith("租用") || txt.startsWith("租")) {
 					return true;
 				} else {
 					return false;
@@ -232,18 +232,18 @@ public class SignLessorNPC implements ZoneConfigurator {
 			// confirm, log, tell postman
 			if (success) {
 				player.drop("money", MONEY);
-				npc.say("OK, 让我把你的标识放上.");
+				npc.say("OK, 让我把你的标牌放上.");
 
 				// inform IRC using postman
 				final Player postman = SingletonRepository.getRuleProcessor().getPlayer("postman");
-				String message = player.getName() + " 租用一个标识说 \"" + text + "\"";
+				String message = player.getName() + " 租用一个标牌说 \"" + text + "\"";
 				if (postman != null) {
 					postman.sendPrivateText(message);
 				}
 				logger.log(Level.toLevel(System.getProperty("stendhal.support.loglevel"), Level.DEBUG), message);
-				new GameEvent(player.getName(), "sign", "rent", text).raise();
+				new GameEvent(player.getName(), "租用", "标牌", text).raise();
 			} else {
-				npc.say("抱歉，现在没有更多的标识位了，我没有空间能写下了.");
+				npc.say("抱歉，现在没有更多的标牌位，没有空间能写下了.");
 			}
 		}
 

@@ -217,7 +217,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 					seller.say("附近没有看到你的羊！把羊带过来，我好给你出个价.");
 				} else if (getValue(res, sheep) < SheepSellerNPC.BUYING_PRICE) {
 					// prevent newbies from selling their sheep too early
-					seller.say("Nah, 那只羊太瘦了。多给它喂点红树莓, 把它喂肥点再过来吧.");
+					seller.say("呐, 那只羊太瘦了。多给它喂点红树莓, 把它喂肥点再过来吧.");
 				} else {
 					seller.say("谢谢！这是你的钱.");
 					payPlayer(res, player);

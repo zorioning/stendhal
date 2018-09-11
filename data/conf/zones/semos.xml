@@ -2673,7 +2673,7 @@ Holy mackerel! These chips are tasty.
     <entity x="24" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a sock belonging to Starkad.  Diogenes is pranking him.  :D</attribute>
+      <attribute name="text">You see a sock belonging to Starkad.  迪金斯 is pranking him.  :D</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2745,7 +2745,7 @@ Holy mackerel! These chips are tasty.
     <entity x="22" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">Gordon, I miss you so.  Please come to see me sometime.  Sorry to have this put up on the bank bulletin board, but I don't have your address. Femme Fatale</attribute>
+      <attribute name="text">哥尔丹, I miss you so.  Please come to see me sometime.  Sorry to have this put up on the bank bulletin board, but I don't have your address. Femme Fatale</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>

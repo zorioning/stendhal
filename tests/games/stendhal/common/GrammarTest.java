@@ -248,7 +248,7 @@ public class GrammarTest {
 	 */
 	@Test
 	public void testPluralItem() {
-		testPluralisationAndSingularisation("chocolate bars","chocolate bar");
+		testPluralisationAndSingularisation("巧克力棒s","巧克力棒");
 		testPluralisationAndSingularisation("money", "money");
 		testPluralisationAndSingularisation("sandwiches", "sandwich");
 		testPluralisationAndSingularisation("knives", "knife");

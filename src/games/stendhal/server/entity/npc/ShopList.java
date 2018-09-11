@@ -365,7 +365,7 @@ public final class ShopList {
 		shops.add("sellhotdogs", "sandwich", 120);
 		shops.add("sellhotdogs", "vanilla shake", 110);
 		shops.add("sellhotdogs", "chocolate shake", 110);
-		shops.add("sellhotdogs", "chocolate bar", 100);
+		shops.add("sellhotdogs", "巧克力棒", 100);
 		shops.add("sellhotdogs", "snowglobe", 200);
 
 		// magic city barmaid)
@@ -375,7 +375,7 @@ public final class ShopList {
 		shops.add("sellmagic", "sandwich", 120);
 		shops.add("sellmagic", "vanilla shake", 110);
 		shops.add("sellmagic", "chocolate shake", 110);
-		shops.add("sellmagic", "chocolate bar", 100);
+		shops.add("sellmagic", "巧克力棒", 100);
 		shops.add("sellmagic", "licorice", 100);
 
 		// kirdneh city armor)
@@ -413,7 +413,7 @@ public final class ShopList {
 
 		// party time! For maria for example. Bit more expensive than normal
 		shops.add("sellparty", "pina colada", 100);
-		shops.add("sellparty", "chocolate bar", 100);
+		shops.add("sellparty", "巧克力棒", 100);
 		shops.add("sellparty", "beer", 10);
 		shops.add("sellparty", "wine", 15);
 		shops.add("sellparty", "vanilla shake", 150);
@@ -457,7 +457,7 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "vanilla shake", 120);
 		shops.add("sellrevivalweeks", "chocolate shake", 120);
 		shops.add("sellrevivalweeks", "icecream", 60);
-		shops.add("sellrevivalweeks", "chocolate bar", 100);
+		shops.add("sellrevivalweeks", "巧克力棒", 100);
 		shops.add("sellrevivalweeks", "grilled steak", 250);
 		shops.add("sellrevivalweeks", "hotdog", 170);
 		shops.add("sellrevivalweeks", "cheeseydog", 175);

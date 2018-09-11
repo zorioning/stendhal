@@ -51,27 +51,27 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * Quest to buy chocolate for a little girl called Elisabeth.
+ * Quest to buy chocolate for a little girl called 伊丽莎白.
  * Ask her mother Carey for a quest and she will ask you to get some chocolate for her daughter.
- * Get some chocolate and bring it to Elisabeth.
+ * Get some chocolate and bring it to 伊丽莎白.
  *
  * @author Vanessa Julius idea by miasma
  *
  *
- * QUEST: Chocolate for Elisabeth
+ * QUEST: Chocolate for 伊丽莎白
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Elisabeth (a young girl who loves chocolate)</li>
- * <li>Carey (Elisabeth's mother)</li>
+ * <li>伊丽莎白 (a young girl who loves chocolate)</li>
+ * <li>Carey (伊丽莎白's mother)</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Elisabeth asks you to bring her a chocolate bar.</li>
+ * <li>伊丽莎白 asks you to bring her a 巧克力棒.</li>
  * <li>Get some chocolate .</li>
  * <li>Ask Carey if she allows you to give the chocolate to her daughter.</li>
- * <li>Make Elisabeth happy and get a lovely reward.</li>
+ * <li>Make 伊丽莎白 happy and get a lovely reward.</li>
  * </ul>
  *
  * REWARD:
@@ -98,55 +98,55 @@ public class ChocolateForElisabeth extends AbstractQuest {
 		return QUEST_SLOT;
 	}
 	private void chocolateStep() {
-		final SpeakerNPC npc = npcs.get("Elisabeth");
+		final SpeakerNPC npc = npcs.get("伊丽莎白");
 
-		// first conversation with Elisabeth.
+		// first conversation with 伊丽莎白.
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotStartedCondition(QUEST_SLOT), new QuestNotInStateCondition(QUEST_SLOT, "rejected")),
 				ConversationStates.ATTENDING,
-				"I can't remember when I smelt the good taste of #chocolate the last time...",
+				"我已经忘记了上次那个好吃的 #巧克力 是什么味道了...",
 				null);
 
-		npc.addReply("chocolate", "My mom told me, that chocolate can be found in an assassin school, which is quite #dangerous. She said also that someone sells it in Ados...");
+		npc.addReply("巧克力", "妈妈说, 刺客学校里有巧克力, 那里很 #危险 ,她还说 Ados 城里也有人卖...");
 
-		npc.addReply("dangerous", "Some bandits wait on the road to the school and assassins guard the way there, so mom and I have to stay in Kirdneh because it's safe here...");
+		npc.addReply("危险", "一些强盗埋伏在上学的路上, 还有刺客在那里守卫, 所以妈妈和我只能呆在 Kirdneh ,可能这里安全点...");
 
 		// player is supposed to speak to mummy now
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-						new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("chocolate bar")),
+						new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("巧克力棒")),
 				ConversationStates.IDLE,
-				"My mum wants to know who I was asking for chocolate from now :(",
+				"妈妈想知道我向谁要的巧克力 :(",
 				null);
 
 		// player didn't get chocolate, meanie
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-						new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("chocolate bar"))),
+						new QuestInStateCondition(QUEST_SLOT, "start"), new NotCondition(new PlayerHasItemWithHimCondition("巧克力棒"))),
 				ConversationStates.ATTENDING,
-				"I hope that someone will bring me some chocolate soon...:(",
+				"我希望有人能马上给我巧克力吃...:(",
 				null);
 
 		// player got chocolate and spoke to mummy
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-						new QuestInStateCondition(QUEST_SLOT, "mummy"), new PlayerHasItemWithHimCondition("chocolate bar")),
+						new QuestInStateCondition(QUEST_SLOT, "mummy"), new PlayerHasItemWithHimCondition("巧克力棒")),
 				ConversationStates.QUESTION_1,
-				"Awesome! Is that chocolate for me?",
+				"厉害! 这是给我的巧克力?",
 				null);
 
 		// player spoke to mummy and hasn't got chocolate
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
-						new QuestInStateCondition(QUEST_SLOT, "mummy"), new NotCondition(new PlayerHasItemWithHimCondition("chocolate bar"))),
+						new QuestInStateCondition(QUEST_SLOT, "mummy"), new NotCondition(new PlayerHasItemWithHimCondition("巧克力棒"))),
 				ConversationStates.ATTENDING,
-				"I hope that someone will bring me some chocolate soon...:(",
+				"我希望有人能马上给我巧克力吃...:(",
 				null);
 
 		// player is in another state like eating
@@ -155,7 +155,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestStartedCondition(QUEST_SLOT), new QuestNotInStateCondition(QUEST_SLOT, "start"), new QuestNotInStateCondition(QUEST_SLOT, "mummy")),
 				ConversationStates.ATTENDING,
-				"Hello.",
+				"你好.",
 				null);
 
 		// player rejected quest
@@ -164,7 +164,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "rejected")),
 				ConversationStates.ATTENDING,
-				"Hello.",
+				"你好.",
 				null);
 
 		// player asks about quest for first time (or rejected)
@@ -172,7 +172,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I would really love to have some chocolate. I'd like one bar, please. A dark brown one or a sweet white one or some with flakes. Will you get me one?",
+				"我真的想吃巧克力. 我喜欢成块的深棕色那种, 或者是带白花的, 带花纹的更好. 你能带给我吗?",
 				null);
 
 		// shouldn't happen
@@ -180,7 +180,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I still enjoy the last chocolate bar you brought me, thanks!",
+				"上次你带的 巧克力棒 我很喜欢,谢谢!",
 				null);
 
 		// player can repeat quest
@@ -188,7 +188,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "eating;"), new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"I hope another chocolate bar wouldn't be greedy. Can you get me another one?",
+				"期待你下次带的 巧克力棒 更好吃, 你还能带个不同口味的来吗?",
 				null);
 
 		// player can't repeat quest
@@ -196,7 +196,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "eating;"), new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
 				ConversationStates.ATTENDING,
-				"I've had too much chocolate. I feel sick.",
+				"吃了太多巧克力. 我觉得要吃出病了.",
 				null);
 
 		// player should be bringing chocolate not asking about the quest
@@ -204,7 +204,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT), new NotCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "eating;"))),
 				ConversationStates.ATTENDING,
-				"Waaaaaaaa! Where is my chocolate ...",
+				"哇啊啊! 我的巧克力在哪 ...",
 				null);
 
 		// Player agrees to get the chocolate
@@ -212,7 +212,7 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Thank you!",
+				"谢谢你!",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 2.0));
 
 		// Player says no, they've lost karma
@@ -220,12 +220,12 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"Ok, I'll wait till mommy finds some helpers...",
+				"Ok, 我会等着妈妈找其他的好心人帮忙...",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
-		// Player has got chocolate bar and spoken to mummy
+		// Player has got 巧克力棒 and spoken to mummy
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("chocolate bar"));
+		reward.add(new DropItemAction("巧克力棒"));
 		reward.add(new ChatAction() {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
@@ -242,22 +242,22 @@ public class ChocolateForElisabeth extends AbstractQuest {
 		reward.add(new SetQuestAction(QUEST_SLOT, "eating;"));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT,1));
 		reward.add(new IncreaseKarmaAction(10.0));
-		reward.add(new InflictStatusOnNPCAction("chocolate bar"));
+		reward.add(new InflictStatusOnNPCAction("巧克力棒"));
 
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
-				new PlayerHasItemWithHimCondition("chocolate bar"),
+				new PlayerHasItemWithHimCondition("巧克力棒"),
 				ConversationStates.ATTENDING,
-				"Thank you EVER so much! You are very kind. Here, take a fresh flower as a present.",
+				"太谢谢你了! 你真是好人. 给, 这些鲜花送给你.",
 				new MultipleActions(reward));
 
 
 		// player did have chocolate but put it on ground after question?
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
-				new NotCondition(new PlayerHasItemWithHimCondition("chocolate bar")),
+				new NotCondition(new PlayerHasItemWithHimCondition("巧克力棒")),
 				ConversationStates.ATTENDING,
-				"Hey, where's my chocolate gone?!",
+				"喂, 我的巧克力没了?!",
 				null);
 
 		// Player says no, they've lost karma
@@ -265,19 +265,19 @@ public class ChocolateForElisabeth extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"Waaaaaa! You're a big fat meanie.",
+				"Waaaaaa! 你这个大骗子.",
 				new DecreaseKarmaAction(5.0));
 	}
 
 	private void meetMummyStep() {
 		final SpeakerNPC mummyNPC = npcs.get("Carey");
 
-		// player speaks to mummy before Elisabeth
+		// player speaks to mummy before 伊丽莎白
 		mummyNPC.add(ConversationStates.IDLE,
 					ConversationPhrases.GREETING_MESSAGES,
 					new AndCondition(new GreetingMatchesNameCondition(mummyNPC.getName()),
 							new QuestNotStartedCondition(QUEST_SLOT)),
-					ConversationStates.ATTENDING, "Hello, nice to meet you.",
+					ConversationStates.ATTENDING, "Hello, 很高兴认识你.",
 					null);
 
 		// player is supposed to begetting chocolate
@@ -286,25 +286,25 @@ public class ChocolateForElisabeth extends AbstractQuest {
 					new AndCondition(new GreetingMatchesNameCondition(mummyNPC.getName()),
 							new QuestInStateCondition(QUEST_SLOT, "start")),
 					ConversationStates.ATTENDING,
-					"Oh you met my daughter Elisabeth already. You seem like a nice person so it would be really kind, if you can bring her a chocolate bar because I'm not #strong enough for that.",
+					"你见过我女儿 伊丽莎白 了吧. 你看着很好,一定是个好心人 , 由于我不够 #强大, 希望你能给她带一块 巧克力棒.",
 					new SetQuestAction(QUEST_SLOT, "mummy"));
 
-		mummyNPC.addReply("strong", "I tried to get some chocolate for Elisabeth a few times, but I couldn't make my way through the assassins and bandits running around #there.");
+		mummyNPC.addReply("强大", "我想尽快给 伊丽莎白 找点巧克力吃, 但我没办法穿过 #那里 的小偷和强盗的围堵.");
 
-		mummyNPC.addReply("there", "They live in and around the Ados castle. Take care there! I also heard about #someone who sells chocolate bars.");
+		mummyNPC.addReply("那里", "他们在 Ados 城堡附近活动. 滤主那里! 不过我还听到 #某些人 销售巧克力棒.");
 
-		mummyNPC.addReply("someone", "I never visited that guy because he seems to be really... well he works somewhere where I don't want to be in Ados.");
+		mummyNPC.addReply("某些人", "我也没见过那家伙, 因为他看着真的...好吧, 他在 Ados 的某处工作, 但我不想去.");
 
 		// any other state
 		mummyNPC.add(ConversationStates.IDLE,
 					ConversationPhrases.GREETING_MESSAGES, new GreetingMatchesNameCondition(mummyNPC.getName()), true,
-					ConversationStates.ATTENDING, "Hello again.", null);
+					ConversationStates.ATTENDING, "欢迎光临.", null);
 	}
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Chocolate for Elisabeth",
-				"Sweet sweet chocolate! Noone can live without it! And Elisabeth loooves to have some...",
+				"伊丽莎白的巧克力",
+				"甜甜的巧克力! 没它怎么活! 伊丽莎白 爱死它了...",
 				true);
 		chocolateStep();
 		meetMummyStep();
@@ -317,25 +317,25 @@ public class ChocolateForElisabeth extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Elisabeth is a sweet little girl who lives in Kirdneh together with her family.");
+		res.add("伊丽莎白 是个甜美的小女孩, 和家人一起生活在 Kirdneh.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("I don't like sweet little girls.");
+			res.add("我不喜欢卖萌的女孩");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start","mummy") || isCompleted(player)) {
-			res.add("Little Elisabeth wants a chocolate bar.");
+			res.add("小 伊丽莎白 想吃 巧克力棒.");
 		}
-		if (player.isQuestInState(QUEST_SLOT, "start","mummy") && player.isEquipped("chocolate bar") || isCompleted(player)) {
-			res.add("I found a tasty chocolate bar for Elisabeth.");
+		if (player.isQuestInState(QUEST_SLOT, "start","mummy") && player.isEquipped("巧克力棒") || isCompleted(player)) {
+			res.add("我找到了 伊丽莎白 喜欢吃的 巧克力棒.");
 		}
         if ("mummy".equals(questState) || isCompleted(player)) {
-            res.add("I spoke to Carey, Elisabeth's mom and she agreed I could give a chocolate bar to her daughter.");
+            res.add("我和 Carey, 伊丽莎白 的妈妈谈谈, 她同意我帮她女儿找 巧克力棒.");
         }
         if (isCompleted(player)) {
             if (isRepeatable(player)) {
-                res.add("I took some chocolate to Elisabeth, she gave me some flowers in return. Perhaps she'd like more chocolate now.");
+                res.add("我给 伊丽莎白 带了些巧克力,她送给我一些花作为回报,可能现在她更喜欢巧克力一些.");
             } else {
-                res.add("Elisabeth is eating the chocolate bar I gave her, and she gave me some flowers in return.");
+                res.add("伊丽莎白 吃着我带来的巧克力棒, 并送给我一些鲜花");
             }
 		}
 		return res;
@@ -368,6 +368,6 @@ public class ChocolateForElisabeth extends AbstractQuest {
 	}
 	@Override
 	public String getNPCName() {
-		return "Elisabeth";
+		return "伊丽莎白";
 	}
 }

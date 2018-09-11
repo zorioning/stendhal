@@ -50,7 +50,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li>Caroline wants to make children around Faiumoni happy with gifting easter baskets for them.</li>
- * <li>Players have to bring Caroline sweets like chocolate bars and chocolate eggs, as well as some fruit.</li>
+ * <li>Players have to bring Caroline sweets like 巧克力棒s and chocolate eggs, as well as some fruit.</li>
  * <li>Children around Faiumoni will be happy with Carolines baskets.</li>
  * </ul>
  *
@@ -87,7 +87,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
 			res.add("I promised to bring Caroline some sweets for children around Faiumoni as an Easter gift.");
 		}
-		if ("start".equals(questState) && player.isEquipped("chocolate bar", 5)  && player.isEquipped("small easter egg", 1) && player.isEquipped("apple", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
+		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("small easter egg", 1) && player.isEquipped("apple", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
 			res.add("I got all the sweets and will take them to Caroline.");
 		}
 		if ("done".equals(questState)) {
@@ -152,10 +152,10 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		// player wants to know where he can get this sweets from
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("chocolate bar", "chocolate bars", "chocolate"),
+				Arrays.asList("巧克力棒", "巧克力棒s", "chocolate"),
 				null,
 				ConversationStates.ATTENDING,
-				"Chocolate bars are sold in taverns and I've heard that some evil children carry them, too. If you find some, remember that Elizabeth in Kirdneh loves chocolate, too. :)", null);
+				"巧克力棒s are sold in taverns and I've heard that some evil children carry them, too. If you find some, remember that Elizabeth in Kirdneh loves chocolate, too. :)", null);
 
 		npc.add(
 				ConversationStates.ATTENDING,
@@ -187,7 +187,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new AndCondition(
-					new PlayerHasItemWithHimCondition("chocolate bar", 5),
+					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("small easter egg",1),
 					new PlayerHasItemWithHimCondition("apple", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5))),
@@ -199,7 +199,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new NotCondition(new AndCondition(
-					new PlayerHasItemWithHimCondition("chocolate bar", 5),
+					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("small easter egg",1),
 					new PlayerHasItemWithHimCondition("apple", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5)))),
@@ -208,7 +208,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("chocolate bar", 5));
+		reward.add(new DropItemAction("巧克力棒", 5));
 		reward.add(new DropItemAction("small easter egg", 1));
 		reward.add(new DropItemAction("apple", 5));
 		reward.add(new DropItemAction("cherry",5));
@@ -227,7 +227,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			// away and then saying "yes"
 
 			new AndCondition(
-					new PlayerHasItemWithHimCondition("chocolate bar", 5),
+					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("small easter egg", 1),
 					new PlayerHasItemWithHimCondition("apple", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5)),

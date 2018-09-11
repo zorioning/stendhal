@@ -58,7 +58,7 @@ public class FriendAchievementFactory extends AbstractAchievementFactory {
 						new AndCondition(new QuestActiveCondition("campfire"), new QuestNotInStateCondition("campfire", "start")),
 						// Annie, Kalavan city gardens
 						new QuestStateStartsWithCondition("icecream_for_annie","eating;"),
-						// Elisabeth, Kirdneh
+						// 伊丽莎白, Kirdneh
 						new QuestStateStartsWithCondition("chocolate_for_elisabeth","eating;"),
 						// Jef, Kirdneh
 						new QuestCompletedCondition("find_jefs_mom"),

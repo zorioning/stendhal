@@ -22,7 +22,7 @@ import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
  * An old man (original name: 梦金斯) who stands around and gives directions
- * to newcomers. He's the brother of RetireeNPC (original name: Diogenes).
+ * to newcomers. He's the brother of RetireeNPC (original name: 迪金斯).
  *
  * @see games.stendhal.server.maps.quests.Meet梦金斯
  * @see games.stendhal.server.maps.quests.HatForMonogenes
@@ -39,7 +39,7 @@ public class GreeterNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("梦金斯") {
 			@Override
 			public void createDialog() {
-				addJob("我是 Diogenes 的大哥，我也不记得我以前是做什么的了...我现在退休了.");
+				addJob("我是 迪金斯 的大哥，我也不记得我以前是做什么的了...我现在退休了.");
 				addOffer("我在 塞门镇做地标 #buildings 指引员。帮助新来的移民指路。当我心情不好时，也会故意指错路逗自已开心。。。呵呵呵！当然，有时我指的错路，他们最终还是找到正确的路，哈哈哈!");
 				// All further behaviour is defined in quest classes.
 			}
