@@ -4,9 +4,9 @@
 
     <!-- try to sort by affinity first, alphabetical order next -->
 
-	<item name="apple">
+	<item name="苹果">
 		<type class="food" subclass="apple" tileid="-1" />
-		<description>You see a nice shiny apple.</description>
+		<description>You see a nice shiny 苹果.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="20" />
@@ -27,9 +27,9 @@
 		</equipable>
 	</item>
 
-	<item name="black apple">
+	<item name="黑苹果">
 		<type class="food" subclass="blackapple" tileid="-1" />
-		<description>You see a black apple. It must be a gift from lil Johnnnny. He's the guy with black items.</description>
+		<description>You see a 黑苹果. It must be a gift from lil Johnnnny. He's the guy with black items.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="4" />
@@ -213,9 +213,9 @@
 		</equipable>
 	</item>
 
-	<item name="pineapple">
+	<item name="菠萝">
 		<type class="food" subclass="pineapple" tileid="-1" />
-		<description>You see a tropical pineapple.</description>
+		<description>You see a tropical 菠萝.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="40" />
@@ -905,9 +905,9 @@
 		</equipable>
 	</item>
 
-	<item name="apple pie">
+	<item name="苹果派">
 		<type class="food" subclass="applepie" tileid="-1" />
-		<description>You see a delicious apple pie, made with only genuine ingredients.</description>
+		<description>You see a delicious 苹果派, made with only genuine ingredients.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="230" />
@@ -997,9 +997,9 @@
 		</equipable>
 	</item>
 
-	<item name="sandwich">
+	<item name="三明治">
 		<type class="food" subclass="sandwich" tileid="-1" />
-		<description>You see a ham and cheese sandwich.</description>
+		<description>You see a ham and cheese 三明治.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="120" />
@@ -1320,9 +1320,9 @@
 		</equipable>
 	</item>
 
-	<item name="tuna sandwich">
+	<item name="金枪鱼三明治">
 		<type class="food" subclass="tuna_sandwich" tileid="-1" />
-		<description>You see what looks like tuna sandwich.</description>
+		<description>You see what looks like 金枪鱼三明治.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="130" />

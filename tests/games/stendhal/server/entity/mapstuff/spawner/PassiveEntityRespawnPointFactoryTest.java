@@ -188,7 +188,7 @@ public class PassiveEntityRespawnPointFactoryTest {
 		PassiveEntityRespawnPoint value_0 = PassiveEntityRespawnPointFactory
 				.create(clazz, 0, null, 0, 0);
 		assertNotNull(value_0);
-		assertEquals("You see a place where an apple looks likely to fall.",
+		assertEquals("You see a place where an 苹果 looks likely to fall.",
 				value_0.getDescription());
 
 		PassiveEntityRespawnPoint value_1 = PassiveEntityRespawnPointFactory

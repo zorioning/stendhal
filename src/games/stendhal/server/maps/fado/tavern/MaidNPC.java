@@ -85,7 +85,7 @@ public class MaidNPC implements ZoneConfigurator {
 				offers.put("cherry", 20);
 				offers.put("鸡腿", 50);
 				offers.put("bread", 50);
-				offers.put("sandwich", 150);
+				offers.put("三明治", 150);
 
 				new SellerAdder().addSeller(this, new SellerBehaviour(offers));
 				addGoodbye("Goodbye, all you customers do work me hard ...");

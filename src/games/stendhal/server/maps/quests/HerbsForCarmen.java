@@ -77,7 +77,7 @@ public class HerbsForCarmen extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "arandula=5;porcini=1;apple=3;木头=2;button mushroom=1";
+	protected static final String NEEDED_ITEMS = "arandula=5;porcini=1;苹果=3;木头=2;button mushroom=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -160,7 +160,7 @@ public class HerbsForCarmen extends AbstractQuest {
 
 		npc.add(
 			ConversationStates.ATTENDING,
-			"apple",
+			"苹果",
 			null,
 			ConversationStates.ATTENDING,
 			"苹果有很多维生素，我曾看到一些苹果树在 Semon 镇的东边。",

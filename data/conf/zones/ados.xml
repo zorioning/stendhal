@@ -388,7 +388,7 @@
     
     <entity x="60" y="94">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Palm trees and banana trees are native to 阿托尔岛. The pineapple plants are a specimen collected from an unknown island on an exploratory boat trip.</attribute>
+      <attribute name="text">Palm trees and banana trees are native to 阿托尔岛. The 菠萝 plants are a specimen collected from an unknown island on an exploratory boat trip.</attribute>
     </entity>
     
     <entity x="52" y="95">

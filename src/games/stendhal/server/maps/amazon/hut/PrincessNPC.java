@@ -78,7 +78,7 @@ public class PrincessNPC implements ZoneConfigurator {
 		princessNPC.setPosition(6, 13);
 		princessNPC.setCollisionAction(CollisionAction.STOP);
 		princessNPC.initHP(100);
-		princessNPC.setDescription("You see Princess Esclara. She smells of coconut and pineapples...");
+		princessNPC.setDescription("You see Princess Esclara. She smells of coconut and 菠萝s...");
 		zone.add(princessNPC);
 	}
 }

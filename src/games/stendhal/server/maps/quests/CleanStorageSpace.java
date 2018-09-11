@@ -70,18 +70,18 @@ public class CleanStorageSpace extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have met Eonna at her house in 塞门镇 next to the bakery.");
+		res.add("我在塞门镇面包房隔壁的房子里见到了 Eonna.");
 		final String questState = player.getQuest(QUEST_SLOT, 0);
 		if ("rejected".equals(questState)) {
-			res.add("I do not want to clear her storage space of creatures.");
+			res.add("我不想帮她清除储藏室的害虫.");
 			return res;
 		}
-		res.add("I promised Eonna to kill the rats and snakes in her basement.");
+		res.add("我向 Eonna 保证去地下室清除里面的老鼠和蛇.");
 		if ("start".equals(questState) && player.hasKilled("老鼠") && player.hasKilled("洞穴老鼠") && player.hasKilled("蛇") || "done".equals(questState)) {
-			res.add("I have cleaned out Eonna's storage space.");
+			res.add("我已清除了 Eonna 的储藏室.");
 		}
 		if ("done".equals(questState)) {
-			res.add("Wow, Eonna thinks I am her hero. *blush*");
+			res.add("哇, Eonna 觉得我是大英雄. *blush*");
 		}
 		return res;
 	}
@@ -93,14 +93,14 @@ public class CleanStorageSpace extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"My #basement is absolutely crawling with rats. Will you help me?",
+				"我的 #地下室 被老鼠占领了, 你能帮帮我吗?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestActiveCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"Thanks again! I think it's still clear down there.", null);
+				"再次感谢! 我觉得地下室干净多了.", null);
 
 		final List<ChatAction> start = new LinkedList<ChatAction>();
 
@@ -119,20 +119,20 @@ public class CleanStorageSpace extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Oh, thank you! I'll wait up here, and if any try to escape I'll hit them with the broom!",
+				"Oh, 谢谢你! 我在上面等着, 如果有老鼠想逃跑，我会拿扫把打死它!",
 				new MultipleActions(start));
 
 		npc.add(ConversationStates.QUEST_OFFERED, ConversationPhrases.NO_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"*sigh* Oh well, maybe someone else will be my hero...",
+				"*sigh* 好吧, 也许还有别的英雄帮我...",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -2.0));
 
 		npc.add(
 				ConversationStates.QUEST_OFFERED,
-				Arrays.asList("basement", "storage space"),
+				Arrays.asList("地下室", "储藏室"),
 				null,
 				ConversationStates.QUEST_OFFERED,
-				"Yes, it's just down the stairs, over there. A whole bunch of nasty-looking rats; I think I saw a snake as well! You should be careful... still want to help me?",
+				"是的, 就是楼梯下面，都是一群群恶心的老鼠, 还有蛇！你要小心点...可以帮帮我吗?",
 				null);
 	}
 
@@ -154,30 +154,30 @@ public class CleanStorageSpace extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"), new KilledForQuestCondition(QUEST_SLOT,1)),
-				ConversationStates.ATTENDING, "A hero at last! Thank you!",
+				ConversationStates.ATTENDING, "真是个大英雄! 谢谢你!",
 				new MultipleActions(reward));
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"), new NotCondition(new KilledForQuestCondition(QUEST_SLOT, 1))),
 				ConversationStates.QUEST_STARTED,
-				"Don't you remember promising to clean out the rats from my #basement?",
+				"你不记得曾说过要帮我清除 #地下室 的害虫了吗?",
 				null);
 
 		npc.add(
 				ConversationStates.QUEST_STARTED,
-				"basement",
+				"地下室",
 				null,
 				ConversationStates.ATTENDING,
-				"Down the stairs, like I said. Please get rid of all those rats, and see if you can find the snake as well!",
+				"就是我说的那个楼梯下面. 请清除下面全部的老鼠, 可能还有蛇!",
 				null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Clean the Storage Space",
-				"Eonna is too scared to go into her underground storage space, as it is filled with rats and snakes.",
+				"清理储藏室",
+				"Eonna 很害怕进到她的地下储藏室, 由于里面被老鼠和蛇占据了.",
 				false);
 		step_1();
 		step_2();

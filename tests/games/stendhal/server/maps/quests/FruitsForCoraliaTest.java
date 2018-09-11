@@ -137,15 +137,15 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 
 		// -----------------------------------------------
 
-		assertEquals("That's wonderful! I'd like these fresh fruits: 4 #apples, 5 #bananas, 9 #cherries, 2 #'bunches of grapes', 4 #pears, 2 #pomegranates, and a #watermelon.", getReply(npc));
+		assertEquals("That's wonderful! I'd like these fresh fruits: 4 #苹果s, 5 #bananas, 9 #cherries, 2 #'bunches of grapes', 4 #pears, 2 #pomegranates, and a #watermelon.", getReply(npc));
 
 		// -----------------------------------------------
 
-		en.step(player, "apples");
+		en.step(player, "苹果s");
 
 		// -----------------------------------------------
 
-		assertEquals("Glowing, radiant apples! The ones I have just now came from somewhere east of Semos.", getReply(npc));
+		assertEquals("Glowing, radiant 苹果s! The ones I have just now came from somewhere east of Semos.", getReply(npc));
 
 		// -----------------------------------------------
 
@@ -157,7 +157,7 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 
 		// -----------------------------------------------
 
-		PlayerTestHelper.equipWithStackableItem(player, "apple", 4);
+		PlayerTestHelper.equipWithStackableItem(player, "苹果", 4);
 
 		// -----------------------------------------------
 
@@ -173,11 +173,11 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 
 		// -----------------------------------------------
 
-		assertEquals("I'd still like 4 #apples, 5 #bananas, 9 #cherries, 2 #'bunches of grapes', 4 #pears, 2 #pomegranates, and a #watermelon. Have you brought any?", getReply(npc));
+		assertEquals("I'd still like 4 #苹果s, 5 #bananas, 9 #cherries, 2 #'bunches of grapes', 4 #pears, 2 #pomegranates, and a #watermelon. Have you brought any?", getReply(npc));
 
 		// -----------------------------------------------
 
-		en.step(player, "apples");
+		en.step(player, "苹果s");
 
 		// -----------------------------------------------
 
@@ -326,7 +326,7 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 
 		en.step(player, "yes");
 
-		assertEquals("That's wonderful! I'd like these fresh fruits: 4 #apples, 5 #bananas, 9 #cherries, 2 #'bunches of grapes', 4 #pears, 2 #pomegranates, and a #watermelon?", getReply(npc));
+		assertEquals("That's wonderful! I'd like these fresh fruits: 4 #苹果s, 5 #bananas, 9 #cherries, 2 #'bunches of grapes', 4 #pears, 2 #pomegranates, and a #watermelon?", getReply(npc));
 
 		en.step(player, "bye");
 

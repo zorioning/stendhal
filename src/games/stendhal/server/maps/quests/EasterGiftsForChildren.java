@@ -87,7 +87,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
 			res.add("I promised to bring Caroline some sweets for children around Faiumoni as an Easter gift.");
 		}
-		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("small easter egg", 1) && player.isEquipped("apple", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
+		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("small easter egg", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
 			res.add("I got all the sweets and will take them to Caroline.");
 		}
 		if ("done".equals(questState)) {
@@ -130,7 +130,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"I need some #sweets for my Easter baskets. If you get 5 #chocolate #bars, a #small #easter #egg, 5 #apples and 5 #cherries, I'll give you a nice Easter reward.",
+			"I need some #sweets for my Easter baskets. If you get 5 #chocolate #bars, a #small #easter #egg, 5 #苹果s and 5 #cherries, I'll give you a nice Easter reward.",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		// player is not willing to help
@@ -159,10 +159,10 @@ public class EasterGiftsForChildren extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("apple", "apples"),
+				Arrays.asList("苹果", "苹果s"),
 				null,
 				ConversationStates.ATTENDING,
-				"Apples are found at the farm to the east of the city. They are really healthy and you can bake an awesome apple pie from these. You can also get one by Martha in Kalavan City gardens.", null);
+				"苹果s are found at the farm to the east of the city. They are really healthy and you can bake an awesome 苹果派 from these. You can also get one by Martha in Kalavan City gardens.", null);
 
 		npc.add(
 				ConversationStates.ATTENDING,
@@ -189,7 +189,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 				new AndCondition(
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("small easter egg",1),
-					new PlayerHasItemWithHimCondition("apple", 5),
+					new PlayerHasItemWithHimCondition("苹果", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			"Oh nice! I see you have delicious sweets with you. Are they for the Easter baskets which I'm currently preparing?",
@@ -201,7 +201,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 				new NotCondition(new AndCondition(
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("small easter egg",1),
-					new PlayerHasItemWithHimCondition("apple", 5),
+					new PlayerHasItemWithHimCondition("苹果", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5)))),
 			ConversationStates.ATTENDING,
 			"Oh no. There are still some sweets missing which I need for my Easter baskets. Hope you can find them, soon...",
@@ -210,7 +210,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("巧克力棒", 5));
 		reward.add(new DropItemAction("small easter egg", 1));
-		reward.add(new DropItemAction("apple", 5));
+		reward.add(new DropItemAction("苹果", 5));
 		reward.add(new DropItemAction("cherry",5));
 		reward.add(new EquipItemAction("阿多斯城回城卷", 5));
 		reward.add(new EquipItemAction("home scroll", 2));
@@ -229,7 +229,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			new AndCondition(
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("small easter egg", 1),
-					new PlayerHasItemWithHimCondition("apple", 5),
+					new PlayerHasItemWithHimCondition("苹果", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5)),
 
 			ConversationStates.ATTENDING, "How great! Now I can fill these baskets for the children! They will be so happy! Thank you very much for your help and Happy Easter! Please take these scrolls for your effort. :)",

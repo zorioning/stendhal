@@ -250,7 +250,7 @@ public class GrammarTest {
 	public void testPluralItem() {
 		testPluralisationAndSingularisation("巧克力棒s","巧克力棒");
 		testPluralisationAndSingularisation("money", "money");
-		testPluralisationAndSingularisation("sandwiches", "sandwich");
+		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("knives", "knife");
 		testPluralisationAndSingularisation("daggers", "dagger");
 		testPluralisationAndSingularisation("short swords", "short sword");
@@ -389,7 +389,7 @@ public class GrammarTest {
 				"loaf of bread");
 		testPluralisationAndSingularisation("chunks of meat", "chunk of meat");
 		testPluralisationAndSingularisation("pieces of ham", "ham");
-		testPluralisationAndSingularisation("sandwiches", "sandwich");
+		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("pies", "pie");
 		testPluralisationAndSingularisation("button mushrooms",
 				"button mushroom");

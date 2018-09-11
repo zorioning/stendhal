@@ -53,8 +53,8 @@ public class BarmanNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addJob("I #mix cocktails!");
 				addQuest("What you say?");
-				addOffer("Perhaps I can #mix a nice #coconut and #pineapple cocktail to cool you down...");
-				addReply("pineapple","Sadly pineapples don't grow on Athor, you'll have to hunt me some yourself.");
+				addOffer("Perhaps I can #mix a nice #coconut and #菠萝 cocktail to cool you down...");
+				addReply("菠萝","Sadly 菠萝s don't grow on Athor, you'll have to hunt me some yourself.");
 				addReply("coconut","I'll use the milk to #mix your cocktail, look for them under palm trees.");
 				addHelp("You want a pina colada mixed, I'm your man!");
 				addGoodbye("Cheers!");
@@ -63,7 +63,7 @@ public class BarmanNPC implements ZoneConfigurator {
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("coconut", 1);
-				requiredResources.put("pineapple", 1);
+				requiredResources.put("菠萝", 1);
 				final ProducerBehaviour mixerBehaviour = new ProducerBehaviour("barman_mix_pina",
 						"mix", "pina colada", requiredResources, 2 * 60);
 				new ProducerAdder().addProducer(this, mixerBehaviour, "Aloha!");

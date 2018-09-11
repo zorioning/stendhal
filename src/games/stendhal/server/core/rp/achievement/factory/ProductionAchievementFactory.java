@@ -41,7 +41,7 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 		// may wish to remove mega potion by hand?
 
 		// this includes a lot of foods! at time of writing, this is at least:
-		// pie, cheese sausage, sausage, fish pie, apple pie, cherry pie, crepes suzette, sandwich, bread, pizza
+		// pie, cheese sausage, sausage, fish pie, 苹果派, cherry pie, crepes suzette, 三明治, bread, pizza
 		// grilled steak is made using quest code and not production code so we add an extra condition, and it doesn't adhere to standard completion guidelines
 		achievements.add(createAchievement("production.class.food", "Gourmet", "Order all food types available from Faiumoni's cooks",
 				Achievement.MEDIUM_BASE_SCORE, true,

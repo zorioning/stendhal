@@ -198,19 +198,19 @@ public class GardenerNPC implements ZoneConfigurator {
                 offerings.put("tomato", 30);
                 offerings.put("garlic", 50);
                 new SellerAdder().addSeller(this, new SellerBehaviour(offerings), false);
-				addReply("lunch", "茶 Tea 和 三明治 sandwich，请用!");
-				addReply("sandwich", "Mmm.. 我喜欢汉堡和干酪一起吃.");
+				addReply("lunch", "茶 Tea 和 三明治 三明治，请用!");
+				addReply("三明治", "Mmm.. 我喜欢汉堡和干酪一起吃.");
 				addReply(Arrays.asList("kalavan city scroll", "scroll"), "这是一个魔法卷轴，它能把你传送回 Kalavan. 不要问我它怎么工作的!");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("tea", 1);
-				requiredResources.put("sandwich", 1);
+				requiredResources.put("三明治", 1);
 
 				final ProducerBehaviour behaviour = new SpecialProducerBehaviour("swap", "kalavan city scroll", requiredResources, 1 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
 				        "阳光不错 [daylightphase], 是吧?");
-				addQuest("我喜欢泡一杯茶 #tea, 园艺是个容易口渴的工作，如果你带把三明治 #sandwich 也带来，我会把这个卷轴 #swap 给你.");
+				addQuest("我喜欢泡一杯茶 #tea, 园艺是个容易口渴的工作，如果你带把三明治 #三明治 也带来，我会把这个卷轴 #swap 给你.");
 				addReply(Arrays.asList("tea", "cup of tea"), "老奶奶或许也给你倒上一杯茶，她就住在那边的大房子里.");
 				addGoodbye("再见. 欢迎来花园休息.");
 			}

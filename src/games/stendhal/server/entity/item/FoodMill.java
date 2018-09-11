@@ -60,9 +60,9 @@ public class FoodMill extends Item {
     		input = "标记卷轴";
     		output = "空白卷轴";
     	} else {
-    		input = "apple";
+    		input = "苹果";
     		container = "bottle";
-    		output = "apple juice";
+    		output = "苹果汁";
     	}
     }
 

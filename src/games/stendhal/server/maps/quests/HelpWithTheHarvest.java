@@ -204,21 +204,21 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("bread"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"#Erna hasn't baked for you yet? It is really worth it, because #Leander can use it to make #sandwiches for you.",
+				"#Erna hasn't baked for you yet? It is really worth it, because #Leander can use it to make #三明治s for you.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("sandwich"),
+				Arrays.asList("三明治"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"You haven't tried a #sandwich made by #Leander yet? They are so tasty.",
+				"You haven't tried a #三明治 made by #Leander yet? They are so tasty.",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				Arrays.asList("leander"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Leander runs the bakery in 塞门镇 and can make #sandwiches for you if you bring him the ingredients. Why don't you give him a visit?",
+				"Leander runs the bakery in 塞门镇 and can make #三明治s for you if you bring him the ingredients. Why don't you give him a visit?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,

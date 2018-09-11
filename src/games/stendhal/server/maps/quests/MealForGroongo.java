@@ -585,7 +585,7 @@ public class MealForGroongo extends AbstractQuest {
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_macedonia = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_macedonia.put("banana", new Pair<Integer, Integer>(1,6));
-        requiredIngredients_macedonia.put("apple", new Pair<Integer, Integer>(1,8));
+        requiredIngredients_macedonia.put("苹果", new Pair<Integer, Integer>(1,8));
         requiredIngredients_macedonia.put("pear", new Pair<Integer, Integer>(1,8));
         requiredIngredients_macedonia.put("watermelon", new Pair<Integer, Integer>(1,2));
 
@@ -593,7 +593,7 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_slagroomtart.put("milk", new Pair<Integer, Integer>(1,4));
         requiredIngredients_slagroomtart.put("sugar", new Pair<Integer, Integer>(1,2));
         requiredIngredients_slagroomtart.put("egg", new Pair<Integer, Integer>(2,4));
-        //requiredIngredients_slagroomtart.put("pineapple", new Pair<Integer, Integer>(1,4));
+        //requiredIngredients_slagroomtart.put("菠萝", new Pair<Integer, Integer>(1,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_vatrushka = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_vatrushka.put("flour", new Pair<Integer, Integer>(1,2));
@@ -1545,12 +1545,12 @@ public class MealForGroongo extends AbstractQuest {
                     final int amountOfMoneys = Rand.randUniform(2000, 4000);
                     final int amountOfSandwiches = Rand.randUniform(6, 12);
                     final StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem("money");
-                    final StackableItem sandwich = (StackableItem) SingletonRepository.getEntityManager().getItem("sandwich");
+                    final StackableItem sandwich = (StackableItem) SingletonRepository.getEntityManager().getItem("三明治");
 
                     money.setQuantity(amountOfMoneys);
                     sandwich.setQuantity(amountOfSandwiches);
                     sandwich.setBoundTo(player.getName());
-                    sandwich.setDescription("You see an experimental sandwich made by Chef Stefan.");
+                    sandwich.setDescription("You see an experimental 三明治 made by Chef Stefan.");
                     sandwich.put("amount", player.getBaseHP()/2);
                     sandwich.put("frequency", 10);
                     sandwich.put("regen", 50);
@@ -1559,7 +1559,7 @@ public class MealForGroongo extends AbstractQuest {
                     npc.say("Very well! Your help has been precious to me." +
                         " Please, accept " +
                         amountOfSandwiches + " experimental " +
-                        "sandwich" +
+                        "三明治" +
                         " and " +
                         amountOfMoneys + " " +
                          "money" +
@@ -1652,7 +1652,7 @@ public class MealForGroongo extends AbstractQuest {
         normalEndQuestActions.add(new IncrementQuestAction(QUEST_SLOT, 7, 1));
         normalEndQuestActions.add(new IncreaseXPAction(XP_REWARD));
         normalEndQuestActions.add(new IncreaseKarmaAction(50.0));
-        normalEndQuestActions.add(new InflictStatusOnNPCAction("sandwich"));
+        normalEndQuestActions.add(new InflictStatusOnNPCAction("三明治"));
         normalEndQuestActions.add(
             new ChatAction() {
                 @Override

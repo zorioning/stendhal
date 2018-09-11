@@ -150,7 +150,7 @@ public class PassiveEntityRespawnPointFactory {
 					.setDescription("这是一株西红柿。");
 			break;
 		case 2:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("pineapple", 1200);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("菠萝", 1200);
 			break;
 		case 3:
 			passiveEntityrespawnPoint = new VegetableGrower("watermelon");
@@ -220,7 +220,7 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("apple", 500);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("苹果", 500);
 			passiveEntityrespawnPoint.setDescription("树上的苹果快要落下来了。");
 			break;
 		case 1:

@@ -53,8 +53,8 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li> Talk with Xoderos to activate the quest.</li>
- * <li> Make 5 sandwiches.</li>
- * <li> Talk with Joshua to give him the sandwiches.</li>
+ * <li> Make 5 三明治es.</li>
+ * <li> Talk with Joshua to give him the 三明治es.</li>
  * <li> Return to Xoderos with a message from Joshua.</li>
  * </ul>
  *
@@ -87,18 +87,18 @@ public class HungryJoshua extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("I have asked Xoderos at 塞门镇 blacksmith if he has a quest for me.");
+		res.add("我找到塞门镇铁匠铺的 Xoderos， 如果他有任务就交给我.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
-			res.add("I do not want to help Xoderos and Joshua.");
+			res.add("我不想帮助 Xoderos 和 Joshua.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "joshua", "done")) {
-			res.add("I agreed to take 5 sandwiches to Joshua and tell him that I have his 'food'.");
+			res.add("我同意带 5 块三明治给三明治es to Joshua and tell him that I have his 'food'.");
 		}
-		if (questState.equals("start") && player.isEquipped("sandwich",
+		if (questState.equals("start") && player.isEquipped("三明治",
 				FOOD_AMOUNT)
 				|| questState.equals("done")) {
-			res.add("I got five sandwiches to take Joshua.");
+			res.add("I got five 三明治es to take Joshua.");
 		}
 		if (questState.equals("joshua") || questState.equals("done")) {
 			res.add("I took the food to Joshua and he asked me to tell his brother Xoderos that he is ok, by saying 'Joshua'.");
@@ -129,7 +129,7 @@ public class HungryJoshua extends AbstractQuest {
 		npc.add(ConversationStates.ATTENDING, "food",
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"My brother has enough sandwiches now, thank you.", null);
+			"My brother has enough 三明治es now, thank you.", null);
 
 		/** If quest is not started yet, start it. */
 		npc.add(
@@ -137,7 +137,7 @@ public class HungryJoshua extends AbstractQuest {
 			"food",
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"I think five sandwiches would be enough. My brother is called #Joshua. Can you help?",
+			"I think five 三明治es would be enough. My brother is called #Joshua. Can you help?",
 			null);
 
 		npc.add(
@@ -145,7 +145,7 @@ public class HungryJoshua extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Thank you. Please tell him #food or #sandwich so he knows you're not just a customer.",
+			"Thank you. Please tell him #food or #三明治 so he knows you're not just a customer.",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		npc.add(
@@ -165,7 +165,7 @@ public class HungryJoshua extends AbstractQuest {
 			null);
 
 		/** Remind player about the quest */
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("food", "sandwich", "sandwiches"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("food", "三明治", "三明治es"),
 			new QuestInStateCondition(QUEST_SLOT, "start"),
 			ConversationStates.ATTENDING,
 			"#Joshua will be getting hungry! Please hurry!", null);
@@ -175,12 +175,12 @@ public class HungryJoshua extends AbstractQuest {
 			ConversationStates.ATTENDING,
 			"My brother, the goldsmith in Ados.", null);
 
-		/** remind to take the sandwiches */
+		/** remind to take the 三明治es */
 		npc.add(
 			ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
 			new QuestInStateCondition(QUEST_SLOT, "start"),
 			ConversationStates.ATTENDING,
-			"Please don't forget the five #sandwiches for #Joshua!",
+			"Please don't forget the five #三明治es for #Joshua!",
 			null);
 	}
 
@@ -190,30 +190,30 @@ public class HungryJoshua extends AbstractQuest {
 		/** If player has quest and has brought the food, ask for it */
 		npc.add(
 			ConversationStates.ATTENDING,
-			Arrays.asList("food", "sandwich", "sandwiches"),
-			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("sandwich", FOOD_AMOUNT)),
+			Arrays.asList("food", "三明治", "三明治es"),
+			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("三明治", FOOD_AMOUNT)),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Oh great! Did my brother Xoderos send you with those sandwiches?",
+			"Oh great! Did my brother Xoderos send you with those 三明治es?",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("sandwich", FOOD_AMOUNT));
+		reward.add(new DropItemAction("三明治", FOOD_AMOUNT));
 		reward.add(new IncreaseXPAction(150));
 		reward.add(new SetQuestAction(QUEST_SLOT, "joshua"));
 		reward.add(new IncreaseKarmaAction(15));
-		reward.add(new InflictStatusOnNPCAction("sandwich"));
+		reward.add(new InflictStatusOnNPCAction("三明治"));
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new PlayerHasItemWithHimCondition("sandwich", FOOD_AMOUNT),
+			new PlayerHasItemWithHimCondition("三明治", FOOD_AMOUNT),
 			ConversationStates.ATTENDING,
 			"Thank you! Please let Xoderos know that I am fine. Say my name, Joshua, so he knows that you saw me. He will probably give you something in return.",
 			new MultipleActions(reward));
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
-			new NotCondition(new PlayerHasItemWithHimCondition("sandwich", FOOD_AMOUNT)),
-			ConversationStates.ATTENDING, "Hey! Where did you put the sandwiches?", null);
+			new NotCondition(new PlayerHasItemWithHimCondition("三明治", FOOD_AMOUNT)),
+			ConversationStates.ATTENDING, "Hey! Where did you put the 三明治es?", null);
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.NO_MESSAGES, null,
@@ -234,7 +234,7 @@ public class HungryJoshua extends AbstractQuest {
 			null);
 
 		/** Remind player about the quest */
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("food", "sandwich", "sandwiches"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("food", "三明治", "三明治es"),
 			new QuestInStateCondition(QUEST_SLOT, "joshua"),
 			ConversationStates.ATTENDING,
 			"I wish you could confirm for me that #Joshua is fine ...", null);

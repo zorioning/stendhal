@@ -128,7 +128,7 @@ public class DiceGambling extends AbstractQuest {
 				"我希望你能用到这些 chain legs."));
 		map.put(11,	new Pair<String, String>("antidote",
 			   "当你在野外中毒时，这瓶解毒济可帮上大忙"));
-		map.put(12, new Pair<String, String>("sandwich",
+		map.put(12, new Pair<String, String>("三明治",
 				"你赢了一块美味的三明治！"));
 		map.put(13, new Pair<String, String>("cheeseydog",
 				"把这个好吃的 cheesydog 带走吧！"));

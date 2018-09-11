@@ -777,7 +777,7 @@
       <item value="木箭" quantity="[10,20]" probability="5.0"/>
       <item value="木弓" quantity="[1,1]" probability="2.5"/>
       <item value="scimitar" quantity="[1,1]" probability="5.0"/>
-      <item value="apple" quantity="[1,3]" probability="20.0"/>
+      <item value="苹果" quantity="[1,3]" probability="20.0"/>
     </drops>
     <equips>
       <slot name="lhand" item="木箭" quantity="10000"/>

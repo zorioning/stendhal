@@ -30,12 +30,12 @@ public final class ShopList {
 		shops.add("food&drinks", "wine", 15);
 		shops.add("food&drinks", "瓶子", 5);
 		shops.add("food&drinks", "干酪", 20);
-		shops.add("food&drinks", "apple", 10);
+		shops.add("food&drinks", "苹果", 10);
 		shops.add("food&drinks", "carrot", 10);
 		shops.add("food&drinks", "肉", 40);
 		shops.add("food&drinks", "ham", 80);
 
-		shops.add("adosfoodseller", "apple", 50);
+		shops.add("adosfoodseller", "苹果", 50);
 		shops.add("adosfoodseller", "carrot", 50);
 
 		shops.add("buyfood", "干酪", 5);
@@ -346,7 +346,7 @@ public final class ShopList {
 		shops.add("buy4gnomes", "木棍", 3);
 		shops.add("buy4gnomes", "leather helmet", 15);
 		shops.add("buy4gnomes", "cloak", 25);
-		shops.add("buy4gnomes", "apple", 5);
+		shops.add("buy4gnomes", "苹果", 5);
 		shops.add("buy4gnomes", "marbles", 50);
 		shops.add("buy4gnomes", "木盾", 20);
 
@@ -361,8 +361,8 @@ public final class ShopList {
 
 		shops.add("sellhotdogs", "hotdog", 160);
 		shops.add("sellhotdogs", "cheeseydog", 180);
-		shops.add("sellhotdogs", "tuna sandwich", 130);
-		shops.add("sellhotdogs", "sandwich", 120);
+		shops.add("sellhotdogs", "金枪鱼三明治", 130);
+		shops.add("sellhotdogs", "三明治", 120);
 		shops.add("sellhotdogs", "vanilla shake", 110);
 		shops.add("sellhotdogs", "chocolate shake", 110);
 		shops.add("sellhotdogs", "巧克力棒", 100);
@@ -371,8 +371,8 @@ public final class ShopList {
 		// magic city barmaid)
 		shops.add("sellmagic", "hotdog", 160);
 		shops.add("sellmagic", "cheeseydog", 180);
-		shops.add("sellmagic", "tuna sandwich", 130);
-		shops.add("sellmagic", "sandwich", 120);
+		shops.add("sellmagic", "金枪鱼三明治", 130);
+		shops.add("sellmagic", "三明治", 120);
 		shops.add("sellmagic", "vanilla shake", 110);
 		shops.add("sellmagic", "chocolate shake", 110);
 		shops.add("sellmagic", "巧克力棒", 100);
@@ -419,7 +419,7 @@ public final class ShopList {
 		shops.add("sellparty", "vanilla shake", 150);
 		shops.add("sellparty", "icecream", 50);
 		shops.add("sellparty", "hotdog", 180);
-		shops.add("sellparty", "sandwich", 140);
+		shops.add("sellparty", "三明治", 140);
 
 
 		// black items (balduin, when ultimate collector quest completed)
@@ -453,7 +453,7 @@ public final class ShopList {
 
 		// 矿镇复兴展会周 Caroline
 		shops.add("sellrevivalweeks", "cherry pie", 195);
-		shops.add("sellrevivalweeks", "apple pie", 195);
+		shops.add("sellrevivalweeks", "苹果派", 195);
 		shops.add("sellrevivalweeks", "vanilla shake", 120);
 		shops.add("sellrevivalweeks", "chocolate shake", 120);
 		shops.add("sellrevivalweeks", "icecream", 60);
@@ -461,8 +461,8 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "grilled steak", 250);
 		shops.add("sellrevivalweeks", "hotdog", 170);
 		shops.add("sellrevivalweeks", "cheeseydog", 175);
-		shops.add("sellrevivalweeks", "tuna sandwich", 140);
-		shops.add("sellrevivalweeks", "sandwich", 130);
+		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);
+		shops.add("sellrevivalweeks", "三明治", 130);
 		shops.add("sellrevivalweeks", "wine", 25);
 		shops.add("sellrevivalweeks", "beer", 20);
 		shops.add("sellrevivalweeks", "水", 15);
@@ -472,9 +472,9 @@ public final class ShopList {
 		shops.add("cafe", "tea", 80);
 		shops.add("cafe", "水", 50);
 		shops.add("cafe", "chocolate shake", 150);
-		shops.add("cafe", "sandwich", 170);
-		shops.add("cafe", "tuna sandwich", 180);
-		shops.add("cafe", "apple pie", 250);
+		shops.add("cafe", "三明治", 170);
+		shops.add("cafe", "金枪鱼三明治", 180);
+		shops.add("cafe", "苹果派", 250);
 
 	}
 

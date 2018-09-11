@@ -80,7 +80,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "瓶子=1;arandula=2;red lionfish=10;kokuda=1;toadstool=12;licorice=2;apple=10;wine=30;garlic=2;pestle and mortar=1";
+	protected static final String NEEDED_ITEMS = "瓶子=1;arandula=2;red lionfish=10;kokuda=1;toadstool=12;licorice=2;苹果=10;wine=30;garlic=2;pestle and mortar=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -160,7 +160,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 			"我以为你能帮我，但我错了，就像我当老师时，和学生一样明显的错误。",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
-		npc.addReply("apple", "苹果是刺客最爱的食物。我在Semon城东,Orril和Halwor河的旁边见过一些苹果树" );
+		npc.addReply("苹果", "苹果是刺客最爱的食物。我在Semon城东,Orril和Halwor河的旁边见过一些苹果树" );
 
 			npc.addReply("瓶子", "我听说一个年轻的女人在Semo卖这东西.");
 
