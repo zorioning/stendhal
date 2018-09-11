@@ -37,7 +37,7 @@ public class WellSource extends PlayerActivityEntity {
 	 */
 	private static final String[] items = { "money", "木头", "iron ore",
 			"gold nugget", "potion", "home scroll", "greater potion",
-			"sapphire", "carbuncle", "horned golden helmet", "dark dagger",
+			"sapphire", "carbuncle", "horned golden helmet", "暗之匕首",
 			"present" };
 
 	/**
@@ -57,7 +57,7 @@ public class WellSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "well_source");
 		setMenu("Make a wish|Use");
-		setDescription("你看到一口许原井，里面有些东西吸引着你");
+		setDescription("你看到一口许原井, 里面有些东西吸引着你");
 		setResistance(0);
 	}
 
@@ -150,7 +150,7 @@ public class WellSource extends PlayerActivityEntity {
 			final String itemName = items[Rand.rand(items.length)];
 			final Item item = SingletonRepository.getEntityManager().getItem(itemName);
 			int amount = 1;
-			if (itemName.equals("dark dagger")
+			if (itemName.equals("暗之匕首")
 					|| itemName.equals("horned golden helmet")) {
 				/*
 				 * Bound powerful items.
@@ -167,7 +167,7 @@ public class WellSource extends PlayerActivityEntity {
 			player.equipOrPutOnGround(item);
 			player.incObtainedForItem(item.getName(), item.getQuantity());
 			SingletonRepository.getAchievementNotifier().onObtain(player);
-			player.sendPrivateText("你真走运，发现了 "
+			player.sendPrivateText("你真走运, 发现了 "
 					+ amount + itemName + ".");
 		} else {
 			player.sendPrivateText("你的许愿没有成真.");
@@ -185,6 +185,6 @@ public class WellSource extends PlayerActivityEntity {
 		// remove 30 money from player as they throw a coin into the
 		// well
 		player.drop("money", 30);
-		player.sendPrivateText("你把30枚金币扔到井里，并许愿。");
+		player.sendPrivateText("你把30枚金币扔到井里, 并许愿. ");
 	}
 }

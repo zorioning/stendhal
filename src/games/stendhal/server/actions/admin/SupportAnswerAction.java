@@ -96,7 +96,7 @@ public class SupportAnswerAction extends AdministrationAction implements TurnLis
 				reply = messageTemplates.get(reply);
 				reply = String.format(reply, action.get(TARGET));
 			} else {
-				player.sendPrivateText(reply + " 不可识别，请输入 #/gmhelp #support 核对.");
+				player.sendPrivateText(reply + " 不可识别, 请输入 #/gmhelp #support 核对.");
 				// send no support answer message if the shortcut wasn't understood
 				return;
 			}
@@ -108,13 +108,13 @@ public class SupportAnswerAction extends AdministrationAction implements TurnLis
 		new GameEvent(sender, SUPPORTANSWER, action.get(TARGET), reply).raise();
 		if (supported != null) {
 
-			supported.sendPrivateText(NotificationType.SUPPORT, "支持 (" + getAnonymisedAdminName(sender) + ") 告诉你: " + reply + " \n如果你希望回复，请使用 /support.");
+			supported.sendPrivateText(NotificationType.SUPPORT, "支持 (" + getAnonymisedAdminName(sender) + ") 告诉你: " + reply + " \n如果你希望回复, 请使用 /support.");
 			supported.notifyWorldAboutChanges();
 			SingletonRepository.getRuleProcessor().sendMessageToSupporters(message);
 
 		} else {
 			// that player is not logged in. Do they exist at all or are they just offline? Try sending a message with postman.
-			DBCommand command = new StoreMessageCommand(getAnonymisedAdminName(sender), action.get(TARGET), "回答你请求的问题：:\n" + reply + " \n如果你希望得到回复，请使用： /support.", "S");
+			DBCommand command = new StoreMessageCommand(getAnonymisedAdminName(sender), action.get(TARGET), "回答你请求的问题：:\n" + reply + " \n如果你希望得到回复, 请使用： /support.", "S");
 			DBCommandQueue.get().enqueueAndAwaitResult(command, handle);
 			TurnNotifier.get().notifyInTurns(0, new TurnListenerDecorator(this));
 		}

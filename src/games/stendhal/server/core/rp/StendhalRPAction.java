@@ -99,7 +99,7 @@ public class StendhalRPAction {
 		// Disable attacking NPCS that are created as not attackable.
 		if (!victim.isAttackable()) {
 			if ((victim instanceof SpeakerNPC)) {
-				((SpeakerNPC) victim).say(player.getName() + ", 想让我注意到你，请对我说 #hi 或 #你好.");
+				((SpeakerNPC) victim).say(player.getName() + ", 想让我注意到你, 请对我说 #hi 或 #你好.");
 			}
 			logger.info("REJECTED. " + player.getName() + " is attacking " + victim.getName());
 			return;
@@ -140,7 +140,7 @@ public class StendhalRPAction {
 				}
 				// disable attacking much weaker players, except in/ self defense
 				if (!mayAttackPlayer(player, (Player) victim)) {
-					player.sendPrivateText("你想进行攻击，但你的正义感阻止了进攻.");
+					player.sendPrivateText("你想进行攻击, 但你的正义感阻止了进攻.");
 					return;
 				}
 			} else {
@@ -278,7 +278,7 @@ public class StendhalRPAction {
 			// did the player or victim move into a protected area?
 			if(zone.isInProtectionArea(defender) || zone.isInProtectionArea(player)) {
 				logger.debug("受到 " + player + " 的攻击 " + defender
-						+ " 因 " + player + " 移动到安全区 " + defender + " 而停止攻击。");
+						+ " 因 " + player + " 移动到安全区 " + defender + " 而停止攻击. ");
 				player.stopAttack();
 				return false;
 			}
@@ -298,7 +298,7 @@ public class StendhalRPAction {
 				isRanged = true;
 			} else {
 				logger.debug("受到 " + player + " 的攻击to " + defender
-						+ " 因目标较远而落空。");
+						+ " 因目标较远而落空. ");
 				return false;
 			}
 		}

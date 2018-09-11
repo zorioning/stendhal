@@ -30,7 +30,7 @@ import games.stendhal.server.maps.quests.marriage.MarriageQuestChain;
  * <li> The nun explains that when two people are married, they can be together
  * whenever they want
  * <li> When two players wish to become engaged, they tell the nun
- * <li> The nun gives them invitation scrolls for the wedding, marked with the
+ * <li> The nun gives them 邀请函s for the wedding, marked with the
  * church
  * <li>The players get a wedding ring made to give the other at the wedding
  * <li> They can get dressed into an outfit in the hotel
@@ -40,7 +40,7 @@ import games.stendhal.server.maps.quests.marriage.MarriageQuestChain;
  * <li> The players are given rings
  * <li> When they go to the Hotel they choose a lovers room
  * <li> Champagne and fruit baskets is put in their bag (room if possible)
- * <li> They leave the lovers room when desired with another marked scroll
+ * <li> They leave the lovers room when desired with another 标记卷轴
  *
  * <p>
  * REWARD:

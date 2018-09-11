@@ -49,7 +49,7 @@ public class AdminMaker extends ScriptImpl {
 	private static final String TELE_QUEST_SLOT = "AdminMakerTele";
 
 	private final List<String> itemsSingle = Arrays.asList("rod of the gm",
-			"golden shield", "黄金铠甲", "金斗篷",
+			"金盾", "黄金铠甲", "金斗篷",
 			"golden helmet", "golden legs", "金靴子",
 			"hunter crossbow");
 
@@ -145,18 +145,18 @@ public class AdminMaker extends ScriptImpl {
 		}
 
 		private final List<Destination> DESTINATIONS = Arrays.asList(
-			new Destination("0_nalwor_city", 88, 85),
-			new Destination("-1_nalwor_drows_tunnel_n", 58, 44),
-			new Destination("0_ados_city", 30, 57),
+			new Destination("0_纳尔沃_城", 88, 85),
+			new Destination("-1_纳尔沃_昏暗_遂道_n", 58, 44),
+			new Destination("0_阿多斯_城", 30, 57),
 			new Destination("0_orril_forest_e", 107, 7),
-			new Destination("0_ados_mountain_n2_w2", 10, 100),
+			new Destination("0_阿多斯_山脉_n2_w2", 10, 100),
 			new Destination("0_塞门_山_北2_e2", 86, 71),
 			new Destination("-2_orril_dungeon", 106, 21),
 			new Destination("-2_orril_lich_palace", 67, 118),
 			new Destination("-2_orril_dwarf_mine", 50, 40),
 			new Destination("-1_塞门_矿山_nw", 22, 75),
 			new Destination("-6_kanmararn_city", 33, 52),
-			new Destination("-2_ados_outside_nw", 28, 4),
+			new Destination("-2_阿多斯_郊外_nw", 28, 4),
 			new Destination("-2_kotoch_entrance", 20, 111),
 			new Destination("1_kikareukin_cave", 18, 97),
 			new Destination("0_kalavan_city", 64, 13),
@@ -206,7 +206,7 @@ public class AdminMaker extends ScriptImpl {
 
 			// before we send the player off into the unknown give a marked
 			// scroll
-			final Item markedScroll = sandbox.getItem("marked scroll");
+			final Item markedScroll = sandbox.getItem("标记卷轴");
 			markedScroll.setInfoString(player.getID().getZoneID() + " "
 					+ player.getX() + " " + player.getY());
 			markedScroll.setBoundTo(player.getName());

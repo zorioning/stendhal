@@ -134,7 +134,7 @@ public class VeterinarianNPC implements ZoneConfigurator {
 
 				npc.say(msg.toString());
 			} else {
-				npc.say("抱歉，我只治疗动物， (但是... ssshh! 我给你开个价 #'offer'.)");
+				npc.say("抱歉, 我只治疗动物, (但是... ssshh! 我给你开个价 #'offer'.)");
 			}
 		}
 

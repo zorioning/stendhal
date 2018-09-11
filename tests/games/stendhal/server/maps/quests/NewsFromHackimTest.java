@@ -53,7 +53,7 @@ public class NewsFromHackimTest {
 		enHackim = npcHackim.getEngine();
 
 		final ZoneConfigurator zoneConf = new TraderNPC();
-		zoneConf.configureZone(new StendhalRPZone("int_semos_tavern"), null);
+		zoneConf.configureZone(new StendhalRPZone("int_塞门_酒馆"), null);
 		npcXin = SingletonRepository.getNPCList().get("Xin Blanca");
 		enXin = npcXin.getEngine();
 
@@ -99,7 +99,7 @@ public class NewsFromHackimTest {
 		enHackim.step(player, "hi");
 		assertEquals("Hi again, player. How can I #help you this time?", getReply(npcHackim));
 		enHackim.step(player, "task");
-		assertEquals("Thanks, but I don't have any messages to pass on to #Xin. I can't smuggle so often now... I think Xoderos is beginning to suspect something. Anyway, let me know if there's anything else I can do.", getReply(npcHackim));
+		assertEquals("Thanks, but I don't have any messages to pass on to #Xin. I can't smuggle so often now... I think 艾克德罗斯 is beginning to suspect something. Anyway, let me know if there's anything else I can do.", getReply(npcHackim));
 		enHackim.step(player, "bye");
 		assertEquals("Bye.", getReply(npcHackim));
 	}

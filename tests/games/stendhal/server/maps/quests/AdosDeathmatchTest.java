@@ -36,7 +36,7 @@ import utilities.PlayerTestHelper;
 
 public class AdosDeathmatchTest {
 
-        public static final StendhalRPZone ados_wall_n = new StendhalRPZone("0_ados_wall_n", 200, 200);
+        public static final StendhalRPZone ados_wall_n = new StendhalRPZone("0_阿多斯_城墙_n", 200, 200);
 	public static final StendhalRPZone zone = new StendhalRPZone("dmTestZone");
 
 	@BeforeClass

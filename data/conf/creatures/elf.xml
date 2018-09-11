@@ -6,7 +6,7 @@
   
   <creature name="天使精灵剑客">
     <type class="albino_elf" subclass="albino_elf_swordsman" tileid="albino_elf.png:4"/>
-    <description>这是一个天使精灵剑客，他是使用剑的专家。他可以在眨眼之间从你背后攻击你。</description>
+    <description>这是一个天使精灵剑客, 他是使用剑的专家. 他可以在眨眼之间从你背后攻击你. </description>
     <attributes>
       <atk value="330"/>
       <def value="57"/>
@@ -23,7 +23,7 @@
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="金靴子" quantity="[1,1]" probability="0.5"/>
       <item value="golden helmet" quantity="[1,1]" probability="0.35"/>
-      <item value="broadsword" quantity="[1,1]" probability="1.5"/>
+      <item value="阔剑" quantity="[1,1]" probability="1.5"/>
       <item value="精灵斗篷" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -37,7 +37,7 @@
   
   <creature name="天使精灵弓箭手">
     <type class="albino_elf" subclass="albino_elf_archer" tileid="albino_elf.png:0"/>
-    <description>这是一个天使精灵弓箭手。他的眼睛很敏锐，能从100米远的地方击中一只蜜蜂。</description>
+    <description>这是一个天使精灵弓箭手. 他的眼睛很敏锐, 能从100米远的地方击中一只蜜蜂. </description>
     <attributes>
       <atk value="345"/>
       <def value="94"/>
@@ -70,7 +70,7 @@
   
   <creature name="天使精灵魔术师">
     <type class="albino_elf" subclass="albino_elf_magician" tileid="albino_elf.png:2"/>
-    <description> 这是一个天使精灵魔术师。他知道所有的魔术秘密。你最好不要让他释放他的全部力量</description>
+    <description> 这是一个天使精灵魔术师. 他知道所有的魔术秘密. 你最好不要让他释放他的全部力量</description>
     <attributes>
       <atk value="432"/>
       <def value="58"/>
@@ -86,7 +86,7 @@
       <item value="精灵斗篷" quantity="[1,1]" probability="2.5"/> 
       <item value="greater potion" quantity="[1,2]" probability="20.0"/>
       <item value="money" quantity="[10,70]" probability="100.0"/>
-      <item value="empty scroll" quantity="[1,2]" probability="8.0"/>
+      <item value="空白卷轴" quantity="[1,2]" probability="8.0"/>
       <item value="scroll eraser" quantity="[1,1]" probability="0.4"/>
     </drops>
     <equips>
@@ -101,7 +101,7 @@
   
   <creature name="天使精灵女王">
     <type class="albino_elf" subclass="albino_elf_queen" tileid="albino_elf.png:3"/>
-    <description>这是一个天使精灵女王。她是天使精灵族的女族长，她将竭尽全力保护它。</description>
+    <description>这是一个天使精灵女王. 她是天使精灵族的女族长, 她将竭尽全力保护它. </description>
     <attributes>
       <atk value="454"/>
       <def value="48"/>
@@ -116,7 +116,7 @@
     <drops>
       <item value="money" quantity="[30,60]" probability="100.0"/>
       <item value="影子靴子" quantity="[1,1]" probability="0.5"/>
-      <item value="drow sword" quantity="[1,1]" probability="0.01"/>
+      <item value="卓尔之剑" quantity="[1,1]" probability="0.01"/>
     </drops>
     <equips>
     </equips>
@@ -131,7 +131,7 @@
   
   <creature name="天使精灵王">
     <type class="albino_elf" subclass="albino_elf_king" tileid="albino_elf.png:1"/>
-    <description>这是一个天使精灵国王。他是天使精灵的族长，与他强大的天使精灵军队打过无数仗。</description>
+    <description>这是一个天使精灵国王. 他是天使精灵的族长, 与他强大的天使精灵军队打过无数仗. </description>
     <attributes>
       <atk value="461"/>
       <def value="53"/>
@@ -148,7 +148,7 @@
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="影子靴子" quantity="[1,1]" probability="1.0"/>
       <item value="shadow helmet" quantity="[1,1]" probability="0.35"/>
-      <item value="great sword" quantity="[1,1]" probability="0.5"/>
+      <item value="巨剑" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -167,7 +167,7 @@
   
   <creature name="幼齿黑暗精灵">
     <type class="dark_elf" subclass="baby_drow" tileid="dark_elf.png:10"/>
-    <description>幼齿黑暗这是一个幼齿黑暗精灵。你应该知道黑暗精灵在他们还是孩子的时候就已经非常强壮和聪明了。别以为你跟他打得那么容易</description>
+    <description>幼齿黑暗这是一个幼齿黑暗精灵. 你应该知道黑暗精灵在他们还是孩子的时候就已经非常强壮和聪明了. 别以为你跟他打得那么容易</description>
     <attributes>
       <atk value="374"/>
       <def value="67"/>
@@ -184,7 +184,7 @@
       <item value="精灵护甲" quantity="[1,1]" probability="0.05"/>
       <item value="影子靴子" quantity="[1,1]" probability="0.05"/>
       <item value="像小精灵的斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="chaos sword" quantity="[1,1]" probability="0.5"/>
+      <item value="混沌之剑" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -198,7 +198,7 @@
   
   <creature name="黑暗精灵弓箭手">
     <type class="dark_elf" subclass="dark_elf_archer" tileid="dark_elf.png:0"/>
-    <description>这是一个黑暗精灵弓箭手。黑暗精灵弓箭手完美无瑕的瞄准对那些敢于反抗他们的人来说是致命的。</description>
+    <description>这是一个黑暗精灵弓箭手. 黑暗精灵弓箭手完美无瑕的瞄准对那些敢于反抗他们的人来说是致命的. </description>
     <attributes>
       <atk value="385"/>
       <def value="125"/>
@@ -251,7 +251,7 @@
       <item value="精灵护甲" quantity="[1,1]" probability="0.5"/>
       <item value="影子靴子" quantity="[1,1]" probability="0.5"/>
       <item value="像小精灵的斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="chaos sword" quantity="[1,1]" probability="0.5"/>
+      <item value="混沌之剑" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -316,8 +316,8 @@
       <item value="影子铠甲" quantity="[1,1]" probability="0.15"/>
       <item value="精灵护甲" quantity="[1,1]" probability="3.0"/>
       <item value="影子靴子" quantity="[1,1]" probability="1.5"/>
-      <item value="shadow shield" quantity="[1,1]" probability="1.0"/>
-      <item value="drow sword" quantity="[1,1]" probability="0.05"/>
+      <item value="影盾" quantity="[1,1]" probability="1.0"/>
+      <item value="卓尔之剑" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -352,11 +352,11 @@
       <item value="影子铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="石靴" quantity="[1,1]" probability="1.5"/>
       <item value="shadow helmet" quantity="[1,1]" probability="0.35"/>
-      <item value="shadow shield" quantity="[1,1]" probability="0.5"/>
-      <item value="drow sword" quantity="[1,1]" probability="0.05"/>
+      <item value="影盾" quantity="[1,1]" probability="0.5"/>
+      <item value="卓尔之剑" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
-      <slot name="rhand" item="drow sword"/>
+      <slot name="rhand" item="卓尔之剑"/>
     </equips>
     <ai>
       <profile name="brave"/>
@@ -369,7 +369,7 @@
   
   <creature name="黑暗精灵将军">
     <type class="dark_elf" subclass="dark_elf_general" tileid="dark_elf.png:3"/>
-    <description>这是一个黑暗精灵将军。它正在指挥纳尔沃洞穴的邪恶军队抵抗入侵者。</description>
+    <description>这是一个黑暗精灵将军. 它正在指挥纳尔沃洞穴的邪恶军队抵抗入侵者. </description>
     <attributes>
       <atk value="515"/>
       <def value="92"/>
@@ -388,7 +388,7 @@
       <item value="浑沌护甲" quantity="[1,1]" probability="0.0050"/>
       <item value="混沌靴" quantity="[1,1]" probability="0.05"/>
       <item value="金斗篷" quantity="[1,1]" probability="0.2"/>
-      <item value="drow sword" quantity="[1,1]" probability="0.5"/>
+      <item value="卓尔之剑" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -406,7 +406,7 @@
   
   <creature name="黑暗精灵巫师">
     <type class="dark_elf" subclass="dark_elf_wizard" tileid="dark_elf.png:9"/>
-    <description>黑精灵巫师是非常强大和危险的。他们专门研究黑魔法。=黑精灵巫师是非常强大和危险的。他们专门研究黑魔法。</description>
+    <description>黑精灵巫师是非常强大和危险的. 他们专门研究黑魔法. =黑精灵巫师是非常强大和危险的. 他们专门研究黑魔法. </description>
     <attributes>
       <atk value="615"/>
       <def value="103"/>
@@ -422,7 +422,7 @@
       <item value="money" quantity="[50,90]" probability="100.0"/>
       <item value="greater potion" quantity="[1,6]" probability="20.0"/>
       <item value="greater poison" quantity="[1,2]" probability="50.0"/>
-      <item value="nalwor city scroll" quantity="[1,2]" probability="25.0"/>
+      <item value="纳尔沃城回城卷" quantity="[1,2]" probability="25.0"/>
       <item value="混沌靴" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -466,14 +466,14 @@
       <item value="黑色盔甲" quantity="[1,1]" probability="0.0005"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.2"/>
       <item value="金斗篷" quantity="[1,1]" probability="0.5"/>
-      <item value="black shield" quantity="[1,1]" probability="0.01"/>
-      <item value="drow sword" quantity="[1,1]" probability="1.0"/>
+      <item value="黑盾" quantity="[1,1]" probability="0.01"/>
+      <item value="卓尔之剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="离我远点，阳光居民!"/>
+        <noise state="idle follow fight" value="离我远点, 阳光居民!"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -504,14 +504,14 @@
       <item value="黑靴子" quantity="[1,1]" probability="0.2"/>
       <item value="金斗篷" quantity="[1,1]" probability="2.0"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="black shield" quantity="[1,1]" probability="0.01"/>
-      <item value="drow sword" quantity="[1,1]" probability="1.0"/>
+      <item value="黑盾" quantity="[1,1]" probability="0.01"/>
+      <item value="卓尔之剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="离我远点，阳光居民!"/>
+        <noise state="idle follow fight" value="离我远点, 阳光居民!"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -539,7 +539,7 @@
       <item value="greater potion" quantity="[1,4]" probability="80.0"/>
       <item value="greater poison" quantity="[1,1]" probability="50.0"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
-      <item value="empty scroll" quantity="[1,2]" probability="25.0"/>
+      <item value="空白卷轴" quantity="[1,2]" probability="25.0"/>
       <item value="jewelled legs" quantity="[1,1]" probability="0.0050"/>
     </drops>
     <equips>
@@ -580,7 +580,7 @@
       <item value="money" quantity="[30,100]" probability="100.0"/>
       <item value="greater potion" quantity="[1,2]" probability="50.0"/>
       <item value="greater poison" quantity="[1,2]" probability="75.0"/>
-      <item value="skull shield" quantity="[1,1]" probability="15.0"/>
+      <item value="骷髅盾" quantity="[1,1]" probability="15.0"/>
       <item value="hell dagger" quantity="[1,1]" probability="0.2"/>
     </drops>
     <equips>
@@ -600,7 +600,7 @@
   
   <creature name="黑暗精灵大师">
     <type class="dark_elf" subclass="dark_elf_master" tileid="dark_elf.png:12"/>
-    <description>这是了一个黑暗精灵大师。小心他高超的魔法和剑术!</description>
+    <description>这是了一个黑暗精灵大师. 小心他高超的魔法和剑术!</description>
     <attributes>
       <atk value="838"/>
       <def value="174"/>
@@ -690,7 +690,7 @@
   
   <creature name="精灵">
     <type class="elf" subclass="elf" tileid="elf.png:3"/>
-    <description>这是了一个爱森林、和平生活的精灵。</description>
+    <description>这是了一个爱森林、和平生活的精灵. </description>
     <attributes>
       <atk value="177"/>
       <def value="30"/>
@@ -708,7 +708,7 @@
       <item value="鳞甲" quantity="[1,1]" probability="1.0"/>
       <item value="铁鳞甲" quantity="[1,1]" probability="0.5"/>
       <item value="cloak" quantity="[1,1]" probability="0.5"/>
-      <item value="plate shield" quantity="[1,1]" probability="1.0"/>
+      <item value="钢盾" quantity="[1,1]" probability="1.0"/>
       <item value="elvish legs" quantity="[1,1]" probability="0.05"/>
       <item value="elvish hat" quantity="[1,1]" probability="1.0" />
     </drops>
@@ -742,8 +742,8 @@
       <item value="铁鳞甲" quantity="[1,1]" probability="2.5"/>
       <item value="护肩铁胸甲" quantity="[1,1]" probability="0.35"/>
       <item value="精灵靴" quantity="[1,1]" probability="0.25"/>
-      <item value="elvish shield" quantity="[1,1]" probability="0.02"/>
-      <item value="lion shield" quantity="[1,1]" probability="0.5"/>
+      <item value="精灵之盾" quantity="[1,1]" probability="0.02"/>
+      <item value="狮盾" quantity="[1,1]" probability="0.5"/>
       <item value="scimitar" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -777,7 +777,7 @@
       <item value="木箭" quantity="[10,20]" probability="5.0"/>
       <item value="木弓" quantity="[1,1]" probability="2.5"/>
       <item value="scimitar" quantity="[1,1]" probability="5.0"/>
-      <item value="apple" quantity="[1,3]" probability="20.0"/>
+      <item value="苹果" quantity="[1,3]" probability="20.0"/>
     </drops>
     <equips>
       <slot name="lhand" item="木箭" quantity="10000"/>
@@ -794,7 +794,7 @@
   
   <creature name="士兵精灵">
     <type class="elf" subclass="soldier_elf" tileid="elf.png:7"/>
-    <description>这是一个士兵精灵，一个民兵精灵的好伙伴。</description>
+    <description>这是一个士兵精灵, 一个民兵精灵的好伙伴. </description>
     <attributes>
       <atk value="216"/>
       <def value="40"/>
@@ -814,7 +814,7 @@
       <item value="精灵靴" quantity="[1,1]" probability="0.35"/>
       <item value="像小精灵的斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="katana" quantity="[1,1]" probability="1.0"/>
-      <item value="elvish shield" quantity="[1,1]" probability="0.1"/>
+      <item value="精灵之盾" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -828,7 +828,7 @@
   
   <creature name="精灵法师">
     <type class="elf" subclass="mage_elf" tileid="elf.png:5"/>
-    <description>这是一个法师精灵。当她站在外面的森林里时，她能感觉到纯粹的魔力，并且解放了她的思想。</description>
+    <description>这是一个法师精灵. 当她站在外面的森林里时, 她能感觉到纯粹的魔力, 并且解放了她的思想. </description>
     <attributes>
       <atk value="242"/>
       <def value="63"/>
@@ -842,9 +842,9 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[4,30]" probability="100.0"/>
-      <item value="elvish sword" quantity="[1,1]" probability="1.0"/>
+      <item value="精灵之剑" quantity="[1,1]" probability="1.0"/>
       <item value="katana" quantity="[1,1]" probability="5.0"/>
-      <item value="broadsword" quantity="[1,1]" probability="2.0"/>
+      <item value="阔剑" quantity="[1,1]" probability="2.0"/>
       <item value="potion" quantity="[2,4]" probability="20.0"/>
       <item value="elvish hat" quantity="[1,1]" probability="2.0" />
     </drops>
@@ -860,7 +860,7 @@
   
   <creature name="精灵指挥官">
     <type class="elf" subclass="commander_elf" tileid="elf.png:2"/>
-    <description>这是一个忙碌的精灵指挥官。他控制着精灵的军队。</description>
+    <description>这是一个忙碌的精灵指挥官. 他控制着精灵的军队. </description>
     <attributes>
       <atk value="285"/>
       <def value="102"/>
@@ -881,8 +881,8 @@
       <item value="金靴子" quantity="[1,1]" probability="0.25"/>
       <item value="蓝灵斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="golden helmet" quantity="[1,1]" probability="0.35"/>
-      <item value="enhanced lion shield" quantity="[1,1]" probability="2.0"/>
-      <item value="claymore" quantity="[1,1]" probability="1.0"/>
+      <item value="加强狮盾" quantity="[1,1]" probability="2.0"/>
+      <item value="双刃剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -896,7 +896,7 @@
   
   <creature name="精灵大法师">
     <type class="elf" subclass="archmage_elf" tileid="elf.png:1"/>
-    <description>这是一个大法师精灵。她很漂亮。</description>
+    <description>这是一个大法师精灵. 她很漂亮. </description>
     <attributes>
       <atk value="256"/>
       <def value="87"/>
@@ -911,13 +911,13 @@
     <drops>
       <item value="money" quantity="[4,45]" probability="100.0"/>
       <item value="蓝灵斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="broadsword" quantity="[1,1]" probability="3.0"/>
+      <item value="阔剑" quantity="[1,1]" probability="3.0"/>
       <item value="scimitar" quantity="[1,1]" probability="6.0"/>
-      <item value="elvish sword" quantity="[1,1]" probability="1.0"/>
-      <item value="elvish shield" quantity="[1,1]" probability="1.0"/>
+      <item value="精灵之剑" quantity="[1,1]" probability="1.0"/>
+      <item value="精灵之盾" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
-      <slot name="rhand" item="elvish sword"/>
+      <slot name="rhand" item="精灵之剑"/>
     </equips>
     <ai>
       <profile name="brave"/>
@@ -945,7 +945,7 @@
       <item value="money" quantity="[4,55]" probability="100.0"/>
       <item value="蓝灵斗篷" quantity="[1,1]" probability="2.5"/>
       <item value="ice sword" quantity="[1,1]" probability="0.0050"/>
-      <item value="elvish shield" quantity="[1,1]" probability="1.0"/>
+      <item value="精灵之盾" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -964,7 +964,7 @@
   
   <creature name="精灵巫师">
     <type class="elf" subclass="elf_wizard" tileid="elf.png:9"/>
-    <description>这是一个精灵巫师。他是一个非常聪明的精灵，几乎知道所有的魔法。他喜欢使用自然魔法使每一种植物和生物都能繁殖，但他也能在必要时保护自己。</description>
+    <description>这是一个精灵巫师. 他是一个非常聪明的精灵, 几乎知道所有的魔法. 他喜欢使用自然魔法使每一种植物和生物都能繁殖, 但他也能在必要时保护自己. </description>
     <attributes>
       <atk value="400"/>
       <def value="70"/>
@@ -978,7 +978,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[8,43]" probability="100.0"/>
-      <item value="nalwor city scroll" quantity="[1,1]" probability="5.0"/>
+      <item value="纳尔沃城回城卷" quantity="[1,1]" probability="5.0"/>
       <item value="精灵靴" quantity="[1,1]" probability="5.0"/>
       <item value="elvish legs" quantity="[1,1]" probability="5.0"/>
       <item value="elvish hat" quantity="[1,1]" probability="10.0" />
@@ -1014,10 +1014,10 @@
     <drops>
       <item value="money" quantity="[10,55]" probability="100.0"/>
       <item value="golden helmet" quantity="[1,1]" probability="0.5"/>
-      <item value="elvish sword" quantity="[1,1]" probability="1.0"/>
+      <item value="精灵之剑" quantity="[1,1]" probability="1.0"/>
       <item value="ice sword" quantity="[1,1]" probability="0.0080"/>
-      <item value="broadsword" quantity="[1,1]" probability="5.0"/>
-      <item value="elvish shield" quantity="[1,1]" probability="5.0"/>
+      <item value="阔剑" quantity="[1,1]" probability="5.0"/>
+      <item value="精灵之盾" quantity="[1,1]" probability="5.0"/>
       <item value="greater potion" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>

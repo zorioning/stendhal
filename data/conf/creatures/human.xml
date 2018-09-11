@@ -39,7 +39,7 @@
   
   <creature name="亚马逊阿彻指挥官">
     <type class="amazon" subclass="amazoness_archer_commander" tileid="amazon.png:0"/>
-    <description>这是一个亚马逊弓箭手指挥官。她是亚马逊弓箭手的领袖。她的弓箭射穿一切。</description>
+    <description>这是一个亚马逊弓箭手指挥官. 她是亚马逊弓箭手的领袖. 她的弓箭射穿一切. </description>
     <attributes>
       <atk value="518"/>
       <def value="71"/>
@@ -71,7 +71,7 @@
   
   <creature name="亚马逊保镖">
     <type class="amazon" subclass="amazoness_bodyguard" tileid="amazon.png:2"/>
-    <description>你会看到一个亚马逊的保镖，他会保证亚马逊岛居民的安全。</description>
+    <description>你会看到一个亚马逊的保镖, 他会保证亚马逊岛居民的安全. </description>
     <attributes>
       <atk value="548"/>
       <def value="95"/>
@@ -86,7 +86,7 @@
     <drops>
       <item value="money" quantity="[15,40]" probability="100.0"/>
       <item value="红铠甲" quantity="[1,1]" probability="2.0"/>
-      <item value="red shield" quantity="[1,1]" probability="5.5"/>
+      <item value="红盾" quantity="[1,1]" probability="5.5"/>
      </drops>
     <equips>      
     </equips>
@@ -98,7 +98,7 @@
   
   <creature name="亚马逊海岸警卫队">
     <type class="amazon" subclass="amazoness_coastguard" tileid="amazon.png:3"/>
-    <description>这是的是亚马逊海岸警卫队。她保护亚马逊岛海岸免受入侵者的侵袭。她不太高兴看到你在她的岛上跑。</description>
+    <description>这是的是亚马逊海岸警卫队. 她保护亚马逊岛海岸免受入侵者的侵袭. 她不太高兴看到你在她的岛上跑. </description>
     <attributes>
       <atk value="509"/>
       <def value="67"/>
@@ -112,9 +112,9 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[1,30]" probability="100.0"/>
-      <item value="red shield" quantity="[1,1]" probability="1.0"/>
+      <item value="红盾" quantity="[1,1]" probability="1.0"/>
       <item value="red legs" quantity="[1,1]" probability="2.5"/>
-      <item value="sandwich" quantity="[1,1]" probability="5.5"/>
+      <item value="三明治" quantity="[1,1]" probability="5.5"/>
     </drops>
     <equips>      
     </equips>
@@ -126,7 +126,7 @@
   
   <creature name="亚马逊海岸警卫队的情妇">
     <type class="amazon" subclass="amazoness_coastguard_master" tileid="amazon.png:9"/>
-    <description>这是一个亚马逊海岸警卫队的情妇。即使他们是女人，这些蓝头发的情妇也不应该被低估。</description>
+    <description>这是一个亚马逊海岸警卫队的情妇. 即使他们是女人, 这些蓝头发的情妇也不应该被低估. </description>
     <attributes>
       <atk value="569"/>
       <def value="81"/>
@@ -157,7 +157,7 @@
   
   <creature name="亚马逊指挥官">
     <type class="amazon" subclass="amazoness_commander" tileid="amazon.png:4"/>
-    <description>你会看到一个亚马逊的指挥官，专门消灭任何陌生人谁敢走一步到她的岛屿。</description>
+    <description>你会看到一个亚马逊的指挥官, 专门消灭任何陌生人谁敢走一步到她的岛屿. </description>
     <attributes>
       <atk value="566"/>
       <def value="105"/>
@@ -185,7 +185,7 @@
   
   <creature name="亚马逊精英海岸警卫队">
     <type class="amazon" subclass="amazoness_elite_coastguard" tileid="amazon.png:5"/>
-    <description>这是的是亚马孙精锐海岸警卫队。当轮到她来保护这个岛时，你只会希望呆在家里。</description>
+    <description>这是的是亚马孙精锐海岸警卫队. 当轮到她来保护这个岛时, 你只会希望呆在家里. </description>
     <attributes>
       <atk value="538"/>
       <def value="73"/>
@@ -215,7 +215,7 @@
   
   <creature name="亚马逊猎人">
     <type class="amazon" subclass="amazoness_hunter" tileid="amazon.png:6"/>
-    <description>这是一个亚马逊猎人。她蹑手蹑脚地穿过森林去猎捕动物。但她不喜欢你在她的狩猎区</description>
+    <description>这是一个亚马逊猎人. 她蹑手蹑脚地穿过森林去猎捕动物. 但她不喜欢你在她的狩猎区</description>
     <attributes>
       <atk value="484"/>
       <def value="57"/>
@@ -245,7 +245,7 @@
   
   <creature name="亚马逊警卫">
     <type class="amazon" subclass="amazoness_vigilance" tileid="amazon.png:8"/>
-    <description>这是了亚马逊警卫。她的感觉很好，所以当你不想让她听到你的时候，你必须保持沉默!</description>
+    <description>这是了亚马逊警卫. 她的感觉很好, 所以当你不想让她听到你的时候, 你必须保持沉默!</description>
     <attributes>
       <atk value="629"/>
       <def value="86"/>
@@ -274,7 +274,7 @@
   
   <creature name="亚马逊最高统治者">
     <type class="amazon" subclass="amazoness_imperator" tileid="amazon.png:7"/>
-    <description>你会看到一个亚马逊帝国的统治者。她是亚马逊岛的皇帝，统治了亚马逊岛几十年，不会让你轻易通过她。</description>
+    <description>你会看到一个亚马逊帝国的统治者. 她是亚马逊岛的皇帝, 统治了亚马逊岛几十年, 不会让你轻易通过她. </description>
     <attributes>
       <atk value="687"/>
       <def value="108"/>
@@ -306,7 +306,7 @@
   
   <creature name="强盗">
     <type class="human" subclass="bandit" tileid="human_evil.png:1"/>
-    <description>这是一个又瘦又卑鄙的强盗。他想要你的命和钱包!</description>
+    <description>这是一个又瘦又卑鄙的强盗. 他想要你的命和钱包!</description>
     <attributes>
       <atk value="329"/>
       <def value="56"/>
@@ -339,7 +339,7 @@
 
   <creature name="弟子刺客">
     <type class="human" subclass="little_assassin" tileid="human_evil.png:6"/>
-    <description>这是一个弟子刺客。他很年轻，但他已经学会了战斗和杀戮。</description>
+    <description>这是一个弟子刺客. 他很年轻, 但他已经学会了战斗和杀戮. </description>
     <attributes>
       <atk value="344"/>
       <def value="77"/>
@@ -355,16 +355,16 @@
       <item value="money" quantity="[10,40]" probability="100.0"/>
       <item value="potion" quantity="[1,1]" probability="10.5"/>
       <item value="marbles" quantity="[1,1]" probability="40.0"/>
-      <item value="chocolate bar" quantity="[1,2]" probability="30.0"/>
-      <item value="assassin dagger" quantity="[1,1]" probability="0.050"/>
+      <item value="巧克力棒" quantity="[1,2]" probability="30.0"/>
+      <item value="刺客匕首" quantity="[1,1]" probability="0.050"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="我要告诉我妈妈。"/>
-        <noise state="idle follow fight" value="老师让他停止。"/>
-        <noise state="idle follow fight" value="我爸爸能打败你爸爸。"/>
+        <noise state="idle follow fight" value="我要告诉我妈妈. "/>
+        <noise state="idle follow fight" value="老师让他停止. "/>
+        <noise state="idle follow fight" value="我爸爸能打败你爸爸. "/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -375,7 +375,7 @@
  
   <creature name="学徒刺客">
     <type class="human" subclass="apprentice_assassin" tileid="human_evil.png:7"/>
-    <description>这是一个学徒刺客。他被教导了一些非常可怕的行动和方法，所以他已经能够杀死一个敌人几乎完美</description>
+    <description>这是一个学徒刺客. 他被教导了一些非常可怕的行动和方法, 所以他已经能够杀死一个敌人几乎完美</description>
     <attributes>
       <atk value="375"/>
       <def value="123"/>
@@ -390,18 +390,18 @@
     <drops>
       <item value="money" quantity="[20,50]" probability="100.0"/>
       <item value="potion" quantity="[1,1]" probability="15.5"/>
-      <item value="black pearl" quantity="[1,1]" probability="30.0"/>
-      <item value="beer" quantity="[1,2]" probability="20.0"/>
-      <item value="assassin dagger" quantity="[1,1]" probability="0.050"/>
+      <item value="黑珍珠" quantity="[1,1]" probability="30.0"/>
+      <item value="啤酒" quantity="[1,2]" probability="20.0"/>
+      <item value="刺客匕首" quantity="[1,1]" probability="0.050"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="来吧，我谅你也不敢。"/>
+        <noise state="idle follow fight" value="来吧, 我谅你也不敢. "/>
         <noise state="idle follow fight" value="你想了解我吗?"/>
-        <noise state="idle follow fight" value="任何时候你都准备好了。"/>
-        <noise state="idle follow fight" value="不要怂，就是干！"/>
+        <noise state="idle follow fight" value="任何时候你都准备好了. "/>
+        <noise state="idle follow fight" value="不要怂, 就是干！"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -467,7 +467,7 @@
       <item value="黄金铠甲" quantity="[1,1]" probability="1.5"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.0050"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.0050"/>
-      <item value="assassin dagger" quantity="[1,1]" probability="1.0"/>
+      <item value="刺客匕首" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -483,7 +483,7 @@
   
   <creature name="忍者">
     <type class="human" subclass="masked_ninja" tileid="human_evil.png:4"/>
-    <description>你敏锐的眼睛使你能够看到这个快速忍者。准备战斗!</description>
+    <description>你敏锐的眼睛使你能够看到这个快速忍者. 准备战斗!</description>
     <attributes>
       <atk value="468"/>
       <def value="75"/>
@@ -548,7 +548,7 @@
   
   <creature name="影子刺客">
     <type class="human" subclass="shadows_assassin" tileid="human_evil.png:3"/>
-    <description>这是一个影子刺客。他知道如何与阴影合而为一，在黑暗中移动而不被看见或发出任何声音。</description>
+    <description>这是一个影子刺客. 他知道如何与阴影合而为一, 在黑暗中移动而不被看见或发出任何声音. </description>
     <attributes>
       <atk value="645"/>
       <def value="87"/>
@@ -562,12 +562,12 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[30,150]" probability="100.0"/>
-      <item value="assassin dagger" quantity="[1,1]" probability="1.0"/>
+      <item value="刺客匕首" quantity="[1,1]" probability="1.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
       <item value="浑沌护甲" quantity="[1,1]" probability="0.01"/>
       <item value="影子靴子" quantity="[1,1]" probability="0.1"/>
       <item value="黑斗篷" quantity="[1,1]" probability="0.0050"/>
-      <item value="dark dagger" quantity="[1,1]" probability="0.1"/>
+      <item value="暗之匕首" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -586,7 +586,7 @@
   
   <creature name="刺客大师">
     <type class="human" subclass="master_assassin" tileid="human_evil.png:8"/>
-    <description>这是的是刺客大师。他是个暗杀高手!他可以杀死一个敌人而不让他知道他已经在那里!</description>
+    <description>这是的是刺客大师. 他是个暗杀高手!他可以杀死一个敌人而不让他知道他已经在那里!</description>
     <attributes>
       <atk value="820"/>
       <def value="95"/>
@@ -601,14 +601,14 @@
     <drops>
       <item value="money" quantity="[60,340]" probability="100.0"/>
       <item value="greater potion" quantity="[2,4]" probability="35"/>
-      <item value="assassin dagger" quantity="[1,1]" probability="0.5"/>
+      <item value="刺客匕首" quantity="[1,1]" probability="0.5"/>
       <item value="fire shuriken" quantity="[5,20]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="你已经被警告过。"/>
+        <noise state="idle follow fight" value="你已经被警告过. "/>
         <noise state="idle follow fight" value="你为什么回来?"/>
         <noise state="idle follow fight" value="你疯了吗?"/>
       </says>
@@ -641,8 +641,8 @@
       <item value="money" quantity="[10,20]" probability="100.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="0.5"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.05"/>
-      <item value="golden hammer" quantity="[1,1]" probability="1.0"/>
-      <item value="skull shield" quantity="[1,1]" probability="0.5"/>
+      <item value="黄金战锤" quantity="[1,1]" probability="1.0"/>
+      <item value="骷髅盾" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -672,7 +672,7 @@
       <item value="potion" quantity="[1,2]" probability="30.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="2.5"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
-      <item value="war hammer" quantity="[1,1]" probability="1.0"/>
+      <item value="战锤" quantity="[1,1]" probability="1.0"/>
       <item value="golden helmet" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
@@ -704,9 +704,9 @@
       <item value="野蛮人护甲" quantity="[1,1]" probability="5.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="金靴子" quantity="[1,1]" probability="1.0"/>
-      <item value="war hammer" quantity="[1,1]" probability="1.0"/>
-      <item value="chaos hammer" quantity="[1,1]" probability="0.0050"/>
-      <item value="golden shield" quantity="[1,1]" probability="0.05"/>
+      <item value="战锤" quantity="[1,1]" probability="1.0"/>
+      <item value="混乱之锤" quantity="[1,1]" probability="0.0050"/>
+      <item value="金盾" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -797,10 +797,10 @@
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="10.0"/>
-      <item value="chaos hammer" quantity="[1,1]" probability="0.5"/>
+      <item value="混乱之锤" quantity="[1,1]" probability="0.5"/>
       <item value="vulcano hammer" quantity="[1,1]" probability="0.0050"/>
       <item value="greater potion" quantity="[1,2]" probability="1.5"/>
-      <item value="great sword" quantity="[1,1]" probability="1.0"/>
+      <item value="巨剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -834,9 +834,9 @@
       <item value="石甲" quantity="[1,1]" probability="0.15"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.025"/>
       <item value="ugmash" quantity="[1,1]" probability="0.0050"/>
-      <item value="chaos hammer" quantity="[1,1]" probability="0.5"/>
+      <item value="混乱之锤" quantity="[1,1]" probability="0.5"/>
       <item value="greater potion" quantity="[1,3]" probability="1.5"/>
-      <item value="chaos shield" quantity="[1,1]" probability="0.0050"/>
+      <item value="混乱之盾" quantity="[1,1]" probability="0.0050"/>
     </drops>
     <equips>
     </equips>
@@ -853,7 +853,7 @@
   
   <creature name="布拉德鲁军队">
     <type class="human" subclass="armored_warrior" tileid="human_armored.png:0"></type>
-    <description>你会看到一个人，他放弃了他的生活作为一个傀儡的布拉德鲁军队，所有的爱龙。他是非常快乐的。</description>
+    <description>你会看到一个人, 他放弃了他的生活作为一个傀儡的布拉德鲁军队, 所有的爱龙. 他是非常快乐的. </description>
     <attributes>
       <atk value="727"/>
       <def value="94"/>
@@ -876,7 +876,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="我们也许在躲藏，但我们仍然强大。"/>
+        <noise state="idle follow fight" value="我们也许在躲藏, 但我们仍然强大. "/>
       </says>
       <profile name="offensive"/>
       <profile name="human"/>
@@ -886,7 +886,7 @@
   
   <creature name="布拉德鲁下士">
     <type class="human" subclass="armored_leader" tileid="human_armored.png:1"/>
-    <description>你看，一个人觉得他的过去表明了他现在应该受到怎样的对待，但却不情愿地希望在一场国际象棋游戏中锻炼他的才智。</description>
+    <description>你看, 一个人觉得他的过去表明了他现在应该受到怎样的对待, 但却不情愿地希望在一场国际象棋游戏中锻炼他的才智. </description>
     <attributes>
       <atk value="842"/>
       <def value="97"/>
@@ -911,7 +911,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="你会给我们应有的尊重。"/>
+        <noise state="idle follow fight" value="你会给我们应有的尊重. "/>
         <noise state="idle follow fight" value="想下棋吗?你喜欢下棋吗?"/>
       </says>
       <profile name="offensive"/>
@@ -923,7 +923,7 @@
 
   <creature name="布拉德鲁风暴骑兵">
     <type class="human" subclass="super_human" tileid="human_armored.png:2"/>
-    <description>你可以看到，作为费乌莫尼最可怕的敌人之一，他只是过去荣耀的一小部分。现在，他主要关心的是保持他的房子干净整洁。</description>
+    <description>你可以看到, 作为费乌莫尼最可怕的敌人之一, 他只是过去荣耀的一小部分. 现在, 他主要关心的是保持他的房子干净整洁. </description>
     <attributes>
       <atk value="921"/>
       <def value="98"/>
@@ -946,8 +946,8 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="在进入我们的领地之前，先擦擦脚。"/>
-        <noise state="idle follow fight" value="我要教训你们玷污我们的圣所。"/>
+        <noise state="idle follow fight" value="在进入我们的领地之前, 先擦擦脚. "/>
+        <noise state="idle follow fight" value="我要教训你们玷污我们的圣所. "/>
       </says>
       <profile name="offensive"/>
       <profile name="human"/>
@@ -961,7 +961,7 @@
   
   <creature name="女性食人族">
     <type class="human" subclass="cannibalwoman" tileid="human.png:1"/>
-    <description>女性食人族，她想取你的骨头炖汤！</description> 
+    <description>女性食人族, 她想取你的骨头炖汤！</description> 
     <attributes>
       <atk value="244"/>
       <def value="75"/>
@@ -995,7 +995,7 @@
   
   <creature name="食人族">
     <type class="human" subclass="cannibal" tileid="human.png:0"/>
-    <description>You see a cannibal. 一个食人族。他正思考怎样把你的鲜肉拿来做菜！除非他能明白你的肉不吃好，否则最好远离他!</description>
+    <description>You see a cannibal. 一个食人族. 他正思考怎样把你的鲜肉拿来做菜！除非他能明白你的肉不吃好, 否则最好远离他!</description>
     <attributes>
       <atk value="281"/>
       <def value="91"/>
@@ -1080,8 +1080,8 @@
       <item value="混沌靴" quantity="[1,1]" probability="0.5"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.7"/>
       <item value="chaos helmet" quantity="[1,1]" probability="0.1"/>
-      <item value="chaos shield" quantity="[1,1]" probability="0.3"/>
-      <item value="chaos sword" quantity="[1,1]" probability="0.1"/>
+      <item value="混乱之盾" quantity="[1,1]" probability="0.3"/>
+      <item value="混沌之剑" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -1113,8 +1113,8 @@
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
       <item value="混沌靴" quantity="[1,1]" probability="1.5"/>
       <item value="chaos helmet" quantity="[1,1]" probability="0.2"/>
-      <item value="chaos shield" quantity="[1,1]" probability="0.5"/>
-      <item value="chaos sword" quantity="[1,1]" probability="0.5"/>
+      <item value="混乱之盾" quantity="[1,1]" probability="0.5"/>
+      <item value="混沌之剑" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -1149,8 +1149,8 @@
       <item value="影子斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.1"/>
       <item value="liberty helmet" quantity="[1,1]" probability="0.05"/>
-      <item value="chaos shield" quantity="[1,1]" probability="1.0"/>
-      <item value="chaos sword" quantity="[1,1]" probability="1.0"/>
+      <item value="混乱之盾" quantity="[1,1]" probability="1.0"/>
+      <item value="混沌之剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -1181,11 +1181,11 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="chaos shield" quantity="[1,1]" probability="1.0"/>
-      <item value="chaos dagger" quantity="[1,1]" probability="0.1"/>
+      <item value="混乱之盾" quantity="[1,1]" probability="1.0"/>
+      <item value="混沌匕首" quantity="[1,1]" probability="0.1"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="1.5"/>
-      <item value="empty scroll" quantity="[1,1]" probability="1.0"/>
-      <item value="fire sword" quantity="[1,1]" probability="2.0"/>
+      <item value="空白卷轴" quantity="[1,1]" probability="1.0"/>
+      <item value="烈火剑" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
     </equips>
@@ -1252,7 +1252,7 @@
       <item value="黑靴子" quantity="[1,1]" probability="0.05"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="black helmet" quantity="[1,1]" probability="0.025"/>
-      <item value="black shield" quantity="[1,1]" probability="0.05"/>
+      <item value="黑盾" quantity="[1,1]" probability="0.05"/>
       <item value="混沌斧" quantity="[1,1]" probability="0.0050"/>
     </drops>
     <equips>
@@ -1290,7 +1290,7 @@
       <item value="黑靴子" quantity="[1,1]" probability="0.1"/>
       <item value="黑斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="chaos helmet" quantity="[1,1]" probability="0.5"/>
-      <item value="chaos shield" quantity="[1,1]" probability="1.0"/>
+      <item value="混乱之盾" quantity="[1,1]" probability="1.0"/>
       <item value="混沌斧" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
@@ -1488,7 +1488,7 @@
       <item value="板甲" quantity="[1,1]" probability="7.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.3"/>
       <item value="独角盾" quantity="[1,1]" probability="2.0"/>
-      <item value="shadow shield" quantity="[1,1]" probability="1.0"/>
+      <item value="影盾" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -1517,7 +1517,7 @@
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
       <item value="护肩皮胸甲" quantity="[1,1]" probability="20.0"/>
-      <item value="plate shield" quantity="[1,1]" probability="30.0"/>
+      <item value="钢盾" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
@@ -1614,8 +1614,8 @@
       <item value="money" quantity="[5,40]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="0.0001"/>
-      <item value="shadow shield" quantity="[1,1]" probability="1.0"/>
-      <item value="biting sword" quantity="[1,1]" probability="1.0"/>
+      <item value="影盾" quantity="[1,1]" probability="1.0"/>
+      <item value="突刺剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -1647,7 +1647,7 @@
       <item value="石斗篷" quantity="[1,1]" probability="2.0"/>
 
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
-      <item value="dark dagger" quantity="[1,1]" probability="0.05"/>
+      <item value="暗之匕首" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -1678,7 +1678,7 @@
       <item value="potion" quantity="[1,2]" probability="10.0"/>
       <item value="greater antidote" quantity="[1,2]" probability="2.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.7"/>
-      <item value="dark dagger" quantity="[1,1]" probability="0.1"/>
+      <item value="暗之匕首" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -1776,8 +1776,8 @@
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.4"/>
-      <item value="shadow shield" quantity="[1,1]" probability="0.07"/>
-      <item value="claymore" quantity="[1,1]" probability="2.5"/>
+      <item value="影盾" quantity="[1,1]" probability="0.07"/>
+      <item value="双刃剑" quantity="[1,1]" probability="2.5"/>
       <item value="morning star" quantity="[1,1]" probability="2.0"/>
     </drops>
     <equips>
@@ -1808,8 +1808,8 @@
       <item value="money" quantity="[30,80]" probability="100.0"/>
       <item value="black helmet" quantity="[1,1]" probability="0.008"/>
       <item value="金斗篷" quantity="[1,1]" probability="2.0"/>
-      <item value="magic plate shield" quantity="[1,1]" probability="0.05"/>
-      <item value="demon fire sword" quantity="[1,1]" probability="0.002"/>
+      <item value="附魔钢盾" quantity="[1,1]" probability="0.05"/>
+      <item value="赤魔剑" quantity="[1,1]" probability="0.002"/>
     </drops>
     <equips>
     </equips>
@@ -1840,7 +1840,7 @@
       <item value="黄金铠甲" quantity="[1,1]" probability="2.0"/>
       <item value="混沌靴" quantity="[1,1]" probability="0.08"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="0.5"/>
-      <item value="fire sword" quantity="[1,1]" probability="0.5"/>
+      <item value="烈火剑" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>
@@ -1870,8 +1870,8 @@
       <item value="money" quantity="[30,80]" probability="100.0"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="1.0"/>
       <item value="影子斗篷" quantity="[1,1]" probability="2.0"/>
-      <item value="magic plate shield" quantity="[1,1]" probability="0.05"/>
-      <item value="demon fire sword" quantity="[1,1]" probability="0.001"/>
+      <item value="附魔钢盾" quantity="[1,1]" probability="0.05"/>
+      <item value="赤魔剑" quantity="[1,1]" probability="0.001"/>
     </drops>
     <equips>
     </equips>
@@ -1906,7 +1906,7 @@
       <item value="money" quantity="[30,80]" probability="100.0"/>
       <item value="black helmet" quantity="[1,1]" probability="0.3"/>
       <item value="金斗篷" quantity="[1,1]" probability="2.0"/>
-      <item value="demon fire sword" quantity="[1,1]" probability="0.01"/>
+      <item value="赤魔剑" quantity="[1,1]" probability="0.01"/>
     </drops>
     <equips>
     </equips>
@@ -1939,10 +1939,10 @@
     <drops>
       <item value="money" quantity="[80,130]" probability="100.0"/>
       <item value="greater potion" quantity="[2,5]" probability="30.0"/>
-      <item value="chaos sword" quantity="[1,1]" probability="1.0"/>
+      <item value="混沌之剑" quantity="[1,1]" probability="1.0"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.1"/>
       <item value="black helmet" quantity="[1,1]" probability="0.5"/>
-      <item value="black shield" quantity="[1,1]" probability="0.03"/>
+      <item value="黑盾" quantity="[1,1]" probability="0.03"/>
     </drops>
     <equips>
     </equips>
@@ -2135,7 +2135,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,13]" probability="100.0"/>
-      <item value="sandwich" quantity="[1,1]" probability="5.0"/>
+      <item value="三明治" quantity="[1,1]" probability="5.0"/>
       <item value="sword" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
@@ -2165,7 +2165,7 @@
     <drops>
       <item value="money" quantity="[5,13]" probability="100.0"/>
       <item value="板甲" quantity="[1,1]" probability="5.0"/>
-      <item value="plate shield" quantity="[1,1]" probability="10.0"/>
+      <item value="钢盾" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -2193,8 +2193,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
-      <item value="broadsword" quantity="[1,1]" probability="5.0"/>
-      <item value="lion shield" quantity="[1,1]" probability="10.0"/>
+      <item value="阔剑" quantity="[1,1]" probability="5.0"/>
+      <item value="狮盾" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -2252,7 +2252,7 @@
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
       <item value="重斧" quantity="[1,1]" probability="15.0"/>
-      <item value="enhanced lion shield" quantity="[1,1]" probability="10.0"/>
+      <item value="加强狮盾" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
@@ -2400,7 +2400,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,53]" probability="100.0"/>
-      <item value="shadow shield" quantity="[1,1]" probability="2.0"/>
+      <item value="影盾" quantity="[1,1]" probability="2.0"/>
       <item value="影子斗篷" quantity="[1,1]" probability="1.25"/>
       <item value="shadow legs" quantity="[1,1]" probability="2.0"/>
     </drops>
@@ -2430,7 +2430,7 @@
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
       <item value="buster" quantity="[1,1]" probability="2.5"/>
-      <item value="enhanced lion shield" quantity="[1,1]" probability="20.0"/>
+      <item value="加强狮盾" quantity="[1,1]" probability="20.0"/>
     </drops>
     <equips>
     </equips>
@@ -2620,7 +2620,7 @@
     <drops>
       <item value="money" quantity="[5,33]" probability="100.0"/>
       <item value="石靴" quantity="[1,1]" probability="1.5"/>
-      <item value="broadsword" quantity="[1,1]" probability="1.0"/>
+      <item value="阔剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
@@ -2684,7 +2684,7 @@
       <item value="石甲" quantity="[1,1]" probability="0.08"/>
       <item value="混沌靴" quantity="[1,1]" probability="0.08"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="0.5"/>
-      <item value="great sword" quantity="[1,1]" probability="0.05"/>
+      <item value="巨剑" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>
     </equips>
@@ -2834,7 +2834,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,93]" probability="100.0"/>
-      <item value="empty scroll" quantity="[1,2]" probability="10.0"/>
+      <item value="空白卷轴" quantity="[1,2]" probability="10.0"/>
       <item value="scroll eraser" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -2869,7 +2869,7 @@
       <item value="冰护甲" quantity="[1,1]" probability="0.1"/>
       <item value="混沌靴" quantity="[1,1]" probability="2.0"/>
       <item value="影子斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="magic plate shield" quantity="[1,1]" probability="1.0"/>
+      <item value="附魔钢盾" quantity="[1,1]" probability="1.0"/>
       <item value="ice sword" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
@@ -2903,7 +2903,7 @@
     <drops>
       <item value="money" quantity="[3,30]" probability="80.0"/>
       <item value="potion" quantity="[1,1]" probability="50.0"/>
-      <item value="golden hammer" quantity="[1,1]" probability="3.0"/>
+      <item value="黄金战锤" quantity="[1,1]" probability="3.0"/>
       <item value="staff" quantity="[1,1]" probability="3.0"/>
     </drops>
     <equips>
@@ -3056,7 +3056,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,35]" probability="90.0"/>
-      <item value="sandwich" quantity="[1,1]" probability="40.0"/>
+      <item value="三明治" quantity="[1,1]" probability="40.0"/>
       <item value="emerald" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
@@ -3089,7 +3089,7 @@
     <drops>
       <item value="money" quantity="[10,35]" probability="90.0"/>
       <item value="pie" quantity="[1,1]" probability="30.0"/>
-      <item value="beer" quantity="[3,7]" probability="60.0"/>
+      <item value="啤酒" quantity="[3,7]" probability="60.0"/>
     </drops>
     <equips>
     </equips>
@@ -3227,7 +3227,7 @@
       <item value="链甲" quantity="[1,1]" probability="8.0"/>
       <item value="chain legs" quantity="[1,1]" probability="12.0"/>
       <item value="加固锁子甲" quantity="[1,1]" probability="1.3"/>
-      <item value="sandwich" quantity="[1,1]" probability="1.5"/>
+      <item value="三明治" quantity="[1,1]" probability="1.5"/>
       <item value="链靴" quantity="[1,1]" probability="1.0"/>
       <item value="cloak" quantity="[1,1]" probability="0.5"/>
       <item value="studded helmet" quantity="[1,1]" probability="1.0"/>
@@ -3367,7 +3367,7 @@
     <drops>
       <item value="money" quantity="[3,27]" probability="90.0"/>
       <item value="cherry" quantity="[1,2]" probability="30.0"/>
-      <item value="apple" quantity="[1,1]" probability="30.0"/>
+      <item value="苹果" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>

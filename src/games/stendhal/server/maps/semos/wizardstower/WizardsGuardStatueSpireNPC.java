@@ -76,84 +76,84 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 
 				//behavior for enhancing lion shield
 				add(ConversationStates.ATTENDING,
-						Arrays.asList("enhanced lion shield", "shields", "shield"),
+						Arrays.asList("加强狮盾", "shields", "shield"),
 						ConversationStates.INFORMATION_1,
-					    "I can turn a plate shield into an enhanced lion shield with iron, but I need eight pieces of iron and the shield to do that. Do you want an enhanced lion shield?",
+					    "I can turn a 钢盾 into an 加强狮盾 with iron, but I need eight pieces of iron and the shield to do that. Do you want an 加强狮盾?",
 					    null);
 				add(ConversationStates.INFORMATION_1,
 						ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
 								new NotCondition(new PlayerHasItemWithHimCondition("iron", 8)),
-								new PlayerHasItemWithHimCondition("plate shield", 1)),
+								new PlayerHasItemWithHimCondition("钢盾", 1)),
 						ConversationStates.ATTENDING,
-						"You don't have enough Iron, I will need 8 iron bars and a plate shield.",
+						"You don't have enough Iron, I will need 8 iron bars and a 钢盾.",
 						null);
 				add(ConversationStates.INFORMATION_1,
 						ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
-								new NotCondition(new PlayerHasItemWithHimCondition("plate shield", 1)),
+								new NotCondition(new PlayerHasItemWithHimCondition("钢盾", 1)),
 								new PlayerHasItemWithHimCondition("iron", 8)),
 						ConversationStates.ATTENDING,
-						"You do not have a shield for me to enhance, I will need 8 iron bars and a plate shield.",
+						"You do not have a shield for me to enhance, I will need 8 iron bars and a 钢盾.",
 						null);
 				add(ConversationStates.INFORMATION_1,
 						ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
 								new PlayerHasItemWithHimCondition("iron", 8),
-								new PlayerHasItemWithHimCondition("plate shield", 1)),
+								new PlayerHasItemWithHimCondition("钢盾", 1)),
 						ConversationStates.ATTENDING,
-						"There is your enhanced lion shield.",
+						"There is your 加强狮盾.",
 						new MultipleActions(
 							new DropItemAction("iron", 8),
-							new DropItemAction("plate Shield", 1),
-							new EquipItemAction("enhanced lion shield", 1, true),
+							new DropItemAction("钢盾", 1),
+							new EquipItemAction("加强狮盾", 1, true),
 							new IncreaseXPAction(250)));
 					add(ConversationStates.INFORMATION_1,
 						ConversationPhrases.NO_MESSAGES,
 						null,
 						ConversationStates.ATTENDING,
-						"Fine. Just tell me when you want an enhanced lion shield.",
+						"Fine. Just tell me when you want an 加强狮盾.",
 						null);
 
-					//behavior for forging a demon fire sword
+					//behavior for forging a 赤魔剑
 					add(ConversationStates.ATTENDING,
-							Arrays.asList("demon fire sword", "swords", "sword"),
+							Arrays.asList("赤魔剑", "swords", "sword"),
 							ConversationStates.INFORMATION_1,
-						    "I can craft for you a demon fire sword if you can procure a demon sword and a fire sword.",
+						    "I can craft for you a 赤魔剑 if you can procure a 恶魔剑 and a 烈火剑.",
 						    null);
 					add(ConversationStates.INFORMATION_1,
 							ConversationPhrases.YES_MESSAGES,
 							new AndCondition(
-									new NotCondition(new PlayerHasItemWithHimCondition("fire sword", 1)),
-									new PlayerHasItemWithHimCondition("demon sword", 1)),
+									new NotCondition(new PlayerHasItemWithHimCondition("烈火剑", 1)),
+									new PlayerHasItemWithHimCondition("恶魔剑", 1)),
 							ConversationStates.ATTENDING,
-							"You don't have a fire sword, I need both a demon sword and a fire sword.",
+							"You don't have a 烈火剑, I need both a 恶魔剑 and a 烈火剑.",
 							null);
 					add(ConversationStates.INFORMATION_1,
 							ConversationPhrases.YES_MESSAGES,
 							new AndCondition(
-									new NotCondition(new PlayerHasItemWithHimCondition("demon sword", 1)),
-									new PlayerHasItemWithHimCondition("fire sword", 1)),
+									new NotCondition(new PlayerHasItemWithHimCondition("恶魔剑", 1)),
+									new PlayerHasItemWithHimCondition("烈火剑", 1)),
 							ConversationStates.ATTENDING,
-							"You don't have a demon sword, I need both a fire sword and a demon sword.",
+							"You don't have a 恶魔剑, I need both a 烈火剑 and a 恶魔剑.",
 							null);
 					add(ConversationStates.INFORMATION_1,
 							ConversationPhrases.YES_MESSAGES,
 							new AndCondition(
-									new PlayerHasItemWithHimCondition("demon sword", 1),
-									new PlayerHasItemWithHimCondition("fire sword", 1)),
+									new PlayerHasItemWithHimCondition("恶魔剑", 1),
+									new PlayerHasItemWithHimCondition("烈火剑", 1)),
 							ConversationStates.ATTENDING,
-							"There is your Demon Fire Sword.",
+							"There is your 赤魔剑.",
 							new MultipleActions(
-								new DropItemAction("demon sword", 1),
-								new DropItemAction("fire sword", 1),
-								new EquipItemAction("demon fire sword", 1, true),
+								new DropItemAction("恶魔剑", 1),
+								new DropItemAction("烈火剑", 1),
+								new EquipItemAction("赤魔剑", 1, true),
 								new IncreaseXPAction(11250)));
 						add(ConversationStates.INFORMATION_1,
 							ConversationPhrases.NO_MESSAGES,
 							null,
 							ConversationStates.ATTENDING,
-							"Fine. Just tell me when you want to forge a demon fire sword.",
+							"Fine. Just tell me when you want to forge a 赤魔剑.",
 							null);
 
 /**				// behavior on special item BLANK SCROLL

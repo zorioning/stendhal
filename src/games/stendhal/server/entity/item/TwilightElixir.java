@@ -93,14 +93,14 @@ public class TwilightElixir extends Drink {
 				int y = 5;
 				if (zone == null) {
 					// invalid zone (shouldn't happen)
-					user.sendPrivateText("Oh oh. 因为一些奇怪的原因，卷轴没有把我传送到正确的地点.");
+					user.sendPrivateText("Oh oh. 因为一些奇怪的原因, 卷轴没有把我传送到正确的地点.");
 					logger.warn("twilight elixir to unknown zone hell,"
 								+ " teleported " + user.getName()
 								+ " to 塞门镇 instead");
 					zone = SingletonRepository.getRPWorld().getZone("0_塞门_镇");
 				}
 				((Player) user).teleport(zone, x, y, null, (Player) user);
-				extra = " 现在你应该下地狱，因为你不想别的，只考虑你自己";
+				extra = " 现在你应该下地狱, 因为你不想别的, 只考虑你自己";
 			}
  			user.sendPrivateText("你不清楚一个人的饮料可能是另一个人的毒药？这个长生药对于 Ida 意味着她被带进了迷魂境地." + extra);
 			return super.onUsed(user);

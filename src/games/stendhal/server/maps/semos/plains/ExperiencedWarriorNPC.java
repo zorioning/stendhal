@@ -83,7 +83,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 	 * plural.
 	 */
 	private static final String[] LINE_STARTS = new String[] { "Oh 是的,我知道 %s!",
-		"当我在你这个年纪，我杀了很多 %S!",
+		"当我在你这个年纪, 我杀了很多 %S!",
 		"这些 %S 是我喜欢的一种!",
 		"让我想想...%s...我想起来了!",
 		"上次我差点被 %a 杀死!",
@@ -123,9 +123,9 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 		dangerLiterals.put(1.7,
 		"%S 对你有危险, 记得及时补血!");
 		dangerLiterals.put(1.2,
-		"它对你有点危险，注意血量!");
+		"它对你有点危险, 注意血量!");
 		dangerLiterals.put(0.8,
-		"要杀死它，很有挑战性!");
+		"要杀死它, 很有挑战性!");
 		dangerLiterals.put(0.5, "杀死 %s 对你来说很平常.");
 		dangerLiterals.put(0.3, "杀死 %s 应该很容易.");
 		dangerLiterals.put(0.0, "%s 不对你构成危协.");
@@ -136,20 +136,20 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 	 */
 	private static final String[] RESPAWN_TEXTS = new String[] {
 		"如果你在正确的地点等待 %1, 应该可能见到一只.",
-		"可能只有 %1 的机会能发现一只.", "猎杀它们能达到 %1 ，对你来说就是个好机会." };
+		"可能只有 %1 的机会能发现一只.", "猎杀它们能达到 %1 , 对你来说就是个好机会." };
 
 	/**
 	 * %1 = list of items dropped.
 	 */
-	private static final String[] CARRY_TEXTS = new String[] { "They carry %1.",
-		"Dead ones have %1.", "The corpses contain %1." };
+	private static final String[] CARRY_TEXTS = new String[] { "他们带着 %1 .",
+		"杀掉 %1.", "尸体中有 %1." };
 
 	/**
 	 * no attributes.
 	 */
 	private static final String[] CARRY_NOTHING_TEXTS = new String[] {
-		"I don't know if they carry anything.",
-	"None of the ones I've seen carried anything." };
+		"不清楚它带了什么东西",
+	"没见过他带过什么东西." };
 
 	/**
 	 * %1 = list of locations.
@@ -161,7 +161,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 	/**
 	 * %1 = name of the creature.
 	 */
-	private static final String[] LOCATION_UNKNOWN_TEXTS = new String[] { "I don't know of any place where you could find %1." };
+	private static final String[] LOCATION_UNKNOWN_TEXTS = new String[] { "不清楚哪里能找到 %1." };
 
 	private static CreatureInfo creatureInfo = new CreatureInfo(probabilityLiterals,
 			amountLiterals, dangerLiterals, LINE_STARTS, RESPAWN_TEXTS,
@@ -201,14 +201,14 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 				addGreeting();
 				setLevel(368);
 
-				addJob("My job? I'm a well known warrior, strange that you haven't heard of me!");
-				addQuest("Thanks, but I don't need any help at the moment.");
-				addHelp("If you want, I can tell you about the #creatures I have encountered.");
+				addJob("我的工作? 我了解各种勇士的情况, 没听说过我? 奇怪了!");
+				addQuest("谢谢, 只是现在我不需要帮助.");
+				addHelp("如果你想听, 我可以告诉你一些有关 #怪兽 的信息.");
 				addOffer("I offer you information on #creatures I've seen for a reasonable fee.");
 
-				add(ConversationStates.ATTENDING, "creature", null,
+				add(ConversationStates.ATTENDING, "怪兽", null,
 						ConversationStates.QUESTION_1,
-						"Which creature you would like to hear more about?", null);
+						"你想听哪种怪兽的信息?", null);
 
 				add(ConversationStates.QUESTION_1, "",
 						new NotCondition(new TriggerInListCondition(ConversationPhrases.GOODBYE_MESSAGES)),
@@ -219,21 +219,21 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 						final String creatureName = sentence.getTriggerExpression().getNormalized();
 						final DefaultCreature creature = SingletonRepository.getEntityManager().getDefaultCreature(creatureName);
 						if (creature == null) {
-							speakerNPC.say("I have never heard of such a creature! Please tell the name again.");
+							speakerNPC.say("从没听说过这样的怪兽! 请再说一遍怪兽的名字.");
 							speakerNPC.setCurrentState(ConversationStates.QUESTION_1);
 						} else {
 							stateInfo.setCreatureName(creatureName);
 							if (INFORMATION_BASE_COST > 0) {
 								final int informationCost = getCost(player, creature);
 								stateInfo.setInformationCost(informationCost);
-								speakerNPC.say("This information costs "
+								speakerNPC.say("这些信息要付 "
 										+ informationCost
-										+ ". Are you still interested?");
+										+ " 钱. 有兴趣听吗?");
 								speakerNPC.setCurrentState(ConversationStates.BUY_PRICE_OFFERED);
 							} else {
 								speakerNPC.say(getCreatureInfo(player,
 										stateInfo.getCreatureName())
-										+ " If you want to hear about another creature, just tell me which.");
+										+ " 想听其它怪兽的信息, 只用对我说它的名字.");
 								speakerNPC.setCurrentState(ConversationStates.QUESTION_1);
 							}
 						}
@@ -255,11 +255,11 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 							if (player.drop("money",
 									stateInfo.getInformationCost())) {
 								String infoString = getCreatureInfo(player, stateInfo.getCreatureName());
-								infoString += " If you want to hear about another creature, just tell me which.";
+								infoString += " 还想听其它怪兽的信息, 只用对我说它的名字.";
 								speakerNPC.say(infoString);
 								speakerNPC.setCurrentState(ConversationStates.QUESTION_1);
 							} else {
-								speakerNPC.say("You don't have enough money with you.");
+								speakerNPC.say("你的钱不太够.");
 							}
 						}
 					}
@@ -267,7 +267,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 
 				add(ConversationStates.BUY_PRICE_OFFERED,
 						ConversationPhrases.NO_MESSAGES, null, ConversationStates.ATTENDING,
-						"Ok, come back if you're interested later. What else can I do for you?", null);
+						"Ok, 以后想听再来. 还需要别的帮助吗?", null);
 
 				addGoodbye("Farewell and godspeed!");
 			}
@@ -288,7 +288,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 		};
 		npc.setPosition(37, 2);
 		npc.setEntityClass("experiencedwarriornpc");
-		npc.setDescription("You see Starkad, the mighty warrior and defender of 塞门镇.");
+		npc.setDescription("你遇见了 Starkad, 可能是塞门镇的勇士或守卫.");
 		zone.add(npc);
 	}
 
@@ -298,7 +298,7 @@ public class ExperiencedWarriorNPC implements ZoneConfigurator  {
 		if (creature != null) {
 			result = creatureInfo.getCreatureInfo(player, creature, 3, 8, true);
 		} else {
-			result = "I have never heard of such a creature!";
+			result = "我从来听说过这样的怪兽!";
 		}
 		return result;
 	}

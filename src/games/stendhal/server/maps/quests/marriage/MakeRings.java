@@ -52,7 +52,7 @@ class MakeRings {
 		final SpeakerNPC npc = npcs.get("Ognir");
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("wedding ring", "wedding"),
+				Arrays.asList("婚戒", "wedding"),
 				new QuestStateStartsWithCondition(marriage.getQuestSlot(), "engaged"),
 				ConversationStates.QUEST_ITEM_QUESTION,
 				null,
@@ -70,50 +70,50 @@ class MakeRings {
 									+ REQUIRED_GOLD
 									+ " gold bars and a fee of "
 									+ REQUIRED_MONEY
-									+ " money, to make a wedding ring for your fiancee. Do you have it?");
+									+ " money, to make a 婚戒 for your fiancee. Do you have it?");
 						}
 					}
 				});
 
 		// response to wedding ring enquiry if you are not engaged
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("wedding ring", "wedding"),
+				Arrays.asList("婚戒", "wedding"),
 				new QuestNotStartedCondition(marriage.getQuestSlot()),
 				ConversationStates.ATTENDING,
-				"I'd forge a wedding ring for you to give your partner, if you were engaged to someone. If you want to get engaged, speak to the nun outside the church.",
+				"I'd forge a 婚戒 for you to give your partner, if you were engaged to someone. If you want to get engaged, speak to the nun outside the church.",
 				null);
 
-		// response to wedding ring enquiry when you're already married
+		// response to 婚戒 enquiry when you're already married
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("wedding ring", "wedding"),
-				new AndCondition(new QuestCompletedCondition(marriage.getQuestSlot()), new PlayerHasItemWithHimCondition("wedding ring")),
+				Arrays.asList("婚戒", "wedding"),
+				new AndCondition(new QuestCompletedCondition(marriage.getQuestSlot()), new PlayerHasItemWithHimCondition("婚戒")),
 				ConversationStates.ATTENDING,
 				"I hope you're still happily married! If you are having trouble and want a divorce, speak to the clerk in Ados Town Hall.",
 				null);
 
-		// response to wedding ring enquiry when you're already married and not wearing ring
+		// response to 婚戒 enquiry when you're already married and not wearing ring
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("wedding ring", "wedding"),
-				new AndCondition(new QuestCompletedCondition(marriage.getQuestSlot()), new NotCondition(new PlayerHasItemWithHimCondition("wedding ring"))),
+				Arrays.asList("婚戒", "wedding"),
+				new AndCondition(new QuestCompletedCondition(marriage.getQuestSlot()), new NotCondition(new PlayerHasItemWithHimCondition("婚戒"))),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Uh oh! You haven't got your wedding ring on! I can forge you another for " + REQUIRED_GOLD
+				"Uh oh! You haven't got your 婚戒 on! I can forge you another for " + REQUIRED_GOLD
 									+ " gold bars and a fee of "
 									+ REQUIRED_MONEY
 									+ " money, do you want another?",
 				null);
 
-		// response to wedding ring enquiry when you're married but not taken honeymoon
+		// response to 婚戒 enquiry when you're married but not taken honeymoon
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("wedding ring", "wedding"),
+				Arrays.asList("婚戒", "wedding"),
 				new QuestInStateCondition(marriage.getQuestSlot(), "just_married"),
 				ConversationStates.ATTENDING,
 				"Congratulations on your recent wedding! Don't forget to ask Linda in Fado Hotel about your honeymoon.",
 				null);
 
-		// Here the behaviour is defined for if you make a wedding ring enquiry to Ognir and your
+		// Here the behaviour is defined for if you make a 婚戒 enquiry to Ognir and your
 		// ring is being made
 	 	npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("wedding ring", "wedding"),
+				Arrays.asList("婚戒", "wedding"),
 		 		new QuestStateStartsWithCondition(marriage.getQuestSlot(), "forging"),
 				ConversationStates.IDLE,
 		 		null,
@@ -126,7 +126,7 @@ class MakeRings {
 								- System.currentTimeMillis();
 						// ring is not ready yet
 						if (timeRemaining > 0L) {
-							npc.say("I haven't finished making the wedding ring. Please check back in "
+							npc.say("I haven't finished making the 婚戒. Please check back in "
 									+ TimeUtil.approxTimeUntil((int) (timeRemaining / 1000L))
 									+ ". Bye for now.");
 							return;
@@ -139,14 +139,14 @@ class MakeRings {
 						 * If this is for an engaged player, npc gives a hitn about getting dressed for big day
 						 */
 						final Item weddingRing = SingletonRepository.getEntityManager().getItem(
-								"wedding ring");
+								"婚戒");
 						weddingRing.setBoundTo(player.getName());
 						if (player.getQuest(marriage.getQuestSlot()).startsWith("forgingagain")) {
-							npc.say("I've finished making your replacement wedding ring. Do try to be more careful next time!");
+							npc.say("I've finished making your replacement 婚戒. Do try to be more careful next time!");
 							weddingRing.setInfoString(player.getQuest(marriage.getSpouseQuestSlot()));
 							player.setQuest(marriage.getQuestSlot(), "done");
 						} else {
-							npc.say("I'm pleased to say, the wedding ring for your fiancee is finished! Make sure one is made for you, too! *psst* just a little #hint for the wedding day ...");
+							npc.say("I'm pleased to say, the 婚戒 for your fiancee is finished! Make sure one is made for you, too! *psst* just a little #hint for the wedding day ...");
 							player.setQuest(marriage.getQuestSlot(), "engaged_with_ring");
 							player.addXP(500);
 						}
@@ -157,7 +157,7 @@ class MakeRings {
 				});
 
 
-		// player says yes, they want a wedding ring made
+		// player says yes, they want a 婚戒 made
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.YES_MESSAGES,
 				null,

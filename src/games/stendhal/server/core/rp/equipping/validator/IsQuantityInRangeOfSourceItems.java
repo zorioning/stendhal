@@ -34,7 +34,7 @@ public class IsQuantityInRangeOfSourceItems implements Validator {
 
 		int sum = getSumOfSourceItems(data);
 		if (sum < quantity) {
-			data.setErrorMessage("抱歉，你没有足够的 " + data.getItemName());
+			data.setErrorMessage("抱歉, 你没有足够的 " + data.getItemName());
 			return false;
 		}
 

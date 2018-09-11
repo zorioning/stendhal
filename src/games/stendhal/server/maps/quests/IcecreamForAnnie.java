@@ -56,23 +56,23 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Annie Jones (a little girl playing in Kalavan City Gardens) </li>
+ * <li> 安妮琼斯 (a little girl playing in Kalavan City Gardens) </li>
  * <li> Mrs Jones (Annie's mum) </li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Annie asks you for an icecream. </li>
- * <li> You buy icecream from Sam who is nearby. </li>
+ * <li> Annie asks you for an 冰淇淋. </li>
+ * <li> You buy 冰淇淋 from Sam who is nearby. </li>
  * <li> Speak to Mrs Jones, Annie's mum. </li>
- * <li> Now give the icecream to Annie. </li>
+ * <li> Now give the 冰淇淋 to Annie. </li>
  * </ul>
  *
  * REWARD:
  * <ul>
  * <li>a <item>present</item></li>
  * <li>500 XP</li>
- * <li>20 karma</li>
+ * <li>12 karma total (2 + 10)</li>
  * </ul>
  *
  * REPETITIONS:
@@ -93,7 +93,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 		return QUEST_SLOT;
 	}
 	private void icecreamStep() {
-		final SpeakerNPC npc = npcs.get("Annie Jones");
+		final SpeakerNPC npc = npcs.get("安妮琼斯");
 
 		// first conversation with annie. be like [strike]every good child[/strike] kymara was when she was little and advertise name and age.
 		npc.add(ConversationStates.IDLE,
@@ -102,7 +102,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 						new QuestNotStartedCondition(QUEST_SLOT),
 						new QuestNotInStateCondition(QUEST_SLOT, "rejected")),
 				ConversationStates.ATTENDING,
-				"Hello, my name is Annie. I am five years old.",
+				"你好, 我是安妮. 我5岁了",
 				null);
 
 		// player is supposed to speak to mummy now
@@ -110,9 +110,9 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new PlayerHasItemWithHimCondition("icecream")),
+						new PlayerHasItemWithHimCondition("冰淇淋")),
 				ConversationStates.IDLE,
-				"Mummy says I mustn't talk to you any more. You're a stranger.",
+				"妈妈说我一定不要和你说话. 你是陌生人.",
 				null);
 
 		// player didn't get ice cream, meanie
@@ -120,9 +120,9 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new NotCondition(new PlayerHasItemWithHimCondition("icecream"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("冰淇淋"))),
 				ConversationStates.ATTENDING,
-				"Hello. I'm hungry.",
+				"你好. 我饿了.",
 				null);
 
 		// player got ice cream and spoke to mummy
@@ -130,9 +130,9 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "mummy"),
-						new PlayerHasItemWithHimCondition("icecream")),
+						new PlayerHasItemWithHimCondition("冰淇淋")),
 				ConversationStates.QUESTION_1,
-				"Yummy! Is that ice cream for me?",
+				"好吃! 那个冰淇淋是给我的吗?",
 				null);
 
 		// player spoke to mummy and hasn't got ice cream
@@ -140,9 +140,9 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "mummy"),
-						new NotCondition(new PlayerHasItemWithHimCondition("icecream"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("冰淇淋"))),
 				ConversationStates.ATTENDING,
-				"Hello. I'm hungry.",
+				"你好. 我饿了.",
 				null);
 
 		// player is in another state like eating
@@ -153,7 +153,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 						new QuestNotInStateCondition(QUEST_SLOT, "start"),
 						new QuestNotInStateCondition(QUEST_SLOT, "mummy")),
 				ConversationStates.ATTENDING,
-				"Hello.",
+				"你好.",
 				null);
 
 		// player rejected quest
@@ -162,7 +162,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "rejected")),
 				ConversationStates.ATTENDING,
-				"Hello.",
+				"你好.",
 				null);
 
 		// player asks about quest for first time (or rejected)
@@ -170,7 +170,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I'm hungry! I'd like an ice cream, please. Vanilla, with a chocolate flake. Will you get me one?",
+				"我饿了! 我喜欢冰淇淋, 是香草味, 带巧克力片的那种. 你能给我一个吗?",
 				null);
 
 		// shouldn't happen
@@ -178,7 +178,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"I'm full up now thank you!",
+				"我吃饱了，谢谢你!",
 				null);
 
 		// player can repeat quest
@@ -186,7 +186,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "eating;"), new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"I hope another ice cream wouldn't be greedy. Can you get me one?",
+				"希望下个冰淇淋不要太腻. 你能再拿一个吗?",
 				null);
 
 		// player can't repeat quest
@@ -194,7 +194,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "eating;"), new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
 				ConversationStates.ATTENDING,
-				"I've had too much ice cream. I feel sick.",
+				"吃得太多了. 我觉得要病了.",
 				null);
 
 		// player should be bringing ice cream not asking about the quest
@@ -202,7 +202,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT), new NotCondition(new QuestStateStartsWithCondition(QUEST_SLOT, "eating;"))),
 				ConversationStates.ATTENDING,
-				"Waaaaaaaa! Where is my ice cream ....",
+				"哇～～! 我的冰淇淋在哪....",
 				null);
 
 		// Player agrees to get the ice cream
@@ -210,40 +210,40 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Thank you!",
-				new SetQuestAction(QUEST_SLOT, "start"));
+				"谢谢你!",
+				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 2.0));
 
 		// Player says no, they've lost karma
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"Ok, I'll ask my mummy instead.",
+				"好吧, 我问妈妈要.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		// Player has got ice cream and spoken to mummy
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new DropItemAction("icecream"));
+		reward.add(new DropItemAction("冰淇淋"));
 		reward.add(new EquipItemAction("present"));
 		reward.add(new IncreaseXPAction(500));
 		reward.add(new SetQuestAction(QUEST_SLOT, "eating;"));
 		reward.add(new SetQuestToTimeStampAction(QUEST_SLOT,1));
 		reward.add(new IncreaseKarmaAction(10.0));
-		reward.add(new InflictStatusOnNPCAction("icecream"));
+		reward.add(new InflictStatusOnNPCAction("冰淇淋"));
 
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
-				new PlayerHasItemWithHimCondition("icecream"),
+				new PlayerHasItemWithHimCondition("冰淇淋"),
 				ConversationStates.ATTENDING,
-				"Thank you EVER so much! You are very kind. Here, take this present.",
+				"太感谢了! 你真是个好人. 给, 这是送你的礼物.",
 				new MultipleActions(reward));
 
 		// player did have ice cream but put it on ground after question?
 		npc.add(ConversationStates.QUESTION_1,
 				ConversationPhrases.YES_MESSAGES,
-				new NotCondition(new PlayerHasItemWithHimCondition("icecream")),
+				new NotCondition(new PlayerHasItemWithHimCondition("冰淇淋")),
 				ConversationStates.ATTENDING,
-				"Hey, where's my ice cream gone?!",
+				"嗨, 我的冰淇淋在哪?!",
 				null);
 
 		// Player says no, they've lost karma
@@ -251,7 +251,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"Waaaaaa! You're a big fat meanie.",
+				"哇啊! 你是个大骗子.",
 				new DecreaseKarmaAction(5.0));
 	}
 
@@ -263,7 +263,7 @@ public class IcecreamForAnnie extends AbstractQuest {
 					ConversationPhrases.GREETING_MESSAGES,
 					new AndCondition(new GreetingMatchesNameCondition(mummyNPC.getName()),
 							new QuestNotStartedCondition(QUEST_SLOT)),
-					ConversationStates.ATTENDING, "Hello, nice to meet you.",
+					ConversationStates.ATTENDING, "你好, 很高兴见到你.",
 					null);
 
 		// player is supposed to begetting ice cream
@@ -272,21 +272,21 @@ public class IcecreamForAnnie extends AbstractQuest {
 					new AndCondition(new GreetingMatchesNameCondition(mummyNPC.getName()),
 							new QuestInStateCondition(QUEST_SLOT, "start")),
 					ConversationStates.ATTENDING,
-					"Hello, I see you've met my daughter Annie. I hope she wasn't too demanding. You seem like a nice person.",
+					"你好, 我明白你已见到我女儿安妮了. 我希望她不要太过份. 看起来你是个好人.",
 					new SetQuestAction(QUEST_SLOT, "mummy"));
 
 		// any other state
 		mummyNPC.add(ConversationStates.IDLE,
 					ConversationPhrases.GREETING_MESSAGES,
 					new GreetingMatchesNameCondition(mummyNPC.getName()), true,
-					ConversationStates.ATTENDING, "Hello again.", null);
+					ConversationStates.ATTENDING, "又见面了.", null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Ice cream for Annie",
-				"The best surprise for a litte girl like Annie is a cool ice cream on summer days while playing on the playground.",
+				"Annie的冰淇淋",
+				"在炎炎烈日下的广场, 对于像安妮这样的女孩, 最能她惊喜的事莫过于给她一个清凉的冰淇淋了.",
 				true);
 		icecreamStep();
 		meetMummyStep();
@@ -299,25 +299,25 @@ public class IcecreamForAnnie extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Annie Jones is a sweet little girl playing in Kalavan city gardens.");
+		res.add("安妮琼斯 是个甜美的小女孩, 她在 Kalavan 城市花园中玩耍.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("I don't like sweet little girls.");
+			res.add("我不喜欢卖萌的小女孩.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start","mummy") || isCompleted(player)) {
-			res.add("Little Annie wants an ice cream.");
+			res.add("小安妮想要冰淇淋.");
 		}
-		if (player.isQuestInState(QUEST_SLOT, "start","mummy") && player.isEquipped("icecream") || isCompleted(player)) {
-			res.add("I found a tasty ice cream for Annie.");
+		if (player.isQuestInState(QUEST_SLOT, "start","mummy") && player.isEquipped("冰淇淋") || isCompleted(player)) {
+			res.add("我找到了 安妮 喜欢吃的冰淇淋.");
 		}
         if ("mummy".equals(questState) || isCompleted(player)) {
-            res.add("I spoke to Mrs Jones, she agreed I could give an ice cream to her daughter.");
+            res.add("我和 Jones 女士谈了谈, 她同意我把冰淇淋给她女儿吃.");
         }
         if (isCompleted(player)) {
             if (isRepeatable(player)) {
-                res.add("I took ice cream to Annie, she gave me a present. Perhaps she'd like another now.");
+                res.add("我把冰淇淋给了 安妮, 她给了我一个礼物. 可能她现在喜欢其它东西了.");
             } else {
-                res.add("Annie is eating the ice cream I gave her, and she gave me a present in return.");
+                res.add("安妮吃着我给的冰淇淋, 她给我一个礼物作为回报.");
             }
 		}
 		return res;
@@ -351,6 +351,6 @@ public class IcecreamForAnnie extends AbstractQuest {
 	}
 	@Override
 	public String getNPCName() {
-		return "Annie Jones";
+		return "安妮琼斯";
 	}
 }

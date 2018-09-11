@@ -39,7 +39,7 @@ class Eater implements Feeder {
 			int playerHP = player.getHP();
 			int chokingDamage = damage(2 * playerHP / 3);
 			player.setHP(playerHP - chokingDamage);
-			player.sendPrivateText(NotificationType.NEGATIVE, "你吃了太多东西，以致呕吐了一地，并失去 " + Integer.toString(chokingDamage) + " 生命值.");
+			player.sendPrivateText(NotificationType.NEGATIVE, "你吃了太多东西, 以致呕吐了一地, 并失去 " + Integer.toString(chokingDamage) + " 生命值.");
 			final Item sick = SingletonRepository.getEntityManager().getItem("vomit");
 			player.getZone().add(sick);
 			sick.setPosition(player.getX(), player.getY() + 1);
@@ -53,17 +53,17 @@ class Eater implements Feeder {
 			int playerHP = player.getHP();
 			int chokingDamage = damage(playerHP / 3);
 			player.setHP(playerHP - chokingDamage);
-			player.sendPrivateText(NotificationType.NEGATIVE, "你吃得太多，堵到嗓子眼差点憋死，失去了 " + Integer.toString(chokingDamage) + " 生命值。再多吃会得大病.");
+			player.sendPrivateText(NotificationType.NEGATIVE, "你吃得太多, 堵到嗓子眼差点憋死, 失去了 " + Integer.toString(chokingDamage) + " 生命值. 再多吃会得大病.");
 			player.notifyWorldAboutChanges();
 		} else if (count > COUNT_FULL) {
-			player.sendPrivateText("你已吃得有些撑，不能再多吃了.");
+			player.sendPrivateText("你已吃得有些撑, 不能再多吃了.");
 		}
 
 		ConsumableItem splitOff = (ConsumableItem) item.splitOff(1);
 		EatStatus status = new EatStatus(splitOff.getAmount(), splitOff.getFrecuency(), splitOff.getRegen());
 		player.getStatusList().inflictStatus(status, splitOff);
 
-		List<String> alcoholicDrinks = Arrays.asList("beer", "pina colada", "wine", "strong koboldish torcibud", "vsop koboldish torcibud");
+		List<String> alcoholicDrinks = Arrays.asList("啤酒", "pina colada", "wine", "strong koboldish torcibud", "vsop koboldish torcibud");
 		if (alcoholicDrinks.contains(item.getName())) {
 			DrunkStatus drunkStatus = new DrunkStatus();
 			player.getStatusList().inflictStatus(drunkStatus, item);

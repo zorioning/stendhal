@@ -43,17 +43,17 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Rainbow Beans
+ * QUEST: 彩虹豆
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Pdiddi, a dealer in rainbow beans
+ * <li>Pdiddi, a dealer in 彩虹豆
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>The NPC sells rainbow beans to players above level 30</li>
- * <li>When used, rainbow beans teleport you to a dreamworld full of strange
+ * <li>The NPC sells 彩虹豆 to players above level 30</li>
+ * <li>When used, 彩虹豆 teleport you to a dreamworld full of strange
  * sights, hallucinations and the creatures of your nightmares</li>
  * <li>You can remain there for up to 30 minutes</li>
  * </ul>
@@ -109,7 +109,7 @@ public class RainbowBeans extends AbstractQuest {
 					new QuestStartedCondition(QUEST_SLOT),
 					new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES)),
 			ConversationStates.QUEST_OFFERED,
-			"Oi, you. Back for more rainbow beans?", null);
+			"Oi, you. Back for more 彩虹豆?", null);
 
 		// player returns after finishing the quest (it is repeatable) before
 		// the time as finished
@@ -130,7 +130,7 @@ public class RainbowBeans extends AbstractQuest {
 					new QuestNotStartedCondition(QUEST_SLOT),
 					new LevelGreaterThanCondition(REQUIRED_LEVEL-1)),
 			ConversationStates.QUEST_OFFERED,
-			"Nosy, aint yer? I deal in rainbow beans. You take some, and who knows where the trip will take yer. It'll cost you "
+			"Nosy, aint yer? I deal in 彩虹豆. You take some, and who knows where the trip will take yer. It'll cost you "
 			+ REQUIRED_MONEY
 			+ " money. And remember pal, it can end up faster than ya wanted! Risky business ya know! So, want to buy some?",
 			null);
@@ -161,7 +161,7 @@ public class RainbowBeans extends AbstractQuest {
 				"Alright, here's the beans. Once you take them, you come down in about 30 minutes. And if you get nervous up there, hit one of the green panic squares to take you back here.",
 				new MultipleActions(
 						new DropItemAction("money", REQUIRED_MONEY),
-						new EquipItemAction("rainbow beans", 1, true),
+						new EquipItemAction("彩虹豆", 1, true),
 						// this is still complicated and could probably be split out further
 						new ChatAction() {
 							@Override
@@ -201,7 +201,7 @@ public class RainbowBeans extends AbstractQuest {
 		// just in information state (like if they said no then changed mind and
 		// are trying to get him to deal again)
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("deal", "beans", "rainbow beans", "yes"),
+			Arrays.asList("deal", "beans", "彩虹豆", "yes"),
 			new LevelGreaterThanCondition(REQUIRED_LEVEL-1),
 			ConversationStates.ATTENDING,
 			"We already talked about this, conversation's moved on now mate, keep up! Try another time.",
@@ -211,7 +211,7 @@ public class RainbowBeans extends AbstractQuest {
 		// just in information state (like if they said no then changed mind and
 		// are trying to get him to deal again)
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("deal", "beans", "rainbow beans", "yes"),
+			Arrays.asList("deal", "beans", "彩虹豆", "yes"),
 			new LevelLessThanCondition(REQUIRED_LEVEL),
 			ConversationStates.ATTENDING,
 			"That stuff's too strong for you. No chance mate!",
@@ -226,13 +226,13 @@ public class RainbowBeans extends AbstractQuest {
 		SingletonRepository.getLoginNotifier().addListener(new LoginListener() {
 			@Override
 			public void onLoggedIn(final Player player) {
-				RainbowBeansScroll scroll = (RainbowBeansScroll) SingletonRepository.getEntityManager().getItem("rainbow beans");
+				RainbowBeansScroll scroll = (RainbowBeansScroll) SingletonRepository.getEntityManager().getItem("彩虹豆");
 				scroll.teleportBack(player);
 			}
 
 		});
 		fillQuestInfo(
-				"Rainbow Beans",
+				"彩虹豆",
 				"Weird beans could be a way to strange and sometimes dangerous places!",
 				false);
 		step_1();

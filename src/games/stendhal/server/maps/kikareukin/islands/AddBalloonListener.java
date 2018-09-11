@@ -14,7 +14,7 @@ import games.stendhal.server.entity.player.Player;
  */
 public class AddBalloonListener implements ZoneConfigurator {
 
-	private static final String BALLOON = "balloon";
+	private static final String BALLOON = "气球";
 
 	/**
 	 * Configure a zone.

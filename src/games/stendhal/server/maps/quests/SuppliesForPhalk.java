@@ -108,7 +108,7 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.ATTENDING,
-				"Oh, great! I am really hungry and thirsty. 3 #sandwiches, 3 bottles of #beer and 3 glasses of #wine should be enough. Please bring it to me and say #food!",
+				"Oh, great! I am really hungry and thirsty. 3 #三明治s, 3 bottles of #啤酒 and 3 glasses of #wine should be enough. Please bring it to me and say #food!",
 				new SetQuestAction(QUEST_SLOT, "start"));
 
 		// Player says no, they've lost karma.
@@ -117,9 +117,9 @@ import games.stendhal.server.maps.Region;
 				"Oh, thats not nice... but ok. Maybe the next visitor can help me.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -10.0));
 
-		npc.addReply("beer", "In an INN of course!");
+		npc.addReply("啤酒", "In an INN of course!");
 		npc.addReply("wine", "In an INN of course!");
-		npc.addReply(Arrays.asList("sandwiches", "sandwich"), "Come on, ask in a bakery!");
+		npc.addReply(Arrays.asList("三明治s", "三明治"), "Come on, ask in a bakery!");
 	}
 
 	private void receiveFood() {
@@ -128,23 +128,23 @@ import games.stendhal.server.maps.Region;
 		npc.add(ConversationStates.ATTENDING, "food",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Do you have 3 sandwiches, 3 bottles of beer and 3 glasses of wine?",
+				"Do you have 3 三明治s, 3 bottles of 啤酒 and 3 glasses of wine?",
 				null);
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new IncreaseXPAction(600));
-		actions.add(new DropItemAction("sandwich",3));
-		actions.add(new DropItemAction("beer",3));
+		actions.add(new DropItemAction("三明治",3));
+		actions.add(new DropItemAction("啤酒",3));
 		actions.add(new DropItemAction("wine",3));
 		// the extra parts in the quest state are for wrvil and mrotho not to give them cloaks and armor twice
 		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "clothes;none;none", 2.0));
-		actions.add(new InflictStatusOnNPCAction("sandwich"));
+		actions.add(new InflictStatusOnNPCAction("三明治"));
 
 		npc.add(ConversationStates.QUEST_ITEM_QUESTION, ConversationPhrases.YES_MESSAGES,
 				new AndCondition(
 						new QuestInStateCondition(QUEST_SLOT, "start"),
-						new PlayerHasItemWithHimCondition("sandwich",3),
-						new PlayerHasItemWithHimCondition("beer",3),
+						new PlayerHasItemWithHimCondition("三明治",3),
+						new PlayerHasItemWithHimCondition("啤酒",3),
 						new PlayerHasItemWithHimCondition("wine",3)),
 				ConversationStates.ATTENDING,
 				"Yay, thank you!!! There is another thing you could do for me: my clothes are old and dirty and I need a new #cloak and a new #armor. Please bring them to me and say #clothes.",
@@ -156,8 +156,8 @@ import games.stendhal.server.maps.Region;
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"),
 				new NotCondition(
 						new AndCondition(
-								new PlayerHasItemWithHimCondition("sandwich",3),
-								new PlayerHasItemWithHimCondition("beer",3),
+								new PlayerHasItemWithHimCondition("三明治",3),
+								new PlayerHasItemWithHimCondition("啤酒",3),
 								new PlayerHasItemWithHimCondition("wine",3)))),
 				ConversationStates.ATTENDING,
 				"I've been around a long time and what's more I am really hungry. You can't trick me.",
@@ -460,17 +460,17 @@ import games.stendhal.server.maps.Region;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
 			res.add("I spoke with Phalk, who guards a passage in 塞门矿山.");
-			res.add("Phalk asked me to bring him 3 sandwiches, 3 bottles of beer and 3 glasses of wine.");
+			res.add("Phalk asked me to bring him 3 三明治s, 3 bottles of 啤酒 and 3 glasses of wine.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help Phalk.");
 				return res;
 			}
 			if ("start".equals(questState)) {
-				if(player.isEquipped("sandwich",3)) {
-					res.add("I have the sandwiches!");
+				if(player.isEquipped("三明治",3)) {
+					res.add("I have the 三明治s!");
 				}
-				if(player.isEquipped("beer",3)) {
-					res.add("I have the beer!");
+				if(player.isEquipped("啤酒",3)) {
+					res.add("I have the 啤酒!");
 				}
 				if(player.isEquipped("wine",3)) {
 					res.add("I have the wine!");

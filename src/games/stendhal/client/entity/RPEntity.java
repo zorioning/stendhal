@@ -1398,7 +1398,7 @@ public abstract class RPEntity extends AudibleEntity {
 					ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(
 							getTitle()
 							+ " 得到 "
-							+ amount + "经验值。",
+							+ amount + "经验值. ",
 							NotificationType.SIGNIFICANT_POSITIVE));
 				} else if (amount < 0) {
 					addTextIndicator(Integer.toString(amount),
@@ -1406,7 +1406,7 @@ public abstract class RPEntity extends AudibleEntity {
 					ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(
 							getTitle()
 							+ " 失去 "
-							+ amount + "经验值。",
+							+ amount + "经验值. ",
 									NotificationType.SIGNIFICANT_NEGATIVE));
 				}
 			}
@@ -1416,7 +1416,7 @@ public abstract class RPEntity extends AudibleEntity {
 
 		if (changes.has("level") && object.has("level")
 				&& (User.squaredDistanceTo(x, y) < HEARING_DISTANCE_SQ)) {
-			final String text = getTitle() + " 升到 " + getLevel() + " 级。";
+			final String text = getTitle() + " 升到 " + getLevel() + " 级. ";
 			ClientSingletonRepository.getUserInterface().addEventLine(new HeaderLessEventLine(text,
 					NotificationType.SIGNIFICANT_POSITIVE));
 

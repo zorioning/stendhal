@@ -47,17 +47,17 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"history",
-						"目前看，在 Faiumoni 内有两股势力；Deniran 帝国, 和 Blordrough 的黑暗军团. Blordrough 最近征服了岛的南半部，夺取了几个铁矿和一座大金矿。现在 Deniran 仍控制着 Faiumoni 的中部和北部，包括几座金矿和密银矿 mithril mines.");
+						"目前看, 在 Faiumoni 内有两股势力；Deniran 帝国, 和 Blordrough 的黑暗军团. Blordrough 最近征服了岛的南半部, 夺取了几个铁矿和一座大金矿. 现在 Deniran 仍控制着 Faiumoni 的中部和北部, 包括几座金矿和密银矿 mithril mines.");
 
 		npc
 				.addReply(
 						"news",
-						"Deniran 帝国正招募雇佣军以扩充军队，重新夺回被 Blordrough 抢去的南部地区。但很不幸 Blordrough 的黑暗军队也在顽强地对抗着帝国的进攻。");
+						"Deniran 帝国正招募雇佣军以扩充军队, 重新夺回被 Blordrough 抢去的南部地区. 但很不幸 Blordrough 的黑暗军队也在顽强地对抗着帝国的进攻. ");
 
 		npc
 				.addReply(
 						"geography",
-						"接下来谈谈在 Faiumoni #地区 你还可以活动的地方！我可以帮你 #取得 和 #使用 地图，或者帮你弄清使用心灵 #SPS 系统的方法。");
+						"接下来谈谈在 Faiumoni #地区 你还可以活动的地方！我可以帮你 #取得 和 #使用 地图, 或者帮你弄清使用心灵 #SPS 系统的方法. ");
 
 		npc
 				.addReply(
@@ -67,17 +67,17 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"Faiumoni",
-						"Faiumoni 就是你脚下的这片岛！你可能已注意北部的山地，还有岛中部的沙漠，还有一条东西走向的大河把岛分成两半， 而河的南只有 #Or'ril 城堡.");
+						"Faiumoni 就是你脚下的这片岛！你可能已注意北部的山地, 还有岛中部的沙漠, 还有一条东西走向的大河把岛分成两半, 而河的南只有 #Or'ril 城堡.");
 
 		npc
 				.addReply(
 						"塞门镇",
-						"塞门镇就是你现在的所在地。我们都在 Faiumoni 的北半部，人口大约有 40-50 人.");
+						"塞门镇就是你现在的所在地. 我们都在 Faiumoni 的北半部, 人口大约有 40-50 人.");
 
 		npc
 				.addReply(
 						"阿多斯",
-						"阿多斯是一个重要海滨城市，在 #塞门镇 的东方。商人再通过那里出口到 #Deniran. 这条通道是帝国最重要的航线之一。");
+						"阿多斯是一个重要海滨城市, 在 #塞门镇 的东方. 商人再通过那里出口到 #Deniran. 这条通道是帝国最重要的航线之一. ");
 
 		npc
 				.addReply(
@@ -92,22 +92,22 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"Deniran",
-						"是帝国的首都，Faiumoni 的核心地带，, and is the main base of operations for the Deniran army. Most of the Empire's main trade routes with other countries originate in this city, then extending north through #Ados, and south to Sikhw. Unfortunately, the southern routes were been destroyed when Blordrough and his armies conquered Sikhw, some time ago now.");
+						"是帝国的首都, Faiumoni 的核心地带, , and is the main base of operations for the Deniran army. Most of the Empire's main trade routes with other countries originate in this city, then extending north through #Ados, and south to Sikhw. Unfortunately, the southern routes were been destroyed when Blordrough and his armies conquered Sikhw, some time ago now.");
 
 		npc
 				.addReply(
 						"使用",
-						"一旦你 #取得 一张地图，上面有三种刻度，一是地图的 #层级， #levels, 然后你要自己弄清楚不同地区的层级的 ＃命名 规则 #naming conventions，最后你要学会描述某人在某地区的 ＃方位  #positioning 。然后你就可以快速定位!");
+						"一旦你 #取得 一张地图, 上面有三种刻度, 一是地图的 #层级, #levels, 然后你要自己弄清楚不同地区的层级的 ＃命名 规则 #naming conventions, 最后你要学会描述某人在某地区的 ＃方位  #positioning . 然后你就可以快速定位!");
 
 		npc
 				.addReply(
 						"层级",
-						"地图会根据地表的上或下划分层级。地表正常级别是 0。级别数字在每个地图名字的最前面，举例说明 #塞门镇 就在地表 0级，地图表示为 \"0_塞门_镇\"。而地下的地牢一层表示为： \"-1_塞门_地牢\". 一定要记住。而在建筑物内部也会有层级的名称，一般在最前面标记为 \"int\" (内部的意思)。举个例子酒馆二楼标记为： \"int_塞门_酒馆_1\".");
+						"地图会根据地表的上或下划分层级. 地表正常级别是 0. 级别数字在每个地图名字的最前面, 举例说明 #塞门镇 就在地表 0级, 地图表示为 \"0_塞门_镇\". 而地下的地牢一层表示为： \"-1_塞门_地牢\". 一定要记住. 而在建筑物内部也会有层级的名称, 一般在最前面标记为 \"int\" (内部的意思). 举个例子酒馆二楼标记为： \"int_塞门_酒馆_1\".");
 
 		npc
 				.addReply(
 						"命名",
-						"地图通常被分为各个 \"地区\" , 较中心的地点常被用作基准原点。地区周边地带使用它相对基准原点的方向的方式记录。举个例子。有个基准地区叫 \"0_塞门_镇\"，你向西走到旧村庄的名称记为 \"0_塞门_村庄_西\", 或者你往北走两格，再向西走一格地图到达山区，名称就记为 \"0_塞门_山_北2_西\".");
+						"地图通常被分为各个 \"地区\" , 较中心的地点常被用作基准原点. 地区周边地带使用它相对基准原点的方向的方式记录. 举个例子. 有个基准地区叫 \"0_塞门_镇\", 你向西走到旧村庄的名称记为 \"0_塞门_村庄_西\", 或者你往北走两格, 再向西走一格地图到达山区, 名称就记为 \"0_塞门_山_北2_西\".");
 
 		npc
 				.addReply(
@@ -117,17 +117,17 @@ public class MeetZynn extends AbstractQuest {
 		npc
 				.addReply(
 						"取得",
-						"你可以在 #https://stendhalgame.org/world/atlas.html 查看到 Stendhal 的世界地图。 Careful you don't spoil any surprises for yourself, though!");
+						"你可以在 #https://stendhalgame.org/world/atlas.html 查看到 Stendhal 的世界地图.  Careful you don't spoil any surprises for yourself, though!");
 
 		npc
 				.addReply(
 						"SPS",
-						"SPS 是Stendhal的定位系统；你可以去教堂的 #Io 询问有关这东西工作原理和细节。基本来说，它可以在任意时间查到你或朋友的精确位置。");
+						"SPS 是Stendhal的定位系统；你可以去教堂的 #Io 询问有关这东西工作原理和细节. 基本来说, 它可以在任意时间查到你或朋友的精确位置. ");
 
 		npc
 				.addReply(
 						"Io",
-						"它的全名是 \"Io Flotto\".她大部分时间都在教堂，嗯...漂着...她可能有些怪异。但她的直觉 \"intuition\" 工作远远好过任何指示器, 正如我讲的那样。");
+						"它的全名是 \"Io Flotto\".她大部分时间都在教堂, 嗯...漂着...她可能有些怪异. 但她的直觉 \"intuition\" 工作远远好过任何指示器, 正如我讲的那样. ");
 
 		/**
 		 * I still have to think of a way to reward a good amount of XP to the
@@ -138,13 +138,13 @@ public class MeetZynn extends AbstractQuest {
 		npc.add(ConversationStates.ATTENDING, "再见",
 			new LevelLessThanCondition(15),
 			ConversationStates.IDLE,
-			"再见，如果你去图书馆逛逛，请保持安静；其他人正在学习！",
+			"再见, 如果你去图书馆逛逛, 请保持安静；其他人正在学习！",
 			null);
 
 		npc.add(ConversationStates.ATTENDING, "再见",
 			new LevelGreaterThanCondition(14),
 			ConversationStates.IDLE,
-			"再见，你要知道，你应该考虑办一张会员卡。",
+			"再见, 你要知道, 你应该考虑办一张会员卡. ",
 			null);
 	}
 
@@ -152,7 +152,7 @@ public class MeetZynn extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Meet Zynn Iwuhos",
-				"Zynn Iwuhos, 在塞门镇图书管工作，掌握了相当多的实用信息资源。",
+				"Zynn Iwuhos, 在塞门镇图书管工作, 掌握了相当多的实用信息资源. ",
 				false);
 		step_1();
 	}

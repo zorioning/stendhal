@@ -62,11 +62,11 @@ public class SmallBoyNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Hm?");
-				addQuest("Would you get me a #balloon? Unless the mine town weeks are currently on,"
+				addQuest("Would you get me a #气球? Unless the mine town weeks are currently on,"
 						+ " then I can get my own :)");
-				addHelp("I wonder if a #balloon could fly high enough to touch the clouds...");
+				addHelp("I wonder if a #气球 could fly high enough to touch the clouds...");
 				addJob("A Job? Is that something you can eat?");
-				addReply("balloon", "One day, i will have enough balloons to fly away!");
+				addReply("气球", "One day, i will have enough 气球s to fly away!");
 				addReply(Arrays.asList("xkcd", "tables", "sql", "student", "drop", "table"),
 						"Yes, it's true, my full name is Robert'); DROP TABLE students;-- but you can call me Bobby.");
 				addGoodbye("Good bye.");

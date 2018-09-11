@@ -39,6 +39,6 @@ public class ElfRaid extends CreateRaid {
 	}
 	@Override
 	protected String getInfo() {
-		return "对于30级以下的玩家不安全。";
+		return "对于30级以下的玩家不安全. ";
 	}
 }

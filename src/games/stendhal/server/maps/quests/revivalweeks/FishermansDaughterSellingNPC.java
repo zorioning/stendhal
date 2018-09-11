@@ -26,13 +26,13 @@ import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 import games.stendhal.server.maps.ados.market.FishermansDaughterNPC;
 
 /**
- * Caroline during the Mine Town Revival Weeks
+ * 卡若琳 during the 矿镇复兴展会周
  */
 public class FishermansDaughterSellingNPC implements LoadableContent {
 	private final ShopList shops = SingletonRepository.getShopList();
 	private void createFishermansDaughterSellingNPC() {
 		final StendhalRPZone zone2 = SingletonRepository.getRPWorld().getZone("0_塞门_山_北2");
-		final SpeakerNPC npc2 = new SpeakerNPC("Caroline") {
+		final SpeakerNPC npc2 = new SpeakerNPC("卡若琳") {
 
 			@Override
 			protected void createPath() {
@@ -42,10 +42,10 @@ public class FishermansDaughterSellingNPC implements LoadableContent {
 			@Override
 			protected void createDialog() {
 				addGreeting("Hello, nice to meet you! Welcome at my small Mine Town market stand!");
-				addJob("I have been asked to work here and sell some tasty snacks and drinks during the Mine Town Revival weeks. An awesome chance to gain some cooking skills for my business which I'm working on at the moment!");
+				addJob("I have been asked to work here and sell some tasty snacks and drinks during the 矿镇复兴展会周. An awesome chance to gain some cooking skills for my business which I'm working on at the moment!");
 				addHelp("You should go and enjoy the games and party around the Mine Town :) Hope you tested my favourite, the #outfit #colouring already, it's perfect for Halloween days and selfmade costumes :)");
 				addReply(Arrays.asList("outfit", "colouring", "outfit colouring"),
-		        "It's just pefect for 塞门镇 Mine Town Revival weeks and Halloween! You can recolour your outfit by right clicking on yourself. Choose Set Outfit and then pick your favourite colour for hair and dress! It's awesome!");
+		        "It's just pefect for 塞门镇 矿镇复兴展会周 and Halloween! You can recolour your outfit by right clicking on yourself. Choose Set Outfit and then pick your favourite colour for hair and dress! It's awesome!");
 				addReply("susi", "Oh she is a lovely girl! I met her around here, she is so happy that she can celebrate with all of us again!");
 				addOffer("I sell some snacks and drinks during the Mine Town Weeks. Please take a look at the list close to the stand.");
 				addQuest("I heard that #Susi would love to make friends, she is inside of the house. Or you can ask Fidorea next to me about a little run.");
@@ -82,21 +82,21 @@ public class FishermansDaughterSellingNPC implements LoadableContent {
 
 	@Override
 	public void addToWorld() {
-		removeNPC("Caroline");
+		removeNPC("卡若琳");
 		createFishermansDaughterSellingNPC();
 	}
 
 
 	/**
-	 * removes Caroline from the Mine Town and places her back into her home in Ados.
+	 * removes 卡若琳 from the Mine Town and places her back into her home in Ados.
 	 *
 	 * @return <code>true</code>, if the content was removed, <code>false</code> otherwise
 	 */
 	@Override
 	public boolean removeFromWorld() {
-		removeNPC("Caroline");
+		removeNPC("卡若琳");
 
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_ados_carolines_house_0");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_阿多斯_卡若琳_小屋_0");
 		new FishermansDaughterNPC().createFishermansDaughterSellingNPC(zone);
 
 		return true;

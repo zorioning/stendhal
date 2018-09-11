@@ -76,13 +76,13 @@ public class DiceGambling extends AbstractQuest {
 		ricardo.add(ConversationStates.ATTENDING, "play", null,
 				ConversationStates.QUESTION_1,
 				"想要开始游戏, 需要压注 " + STAKE
-						+ " 金币，你确定压吗？", null);
+						+ " 金币, 你确定压吗？", null);
 
 		ricardo.add(ConversationStates.QUESTION_1,
 			ConversationPhrases.YES_MESSAGES,
 			new PlayerHasItemWithHimCondition("money", STAKE),
 			ConversationStates.ATTENDING,
-			"OK, 这是骰子，准备好了就扔出来，祝你好运!",
+			"OK, 这是骰子, 准备好了就扔出来, 祝你好运!",
 			new ChatAction() {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
@@ -116,28 +116,28 @@ public class DiceGambling extends AbstractQuest {
 
 	private Map <Integer, Pair<String, String>> initPrices() {
 		Map<Integer, Pair<String, String>> map = new HashMap<Integer, Pair<String, String>>();
-		map.put(3, new Pair<String, String>("blue shield",
-				"小哥，你真是狗屎运！我对你很失望！给你，把这 blue shield 拿走吧."));
-		map.put(7, new Pair<String, String>("beer",
-				"这是安慰奖，一瓶啤酒."));
+		map.put(3, new Pair<String, String>("蓝盾",
+				"小哥, 你真是狗屎运！我对你很失望！给你, 把这 蓝盾 拿走吧."));
+		map.put(7, new Pair<String, String>("啤酒",
+				"这是安慰奖, 一瓶啤酒."));
 		map.put(8, new Pair<String, String>("wine",
 				"你赢了一杯可口的红酒！"));
-		map.put(9, new Pair<String, String>("studded shield",
+		map.put(9, new Pair<String, String>("镶嵌盾",
 				"这个简单的盾是给你的奖励"));
 		map.put(10, new Pair<String, String>("chain legs",
 				"我希望你能用到这些 chain legs."));
 		map.put(11,	new Pair<String, String>("antidote",
-			   "当你在野外中毒时，这瓶解毒济可帮上大忙"));
-		map.put(12, new Pair<String, String>("sandwich",
+			   "当你在野外中毒时, 这瓶解毒济可帮上大忙"));
+		map.put(12, new Pair<String, String>("三明治",
 				"你赢了一块美味的三明治！"));
 		map.put(13, new Pair<String, String>("cheeseydog",
 				"把这个好吃的 cheesydog 带走吧！"));
 		map.put(14, new Pair<String, String>("home scroll",
 		"你赢到了这个好用的回城卷！"));
 		map.put(15,	new Pair<String, String>("greater potion",
-				"你赢了一瓶大生命药济，但你以前或许从来没用过这个!"));
+				"你赢了一瓶大生命药济, 但你以前或许从来没用过这个!"));
 		map.put(16,	new Pair<String, String>("longbow",
-		"拿着这个拉风的长弓，你会是个优秀的弓箭手！"));
+		"拿着这个拉风的长弓, 你会是个优秀的弓箭手！"));
 		map.put(17,	new Pair<String, String>("红斗篷",
 		"穿上这件时尚的 红斗篷 你一定变得很酷！"));
 		map.put(18, new Pair<String, String>("magic chain helmet",

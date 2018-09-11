@@ -25,7 +25,7 @@ public class ExamineOfferChatAction extends KnownOffersChatAction {
 	@Override
 	public void fire(Player player, Sentence sentence, EventRaiser npc) {
 		if (sentence.hasError()) {
-			npc.say("抱歉，你说的我听不懂. "
+			npc.say("抱歉, 你说的我听不懂. "
 					+ sentence.getErrorString());
 		} else if (sentence.getExpressions().iterator().next().toString().equals("examine")){
 			handleSentence(player,sentence,npc);
@@ -49,9 +49,9 @@ public class ExamineOfferChatAction extends KnownOffersChatAction {
 					return;
 				}
 			}
-			npc.say("抱歉，请在我说的这些价目表中选择一种商品的序号.");
+			npc.say("抱歉, 请在我说的这些价目表中选择一种商品的序号.");
 		} catch (NumberFormatException e) {
-			npc.say("抱歉，请对我说 #买 #数量 或者 #accept #number");
+			npc.say("抱歉, 请对我说 #买 #数量 或者 #accept #number");
 		}
 	}
 

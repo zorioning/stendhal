@@ -65,10 +65,10 @@ public class OrcWeaponArmorGuyNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting();
 				addJob("我叫 Salesman. 你呢? #help");
-				addHelp("本店销售的都是好东西，可以去看看墙上的黑板.");
+				addHelp("本店销售的都是好东西, 可以去看看墙上的黑板.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellbetterstuff1")), false);
 				addOffer("我销售的商品都写在墙上的黑板上 #offer.");
-				addQuest("谢谢你的好意，但我不需要.");
+				addQuest("谢谢你的好意, 但我不需要.");
 				addGoodbye();
 			}
 		};

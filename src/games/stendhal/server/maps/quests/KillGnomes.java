@@ -84,7 +84,7 @@ public class KillGnomes extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"几个侏儒偷了塞门镇北方农场的胡萝卜，要给这些小偷上上课，你原意帮我吗？",
+				"几个侏儒偷了塞门镇北方农场的胡萝卜, 要给这些小偷上上课, 你原意帮我吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -92,7 +92,7 @@ public class KillGnomes extends AbstractQuest {
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT,"killed"),
 						 new TimePassedCondition(QUEST_SLOT, 1, WEEK_IN_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"这些讨厌的侏儒又偷胡萝卜了。我觉得有必要给了们上一课，你能再去吗？",
+				"这些讨厌的侏儒又偷胡萝卜了. 我觉得有必要给了们上一课, 你能再去吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -100,7 +100,7 @@ public class KillGnomes extends AbstractQuest {
 				new AndCondition(new QuestStateStartsWithCondition(QUEST_SLOT,"killed"),
 						 new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, WEEK_IN_MINUTES))),
 				ConversationStates.ATTENDING,
-				"自从你教训了那些侏儒后，他们再没找过麻烦。",
+				"自从你教训了那些侏儒后, 他们再没找过麻烦. ",
 				null);
 
 		final Map<String, Pair<Integer, Integer>> toKill = new TreeMap<String, Pair<Integer, Integer>>();
@@ -116,15 +116,15 @@ public class KillGnomes extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"太好了。你可以到塞门镇西北方向找到了侏儒的大本营，你要保证杀掉盗贼头目，还有至少一个步兵的和骑兵！",
+				"太好了. 你可以到塞门镇西北方向找到了侏儒的大本营, 你要保证杀掉盗贼头目, 还有至少一个步兵的和骑兵！",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"你说的对，只因只偷了几个胡萝卜就杀掉那些侏儒也许太过残忍。"
-				+ "可能那些农民只是想增加点安全措施。",
+				"你说的对, 只因只偷了几个胡萝卜就杀掉那些侏儒也许太过残忍. "
+				+ "可能那些农民只是想增加点安全措施. ",
 				new SetQuestAction(QUEST_SLOT, "rejected"));
 	}
 
@@ -152,8 +152,8 @@ public class KillGnomes extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new KilledForQuestCondition(QUEST_SLOT, 1)),
 				ConversationStates.ATTENDING,
-				"我了解到你已杀了侏儒，希望他们能老实一阵子。"
-				+ "这些毒药是给你的回报。",
+				"我了解到你已杀了侏儒, 希望他们能老实一阵子. "
+				+ "这些毒药是给你的回报. ",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.ATTENDING,
@@ -162,8 +162,8 @@ public class KillGnomes extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new NotCondition(new KilledForQuestCondition(QUEST_SLOT, 1))),
 				ConversationStates.ATTENDING,
-				"你需要给这些小偷上一课，杀几只以儆效尤！"
-				+ "一定要杀掉他们的头目，还有至少一个步兵和一个骑兵。",
+				"你需要给这些小偷上一课, 杀几只以儆效尤！"
+				+ "一定要杀掉他们的头目, 还有至少一个步兵和一个骑兵. ",
 				null);
 	}
 
@@ -171,7 +171,7 @@ public class KillGnomes extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"杀死侏儒",
-				"詹妮 对胡萝卜被侏儒偷走感到很生气。",
+				"詹妮 对胡萝卜被侏儒偷走感到很生气. ",
 				false);
 		step_1();
 		step_2();
@@ -185,11 +185,11 @@ public class KillGnomes extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("我必须杀死一些侏儒，尤其是领头的那个，给他们上一课！");
+				res.add("我必须杀死一些侏儒, 尤其是领头的那个, 给他们上一课！");
 			} else if(isRepeatable(player)){
-				res.add("这些记吃不记打的侏儒忘了我给的教训，又开始偷了！需要帮帮詹妮。");
+				res.add("这些记吃不记打的侏儒忘了我给的教训, 又开始偷了！需要帮帮詹妮. ");
 			} else {
-				res.add("侏儒们现在不敢再偷詹妮的胡萝卜了，耶！");
+				res.add("侏儒们现在不敢再偷詹妮的胡萝卜了, 耶！");
 			}
 			return res;
 	}

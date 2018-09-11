@@ -3,7 +3,7 @@
 	xsi:schemaLocation="stendhal ../items.xsd ">
   <item name="木箭">
     <type class="ammunition" subclass="wooden_arrow" tileid="-1"/>
-    <description>木箭这是一支木箭，两只手分别装备弓和箭的话，就可以使用远程攻击了。</description>
+    <description>木箭这是一支木箭, 两只手分别装备弓和箭的话, 就可以使用远程攻击了. </description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="1"/>
@@ -25,7 +25,7 @@
 
   <item name="铁箭">
     <type class="ammunition" subclass="steel_arrow" tileid="-1"/>
-    <description>木箭这是一支铁箭，如再弄个好弓，就可以成为一个优秀的弓箭手了。</description>
+    <description>木箭这是一支铁箭, 如再弄个好弓, 就可以成为一个优秀的弓箭手了. </description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="3"/>
@@ -47,7 +47,7 @@
 
   <item name="金箭">
     <type class="ammunition" subclass="golden_arrow" tileid="-1"/>
-    <description>这是一支黄金箭，再找个配套的弓，就能迅速放倒敌人。.</description>
+    <description>这是一支黄金箭, 再找个配套的弓, 就能迅速放倒敌人. .</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="4"/>
@@ -67,9 +67,9 @@
     </equipable>
   </item>
   
-  <item name="fire arrow">
+  <item name="火箭">
     <type class="ammunition" subclass="fire_arrow" tileid="-1"/>
-    <description>You see a fire arrow. The tip burns brightly.</description>
+    <description>You see a 火箭. The tip burns brightly.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>
@@ -90,7 +90,7 @@
     </equipable>
   </item>
   
-    <item name="ice arrow">
+    <item name="冰箭">
     <type class="ammunition" subclass="ice_arrow" tileid="-1"/>
     <description>You see an ice arrow. It can deliver a bitter sting.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
@@ -113,9 +113,9 @@
     </equipable>
   </item>
   
-    <item name="light arrow">
+    <item name="电箭">
     <type class="ammunition" subclass="light_arrow" tileid="-1"/>
-    <description>You see a light arrow. It shines with a holy radiance.</description>
+    <description>You see a 电箭. It shines with a holy radiance.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>
@@ -161,7 +161,7 @@
 
   <item name="加强箭">
     <type class="ammunition" subclass="power_arrow" tileid="-1"/>
-    <description>这是一支加强箭，配上弓可以准确的打击敌人。</description>
+    <description>这是一支加强箭, 配上弓可以准确的打击敌人. </description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="6"/>

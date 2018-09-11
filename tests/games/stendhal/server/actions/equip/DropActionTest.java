@@ -24,7 +24,7 @@ import utilities.ZoneAndPlayerTestImpl;
  */
 public class DropActionTest extends ZoneAndPlayerTestImpl {
 
-	private static final String ZONE_NAME = "int_semos_tavern_0";
+	private static final String ZONE_NAME = "int_塞门_酒馆_0";
 
 	public DropActionTest() {
 	    super(ZONE_NAME);

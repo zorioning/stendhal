@@ -103,7 +103,7 @@ public class RepairerBehaviour extends TransactionBehaviour {
 
 	@Override
 	public ChatAction getRejectedTransactionAction() {
-		return new SayTextAction("抱歉， [name], 我不能修好你的东西.");
+		return new SayTextAction("抱歉, [name], 我不能修好你的东西.");
 	}
 
 	/**

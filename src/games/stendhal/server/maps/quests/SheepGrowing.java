@@ -77,8 +77,8 @@ public class SheepGrowing extends AbstractQuest {
     public void addToWorld() {
         fillQuestInfo(
                 TITLE,
-                "尼世亚, 一个卖羊人，答应给 赛特 一只羊。" +
-                    "由于他很忙，需要人为他把一只羊养大后，" +
+                "尼世亚, 一个卖羊人, 答应给 赛特 一只羊. " +
+                    "由于他很忙, 需要人为他把一只羊养大后, " +
                     "交给 赛特.",
                 true);
         generalInformationDialogs();
@@ -102,16 +102,16 @@ public class SheepGrowing extends AbstractQuest {
 
         final String questState = player.getQuest(QUEST_SLOT);
         if (questState.equals("rejected")) {
-            res.add("我告诉尼世亚还有其他的事要做，等我以后有空再帮他.");
+            res.add("我告诉尼世亚还有其他的事要做, 等我以后有空再帮他.");
         }
         if (player.isQuestInState(QUEST_SLOT, "start", "handed_over", "done")) {
-            res.add("我答应帮他养大一只羊。");
+            res.add("我答应帮他养大一只羊. ");
         }
         if (player.isQuestInState(QUEST_SLOT, "handed_over", "done")) {
-            res.add("我把羊养大并交给 赛特。现在要向 尼世亚 复命了");
+            res.add("我把羊养大并交给 赛特. 现在要向 尼世亚 复命了");
         }
         if(questState.equals("done")) {
-            res.add("我把消息带给尼世亚。他很开心我能帮忙.");
+            res.add("我把消息带给尼世亚. 他很开心我能帮忙.");
         }
         return res;
     }
@@ -127,10 +127,10 @@ public class SheepGrowing extends AbstractQuest {
     private void generalInformationDialogs() {
         final SpeakerNPC npc = npcs.get("尼世亚");
 
-        npc.add(ConversationStates.ATTENDING, "赛特", null, ConversationStates.ATTENDING, "赛特是 塞门镇 的收羊人。" +
-                "顺着这条路往东，你会找到他。", null);
-        npc.add(ConversationStates.QUEST_OFFERED, "赛特", null, ConversationStates.QUEST_OFFERED, "赛特是 塞门镇 的收羊人。" +
-                "顺着这条路往东，你会找到他。", null);
+        npc.add(ConversationStates.ATTENDING, "赛特", null, ConversationStates.ATTENDING, "赛特是 塞门镇 的收羊人. " +
+                "顺着这条路往东, 你会找到他. ", null);
+        npc.add(ConversationStates.QUEST_OFFERED, "赛特", null, ConversationStates.QUEST_OFFERED, "赛特是 塞门镇 的收羊人. " +
+                "顺着这条路往东, 你会找到他. ", null);
 
         List<String> berryStrings = new ArrayList<String>();
         berryStrings.add("红树莓");
@@ -138,7 +138,7 @@ public class SheepGrowing extends AbstractQuest {
         berryStrings.add("羊食");
         npc.addReply(berryStrings, "羊喜欢吃长在矮树丛中的 红树莓");
 
-        npc.addReply("sheep", "本人销售毛茸茸的羊，这是我的 #工作 .");
+        npc.addReply("sheep", "本人销售毛茸茸的羊, 这是我的 #工作 .");
     }
     /**
      * The step where the player speaks with 尼世亚 about quests and gets the sheep.
@@ -162,8 +162,8 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestNotInStateCondition(QUEST_SLOT, "done")),
                 ConversationStates.QUEST_OFFERED,
                 "最近因为我的羊的事情一直非常忙. " +
-                "你想带走一只羊并照料它，然后再转手给 #赛特 吗? " +
-                "你只需带着羊走到红色树莓附近，直到羊的体重达到 " + Sheep.MAX_WEIGHT + " . " +
+                "你想带走一只羊并照料它, 然后再转手给 #赛特 吗? " +
+                "你只需带着羊走到红色树莓附近, 直到羊的体重达到 " + Sheep.MAX_WEIGHT + " . " +
                 "你做的到吗?",
                 new SetQuestAction(QUEST_SLOT, "asked"));
 
@@ -187,7 +187,7 @@ public class SheepGrowing extends AbstractQuest {
                     new NotCondition(new QuestInStateCondition(QUEST_SLOT, "handed_over"))),
                 ConversationStates.ATTENDING,
                 "我已经给了你一只羊. " +
-                "如果你把它丢弃了，我可以卖你一只新的. 只用对我说 #buy #sheep.",
+                "如果你把它丢弃了, 我可以卖你一只新的. 只用对我说 #buy #sheep.",
                 null);
 
         // If quest is offered and player says yes, give a sheep to him.
@@ -206,9 +206,9 @@ public class SheepGrowing extends AbstractQuest {
                 new AndCondition(playerHasNoSheep,
                         new QuestInStateCondition(QUEST_SLOT, "asked")),
                 ConversationStates.IDLE,
-                "谢谢! *smiles* 这是你的毛绒绒的养女，要好好待她. " +
-                "如果她死了，或者你丢弃了她，还想再弄一只的话，只能向我重新购买. " +
-                "Oh... 不出意外的话，羊长大后可以卖给 赛特. 只要向他说话就行了.",
+                "谢谢! *smiles* 这是你的毛绒绒的养女, 要好好待她. " +
+                "如果她死了, 或者你丢弃了她, 还想再弄一只的话, 只能向我重新购买. " +
+                "Oh... 不出意外的话, 羊长大后可以卖给 赛特. 只要向他说话就行了.",
                 new MultipleActions(sheepActions));
     }
     /**
@@ -269,7 +269,7 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestInStateCondition(QUEST_SLOT,"start"),
                         new NotCondition(playerHasFullWeightSheep)),
                 ConversationStates.IDLE,
-                "Hello. 你应该从 尼世亚 处弄一只羊给我, 他欠我一个！但我想要一只足量的。你弄到一只时再回来。再见!",
+                "Hello. 你应该从 尼世亚 处弄一只羊给我, 他欠我一个！但我想要一只足量的. 你弄到一只时再回来. 再见!",
                 null);
 
         // Player answers yes - Sheep is given to 赛特
@@ -280,8 +280,8 @@ public class SheepGrowing extends AbstractQuest {
                         new QuestInStateCondition(QUEST_SLOT,"start"),
                         playerHasFullWeightSheep),
                 ConversationStates.IDLE,
-                "我知道它是 尼世亚 的，对吧? 我就等它了. " +
-                "这是给朋友的朋友的礼物，如果我没有送生日礼物，我会不好意思. " +
+                "我知道它是 尼世亚 的, 对吧? 我就等它了. " +
+                "这是给朋友的朋友的礼物, 如果我没有送生日礼物, 我会不好意思. " +
                 "向 尼世亚 说声谢谢.",
                 new MultipleActions(removeSheepAction));
 
@@ -350,7 +350,7 @@ public class SheepGrowing extends AbstractQuest {
                 ConversationPhrases.NO_MESSAGES,
                 new QuestInStateCondition(QUEST_SLOT, "handed_over"),
                 ConversationStates.IDLE,
-                "好吧...ok，但不要忘了。. 赛特 需要马上弄到羊.",
+                "好吧...ok, 但不要忘了. . 赛特 需要马上弄到羊.",
                 null);
 
         // Player asks for quest after solving the quest
@@ -358,7 +358,7 @@ public class SheepGrowing extends AbstractQuest {
                 ConversationPhrases.QUEST_MESSAGES,
                 new QuestCompletedCondition(QUEST_SLOT),
                 ConversationStates.ATTENDING,
-                "抱歉，现在我什么都为你做不了，不过还是谢谢你的帮助。",
+                "抱歉, 现在我什么都为你做不了, 不过还是谢谢你的帮助. ",
                 null);
     }
 

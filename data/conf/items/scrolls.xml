@@ -2,7 +2,7 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
 
-  <item name="summon scroll">
+  <item name="召唤卷轴">
     <type class="scroll" subclass="summon" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.scroll.SummonScroll"/>
@@ -62,12 +62,12 @@
     </equipable>
   </item>
 
-  <item name="nalwor city scroll">
+  <item name="纳尔沃城回城卷">
     <type class="scroll" subclass="nalwor" tileid="-1"/>
-    <description>You see a nalwor city scroll, it will take you back to nalwor city.</description>
+    <description>一个纳尔沃城回城卷, 它会带你回到纳尔沃城. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
-      <infostring value="0_nalwor_city 40 60"/>
+      <infostring value="0_纳尔沃_城 40 60"/>
       <quantity value="1"/>
       <menu value="Use|Use"/>
     </attributes>
@@ -88,7 +88,7 @@
     <description>You see a 阿多斯城回城卷, it will take you back to 阿多斯城.</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
     <attributes>
-      <infostring value="0_ados_city_n 50 50"/>
+      <infostring value="0_阿多斯_城_n 50 50"/>
       <quantity value="1"/>
       <menu value="Use|Use"/>
     </attributes>
@@ -167,7 +167,7 @@
     </equipable>
   </item>
 
-  <item name="marked scroll">
+  <item name="标记卷轴">
     <type class="scroll" subclass="marked" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.scroll.MarkedScroll"/>
@@ -187,7 +187,7 @@
     </equipable>
   </item>
 
-  <item name="invitation scroll">
+  <item name="邀请函">
     <type class="scroll" subclass="invitation" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.scroll.InvitationScroll"/>
@@ -228,9 +228,9 @@
     </equipable>
   </item>
 
-  <item name="empty scroll">
+  <item name="空白卷轴">
     <type class="scroll" subclass="empty" tileid="-1"/>
-    <description>You see an empty scroll. If used correctly it will return you to where you marked it at.</description>
+    <description>一张空白卷轴, 如果打上标记, 它会带你回到标记的地方</description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.EmptyScroll"/>
     <attributes>
       <quantity value="1"/>
@@ -248,9 +248,9 @@
     </equipable>
   </item>
 
-  <item name="rainbow beans">
+  <item name="彩虹豆">
     <type class="scroll" subclass="rainbow_beans" tileid="-1"/>
-    <description>You see a small pile of rainbow beans. One says something odd.</description>
+    <description>一小堆彩虹豆, 奇怪的存在. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.RainbowBeansScroll"/>
     <attributes>
       <infostring value="1_dreamscape 77 35 5400 0_塞门_草原_s -1 -1"/>
@@ -269,9 +269,9 @@
     </equipable>
   </item>
 
-  <item name="balloon">
+  <item name="气球">
     <type class="scroll" subclass="balloon" tileid="-1"/>
-    <description>You see a bright red balloon. You can use it to float high up into the clouds.</description>
+    <description>发现一只亮红色气球, 可以把它放飞. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.BalloonScroll"/>
     <attributes>
       <infostring value="7_kikareukin_clouds 31 12 10800 6_kikareukin_islands -1 -1"/>
@@ -290,12 +290,12 @@
     </equipable>
   </item>
 
-  <item name="twilight moss">
+  <item name="暮光苔藓">
     <type class="scroll" subclass="twilightmoss" tileid="-1"/>
-    <description>You see a strange looking piece of moss. It looks like it could have hallucinogenic properties.</description>
+    <description>发现一丛长相奇特的苔藓, 看起来像是有迷幻功能. </description>
     <implementation class-name="games.stendhal.server.entity.item.scroll.TwilightMossScroll"/>
     <attributes>
-      <infostring value="int_ados_twilight_zone 12 20 10800 int_ados_sewing_room -1 -1"/>
+      <infostring value="int_阿多斯_昏暗_地带 12 20 10800 int_阿多斯_缝纫_店 -1 -1"/>
       <quantity value="1"/>
       <menu value="Use|Use"/>
     </attributes>

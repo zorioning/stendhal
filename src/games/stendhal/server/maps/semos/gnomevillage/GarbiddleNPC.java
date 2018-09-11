@@ -59,10 +59,10 @@ public class GarbiddleNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("欢迎来到我们的精彩农庄.");
 				addJob("我在雨季时收购些物资.");
-				addHelp("我收购几种商品，请在标识牌中看看我的需求.");
-				addOffer("看看那个标牌，上面有我要的东西.");
-				addQuest("谢谢关心，但我很好.");
-				addGoodbye("再见，很高兴你停下拜访我们。");
+				addHelp("我收购几种商品, 请在标识牌中看看我的需求.");
+				addOffer("看看那个标牌, 上面有我要的东西.");
+				addQuest("谢谢关心, 但我很好.");
+				addGoodbye("再见, 很高兴你停下拜访我们. ");
  				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buy4gnomes")), false);
 			}
 		};

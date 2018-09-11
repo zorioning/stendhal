@@ -70,7 +70,7 @@ public class FishSource extends PlayerActivityEntity {
 		put("class", "source");
 		put("name", "fish_source");
 		setMenu("钓鱼");
-		setDescription("这里水中有些东西。");
+		setDescription("这里水中有些东西. ");
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class FishSource extends PlayerActivityEntity {
 			return true;
 		}
 
-		player.sendPrivateText("需要一根钓具。");
+		player.sendPrivateText("需要一根钓具. ");
 		return false;
 	}
 
@@ -173,13 +173,13 @@ public class FishSource extends PlayerActivityEntity {
 			player.equipOrPutOnGround(item);
 			player.incHarvestedForItem(itemName, 1);
 		    SingletonRepository.getAchievementNotifier().onObtain(player);
-			player.sendPrivateText("你钓到一条鱼。");
+			player.sendPrivateText("你钓到一条鱼. ");
 		} else {
 		    // TODO: find a sound for failure
             //this.addEvent(new SoundEvent(failSound, SOUND_RADIUS, 100, SoundLayer.AMBIENT_SOUND));
 			this.notifyWorldAboutChanges();
 
-			player.sendPrivateText("没有钓到鱼。");
+			player.sendPrivateText("没有钓到鱼. ");
 		}
 		notifyWorldAboutChanges();
 	}
@@ -197,7 +197,7 @@ public class FishSource extends PlayerActivityEntity {
         notifyWorldAboutChanges();
 
 		// some feedback is needed.
-		player.sendPrivateText("正在钓鱼中。");
+		player.sendPrivateText("正在钓鱼中. ");
 		addEvent(new ImageEffectEvent("water_splash", true));
 		notifyWorldAboutChanges();
 	}

@@ -40,7 +40,7 @@ public class ShowOfferItemsChatAction implements ChatAction {
 		RPSlot offersSlot = market.getSlot(Market.OFFERS_SLOT_NAME);
 		List<Offer> offers = getOffers(offersSlot);
 		if (offers.isEmpty()) {
-			npc.say("抱歉，目前还没有代销商品.");
+			npc.say("抱歉, 目前还没有代销商品.");
 		} else {
 			String text = buildItemListText(buildItemList(offers));
 			npc.say(text);

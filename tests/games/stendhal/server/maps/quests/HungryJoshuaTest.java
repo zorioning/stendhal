@@ -72,7 +72,7 @@ public class HungryJoshuaTest {
 	@Test
 	public void testQuest() {
 
-		npc = SingletonRepository.getNPCList().get("Xoderos");
+		npc = SingletonRepository.getNPCList().get("艾克德罗斯");
 		en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -80,15 +80,15 @@ public class HungryJoshuaTest {
 		en.step(player, "task");
 		assertEquals("I'm worried about my brother who lives in Ados. I need someone to take some #food to him.", getReply(npc));
 		en.step(player, "food");
-		assertEquals("I think five sandwiches would be enough. My brother is called #Joshua. Can you help?", getReply(npc));
-		en.step(player, "joshua");
+		assertEquals("I think five sandwiches would be enough. My brother is called #约书亚. Can you help?", getReply(npc));
+		en.step(player, "约书亚");
 		assertEquals("He's the goldsmith in Ados. They're so short of supplies. Will you help?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("Thank you. Please tell him #food or #sandwich so he knows you're not just a customer.", getReply(npc));
 		assertThat(player.getQuest(questSlot), is("start"));
 		en.step(player, "food");
-		assertEquals("#Joshua will be getting hungry! Please hurry!", getReply(npc));
-		en.step(player, "joshua");
+		assertEquals("#约书亚 will be getting hungry! Please hurry!", getReply(npc));
+		en.step(player, "约书亚");
 		assertEquals("My brother, the goldsmith in Ados.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
@@ -98,9 +98,9 @@ public class HungryJoshuaTest {
 		en.step(player, "hi");
 		assertEquals("Greetings. I am sorry to tell you that, because of the war, I am not allowed to sell you any weapons. However, I can #cast iron for you. I can also #offer you tools.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("Please don't forget the five #sandwiches for #Joshua!", getReply(npc));
+		assertEquals("Please don't forget the five #sandwiches for #约书亚!", getReply(npc));
 		en.step(player, "sandwiches");
-		assertEquals("#Joshua will be getting hungry! Please hurry!", getReply(npc));
+		assertEquals("#约书亚 will be getting hungry! Please hurry!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
@@ -111,7 +111,7 @@ public class HungryJoshuaTest {
 
 
 		// -----------------------------------------------
-		npc = SingletonRepository.getNPCList().get("Joshua");
+		npc = SingletonRepository.getNPCList().get("约书亚");
 		en = npc.getEngine();
 
 		Item item = ItemTestHelper.createItem("sandwich", 5);
@@ -121,30 +121,30 @@ public class HungryJoshuaTest {
 		en.step(player, "hi");
 		assertEquals("Hi! I'm the local goldsmith. If you require me to #cast you a #'gold bar' just tell me!", getReply(npc));
 		en.step(player, "food");
-		assertEquals("Oh great! Did my brother Xoderos send you with those sandwiches?", getReply(npc));
+		assertEquals("Oh great! Did my brother 艾克德罗斯 send you with those sandwiches?", getReply(npc));
 		en.step(player, "yes");
 		// [07:28] kymara earns 150 experience points.
-		assertEquals("Thank you! Please let Xoderos know that I am fine. Say my name, Joshua, so he knows that you saw me. He will probably give you something in return.", getReply(npc));
+		assertEquals("Thank you! Please let 艾克德罗斯 know that I am fine. Say my name, 约书亚, so he knows that you saw me. He will probably give you something in return.", getReply(npc));
 		assertFalse(player.isEquipped("sandwich"));
 		assertThat(player.getXP(), greaterThan(xp));
-		assertThat(player.getQuest(questSlot), is("joshua"));
+		assertThat(player.getQuest(questSlot), is("约书亚"));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
 		// -----------------------------------------------
-		npc = SingletonRepository.getNPCList().get("Xoderos");
+		npc = SingletonRepository.getNPCList().get("艾克德罗斯");
 		en = npc.getEngine();
 		final int xp2 = player.getXP();
 
 		en.step(player, "hi");
 		assertEquals("Greetings. I am sorry to tell you that, because of the war, I am not allowed to sell you any weapons. However, I can #cast iron for you. I can also #offer you tools.", getReply(npc));
 		en.step(player, "task");
-		assertEquals("I do hope #Joshua is well ....", getReply(npc));
+		assertEquals("I do hope #约书亚 is well ....", getReply(npc));
 		en.step(player, "food");
-		assertEquals("I wish you could confirm for me that #Joshua is fine ...", getReply(npc));
-		en.step(player, "joshua");
+		assertEquals("I wish you could confirm for me that #约书亚 is fine ...", getReply(npc));
+		en.step(player, "约书亚");
 		// [07:29] kymara earns 50 experience points.
-		assertEquals("I'm glad Joshua is well. Now, what can I do for you? I know, I'll fix that broken key ring that you're carrying ... there, it should work now!", getReply(npc));
+		assertEquals("I'm glad 约书亚 is well. Now, what can I do for you? I know, I'll fix that broken key ring that you're carrying ... there, it should work now!", getReply(npc));
 		assertThat(player.getXP(), greaterThan(xp2));
 		assertTrue(player.isQuestCompleted(questSlot));
 		en.step(player, "bye");

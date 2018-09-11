@@ -37,11 +37,11 @@ public class SupportMessageTemplatesFactory {
 	 * registers the available templates. use %s to personalize a template with the name of the asking player in the greeting. but you can only use %s once.
 	 */
 	private void registerTemplates() {
-		addTemplate("$atlas", "Hi %s, 对于你在Stendhal游戏中的走失，我们感到十分抱歉，你现在可以使用 /#atlas 命令打开Faiumoni地图。谢谢");
-		addTemplate("$banprivate", "Hi %s, 因为隐私的原因，我们不能向你提供其他玩家的屏闭列表。");
-		addTemplate("$bugstracker","Hi %s, 如果你发现了新bug,请你生成一个bug报告，把这个错误再现的方法发送到 #https://stendhalgame.org/wiki/SubmitBug - 十分感谢.");
-		addTemplate("$bugreport","Hi %s, 如果你发现了新bug,请你生成一个bug报告，把这个错误再现的方法发送到 #https://stendhalgame.org/wiki/SubmitBug - 十分感谢。");
-		addTemplate("$faq", "Hi %s, 你可以在 Stendhal网站的 FAQ版面找到你的问题答案。所以请仔细阅读下面的说明。使用 #/faq 打开 Stendhal FAQ. 谢谢你的参与!");
+		addTemplate("$atlas", "Hi %s, 对于你在Stendhal游戏中的走失, 我们感到十分抱歉, 你现在可以使用 /#atlas 命令打开Faiumoni地图. 谢谢");
+		addTemplate("$banprivate", "Hi %s, 因为隐私的原因, 我们不能向你提供其他玩家的屏闭列表. ");
+		addTemplate("$bugstracker","Hi %s, 如果你发现了新bug,请你生成一个bug报告, 把这个错误再现的方法发送到 #https://stendhalgame.org/wiki/SubmitBug - 十分感谢.");
+		addTemplate("$bugreport","Hi %s, 如果你发现了新bug,请你生成一个bug报告, 把这个错误再现的方法发送到 #https://stendhalgame.org/wiki/SubmitBug - 十分感谢. ");
+		addTemplate("$faq", "Hi %s, 你可以在 Stendhal网站的 FAQ版面找到你的问题答案. 所以请仔细阅读下面的说明. 使用 #/faq 打开 Stendhal FAQ. 谢谢你的参与!");
 		addTemplate("$faqpvp","Hi %s, sorry to hear about that. Player attacks are actually within the rules of the game, and it is not something that support gets involved with for that reason. Please open the FAQ via #/faq and read carefully #http://stendhalgame.org/wiki/StendhalFAQ#Player_vs_Player - good luck for the future.");
 		addTemplate("$faqsocial", "Hi %s, sorry to hear about that. Please read #https://stendhalgame.org/wiki/StendhalFAQ#Player_social_problems which covers some common problems.");
 		addTemplate("$firewallserver", "Hi %s, I am sorry but we cannot help you with the configuration of your router or firewall. It is rather dangerous to modify those settings without knowing exactly what you are doing. So this should only be done by an experienced network administrator who will find instructions in the manual that came with the hardware router or operating system.");

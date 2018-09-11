@@ -3,7 +3,7 @@
 	xsi:schemaLocation="stendhal ../items.xsd ">
 	 <item name="木头">
     <type class="resource" subclass="wood" tileid="-1"/>
-    <description>一根木头，掉落在林间的路旁。</description>
+    <description>一根木头, 掉落在林间的路旁. </description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -301,9 +301,9 @@
     </equipable>
   </item>
 
-  <item name="spotted egg">
+  <item name="斑点蛋">
     <type class="food" subclass="spotted_egg" tileid="-1"/>
-    <description>You see a spotted egg. They are said to be delicious.</description>
+    <description>You see a 斑点蛋. They are said to be delicious.</description>
     <implementation class-name="games.stendhal.server.entity.item.Food"/>
     <attributes>
       <amount value="1000"/>

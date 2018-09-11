@@ -189,7 +189,7 @@ public class Chest extends Entity implements UseListener {
 
 		if (isOpen()) {
 			text += " 打开箱子.";
-			text += " 你可鼠标右键点击，然后查看里面的物品.";
+			text += " 你可鼠标右键点击, 然后查看里面的物品.";
 		} else {
 			text += " 关闭箱子.";
 		}

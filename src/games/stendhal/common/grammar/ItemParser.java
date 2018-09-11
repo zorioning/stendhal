@@ -119,7 +119,7 @@ public class ItemParser {
 		} else if (mayBeItems!=null && mayBeItems.size()>1) {
 			return "不只有一种 " + chosenItemName + ". " +
 					"请指定用哪种 "
-					+ chosenItemName + " ，是你想 " + userAction + "的.";
+					+ chosenItemName + " , 是你想 " + userAction + "的.";
 		} else if (mayBeItems!=null && !mayBeItems.isEmpty()) {
 			return "请指定用哪种 "
 					+ chosenItemName + " ,是你想 " + userAction + "的.";

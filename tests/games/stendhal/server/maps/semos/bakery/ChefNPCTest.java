@@ -117,12 +117,12 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 		bread.setQuantity(1);
 		bread.setID(new ID(1, ZONE_NAME));
 		player.getSlot("bag").add(bread);
-		final StackableItem ham = new StackableItem("ham", "", "", null);
+		final StackableItem ham = new StackableItem("火腿", "", "", null);
 		ham.setID(new ID(3, ZONE_NAME));
 		player.getSlot("bag").add(ham);
 		assertEquals(2, player.getNumberOfEquipped("cheese"));
 		assertEquals(1, player.getNumberOfEquipped("bread"));
-		assertEquals(1, player.getNumberOfEquipped("ham"));
+		assertEquals(1, player.getNumberOfEquipped("火腿"));
 
 		en.step(player, "make");
 		assertTrue(npc.isTalking());
@@ -141,7 +141,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 				getReply(npc));
 		assertEquals(0, player.getNumberOfEquipped("cheese"));
 		assertEquals(0, player.getNumberOfEquipped("bread"));
-		assertEquals(0, player.getNumberOfEquipped("ham"));
+		assertEquals(0, player.getNumberOfEquipped("火腿"));
 		en.step(player, "bye");
 		assertFalse(npc.isTalking());
 		player.setQuest(QUEST, "1;;0");
@@ -174,13 +174,13 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 		bread.setQuantity(2);
 		bread.setID(new ID(1, ZONE_NAME));
 		player.getSlot("bag").add(bread);
-		final StackableItem ham = new StackableItem("ham", "", "", null);
+		final StackableItem ham = new StackableItem("火腿", "", "", null);
 		ham.setQuantity(2);
 		ham.setID(new ID(3, ZONE_NAME));
 		player.getSlot("bag").add(ham);
 		assertEquals(4, player.getNumberOfEquipped("cheese"));
 		assertEquals(2, player.getNumberOfEquipped("bread"));
-		assertEquals(2, player.getNumberOfEquipped("ham"));
+		assertEquals(2, player.getNumberOfEquipped("火腿"));
 
 		en.step(player, "make 2 sandwiches");
 		assertTrue(npc.isTalking());
@@ -199,7 +199,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 				getReply(npc));
 		assertEquals(0, player.getNumberOfEquipped("cheese"));
 		assertEquals(0, player.getNumberOfEquipped("bread"));
-		assertEquals(0, player.getNumberOfEquipped("ham"));
+		assertEquals(0, player.getNumberOfEquipped("火腿"));
 		en.step(player, "bye");
 		assertFalse(npc.isTalking());
 		player.setQuest(QUEST, "2;;0");
@@ -232,13 +232,13 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 		bread.setQuantity(3);
 		bread.setID(new ID(1, ZONE_NAME));
 		player.getSlot("bag").add(bread);
-		final StackableItem ham = new StackableItem("ham", "", "", null);
+		final StackableItem ham = new StackableItem("火腿", "", "", null);
 		ham.setQuantity(10);
 		ham.setID(new ID(3, ZONE_NAME));
 		player.getSlot("bag").add(ham);
 		assertEquals(6, player.getNumberOfEquipped("cheese"));
 		assertEquals(3, player.getNumberOfEquipped("bread"));
-		assertEquals(10, player.getNumberOfEquipped("ham"));
+		assertEquals(10, player.getNumberOfEquipped("火腿"));
 
 		en.step(player, "make 3");
 		assertTrue(npc.isTalking());
@@ -258,7 +258,7 @@ public class ChefNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals(0, player.getNumberOfEquipped("cheese"));
 		assertEquals(0, player.getNumberOfEquipped("bread"));
 		// 10 - 3 -> 7
-		assertEquals(7, player.getNumberOfEquipped("ham"));
+		assertEquals(7, player.getNumberOfEquipped("火腿"));
 		en.step(player, "bye");
 		assertFalse(npc.isTalking());
 		player.setQuest(QUEST, "3;;0");

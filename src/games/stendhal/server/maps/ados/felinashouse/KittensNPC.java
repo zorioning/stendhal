@@ -99,7 +99,7 @@ public class KittensNPC implements ZoneConfigurator {
 
 		@Override
 		public boolean onUsed(RPEntity user) {
-			user.sendPrivateText("This kitten is still too young and Felina will not sell her.");
+			user.sendPrivateText("This kitten is still too young and 菲琳娜 will not sell her.");
 			return false;
 		}
 	}

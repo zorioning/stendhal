@@ -95,7 +95,7 @@ class UpdateManager {
 			if (initialDownload.booleanValue()) {
 				UpdateGUIDialogs.messageBox("Sorry, 需要下载更新补丁\r\n"
 						+ serverFolder
-						+ "\r\n但升级服务器目前不正常，请稍等.");
+						+ "\r\n但升级服务器目前不正常, 请稍等.");
 				System.exit(1);
 			}
 			return;

@@ -96,14 +96,14 @@
     <corpse name="tiny_humanoid" harmless="leprechaun_green" />
     <drops>
       <item value="money" quantity="[30,100]" probability="30.0"/>
-      <item value="sandwich" quantity="[1,1]" probability="2.0"/>
-      <item value="lucky charm" quantity="[1,1]" probability="1.0"/>
+      <item value="三明治" quantity="[1,1]" probability="2.0"/>
+      <item value="幸运石" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="They're always after my Lucky Charms!!"/>
+        <noise state="idle follow fight" value="They're always after my 幸运石s!!"/>
         <noise state="idle follow fight" value="Clovers and rainbows... stars and horseshoes..."/>
       </says>
       <profile name="brave"/>
@@ -156,16 +156,16 @@
     <corpse name="tiny_humanoid" harmless="leprechaun_purple" />
     <drops>
       <item value="money" quantity="[30,100]" probability="50.0"/>
-      <item value="beer" quantity="[2,5]" probability="10.0"/>
+      <item value="啤酒" quantity="[2,5]" probability="10.0"/>
       <item value="wine" quantity="[1,5]" probability="10.0"/>
-      <item value="lucky charm" quantity="[1,1]" probability="1.0"/>
+      <item value="幸运石" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
       <says>
         <noise state="idle follow fight" value="Join me for a drink, lassie?"/>
-        <noise state="idle follow fight" value="Floating blue balloons..."/>
+        <noise state="idle follow fight" value="Floating blue 气球s..."/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -229,7 +229,7 @@
       <item value="money" quantity="[5,30]" probability="100.0"/>
       <item value="potion" quantity="[1,2]" probability="10.0"/>
       <item value="很棒的靴子" quantity="[1,1]" probability="0.2"/>
-      <item value="claymore" quantity="[1,1]" probability="2.0"/>
+      <item value="双刃剑" quantity="[1,1]" probability="2.0"/>
        <item value="blue helmet" quantity="[1,1]" probability="2.5"/>
        <item value="蓝色盔甲" quantity="[1,1]" probability="4.0"/>
     </drops>

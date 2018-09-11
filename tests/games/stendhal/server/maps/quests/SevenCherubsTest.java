@@ -45,7 +45,7 @@ public class SevenCherubsTest extends ZonePlayerAndNPCTestImpl {
 		setupZone("0_orril_river_s_w2");
 		setupZone("0_orril_mountain_w2");
 		setupZone("0_semos_mountain_n2_w2");
-		setupZone("0_ados_rock");
+		setupZone("0_阿多斯_巨石");
 	}
 
 	/**

@@ -56,8 +56,8 @@ public class HealerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addJob("我的特殊能力可以治疗伤者，我还销售疗伤药济和解毒济.");
-				addHelp("我为你提供付费 #治疗 或者 #heal , 另外，你也可以买些药济在路上用；可以看看价目表 #offer.");
+				addJob("我的特殊能力可以治疗伤者, 我还销售疗伤药济和解毒济.");
+				addHelp("我为你提供付费 #治疗 或者 #heal , 另外, 你也可以买些药济在路上用；可以看看价目表 #offer.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("healing")));
 				// charge (2*the player level + 1) to heal
 				new HealerAdder().addHealer(this, -2);
@@ -66,7 +66,7 @@ public class HealerNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("welcomernpc");
-		npc.setDescription("你遇见了 Ilisa. 她年轻可爱，身上带着魔法气息。");
+		npc.setDescription("你遇见了 Ilisa. 她年轻可爱, 身上带着魔法气息. ");
 		npc.setPosition(9, 6);
 		npc.setCollisionAction(CollisionAction.STOP);
 		npc.initHP(100);

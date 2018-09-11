@@ -49,7 +49,7 @@ public class OracleNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Lobelia") {
 			@Override
 			public void createDialog() {
-				addGreeting("你好，刚好我在这里赏花.");
+				addGreeting("你好, 刚好我在这里赏花.");
 
 				// use a standard action to list the names of NPCs for quests which haven't been started in this region
 				addReply(ConversationPhrases.HELP_MESSAGES, null, new SayNPCNamesForUnstartedQuestsAction(regions));
@@ -62,14 +62,14 @@ public class OracleNPC implements ZoneConfigurator {
 						null,
 						new SayUnstartedQuestDescriptionFromNPCNameAction(regions));
 				addQuest("在 " + regions + " 有个需要你帮助 #help 的朋友 .");
-				addJob("我有时在这照料这些漂亮的花，但这其实是可爱的园丁 Sue 的工作..");
+				addJob("我有时在这照料这些漂亮的花, 但这其实是可爱的园丁 Sue 的工作..");
 				addOffer("和在其他地方的我的姐妹们 #sisters 一样, 我在这指引你如何帮助 #help 他人.");
-				addReply("sisters", "我和我的姐妹们都有一个花名 #name . 找出他们，党会如何帮助 #help 附近的人们.");
-				addReply("name", "Lobelia 是小小的紫色花。可能你在花坛中看到了，在这我只爱它，Sue 很聪明.");
+				addReply("sisters", "我和我的姐妹们都有一个花名 #name . 找出他们, 党会如何帮助 #help 附近的人们.");
+				addReply("name", "Lobelia 是小小的紫色花. 可能你在花坛中看到了, 在这我只爱它, Sue 很聪明.");
 
 				// just to be nice :)
 				addEmotionReply("hugs", "hugs");
-				addGoodbye("谢谢你，再见.");
+				addGoodbye("谢谢你, 再见.");
 			}
 
 			@Override

@@ -51,11 +51,11 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 	public void configureZone(final StendhalRPZone zone, final Map<String, String> attributes) {
 
 			final List<String> setZones = new ArrayList<String>();
-			setZones.add("0_ados_swamp");
-			setZones.add("0_ados_outside_w");
-			setZones.add("0_ados_wall_n2");
-			setZones.add("0_ados_wall_s");
-			setZones.add("0_ados_city_s");
+			setZones.add("0_阿多斯_沼泽");
+			setZones.add("0_阿多斯_郊外_w");
+			setZones.add("0_阿多斯_城墙_n2");
+			setZones.add("0_阿多斯_城墙_s");
+			setZones.add("0_阿多斯_城_s");
         	new TeleporterBehaviour(buildSemosHouseArea(), setZones, "0_ados", "..., ....");
 	}
 
@@ -70,54 +70,54 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 	        @Override
 			protected void createDialog() {
 	        	addGreeting("你想要做什么?");
-			    addJob("我宁愿自已呆一会I prefer to keep that to myself.");
-			    addHelp("快点看，我必须马上走，如果你手上有黑色珍珠 #black #pearls ，我会用魔法箭 #arrows 和你交换。介意买 #buy 些箭吗 #arrows?");
-			    addOffer("快点看，我必须马上走，如果你手上有黑色珍珠 #black #pearls ，我可以魔法箭 #arrows 和你交换，介意买 #buy 些箭吗 #arrows?");
+			    addJob("我宁愿自已留着.");
+			    addHelp("快点看, 我必须马上走, 如果你手上有 #黑珍珠 , 我会用魔法 #箭 和你交换. 介意 #买 些 #箭 吗?");
+			    addOffer("快点看, 我必须马上走, 如果你手上有 #黑珍珠 , 我可以魔法 #箭 和你交换, 介意 #买 些 #箭 吗?");
 			    addGoodbye("快走... 你这垃圾在这乱转我都不能干活了.");
 
-			    addReply("arrows","我把魔法能量注入到箭里，魔法能量有冰，火和电 #ice, #fire, 和 #light.");
-			    addReply(Arrays.asList("ice", "ice arrow", "fire", "fire arrow"),
-	                    "一个黑色珍珠，可以换一只箭.");
-			    addReply(Arrays.asList("light", "light arrow"),
-	                    "电箭最快，每两个黑色珍珠只能换一只箭.");
-			    addReply(Arrays.asList("black pearls", "pearls"),
-	                    "对我来说，他们制作了不错的法宝。我常可以在那些垃圾刺客中找到他们.");
+			    addReply("箭","我把魔法能量注入到箭里, 魔法能量有 #冰 , #火 和 #电 .");
+			    addReply(Arrays.asList("冰", "冰箭", "火", "火箭"),
+	                    "一颗黑珍珠, 可以换一只箭.");
+			    addReply(Arrays.asList("电", "电箭w"),
+	                    "电箭最快, 每两颗黑珍珠只能换一只箭.");
+			    addReply(Arrays.asList("黑珍珠", "珍珠"),
+	                    "对我来说, 他们制作了不错的法宝. 我常可以在那些垃圾刺客中找到他们.");
 			    // the rest is in the MessageInABottle quest
 
 
 
 
-			 // Mizuno exchanges elemental arrows for black pearls.
+			 // Mizuno exchanges elemental arrows for 黑珍珠.
 				// (uses sorted TreeMap instead of HashMap)
 			    final HashSet<String> productsNames = new HashSet<String>();
-                productsNames.add("ice arrow");
-                productsNames.add("fire arrow");
-                productsNames.add("light arrow");
+                productsNames.add("冰箭");
+                productsNames.add("火箭");
+                productsNames.add("电箭");
 
                 final Map<String, Integer> reqRes_iceArrow = new TreeMap<String, Integer>();
-                reqRes_iceArrow.put("black pearl", 1);
+                reqRes_iceArrow.put("黑珍珠", 1);
 
                 final Map<String, Integer> reqRes_fireArrow = new TreeMap<String, Integer>();
-                reqRes_fireArrow.put("black pearl", 1);
+                reqRes_fireArrow.put("黑珍珠", 1);
 
                 final Map<String, Integer> reqRes_lightArrow = new TreeMap<String, Integer>();
-                reqRes_lightArrow.put("black pearl", 2);
+                reqRes_lightArrow.put("黑珍珠", 2);
 
 
                 final HashMap<String, Map<String, Integer>> requiredResourcesPerProduct = new HashMap<String, Map<String, Integer>>();
-                requiredResourcesPerProduct.put("ice arrow", reqRes_iceArrow);
-                requiredResourcesPerProduct.put("fire arrow", reqRes_fireArrow);
-                requiredResourcesPerProduct.put("light arrow", reqRes_lightArrow);
+                requiredResourcesPerProduct.put("冰箭", reqRes_iceArrow);
+                requiredResourcesPerProduct.put("火箭", reqRes_fireArrow);
+                requiredResourcesPerProduct.put("电箭", reqRes_lightArrow);
 
                 final HashMap<String, Integer> productionTimesPerProduct = new HashMap<String, Integer>();
-                productionTimesPerProduct.put("ice arrow", 0 * 60);
-                productionTimesPerProduct.put("fire arrow", 0 * 60);
-                productionTimesPerProduct.put("light arrow", 0 * 60);
+                productionTimesPerProduct.put("冰箭", 0 * 60);
+                productionTimesPerProduct.put("火箭", 0 * 60);
+                productionTimesPerProduct.put("电箭", 0 * 60);
 
                 final HashMap<String, Boolean> productsBound = new HashMap<String, Boolean>();
-                productsBound.put("ice arrow", false);
-                productsBound.put("fire arrow", false);
-                productsBound.put("light arrow", false);
+                productsBound.put("冰箭", false);
+                productsBound.put("火箭", false);
+                productsBound.put("电箭", false);
 
                 class SpecialTraderBehaviour extends MultiProducerBehaviour {
 
@@ -165,7 +165,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				        if (getMaximalAmount(productName, player) < amount) {
 				            // The player tried to cheat us by placing the resource
 				            // onto the ground after saying "yes"
-				            npc.say("喂! 在这里! 你最好不要骗我...");
+				            npc.say("喂! 在这儿! 你最好不要骗我...");
 				            return false;
 				        } else {
 				            for (final Map.Entry<String, Integer> entry : getRequiredResourcesPerProduct(productName).entrySet()) {
@@ -195,7 +195,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				    				player.incProducedCountForItem(productName, products.getQuantity());
 				    				SingletonRepository.getAchievementNotifier().onProduction(player);
 				    			} else {
-				    				npc.say("欢迎回来！你的事我完成了。但现在你还不能拿走 "
+				    				npc.say("欢迎回来！你的事我完成了. 但现在你还不能拿走 "
 				    						+  productName
 				    						+ ". 等你背包有空间时再回来拿.");
 				    			}
@@ -206,7 +206,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 				                    + getProductionActivity()
 				                    + " "
 				                    +  productName
-				                    + " , 但要花些时间，请在 "
+				                    + " , 但要花些时间, 请在 "
 				                    + getApproximateRemainingTime(player) + " 时间后回来.");
 				            		return true;
 				            	}
@@ -233,7 +233,7 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
 		mizuno.initHP(100);
 		mizuno.setHP(80);
 		mizuno.setCollisionAction(CollisionAction.REVERSE);
-		mizuno.setDescription("你遇见 Mizuno. 他像一个灵魂游荡在 Ados 的无人地带，不知道他做些什么.");
+		mizuno.setDescription("你遇见 Mizuno. 他像一个灵魂游荡在 Ados 的无人地带, 不知道他做些什么.");
 
 		// start in int_semos_house
 		final StendhalRPZone	zone = SingletonRepository.getRPWorld().getZone("int_semos_house");

@@ -33,7 +33,7 @@ import utilities.RPClass.CatTestHelper;
  */
 public class NPCTest extends ZonePlayerAndNPCTestImpl {
 
-	private static final String ZONE_NAME = "int_ados_felinas_house";
+	private static final String ZONE_NAME = "int_阿多斯_菲琳娜_小屋";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -43,7 +43,7 @@ public class NPCTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	public NPCTest() {
-		setNpcNames("Felina");
+		setNpcNames("菲琳娜");
 		setZoneForPlayer(ZONE_NAME);
 		addZoneConfigurator(new CatSellerNPC(), ZONE_NAME);
 	}
@@ -53,10 +53,10 @@ public class NPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testHiAndBye() {
-		final SpeakerNPC npc = getNPC("Felina");
+		final SpeakerNPC npc = getNPC("菲琳娜");
 		final Engine en = npc.getEngine();
 
-		assertTrue(en.step(player, "hi Felina"));
+		assertTrue(en.step(player, "hi 菲琳娜"));
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 
 		assertTrue(en.step(player, "bye"));
@@ -68,7 +68,7 @@ public class NPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testLogic() {
-		final SpeakerNPC npc = getNPC("Felina");
+		final SpeakerNPC npc = getNPC("菲琳娜");
 		final Engine en = npc.getEngine();
 
 		npc.listenTo(player, "hi");
@@ -88,7 +88,7 @@ public class NPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testIdea() {
-		final SpeakerNPC npc = getNPC("Felina");
+		final SpeakerNPC npc = getNPC("菲琳娜");
 
 		assertEquals("awaiting", npc.getIdea());
 		npc.setIdea("walk");
@@ -109,7 +109,7 @@ public class NPCTest extends ZonePlayerAndNPCTestImpl {
 	@Test
 	public void testUnderscore() {
 		for (String hello : ConversationPhrases.GREETING_MESSAGES) {
-			final SpeakerNPC npc = getNPC("Felina");
+			final SpeakerNPC npc = getNPC("菲琳娜");
 			final Engine en = npc.getEngine();
 
 			assertEquals(ConversationStates.IDLE, en.getCurrentState());

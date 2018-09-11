@@ -91,7 +91,7 @@ public class BalloonForBobby extends AbstractQuest {
 		// get a reference to Bobby
 		SpeakerNPC npc = npcs.get("波比");
 
-		// Add conditions for all 4 different kinds of balloons
+		// Add conditions for all 4 different kinds of 气球s
 		npc.add(
 				ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
@@ -105,7 +105,7 @@ public class BalloonForBobby extends AbstractQuest {
 								new PlayerIsWearingOutfitCondition(balloonList[2]),
 								new PlayerIsWearingOutfitCondition(balloonList[3]))),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"你好，这个气球是给我的吗?",
+				"你好, 这个气球是给我的吗?",
 				null);
 	}
 
@@ -118,7 +118,7 @@ public class BalloonForBobby extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				"balloon",
+				"气球",
 				new AndCondition(
 						new NotCondition(
 								new SystemPropertyCondition("stendhal.minetown")),
@@ -128,12 +128,12 @@ public class BalloonForBobby extends AbstractQuest {
 								new PlayerIsWearingOutfitCondition(balloonList[2]),
 								new PlayerIsWearingOutfitCondition(balloonList[3]))),
 				ConversationStates.QUEST_ITEM_QUESTION,
-				"Is that balloon for me?",
+				"这气球是给我的吗?",
 				null);
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				"balloon",
+				"气球",
 				new AndCondition(
 						new NotCondition(
 								new SystemPropertyCondition("stendhal.minetown")),
@@ -149,21 +149,21 @@ public class BalloonForBobby extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				"balloon",
+				"气球",
 				new SystemPropertyCondition("stendhal.minetown"),
 				ConversationStates.ATTENDING,
-				"从天上的云可以得知，矿镇周还会继续。"
-				+ " 我会有很多气球。"
-				+ " 当矿镇周结束后再来看看 :)",
+				"从天上的云可以得知, 矿镇复兴展会还会继续. "
+				+ " 我会有很多气球. "
+				+ " 当矿镇复兴展会周结束后再来看看 :)",
 				null);
 	}
 
-	// Let player decide if he wants to give the balloon to bobby
+	// Let player decide if he wants to give the 气球 to bobby
 	private void prepareQuestItemQuestionStep() {
 
 		SpeakerNPC npc = npcs.get("波比");
 
-		// The player has a balloon but wants to keep it to himself
+		// The player has a 气球 but wants to keep it to himself
 		npc.add(
 				ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.NO_MESSAGES,
@@ -172,8 +172,8 @@ public class BalloonForBobby extends AbstractQuest {
 				"*pouts*",
 				null);
 
-		// Rewards to give to the player if he gives Bobby the balloon
-		// NOTE: Also changes the players outfit to get rid of the balloon
+		// Rewards to give to the player if he gives Bobby the 气球
+		// NOTE: Also changes the players outfit to get rid of the 气球
 		List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new ChangePlayerOutfitAction(balloonList[0], false, false));
 		reward.add(new ChangePlayerOutfitAction(balloonList[1], false, false));

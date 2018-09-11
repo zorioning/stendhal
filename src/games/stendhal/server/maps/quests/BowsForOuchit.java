@@ -93,7 +93,7 @@ public class BowsForOuchit extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"不错！我销售弓和箭，如果你能带来10根木头就太好了。 " +
+				"不错！我销售弓和箭, 如果你能带来10根木头就太好了.  " +
 				"能带来吗?",
 				null);
 
@@ -104,7 +104,7 @@ public class BowsForOuchit extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
-				"哦，好吧,再见.",
+				"哦, 好吧,再见.",
 				null);
 
 		/*
@@ -124,7 +124,7 @@ public class BowsForOuchit extends AbstractQuest {
 				"木头",
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"木头可以用在很多地方。当然是在森林中可以找到它，你可以带10根过来吗?",
+				"木头可以用在很多地方. 当然是在森林中可以找到它, 你可以带10根过来吗?",
 				null);
 
 		/*
@@ -134,7 +134,7 @@ public class BowsForOuchit extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.IDLE,
-				"好吧，当你想帮我的时候再过来，再见了！",
+				"好吧, 当你想帮我的时候再过来, 再见了！",
 				null);
 	}
 
@@ -163,7 +163,7 @@ public class BowsForOuchit extends AbstractQuest {
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"木头"),
 								 new NotCondition (new PlayerHasItemWithHimCondition("木头",10))),
 				ConversationStates.ATTENDING,
-				"木头可以用在很多地方。当然是在森林中可以找到它，当你找够10根木头时，请记得回来对我说 #木头",
+				"木头可以用在很多地方. 当然是在森林中可以找到它, 当你找够10根木头时, 请记得回来对我说 #木头",
 				null);
 
 		/*
@@ -175,13 +175,13 @@ ask for 马尾鬃.
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"木头"),
 								new PlayerHasItemWithHimCondition("木头",10)),
 				ConversationStates.ATTENDING,
-				"太好了，现在我可以制作箭了。但制作弓还需要弓弦。还请找到 #Karl，他养了很多马，如果你把我的名字告诉他，他会从马尾上剪些 #'马尾鬃' 给你。",
+				"太好了, 现在我可以制作箭了. 但制作弓还需要弓弦. 还请找到 #Karl, 他养了很多马, 如果你把我的名字告诉他, 他会从马尾上剪些 #'马尾鬃' 给你. ",
 				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "hair", 2.0), new DropItemAction("木头", 10)));
 
 		/*
 		 * For simplicity, respond to '卡尔' at any time.
 		 */
-		npc.addReply("卡尔", "卡尔 是个农未，在 塞门镇 的东面，他的农场养了很多宠物。");
+		npc.addReply("卡尔", "卡尔 是个农未, 在 塞门镇 的东面, 他的农场养了很多宠物. ");
 	}
 
 	public void getHairStep() {
@@ -196,7 +196,7 @@ ask for 马尾鬃.
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
 								new NotCondition (new PlayerHasItemWithHimCondition("马尾鬃",1))),
 				ConversationStates.ATTENDING,
-				"你好，你好！Ouchit要些 马尾鬃？没问题，拿去吧。顺便带我向 奥斯特 问个好。",
+				"你好, 你好！Ouchit要些 马尾鬃？没问题, 拿去吧. 顺便带我向 奥斯特 问个好. ",
 				new EquipItemAction("马尾鬃"));
 
 	}
@@ -226,7 +226,7 @@ ask for 马尾鬃.
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
 								new NotCondition (new PlayerHasItemWithHimCondition("马尾鬃"))),
 				ConversationStates.ATTENDING,
-				"马尾鬃可以制作弓弦。请代我找 #卡尔 取一些过来。",
+				"马尾鬃可以制作弓弦. 请代我找 #卡尔 取一些过来. ",
 				null);
 
 		/*
@@ -248,7 +248,7 @@ and ask for 马尾鬃.
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT,"hair"),
 								new PlayerHasItemWithHimCondition("马尾鬃")),
 				ConversationStates.ATTENDING,
-				"呀！你把 马尾鬃 带来了，非常感谢。Karl 真是好人。这是之前有人落下的东西，放我这没用，送给你了，这是你应得的。",
+				"呀！你把 马尾鬃 带来了, 非常感谢. Karl 真是好人. 这是之前有人落下的东西, 放我这没用, 送给你了, 这是你应得的. ",
 				new MultipleActions(reward));
 
 		/*
@@ -258,7 +258,7 @@ and ask for 马尾鬃.
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"感谢你的帮助。如果需要我的帮助，尽管说",
+				"感谢你的帮助. 如果需要我的帮助, 尽管说",
 				null);
 
 	}
@@ -282,21 +282,21 @@ and ask for 马尾鬃.
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("奥斯特 让我帮他找一些弓箭的原材料。");
+		res.add("奥斯特 让我帮他找一些弓箭的原材料. ");
 		if (player.isQuestInState(QUEST_SLOT, "木头", "hair", "done")) {
-			res.add("首先我必须找10根木头给 Ouchit。");
+			res.add("首先我必须找10根木头给 Ouchit. ");
 		}
 		if(player.isEquipped("木头", 10) && "木头".equals(questState)) {
-			res.add("我集齐了木头，并交给 奥斯特.");
+			res.add("我集齐了木头, 并交给 奥斯特.");
 		}
 		if(player.isQuestInState(QUEST_SLOT, "hair", "done")) {
-			res.add("然后我需要拿一些 马尾鬃,Ouchit要用它做弓弦。他告诉我找到农夫 卡尔 可以弄到.");
+			res.add("然后我需要拿一些 马尾鬃,Ouchit要用它做弓弦. 他告诉我找到农夫 卡尔 可以弄到.");
 		}
 		if(player.isEquipped("马尾鬃") && "hair".equals(questState) || isCompleted(player)) {
-			res.add("卡尔 真是好人，直接给了我一些 马尾鬃.");
+			res.add("卡尔 真是好人, 直接给了我一些 马尾鬃.");
 		}
 		if (isCompleted(player)) {
-			res.add("作为谢礼，Ouchit 给了我一个新装备");
+			res.add("作为谢礼, Ouchit 给了我一个新装备");
 		}
 		return res;
 	}

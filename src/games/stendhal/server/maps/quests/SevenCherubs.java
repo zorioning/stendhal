@@ -57,7 +57,7 @@ import games.stendhal.server.entity.status.PoisonStatus;
  * <ul>
  * <li> 2,000 XP </li>
  * <li> some karma (35) </li>
- * <li> either fire sword, 金靴子, 黄金铠甲, or golden helmet </li>
+ * <li> either 烈火剑, 金靴子, 黄金铠甲, or golden helmet </li>
  * </ul>
  *
  * REPETITIONS: - Just once.
@@ -110,7 +110,7 @@ public class SevenCherubs extends AbstractQuest {
 				}
 			}
 			if (isCompleted(player)) {
-				res.add("完成，我发现了所有的天使!");
+				res.add("完成, 我发现了所有的天使!");
 			}
 		}
 		return res;
@@ -162,7 +162,7 @@ public class SevenCherubs extends AbstractQuest {
 							if (left > -1) {
 								raiser.say("找出其他的天使能得到奖励!");
 							} else {
-								raiser.say("汝的眼睛能看到这七个天使！ 现在，这是汝应得了奖赏.");
+								raiser.say("汝的眼睛能看到这七个天使！ 现在, 这是汝应得了奖赏.");
 							}
 						} else {
 							player.setQuest(QUEST_SLOT, npcDoneText + ";"
@@ -181,7 +181,7 @@ public class SevenCherubs extends AbstractQuest {
 									player.addXP((7 - left + 1) * 200);
 								}
 							} else {
-								raiser.say("这已证明了你的勇敢，你已具体配戴这个上古神器了！");
+								raiser.say("这已证明了你的勇敢, 你已具体配戴这个上古神器了！");
 
 								/*
 								 * Proposal by Daniel Herding (mort): once
@@ -190,14 +190,14 @@ public class SevenCherubs extends AbstractQuest {
 								 * be one hard quest for each of the golden
 								 * items.
 								 *
-								 * I commented out the golden shield here
+								 * I commented out the 金盾 here
 								 * because you already get that from the
 								 * CloaksForBario quest.
 								 *
 								 * Golden legs was disabled because it can
 								 * be won in DiceGambling.
 								 *
-								 * Fire sword was disabled because it can be
+								 * 烈火剑 was disabled because it can be
 								 * earned by fighting, and because the
 								 * stronger ice sword is available through
 								 * other quest and through fighting.
@@ -230,7 +230,7 @@ public class SevenCherubs extends AbstractQuest {
 		fillHistoryMap();
 		fillQuestInfo(
 				"七个天使",
-				"七个天使留在了这个世界上，找到他们并赢取奖励",
+				"七个天使留在了这个世界上, 找到他们并赢取奖励",
 				false);
 		StendhalRPZone zone;
 		SpeakerNPC npc;
@@ -239,7 +239,7 @@ public class SevenCherubs extends AbstractQuest {
 		npc = new CherubNPC("Cherubiel", 32, 60);
 		zone.add(npc);
 
-		zone = world.getZone("0_nalwor_city");
+		zone = world.getZone("0_纳尔沃_城");
 		npc = new CherubNPC("Gabriel", 105, 17);
 		zone.add(npc);
 
@@ -259,7 +259,7 @@ public class SevenCherubs extends AbstractQuest {
 		npc = new CherubNPC("Zophiel", 16, 3);
 		zone.add(npc);
 
-		zone = world.getZone("0_ados_rock");
+		zone = world.getZone("0_阿多斯_巨石");
 		npc = new CherubNPC("Azazel", 67, 24);
 		zone.add(npc);
 	}

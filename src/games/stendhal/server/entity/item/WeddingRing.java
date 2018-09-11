@@ -126,7 +126,7 @@ public class WeddingRing extends Item {
 	private boolean teleportToSpouse(final Player player) {
 		// check if pets and sheep are near
 		if (!player.isZoneChangeAllowed()) {
-			player.sendPrivateText("你是在对着你的宠物说话，对吗？");
+			player.sendPrivateText("你是在对着你的宠物说话, 对吗？");
 			return false;
 		}
 
@@ -135,7 +135,7 @@ public class WeddingRing extends Item {
 		if (spouseName == null) {
 			player.sendPrivateText("这个婚戒还没有刻上名字.");
 			logger.debug(player.getName()
-					+ "tried to use a wedding ring without a spouse name engraving.");
+					+ "tried to use a 婚戒 without a spouse name engraving.");
 			return false;
 		}
 
@@ -145,22 +145,22 @@ public class WeddingRing extends Item {
 			return false;
 		}
 
-		if (spouse.isEquipped("wedding ring")) {
+		if (spouse.isEquipped("婚戒")) {
 			// spouse is equipped with ring but could be divorced and
 			// have another
 
-			final Item weddingRing = spouse.getFirstEquipped("wedding ring");
+			final Item weddingRing = spouse.getFirstEquipped("婚戒");
 
 			if (weddingRing.getInfoString() == null) {
 				// divorced with ring and engaged again
 				player.sendPrivateText("抱歉, "
 						+ spouseName
-						+ " 已和你离婚，并与其他人订了婚.");
+						+ " 已和你离婚, 并与其他人订了婚.");
 				return false;
 			} else if (!(weddingRing.getInfoString().equals(player.getName()))) {
 				// divorced and remarried
 				player.sendPrivateText("Sorry, " + spouseName
-						+ " 已和你离婚，并且马上又再婚了.");
+						+ " 已和你离婚, 并且马上又再婚了.");
 
 				return false;
 			}
@@ -174,7 +174,7 @@ public class WeddingRing extends Item {
 
 		final int secondsNeeded = getLastUsed() + getCoolingPeriod(player, spouse) - (int) (System.currentTimeMillis() / 1000);
 		if (secondsNeeded > 0) {
-			player.sendPrivateText("戒指还没有恢复能量，你觉得它可能在 "
+			player.sendPrivateText("戒指还没有恢复能量, 你觉得它可能在 "
 					+ TimeUtil.approxTimeUntil(secondsNeeded) + "时间后恢复.");
 
 			return false;
@@ -190,7 +190,7 @@ public class WeddingRing extends Item {
 		final int x = spouse.getX();
 		final int y = spouse.getY();
 		if (!destinationZone.isTeleportInAllowed(x, y)) {
-			player.sendPrivateText("目的地的有强列的反魔法环境，阻止了婚戒的正常使用!");
+			player.sendPrivateText("目的地的有强列的反魔法环境, 阻止了婚戒的正常使用!");
 			return false;
 		}
 
@@ -218,10 +218,10 @@ public class WeddingRing extends Item {
 		final String spouseName = getInfoString();
 
 		if (spouseName != null) {
-			return "你看到一个 §'wedding ring'. 上面雕刻着: \"致 "
+			return "你看到一个 §'婚戒'. 上面雕刻着: \"致 "
 					+ spouseName + "\"永恒的爱.";
 		} else {
-			return "你看到 §'wedding ring'.";
+			return "你看到 §'婚戒'.";
 		}
 	}
 
@@ -273,7 +273,7 @@ public class WeddingRing extends Item {
 
 		new ItemLogger().destroy(player, slot, ring, "another ring");
 		ring.removeFromWorld();
-		logger.info("Destroyed a wedding ring: " + ring);
+		logger.info("Destroyed a 婚戒: " + ring);
 	}
 
 	/**

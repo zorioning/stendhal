@@ -60,7 +60,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 	private static final List<String> NPC_IDLE = Arrays.asList("泰德", "Haunchy Meatoch", "Pdiddi", "Ketteh Wehoh");
 
 	private List<String> points = Arrays.asList("尼世亚", "Marcus", "Eheneumniranin", "Balduin", "Rachel", "Fritz",
-												"Alice Farmer", "Elisabeth", "Sue", "Old Mother Helena", "Hazel",
+												"Alice Farmer", "伊丽莎白", "Sue", "Old Mother Helena", "Hazel",
 												"Captain Brownbeard", "Jane", "Seremela", "Phalk", "Fidorea");
 
 	private Map<String, String> texts = new HashMap<String, String>();
@@ -78,7 +78,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		greetings.put("Rachel", "It's windy here, isn't it? Hope the latest hint how to find me wasn't too easy. ");
 		greetings.put("Fritz", "Oh I love customers of Ados bank! They are so sweet! ");
 		greetings.put("Alice Farmer", "Smelling fish here, right? That's the spirit of the ocean! ");
-		greetings.put("Elisabeth", "Fantastic vacation so far and so much to explore! ");
+		greetings.put("伊丽莎白", "Fantastic vacation so far and so much to explore! ");
 		greetings.put("Sue", "I love chocolate! You found me, maybe you can bring me a bar next time. ");
 		greetings.put("Old Mother Helena", "All of these flowers around give me a warm feeling. Hope you enjoy them too, thanks for visiting me! ");
 		greetings.put("Hazel", "Oh hello, so nice that you found me here. Come and join me again soon to let me cook some nice soup for you. ");
@@ -96,9 +96,9 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		texts.put("Eheneumniranin", "You'll have to find the half sickling elf on Ados farm, next. He is always busy while gathering grain.");
 		texts.put("Balduin", "The next person on your trail sits on top of a really windy mountain.");
 		texts.put("Rachel", "The next lady to find works in a bank and can tell you all about her job.");
-		texts.put("Fritz", "Please go and find the old fisherman in Ados who can tell you great stories about fish. He also has a daughter named Caroline.");
+		texts.put("Fritz", "Please go and find the old fisherman in Ados who can tell you great stories about fish. He also has a daughter named 卡若琳.");
 		texts.put("Alice Farmer", "The next person you'll have to seek out is on vacation in Ados, together with her whole family. She also knows everything about food and drinks.");
-		texts.put("Elisabeth", "Now you have to find a young girl who plays on a playground in Kirdneh and loves chocolate.");
+		texts.put("伊丽莎白", "Now you have to find a young girl who plays on a playground in Kirdneh and loves chocolate.");
 		texts.put("Sue", "Please go and find the nice gardener who owns some greenhouses with tomatoes inside near Kalavan.");
 		texts.put("Old Mother Helena", "Now please go and try to find a nice old woman who is really famous for her soups which can keep you warm and healthy. She might ask you about them first, just try to put her off for now :)");
 		texts.put("Hazel", "I know a really nice lady who can help you next. She works in a museum and loves her job.");
@@ -241,7 +241,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 			new IncreaseKarmaAction(15),
 			new IncreaseXPAction(400),
 			new SetQuestAction(QUEST_SLOT, 0, "done"),
-			new EquipItemAction("empty scroll", 5),
+			new EquipItemAction("空白卷轴", 5),
 			new SetHallOfFameToAgeDiffAction(QUEST_SLOT, 1, FAME_TYPE),
 			loadSignFromHallOfFame);
 

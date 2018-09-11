@@ -64,7 +64,7 @@ class TwilightZone {
 
 		// offer moss when prompted
 		npc.add(ConversationStates.ANY,
-				Arrays.asList("moss", "magical", "twilight", "ida", "cloak", "黑曜石斗篷", "specials", "twilight moss"),
+				Arrays.asList("moss", "magical", "twilight", "ida", "cloak", "黑曜石斗篷", "specials", "暮光苔藓"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"Keep it quiet will you! Yeah, I got moss, it's "
@@ -83,8 +83,8 @@ class TwilightZone {
 
                         final int required = (sentence.getNumeral().getAmount());
 						if (player.drop("money" , required * MOSS_COST)) {
-							npc.say("Ok, here's your " + Integer.toString(required) + " pieces of twilight moss. Don't take too much at once.");
-							new EquipItemAction("twilight moss", required, true).fire(player, sentence, npc);
+							npc.say("Ok, here's your " + Integer.toString(required) + " pieces of 暮光苔藓. Don't take too much at once.");
+							new EquipItemAction("暮光苔藓", required, true).fire(player, sentence, npc);
 						} else {
 							npc.say("Ok, ask me again when you have enough money.");
 						}
@@ -155,7 +155,7 @@ class TwilightZone {
 				new MultipleActions(
 								new DropItemAction("twilight elixir"),
 								new SetQuestAction(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
-								new TeleportAction("int_ados_sewing_room", 12, 20, Direction.DOWN)
+								new TeleportAction("int_阿多斯_缝纫_店", 12, 20, Direction.DOWN)
 								)
 				);
 

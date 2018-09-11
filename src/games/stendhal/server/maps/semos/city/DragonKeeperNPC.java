@@ -46,7 +46,7 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 							seller.say("Hmm... 我不认为你一次可以照看一只以上的龙 dragon.");
 							return false;
 						} else if (player.hasPet()) {
-							say("好的，你应该首先照顾好已经有的那只.");
+							say("好的, 你应该首先照顾好已经有的那只.");
 							return false;
 						} else {
 							if (!player.drop("money", getCharge(res, player))) {
@@ -72,10 +72,10 @@ public class DragonKeeperNPC implements ZoneConfigurator {
 				items.put("dragon", BUYING_PRICE);
 
 				addGreeting();
-				addJob("我与这只龙并肩作战，或许也有一只适合你.");
-				addHelp("我销售龙。想买的话只用对我说我想买 #buy #dragon.");
+				addJob("我与这只龙并肩作战, 或许也有一只适合你.");
+				addHelp("我销售龙. 想买的话只用对我说我想买 #buy #dragon.");
 				addGoodbye();
-				addReply("grow","带着它战斗，龙也会获得经验并提级等级.");
+				addReply("grow","带着它战斗, 龙也会获得经验并提级等级.");
 				new SellerAdder().addSeller(this, new DragonSellerBehaviour(items));
 			}
 		};

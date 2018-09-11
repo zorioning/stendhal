@@ -21,7 +21,7 @@ import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds a NPC in a house on Ados market (name:Caroline) who is the daughter of fisherman Fritz
+ * Builds a NPC in a house on Ados market (name:卡若琳) who is the daughter of fisherman Fritz
  *
  * @author Vanessa Julius
  *
@@ -36,7 +36,7 @@ public class FishermansDaughterNPC implements ZoneConfigurator {
 	public void createFishermansDaughterSellingNPC(final StendhalRPZone zone) {
 
 
-		final SpeakerNPC npc = new SpeakerNPC("Caroline") {
+		final SpeakerNPC npc = new SpeakerNPC("卡若琳") {
 			@Override
 			protected void createPath() {
 				setPath(null);
@@ -65,7 +65,7 @@ public class FishermansDaughterNPC implements ZoneConfigurator {
 			}
 		};
 
-		npc.setDescription("You see Caroline. She seems to be a punchy nice lady who tries to reach her goals.");
+		npc.setDescription("You see 卡若琳. She seems to be a punchy nice lady who tries to reach her goals.");
 		npc.setEntityClass("fishermansdaughternpc");
 		npc.setPosition(8, 3);
 		npc.setDirection(Direction.DOWN);

@@ -156,10 +156,10 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 			@Override
 			public void createDialog() {
 				addGreeting();
-				addJob("我在 塞门镇 收购羊，然后把羊出口到 Ados 城。");
-				addHelp("我收购羊,但要公平合理的价格。有羊的话，你只需要对我说卖羊 #sell #sheep, 我会马上处理!");
+				addJob("我在 塞门镇 收购羊, 然后把羊出口到 Ados 城. ");
+				addHelp("我收购羊,但要公平合理的价格. 有羊的话, 你只需要对我说卖羊 #sell #sheep, 我会马上处理!");
 				addGoodbye();
-				addQuest("Hmm 我要给我朋友引见一下，或许你问问 尼世亚 ,他可以给你出点主意...");
+				addQuest("Hmm 我要给我朋友引见一下, 或许你问问 尼世亚 ,他可以给你出点主意...");
 			}
 
 			@Override
@@ -214,10 +214,10 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 
 			if (sheep != null) {
 				if (seller.getEntity().squaredDistance(sheep) > 5 * 5) {
-					seller.say("附近没有看到你的羊！把羊带过来，我好给你出个价.");
+					seller.say("附近没有看到你的羊！把羊带过来, 我好给你出个价.");
 				} else if (getValue(res, sheep) < SheepSellerNPC.BUYING_PRICE) {
 					// prevent newbies from selling their sheep too early
-					seller.say("Nah, 那只羊太瘦了。多给它喂点红树莓, 把它喂肥点再过来吧.");
+					seller.say("呐, 那只羊太瘦了. 多给它喂点红树莓, 把它喂肥点再过来吧.");
 				} else {
 					seller.say("谢谢！这是你的钱.");
 					payPlayer(res, player);
@@ -234,7 +234,7 @@ public class SheepBuyerNPC implements ZoneConfigurator {
 					return true;
 				}
 			} else {
-				seller.say("你根本没有羊，" + player.getTitle() + "! 你还在假装拉什么过来?");
+				seller.say("你根本没有羊, " + player.getTitle() + "! 你还在假装拉什么过来?");
 			}
 
 			return false;

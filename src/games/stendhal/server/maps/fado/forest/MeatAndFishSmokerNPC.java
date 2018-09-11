@@ -81,7 +81,7 @@ public class MeatAndFishSmokerNPC implements ZoneConfigurator {
                     "It grows in many places, at the edges or well in the depths of a forest.");
                 addReply(Arrays.asList("trout", "cod"),
                     "I wouldn't reveal you where my favorite fishing spots are but I would suggest you go find some books on the subject in one of those scholarly places.");
-                addReply(Arrays.asList("肉","ham"),
+                addReply(Arrays.asList("肉","火腿"),
                     "I don't care if it comes from lion or 大象... I can #smoke that for you!");
 
                 addGoodbye("S' veg!");
@@ -99,7 +99,7 @@ public class MeatAndFishSmokerNPC implements ZoneConfigurator {
 
                 final Map<String, Integer> reqRes_smokedHam = new TreeMap<String, Integer>();
                 reqRes_smokedHam.put("木头", 3);
-                reqRes_smokedHam.put("ham", 1);
+                reqRes_smokedHam.put("火腿", 1);
                 reqRes_smokedHam.put("kekik", 2);
 
                 final Map<String, Integer> reqRes_smokedTrout = new TreeMap<String, Integer>();

@@ -108,10 +108,10 @@ class Honeymoon {
 							wife = SingletonRepository.getRuleProcessor().getPlayer(
                                                                                 partnerName);
 							final StackableItem invite1 = (StackableItem) SingletonRepository.getEntityManager().getItem(
-																												  "invitation scroll");
+																												  "邀请函");
 							invite1.setQuantity(1);
                             final StackableItem invite2 = (StackableItem) SingletonRepository.getEntityManager().getItem(
-                                                                                                                  "invitation scroll");
+                                                                                                                  "邀请函");
                             invite2.setQuantity(1);
                             //
 							invite1.setInfoString("honeymoon," + partnerName);

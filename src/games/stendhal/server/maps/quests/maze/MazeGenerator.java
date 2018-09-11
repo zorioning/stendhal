@@ -68,13 +68,13 @@ public class MazeGenerator {
 
 	private static final int WALL_THICKNESS = 2;
 	private static final String[] prizes = {
-		"summon scroll",
+		"召唤卷轴",
 		"home scroll",
 		"阿多斯城回城卷",
-		"nalwor city scroll",
+		"纳尔沃城回城卷",
 		"kirdneh city scroll",
 		"kalavan city scroll",
-		"empty scroll"
+		"空白卷轴"
 	};
 
 	/** The music track to be played in the maze */
@@ -517,7 +517,7 @@ public class MazeGenerator {
 				entity.put("x", returnX);
 				entity.put("y", returnY);
 				// Tell corpses they're going to be removed (from pets or creatures
-				// from summon scrolls). This is for stopping the rotting timers
+				// from 召唤卷轴s). This is for stopping the rotting timers
 				for (RPObject obj : zone) {
 					if (obj instanceof Corpse) {
 						((Corpse) obj).onRemoved(zone);

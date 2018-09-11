@@ -4,6 +4,7 @@ Changelog
 1.28
 *world*
 - many new enemy & NPC sprites
+- some item sprites re-drawn
 - no longer required to have 1 money to use scroll eraser
 - added "venom gland" item to weekly item quest
 - Katinka awards positive karma for accepting Zoo Food quest
@@ -15,6 +16,7 @@ Changelog
 - sprites & tiles replaced with images suffixed with "-noblood" when blood disabled
 - double direction key press is used instead of holding Alt. key to intitiate auto-walk
 - players can set continuous movement to continue walking after map change or teleport without releasing direction key
+- weapon nature is used to set combat sprite if available
 
 *code*
 - portals can use "face" attribute to set player facing direction when used as a destination
@@ -193,7 +195,7 @@ the huge task of creating & replacing sprite & tileset images.
 1.23
 
 *world*
-- Mizuno sells ice, fire, and light arrows. 
+- Mizuno sells ice, fire, and 电箭s. 
 - Because of a bad curse, many creatures, animals and people have lost their appearance
 - Please join us at https://stendhalgame.org/chat/ if you want to help with creating new graphics 
 
@@ -214,7 +216,7 @@ the huge task of creating & replacing sprite & tileset images.
 
 *world*
 - Pets can drink 'medicine' even when they aren't hungry. Making them easier to maintain in battle.
-- New trader NPC (Mizuno) travels around remote parts of Ados selling ice arrows for black pearls.
+- New trader NPC (Mizuno) travels around remote parts of Ados selling ice arrows for 黑珍珠.
 - Rebalancing vampire, chaos swords.
 - Photo booth at Mine Town Revival festival
 - Small improvements to maps
@@ -1200,8 +1202,8 @@ read https://stendhalgame.org/wiki/Automatic_Software_Updater
 - Gaston, a Rat chef in Rat City bakery that will prepare the best crepes suzette au chocolate in town
 - Erna lends kitchen equipment
 - Karl sells sacks, Philomena sells butter
-- Elisabeth and her mother Carey found their way to Kirdneh
-- quest Chocolate For Elisabeth on Kirdneh playground
+- 伊丽莎白 and her mother Carey found their way to Kirdneh
+- quest Chocolate For 伊丽莎白 on Kirdneh playground
 - Semos is decorated for Christmas
 - Santa is visiting (and can now be made to leave after Christmas on time)
 - changed corpse protection logic to be fairer
@@ -1325,7 +1327,7 @@ read https://stendhalgame.org/wiki/Automatic_Software_Updater
 - new sounds on the athor ship, in the ados sewers, at the ados city haven and some minor additions
 - Ados and Fado churches ring their bells at full and half hours
 - initial Hayunn dialog/tutorial streamlined and improved
-- Diogenes tells you about postman, he recently remembered that used to be his job
+- 迪金斯 tells you about postman, he recently remembered that used to be his job
 - a sign at the flowers field which shows the meaning of these flowers
 - marked path from semos to ados city and to the athor ferry pier on ados coast
 - new npc added to ados market, who buys blue shield 
@@ -2176,7 +2178,7 @@ kikareukin islands.
  - mainio items from hybrids
  - xeno items from xenocium
  - jewelled legs, liberty helmet
- - chicken, fairy cakes, eggs, pineapples, coconuts, pina colada
+ - chicken, fairy cakes, eggs, 菠萝s, coconuts, pina colada
 - Other:
  - Semos bank more secure (one player areas near chests)
  - Magic bank where you can access all chests for fee and limited time
@@ -2275,7 +2277,7 @@ World:
 - added gold sources, gold nuggets and gold bars which can be cast by the goldsmith in Ados
 - Ados city is finished, although most houses are still closed
 - daily item quest from the Ados mayor
-- quest to get the keyring activated (joshua is hungry)
+- quest to get the keyring activated (约书亚 is hungry)
 - The mountains of Ados have a great cave under them, some of the brave who have returned from there talk about giants and red dragons... perhaps it is the soo long journey that makes them say those things.
 
 Gameplay:

@@ -10,12 +10,12 @@ public class DetailsKillingsAction implements ChatAction, ITPPQuestConstants {
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser mayor) {
 		if (TPPQuestHelperFunctions.calculateReward(player)==0) {
-			mayor.say("你 #rats 鼠害发生时，没有杀死老鼠。"+
+			mayor.say("你 #rats 鼠害发生时, 没有杀死老鼠. "+
 					  "要得到奖励 #reward 你必须要在指定时间内最少要杀死 "+
 					  "一只老鼠.");
 			return;
 		}
-		final StringBuilder sb = new StringBuilder("好的, 最终奖励，你杀了 ");
+		final StringBuilder sb = new StringBuilder("好的, 最终奖励, 你杀了 ");
 		long moneys = 0;
 		int kills = 0;
 		for(int i=0; i<RAT_TYPES.size(); i++) {

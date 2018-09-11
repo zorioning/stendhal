@@ -165,27 +165,27 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("silk gland",7);
 
 		// special
-		items.put("lucky charm",1);
-		items.put("mythical egg",1);
+		items.put("幸运石",1);
+		items.put("传说之卵",1);
 
 		// shield
-		items.put("chaos shield",1);
-		items.put("golden shield",1);
-		items.put("green dragon shield",1);
-		items.put("magic plate shield",1);
-		items.put("mainio shield",1);
-		items.put("shadow shield",1);
-		items.put("xeno shield",1);
+		items.put("混乱之盾",1);
+		items.put("金盾",1);
+		items.put("绿龙盾",1);
+		items.put("附魔钢盾",1);
+		items.put("奇妙之盾",1);
+		items.put("影盾",1);
+		items.put("异域盾",1);
 
 		// sword
-		items.put("assassin dagger",1);
-		items.put("buster",1);
-		items.put("chaos sword",1);
-		items.put("dark dagger",1);
-		items.put("demon sword",1);
-		items.put("drow sword",1);
-		items.put("fire sword",1);
-		items.put("great sword",1);
+		items.put("刺客匕首",1);
+		items.put("屠刀",1);
+		items.put("混沌之剑",1);
+		items.put("暗之匕首",1);
+		items.put("恶魔剑",1);
+		items.put("卓尔之剑",1);
+		items.put("烈火剑",1);
+		items.put("巨剑",1);
 		items.put("hell dagger",1);
 		items.put("ice sword",1);
 		items.put("immortal sword",1);

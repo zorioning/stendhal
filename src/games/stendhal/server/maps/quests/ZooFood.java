@@ -155,15 +155,15 @@ public class ZooFood extends AbstractQuest {
 				null);
 
 	    final Map<String,Integer> items = new HashMap<String, Integer>();
-	    items.put("apple",5);
-	    items.put("bread",3);
+	    items.put("苹果",5);
+	    items.put("面包",3);
 	    items.put("button mushroom",5);
 	    items.put("carrot",5);
 	    items.put("干酪",10);
 	    items.put("cherry",5);
 	    items.put("egg",5);
 		items.put("grain",20);
-	    items.put("ham",10);
+	    items.put("火腿",10);
 	    items.put("honey",5);
 		items.put("肉",15);
 		items.put("porcini",5);
@@ -213,7 +213,7 @@ public class ZooFood extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, "start")),
 				ConversationStates.QUEST_ITEM_BROUGHT,
 				"Welcome back! Have you brought the "
-						+ REQUIRED_HAM + "ham" + "?",
+						+ REQUIRED_HAM + "火腿" + "?",
 			new SetQuestAction(QUEST_SLOT,"start;ham=10"));
 
 		// player returns while quest is active

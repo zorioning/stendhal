@@ -28,9 +28,9 @@ public class HerbsForJynath extends AbstractQuest {
 
     public static final String QUEST_SLOT = "herbs_jynath";
     // The things that need to be collected by user to
-    protected static final String NEEDED_ITEMS = "beer=2;wood=2";
+    protected static final String NEEDED_ITEMS = "啤酒=2;木头=2";
     // "herbs" added to quest messages
-    List<String> NEW_QUEST_MESSAGES = ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, "herbs");
+    List<String> NEW_QUEST_MESSAGES = ConversationPhrases.combine(ConversationPhrases.QUEST_MESSAGES, "药草");
 
     @Override
     public void addToWorld() {
@@ -53,7 +53,7 @@ public class HerbsForJynath extends AbstractQuest {
     // Other quests have a getTitle() method, I thought I should add this
     // as well
     public String getTitle() {
-    	return "Herbs for Jynath";
+    	return "Jynath的药草";
 	}
 
     /*
@@ -74,14 +74,14 @@ public class HerbsForJynath extends AbstractQuest {
         if (!player.hasQuest(QUEST_SLOT)) {
             return questHistory;
         }
-        questHistory.add("Jynath needs herbs to cast a spell and asked me to collect them for her.");
+        questHistory.add("Jynath 需要一些药草, 去试验一种魔法, 她想让我帮忙找一些.");
         final String questState = player.getQuest(QUEST_SLOT);
         if ("rejected".equals(questState)) {
-        	questHistory.add("I chose not to help Jynath.");
+        	questHistory.add("我选择不帮 Jynath.");
         } else if (!"done".equals(questState)) {
-            questHistory.add("I need to bring Jynath her herbs.");
+            questHistory.add("我要带一些药草给 Jynath.");
         } else {
-        	questHistory.add("I brought Jynath some herbs. I think she will use them to make a potion.");
+        	questHistory.add("我带来一些药草给了 Jynath. 我认为她会用它们制毒.");
         }
         return questHistory;
     }
@@ -101,16 +101,16 @@ public class HerbsForJynath extends AbstractQuest {
             // ie. first time
             new AndCondition(new QuestNotActiveCondition(QUEST_SLOT), new QuestNotCompletedCondition(QUEST_SLOT), new QuestNotInStateCondition(QUEST_SLOT, "rejected")),
             ConversationStates.QUEST_OFFERED,
-            "I want to brew a magic potion, but I need some #herbs for the recipe. Will you get them for me?",
+            "我想制作一种魔法药, 但还需要配方中的几种 #药草 .你可以帮我找点吗?",
             null);
 
         // if the player wants to ask what herbs are needed, just after
         // being offered the quest
         npc.add(ConversationStates.QUEST_OFFERED,
-        	"herbs",
+        	"药草",
         	null,
         	ConversationStates.QUEST_OFFERED,
-        	"The list of #herbs I need is [list]",
+        	"我还需要的 #药草 清单有 [list]",
             null);
 
         // if the quest is accepted
@@ -118,7 +118,7 @@ public class HerbsForJynath extends AbstractQuest {
         	ConversationPhrases.YES_MESSAGES,
         	null,
         	ConversationStates.ATTENDING,
-        	"Wonderful! The herbs I need are [list]",
+        	"太好了! 我需要的药草有 [list]",
         	new SetQuestAction(QUEST_SLOT, "start"));
 
         // if the quest is rejected
@@ -126,7 +126,7 @@ public class HerbsForJynath extends AbstractQuest {
             ConversationPhrases.NO_MESSAGES,
             null,
             ConversationStates.ATTENDING,
-            "Oh well, if you change your mind let me know.",
+            "哦 好吧, 如果你改变主意了再和我说.",
             new SetQuestAction(QUEST_SLOT, "rejected"));
 
         // if the player wants to start the quest, and has rejected it earlier
@@ -135,7 +135,7 @@ public class HerbsForJynath extends AbstractQuest {
         	NEW_QUEST_MESSAGES,
         	new QuestInStateCondition(QUEST_SLOT, "rejected"),
         	ConversationStates.QUEST_OFFERED,
-        	"Change our mind, did we. If you would like, you can still help me by collecting #herbs. Would you still like to do that?",
+        	"我们换个思路, 对吧? 如果你喜欢,你还可以帮我找 #药草. 你还要这么做吗?",
         	null);
 
         // this lists the herbs needed. This npc.add() is for QUEST_OFFERED, just after the
@@ -144,7 +144,7 @@ public class HerbsForJynath extends AbstractQuest {
         	NEW_QUEST_MESSAGES,
         	new AndCondition(new QuestActiveCondition(QUEST_SLOT), new QuestNotCompletedCondition(QUEST_SLOT)),
         	ConversationStates.ATTENDING,
-        	"I need #herbs for my potion. What I need is [list]",
+        	"我需要 #药草 配制毒药. 我需要的有 [list]",
             null);
 
         // send him away if he has completed the quest already.
@@ -152,7 +152,7 @@ public class HerbsForJynath extends AbstractQuest {
             ConversationPhrases.QUEST_MESSAGES,
             new QuestCompletedCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
-            "Thank you again for fetching those herbs. I can now brew my magic potion!",
+            "谢谢你的药草. 现在我可以制作魔法药水了!",
             null);
     }
 
@@ -163,12 +163,12 @@ public class HerbsForJynath extends AbstractQuest {
 
         // created conditions and actions for the player having all the necessary items
         // purpose: to clean up the code
-        AndCondition playerHasAllCondition = new AndCondition(new PlayerHasItemWithHimCondition("beer", 2), new PlayerHasItemWithHimCondition("木头", 2));
+        AndCondition playerHasAllCondition = new AndCondition(new PlayerHasItemWithHimCondition("啤酒", 2), new PlayerHasItemWithHimCondition("木头", 2));
         AndCondition playerIsInQuestCondition = new AndCondition(new QuestActiveCondition(QUEST_SLOT), new QuestNotCompletedCondition(QUEST_SLOT));
 
     	// create the reward that is given to player for winning
     	List<ChatAction> rewardActions = new LinkedList<ChatAction>();
-        rewardActions.add(new DropItemAction("beer", 2));
+        rewardActions.add(new DropItemAction("啤酒", 2));
         rewardActions.add(new DropItemAction("木头", 2));
         rewardActions.add(new EquipItemAction("money", 1234));
         rewardActions.add(new IncreaseXPAction(1234));
@@ -180,7 +180,7 @@ public class HerbsForJynath extends AbstractQuest {
             ConversationPhrases.GREETING_MESSAGES,
             new AndCondition(new QuestActiveCondition(QUEST_SLOT), new QuestNotCompletedCondition(QUEST_SLOT)),
             ConversationStates.ATTENDING,
-            "Greetings! How may I help you? Have you brought my #herbs. I need them for a magic potion.",
+            "欢迎! 需要我的帮助吗? 你带来我要的 #药草 了吧. 我要用它们制作魔法药水.",
             null);
 
         // add a yes response to the above
@@ -190,7 +190,7 @@ public class HerbsForJynath extends AbstractQuest {
             NEW_QUEST_MESSAGES,
             new AndCondition(playerHasAllCondition, playerIsInQuestCondition),
             ConversationStates.ATTENDING,
-            "Exactly what I needed! Wonderful! Thank you for your help.",
+            "确实是我要的! 太好了! 谢谢你的帮忙.",
             new MultipleActions(rewardActions));
     }
 

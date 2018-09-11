@@ -105,9 +105,9 @@ public class SellerAdder {
 									+ player.getName() + " talking to "
 									+ raiser.getName() + " saying "
 									+ sentence);
-							raiser.say("抱歉，"
+							raiser.say("抱歉, "
 									+ chosenItemName
-									+ " 的数量太多，最多不能超过 1000.");
+									+ " 的数量太多, 最多不能超过 1000.");
 						} else if (res.getAmount() > 0) {
 							StringBuilder builder = new StringBuilder();
 
@@ -128,7 +128,7 @@ public class SellerAdder {
 							if (player.isBadBoy()) {
 								price = (int) (SellerBehaviour.BAD_BOY_BUYING_PENALTY * price);
 
-								builder.append("朋友，我是小本买卖，但你也不能欺人太甚，所以, ");
+								builder.append("朋友, 我是小本买卖, 但你也不能欺人太甚, 所以, ");
 								builder.append(res.getAmount()+" 件 ");
 								builder.append( chosenItemName);
 							} else {

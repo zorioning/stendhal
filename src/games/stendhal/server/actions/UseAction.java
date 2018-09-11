@@ -129,7 +129,7 @@ public class UseAction implements ActionListener {
 		final String zonename = player.getZone().getName();
 
 		if ((object instanceof Item) && (zonename.endsWith("_jail"))) {
-			player.sendPrivateText("因安全原因，监狱中不能使用物品。");
+			player.sendPrivateText("因安全原因, 监狱中不能使用物品. ");
 			return true;
 		}
 

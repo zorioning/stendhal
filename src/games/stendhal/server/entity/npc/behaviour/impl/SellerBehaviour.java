@@ -84,7 +84,7 @@ public class SellerBehaviour extends MerchantBehaviour {
 		}
 
 		if (amount <= 0) {
-			seller.say("抱歉，你至少要买一件吧。");
+			seller.say("抱歉, 你至少要买一件吧. ");
 			return false;
 		}
 
@@ -102,12 +102,12 @@ public class SellerBehaviour extends MerchantBehaviour {
 				player.incBoughtForItem(chosenItemName, amount);
 				return true;
 			} else {
-				seller.say("抱歉，但你不能装备 "
+				seller.say("抱歉, 但你不能装备 "
 						+  chosenItemName + ".");
 				return false;
 			}
 		} else {
-			seller.say("抱歉，你的钱不够!");
+			seller.say("抱歉, 你的钱不够!");
 			return false;
 		}
 	}

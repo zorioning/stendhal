@@ -42,7 +42,7 @@ public class PrepareOfferHandler {
 		npc.add(ConversationStates.ATTENDING, "sell",
 				new LevelLessThanCondition(6),
 				ConversationStates.ATTENDING,
-				"抱歉，我只接受有点名气的人的代理销售，你可以帮助镇民或到城外杀怪提高经验。", null);
+				"抱歉, 我只接受有点名气的人的代理销售, 你可以帮助镇民或到城外杀怪提高经验. ", null);
 		npc.add(ConversationStates.ATTENDING, "sell",
 				new LevelGreaterThanCondition(5),
 				ConversationStates.ATTENDING, null,
@@ -89,7 +89,7 @@ public class PrepareOfferHandler {
 		@Override
 		public void fire(Player player, Sentence sentence, EventRaiser npc) {
 			if (sentence.hasError()) {
-				npc.say("抱歉，我不了解你拿的的奇怪玩意儿。");
+				npc.say("抱歉, 我不了解你拿的的奇怪玩意儿. ");
 				npc.setCurrentState(ConversationStates.ATTENDING);
 			} else if (sentence.getExpressions().iterator().next().toString().equals("sell")){
 				handleSentence(player, sentence, npc);
@@ -99,7 +99,7 @@ public class PrepareOfferHandler {
 		private void handleSentence(Player player, Sentence sentence, EventRaiser npc) {
 			if(TradingUtility.isPlayerWithinOfferLimit(player)) {
 				if (sentence.getExpressions().size() < 3 || sentence.getNumeralCount() != 1) {
-					npc.say("我不明白你说的，请说 \"卖 物品名称 价格\" 或 \"sell item price\".");
+					npc.say("我不明白你说的, 请说 \"卖 物品名称 价格\" 或 \"sell item price\".");
 					npc.setCurrentState(ConversationStates.ATTENDING);
 					return;
 				}
@@ -123,19 +123,19 @@ public class PrepareOfferHandler {
 					itemName = item.getName();
 
 					if ((number > 1) && !(item instanceof StackableItem)) {
-						npc.say("抱歉，你只能把这些东西拆成单个卖出.");
+						npc.say("抱歉, 你只能把这些东西拆成单个卖出.");
 						return;
 					} else if (item.isBound()) {
-						npc.say("这个 " + itemName + " 只有由你使用，我不能代销它.");
+						npc.say("这个 " + itemName + " 只有由你使用, 我不能代销它.");
 						return;
 					} else if (item.getDeterioration() > 0) {
-						npc.say("这个 " + itemName + " 损坏了，我不能代销它.");
+						npc.say("这个 " + itemName + " 损坏了, 我不能代销它.");
 						return;
 					} else if (number > 1000) {
-						npc.say("抱歉，我的仓库放不下这么多的 " + itemName + ".");
+						npc.say("抱歉, 我的仓库放不下这么多的 " + itemName + ".");
 						return;
 					} else if (price > 1000000) {
-						npc.say("狮子大张口啊，你的 " + itemName + " 要价太高. 很抱歉我不能帮你代销.");
+						npc.say("狮子大张口啊, 你的 " + itemName + " 要价太高. 很抱歉我不能帮你代销.");
 						return;
 					} else if (item.hasSlot("content") && item.getSlot("content").size() > 0) {
 						npc.say("请先把你的 " + itemName + " 清空.");
@@ -143,7 +143,7 @@ public class PrepareOfferHandler {
 					} else if (item instanceof RingOfLife) {
 					    // broken ring of life should not be sold via Harold
 					    if(((RingOfLife) item).isBroken()) {
-					        npc.say("代销之前，请先把你的 " + itemName + " 修好.");
+					        npc.say("代销之前, 请先把你的 " + itemName + " 修好.");
 					        return;
 					    }
 					}
@@ -153,7 +153,7 @@ public class PrepareOfferHandler {
 					StringBuilder msg = new StringBuilder();
 					msg.append("你想代理销售的 ");
 					msg.append( itemName);
-					msg.append(" ，总计 ");
+					msg.append(" , 总计 ");
 					msg.append(price);
 					msg.append(" 金币. 代销手续费 ");
 					msg.append(fee);
@@ -193,7 +193,7 @@ public class PrepareOfferHandler {
 					TradingUtility.substractTradingFee(player, price);
 					new AsynchronousProgramExecutor("trade", buildTweetMessage(item, quantity, price)).start();
 					DBCommandQueue.get().enqueue(new LogTradeEventCommand(player, item, quantity, price));
-					npc.say("我已为你把代理销售的东西上架到交易中心，手续费用为 "+ fee +" 金币.");
+					npc.say("我已为你把代理销售的东西上架到交易中心, 手续费用为 "+ fee +" 金币.");
 					npc.setCurrentState(ConversationStates.ATTENDING);
 				} else {
 					npc.say("你身上没有 " +  item.getName() + ".");
@@ -224,7 +224,7 @@ public class PrepareOfferHandler {
 				message.append(item.getName());
 				message.append(" 的定价为 ");
 				message.append(price);
-				message.append(" 金币，已上架销售. ");
+				message.append(" 金币, 已上架销售. ");
 				String messageNumberOfOffers = "目前你上架代销的商品 "
 					+  "offer"  + ".";
 				player.sendPrivateText(message.toString() + messageNumberOfOffers);

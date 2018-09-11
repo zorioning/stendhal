@@ -38,7 +38,7 @@ public class HousewifeNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Eonna") {
 
 			/**
-			 * Creates a path around the table with the beers and to the furnance.
+			 * Creates a path around the table with the 啤酒s and to the furnance.
 			 */
 			@Override
 			protected void createPath() {
@@ -55,7 +55,7 @@ public class HousewifeNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hi 看这里，年轻的英雄.");
+				addGreeting("Hi 看这里, 年轻的英雄.");
 				addJob("我是一个平常的家庭主妇.");
 				addHelp("Oh 我爱吃 Leander 生产的面包. 他的三明治太帅了！你知道吗？他正需要个助手?");
 				addGoodbye();
@@ -63,7 +63,7 @@ public class HousewifeNPC implements ZoneConfigurator {
 		};
 
 		npc.setEntityClass("welcomernpc");
-		npc.setDescription("你遇见了 Eonna. 她是一个有爱的家庭主妇，害怕死老鼠!");
+		npc.setDescription("你遇见了 Eonna. 她是一个有爱的家庭主妇, 害怕死老鼠!");
 		npc.setPosition(4, 13);
 		npc.initHP(100);
 		zone.add(npc);

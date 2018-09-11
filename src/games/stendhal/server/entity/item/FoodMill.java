@@ -57,12 +57,12 @@ public class FoodMill extends Item {
     		container = "empty sack";
     		output = "sugar";
     	} else if ("scroll eraser".equals(getName())) {
-    		input = "marked scroll";
-    		output = "empty scroll";
+    		input = "标记卷轴";
+    		output = "空白卷轴";
     	} else {
-    		input = "apple";
+    		input = "苹果";
     		container = "bottle";
-    		output = "apple juice";
+    		output = "苹果汁";
     	}
     }
 

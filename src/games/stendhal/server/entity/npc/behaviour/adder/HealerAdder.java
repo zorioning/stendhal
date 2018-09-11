@@ -95,12 +95,12 @@ public class HealerAdder {
 							cost = player.getLevel() * Math.abs(cost) + 1;
 							raiser.say("治好你的某项能力费用 "
 									+ cost
-									+ " 钱。" + badboymsg + " 你带够钱了吗？");
+									+ " 钱. " + badboymsg + " 你带够钱了吗？");
 
 							raiser.setCurrentState(ConversationStates.HEAL_OFFERED); // success
 						} else {
 							if ((player.getAtk() > 35) || (player.getDef() > 35)) {
-								raiser.say("抱歉，你太强壮，已超过我医疗的极限.");
+								raiser.say("抱歉, 你太强壮, 已超过我医疗的极限.");
 							} else if ((!player.isNew()
 									&& (player.getLastPVPActionTime() > System
 											.currentTimeMillis()
@@ -109,9 +109,9 @@ public class HealerAdder {
 								// ignore the PVP flag for very young
 								// characters
 								// (low atk, low def AND low level)
-								raiser.say("抱歉，你身上都有股怪味，所以现在我不想为你治疗.");
+								raiser.say("抱歉, 你身上都有股怪味, 所以现在我不想为你治疗.");
 							} else {
-								raiser.say("好了，你已康复，还有别的事吗？");
+								raiser.say("好了, 你已康复, 还有别的事吗？");
 								healerBehaviour.heal(player);
 							}
 						}
@@ -132,9 +132,9 @@ public class HealerAdder {
 						if (player.drop("money",
 								cost)) {
 							healerBehaviour.heal(player);
-							raiser.say("好了，你已康复，还有别的事吗？");
+							raiser.say("好了, 你已康复, 还有别的事吗？");
 						} else {
-							raiser.say("抱歉，你的钱不够啊.");
+							raiser.say("抱歉, 你的钱不够啊.");
 						}
 
 						currentBehavRes = null;

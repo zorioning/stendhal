@@ -72,7 +72,7 @@ public class BarmanNPC implements ZoneConfigurator {
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
 				offerings.put("wine", 20);
 				offerings.put("pina colada", 100);
-				offerings.put("chocolate bar", 100);
+				offerings.put("巧克力棒", 100);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 				addGoodbye("See you around, sweetcheeks.");
 			}

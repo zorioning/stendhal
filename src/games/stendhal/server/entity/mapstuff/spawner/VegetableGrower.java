@@ -101,7 +101,7 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 			text = "这是 " + vegetableName + ".";
 			break;
 		default:
-			text = "这些 " +  vegetableName + " 还没长熟。";
+			text = "这些 " +  vegetableName + " 还没长熟. ";
 			break;
 		}
 		return text;
@@ -127,7 +127,7 @@ public class VegetableGrower extends GrowingPassiveEntityRespawnPoint implements
 				return true;
 			} else if (entity instanceof Player) {
 				String message = "这些 " + vegetableName
-						+ " 还没成熟，不能采摘.";
+						+ " 还没成熟, 不能采摘.";
 				if(notRipeEnoughMessage != null) {
 					message = notRipeEnoughMessage;
 				}

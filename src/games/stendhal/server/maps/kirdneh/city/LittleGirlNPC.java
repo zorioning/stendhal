@@ -19,7 +19,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds a little girl NPC (Elisabeth) in Kirdneh city.
+ * Builds a little girl NPC (伊丽莎白) in Kirdneh city.
  *
  * @author Vanessa Julius idea by miasma
  */
@@ -43,7 +43,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 	}
 
 	private void buildNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Elisabeth") {
+		final SpeakerNPC npc = new SpeakerNPC("伊丽莎白") {
 
 			@Override
 			protected void createPath() {
@@ -53,7 +53,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				// greeting message in quest given (ChocolateForElisabeth)
+				// greeting message in quest given (ChocolateFor伊丽莎白)
 				addJob("Job? I like to play with my #toys :)");
 				addReply("toys", "There is a young boy who lives in 塞门镇 and gave me one of his teddies once :) So sweet!");
 				addHelp("Ask my #mommy, maybe she can help you...");
@@ -68,7 +68,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 		npc.setEntityClass("littlegirl2npc");
 		npc.setPosition(92, 15);
 		npc.initHP(100);
-		npc.setDescription("You see Elisabeth. She seems to be hungry.");
+		npc.setDescription("You see 伊丽莎白. She seems to be hungry.");
 		zone.add(npc);
 	}
 }

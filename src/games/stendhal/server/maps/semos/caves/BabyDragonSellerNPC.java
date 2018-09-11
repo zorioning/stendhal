@@ -74,19 +74,19 @@ public class BabyDragonSellerNPC implements ZoneConfigurator {
 						final long timeRemaining = (Long.parseLong(player.getQuest(QUEST_SLOT))
 								      + delay) - System.currentTimeMillis();
 						if (timeRemaining > 0L) {
-						    raiser.say("The egg is still hatching, and will be for at least another "
+						    raiser.say("蛋还在孵化中, 估计还少还要 "
 										+ TimeUtil.timeUntil((int) (timeRemaining / 1000L))
-										+ ".");
+										+ " 才能完成.");
 								return;
 					        }
 
     						if (player.hasPet()) {
     						    // we don't want him to give a dragon if player already has a pet
-    						    raiser.say("I cannot give your newly hatched dragon to you if I don't think you'll give it your full attention! Come back when you don't have another pet with you.");
+    						    raiser.say("我不能把新孵化的龙交给你, 因为你还带着另一只宠物, 我不认为你有精力照顾两只.");
     						    return;
     						}
 
-							raiser.say("Your egg has hatched! So, here you go, a nippy little baby dragon of your own. Don't forget it'll want some #food soon. And remember to #protect it.");
+							raiser.say("蛋已经孵化成功! 这只尖刺幼龙就交给你了, 别忘了给它 #喂食 ,还要记住要 #保护 它.");
 					       	final BabyDragon babydragon = new BabyDragon(player);
 
 					       	babydragon.setPosition(raiser.getX(), raiser.getY() + 1);
@@ -96,50 +96,50 @@ public class BabyDragonSellerNPC implements ZoneConfigurator {
     						// being used to store egg hatching times
 					       	player.removeQuest(QUEST_SLOT);
 					       	player.notifyWorldAboutChanges();
-					    } else if (player.isEquipped("mythical egg")) {
-					    	raiser.say("Where did you get that egg from?! Never mind. Tell me if you need me to #hatch it for you. It is my hobby, after all.");
+					    } else if (player.isEquipped("传说之卵")) {
+					    	raiser.say("你在哪儿得到的蛋? ! 没办法,如果你需要 #孵化 可以找我,因为这是我的爱好.");
 					    } else {
-							raiser.say("Hi. I don't get so many visitors, down here.");
+							raiser.say("Hi. 我不想有太多来访客人, 请出去.");
 					    }
 					}
 				});
-		        addReply("hatch", null, new ChatAction() {
+		        addReply("孵化", null, new ChatAction() {
 					@Override
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					    if (player.hasPet()) {
 						// there's actually also a check for this when the egg is hatched,
 						// but we might as well warn player here that they wouldn't be allowed two.
-							raiser.say("You've already got a pet. If you get another they might fight ... or worse ...");
+							raiser.say("你已经有了一只宠物. 再有一只的话怕是它们要打架...或者更糟...");
 					   } else {
-						if (player.isEquipped("mythical egg")) {
-						    player.drop("mythical egg");
-						    raiser.say("Ok, I'll take your egg and hatch it in one of these nesting boxes. Come back in " + 7 + " days and you should be the proud owner of a new born baby dragon.");
+						if (player.isEquipped("传说之卵")) {
+						    player.drop("传说之卵");
+						    raiser.say("Ok, 你的蛋就放在这些收纳畣中孵化, 等待 " + 7 + "天后, 就可以孵化出一只新的幼龙了.");
 						    player.setQuest(QUEST_SLOT, Long.toString(System.currentTimeMillis()));
 						    player.notifyWorldAboutChanges();
 						} else {
-						    raiser.say("You don't have any dragon eggs with you. I can't hatch a dragon without an egg.");
+						    raiser.say("你身上没有带着龙蛋, 没蛋还怎么孵化.");
 						}
 					    }
 					}
 				    });
-				addJob("I breed baby dragons. You need an egg to get one #hatched.");
-				addQuest("If you can get a dragon egg, I will #hatch it for you.");
-				addHelp("I rear baby dragons. If you have an egg, I'll #hatch it. I can also tell you how to #travel with a pet and take #care of it. If you find any wild baby dragon, incidentally, you can make it your #own.");
-				addGoodbye("Watch out for the giants on your way out!");
-				addReply("food", "Baby dragons feed on meat and ham. Their particular favourite is pizza, if you can get it.");
-				addReply("care",
-						"Baby dragons eat meat, ham and even pizza. Just place a piece on the ground and the dragon will run over to eat it. You can right-click on it and choose 'Look' at any time, to see its weight. They gain one unit of weight for every piece of food they eat.");
-				addReply("travel",
-						"You'll need your baby dragon to be close by in order for it to follow you when you change zones; you can say #pet to call it if it's not paying attention. If you decide to abandon it, you can right-click on YOURSELF and select 'Leave Pet'.");
-				addReply("protect",
-					 "Other creatures can smell the strong scent of your baby dragon, and may attack it. It will fight back to defend itself but at times it will need help, or it will surely die.");
-				addReply("own",
-						"Like all pets and sheep, if you find any wild or abandoned baby dragon, you can right-click on them and select 'Own' to tame them. It will start following you, and I can bet you it'll want #food pretty soon.");
+				addJob("我可以 #孵化 龙蛋, 想要的话带一只龙蛋来.");
+				addQuest("如果你找到了龙蛋, 我可以帮你 #孵化 它.");
+				addHelp("我饲养幼龙. 如果你有蛋的化, 我不但可以 #孵化 它. 还可以告诉你如何带宠物 #旅行 ,还如如何 #照料 它. 如果你偶尔找到野生的幼龙, 也可以使用 #支配 它.");
+				addGoodbye("出门小心路上的巨人!");
+				addReply("喂食", "幼龙吃 肉 和 ham. 但你最好弄点 pizza 喂它, 幼龙最喜欢吃这个.");
+				addReply("照料",
+						"幼龙吃 肉 和 ham 还有 pizza. 把食物扔到地上, 幼龙就会跑去吃. 你可以右键点击幼龙,然后选择 'Look' 查看龙的成长情况. 每吃一片食物就能成长一点.");
+				addReply("旅行",
+						"当你走到另一地区时, 要保证幼龙跟在你身边; 如果它跑去玩, 你也可以喴 #pet 叫它回到你身边. 如果你决定丢弃它, 右点自已选择 'Leave Pet'.");
+				addReply("保护",
+					 "野外的生物能闻到幼龙的气味, 并攻击它. 幼龙虽然也会反击, 但它也需要帮助, 要不然可能会被杀死.");
+				addReply("支配",
+						"像羊或其它宠物, 如果你找到野生或被丢弃的幼龙, 可以右点它点击 'Own' 获得它, 然后它就跟你走了, 我建议你最好马上给它 #喂食 .");
 			}
 		};
 
 		npc.setEntityClass("man_005_npc");
-		npc.setDescription("You see Terry. He plays with tiny dragons during his free time.");
+		npc.setDescription("你遇见了 Terry. 他一有空就和幼龙们戏耍.");
 		npc.setPosition(66, 8);
 		npc.initHP(100);
 		zone.add(npc);

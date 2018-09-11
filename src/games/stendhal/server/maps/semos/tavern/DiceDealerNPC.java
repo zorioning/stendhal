@@ -50,7 +50,7 @@ public class DiceDealerNPC implements ZoneConfigurator {
 			addJob("本店是 塞门镇唯一官方授权的赌场.");
 			addReply(
 			        "gambling",
-			        "规则很简单：如果你要加入只要对我说 #play, 然后下注，把骰子扔到桌上，正面数值总值越大，你的赢得的奖金越多。奖金计算请看后面的黑板!");
+			        "规则很简单：如果你要加入只要对我说 #play, 然后下注, 把骰子扔到桌上, 正面数值总值越大, 你的赢得的奖金越多. 奖金计算请看后面的黑板!");
 			addHelp("如果你在找 奥斯特: 他在楼上.");
 			addGoodbye();
 		}
@@ -65,7 +65,7 @@ public class DiceDealerNPC implements ZoneConfigurator {
 		ricardo.setEntityClass("naughtyteen2npc");
 		ricardo.setPosition(26, 2);
 		ricardo.setDirection(Direction.DOWN);
-		ricardo.setDescription("里卡多 的口袋总是叮叮铛铛的响，作为酒保来说他有点太年轻。");
+		ricardo.setDescription("里卡多 的口袋总是叮叮铛铛的响, 作为酒保来说他有点太年轻. ");
 		ricardo.initHP(100);
 		final Rectangle tableArea = new Rectangle(25, 4, 2, 3);
 

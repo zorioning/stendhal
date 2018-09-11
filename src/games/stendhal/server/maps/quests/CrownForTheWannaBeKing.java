@@ -116,7 +116,7 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get(NPC_NAME);
 		npc.addOffer("I don't sell anything!");
 		npc.addGoodbye();
-		npc.addJob("我目前的工作不重要，我将是 Kalavan 的王!");
+		npc.addJob("我目前的工作不重要, 我将是 Kalavan 的王!");
 
 		/* player says hi before starting the quest */
 		npc.add(ConversationStates.IDLE,
@@ -124,20 +124,20 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotStartedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"你好，你的事要快一些，我还有很多事要做."
-					+ " 下次把鞋弄干净，你应该庆幸我现在还不是王。。。!",
+				"你好, 你的事要快一些, 我还有很多事要做."
+					+ " 下次把鞋弄干净, 你应该庆幸我现在还不是王. . . !",
 				null);
 
 		npc.addQuest("Hmm 你对于我的计划有点用 #plan...");
 		npc.addReply("plan",
-					"我马上要废黜现在的 Kalavan 王，然后我登基！现在我要有自已的新王冠 #crown.");
+					"我马上要废黜现在的 Kalavan 王, 然后我登基！现在我要有自已的新王冠 #crown.");
 
 		/* player says crown */
 		npc.add(ConversationStates.ATTENDING,
 				"crown",
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"是的，我需要珠宝和黄金，订做我的新王冠，你会帮我吧？",
+				"是的, 我需要珠宝和黄金, 订做我的新王冠, 你会帮我吧？",
 				null);
 
 		/* player says yes */
@@ -145,7 +145,7 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES, null,
 				ConversationStates.QUESTION_1, null,
 				new MultipleActions(new SetQuestAction(QUEST_SLOT, NEEDED_ITEMS),
-								    new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我想我的王冠要华贵明亮，我需要 [items]. " +
+								    new SayRequiredItemsFromCollectionAction(QUEST_SLOT, "我想我的王冠要华贵明亮, 我需要 [items]. " +
 								    		"你能带一些给我吗?")));
 
 
@@ -153,7 +153,7 @@ public class CrownForTheWannaBeKing extends AbstractQuest {
 		npc.add(ConversationStates.QUEST_OFFERED,
 				ConversationPhrases.NO_MESSAGES, null,
 				ConversationStates.IDLE,
-				"Oh 你不想帮助我？！滚开，你浪费了我宝贵的时间!",
+				"Oh 你不想帮助我？！滚开, 你浪费了我宝贵的时间!",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 	}
 

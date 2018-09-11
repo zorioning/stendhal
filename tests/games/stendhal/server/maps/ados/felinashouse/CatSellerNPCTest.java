@@ -32,7 +32,7 @@ import utilities.RPClass.CatTestHelper;
  */
 public class CatSellerNPCTest extends ZonePlayerAndNPCTestImpl {
 
-	private static final String ZONE_NAME = "int_ados_felinas_house";
+	private static final String ZONE_NAME = "int_阿多斯_菲琳娜_小屋";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -43,7 +43,7 @@ public class CatSellerNPCTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	public CatSellerNPCTest() {
-		setNpcNames("Felina");
+		setNpcNames("菲琳娜");
 		setZoneForPlayer(ZONE_NAME);
 		addZoneConfigurator(new CatSellerNPC(), ZONE_NAME);
 	}
@@ -53,10 +53,10 @@ public class CatSellerNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testHiAndBye() {
-		final SpeakerNPC npc = getNPC("Felina");
+		final SpeakerNPC npc = getNPC("菲琳娜");
 		final Engine en = npc.getEngine();
 
-		assertTrue(en.step(player, "hi Felina"));
+		assertTrue(en.step(player, "hi 菲琳娜"));
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 
 		assertTrue(en.step(player, "bye"));
@@ -68,7 +68,7 @@ public class CatSellerNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testBuyCat() {
-		final SpeakerNPC npc = getNPC("Felina");
+		final SpeakerNPC npc = getNPC("菲琳娜");
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi"));
@@ -80,7 +80,7 @@ public class CatSellerNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertTrue(en.step(player, "care"));
 		assertEquals("Cats love chicken and fish. Just place a piece on the ground and your cat will run over to eat it. You can right-click on her and choose 'Look' at any time, to check up on her weight; she will gain one unit of weight for every piece of chicken she eats.", getReply(npc));
 
-		// There is currently no quest response defined for Felina.
+		// There is currently no quest response defined for 菲琳娜.
 		assertFalse(en.step(player, "quest"));
 
 		assertTrue(en.step(player, "buy"));
@@ -142,7 +142,7 @@ public class CatSellerNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testSellCat() {
-		final SpeakerNPC npc = getNPC("Felina");
+		final SpeakerNPC npc = getNPC("菲琳娜");
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi"));

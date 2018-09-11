@@ -70,7 +70,7 @@ public class MarkedScroll extends TeleportScroll {
 		int y = 40;
 
 		/*
-		 * Marked scrolls have a destination which is stored in the infostring,
+		 * 标记卷轴s have a destination which is stored in the infostring,
 		 * existing of a zone name and x and y coordinates
 		 */
 		final String infostring = getInfoString();
@@ -85,7 +85,7 @@ public class MarkedScroll extends TeleportScroll {
 					// invalid zone (the scroll may have been marked in an
 					// old version and the zone was removed)
 					player.sendPrivateText("Oh oh. For some strange reason the scroll did not teleport me to the right place.");
-					logger.warn("marked scroll to unknown zone " + infostring
+					logger.warn("标记卷轴 to unknown zone " + infostring
 							+ " teleported " + player.getName()
 							+ " to 塞门镇 instead");
 				} else {

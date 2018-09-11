@@ -19,7 +19,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Configure Baldemar - mithril shield forger.
+ * Configure Baldemar - 黑曜石盾 forger.
  *
  * @author kymara
  */

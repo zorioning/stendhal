@@ -19,7 +19,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * In recreation room of Blordrough's habitat in -1_ados_outside_w.
+ * In recreation room of Blordrough's habitat in -1_阿多斯_郊外_w.
  */
 public class CrulaminNPC implements ZoneConfigurator {
 
@@ -54,7 +54,7 @@ public class CrulaminNPC implements ZoneConfigurator {
 		};
 
 		Crulamin.setDescription("You see Crulamin, a warrior who has given up everything but playing chess.  His hopes are to become 'The Best' ");
-		Crulamin.setEntityClass("noimagenpc"); // "chessplayernpc"
+		Crulamin.setEntityClass("chessplayernpc");
 		Crulamin.setPosition(73,93);
 		Crulamin.initHP(100);
 		zone.add(Crulamin);

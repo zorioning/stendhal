@@ -92,7 +92,7 @@ public abstract class CroupierNPC extends SpeakerNPC {
 					+ player.getTitle()
 					+ ", 你只有 "
 					+ sum
-					+ " 点. 什么都没赢到，祝下次好运!");
+					+ " 点. 什么都没赢到, 祝下次好运!");
 		}
 	}
 

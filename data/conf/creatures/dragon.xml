@@ -22,7 +22,7 @@
       <item value="money" quantity="[90,200]" probability="100.0"/>
       <item value="greater potion" quantity="[1,2]" probability="50.0"/>
       <item value="绿龙斗篷" quantity="[1,1]" probability="1.0"/>
-      <item value="green dragon shield" quantity="[1,1]" probability="2.0"/>
+      <item value="绿龙盾" quantity="[1,1]" probability="2.0"/>
       <item value="emerald" quantity="[1,2]" probability="10.0"/>
     </drops>
     <equips>
@@ -62,7 +62,7 @@
     <drops>
       <item value="money" quantity="[90,200]" probability="100.0"/>
       <item value="greater potion" quantity="[1,3]" probability="50.0"/>
-      <item value="demon fire sword" quantity="[1,1]" probability="0.02"/>
+      <item value="赤魔剑" quantity="[1,1]" probability="0.02"/>
       <item value="carbuncle" quantity="[1,2]" probability="10.0"/>
       <item value="红龙斗篷" quantity="[1,1]" probability="2.0"/>
     </drops>
@@ -108,7 +108,7 @@
       <item value="greater potion" quantity="[1,1]" probability="50.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="emerald" quantity="[1,4]" probability="5.0"/>
-      <item value="green dragon shield" quantity="[1,1]" probability="0.25"/>
+      <item value="绿龙盾" quantity="[1,1]" probability="0.25"/>
       <item value="绿龙斗篷" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>
@@ -183,7 +183,7 @@
       <item value="sapphire" quantity="[1,4]" probability="10.0"/>
       <item value="蓝龙斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="蓝色盔甲" quantity ="[1,1]" probability="7.0"/>
-      <item value="blue shield" quantity ="[1,1]" probability ="4.5"/>
+      <item value="蓝盾" quantity ="[1,1]" probability ="4.5"/>
        <item value="blue helmet" quantity="[1,1]" probability="6.0"/>
     </drops>
     <equips>

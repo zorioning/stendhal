@@ -105,7 +105,7 @@ public class FoundGirl implements LoadableContent {
 		npc.add(
 			ConversationStates.ATTENDING,
 			Arrays.asList("Mine", "Town", "Revival", "Weeks", "Mine Town",
-					"Mine Town Revival", "Mine Town Revival Weeks", "Mine Town", "Revival Weeks"),
+					"矿镇复兴展会", "矿镇复兴展会周", "Mine Town", "Revival Weeks"),
 			ConversationStates.ATTENDING,
 			"During the Revival Weeks we #celebrate the old and now mostly dead Mine Town north of 塞门镇. "
 			+ "The party was cancelled a few years ago because the people of Ados were searching for me after I got lost. "
@@ -269,7 +269,7 @@ public class FoundGirl implements LoadableContent {
 	public boolean removeFromWorld() {
 		removeNPC("Susi");
 
-		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_ados_ross_house");
+		final StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_阿多斯_罗斯_小屋");
 		new LittleGirlNPC().createGirlNPC(zone);
 
 		return true;

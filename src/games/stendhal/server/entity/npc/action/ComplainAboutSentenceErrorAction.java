@@ -29,7 +29,7 @@ public class ComplainAboutSentenceErrorAction implements ChatAction {
 	@Override
 	public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 		if (sentence.hasError()) {
-			raiser.say("抱歉，我不明白你说的. "
+			raiser.say("抱歉, 我不明白你说的. "
 				+ sentence.getErrorString());
 		}
 	}

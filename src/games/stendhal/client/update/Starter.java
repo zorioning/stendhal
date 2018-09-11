@@ -43,12 +43,12 @@ public class Starter {
 	public static void main(final String[] args) {
 		try {
 			final String version = System.getProperty("java.specification.version");
-			if (Float.parseFloat(version) < 1.7f) {
+			if (Float.parseFloat(version) < 1.8f) {
 				JOptionPane.showMessageDialog(
 						null,
-						"游戏需要JAVA版本至少为 Java 7。"
+						"你的jre版本为"
 						+ version
-						+ ". 你可以在 https://java.com 下载");
+						+ ". 本游戏需要 Java 8 (也叫jre1.8.0) 运行环境, 可以在 https://java.com 下载");
 			}
 		} catch (final RuntimeException e) {
 			// ignore

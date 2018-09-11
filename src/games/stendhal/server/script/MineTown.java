@@ -20,7 +20,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.quests.MineTownRevivalWeeks;
 
 /**
- * Starts or stops the Mine Town Revival Weeks.
+ * Starts or stops the 矿镇复兴展会周.
  *
  * information about semos.xml changes at the bottom of the script
  * @author hendrik
@@ -43,26 +43,26 @@ public class MineTown extends ScriptImpl {
 	}
 
 	/**
-	 * Starts the Mine Town Revival Weeks.
+	 * Starts the 矿镇复兴展会周.
 	 *
 	 * @param admin adminstrator running the script
 	 */
 	private void startSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) != null) {
-			admin.sendPrivateText("Mine Town Revival Weeks are already active.");
+			admin.sendPrivateText("矿镇复兴展会周 are already active.");
 			return;
 		}
 		StendhalQuestSystem.get().loadQuest(new MineTownRevivalWeeks());
 	}
 
 	/**
-	 * Ends the Mine Town Revival Weeks.
+	 * Ends the 矿镇复兴展会周.
 	 *
 	 * @param admin adminstrator running the script
 	 */
 	private void stopSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) == null) {
-			admin.sendPrivateText("Mine Town Revival Weeks are not active.");
+			admin.sendPrivateText("矿镇复兴展会周 are not active.");
 			return;
 		}
 		StendhalQuestSystem.get().unloadQuest(MineTownRevivalWeeks.QUEST_NAME);
@@ -71,7 +71,7 @@ public class MineTown extends ScriptImpl {
 }
 // TODO: these should not be done manually but added and removed as part of the script load and unload
 // Mine Town Weeks information
-// Loading mountain_n2_mine_town_weeks.tmx and 塞门镇 halloween.city.tmx . Both contain several walkblockers for tables, Carolines shop and signs.
+// Loading mountain_n2_mine_town_weeks.tmx and 塞门镇 halloween.city.tmx . Both contain several walkblockers for tables, 卡若琳s shop and signs.
 
 // Mine Town map:
 // Walkblockers for tables at:
@@ -80,13 +80,13 @@ public class MineTown extends ScriptImpl {
 //<attribute name="width">4</attribute>
 //<attribute name="height">2</attribute>
 
-// Carolines shop signs at:
+// 卡若琳s shop signs at:
 // x="60" y="105", x="55" y="105"
-// <parameter name="shop">sellrevivalweeks</parameter>, <parameter name="title">Carolines snacks and drinks shop (sells)</parameter>
+// <parameter name="shop">sellrevivalweeks</parameter>, <parameter name="title">卡若琳s snacks and drinks shop (sells)</parameter>
 
 // Wooden arch at:
 // x="94" y="118", x="95" y="119", x="96" y="119"
-// <attribute name="text">Welcome to the Mine Town Revival Weeks xxxx!</attribute>
+// <attribute name="text">Welcome to the 矿镇复兴展会周 xxxx!</attribute>
 
 // The 塞门镇_halloween.tmx map
 // Banners at:

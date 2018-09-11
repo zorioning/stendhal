@@ -32,7 +32,7 @@ public class ItemsOnTable implements ZoneConfigurator {
 	}
 
 	private void buildMagicianHouseArea(final StendhalRPZone zone) {
-		final Item item = addPersistentItem("summon scroll", zone, 7, 6);
+		final Item item = addPersistentItem("召唤卷轴", zone, 7, 6);
 		item.setInfoString("giant_red_dragon");
 
 		// Plant grower for poison

@@ -135,7 +135,7 @@ public class SentenceTest {
 		assertTrue(s1.matchesFull(m1));
 		assertFalse(s1.matchesFull(m2));
 
-		s1 = ConversationParser.parse("bake apple pie");
+		s1 = ConversationParser.parse("bake 苹果派");
 		assertFalse(s1.hasError());
 		m1 = ConversationParser.parseAsMatcher("VER *pie");
 		m2 = ConversationParser.parseAsMatcher("VER *cookie");

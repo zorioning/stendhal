@@ -87,7 +87,7 @@ public class BuyerAdder {
 					public void fireRequestOK(final ItemParserResult res, final Player player, final Sentence sentence, final EventRaiser raiser) {
 						if (player.isBadBoy()) {
 							// don't buy from player killers at all
-							raiser.say("抱歉，我不能相信你，你看起来太危险，走开!");
+							raiser.say("抱歉, 我不能相信你, 你看起来太危险, 走开!");
 							raiser.setCurrentState(ConversationStates.IDLE);
 							return;
 						}
@@ -102,7 +102,7 @@ public class BuyerAdder {
 									+ player.getName() + " 对 "
 									+ raiser.getName() + " 讲 "
 									+ sentence);
-							raiser.say("抱歉， 一次性购买"
+							raiser.say("抱歉, 一次性购买"
 									+ chosenItemName
 									+ " 的最大数量是 1000.");
 						} else if (res.getAmount() > 0) {
@@ -111,7 +111,7 @@ public class BuyerAdder {
 							if (itemName.equals("sheep")) {
 								// player have no sheep...
 								if (!player.hasSheep()) {
-									raiser.say("你没有羊， " + player.getTitle() + "! 你拉的是什么?");
+									raiser.say("你没有羊, " + player.getTitle() + "! 你拉的是什么?");
 									return;
 								}
 							} else {
@@ -135,7 +135,7 @@ public class BuyerAdder {
     									+ " 不值钱worth nothing.");
 							}
 						} else {
-							raiser.say("抱歉，你要卖出多少 " + chosenItemName + " ?");
+							raiser.say("抱歉, 你要卖出多少 " + chosenItemName + " ?");
 						}
 					}
 				});

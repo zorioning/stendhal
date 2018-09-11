@@ -32,7 +32,7 @@ public class AttackWeakest extends HandToHand {
 	private boolean isPreferredTarget(RPEntity target) {
 		/*
 		 * A bit of a hack - ignore scroll creatures so that players can not
-		 * confuse creatures with summon scrolls.
+		 * confuse creatures with 召唤卷轴s.
 		 */
 		return !(target instanceof AttackableCreature);
 	}

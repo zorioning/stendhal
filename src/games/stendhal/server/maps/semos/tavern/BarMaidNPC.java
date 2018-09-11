@@ -67,9 +67,9 @@ public class BarMaidNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting();
-				addReply("瓶子", "如果你想买一个烧瓶，请对我说: #buy #瓶子. 或者你还可以问我买其它的东西 #offer.");
-				addQuest("Oh 很高兴为你服务，但很不幸，我帮不了你.");
-				addJob("这是这个正规洒吧的坐台小姐姐，你想要一些 #buy 国产或进口的啤酒, 还有好吃的小吃.");
+				addReply("瓶子", "如果你想买一个烧瓶, 请对我说: #buy #瓶子. 或者你还可以问我买其它的东西 #offer.");
+				addQuest("Oh 很高兴为你服务, 但很不幸, 我帮不了你.");
+				addJob("这是这个正规洒吧的坐台小姐姐, 你想要一些 #buy 国产或进口的啤酒, 还有好吃的小吃.");
 				addHelp("本酒吧为客人提供住宿和餐饮服务！需要点什么酒水饮料请对我说 #offer .");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("food&drinks")));
 
@@ -77,27 +77,27 @@ public class BarMaidNPC implements ZoneConfigurator {
 			}
 		};
 
-		//coupon for free beer
+		//coupon for free 啤酒
 
         margaret.add(ConversationStates.ATTENDING,
-                (Arrays.asList("coupon", "coupons", "beer coupon", "free beer")),
+                (Arrays.asList("coupon", "coupons", "啤酒券", "free 啤酒")),
                 new PlayerHasItemWithHimCondition("coupon"),
                 ConversationStates.ATTENDING,
-                "Oh 你发现一个赠券，这是我以前发放的，喝得开心!",
+                "Oh 你发现一个赠券, 这是我以前发放的, 喝得开心!",
                 new MultipleActions(new DropItemAction("coupon"),
-                					new EquipItemAction("beer"))
+                					new EquipItemAction("啤酒"))
                 );
 
         margaret.add(ConversationStates.ATTENDING,
-        		(Arrays.asList("coupon", "coupons", "beer coupon", "free beer")),
+        		(Arrays.asList("coupon", "coupons", "啤酒券", "free 啤酒")),
                 new NotCondition(new PlayerHasItemWithHimCondition("coupon")),
                 ConversationStates.ATTENDING,
-                "别撒谎！你并没有任何赠券。时下酒吧生意不好，请别骗我！!",
+                "别撒谎！你并没有任何赠券. 时下酒吧生意不好, 请别骗我！!",
                 null
                 );
 
 		margaret.setEntityClass("tavernbarmaidnpc");
-		margaret.setDescription("Margaret 看着很火辣，你虽不能帮她，但总可以在那买点东西.");
+		margaret.setDescription("Margaret 看着很火辣, 你虽不能帮她, 但总可以在那买点东西.");
 		margaret.setPosition(11, 4);
 		margaret.initHP(100);
 		margaret.setSounds(Arrays.asList("hiccup-1", "hiccup-2", "hiccup-3"));

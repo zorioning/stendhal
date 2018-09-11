@@ -102,7 +102,7 @@ public class StoreMessageAction implements ActionListener, TurnListener {
 		}
 
 		if (!characterExists) {
-			sourceplayer.sendPrivateText(NotificationType.ERROR, "信使带话: 抱歉, " + target + " 没找到，所以无法保存你的消息.");
+			sourceplayer.sendPrivateText(NotificationType.ERROR, "信使带话: 抱歉, " + target + " 没找到, 所以无法保存你的消息.");
 			return;
 		}
 

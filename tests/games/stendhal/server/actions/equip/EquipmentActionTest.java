@@ -34,7 +34,7 @@ import utilities.ZoneAndPlayerTestImpl;
  */
 public class EquipmentActionTest  extends ZoneAndPlayerTestImpl {
 
-	private static final String ZONE_NAME = "0_semos_city";
+	private static final String ZONE_NAME = "0_塞门_镇";
 
 	public EquipmentActionTest() {
 	    super(ZONE_NAME);

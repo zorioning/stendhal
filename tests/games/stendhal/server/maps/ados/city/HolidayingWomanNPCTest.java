@@ -24,7 +24,7 @@ public class HolidayingWomanNPCTest extends ZonePlayerAndNPCTestImpl {
 	private static final String ZONE_NAME = "testzone";
 	private static final String TASTED_EVERYTHING_REPLY = "I think I've tasted everything";
 	private static final String BREAD_DESCRIPTION = "Erna bakes loaves of bread, which need 2 sacks of flour each.";
-	private static final String SANDWICH_DESCRIPTION = "Leander makes sandwiches, which need 1 loaf of bread, 1 piece of ham, and 2 pieces of cheese each.";
+	private static final String SANDWICH_DESCRIPTION = "Leander makes 三明治es, which need 1 loaf of bread, 1 piece of ham, and 2 pieces of cheese each.";
 
 	private Player player;
 	private SpeakerNPC aliceNpc;

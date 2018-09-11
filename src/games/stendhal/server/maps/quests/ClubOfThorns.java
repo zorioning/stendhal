@@ -38,7 +38,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Club of Thorns
+ * QUEST: 类牙棍
  *
  * PARTICIPANTS:
  * <ul>
@@ -128,7 +128,7 @@ public class ClubOfThorns extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get("Orc Saman");
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
-		reward.add(new EquipItemAction("club of thorns", 1, true));
+		reward.add(new EquipItemAction("类牙棍", 1, true));
 		reward.add(new IncreaseKarmaAction(10.0));
 		reward.add(new IncreaseXPAction(1000));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
@@ -154,7 +154,7 @@ public class ClubOfThorns extends AbstractQuest {
 		step_2();
 		step_3();
 		fillQuestInfo(
-				"Club of Thorns",
+				"类牙棍",
 				"The Orc Saman will give a dangerous weapon to a mercenary who will help him.",
 				false);
 	}
@@ -177,7 +177,7 @@ public class ClubOfThorns extends AbstractQuest {
 			res.add("I killed the mountain orc chief in Kotoch Prison.");
 		}
 		if (questState.equals("done")) {
-			res.add("I told the Orc Saman about the kill and he gave me a powerful Club of Thorns to use.");
+			res.add("I told the Orc Saman about the kill and he gave me a powerful 类牙棍 to use.");
 		}
 		return res;
 	}

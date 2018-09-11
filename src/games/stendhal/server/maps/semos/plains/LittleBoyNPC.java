@@ -68,7 +68,7 @@ public class LittleBoyNPC implements ZoneConfigurator {
 				// NOTE: These texts are only available after finishing the quest.
 				addGreeting();
 				addJob("我玩了一整天.");
-				addHelp("小心东边，那里有很多狼!");
+				addHelp("小心东边, 那里有很多狼!");
 				addOffer("Hey, 不给你我的teddy熊！它是我的！哼! *hug*");
 				addGoodbye();
 			}

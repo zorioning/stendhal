@@ -51,7 +51,7 @@ public class NoStatsStackableItem extends StackableItem {
 		final String boundTo = getBoundTo();
 
 		if (boundTo != null) {
-			text = text + " 这是特别的奖品，因为 " + boundTo
+			text = text + " 这是特别的奖品, 因为 " + boundTo
 					+ ", 它不能被用于别处.";
 		}
 		return (text);

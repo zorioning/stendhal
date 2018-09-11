@@ -30,7 +30,6 @@ import games.stendhal.server.entity.npc.action.IncreaseKarmaAction;
 import games.stendhal.server.entity.npc.action.IncreaseXPAction;
 import games.stendhal.server.entity.npc.action.MultipleActions;
 import games.stendhal.server.entity.npc.action.SayTimeRemainingAction;
-import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.SetQuestAndModifyKarmaAction;
 import games.stendhal.server.entity.npc.action.SetQuestToTimeStampAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
@@ -113,7 +112,7 @@ public class Campfire extends AbstractQuest {
 			res.add("我在找生火用的 10 根木头");
 		}
 		if (isCompleted(player)) {
-			res.add("我把木头给了 莎丽 ，她给我一些作物作为答谢，我还得到了 50 xp");
+			res.add("我把木头给了 莎丽 , 她给我一些作物作为答谢, 我还得到了 50 xp");
 		}
 		if(isRepeatable(player)){
 			res.add("莎丽 的火又需要木材了");
@@ -132,7 +131,7 @@ public class Campfire extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("木头", REQUIRED_WOOD)),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"又见面了！你弄到木头了！我看看。是不是我问你之前你就已经弄到这10根木头了？",
+			"又见面了！你弄到木头了！我看看. 是不是我问你之前你就已经弄到这10根木头了？",
 			null);
 
 		//player returns without promised wood
@@ -175,7 +174,7 @@ public class Campfire extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"不能让篝火熄灭，我还需要再弄点木头, 但这会儿没人看管，我不能自已去弄！你可以去森林中取一些木头吗？10根就够了",
+				"不能让篝火熄灭, 我还需要再弄点木头, 但这会儿没人看管, 我不能自已去弄！你可以去森林中取一些木头吗？10根就够了",
 				null);
 
 		// player returns - enough time has passed
@@ -183,7 +182,7 @@ public class Campfire extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, "start"), new QuestStartedCondition(QUEST_SLOT), new TimePassedCondition(QUEST_SLOT,REQUIRED_MINUTES)),
 				ConversationStates.QUEST_OFFERED,
-				"篝火又要加木头了！麻烦你去森林跑一趟吧？我需要10根。",
+				"篝火又要加木头了！麻烦你去森林跑一趟吧？我需要10根. ",
 				null);
 
 		// player returns - enough time has passed
@@ -192,15 +191,15 @@ public class Campfire extends AbstractQuest {
 				new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, "start"), new QuestStartedCondition(QUEST_SLOT), new NotCondition(new TimePassedCondition(QUEST_SLOT,REQUIRED_MINUTES))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT,REQUIRED_MINUTES,"谢谢，但我觉得你带的木头已经够用了"));
+				new SayTimeRemainingAction(QUEST_SLOT,REQUIRED_MINUTES,"谢谢, 但我觉得你带的木头已经够用了"));
 
 		// player is willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Okay. 你去北方的森林找些木头，找够了10根就回来吧!",
-			new SetQuestAction(QUEST_SLOT, "start"));
+			"Okay. 你去北方的森林找些木头, 找够了10根就回来吧!",
+			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 2));
 
 		// player is not willing to help
 		npc.add(ConversationStates.QUEST_OFFERED,
@@ -227,7 +226,7 @@ public class Campfire extends AbstractQuest {
 				if (Rand.throwCoin() == 1) {
 					rewardClass = "肉";
 				} else {
-					rewardClass = "ham";
+					rewardClass = "火腿";
 				}
 				npc.say("谢谢你！这些 " + rewardClass + " 送给你了!");
 				final StackableItem reward = (StackableItem) SingletonRepository.getEntityManager().getItem(rewardClass);
@@ -257,15 +256,15 @@ public class Campfire extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Oh... 好的，希望你快点给我找点，这火快不行了！",
+			"Oh... 好的, 希望你快点给我找点, 这火快不行了！",
 			null);
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Campfire",
-				"莎丽 想做一顿野餐，但木材不太够",
+				"营火",
+				"莎丽 想做一顿野餐, 但木材不太够",
 				true);
 		prepareRequestingStep();
 		prepareBringingStep();
@@ -273,7 +272,7 @@ public class Campfire extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "Campfire";
+		return "营火";
 	}
 
 	@Override

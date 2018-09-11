@@ -44,7 +44,7 @@ class UpdateGUIDialogs {
 		// ask user
 		int resCode;
 		if (update) {
-			resCode = LoneOptionDialog.showConfirmDialog("找到新版本，要下载 "
+			resCode = LoneOptionDialog.showConfirmDialog("找到新版本, 要下载 "
 					+ sizeString + " KB.\r\n" + "的补丁"
 					+ ClientGameConfiguration.get("GAME_NAME") + " 确认安装?",
 					DIALOG_TITLE, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);

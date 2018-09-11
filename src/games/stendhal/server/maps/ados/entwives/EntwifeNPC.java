@@ -19,7 +19,7 @@ import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * entwife located in 0_ados_mountain_n2_w2.
+ * entwife located in 0_阿多斯_山脉_n2_w2.
  */
 public class EntwifeNPC implements ZoneConfigurator {
 

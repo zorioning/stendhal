@@ -134,15 +134,15 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// club
 		items.put("木棍",1);
-		items.put("enhanced mace",1);
-		items.put("flail",1);
-		items.put("golden hammer",1);
-		items.put("golden mace",1);
+		items.put("加强狼牙棒",1);
+		items.put("连枷",1);
+		items.put("黄金战锤",1);
+		items.put("黄金狼牙棒",1);
 		items.put("hammer",1);
 		items.put("mace",1);
 		items.put("morning star",1);
 		items.put("staff",1);
-		items.put("war hammer",1);
+		items.put("战锤",1);
 
 		// container
 		items.put("eared bottle",3);
@@ -151,7 +151,7 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// drinks
 		items.put("antidote",5);
-		items.put("beer",10);
+		items.put("啤酒",10);
 		items.put("greater antidote",5);
 		items.put("greater potion",5);
 		items.put("milk",5);
@@ -168,10 +168,10 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("玫瑰",10);
 
 		// food
-		items.put("apple",5);
-		items.put("apple pie",2);
+		items.put("苹果",5);
+		items.put("苹果派",2);
 		items.put("artichoke",10);
-		items.put("bread",5);
+		items.put("面包",5);
 		items.put("broccoli",5);
 		items.put("button mushroom",10);
 		items.put("carrot",10);
@@ -181,7 +181,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("cherry",10);
 		items.put("cherry pie",2);
 		items.put("鸡腿",10);
-		items.put("chocolate bar",5);
+		items.put("巧克力棒",5);
 		items.put("clownfish",5);
 		items.put("collard",5);
 		items.put("courgette",5);
@@ -191,12 +191,12 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("garlic",5);
 		items.put("grapes",5);
 		items.put("grilled steak",1);
-		items.put("ham",10);
+		items.put("火腿",10);
 		items.put("honey",2);
 		items.put("leek",5);
 		items.put("肉",10);
 		items.put("onion",5);
-		items.put("pear",5);
+		items.put("梨子",5);
 		items.put("perch",5);
 		items.put("pie",5);
 		items.put("pomegranate",5);
@@ -204,7 +204,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("red lionfish",5);
 		items.put("roach",5);
 		items.put("salad",10);
-		items.put("sandwich",5);
+		items.put("三明治",5);
 		items.put("spinach",5);
 		items.put("surgeonfish",5);
 		items.put("toadstool",15);
@@ -258,23 +258,23 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("木头",10);
 
 		// shield
-        items.put("blue shield",1);
-		items.put("buckler",1);
-		items.put("crown shield",1);
-		items.put("enhanced lion shield",1);
-		items.put("lion shield",1);
-		items.put("plate shield",1);
-		items.put("skull shield",1);
-		items.put("studded shield",1);
+        items.put("蓝盾",1);
+		items.put("小圆盾",1);
+		items.put("王冠之盾",1);
+		items.put("加强狮盾",1);
+		items.put("狮盾",1);
+		items.put("钢盾",1);
+		items.put("骷髅盾",1);
+		items.put("镶嵌盾",1);
 		items.put("独角盾",1);
 		items.put("木盾",1);
 
 		// sword
-		items.put("biting sword",1);
-		items.put("broadsword",1);
-		items.put("claymore",1);
+		items.put("突刺剑",1);
+		items.put("阔剑",1);
+		items.put("双刃剑",1);
 		items.put("dagger",1);
-		items.put("elvish sword",1);
+		items.put("精灵之剑",1);
 		items.put("katana",1);
 		items.put("knife",1);
 		items.put("scimitar",1);
@@ -290,8 +290,8 @@ public class DailyItemQuest extends AbstractQuest {
 		// common place to get the start quest actions as we can both starts it and abort and start again
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
-		actions.add(new StartRecordingRandomItemCollectionAction(QUEST_SLOT,0,items,"Ados 城需根支援，快去找 [item] 物资"
-				+ " ,当你找到了，回来说 #complete 完成任务"));
+		actions.add(new StartRecordingRandomItemCollectionAction(QUEST_SLOT,0,items,"Ados 城需根支援, 快去找 [item] 物资"
+				+ " ,当你找到了, 回来说 #complete 完成任务"));
 		actions.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));
 
 		return new MultipleActions(actions);
@@ -304,23 +304,23 @@ public class DailyItemQuest extends AbstractQuest {
 								 new NotCondition(new TimePassedCondition(QUEST_SLOT,1,expireDelay))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayRequiredItemAction(QUEST_SLOT,0,"你已经有了一个取得 [item] 物资的任务。"
-						+ ". 如果你能回来，回复 #complete 可完成!"));
+				new SayRequiredItemAction(QUEST_SLOT,0,"你已经有了一个取得 [item] 物资的任务. "
+						+ ". 如果你能回来, 回复 #complete 可完成!"));
 
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 								 new TimePassedCondition(QUEST_SLOT,1,expireDelay)),
 				ConversationStates.ATTENDING,
 				null,
-				new SayRequiredItemAction(QUEST_SLOT,0,"你已有了一个取得 [item] 物资的任务。"
-						+ ". 如果你把物资带回来，对我说 #complete 完成它。可能你根本没有那种物资剩下，你也可以拿回 #another 物资，或者带回我向你要的物资。"));
+				new SayRequiredItemAction(QUEST_SLOT,0,"你已有了一个取得 [item] 物资的任务. "
+						+ ". 如果你把物资带回来, 对我说 #complete 完成它. 可能你根本没有那种物资剩下, 你也可以拿回 #another 物资, 或者带回我向你要的物资. "));
 
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new QuestCompletedCondition(QUEST_SLOT),
 								 new NotCondition(new TimePassedCondition(QUEST_SLOT,1,delay))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT,1, delay, "我一天只能交给你一次任务，请核对任务记录。"));
+				new SayTimeRemainingAction(QUEST_SLOT,1, delay, "我一天只能交给你一次任务, 请核对任务记录. "));
 
 
 
@@ -341,14 +341,14 @@ public class DailyItemQuest extends AbstractQuest {
 				ConversationPhrases.FINISH_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"恐怕我还没有交给你任何 #quest 任务。",
+				"恐怕我还没有交给你任何 #quest 任务. ",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
 				ConversationPhrases.FINISH_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"你已完成我交给你的全部任务。",
+				"你已完成我交给你的全部任务. ",
 				null);
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
@@ -364,7 +364,7 @@ public class DailyItemQuest extends AbstractQuest {
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 								 new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT,0)),
 				ConversationStates.ATTENDING,
-				"干的好! 我代表Ados城的人民对你表示感谢。",
+				"干的好! 我代表Ados城的人民对你表示感谢. ",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.ATTENDING,
@@ -374,7 +374,7 @@ public class DailyItemQuest extends AbstractQuest {
 				ConversationStates.ATTENDING,
 				null,
 				new SayRequiredItemAction(QUEST_SLOT,0,"你仍没有拿到 [item]"
-						+ " 。当你拿到后，回去只用说 #complete 就能完成任务了。"));
+						+ " . 当你拿到后, 回去只用说 #complete 就能完成任务了. "));
 
 	}
 
@@ -395,7 +395,7 @@ public class DailyItemQuest extends AbstractQuest {
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 						 		 new NotCondition(new TimePassedCondition(QUEST_SLOT,1,expireDelay))),
 				ConversationStates.ATTENDING,
-				"你已开始做这个任务很长了，我不让你这么快放弃。",
+				"你已开始做这个任务很长了, 我不让你这么快放弃. ",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -418,34 +418,34 @@ public class DailyItemQuest extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我在Ados城镇大厅中会见了城主 Chalmers。");
+		res.add("我在Ados城镇大厅中会见了城主 Chalmers. ");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("我不想帮助Ados城。");
+			res.add("我不想帮助Ados城. ");
 			return res;
 		}
 
-		res.add("我想帮助Ados城。");
+		res.add("我想帮助Ados城. ");
 		if (player.hasQuest(QUEST_SLOT) && !player.isQuestCompleted(QUEST_SLOT)) {
 			String questItem = player.getRequiredItemName(QUEST_SLOT,0);
 			int amount = player.getRequiredItemQuantity(QUEST_SLOT,0);
 			if (!player.isEquipped(questItem, amount)) {
-				res.add("要帮助Ados城，需要取得一个"
-						+  questItem  + " ，但我身上还没有。");
+				res.add("要帮助Ados城, 需要取得一个"
+						+  questItem  + " , 但我身上还没有. ");
 			} else {
 				res.add("我找到了"
-						+ questItem + " ，这下可以回去帮助Ados城了。");
+						+ questItem + " , 这下可以回去帮助Ados城了. ");
 			}
 		}
 		int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {
-			res.add("目前，我已向Ados城提供了 "
-					+ repetitions+ "次帮助。");
+			res.add("目前, 我已向Ados城提供了 "
+					+ repetitions+ "次帮助. ");
 		}
 		if (isRepeatable(player)) {
-			res.add("我取来城主让我去寻找的最后一件东西，Ados城又有了新需要。");
+			res.add("我取来城主让我去寻找的最后一件东西, Ados城又有了新需要. ");
 		} else if (isCompleted(player)){
-			res.add("我取来城主让我去寻找的最后一件东西，并要求我在24小时内送到。");
+			res.add("我取来城主让我去寻找的最后一件东西, 并要求我在24小时内送到. ");
 		}
 		return res;
 	}
@@ -454,7 +454,7 @@ public class DailyItemQuest extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"每日物品任务",
-				"城主Chalmers需要为Ados城供应各类物资。",
+				"城主Chalmers需要为Ados城供应各类物资. ",
 				true);
 
 		buildItemsMap();

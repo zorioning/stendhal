@@ -29,7 +29,7 @@ import marauroa.common.game.RPObject;
 /**
  * A PassiveEntityRespawnPoint basically is a 1x1 area where a plant, a fruit or
  * another non-moving thing grows. This growing thing is a pickable Item (e.g. a
- * mushroom, an apple); by extending this class, it can also grow something
+ * mushroom, an 苹果); by extending this class, it can also grow something
  * special (e.g. SheepFood).
  *
  * PassiveEntityRespawnPoint are currently invisible (fully transparent) on the

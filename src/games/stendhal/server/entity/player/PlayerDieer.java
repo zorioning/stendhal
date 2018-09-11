@@ -193,12 +193,12 @@ public class PlayerDieer {
 			}
 			player.sendPrivateText(NotificationType.NEGATIVE, "你的尸体里还有 " + strings + ", 如果你想收回 " + numberOfDrops + ". 你的经验被减为死前的 " + skillPercentage + "% ");
 		} else {
-			player.sendPrivateText(NotificationType.POSITIVE, "你还算是幸运的，当你死时没掉物品。你的经验被减到死前的 " + skillPercentage + "% ");
+			player.sendPrivateText(NotificationType.POSITIVE, "你还算是幸运的, 当你死时没掉物品. 你的经验被减到死前的 " + skillPercentage + "% ");
 		}
 	}
 
 	private void handlePlayerKiller(final Player playerKiller) {
-		// Do not punish on suicide. (That happen at least with club of thorns).
+		// Do not punish on suicide. (That happen at least with 类牙棍).
 		if (playerKiller != player) {
 			playerKiller.setLastPlayerKill(System.currentTimeMillis());
 		}

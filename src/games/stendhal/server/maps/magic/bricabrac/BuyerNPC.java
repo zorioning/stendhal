@@ -125,19 +125,11 @@ public class BuyerNPC implements ZoneConfigurator {
 						"clock",
 						"那座大座钟是我更现代的收藏品之一。 如果你认识樵夫 Woody, 你可能会认出这件手工作品。");
 				
-				/*addReply(
-						"tools",
-<<<<<<< HEAD
-						"Those tools on the back wall are a true antique! They were used by the great grandfather of Xoderos of 塞门镇, isn't that incredible!");
-				*/
+
 	  			addReply(
 						"tools",
-						"那些后墙上的工具真是古老！他们被塞门镇的 Xoderos 的曾祖父使用过，真不可思议！");
-			        /*addReply(
-
-						"armor",
-						"Ah, that mighty piece was made in Deniran. I'm afraid I know little more about it.");
-				*/
+						"那些后墙上的工具真是古老！他们被塞门镇的艾克德罗斯的曾祖父使用过，真不可思议！");
+			    
 				addReply(
 						"armor",
 						"啊哈，那个伟大的作品是 Deniran 制作的。关于它我恐怕只知道一点点");

@@ -145,9 +145,9 @@
     <entity x="16" y="10">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-Getting Married? Why not buy an engagement ring? 
+Getting Married? Why not buy an 订婚戒指? 
 It's not an official engagement without the nun knowing, but your girl will like to wear a diamond ring!
-You'll definitely need a wedding ring. Come here to get yours cast once you are engaged!
+You'll definitely need a 婚戒. Come here to get yours cast once you are engaged!
       </attribute>
       <attribute name="class">blackboard</attribute>
     </entity>
@@ -158,7 +158,7 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
         class-name="games.stendhal.server.entity.mapstuff.sound.BellSoundSource" />
     </entity>
 
-    <!-- Fado hotel beer garden -->
+    <!-- Fado hotel 啤酒 garden -->
 
     <!-- big tables -->
     <entity x="21" y="72">
@@ -205,112 +205,112 @@ You'll definitely need a wedding ring. Come here to get yours cast once you are 
     <entity x="2" y="62">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="7" y="62">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="11" y="69">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="2" y="74">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="11" y="75">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="3" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="11" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="21" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="24" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="27" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="30" y="68">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="21" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="24" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="27" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="30" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="35" y="81">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
@@ -627,7 +627,7 @@ where panning for gold is possible. this spot is south of Or'ril castle.
       <attribute name="text">
 ADVICE FOR THE GROOM:
 
-Remember to take a wedding ring, to give the bride, to the church.
+Remember to take a 婚戒, to give the bride, to the church.
 Remind your bride to take a ring for you as well.
 
 When you get to the church, you ask the Priest if you can marry your bride.
@@ -759,7 +759,7 @@ For example say:  11  if you want the room called Water of Love.
 
   <zone name="int_fado_lovers_room_0" file="interiors/fado/lovers_room_0.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
     <!-- Clock -->
@@ -791,21 +791,21 @@ For example say:  11  if you want the room called Water of Love.
 
   <zone name="int_fado_lovers_room_1" file="interiors/fado/lovers_room_1.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_2" file="interiors/fado/lovers_room_2.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_3" file="interiors/fado/lovers_room_3.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
     <!-- Piano -->
@@ -823,14 +823,14 @@ For example say:  11  if you want the room called Water of Love.
 
   <zone name="int_fado_lovers_room_4" file="interiors/fado/lovers_room_4.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_5" file="interiors/fado/lovers_room_5.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
     <!-- Clock -->
@@ -851,21 +851,21 @@ For example say:  11  if you want the room called Water of Love.
 
   <zone name="int_fado_lovers_room_6" file="interiors/fado/lovers_room_6.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_7" file="interiors/fado/lovers_room_7.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_8" file="interiors/fado/lovers_room_8.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
     <!-- Clock -->
@@ -886,28 +886,28 @@ For example say:  11  if you want the room called Water of Love.
 
   <zone name="int_fado_lovers_room_9" file="interiors/fado/lovers_room_9.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_10" file="interiors/fado/lovers_room_10.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_11" file="interiors/fado/lovers_room_11.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_12" file="interiors/fado/lovers_room_12.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
     <!-- Clock -->
@@ -928,48 +928,48 @@ For example say:  11  if you want the room called Water of Love.
 
   <zone name="int_fado_lovers_room_13" file="interiors/fado/lovers_room_13.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
 
   <zone name="int_fado_lovers_room_14" file="interiors/fado/lovers_room_14.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
     <!-- Tables -->
     <entity x="7" y="3">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="18" y="14">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="7" y="17">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
     </entity>
 
     <entity x="18" y="17">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
     </entity>
 
   </zone>
 
   <zone name="int_fado_lovers_room_15" file="interiors/fado/lovers_room_15.tmx"
     accessible="false">
-    <!-- to disallow making or using marked scrolls -->
+    <!-- to disallow making or using 标记卷轴s -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
 
   </zone>
@@ -1922,14 +1922,14 @@ Today I used an orb in the witch Jynath's house and arrived in a city of witches
     <entity x="10" y="21">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 
     <entity x="25" y="21">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">这是一张餐桌，可以把吃的喝的都放在上面</attribute>
+      <attribute name="description">这是一张餐桌, 可以把吃的喝的都放在上面</attribute>
       <attribute name="width">2</attribute>
     </entity>
 

@@ -66,10 +66,10 @@ public class RatChefNPC implements ZoneConfigurator {
 				addReply("crepes",
                     "Ah le dessert for a prince... A taste of which, I really believe, would reform a 食人族 into a civilized gentleman.");
                 /**
-                 * chocolate bar is the item, and the parser knows nothing about bar/bars.
+                 * 巧克力棒 is the item, and the parser knows nothing about bar/bars.
                  * Handle all possibilities explicitly.
                  */
-				addReply(Arrays.asList("chocolate", "chocolate bar", "chocolate bars"),
+				addReply(Arrays.asList("chocolate", "巧克力棒", "巧克力棒s"),
                     "A rarity. It seems only very nasty and murderous folks carry some in their pockets.");
 				addReply("flour",
                     "I stea.. ahem.. get all my supplies of flour from the nearby 塞门镇.");
@@ -100,7 +100,7 @@ public class RatChefNPC implements ZoneConfigurator {
 				requiredResources.put("butter", 1);
 				requiredResources.put("milk", 1);
 				requiredResources.put("sugar", 1);
-				requiredResources.put("chocolate bar", 1);
+				requiredResources.put("巧克力棒", 1);
 				requiredResources.put("fierywater", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("gaston_bake_crepesuzette", "bake", "crepes suzette",

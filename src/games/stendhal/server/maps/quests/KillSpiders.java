@@ -25,7 +25,6 @@ import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.EventRaiser;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 import games.stendhal.server.entity.npc.action.MultipleActions;
-import games.stendhal.server.entity.npc.action.SetQuestAction;
 import games.stendhal.server.entity.npc.action.SetQuestAndModifyKarmaAction;
 import games.stendhal.server.entity.npc.condition.AndCondition;
 import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
@@ -53,7 +52,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> magical egg
  * <li> 5000 XP
- * <li> 10 karma in total
+ * <li> 11 karma in total
  * </ul>
  *
  * REPETITIONS:
@@ -104,7 +103,7 @@ public class KillSpiders extends AbstractQuest {
 				});
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
-		actions.add(new SetQuestAction(QUEST_SLOT, "started"));
+		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "started", 1.0));
 		//actions.add(new StartRecordingKillsAction(QUEST_SLOT,1,"蜘蛛", "毒蜘蛛", "巨型蜘蛛"));
 
 
@@ -143,7 +142,7 @@ public class KillSpiders extends AbstractQuest {
 								&& player.hasKilled("巨型蜘蛛")) {
 							raiser.say("Oh thank you my friend. Here you have something special, I got it from a Magican. Who he was I do not know. What the egg's good for, I do not know. I only know, it could be useful for you.");
 							final Item mythegg = SingletonRepository.getEntityManager()
-									.getItem("mythical egg");
+									.getItem("传说之卵");
 							mythegg.setBoundTo(player.getName());
 							player.equipOrPutOnGround(mythegg);
 							player.addKarma(5.0);
@@ -170,7 +169,7 @@ public class KillSpiders extends AbstractQuest {
 							) {
 							raiser.say("Oh thank you my friend. Here you have something special, I got it from a Magican. Who he was I do not know. What the egg's good for, I do not know. I only know, it could be useful for you.");
 							final Item mythegg = SingletonRepository.getEntityManager()
-									.getItem("mythical egg");
+									.getItem("传说之卵");
 							mythegg.setBoundTo(player.getName());
 							player.equipOrPutOnGround(mythegg);
 							player.addKarma(5.0);
@@ -217,7 +216,7 @@ public class KillSpiders extends AbstractQuest {
 			return history;
 		}
 		if ("killed".equals(questState)) {
-			history.add("I have killed all spiders in the magic school basement and got a mythical egg.");
+			history.add("I have killed all spiders in the magic school basement and got a 传说之卵.");
 			return history;
 		}
 

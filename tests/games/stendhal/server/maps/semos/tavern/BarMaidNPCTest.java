@@ -34,7 +34,7 @@ import utilities.ZonePlayerAndNPCTestImpl;
  */
 public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 
-	private static final String ZONE_NAME = "int_semos_tavern_0";
+	private static final String ZONE_NAME = "int_塞门_酒馆_0";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -79,7 +79,7 @@ public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("I am the bar maid for this fair tavern. You can #buy both imported and local beers, and fine food.", getReply(npc));
 
 		assertTrue(en.step(player, "offer"));
-		assertEquals("I sell beer, wine, flask, cheese, apple, carrot, meat, and ham.", getReply(npc));
+		assertEquals("I sell beer, wine, flask, cheese, 苹果, carrot, meat, and ham.", getReply(npc));
 
 		assertTrue(en.step(player, "quest"));
 		assertEquals("Oh nice that you ask me. Unfortunately I have nothing to do for you.", getReply(npc));
@@ -112,13 +112,13 @@ public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 		// equip with enough money
 		assertTrue(equipWithMoney(player, 2000));
 
-		assertFalse(player.isEquipped("ham"));
+		assertFalse(player.isEquipped("火腿"));
 		assertTrue(en.step(player, "buy 5 hams"));
 		assertEquals("5 pieces of ham will cost 400. Do you want to buy them?", getReply(npc));
 
 		assertTrue(en.step(player, "yes"));
 		assertEquals("Congratulations! Here are your pieces of ham!", getReply(npc));
-		assertTrue(player.isEquipped("ham", 5));
+		assertTrue(player.isEquipped("火腿", 5));
 
 		assertTrue(en.step(player, "buy ham"));
 		assertEquals("A piece of ham will cost 80. Do you want to buy it?", getReply(npc));

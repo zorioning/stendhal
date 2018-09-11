@@ -45,7 +45,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * STEPS:
  * <ul>
  * <li>Ida needs sewing machine fixed, with one of three items from a list</li>
- * <li>Once machine fixed and if you have done mithril shield quest, Ida offers you cloak</li>
+ * <li>Once machine fixed and if you have done 黑曜石盾 quest, Ida offers you cloak</li>
  * <li>Kampusch tells you to how to make the fabric</li>
  * <li>Imperial scientists take silk glands and make silk thread</li>
  * <li>Kampusch fuses mithril nuggets into the silk thread</li>
@@ -60,8 +60,8 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <li>Pdiddi sells the moss to get to twilight zone</li>
  * <li>A creature in the twilight zone drops the elixir to heal lda</li>
  * <li>After being ill Ida asks you to take a 蓝色条纹斗篷 to Josephine</li>
- * <li>After taking cloak to Josephine and telling Ida she asks for mithril clasp</li>
- * <li>Pedinghaus makes mithril clasp</li>
+ * <li>After taking cloak to Josephine and telling Ida she asks for 黑曜石胸针</li>
+ * <li>Pedinghaus makes 黑曜石胸针</li>
  * <li>The clasp completes the cloak</li>
  * </ul>
  * <p>
@@ -93,14 +93,14 @@ public class MithrilCloak extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"黑曜石斗篷",
-				"随着女裁缝Ida给我的的长长的任务列表一件件完成，一件银亮且防御很高的斗蓬就要完工了，",
+				"随着女裁缝Ida给我的的长长的任务列表一件件完成, 一件银亮且防御很高的斗蓬就要完工了, ",
 				false);
 
 		// login notifier to teleport away players logging into the twilight zone.
 		SingletonRepository.getLoginNotifier().addListener(new LoginListener() {
 			@Override
 			public void onLoggedIn(final Player player) {
-				TwilightMossScroll scroll = (TwilightMossScroll) SingletonRepository.getEntityManager().getItem("twilight moss");
+				TwilightMossScroll scroll = (TwilightMossScroll) SingletonRepository.getEntityManager().getItem("暮光苔藓");
 				scroll.teleportBack(player);
 			}
 
@@ -118,34 +118,34 @@ public class MithrilCloak extends AbstractQuest {
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("我在Ados的裁缝屋见到了Ida。");
+		res.add("我在Ados的裁缝屋见到了Ida. ");
 		if (questState.equals("rejected")) {
 			res.add("我没兴趣帮助Ida.");
 			return res;
 		}
-		res.add("Ida的缝纫机坏了，她让我帮忙找丢失的零件.");
+		res.add("Ida的缝纫机坏了, 她让我帮忙找丢失的零件.");
 		if (questState.startsWith("machine")) {
 			res.add("我需要给Ida找到 " + player.getRequiredItemName(QUEST_SLOT,1) + ".");
 			return res;
 		}
 		res.add("我带来了零件修复Ida的缝纫机.");
 		if (questState.equals("need_mithril_shield")) {
-			res.add("在寻找密银斗蓬的过程中，我必须先拿到密银斗蓬，才能更进一步。");
+			res.add("在寻找密银斗蓬的过程中, 我必须先拿到密银斗蓬, 才能更进一步. ");
 			return res;
 		}
 		if (questState.equals("fixed_machine")) {
 			return res;
 		}
-		res.add("我的斗蓬还需要密银丝线 mithril fabric, Kampusch 会帮我弄到，他知道我需要的东西。");
+		res.add("我的斗蓬还需要密银丝线 mithril fabric, Kampusch 会帮我弄到, 他知道我需要的东西. ");
 		if (questState.equals("need_fabric")) {
 			return res;
 		}
-		res.add("Vincento 价值是由我带给他的丝腺体抽丝带来。");
+		res.add("Vincento 价值是由我带给他的丝腺体抽丝带来. ");
 		if (questState.startsWith("makingthread;")) {
 			// optionally could add if time is still remaining or if it's ready to collect (timestamp in index 1 of questslot)
 			return res;
 		}
-		res.add("我从 Vincento 的学生 Boris Karlova 处拿了一卷丝线，交给Kampusch。");
+		res.add("我从 Vincento 的学生 Boris Karlova 处拿了一卷丝线, 交给Kampusch. ");
 		if (questState.equals("got_thread")) {
 			return res;
 		}
@@ -154,15 +154,15 @@ public class MithrilCloak extends AbstractQuest {
 			// optionally could add if time is still remaining or if it's ready to collect (timestamp in index 1 of questslot)
 			return res;
 		}
-		res.add("Whiggins 可以把 mithril 丝编织进 fabric, 我必须找他帮忙。");
+		res.add("Whiggins 可以把 mithril 丝编织进 fabric, 我必须找他帮忙. ");
 		if (questState.equals("got_mithril_thread")) {
 			return res;
 		}
-		res.add("在 Whiggins 帮我之前，我必须带着信去 Pedinghaus。Whiggins 好像遇到大麻烦了.");
+		res.add("在 Whiggins 帮我之前, 我必须带着信去 Pedinghaus. Whiggins 好像遇到大麻烦了.");
 		if (questState.equals("taking_letter")) {
 			return res;
 		}
-		res.add("我带着信给 Pedinghaus 看完，我最好还是告诉 Whiggins 事情办好了，这样我才能拿到我的织物 fabric.");
+		res.add("我带着信给 Pedinghaus 看完, 我最好还是告诉 Whiggins 事情办好了, 这样我才能拿到我的织物 fabric.");
 		if (questState.equals("took_letter")) {
 			return res;
 		}
@@ -171,7 +171,7 @@ public class MithrilCloak extends AbstractQuest {
 			// optionally could add if time is still remaining or if it's ready to collect (timestamp in index 1 of questslot)
 			return res;
 		}
-		res.add("我从 Whiggins 那里拿到了 mithril fabric，然后我要带着它去见Ida。");
+		res.add("我从 Whiggins 那里拿到了 mithril fabric, 然后我要带着它去见Ida. ");
 		if (questState.equals("got_fabric")) {
 			return res;
 		}
@@ -179,7 +179,7 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("need_scissors")) {
 			return res;
 		}
-		res.add("Hogart 需要我带给他一块铁块 iron bar, 一块密银块 amithril bar, 和一点魔法蛋壳 magical eggshells.");
+		res.add("Hogart 需要我带给他一块铁块 iron bar, 一块密银块 amithril bar, 和一点魔法蛋壳 附魔蛋壳.");
 		if (questState.startsWith("need_eggshells;")) {
 			// the quest slot knows how many eggshells were needed.
 			return res;
@@ -205,12 +205,12 @@ public class MithrilCloak extends AbstractQuest {
 			// don't bother with adding info about the looping (needle breaking and sewing again)
 			return res;
 		}
-		res.add("Ida 遇到点麻烦，她不小心用针弄破了手指，现在她精神失常，我必须到 twilight 地带拜访她。");
+		res.add("Ida 遇到点麻烦, 她不小心用针弄破了手指, 现在她精神失常, 我必须到 twilight 地带拜访她. ");
 		if (questState.equals("twilight_zone")) {
 			return res;
 		}
 		res.add("我给I gave Ida the twilight elixir to restore her health. But she got behind on her other jobs. Now I must go and find a 蓝色条纹斗篷 to take Josephine before Ida can work for me.");
-		res.add("我给了 Ida twilight 药剂恢复她的神智，但她不敢再去工作，在 ida 可以工作之前，我必须离开并找到蓝色丝带斗篷带给 Josephine .");
+		res.add("我给了 Ida twilight 药剂恢复她的神智, 但她不敢再去工作, 在 ida 可以工作之前, 我必须离开并找到蓝色丝带斗篷带给 Josephine .");
 		if (questState.equals("taking_striped_cloak")) {
 			return res;
 		}
@@ -218,20 +218,20 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("gave_striped_cloak")) {
 			return res;
 		}
-		res.add("我的斗篷几近完工，我现在要的是 Pedinghaus 生产的密银扣子.");
+		res.add("我的斗篷几近完工, 我现在要的是 Pedinghaus 生产的密银扣子.");
 		if (questState.equals("need_clasp")) {
 			return res;
 		}
-		res.add("Pedinghaus 正在锻造密银扣子 mithril clasp. 我等不及了!");
+		res.add("Pedinghaus 正在锻造密银扣子 黑曜石胸针. 我等不及了!");
 		if (questState.startsWith("forgingclasp;")) {
 			// optionally could add if time is still remaining or if it's ready to collect (timestamp in index 1 of questslot)
 			return res;
 		}
-		res.add("我得到斗篷上的密银扣子，我需要把它们带给Ida.");
+		res.add("我得到斗篷上的密银扣子, 我需要把它们带给Ida.");
 		if (questState.equals("got_clasp")) {
 			return res;
 		}
-		res.add("最终，我总算穿上了这华丽丽的密银斗篷!");
+		res.add("最终, 我总算穿上了这华丽丽的密银斗篷!");
 		if (questState.equals("done")) {
 			return res;
 		}

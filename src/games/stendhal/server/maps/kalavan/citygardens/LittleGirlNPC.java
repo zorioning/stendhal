@@ -20,10 +20,11 @@ import games.stendhal.server.core.config.ZoneConfigurator;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.pathfinder.FixedPath;
 import games.stendhal.server.core.pathfinder.Node;
+import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds a little girl called Annie Jones.
+ * Builds a little girl called 安妮琼斯.
  *
  * @author kymara
  */
@@ -45,7 +46,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 
 
 	private void createNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Annie Jones") {
+		final SpeakerNPC npc = new SpeakerNPC("安妮琼斯") {
 
 			@Override
 			protected void createPath() {
@@ -70,6 +71,7 @@ public class LittleGirlNPC implements ZoneConfigurator {
 		npc.setDescription("You see a little girl, playing in the playground.");
 		npc.setEntityClass("pinkgirlnpc");
 		npc.setPosition(44, 90);
+		npc.setCollisionAction(CollisionAction.STOP);
 		npc.initHP(100);
 		zone.add(npc);
 	}

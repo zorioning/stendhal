@@ -373,7 +373,7 @@ public class LoginDialog extends JDialog {
 
 		} catch (final NumberFormatException ex) {
 			JOptionPane.showMessageDialog(this,
-					"端口不可用，请重新输入",
+					"端口不可用, 请重新输入",
 					"Invalid port", JOptionPane.WARNING_MESSAGE);
 			return;
 		}
@@ -494,7 +494,7 @@ public class LoginDialog extends JDialog {
 				message = message + ", 用户信息为空";
 			}
 			Logger.getLogger(LoginDialog.class).error(message, ex);
-			handleError("连接服务器失败，请核对服务器名称", "Connection failed");
+			handleError("连接服务器失败, 请核对服务器名称", "Connection failed");
 			return;
 		}
 

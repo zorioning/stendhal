@@ -65,10 +65,10 @@ public class OrcKillGiantDwarfNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hello 我的好朋友，欢迎来到本寒舍. #job");
-				addJob("我在等着强悍的勇士们，消灭我们地区残留的矮人 #dwarves.");
-				addReply("dwarves", "我们在这附近活动时，见了矮人必须逃路。虽然只有不多的矮人，你原意帮我们吗？ #task");
-				addReply("dwarves", "我们在这附近活动时，见了矮人必须逃路。虽然只有不多的矮人，你原意帮我们吗？ #task");
+				addGreeting("Hello 我的好朋友, 欢迎来到本寒舍. #job");
+				addJob("我在等着强悍的勇士们, 消灭我们地区残留的矮人 #dwarves.");
+				addReply("dwarves", "我们在这附近活动时, 见了矮人必须逃路. 虽然只有不多的矮人, 你原意帮我们吗？ #task");
+				addReply("dwarves", "我们在这附近活动时, 见了矮人必须逃路. 虽然只有不多的矮人, 你原意帮我们吗？ #task");
 				addGoodbye("祝你一路平安");
 			}
 		};

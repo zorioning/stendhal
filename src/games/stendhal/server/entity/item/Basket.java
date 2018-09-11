@@ -27,7 +27,7 @@ import games.stendhal.server.entity.player.Player;
 public class Basket extends Box {
 
 
-	private static final String[] ITEMS = {"egg", "easter egg", "small easter egg", "spotted egg", "mythical egg"};
+	private static final String[] ITEMS = {"egg", "复活蛋", "小复活蛋", "斑点蛋", "传说之卵"};
 
 	/**
 	 * Creates a new Basket.
@@ -59,7 +59,7 @@ public class Basket extends Box {
 		itemName = ITEMS[Rand.rand(ITEMS.length)];
 		final Item item = SingletonRepository.getEntityManager().getItem(
 				itemName);
-		if ("easter egg".equals(itemName)) {
+		if ("复活蛋".equals(itemName)) {
 			item.setBoundTo(player.getName());
 		}
 		player.sendPrivateText("祝贺你得到了 "

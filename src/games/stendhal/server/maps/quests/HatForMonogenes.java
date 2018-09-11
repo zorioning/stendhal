@@ -71,19 +71,19 @@ public class HatForMonogenes extends AbstractQuest {
 	public List<String> getHistory(final Player player) {
 		final List<String> res = new ArrayList<String>();
 		if (player.hasQuest(QUEST_SLOT)) {
-			res.add("我在塞门镇的喷泉处遇到了 梦金斯。");
+			res.add("我在塞门镇的喷泉处遇到了 梦金斯. ");
 		}
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我需要找一顶帽子，里面的毛皮可以给我的头保暖。");
+		res.add("我需要找一顶帽子, 里面的毛皮可以给我的头保暖. ");
 		if (player.isQuestInState(QUEST_SLOT, "start")
 				&& player.isEquipped("leather helmet")
 				|| player.isQuestCompleted(QUEST_SLOT)) {
 			res.add("我发现了一顶帽子.");
 		}
 		if (player.isQuestCompleted(QUEST_SLOT)) {
-			res.add("我把帽子给了 梦金斯 ，让他的光头给暖和一些.");
+			res.add("我把帽子给了 梦金斯 , 让他的光头给暖和一些.");
 		}
 		return res;
 	}
@@ -95,14 +95,14 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"你能带给我一顶 #帽子 吗？我的头冻得不行了，啊！啊！塞门镇在这个时节真是冷...",
+			"你能带给我一顶 #帽子 吗？我的头冻得不行了, 啊！啊！塞门镇在这个时节真是冷...",
 			null);
 
 		monogenes.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"谢谢你的帮助，好兄弟，这顶帽子好的可以让我至少撑过5个冬天，对于我来说有点浪费了.",
+			"谢谢你的帮助, 好兄弟, 这顶帽子好的可以让我至少撑过5个冬天, 对于我来说有点浪费了.",
 			null);
 
 		monogenes.add(
@@ -110,7 +110,7 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"谢谢我的好兄弟，我在这等你回来！",
+			"谢谢我的好兄弟, 我在这等你回来！",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		monogenes.add(
@@ -118,7 +118,7 @@ public class HatForMonogenes extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"你确定还有重要的事，连这点小事都不愿帮我？我猜我快不行了.... *sniff*",
+			"你确定还有重要的事, 连这点小事都不愿帮我？我猜我快不行了.... *sniff*",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		monogenes.add(
@@ -126,7 +126,7 @@ public class HatForMonogenes extends AbstractQuest {
 			"帽子",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"你不知道帽子是什么？任何一个可以盖住我头的东西！像皮毛，你可以帮我吗?",
+			"你不知道帽子是什么？任何一个可以盖住我头的东西！像皮毛, 你可以帮我吗?",
 			null);
 	}
 
@@ -147,7 +147,7 @@ public class HatForMonogenes extends AbstractQuest {
 					new QuestInStateCondition(QUEST_SLOT, "start"),
 					new NotCondition(new PlayerHasItemWithHimCondition("leather helmet"))),
 			ConversationStates.ATTENDING,
-			"嗨，我的朋友，还记得之前答应我的皮帽吗？这里真是太冷了..",
+			"嗨, 我的朋友, 还记得之前答应我的皮帽吗？这里真是太冷了..",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();

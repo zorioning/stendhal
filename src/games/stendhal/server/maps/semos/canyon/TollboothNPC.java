@@ -67,20 +67,20 @@ public class TollboothNPC implements ZoneConfigurator  {
 
         // Player has enough money and pays toll
         npc.add(ConversationStates.ATTENDING,
-                Arrays.asList("pay"),
+                Arrays.asList("pay","支付","付钱"),
                 new PlayerHasItemWithHimCondition("money", 25),
                 ConversationStates.IDLE,
-                "返回 Smons 不用付费，只用走过大门就行.",
+                "返回 塞门地区 不用付费, 只用走过大门就行.",
                 new MultipleActions(new DropItemAction("money", 25),
                         new TeleportAction("0_塞门_峡谷", 36, 29, Direction.UP))
                 );
 
         // Player does not have enough money for toll
         npc.add(ConversationStates.ATTENDING,
-                Arrays.asList("pay"),
+                Arrays.asList("pay","支付","付钱"),
                 new NotCondition(new PlayerHasItemWithHimCondition("money", 25)),
                 ConversationStates.ATTENDING,
-                "我很抱歉，你的钱不够.",
+                "我很抱歉, 你的钱不够.",
                 null
                 );
 

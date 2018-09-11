@@ -6,7 +6,7 @@
   
   <creature name="侏儒">
     <type class="gnome" subclass="gnome" tileid="gnome.png:0"/>
-    <description>这是一个住在山上的侏儒。</description>
+    <description>这是一个住在山上的侏儒. </description>
     <attributes>
       <atk value="51"/>
       <def value="7"/>
@@ -23,7 +23,7 @@
       <item value="minor potion" quantity="[1,1]" probability="5.0"/>
       <item value="button mushroom" quantity="[3,6]" probability="10.0"/>
       <item value="皮甲" quantity="[1,1]" probability="10.0"/>
-      <item value="buckler" quantity="[1,1]" probability="5.0"/>
+      <item value="小圆盾" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -40,7 +40,7 @@
   
   <creature name="法师侏儒">
     <type class="gnome" subclass="woman_gnome" tileid="gnome.png:1"/>
-    <description>这是一个法师侏儒，她在清理那座肮脏的山。</description>
+    <description>这是一个法师侏儒, 她在清理那座肮脏的山. </description>
     <attributes>
       <atk value="52"/>
       <def value="7"/>
@@ -63,7 +63,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="大个子，快跑！"/>
+        <noise state="idle follow fight" value="大个子, 快跑！"/>
       </says>
       <profile name="offensive"/>
       <profile name="coward"/>
@@ -78,7 +78,7 @@
   
   <creature name="步兵侏儒">
     <type class="gnome" subclass="infantryman" tileid="gnome_patrol.png:0"/>
-    <description>你看，一个步兵侏儒会保护他的小镇不受人类攻击!</description>
+    <description>你看, 一个步兵侏儒会保护他的小镇不受人类攻击!</description>
     <attributes>
       <atk value="58"/>
       <def value="15"/>
@@ -101,7 +101,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="准备好，朝着目标前进！"/>
+        <noise state="idle follow fight" value="准备好, 朝着目标前进！"/>
       </says>
       <profile name="brave"/>
       <profile name="offensive"/>
@@ -134,7 +134,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="准备好，朝着目标前进！"/>
+        <noise state="idle follow fight" value="准备好, 朝着目标前进！"/>
         <sound value="pig-3" />
       </says>
       <profile name="brave"/>

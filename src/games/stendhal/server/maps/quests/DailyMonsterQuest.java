@@ -134,15 +134,15 @@ public class DailyMonsterQuest extends AbstractQuest {
 
 			// shouldn't happen
 			if (pickedCreature == null) {
-				raiser.say("感谢你的关心，但现在还没有需要你帮助的地方。");
+				raiser.say("感谢你的关心, 但现在还没有需要你帮助的地方. ");
 				return;
 			}
 
 			String creatureName = pickedCreature.getName();
 
 
-			raiser.say("塞门镇需要你的帮助，去杀掉 " + creatureName
-					+ " ，完成后回来说 #完成 就行了。");
+			raiser.say("塞门镇需要你的帮助, 去杀掉 " + creatureName
+					+ " , 完成后回来说 #完成 就行了. ");
 
 			questLast = "" + new Date().getTime();
 			player.setQuest(
@@ -260,14 +260,14 @@ public class DailyMonsterQuest extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我已在 塞门镇 城镇大厅见到了城主 Sakhs。");
+		res.add("我已在 塞门镇 城镇大厅见到了城主 Sakhs. ");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("我不想帮助塞门镇城。");
+			res.add("我不想帮助塞门镇城. ");
 			return res;
 		}
 
-		res.add("我想帮助 塞门镇城。");
+		res.add("我想帮助 塞门镇城. ");
 		if (player.hasQuest(QUEST_SLOT) && !player.isQuestCompleted(QUEST_SLOT)) {
 			final boolean questDone = new KilledForQuestCondition(QUEST_SLOT, 0)
 					.fire(player, null, null);
@@ -277,7 +277,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 						+ " 的任务. 但我还没杀掉它.");
 			} else {
 				res.add("我帮助塞门镇杀死了 " + creatureToKill
-						+ "。");
+						+ ". ");
 			}
 		}
 		if (player.isQuestCompleted(QUEST_SLOT)) {
@@ -287,16 +287,16 @@ public class DailyMonsterQuest extends AbstractQuest {
 					- System.currentTimeMillis();
 
 			if (timeRemaining > 0L) {
-				res.add("我杀掉了城主想杀掉的怪物，并且要求我在24小时内回复情况。");
+				res.add("我杀掉了城主想杀掉的怪物, 并且要求我在24小时内回复情况. ");
 			} else {
-				res.add("我杀掉了城主想杀掉的怪物，现在Semon城又向我寻求帮助了。");
+				res.add("我杀掉了城主想杀掉的怪物, 现在Semon城又向我寻求帮助了. ");
 			}
 		}
 		// add to history how often player helped 塞门镇 so far
 		final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 		if (repetitions > 0) {
-			res.add("目前，我已拯救了塞门镇 "
-					+ repetitions + " 次。");
+			res.add("目前, 我已拯救了塞门镇 "
+					+ repetitions + " 次. ");
 		}
 		return res;
 	}
@@ -354,7 +354,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 								npc.say("你的任务是杀掉 " +
 										player.getQuest(QUEST_SLOT, 0) +
 										". 完成后回复 #完成 !" +
-										" 如果你没找到它，可能它没给Semon镇惹麻烦，如果你喜欢，还可以杀掉其它的 #another 怪物。");
+										" 如果你没找到它, 可能它没给Semon镇惹麻烦, 如果你喜欢, 还可以杀掉其它的 #another 怪物. ");
 						}
 					}
 				});
@@ -368,7 +368,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 								new TimePassedCondition(QUEST_SLOT, 1, delay))),
 				ConversationStates.ATTENDING,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT,1, delay, "一日内我只能让你完成一件任务。请快完成它吧。"));
+				new SayTimeRemainingAction(QUEST_SLOT,1, delay, "一日内我只能让你完成一件任务. 请快完成它吧. "));
 
 		// player asked for quest first time or repeat it after passed proper time
 		npc.add(ConversationStates.ATTENDING,
@@ -407,7 +407,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 				ConversationPhrases.FINISH_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"你已完成我给你的最近的任务。",
+				"你已完成我给你的最近的任务. ",
 				null);
 
 		// player didn't killed creature
@@ -425,7 +425,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 					public void fire(Player player, Sentence sentence, EventRaiser npc) {
 							final String questKill = player.getQuest(QUEST_SLOT, 0).split(",")[0];
 							npc.say("你还没有杀掉 " + questKill
-									+ " 。完成后回复 #完成 就可以了.");
+									+ " . 完成后回复 #完成 就可以了.");
 					}
 				});
 
@@ -458,7 +458,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 						new QuestNotStartedCondition(QUEST_SLOT),
 						new QuestCompletedCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"可能我还没有给你发出 #任务 #quest 。",
+				"可能我还没有给你发出 #任务 #quest . ",
 				null);
 
 		// player have no expired quest
@@ -467,7 +467,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 				new NotCondition(
 						new TimePassedCondition(QUEST_SLOT, 1, expireDelay)),
 				ConversationStates.ATTENDING,
-				"我上次给你的任务还没有完成，我不会这么快让你放弃。",
+				"我上次给你的任务还没有完成, 我不会这么快让你放弃. ",
 				null);
 
 		// player have expired quest
@@ -483,7 +483,7 @@ public class DailyMonsterQuest extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Daily Monster Quest",
-				"Sakhs城需要勇士保卫塞门镇城的安全。",
+				"Sakhs城需要勇士保卫塞门镇城的安全. ",
 				true);
 		step_1();
 		step_2();

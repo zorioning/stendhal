@@ -65,7 +65,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** Quest slot for this quest, the Ultimate Collector */
 	private static final String QUEST_SLOT = "ultimate_collector";
 
-	/** Club of Thorns in Kotoch: The Orc Saman is the NPC */
+	/** 类牙棍 in Kotoch: The Orc Saman is the NPC */
 	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // kotoch
 
 	/** Vampire Sword quest: Hogart is the NPC */
@@ -80,7 +80,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** 黑曜石斗篷 quest: Ida is the NPC */
 	private static final String MITHRIL_CLOAK_QUEST_SLOT = "mithril_cloak"; // mithril
 
-	/** Mithril Shield quest: Baldemar is the NPC */
+	/** 黑曜石盾 quest: Baldemar is the NPC */
 	private static final String MITHRIL_SHIELD_QUEST_SLOT = "mithrilshield_quest"; // mithril
 
 	/** Cloak Collector 2nd quest: Josephine is the NPC (Completing 2nd requires 1st) */
@@ -118,12 +118,12 @@ public class UltimateCollector extends AbstractQuest {
 			res.add("现在我不想给他任何武器");
 			return res;
 		}
-		res.add("我接受了他的终极武器收集请求，答应他找到一个特号而且罕见的武器.");
+		res.add("我接受了他的终极武器收集请求, 答应他找到一个特号而且罕见的武器.");
 		if (!isCompleted(player)) {
 			res.add("Balduin 让我带给他 " + player.getRequiredItemName(QUEST_SLOT,0) + ".");
 		}
 		if (isCompleted(player)) {
-			res.add("Yay! 我乃终极武器收藏家，我卖各种黑武器给 Balduin!");
+			res.add("Yay! 我乃终极武器收藏家, 我卖各种黑武器给 Balduin!");
 		}
 		return res;
 	}
@@ -139,7 +139,7 @@ public class UltimateCollector extends AbstractQuest {
 					new QuestCompletedCondition(WEAPONSCOLLECTOR2_QUEST_SLOT),
 					new QuestNotStartedCondition(QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"老朋友你好，我给你准备了我的另一个藏品.",
+			"老朋友你好, 我给你准备了我的另一个藏品.",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -149,7 +149,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(CLUB_THORNS_QUEST_SLOT),
 							 new QuestNotCompletedCondition(IMMORTAL_SWORD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"在 Kotoch 我还有一个请求你没有完成。要深入探究，你才能真正变成武器收藏家。!",
+			"在 Kotoch 我还有一个请求你没有完成. 要深入探究, 你才能真正变成武器收藏家. !",
 			null);
 
 
@@ -160,7 +160,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(MITHRIL_CLOAK_QUEST_SLOT),
 							 new QuestNotCompletedCondition(MITHRIL_SHIELD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"你错过了一个特别的密银装备，如果你帮助了正确的人就能赢得。没有这个武器你就不能成为收藏家。.",
+			"你错过了一个特别的密银装备, 如果你帮助了正确的人就能赢得. 没有这个武器你就不能成为收藏家. .",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -170,7 +170,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(OBSIDIAN_KNIFE_QUEST_SLOT),
 							 new QuestNotCompletedCondition(VAMPIRE_SWORD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"在侏儒铁匠铺里的深深的地下室里独居着一个能给你打造特殊武器的人，没有这把武器你就不能成为武器收藏家。",
+			"在侏儒铁匠铺里的深深的地下室里独居着一个能给你打造特殊武器的人, 没有这把武器你就不能成为武器收藏家. ",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -180,7 +180,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(CLOAKSCOLLECTOR2_QUEST_SLOT),
 							 new QuestNotCompletedCondition(CLOAKS_FOR_BARIO_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"如果你收集了很多斗篷，那这把特别的武器就是你的。不论是为了你的虚荣心，或者为了你的热情，都是你必须完成的任务。",
+			"如果你收集了很多斗篷, 那这把特别的武器就是你的. 不论是为了你的虚荣心, 或者为了你的热情, 都是你必须完成的任务. ",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -189,7 +189,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new QuestNotStartedCondition(QUEST_SLOT),
 					 new QuestNotCompletedCondition(ELVISH_ARMOR_QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"另一个收藏家也需要你的帮助，你需去 Fado 森林中到到他，因为不找到他要的东西，就不能成为开武器收藏家。",
+			"另一个收藏家也需要你的帮助, 你需去 Fado 森林中到到他, 因为不找到他要的东西, 就不能成为开武器收藏家. ",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -198,7 +198,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new QuestNotStartedCondition(QUEST_SLOT),
 					 new QuestNotCompletedCondition(KANMARARN_QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"你已收集了很多特殊装备，但你还从没有帮助过 Kanmararn 地下的这些人，你应该完成他们的要求.",
+			"你已收集了很多特殊装备, 但你还从没有帮助过 Kanmararn 地下的这些人, 你应该完成他们的要求.",
 			null);
 
 	}
@@ -209,7 +209,7 @@ public class UltimateCollector extends AbstractQuest {
 		final Map<String,Integer> items = new HashMap<String, Integer>();
 
 		// the numbers are based on depo's metric for rarity (bigger number = more rare) which may be out of date https://sourceforge.net/tracker/?func=detail&aid=2066597&group_id=1111&atid=973767
-		// nothing rarer than a demon fire sword, and not included items which are quest rewards elsewhere
+		// nothing rarer than a 赤魔剑, and not included items which are quest rewards elsewhere
 		items.put("nihonto",1); // 5169
 		items.put("魔法双刃斧",1); // 1010
 		items.put("imperator sword",1); // 2393
@@ -217,7 +217,7 @@ public class UltimateCollector extends AbstractQuest {
 		items.put("vulcano hammer",1); // 4474
 		items.put("xeno sword",1); // 1347
 		items.put("黑镰刀",1); // 3918 (pretty sure this is rarer now but a lot of old ones about to buy)
-		items.put("chaos dagger",1); // 1691
+		items.put("混沌匕首",1); // 1691
 		items.put("black sword",1); // 6285
 
 		// If all quests are completed, ask for an item
@@ -238,8 +238,8 @@ public class UltimateCollector extends AbstractQuest {
 						new QuestCompletedCondition(IMMORTAL_SWORD_QUEST_SLOT)),
 				ConversationStates.ATTENDING,
 				null,
-				new StartRecordingRandomItemCollectionAction(QUEST_SLOT, items, "好吧, 你已经向Faiumoni 的居民证明了自已，这样你就成成为武器收藏家，" +
-						"但我还有最后一个任务给你，请带给我  [item]."));
+				new StartRecordingRandomItemCollectionAction(QUEST_SLOT, items, "好吧, 你已经向Faiumoni 的居民证明了自已, 这样你就成成为武器收藏家, " +
+						"但我还有最后一个任务给你, 请带给我  [item]."));
 	}
 
 	private void collectItem() {
@@ -267,7 +267,7 @@ public class UltimateCollector extends AbstractQuest {
 				new AndCondition(new QuestActiveCondition(QUEST_SLOT),
 								new PlayerHasRecordedItemWithHimCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"Wow, 这东西能在我眼前简直难以至信，哇，或许我们可以一起处理 #deal .",
+				"Wow, 这东西能在我眼前简直难以至信, 哇, 或许我们可以一起处理 #deal .",
 				new MultipleActions(new DropRecordedItemAction(QUEST_SLOT),
 									new SetQuestAction(QUEST_SLOT, "done"),
 									new IncreaseXPAction(100000),
@@ -278,7 +278,7 @@ public class UltimateCollector extends AbstractQuest {
 				null,
 				ConversationStates.ATTENDING,
 				null,
-				new SayRequiredItemAction(QUEST_SLOT, "很好，当你有了这东西后再回来 [the item] ."));
+				new SayRequiredItemAction(QUEST_SLOT, "很好, 当你有了这东西后再回来 [the item] ."));
 	}
 
 	private void offerSteps() {
@@ -290,7 +290,7 @@ public class UltimateCollector extends AbstractQuest {
 				ConversationPhrases.OFFER_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"我收购一些黑色装备，但我只会付给你合适的价钱.",
+				"我收购一些黑色装备, 但我只会付给你合适的价钱.",
 				null);
 
 
@@ -299,7 +299,7 @@ public class UltimateCollector extends AbstractQuest {
 				ConversationPhrases.OFFER_MESSAGES,
 				new QuestNotCompletedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
-				"我可以收购你的黑色装备，要在你完成我给你的所有收集任务后。", null);
+				"我可以收购你的黑色装备, 要在你完成我给你的所有收集任务后. ", null);
 	}
 
 
@@ -307,7 +307,7 @@ public class UltimateCollector extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Ultimate Weapon Collector",
-				"Balduin, 是一个集在 Ados 山上的隐士，他要收集一个最终的装备才能成为收藏家。",
+				"Balduin, 是一个集在 Ados 山上的隐士, 他要收集一个最终的装备才能成为收藏家. ",
 				true);
 
 		checkCollectingQuests();

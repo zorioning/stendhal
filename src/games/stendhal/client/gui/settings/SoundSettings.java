@@ -191,7 +191,7 @@ class SoundSettings {
 				wm.setProperty(DEVICE_PROPERTY, (selected != null) ? selected.toString() : DEFAULT_DEVICE);
 				wm.save();
 				// Warn the user about the delayed effect
-				String msg = "改变声音设置，将在下次启动游戏时生效。";
+				String msg = "改变声音设置, 将在下次启动游戏时生效. ";
 				ClientSingletonRepository.getUserInterface().addEventLine(new EventLine("", msg, NotificationType.CLIENT));
 			}
 		});

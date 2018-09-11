@@ -96,7 +96,7 @@ public class EmotionCrystals extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, 0, "start") || player.isQuestInState(QUEST_SLOT, 0,  "rejected")) {
 			res.add("我向 Julius 聊天, 这个士兵守卫着 Ados 的大门.");
 			if (player.isQuestInState(QUEST_SLOT, 0, "rejected")) {
-				res.add("我心情不好，也管不了，因此拒绝了他的请求.");
+				res.add("我心情不好, 也管不了, 因此拒绝了他的请求.");
 			}
 			else {
 				res.add("我答应走遍 Faiumoni 收集5种水晶给他.");
@@ -120,7 +120,7 @@ public class EmotionCrystals extends AbstractQuest {
 		}
 
 		if (hasAllCrystals) {
-			res.add("我已取得全部的情感水晶，接下来要把它们带给 Ados城的 Julius .");
+			res.add("我已取得全部的情感水晶, 接下来要把它们带给 Ados城的 Julius .");
 		}
 
 		if (player.isQuestInState(QUEST_SLOT, 0, "done")) {
@@ -139,7 +139,7 @@ public class EmotionCrystals extends AbstractQuest {
 			new AndCondition(new QuestNotInStateCondition(QUEST_SLOT, 0, "start"),
 					new QuestNotCompletedCondition(QUEST_SLOT)),
 			ConversationStates.QUEST_OFFERED,
-			"我不能常常见到我的妻子，因为我守卫这个关口很忙。我想为妻子做一事情，你能帮我吗？",
+			"我不能常常见到我的妻子, 因为我守卫这个关口很忙. 我想为妻子做一事情, 你能帮我吗？",
 			null);
 
 		// Player accepts quest
@@ -148,7 +148,7 @@ public class EmotionCrystals extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"谢谢你，我想收集5种心情水果 #emotion #crystals ,作为送给妻子的礼物，请找这5种水晶，并带回给我.",
+			"谢谢你, 我想收集5种心情水果 #emotion #crystals ,作为送给妻子的礼物, 请找这5种水晶, 并带回给我.",
 			new MultipleActions(
 					new SetQuestAction(QUEST_SLOT, 0, "start"),
 					new IncreaseKarmaAction(5)));
@@ -171,7 +171,7 @@ public class EmotionCrystals extends AbstractQuest {
 			ConversationPhrases.GOODBYE_MESSAGES,
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"这不是 \"yes\" 或 \"no\" 的问题. 我说，你能做点我喜欢的事吗？",
+			"这不是 \"yes\" 或 \"no\" 的问题. 我说, 你能做点我喜欢的事吗？",
 			null);
 
 		// Player asks about crystals
@@ -180,7 +180,7 @@ public class EmotionCrystals extends AbstractQuest {
 			Arrays.asList("crystal", "crystals", "emotion", "emotions", "emotion crystal", "emotion crystals", "emotions crystal", "emotions crystals"),
 			new QuestActiveCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"你不知道这是什么心情？当然，你知道快乐和悲伤。我听说水晶分散在 Faiumoni 的各处，这种特殊的水果能释放各种心情。总共有5种，藏在 地牢、山上和森林中。我还听说有一些在房子附近可以找到。",
+			"你不知道这是什么心情？当然, 你知道快乐和悲伤. 我听说水晶分散在 Faiumoni 的各处, 这种特殊的水果能释放各种心情. 总共有5种, 藏在 地牢、山上和森林中. 我还听说有一些在房子附近可以找到. ",
 			null);
 
 		// Player asks for quest after completed
@@ -216,20 +216,20 @@ public class EmotionCrystals extends AbstractQuest {
 		final List<List<String>> answers = new ArrayList<List<String>>();
 
 		// Red Crystal (crystal of anger)
-		riddles.add("我像火一样燃烧，我的生命不是享受，那些试探我的人都能感到我的愤怒，那我是什么？");
+		riddles.add("我像火一样燃烧, 我的生命不是享受, 那些试探我的人都能感到我的愤怒, 那我是什么？");
 		answers.add(Arrays.asList("anger", "angry", "mad", "offended", "hostility", "hostile", "hate", "hatred", "animosity"));
 		// Purple Crystal (crystal of fear)
-		riddles.add("我不敢露面害怕担责，他们劝我，但我还是不去。发抖才是我的最爱的动作。那我是什么? ");
+		riddles.add("我不敢露面害怕担责, 他们劝我, 但我还是不去. 发抖才是我的最爱的动作. 那我是什么? ");
 		answers.add(Arrays.asList("fear", "fearful", "fearfullness", "fright", "frightened", "afraid", "scared"));
 		// Yellow Crystal (crystal of joy)
-		riddles.add("我不能停下，我的心中只有对没有错，如果你释放我的生命世界将撒满阳光。那我是什么？");
+		riddles.add("我不能停下, 我的心中只有对没有错, 如果你释放我的生命世界将撒满阳光. 那我是什么？");
 		answers.add(Arrays.asList("joy", "joyful", "joyfulness", "happy", "happiness", "happyness", "cheer", "cheery",
 						"cheerful", "cheerfulness"));
 		// Pink Crystal (crystal of love)
-		riddles.add("我对所有的事都在意，我最纯净，如果你为我分享，我肯定会报答你，那我是什么？");
+		riddles.add("我对所有的事都在意, 我最纯净, 如果你为我分享, 我肯定会报答你, 那我是什么？");
 		answers.add(Arrays.asList("love", "amor", "amour", "amity", "compassion"));
 		// Blue Crystal (crystal of peace)
-		riddles.add("我不让一些事烦扰我。我从不亢奋。沉思才是我的优点。那我是什么?");
+		riddles.add("我不让一些事烦扰我. 我从不亢奋. 沉思才是我的优点. 那我是什么?");
 		answers.add(Arrays.asList("peace", "peaceful", "peacefullness", "serenity", "serene", "calmness", "calm"));
 
 		// Add conversation states
@@ -294,7 +294,7 @@ public class EmotionCrystals extends AbstractQuest {
 					crystalAnswers,
 					new QuestInStateCondition(QUEST_SLOT, OFFSET_SUCCESS_MARKER + n, "riddle"),
 					ConversationStates.IDLE,
-					"回答正确，这个水晶就是奖励.",
+					"回答正确, 这个水晶就是奖励.",
 					new MultipleActions(rewardAction));
 
 
@@ -303,7 +303,7 @@ public class EmotionCrystals extends AbstractQuest {
 					"",
 					new QuestInStateCondition(QUEST_SLOT, OFFSET_SUCCESS_MARKER + n, "riddle"),
 					ConversationStates.IDLE,
-					"对不起，回答错误.",
+					"对不起, 回答错误.",
 					new MultipleActions(wrongGuessAction));
 
 			// Player returns before time is up, to get another chance
@@ -315,7 +315,7 @@ public class EmotionCrystals extends AbstractQuest {
 					),
 					ConversationStates.IDLE,
 					null,
-					new SayTimeRemainingAction(QUEST_SLOT, OFFSET_TIMESTAMPS + n, WAIT_TIME_WRONG, "你回答的难了，重来一次吧"));
+					new SayTimeRemainingAction(QUEST_SLOT, OFFSET_TIMESTAMPS + n, WAIT_TIME_WRONG, "你回答的难了, 重来一次吧"));
 
 			// Player returns before time is up, to get another crystal
 			crystalNPC.add(ConversationStates.IDLE,
@@ -346,14 +346,14 @@ public class EmotionCrystals extends AbstractQuest {
 					ConversationPhrases.QUEST_MESSAGES,
 					new QuestNotStartedCondition(QUEST_SLOT),
 					ConversationStates.ATTENDING,
-					"抱歉，我不能给你什么。也许还有人需要这个亮晶晶的水晶 #crystal ...",
+					"抱歉, 我不能给你什么. 也许还有人需要这个亮晶晶的水晶 #crystal ...",
 					null);
 
 			crystalNPC.add(ConversationStates.ATTENDING,
 					Arrays.asList("crystal", "sparkling crystal"),
 					new QuestNotStartedCondition(QUEST_SLOT),
 					ConversationStates.ATTENDING,
-					"Ados 城里有个士兵，他为妻子做了一个充满漂亮水晶的宝箱...",
+					"Ados 城里有个士兵, 他为妻子做了一个充满漂亮水晶的宝箱...",
 					null);
 
 		}
@@ -407,7 +407,7 @@ public class EmotionCrystals extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.IDLE,
-				"非常感谢！我想信这些水晶能让我妻子感到很开心，请收到这些石腿, 这是你的奖励",
+				"非常感谢！我想信这些水晶能让我妻子感到很开心, 请收到这些石腿, 这是你的奖励",
 				new MultipleActions(rewardAction));
 
 		// Player says "no" (has not brought crystals)
@@ -415,7 +415,7 @@ public class EmotionCrystals extends AbstractQuest {
 				ConversationPhrases.NO_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"在此期间请保留意寻找，我能帮你什么忙吗?",
+				"在此期间请保留意寻找, 我能帮你什么忙吗?",
 				null);
 
 	}
@@ -424,7 +424,7 @@ public class EmotionCrystals extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Emotion Crystals",
-				"Julius 需要得到一些水晶送给他妻子。水晶在 Faiumoni 城的各处.",
+				"Julius 需要得到一些水晶送给他妻子. 水晶在 Faiumoni 城的各处.",
 				false);
 		prepareRequestingStep();
 		prepareRiddlesStep();

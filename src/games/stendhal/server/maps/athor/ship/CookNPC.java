@@ -57,13 +57,13 @@ public class CookNPC implements ZoneConfigurator  {
 			public void createDialog() {
 				addGreeting("Ahoy! Welcome to the galley!");
 				addJob("I'm running the galley on this ship. I #offer fine foods for the passengers and alcohol for the crew.");
-				addHelp("The crew mates drink beer and grog all day. But if you want some more exclusive drinks, go to the cocktail bar at Athor beach.");
+				addHelp("The crew mates drink 啤酒 and grog all day. But if you want some more exclusive drinks, go to the cocktail bar at Athor beach.");
 
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
-				offerings.put("beer", 10);
+				offerings.put("啤酒", 10);
 				offerings.put("wine", 15);
 				// more expensive than in normal taverns
-				offerings.put("ham", 100);
+				offerings.put("火腿", 100);
 				offerings.put("pie", 150);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 

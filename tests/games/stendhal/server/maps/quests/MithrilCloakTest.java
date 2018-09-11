@@ -64,7 +64,7 @@ public class MithrilCloakTest {
 		BabyDragonTestHelper.generateRPClasses();
 
 		final StendhalRPZone zone = new StendhalRPZone("admin_test");
-		MockStendlRPWorld.get().addRPZone(new StendhalRPZone("int_ados_sewing_room"));
+		MockStendlRPWorld.get().addRPZone(new StendhalRPZone("int_阿多斯_缝纫_店"));
 		new games.stendhal.server.maps.ados.sewingroom.SeamstressNPC().configureZone(zone, null);
 		new games.stendhal.server.maps.ados.twilightzone.SeamstressNPC().configureZone(zone, null);
 		new BlacksmithNPC().configureZone(zone, null);
@@ -599,7 +599,7 @@ public class MithrilCloakTest {
 		en.step(player, "task");
 		assertEquals("Aw, Josephine is so sweet. I'm glad she liked her blue striped cloak. Now, YOUR cloak is nearly ready, it just needs a clasp to fasten it! My friend #Pedinghaus will make it for you, if you go and ask him.", getReply(npc));
 		en.step(player, "pedinghaus");
-		assertEquals("I mean the wizard who works with Joshua in the Ados smithy.", getReply(npc));
+		assertEquals("I mean the wizard who works with 约书亚 in the Ados smithy.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye, thanks for stepping in.", getReply(npc));
 

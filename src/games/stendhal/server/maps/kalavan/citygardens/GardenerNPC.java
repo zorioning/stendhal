@@ -107,7 +107,7 @@ public class GardenerNPC implements ZoneConfigurator {
 							final long timeRemaining = (Long.parseLong(tokens[2]) + delay)
 								- System.currentTimeMillis();
 							if (timeRemaining > 0) {
-								npc.say("我还在吃你上次带来的食物，这些足够吃到 "
+								npc.say("我还在吃你上次带来的食物, 这些足够吃到 "
                                         + TimeUtil.approxTimeUntil((int) (timeRemaining / 1000))
                                         + "的时间!");
                                 return false;
@@ -148,7 +148,7 @@ public class GardenerNPC implements ZoneConfigurator {
 							final long timeNow = new Date().getTime();
 							player.setQuest(QUEST_SLOT, amount + ";" + getProductName() + ";"
 											+ timeNow);
-							npc.say("谢谢，在 "
+							npc.say("谢谢, 在 "
 									+ getApproximateRemainingTime(player) + " 后回来, 我才能为你做好 "
 									+ amount + getProductName() + " .");
 							return true;
@@ -164,7 +164,7 @@ public class GardenerNPC implements ZoneConfigurator {
 						final long orderTime = Long.parseLong(order[2]);
 						final long timeNow = new Date().getTime();
 						if (timeNow - orderTime < getProductionTime(numberOfProductItems) * 1000) {
-							npc.say("欢迎回来！Oops, 我还没做好你的卷轴，等 "
+							npc.say("欢迎回来！Oops, 我还没做好你的卷轴, 等 "
 									+ getApproximateRemainingTime(player) + " 后再回来拿.");
 						} else {
                         final StackableItem products = (StackableItem) SingletonRepository.getEntityManager().getItem(
@@ -177,7 +177,7 @@ public class GardenerNPC implements ZoneConfigurator {
                         }
 
                         player.equipOrPutOnGround(products);
-                        npc.say("欢迎回来！我已把我的食物放好，够吃上一段时间。作为交换，我把 "
+                        npc.say("欢迎回来！我已把我的食物放好, 够吃上一段时间. 作为交换, 我把 "
 								+ numberOfProductItems +
                                                         getProductName() + " 给你.");
                         // store the number of lunches given and the time so we know how long she eats for
@@ -191,27 +191,27 @@ public class GardenerNPC implements ZoneConfigurator {
 				}
 				addReply(ConversationPhrases.YES_MESSAGES, "很烫...");
 				addReply(ConversationPhrases.NO_MESSAGES, "比下雨好多!");
-				addJob("我是个园丁。希望你喜欢这些花坛.");
-				addHelp("如果你带一些晚饭 #lunch 给我，我会拿魔法卷轴给你换 #swap .");
-				addOffer("我的西红杮和大蒜长的很好，集够了我就卖掉它.");
+				addJob("我是个园丁. 希望你喜欢这些花坛.");
+				addHelp("如果你带一些晚饭 #lunch 给我, 我会拿魔法卷轴给你换 #swap .");
+				addOffer("我的西红杮和大蒜长的很好, 集够了我就卖掉它.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
                 offerings.put("tomato", 30);
                 offerings.put("garlic", 50);
                 new SellerAdder().addSeller(this, new SellerBehaviour(offerings), false);
-				addReply("lunch", "茶 Tea 和 三明治 sandwich，请用!");
-				addReply("sandwich", "Mmm.. 我喜欢汉堡和干酪一起吃.");
-				addReply(Arrays.asList("kalavan city scroll", "scroll"), "这是一个魔法卷轴，它能把你传送回 Kalavan. 不要问我它怎么工作的!");
+				addReply("lunch", "茶 Tea 和 三明治 三明治, 请用!");
+				addReply("三明治", "Mmm.. 我喜欢汉堡和干酪一起吃.");
+				addReply(Arrays.asList("kalavan city scroll", "scroll"), "这是一个魔法卷轴, 它能把你传送回 Kalavan. 不要问我它怎么工作的!");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("tea", 1);
-				requiredResources.put("sandwich", 1);
+				requiredResources.put("三明治", 1);
 
 				final ProducerBehaviour behaviour = new SpecialProducerBehaviour("swap", "kalavan city scroll", requiredResources, 1 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
 				        "阳光不错 [daylightphase], 是吧?");
-				addQuest("我喜欢泡一杯茶 #tea, 园艺是个容易口渴的工作，如果你带把三明治 #sandwich 也带来，我会把这个卷轴 #swap 给你.");
-				addReply(Arrays.asList("tea", "cup of tea"), "老奶奶或许也给你倒上一杯茶，她就住在那边的大房子里.");
+				addQuest("我喜欢泡一杯茶 #tea, 园艺是个容易口渴的工作, 如果你带把三明治 #三明治 也带来, 我会把这个卷轴 #swap 给你.");
+				addReply(Arrays.asList("tea", "cup of tea"), "老奶奶或许也给你倒上一杯茶, 她就住在那边的大房子里.");
 				addGoodbye("再见. 欢迎来花园休息.");
 			}
 		};
@@ -219,7 +219,7 @@ public class GardenerNPC implements ZoneConfigurator {
 		npc.setEntityClass("gardenernpc");
 		npc.setPosition(100, 123);
 		npc.initHP(100);
-		npc.setDescription("你见到 Sue. 她的花散发出一种梦幻的香味，她的手指还真的是绿色的.");
+		npc.setDescription("你见到 Sue. 她的花散发出一种梦幻的香味, 她的手指还真的是绿色的.");
 		zone.add(npc);
 	}
 

@@ -54,15 +54,15 @@ public class DwarfBuyerGuyNPC implements ZoneConfigurator  {
 			public void createDialog() {
 
 				addGreeting("你想要什么? #job");
-				addJob("我收购零星杂物，总要有人做这件事。#help ");
+				addJob("我收购零星杂物, 总要有人做这件事. #help ");
 				addHelp("看着我! 我收些小饰品! 你有吗? #offer");
 				addOffer("如果没有小东西卖给我就别烦我! 你可以看看黑板上的收购价格.");
 				addQuest("除非你想拥有 #own 这块地方, 要不然你不能对我怎么样.");
 				addGoodbye("离我远点!");
 			    addReply("own", "什么？那为什么刚开你不付钱就不能上来!");
 			    // see games.stendhal.server.maps.quests.mithrilcloak.GettingTools for further behaviour
-			    addReply("buy", "我不卖东西，但你可以看看黑板上我想收购的东西。或者问我特殊买卖 #specials.");
-			    addReply("YOU", "对，我在和你说话！我还能对认谁说!");
+			    addReply("buy", "我不卖东西, 但你可以看看黑板上我想收购的东西. 或者问我特殊买卖 #specials.");
+			    addReply("YOU", "对, 我在和你说话！我还能对认谁说!");
 
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buyoddsandends")), false);
 			}};

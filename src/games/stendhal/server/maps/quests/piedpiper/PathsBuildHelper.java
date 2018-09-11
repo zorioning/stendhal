@@ -53,7 +53,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(115,43));
 		localroute.add(new Node(127,43));
 		fullPath.add(
-				new RPZonePath("0_ados_wall_n2",
+				new RPZonePath("0_阿多斯_城墙_n2",
 				new LinkedList<Node>(localroute)));
 
 		// market
@@ -66,7 +66,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(35,107));
 		localroute.add(new Node(35,127));
 		fullPath.add(
-				new RPZonePath("0_ados_city_n2",
+				new RPZonePath("0_阿多斯_城_n2",
 				new LinkedList<Node>(localroute)));
 
 		// city north part
@@ -109,7 +109,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(52,125));
 		localroute.add(new Node(52,127));
 		fullPath.add(
-				new RPZonePath("0_ados_city_n",
+				new RPZonePath("0_阿多斯_城_n",
 				new LinkedList<Node>(localroute)));
 
 		// city central
@@ -127,7 +127,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(42,97));
 		localroute.add(new Node(42,94));
 		fullPath.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 
 		// town hall
@@ -138,7 +138,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(9,4));
 		localroute.add(new Node(5,4));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall",
+				new RPZonePath("int_阿多斯_市_政厅",
 				new LinkedList<Node>(localroute)));
 
 		// 1 floor
@@ -151,7 +151,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(37,15));
 		localroute.add(new Node(37,3));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_1",
+				new RPZonePath("int_阿多斯_市_政厅_1",
 				new LinkedList<Node>(localroute)));
 
 		// 2 floor
@@ -162,7 +162,7 @@ public class PathsBuildHelper {
 		//localroute.add(new Node(26,14)); // very left point
 		//localroute.add(new Node(32,14)); // very right point
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_2",
+				new RPZonePath("int_阿多斯_市_政厅_2",
 				new LinkedList<Node>(localroute)));
 
 		return fullPath;
@@ -185,7 +185,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(26,3));
 		localroute.add(new Node(35,3));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_2",
+				new RPZonePath("int_阿多斯_市_政厅_2",
 				new LinkedList<Node>(localroute)));
 
 		// 1 floor
@@ -198,7 +198,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(2,4));
 		localroute.add(new Node(3,4));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall_1",
+				new RPZonePath("int_阿多斯_市_政厅_1",
 				new LinkedList<Node>(localroute)));
 
 		// town hall
@@ -209,14 +209,14 @@ public class PathsBuildHelper {
 		localroute.add(new Node(22,8));
 		localroute.add(new Node(22,16));
 		fullPath.add(
-				new RPZonePath("int_ados_town_hall",
+				new RPZonePath("int_阿多斯_市_政厅",
 				new LinkedList<Node>(localroute)));
 		/*
 		// city central
 		localroute.clear();
 		localroute.add(new Node(42,94));
 		fullPath.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 		 */
 		return fullPath;
@@ -249,7 +249,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -262,7 +262,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -276,7 +276,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -289,7 +289,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 
 		localroute.clear();
@@ -300,7 +300,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(8,12));
 
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -313,7 +313,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -326,7 +326,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -340,7 +340,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -353,7 +353,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -368,7 +368,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -382,7 +382,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -402,7 +402,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -417,7 +417,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -431,7 +431,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city_s",
+				new RPZonePath("0_阿多斯_城_s",
 				new LinkedList<Node>(localroute)));
 
 		localroute.clear();
@@ -441,7 +441,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(14,97));
 
 		globalroute.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -453,7 +453,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_city",
+				new RPZonePath("0_阿多斯_城",
 				new LinkedList<Node>(localroute)));
 
 		localroute.clear();
@@ -462,7 +462,7 @@ public class PathsBuildHelper {
 		localroute.add(new Node(115,95));
 
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -475,7 +475,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -488,7 +488,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
@@ -504,7 +504,7 @@ public class PathsBuildHelper {
 
 		globalroute.clear();
 		globalroute.add(
-				new RPZonePath("0_ados_wall",
+				new RPZonePath("0_阿多斯_城墙",
 				new LinkedList<Node>(localroute)));
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 

@@ -64,8 +64,8 @@ public class MrYetiNPC implements ZoneConfigurator {
 //				addGreeting("Greetings, strange foreigner!");
 //				addJob("My job is to clean up all this around you!");
 //				addHelp("I am not able to help you!");
-				addGreeting("欢迎你，奇怪的外乡人！");
-				addJob("我的工作是清理你四周的这些地方。");
+				addGreeting("欢迎你, 奇怪的外乡人！");
+				addJob("我的工作是清理你四周的这些地方. ");
 				addHelp("我帮不了你！");
 				addGoodbye();
 			}

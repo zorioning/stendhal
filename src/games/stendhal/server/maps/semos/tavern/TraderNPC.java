@@ -64,11 +64,11 @@ public class TraderNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting();
 				addJob("Shhh! 我销售一些材料给顾客.");
-				addHelp("我只做几种买卖，具体清单可以问我 #offer.");
+				addHelp("我只做几种买卖, 具体清单可以问我 #offer.");
 				new SellerAdder().addSeller(this, new SellerBehaviour(shops.get("sellstuff")), false);
 				new BuyerAdder().addBuyer(this, new BuyerBehaviour(shops.get("buystuff")), false);
-				addOffer("那边墙上有块黑板，上面写着价目表.");
-				addQuest("你到铁匠铺找 Hackim Easso 谈谈，他找你有点事.");
+				addOffer("那边墙上有块黑板, 上面写着价目表.");
+				addQuest("你到铁匠铺找 Hackim Easso 谈谈, 他找你有点事.");
 				addGoodbye();
 			}
 		};

@@ -44,7 +44,7 @@ public class GroupMessageAction implements ActionListener {
 		}
 
 		if (Jail.isInJail(player)) {
-			player.sendPrivateText("一个异常的推力阻止你通过，请使用 /support <text> 联系管理员!");
+			player.sendPrivateText("一个异常的推力阻止你通过, 请使用 /support <text> 联系管理员!");
 			return;
 		}
 

@@ -55,9 +55,9 @@
     </equipable>
   </item>
 
-  <item name="nalwor bank key">
+  <item name="纳尔沃银库钥匙">
     <type class="key" subclass="nalwor" tileid="-1"/>
-    <description>You see a key to the customer room of Nalwor Bank.</description>
+    <description>纳尔沃银库钥匙</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>

@@ -73,7 +73,7 @@ public class WeaponsCollector2 extends AbstractQuest {
 			// rare from monk on mountain
 			"staff",
 			// rare from devil_queen on mountain
-			"great sword"
+			"巨剑"
 	);
 
 	@Override

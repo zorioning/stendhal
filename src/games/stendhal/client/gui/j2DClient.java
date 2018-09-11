@@ -102,6 +102,7 @@ import games.stendhal.common.MathHelper;
 import games.stendhal.common.NotificationType;
 import games.stendhal.common.constants.SoundLayer;
 import games.stendhal.common.constants.Testing;
+
 import marauroa.client.BannedAddressException;
 import marauroa.client.TimeoutException;
 import marauroa.client.net.IPerceptionListener;
@@ -119,8 +120,6 @@ public class j2DClient implements UserInterface {
 
 	/** Scrolling speed when using the mouse wheel. */
 	private static final int SCROLLING_SPEED = 8;
-	/** Background color of the private chat tab. Light blue. */
-	private static final String PRIVATE_TAB_COLOR = "0xdcdcff";
 	/** Property name used to determine if scaling is wanted. */
 	private static final String SCALE_PREFERENCE_PROPERTY = "ui.scale_screen";
 
@@ -142,14 +141,13 @@ public class j2DClient implements UserInterface {
 
 	private JLayeredPane pane;
 
-	/** Chat channels. */
-	private NotificationChannelManager channelManager;
-
 	private ContainerPanel containerPanel;
 
 	private boolean gameRunning;
 
 	private final ChatTextController chatText = new ChatTextController();
+	/** Chat channels. */
+	private final NotificationChannelManager channelManager = new NotificationChannelManager();
 
 	/** the Character panel. */
 	private Character character;
@@ -326,7 +324,7 @@ public class j2DClient implements UserInterface {
 		/*
 		 * Game log
 		 */
-		final JTabbedPane chatLogArea = createLogArea();
+		final JComponent chatLogArea = new ChatLogArea(channelManager).getComponent();
 		chatLogArea.setPreferredSize(new Dimension(screen.getWidth(), 171));
 
 		// *** Key handling ***
@@ -1094,7 +1092,7 @@ public class j2DClient implements UserInterface {
 	 */
 	private List<JComponent> createNotificationChannels() {
 		List<JComponent> list = new ArrayList<JComponent>();
-		channelManager = new NotificationChannelManager();
+		//channelManager = new NotificationChannelManager();
 		KTextEdit edit = new KTextEdit();
 		list.add(edit);
 
@@ -1124,7 +1122,8 @@ public class j2DClient implements UserInterface {
 		 * Give it a different background color to make it different from the
 		 * main chat log.
 		 */
-		edit.setDefaultBackground(Color.decode(PRIVATE_TAB_COLOR));
+		 
+		edit.setDefaultBackground(Color.decode("0xdcdcff"));
 		list.add(edit);
 		/*
 		 * Types shown by default in the private/group tab. Admin messages
@@ -1139,6 +1138,8 @@ public class j2DClient implements UserInterface {
 		return list;
 	}
 
+	
+	
 	/**
 	 * Get the main window component.
 	 *

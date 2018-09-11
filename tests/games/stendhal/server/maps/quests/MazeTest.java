@@ -40,7 +40,7 @@ public class MazeTest extends ZonePlayerAndNPCTestImpl {
 	private Engine en = null;
 
 	private String questSlot;
-	private static final String ZONE_NAME = "int_ados_magician_house";
+	private static final String ZONE_NAME = "int_阿多斯_魔法_屋";
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

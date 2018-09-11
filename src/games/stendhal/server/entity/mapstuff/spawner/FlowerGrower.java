@@ -41,7 +41,7 @@ public class FlowerGrower extends VegetableGrower {
 	private final String[] description = {
 			"你看见一些刚被种上的植物",
 			"土地里已经长出上些嫩芽.",
-			"一个植物种在这，你已经能看到叶子.",
+			"一个植物种在这, 你已经能看到叶子.",
 			"你看到这株植物长成一个 " + getVegetableName()
 					+ ", 它快要成熟了.",
 			"你看到一个完全成熟的 " + getVegetableName()

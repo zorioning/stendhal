@@ -51,7 +51,7 @@ public class MeetMonogenes extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"会见梦金斯",
-				"塞门镇一们年老的智者有一张地图，可以指引新玩家熟悉此镇。",
+				"塞门镇一们年老的智者有一张地图, 可以指引新玩家熟悉此镇. ",
 				false);
 		final SpeakerNPC npc = npcs.get("梦金斯");
 
@@ -67,9 +67,9 @@ public class MeetMonogenes extends AbstractQuest {
 						new GreetingMatchesNameCondition(npc.getName()),
 						new QuestNotCompletedCondition("Monogenes")),
 				ConversationStates.INFORMATION_1,
-				"你好，过来这外地人！不要因为人们的陌生和冷漠觉得害怕... " +
-				"Blordrough 令人恐惧的影响力已四处弥散，也影响着这个城镇和我们每个人。" +
-				"尽管不太熟，我能给你一些提示，你原意听听吗？",
+				"你好, 过来这外地人！不要因为人们的陌生和冷漠觉得害怕... " +
+				"Blordrough 令人恐惧的影响力已四处弥散, 也影响着这个城镇和我们每个人. " +
+				"尽管不太熟, 我能给你一些提示, 你原意听听吗？",
 				new SetQuestAction("Monogenes", "done"));
 
 		npc.add(
@@ -77,7 +77,7 @@ public class MeetMonogenes extends AbstractQuest {
 			ConversationPhrases.HELP_MESSAGES,
 			null,
 			ConversationStates.INFORMATION_1,
-			"我能给你一些有关塞门镇居民情况的小提示， 是否你想听?",
+			"我能给你一些有关塞门镇居民情况的小提示,  是否你想听?",
 			null);
 
 		npc.add(
@@ -85,11 +85,11 @@ public class MeetMonogenes extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"你可通通说说 \"#hi\" \"#你好\" \"嗨\" \"喂\" 等方式吸引别人的注意。 " +
-			"然后看看对方原意谈论的内容，一些高亮的内容 比如 #'像这样' 。" +
-			"还有一些常用的对话词语可以对话，比如问 #工作 , 寻求 #帮助 , " +
-			"还有交易有关的 #买卖 或 #交易 等常用对话。你可以继续问 #问题 。" +
-			"r如果你想快速的了解下 塞门镇 的常用 #地标 ，问我就对了.",
+			"你可通通说说 \"#hi\" \"#你好\" \"嗨\" \"喂\" 等方式吸引别人的注意.  " +
+			"然后看看对方原意谈论的内容, 一些高亮的内容 比如 #'像这样' . " +
+			"还有一些常用的对话词语可以对话, 比如问 #工作 , 寻求 #帮助 , " +
+			"还有交易有关的 #买卖 或 #交易 等常用对话. 你可以继续问 #问题 . " +
+			"r如果你想快速的了解下 塞门镇 的常用 #地标 , 问我就对了.",
 			null);
 
 		npc.add(
@@ -97,7 +97,7 @@ public class MeetMonogenes extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.IDLE,
-			"想了解发生了什么事？想听听塞门镇讲坛？哈!且听下回分解。",
+			"想了解发生了什么事？想听听塞门镇讲坛？哈!且听下回分解. ",
 			null);
 
 		final List<String> yesnotriggers = new ArrayList<String>();
@@ -109,17 +109,17 @@ public class MeetMonogenes extends AbstractQuest {
 				"",
 				new NotCondition(new TriggerInListCondition(yesnotriggers)),
 				ConversationStates.INFORMATION_1,
-				"问你一个 ' #是 与 #不 ' 的问题：我可以提供一些关于社区的小提示，你原意听听吗？",
+				"问你一个 ' #是 与 #不 ' 的问题：我可以提供一些关于社区的小提示, 你原意听听吗？",
 				null);
 
 		// he puts 'like this' into blue and so many people try that first
 		npc.addReply(
 				"像这样",
-				"对啦，像这样！现在，你可以查看这张 #地图 或指引你去 #银库 ,  #图书馆 ,  #酒店 , #教堂 ,  #铁匠铺 ,  #面包房 , 或者旧 #村庄 .");
+				"对啦, 像这样！现在, 你可以查看这张 #地图 或指引你去 #银库 ,  #图书馆 ,  #酒店 , #教堂 ,  #铁匠铺 ,  #面包房 , 或者旧 #村庄 .");
 
 		npc.addReply(
 			"地标",
-			"给你一张地图，或为你指出 #银库 ,  #图书馆 ,  #酒店 , #教堂 ,  #铁匠铺 ,  #面包房 , #公共箱 或者旧 #村庄 等地圵.");
+			"给你一张地图, 或为你指出 #银库 ,  #图书馆 ,  #酒店 , #教堂 ,  #铁匠铺 ,  #面包房 , #公共箱 或者旧 #村庄 等地圵.");
 
 		npc.add(
 			ConversationStates.ATTENDING,
@@ -137,19 +137,19 @@ public class MeetMonogenes extends AbstractQuest {
 
 		npc.addReply(
 			"银库",
-			"我前面的一所大房子，门前放着一个很大的假宝箱。很明显，就是那。");
+			"我前面的一所大房子, 门前放着一个很大的假宝箱. 很明显, 就是那. ");
 
 		npc.addReply(
 			"图书馆",
-			"顺着路往西走，有一个两个门的大房子，门上面标记着书和羽毛笔");
+			"顺着路往西走, 有一个两个门的大房子, 门上面标记着书和羽毛笔");
 
 		npc.addReply(
 			"酒店",
-			"顺着路东南方向就不会走错，门前标志是INN.");
+			"顺着路东南方向就不会走错, 门前标志是INN.");
 
 		npc.addReply(
 			"教堂",
-			"教堂在这的东南方向，挨着 #酒店 。屋顶上有个十字架，很好找");
+			"教堂在这的东南方向, 挨着 #酒店 . 屋顶上有个十字架, 很好找");
 
 		npc.addReply(
 			"面包房",
@@ -157,14 +157,14 @@ public class MeetMonogenes extends AbstractQuest {
 
 		npc.addReply(
 			"铁匠铺",
-			"西南方向走是铁匠铺。门前标志是铁锤，很容易找到。");
+			"西南方向走是铁匠铺. 门前标志是铁锤, 很容易找到. ");
 
 		npc.addReply(Arrays.asList("公共", "公共箱", "箱子"),
-			"顺着地图橙色的路往下走能看到 公共箱。Faiumoni的居民和勇士会把一些自已无用的东西扔进去，你可以去找点适合你用的拿走。但要记住：把不需要的东西分享出来总是很好的");
+			"顺着地图橙色的路往下走能看到 公共箱. Faiumoni的居民和勇士会把一些自已无用的东西扔进去, 你可以去找点适合你用的拿走. 但要记住：把不需要的东西分享出来总是很好的");
 
 		npc.addReply(
 			"村庄",
-			"一直往西南方向走，路过 #铁匠铺 ，然后你就进入了塞门镇 旧村庄。尼世亚 在那里卖羊。");
+			"一直往西南方向走, 路过 #铁匠铺 , 然后你就进入了塞门镇 旧村庄. 尼世亚 在那里卖羊. ");
 
 
 		/** Give the reward to the polite newcomer user */
@@ -200,7 +200,7 @@ public class MeetMonogenes extends AbstractQuest {
 				return res;
 			}
 			if (isCompleted(player)) {
-				res.add("我找到了梦金斯，他给了我一份地图。以后我就可以随时找他看这份地图。");
+				res.add("我找到了梦金斯, 他给了我一份地图. 以后我就可以随时找他看这份地图. ");
 			}
 			return res;
 	}

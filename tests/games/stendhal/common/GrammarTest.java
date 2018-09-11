@@ -179,7 +179,7 @@ public class GrammarTest {
 	@Test
 	public void testFullform() {
 		assertEquals("piece of meat", Grammar.fullForm("Meat"));
-		assertEquals("piece of ham", Grammar.fullForm("Ham"));
+		assertEquals("piece of ham", Grammar.fullForm("火腿"));
 		assertEquals("piece of cheese", Grammar.fullForm("Cheese"));
 		assertEquals("piece of wood", Grammar.fullForm("wood"));
 		assertEquals("piece of paper", Grammar.fullForm("paper"));
@@ -248,9 +248,9 @@ public class GrammarTest {
 	 */
 	@Test
 	public void testPluralItem() {
-		testPluralisationAndSingularisation("chocolate bars","chocolate bar");
+		testPluralisationAndSingularisation("巧克力棒s","巧克力棒");
 		testPluralisationAndSingularisation("money", "money");
-		testPluralisationAndSingularisation("sandwiches", "sandwich");
+		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("knives", "knife");
 		testPluralisationAndSingularisation("daggers", "dagger");
 		testPluralisationAndSingularisation("short swords", "short sword");
@@ -388,8 +388,8 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("loaves of bread",
 				"loaf of bread");
 		testPluralisationAndSingularisation("chunks of meat", "chunk of meat");
-		testPluralisationAndSingularisation("pieces of ham", "ham");
-		testPluralisationAndSingularisation("sandwiches", "sandwich");
+		testPluralisationAndSingularisation("pieces of ham", "火腿");
+		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("pies", "pie");
 		testPluralisationAndSingularisation("button mushrooms",
 				"button mushroom");
@@ -625,8 +625,8 @@ public class GrammarTest {
 		assertEquals("a sandwich", Grammar.quantityplnoun(1, "sandwich", "a"));
 		assertEquals("2 sandwiches",
 			Grammar.quantityplnoun(2, "sandwich"));
-		assertEquals("a piece of ham", Grammar.quantityplnoun(1, "ham", "a"));
-		assertEquals("2 pieces of ham", Grammar.quantityplnoun(2, "ham", "a"));
+		assertEquals("a piece of ham", Grammar.quantityplnoun(1, "火腿", "a"));
+		assertEquals("2 pieces of ham", Grammar.quantityplnoun(2, "火腿", "a"));
 		assertEquals("a piece of cheese",
 			Grammar.quantityplnoun(1, "cheese", "a"));
 		assertEquals("2 pieces of cheese",
