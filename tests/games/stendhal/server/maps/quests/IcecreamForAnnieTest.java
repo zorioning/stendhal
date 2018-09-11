@@ -74,7 +74,7 @@ public class IcecreamForAnnieTest {
 	 */
 	@Test
 	public void testQuest() {
-		npc = SingletonRepository.getNPCList().get("Annie Jones");
+		npc = SingletonRepository.getNPCList().get("安妮琼斯");
 		en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -124,7 +124,7 @@ public class IcecreamForAnnieTest {
 		assertEquals("Bye, enjoy your day!", getReply(npc));
 		assertTrue(player.isEquipped("icecream"));
 
-		npc = SingletonRepository.getNPCList().get("Annie Jones");
+		npc = SingletonRepository.getNPCList().get("安妮琼斯");
 		en = npc.getEngine();
 
 		en.step(player, "hi");
@@ -141,7 +141,7 @@ public class IcecreamForAnnieTest {
 		en.step(player, "bye");
 		assertEquals("Bye for now.", getReply(npc));
 
-		npc = SingletonRepository.getNPCList().get("Annie Jones");
+		npc = SingletonRepository.getNPCList().get("安妮琼斯");
 		en = npc.getEngine();
 
 		final int xp = player.getXP();

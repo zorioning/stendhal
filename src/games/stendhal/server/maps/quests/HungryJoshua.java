@@ -42,20 +42,20 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Hungry Joshua
+ * QUEST: Hungry 约书亚
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Xoderos the blacksmith in 塞门镇</li>
- * <li> Joshua the blacksmith in Ados</li>
+ * <li> 艾克德罗斯 the blacksmith in 塞门镇</li>
+ * <li> 约书亚 the blacksmith in Ados</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li> Talk with Xoderos to activate the quest.</li>
+ * <li> Talk with 艾克德罗斯 to activate the quest.</li>
  * <li> Make 5 三明治es.</li>
- * <li> Talk with Joshua to give him the 三明治es.</li>
- * <li> Return to Xoderos with a message from Joshua.</li>
+ * <li> Talk with 约书亚 to give him the 三明治es.</li>
+ * <li> Return to 艾克德罗斯 with a message from 约书亚.</li>
  * </ul>
  *
  * REWARD:
@@ -87,57 +87,57 @@ public class HungryJoshua extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我找到塞门镇铁匠铺的 Xoderos, 如果他有任务就交给我.");
+		res.add("我找到塞门镇铁匠铺的 艾克德罗斯, 如果他有任务就交给我.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
-			res.add("我不想帮助 Xoderos 和 Joshua.");
+			res.add("我不想帮助 艾克德罗斯 和 约书亚.");
 		}
-		if (player.isQuestInState(QUEST_SLOT, "start", "joshua", "done")) {
-			res.add("我同意带 5 块三明治给三明治es to Joshua and tell him that I have his 'food'.");
+		if (player.isQuestInState(QUEST_SLOT, "start", "约书亚", "done")) {
+			res.add("我同意带 5 块三明治给 约书亚, 并告诉他我有这种 '食物'.");
 		}
 		if (questState.equals("start") && player.isEquipped("三明治",
 				FOOD_AMOUNT)
 				|| questState.equals("done")) {
-			res.add("I got five 三明治es to take Joshua.");
+			res.add("我找到5块 三明治 并带给了 约书亚.");
 		}
-		if (questState.equals("joshua") || questState.equals("done")) {
-			res.add("I took the food to Joshua and he asked me to tell his brother Xoderos that he is ok, by saying 'Joshua'.");
+		if (questState.equals("约书亚") || questState.equals("done")) {
+			res.add("我带着食物找到 约书亚 ，他要我向他哥哥 艾克德罗斯 说出他的名字 约书亚' 报个平安.");
 		}
 		if (questState.equals("done")) {
-			res.add("I passed the message to Xoderos and he has fixed my keyring for me.");
+			res.add("我把消息告诉了 艾克德罗斯, 他修好了我的钥匙.");
 		}
 		return res;
 	}
 
 	private void step_1() {
 
-		final SpeakerNPC npc = npcs.get("Xoderos");
+		final SpeakerNPC npc = npcs.get("艾克德罗斯");
 
 		/** If quest is not started yet, start it. */
 		npc.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES, new QuestNotStartedCondition(QUEST_SLOT),
-			ConversationStates.ATTENDING, "I'm worried about my brother who lives in Ados. I need someone to take some #food to him.",
+			ConversationStates.ATTENDING, "我很担心住在 Ados 的兄弟. 我急需找个人给他带点 #食物 .",
 			null);
 
 		/** In case quest is completed */
 		npc.add(ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"My brother has enough food now, many thanks.", null);
+			"我兄弟食物够吃了, 非常感谢.", null);
 
 		/** In case quest is completed */
-		npc.add(ConversationStates.ATTENDING, "food",
+		npc.add(ConversationStates.ATTENDING, "食物",
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"My brother has enough 三明治es now, thank you.", null);
+			"我兄弟的三明治现在够吃了, 谢谢你.", null);
 
 		/** If quest is not started yet, start it. */
 		npc.add(
 			ConversationStates.ATTENDING,
-			"food",
+			"食物",
 			new QuestNotStartedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"I think five 三明治es would be enough. My brother is called #Joshua. Can you help?",
+			"我觉得5块三明治就够了. 我兄弟名叫 #约书亚. 你能帮这个忙吗?",
 			null);
 
 		npc.add(
@@ -145,7 +145,7 @@ public class HungryJoshua extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"Thank you. Please tell him #food or #三明治 so he knows you're not just a customer.",
+			"谢谢你. 见到他时说 #食物 或 #三明治 ，让他知道你并不只是个顾客.",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		npc.add(
@@ -153,53 +153,53 @@ public class HungryJoshua extends AbstractQuest {
 			ConversationPhrases.NO_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"So you'd just let him starve! I'll have to hope someone else is more charitable.",
+			"那么你就是让他饿死! 我只能寄希望给其他好心人了.",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			"Joshua",
+			"约书亚",
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"He's the goldsmith in Ados. They're so short of supplies. Will you help?",
+			"他是 Ados 的金匠. 那里现在物资紧缺, 你原意帮忙吗?",
 			null);
 
 		/** Remind player about the quest */
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("food", "三明治", "三明治es"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("食物", "三明治", "吃的"),
 			new QuestInStateCondition(QUEST_SLOT, "start"),
 			ConversationStates.ATTENDING,
-			"#Joshua will be getting hungry! Please hurry!", null);
+			"#约书亚 可能在挨饿! 请尽快!", null);
 
-		npc.add(ConversationStates.ATTENDING, "Joshua",
+		npc.add(ConversationStates.ATTENDING, "约书亚",
 			new QuestInStateCondition(QUEST_SLOT, "start"),
 			ConversationStates.ATTENDING,
-			"My brother, the goldsmith in Ados.", null);
+			"我的兄弟是 Ados 的金匠.", null);
 
 		/** remind to take the 三明治es */
 		npc.add(
 			ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
 			new QuestInStateCondition(QUEST_SLOT, "start"),
 			ConversationStates.ATTENDING,
-			"Please don't forget the five #三明治es for #Joshua!",
+			"请别忘了带5块 #三明治 给 #约书亚!",
 			null);
 	}
 
 	private void step_2() {
-		final SpeakerNPC npc = npcs.get("Joshua");
+		final SpeakerNPC npc = npcs.get("约书亚");
 
 		/** If player has quest and has brought the food, ask for it */
 		npc.add(
 			ConversationStates.ATTENDING,
-			Arrays.asList("food", "三明治", "三明治es"),
+			Arrays.asList("食物", "三明治", "吃的"),
 			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "start"), new PlayerHasItemWithHimCondition("三明治", FOOD_AMOUNT)),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Oh great! Did my brother Xoderos send you with those 三明治es?",
+			"Oh 太好了! 是我大哥 艾克德罗斯 托你给我送的 三明治 吗?",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("三明治", FOOD_AMOUNT));
 		reward.add(new IncreaseXPAction(150));
-		reward.add(new SetQuestAction(QUEST_SLOT, "joshua"));
+		reward.add(new SetQuestAction(QUEST_SLOT, "约书亚"));
 		reward.add(new IncreaseKarmaAction(15));
 		reward.add(new InflictStatusOnNPCAction("三明治"));
 
@@ -207,37 +207,37 @@ public class HungryJoshua extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			new PlayerHasItemWithHimCondition("三明治", FOOD_AMOUNT),
 			ConversationStates.ATTENDING,
-			"Thank you! Please let Xoderos know that I am fine. Say my name, Joshua, so he knows that you saw me. He will probably give you something in return.",
+			"谢谢你! 请告诉 艾克德罗斯 我很好, 跟大哥说我的名字 约书亚, 他就明白你已见到我了, 之后他会给你一些报酬.",
 			new MultipleActions(reward));
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.YES_MESSAGES,
 			new NotCondition(new PlayerHasItemWithHimCondition("三明治", FOOD_AMOUNT)),
-			ConversationStates.ATTENDING, "Hey! Where did you put the 三明治es?", null);
+			ConversationStates.ATTENDING, "嗨! 你把三明治放哪了?", null);
 
 		npc.add(ConversationStates.QUEST_ITEM_BROUGHT,
 			ConversationPhrases.NO_MESSAGES, null,
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Oh dear, I'm so hungry, please say #yes they are for me.",
+			"天啊, 我要饿死了, 这些吃的是给我的， #是 吗？",
 			null);
 	}
 
 	private void step_3() {
-		final SpeakerNPC npc = npcs.get("Xoderos");
+		final SpeakerNPC npc = npcs.get("艾克德罗斯");
 
 		/** remind to complete the quest */
 		npc.add(
 			ConversationStates.ATTENDING, ConversationPhrases.QUEST_MESSAGES,
-			new QuestInStateCondition(QUEST_SLOT, "joshua"),
+			new QuestInStateCondition(QUEST_SLOT, "约书亚"),
 			ConversationStates.ATTENDING,
-			"I do hope #Joshua is well ....",
+			"希望 #约书亚 没什么事...",
 			null);
 
 		/** Remind player about the quest */
-		npc.add(ConversationStates.ATTENDING, Arrays.asList("food", "三明治", "三明治es"),
-			new QuestInStateCondition(QUEST_SLOT, "joshua"),
+		npc.add(ConversationStates.ATTENDING, Arrays.asList("食物", "三明治", "吃的"),
+			new QuestInStateCondition(QUEST_SLOT, "约书亚"),
 			ConversationStates.ATTENDING,
-			"I wish you could confirm for me that #Joshua is fine ...", null);
+			"希望你能去确诊 #约书亚 没出什么事...", null);
 
 		// ideally, make it so that this slot being done means
 		// you get a keyring object instead what we currently
@@ -253,18 +253,18 @@ public class HungryJoshua extends AbstractQuest {
 		}
 		/** Complete the quest */
 		npc.add(
-			ConversationStates.ATTENDING, "Joshua",
-			new QuestInStateCondition(QUEST_SLOT, "joshua"),
+			ConversationStates.ATTENDING, "约书亚",
+			new QuestInStateCondition(QUEST_SLOT, "约书亚"),
 			ConversationStates.ATTENDING,
-			"I'm glad Joshua is well. Now, what can I do for you? I know, I'll fix that broken key ring that you're carrying ... there, it should work now!",
+			"听到 约书亚 没事真的太好了. 现在我能为你做点什么? 我知道了, 我会修好你的钥匙环... 好了，它现在可以用了!",
 			new MultipleActions(reward));
 	}
 
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Hungry Joshua",
-				"Xoderos is worried about his brother Joshua who lives in Ados because they are short of supplies.",
+				"饥饿的约书亚",
+				"由于物资供应紧张,艾克德罗斯担心他住在 Ados 的兄弟 约书亚.",
 				false);
 		step_1();
 		step_2();
@@ -282,6 +282,6 @@ public class HungryJoshua extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Xoderos";
+		return "艾克德罗斯";
 	}
 }

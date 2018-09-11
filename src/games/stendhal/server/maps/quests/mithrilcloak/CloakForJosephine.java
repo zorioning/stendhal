@@ -115,7 +115,7 @@ class CloakForJosephine {
 				);
 
 		npc.addReply("Josephine", "Surely you know Josephine? That flirty flighty girl from Fado, bless her heart.");
-		npc.addReply("Pedinghaus", "I mean the wizard who works with Joshua in the Ados smithy.");
+		npc.addReply("Pedinghaus", "I mean the wizard who works with 约书亚 in the Ados smithy.");
 	}
 
 	public void addToWorld() {

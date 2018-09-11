@@ -45,7 +45,7 @@ public class GoldsmithNPC implements ZoneConfigurator {
 	}
 
 	private void buildGoldsmith(final StendhalRPZone zone) {
-		final SpeakerNPC goldsmith = new SpeakerNPC("Joshua") {
+		final SpeakerNPC goldsmith = new SpeakerNPC("约书亚") {
 
 			@Override
 			protected void createPath() {
@@ -71,10 +71,10 @@ public class GoldsmithNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Hi!");
 				addJob("I'm the goldsmith of this city.");
-				addHelp("My brother Xoderos is a blacksmith in 塞门镇. Currently he is selling tools. Perhaps he can make a #gold #pan for you.");
+				addHelp("My brother 艾克德罗斯 is a blacksmith in 塞门镇. Currently he is selling tools. Perhaps he can make a #gold #pan for you.");
 				addGoodbye("Bye.");
 
-				// Joshua makes gold if you bring him gold nugget and wood
+				// 约书亚 makes gold if you bring him gold nugget and wood
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("木头", 2);
 				requiredResources.put("gold nugget", 1);
@@ -100,7 +100,7 @@ public class GoldsmithNPC implements ZoneConfigurator {
 		goldsmith.setDirection(Direction.DOWN);
 		goldsmith.setPosition(18, 3);
 		goldsmith.initHP(100);
-		goldsmith.setDescription("You see Joshua. His family is popular for forging different materials. Do you know his brother, Xoderos, already?");
+		goldsmith.setDescription("You see 约书亚. His family is popular for forging different materials. Do you know his brother, 艾克德罗斯, already?");
 		zone.add(goldsmith);
 	}
 }

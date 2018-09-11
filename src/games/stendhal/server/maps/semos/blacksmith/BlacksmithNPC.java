@@ -30,7 +30,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.ProducerBehaviour;
 import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
 
 /**
- * The blacksmith (original name: Xoderos). Brother of the goldsmith in Ados.
+ * The blacksmith (original name: 艾克德罗斯). Brother of the goldsmith in Ados.
  * He refuses to sell weapons, but he casts iron for the player, and he sells
  * tools.
  *
@@ -47,7 +47,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Xoderos") {
+		final SpeakerNPC npc = new SpeakerNPC("艾克德罗斯") {
 
 			@Override
 			protected void createPath() {
@@ -91,7 +91,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SellerBehaviour(SingletonRepository.getShopList().get("selltools")));
 
-				// Xoderos casts iron if you bring him wood and iron ore.
+				// 艾克德罗斯 casts iron if you bring him wood and iron ore.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("木头", 1);
 				requiredResources.put("iron ore", 1);
@@ -104,7 +104,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 			}};
 			npc.setPosition(23, 12);
 			npc.setEntityClass("blacksmithnpc");
-			npc.setDescription("你见到了 Xoderos, 是 塞门镇的强壮的铁匠.");
+			npc.setDescription("你见到了 艾克德罗斯, 是 塞门镇的强壮的铁匠.");
 			zone.add(npc);
 	}
 }

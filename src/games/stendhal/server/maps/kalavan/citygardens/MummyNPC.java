@@ -21,7 +21,7 @@ import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds the mother of Annie Jones.
+ * Builds the mother of 安妮琼斯.
  *
  * @author kymara
  */

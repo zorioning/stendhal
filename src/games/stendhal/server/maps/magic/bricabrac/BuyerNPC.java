@@ -93,7 +93,7 @@ public class BuyerNPC implements ZoneConfigurator {
 						"That grandfather clock is one of my more modern pieces. If you know Woody the Woodcutter, you may recognise the handiwork.");
 				addReply(
 						"tools",
-						"Those tools on the back wall are a true antique! They were used by the great grandfather of Xoderos of 塞门镇, isn't that incredible!");
+						"Those tools on the back wall are a true antique! They were used by the great grandfather of 艾克德罗斯 of 塞门镇, isn't that incredible!");
 				addReply(
 						"armor",
 						"Ah, that mighty piece was made in Deniran. I'm afraid I know little more about it.");

@@ -417,7 +417,7 @@ public final class ShopList {
 		shops.add("sellparty", "啤酒", 10);
 		shops.add("sellparty", "wine", 15);
 		shops.add("sellparty", "vanilla shake", 150);
-		shops.add("sellparty", "icecream", 50);
+		shops.add("sellparty", "冰淇淋", 50);
 		shops.add("sellparty", "hotdog", 180);
 		shops.add("sellparty", "三明治", 140);
 
@@ -456,7 +456,7 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "苹果派", 195);
 		shops.add("sellrevivalweeks", "vanilla shake", 120);
 		shops.add("sellrevivalweeks", "chocolate shake", 120);
-		shops.add("sellrevivalweeks", "icecream", 60);
+		shops.add("sellrevivalweeks", "冰淇淋", 60);
 		shops.add("sellrevivalweeks", "巧克力棒", 100);
 		shops.add("sellrevivalweeks", "grilled steak", 250);
 		shops.add("sellrevivalweeks", "hotdog", 170);

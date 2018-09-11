@@ -599,7 +599,7 @@ public class MithrilCloakTest {
 		en.step(player, "task");
 		assertEquals("Aw, Josephine is so sweet. I'm glad she liked her blue striped cloak. Now, YOUR cloak is nearly ready, it just needs a clasp to fasten it! My friend #Pedinghaus will make it for you, if you go and ask him.", getReply(npc));
 		en.step(player, "pedinghaus");
-		assertEquals("I mean the wizard who works with Joshua in the Ados smithy.", getReply(npc));
+		assertEquals("I mean the wizard who works with 约书亚 in the Ados smithy.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye, thanks for stepping in.", getReply(npc));
 

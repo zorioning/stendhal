@@ -51,8 +51,8 @@ public class MithrilForgerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Greetings.");
-				addJob("I forge mithril. But magically, mind you. Joshua has kindly allowed me space to work here, despite the fact that I am so different from the others in Ados.");
-				addHelp("If you're here for gold bars, you must speak with Joshua. I #cast the rare and precious #mithril #bar.");
+				addJob("I forge mithril. But magically, mind you. 约书亚 has kindly allowed me space to work here, despite the fact that I am so different from the others in Ados.");
+				addHelp("If you're here for gold bars, you must speak with 约书亚. I #cast the rare and precious #mithril #bar.");
 				addGoodbye("Bye.");
 
 				// Pedinghaus makes mithril if you bring him mithril nugget and wood

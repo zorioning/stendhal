@@ -100,7 +100,7 @@ public class NewsFromHackim extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Thanks, but I don't have any messages to pass on to #Xin. I can't smuggle so often now... I think Xoderos is beginning to suspect something. Anyway, let me know if there's anything else I can do.",
+			"Thanks, but I don't have any messages to pass on to #Xin. I can't smuggle so often now... I think 艾克德罗斯 is beginning to suspect something. Anyway, let me know if there's anything else I can do.",
 			null);
 
 		npc.add(

@@ -1182,7 +1182,7 @@
 		</equipable>
 	</item>
 
-	<item name="icecream">
+	<item name="冰淇淋">
 		<type class="food" subclass="icecream" tileid="-1" />
 		<description>You see a wafer cone with vanilla ice cream and a chocolate flake.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />

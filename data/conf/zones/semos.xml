@@ -2384,7 +2384,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
         <parameter name="shop">selltools</parameter>
         <parameter name="title">Tool shop</parameter>
         <parameter name="seller">true</parameter>
-        <parameter name="caption">Xoderos sells useful tools.</parameter>
+        <parameter name="caption">艾克德罗斯 sells useful tools.</parameter>
       </implementation>
 
       <attribute name="class">book_blue</attribute>

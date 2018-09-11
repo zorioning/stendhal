@@ -2277,7 +2277,7 @@ World:
 - added gold sources, gold nuggets and gold bars which can be cast by the goldsmith in Ados
 - Ados city is finished, although most houses are still closed
 - daily item quest from the Ados mayor
-- quest to get the keyring activated (joshua is hungry)
+- quest to get the keyring activated (约书亚 is hungry)
 - The mountains of Ados have a great cave under them, some of the brave who have returned from there talk about giants and red dragons... perhaps it is the soo long journey that makes them say those things.
 
 Gameplay:
