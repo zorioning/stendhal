@@ -118,9 +118,9 @@
     </equipable>
   </item>
   
-  <item name="beer">
+  <item name="啤酒">
     <type class="drink" subclass="beer" tileid="-1"/>
-    <description>You see a beer. On a hot summer day, it would taste great.</description>
+    <description>You see a 啤酒. On a hot summer day, it would taste great.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="6"/>

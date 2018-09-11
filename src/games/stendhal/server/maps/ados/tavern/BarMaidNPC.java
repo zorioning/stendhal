@@ -66,12 +66,12 @@ public class BarMaidNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				addGreeting("Oh hello there, did I just catch you admiring my beautiful #hat?");
-				addJob("I am the bar maid for this fair tavern. We sell both imported and local beers, and fine food.");
+				addJob("I am the bar maid for this fair tavern. We sell both imported and local 啤酒s, and fine food.");
 				addHelp("This tavern is a great place to take a break and meet new people! Just ask if you want me to #offer you a drink.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
-				offerings.put("beer", 15);
+				offerings.put("啤酒", 15);
 				offerings.put("pie", 160);
-				offerings.put("bread", 50);
+				offerings.put("面包", 50);
 				offerings.put("干酪", 20);
 				offerings.put("tomato", 30);
 				new SellerAdder().addSeller(this, new SellerBehaviour(offerings));

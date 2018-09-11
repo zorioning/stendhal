@@ -122,7 +122,7 @@ public class MeetBunny extends AbstractQuest {
 
 		if (System.getProperty("stendhal.easterbunny") != null) {
 		    createbunny();
-		    teleporterBehaviour = new ItemDroppingTeleporterBehaviour(bunny, null, "0", "*hop* *hop* *hop* Happy Easter!", true, "small easter egg");
+		    teleporterBehaviour = new ItemDroppingTeleporterBehaviour(bunny, null, "0", "*hop* *hop* *hop* Happy Easter!", true, "小复活蛋");
 		}
 	}
 

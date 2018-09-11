@@ -103,7 +103,7 @@ public class ObsidianKnife extends AbstractQuest {
 	// the offering knife stage
 	private static final int REQUIRED_LEVEL = 50;
 
-	private static final List<String> FOOD_LIST = Arrays.asList("ham", "肉", "干酪");
+	private static final List<String> FOOD_LIST = Arrays.asList("火腿", "肉", "干酪");
 
 	private static final int REQUIRED_DAYS = 3;
 
@@ -135,7 +135,7 @@ public class ObsidianKnife extends AbstractQuest {
 			return res;
 		}
 		res.add("Alrak 让我带给他一些吃的.");
-		if (player.isQuestInState(QUEST_SLOT, "ham", "肉", "干酪")) {
+		if (player.isQuestInState(QUEST_SLOT, "火腿", "肉", "干酪")) {
 			res.add("我必须拿到 " + REQUIRED_FOOD + ", 并且返回后说 " + questState + " .");
 			return res;
 		}

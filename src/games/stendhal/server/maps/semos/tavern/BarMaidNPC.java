@@ -77,19 +77,19 @@ public class BarMaidNPC implements ZoneConfigurator {
 			}
 		};
 
-		//coupon for free beer
+		//coupon for free 啤酒
 
         margaret.add(ConversationStates.ATTENDING,
-                (Arrays.asList("coupon", "coupons", "beer coupon", "free beer")),
+                (Arrays.asList("coupon", "coupons", "啤酒券", "free 啤酒")),
                 new PlayerHasItemWithHimCondition("coupon"),
                 ConversationStates.ATTENDING,
                 "Oh 你发现一个赠券，这是我以前发放的，喝得开心!",
                 new MultipleActions(new DropItemAction("coupon"),
-                					new EquipItemAction("beer"))
+                					new EquipItemAction("啤酒"))
                 );
 
         margaret.add(ConversationStates.ATTENDING,
-        		(Arrays.asList("coupon", "coupons", "beer coupon", "free beer")),
+        		(Arrays.asList("coupon", "coupons", "啤酒券", "free 啤酒")),
                 new NotCondition(new PlayerHasItemWithHimCondition("coupon")),
                 ConversationStates.ATTENDING,
                 "别撒谎！你并没有任何赠券。时下酒吧生意不好，请别骗我！!",

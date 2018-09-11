@@ -33,8 +33,8 @@ public class HouseBuying extends AbstractQuest {
 		quest.addToWorld();
 
 		fillQuestInfo(
-				"House Buying",
-				"Houses can be bought across Faiumoni.",
+				"购房",
+				"Faiumoni 的房子可以购买.",
 				false);
 	}
 
@@ -60,6 +60,6 @@ public class HouseBuying extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Barrett Holmes";
+		return "Barrett 之家";
 	}
 }

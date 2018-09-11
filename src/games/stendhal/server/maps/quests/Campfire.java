@@ -226,7 +226,7 @@ public class Campfire extends AbstractQuest {
 				if (Rand.throwCoin() == 1) {
 					rewardClass = "肉";
 				} else {
-					rewardClass = "ham";
+					rewardClass = "火腿";
 				}
 				npc.say("谢谢你！这些 " + rewardClass + " 送给你了!");
 				final StackableItem reward = (StackableItem) SingletonRepository.getEntityManager().getItem(rewardClass);

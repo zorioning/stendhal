@@ -86,7 +86,7 @@ public class BakerNPC implements ZoneConfigurator {
 				addReply("flour", "Mill near 塞门镇 produce from grain.");
 				addReply("干酪", "Cheese? I know not.");
 				addReply("tomato", "This grow in glass houses.");
-				addReply("ham", "The pig animal have ham.");
+				addReply("火腿", "The pig animal have ham.");
 				addHelp("I have work with #Leander, I #make #pizza.");
 				addReply("Leander", "I was with human, in 塞门镇. The great Leander taught to #make #pizza.");
 				addQuest("#Leander need pizza send. I #make #pizza, you have ingredients.");
@@ -100,7 +100,7 @@ public class BakerNPC implements ZoneConfigurator {
 				requiredResources.put("tomato", 1);
 				requiredResources.put("button mushroom", 2);
 				requiredResources.put("porcini", 1);
-				requiredResources.put("ham", 1);
+				requiredResources.put("火腿", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("kroip_make_pizza", "make", "pizza",
 				        requiredResources, 5 * 60, true);

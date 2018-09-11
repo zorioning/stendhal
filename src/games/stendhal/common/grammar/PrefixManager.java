@@ -56,7 +56,7 @@ final class PrefixManager
 	 */
 //	public PrefixManager() {
 //		register("piece of ", "pieces of ", "meat");
-//		register("piece of ", "pieces of ", "ham");
+//		register("piece of ", "pieces of ", "火腿");
 //		register("piece of ", "pieces of ", "cheese");
 //		register("piece of ", "pieces of ", "wood");
 //		register("piece of ", "pieces of ", "paper");
@@ -69,7 +69,7 @@ final class PrefixManager
 //		register("sack of ", "sacks of ", "sugar");
 //
 //		register("sheaf of ", "sheaves of ", "grain");
-//		register("loaf of ", "loaves of ", "bread");
+//		register("loaf of ", "loaves of ", "面包");
 //		register("stick of ", "sticks of ", "butter");
 //		register("bulb of ", "bulbs of ", "garlic");
 //		register("jar of ", "jars of ", "honey");
@@ -81,7 +81,7 @@ final class PrefixManager
 //		register("bunch of ", "bunches of ", "grapes");
 //		register("can of ", "cans of ", "oil");
 //
-//		register("bottle of ", "bottles of ", "beer");
+//		register("bottle of ", "bottles of ", "啤酒");
 //		register("bottle of ", "bottles of ", "water");
 //		register("bottle of ", "bottles of ", "fierywater");
 //		register("bottle of ", "bottles of ", "milk");

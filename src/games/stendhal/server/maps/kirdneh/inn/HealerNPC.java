@@ -105,7 +105,7 @@ public class HealerNPC implements ZoneConfigurator {
 				null,
 				false,
 				ConversationStates.ATTENDING,
-				"Gimme money for beer. I heal, gis' cash.", null);
+				"Gimme money for 啤酒. I heal, gis' cash.", null);
 
 		engine.add(ConversationStates.ATTENDING,
 				"heal",

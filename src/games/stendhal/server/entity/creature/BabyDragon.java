@@ -111,7 +111,7 @@ public class BabyDragon extends Pet {
 	@Override
 	protected
 	List<String> getFoodNames() {
-		return Arrays.asList("ham", "pizza", "肉");
+		return Arrays.asList("火腿", "pizza", "肉");
 	}
 
 	@Override

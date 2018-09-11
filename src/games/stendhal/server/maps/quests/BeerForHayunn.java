@@ -38,7 +38,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Beer For 海云那冉
+ * QUEST: 啤酒 For 海云那冉
  *
  * PARTICIPANTS:
  * <ul>
@@ -47,9 +47,9 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li>海云那冉 asks you to buy a beer from Margaret.</li>
- * <li>Margaret sells you a beer.</li>
- * <li>海云那冉 sees your beer, asks for it and then thanks you.</li>
+ * <li>海云那冉 asks you to buy a 啤酒 from Margaret.</li>
+ * <li>Margaret sells you a 啤酒.</li>
+ * <li>海云那冉 sees your 啤酒, asks for it and then thanks you.</li>
  * </ul>
  *
  * REWARD:
@@ -79,12 +79,12 @@ public class BeerForHayunn extends AbstractQuest {
 		res.add("我和 海云那冉 谈了些话。");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
-			res.add("我不想让 海云那冉 喝多drunk.");
+			res.add("我不想让 海云那冉 喝醉.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
 			res.add("我答应海云那冉，从塞门镇 酒店的 Margaret 处买瓶啤酒给他.");
 		}
-		if ("start".equals(questState) && player.isEquipped("beer")
+		if ("start".equals(questState) && player.isEquipped("啤酒")
 				|| "done".equals(questState)) {
 			res.add("我有一瓶啤酒。");
 		}
@@ -168,7 +168,7 @@ public class BeerForHayunn extends AbstractQuest {
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 					new QuestActiveCondition(QUEST_SLOT),
-					new NotCondition(new PlayerHasItemWithHimCondition("beer"))),
+					new NotCondition(new PlayerHasItemWithHimCondition("啤酒"))),
 			ConversationStates.ATTENDING,
 			"嗨，我还在等着啤酒呢，没忘吧？还有，有什么需要我帮助的？",
 			null);
@@ -200,7 +200,7 @@ public class BeerForHayunn extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"海云那冉 的啤酒",
-				"海云那冉,守卫屋的很棒的勇士，他想喝点啤酒",
+				"海云那冉,守卫室的很棒的勇士，他想喝点啤酒",
 				false);
 		prepareRequestingStep();
 		prepareBringingStep();

@@ -100,7 +100,7 @@ public class CodedMessageFromFinnFarmer extends AbstractQuest {
 
 	private String[][] TEMPLATES = new String[][] {
 		new String[] {
-			"The banana",
+			"The 香蕉",
 			"The swallow",
 			"The 大象",
 			"The teddy bear",

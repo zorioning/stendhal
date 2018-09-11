@@ -124,7 +124,7 @@ public class NewsFromHackim extends AbstractQuest {
 			Arrays.asList("Xin", "Xin Blanca", "Blanca"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"You don't know who Xin is? Everybody at the tavern knows Xin. He's the guy who owes beer money to most of the people in 塞门镇! So, will you do it?",
+			"You don't know who Xin is? Everybody at the tavern knows Xin. He's the guy who owes 啤酒 money to most of the people in 塞门镇! So, will you do it?",
 			null);
 
 		npc.addReply(Arrays.asList("Xin", "Xin Blanca", "Blanca"), "Xin's so cool. I want to work in the tavern too like him but my dad says I have to learn a trade.");

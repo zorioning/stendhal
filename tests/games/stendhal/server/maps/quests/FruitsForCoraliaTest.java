@@ -235,7 +235,7 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 
 		PlayerTestHelper.equipWithStackableItem(player, "banana", 5);
 		PlayerTestHelper.equipWithStackableItem(player, "grapes", 2);
-		PlayerTestHelper.equipWithStackableItem(player, "pear", 4);
+		PlayerTestHelper.equipWithStackableItem(player, "梨子", 4);
 		PlayerTestHelper.equipWithStackableItem(player, "pomegranate", 2);
 		PlayerTestHelper.equipWithStackableItem(player, "watermelon", 1);
 
@@ -244,7 +244,7 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 
 		en.step(player, "bananas");
 		en.step(player, "grapes");
-		en.step(player, "pear");
+		en.step(player, "梨子");
 		en.step(player, "pomegranate");
 		en.step(player, "watermelon");
 

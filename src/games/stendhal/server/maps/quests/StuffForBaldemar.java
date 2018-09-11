@@ -101,7 +101,7 @@ public class StuffForBaldemar extends AbstractQuest {
 		itemCollector.require().item("gold bar").pieces(10)
 				.bySaying("I need %s to melt down with the mithril and iron.");
 		itemCollector.require().item("iron").pieces(20).bySaying("I need %s to melt down with the mithril and gold.");
-		itemCollector.require().item("black pearl").pieces(10)
+		itemCollector.require().item("黑珍珠").pieces(10)
 				.bySaying("I need %s to crush into fine powder to sprinkle onto shield to give it a nice sheen.");
 		itemCollector.require().item("shuriken").pieces(20).bySaying(
 				"I need %s to melt down with the mithril, gold and iron. It is a 'secret' ingredient that only you and I know about. ;)");

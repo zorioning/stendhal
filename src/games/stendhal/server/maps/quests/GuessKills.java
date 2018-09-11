@@ -108,7 +108,7 @@ public class GuessKills extends AbstractQuest {
     @Override
     public void addToWorld() {
         fillQuestInfo(
-				"The guessing game",
+				"猜谜游戏",
 				"Crearid 玩的一个游戏. 猜猜你共杀了多少生物。",
 				true);
         prepareQuestStep();
@@ -235,7 +235,7 @@ public class GuessKills extends AbstractQuest {
 			}
         };
 
-        final String[] triggers = {"game", "games", "play", "play game", "play games"};
+        final String[] triggers = {"游戏", "玩游戏", "玩", "开始", "开始游戏"};
 
         //if quest not finished and came back
         npc.add(ConversationStates.ATTENDING,
@@ -272,7 +272,7 @@ public class GuessKills extends AbstractQuest {
         		ConversationPhrases.NO_MESSAGES,
                 null,
                 ConversationStates.ATTENDING,
-                "Oh well. Your loss, now what can I do for you?",
+                "啊, 好吧. 你失败了, 还有什么事要我帮忙?",
                 null);
 
         //if player has not killed enough creatures don't give quest
@@ -280,8 +280,8 @@ public class GuessKills extends AbstractQuest {
                 Arrays.asList(triggers),
                 new NotCondition(requirement),
                 ConversationStates.ATTENDING,
-                "I'd like some entertainment but you don't look like you're up to it just yet." +
-                " Come back when you've gained a bit more experience fighting creatures.",
+                "我喜欢看点娱乐表演，但看起来目前你还不像能胜任." +
+                " 在你打怪经验积累更多以后再回来吧.",
                 null);
 
         //ask if player would like to take quest if player has killed enough creatures
@@ -289,7 +289,7 @@ public class GuessKills extends AbstractQuest {
                 Arrays.asList(triggers),
                 new AndCondition(requirement, enoughTimePassed, new NotCondition(questNotDone)),
                 ConversationStates.QUEST_OFFERED,
-                "I'm a little bored at the moment. Would you like to play a game?",
+                "我现在有点烦燥. 想玩一把游戏吗?",
                 null);
 
         //tell player to come back later if one week has not passed
@@ -298,7 +298,7 @@ public class GuessKills extends AbstractQuest {
                 new AndCondition(requirement, new NotCondition(enoughTimePassed), new NotCondition(questNotDone)),
                 ConversationStates.ATTENDING,
                 null,
-                new SayTimeRemainingAction(QUEST_SLOT, 1, INTERVAL_BETWEEN_TRIES, "I've had plenty of fun for now, thanks. Come back in, lets say"));
+                new SayTimeRemainingAction(QUEST_SLOT, 1, INTERVAL_BETWEEN_TRIES, "我现在心情好多了, 谢谢. Come back in, lets say"));
 
         //ask quest question if quest accepted, also gets the creature type to ask about
         npc.add(ConversationStates.QUEST_OFFERED,

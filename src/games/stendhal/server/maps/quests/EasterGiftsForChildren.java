@@ -87,7 +87,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
 			res.add("I promised to bring Caroline some sweets for children around Faiumoni as an Easter gift.");
 		}
-		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("small easter egg", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
+		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("小复活蛋", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
 			res.add("I got all the sweets and will take them to Caroline.");
 		}
 		if ("done".equals(questState)) {
@@ -173,10 +173,10 @@ public class EasterGiftsForChildren extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("small easter egg", "chocolate egg"),
+				Arrays.asList("小复活蛋", "chocolate egg"),
 				null,
 				ConversationStates.ATTENDING,
-				"Small easter eggs are a speciality of our Easter bunny friend who hops around during the Easter days. Maybe you will meet him on his way. :)", null);
+				"小复活蛋s are a speciality of our Easter bunny friend who hops around during the Easter days. Maybe you will meet him on his way. :)", null);
 	}
 
 	private void prepareBringingStep() {
@@ -188,7 +188,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new AndCondition(
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
-					new PlayerHasItemWithHimCondition("small easter egg",1),
+					new PlayerHasItemWithHimCondition("小复活蛋",1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
@@ -200,7 +200,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new NotCondition(new AndCondition(
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
-					new PlayerHasItemWithHimCondition("small easter egg",1),
+					new PlayerHasItemWithHimCondition("小复活蛋",1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5)))),
 			ConversationStates.ATTENDING,
@@ -209,7 +209,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("巧克力棒", 5));
-		reward.add(new DropItemAction("small easter egg", 1));
+		reward.add(new DropItemAction("小复活蛋", 1));
 		reward.add(new DropItemAction("苹果", 5));
 		reward.add(new DropItemAction("cherry",5));
 		reward.add(new EquipItemAction("阿多斯城回城卷", 5));
@@ -228,7 +228,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 
 			new AndCondition(
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
-					new PlayerHasItemWithHimCondition("small easter egg", 1),
+					new PlayerHasItemWithHimCondition("小复活蛋", 1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
 					new PlayerHasItemWithHimCondition("cherry", 5)),
 

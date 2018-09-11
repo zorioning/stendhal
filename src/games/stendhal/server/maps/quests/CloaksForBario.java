@@ -101,7 +101,7 @@ public class CloaksForBario extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"I don't dare go upstairs anymore because I stole a beer barrel from the dwarves. But it is so cold down here... Can you help me?",
+				"I don't dare go upstairs anymore because I stole a 啤酒 barrel from the dwarves. But it is so cold down here... Can you help me?",
 				null);
 
 		// player should already be getting cloaks

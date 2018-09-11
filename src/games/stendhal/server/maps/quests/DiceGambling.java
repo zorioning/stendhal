@@ -118,7 +118,7 @@ public class DiceGambling extends AbstractQuest {
 		Map<Integer, Pair<String, String>> map = new HashMap<Integer, Pair<String, String>>();
 		map.put(3, new Pair<String, String>("蓝盾",
 				"小哥，你真是狗屎运！我对你很失望！给你，把这 蓝盾 拿走吧."));
-		map.put(7, new Pair<String, String>("beer",
+		map.put(7, new Pair<String, String>("啤酒",
 				"这是安慰奖，一瓶啤酒."));
 		map.put(8, new Pair<String, String>("wine",
 				"你赢了一杯可口的红酒！"));

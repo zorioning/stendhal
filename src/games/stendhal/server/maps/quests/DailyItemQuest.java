@@ -151,7 +151,7 @@ public class DailyItemQuest extends AbstractQuest {
 
 		// drinks
 		items.put("antidote",5);
-		items.put("beer",10);
+		items.put("啤酒",10);
 		items.put("greater antidote",5);
 		items.put("greater potion",5);
 		items.put("milk",5);
@@ -171,7 +171,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("苹果",5);
 		items.put("苹果派",2);
 		items.put("artichoke",10);
-		items.put("bread",5);
+		items.put("面包",5);
 		items.put("broccoli",5);
 		items.put("button mushroom",10);
 		items.put("carrot",10);
@@ -191,12 +191,12 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("garlic",5);
 		items.put("grapes",5);
 		items.put("grilled steak",1);
-		items.put("ham",10);
+		items.put("火腿",10);
 		items.put("honey",2);
 		items.put("leek",5);
 		items.put("肉",10);
 		items.put("onion",5);
-		items.put("pear",5);
+		items.put("梨子",5);
 		items.put("perch",5);
 		items.put("pie",5);
 		items.put("pomegranate",5);

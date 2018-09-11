@@ -2023,7 +2023,7 @@ This sounds like a very nice place to meet some interesting people and have a ni
     <entity x="44" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">The sign says: "Bakery and pizza delivery. Daily fresh bread!"
+      <attribute name="text">The sign says: "Bakery and pizza delivery. Daily fresh 面包!"
 Ahh nice, you can already smell it. And in small letters below is added: "New! Leander's tasty 三明治s!"</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>
@@ -2150,7 +2150,7 @@ Ahh nice, you can already smell it. And in small letters below is added: "New! L
     <entity x="14" y="12">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.area.WalkBlocker" />
-      <attribute name="description">You see a table, sticky with splashes of old beer.</attribute>
+      <attribute name="description">You see a table, sticky with splashes of old 啤酒.</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">4</attribute>
     </entity>
@@ -2763,7 +2763,7 @@ Holy mackerel! These chips are tasty.
     <entity x="24" y="20">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">You see a shopping list, dropped by 海云那冉.  Funny, most of the items are different kinds of beer and ale.</attribute>
+      <attribute name="text">You see a shopping list, dropped by 海云那冉.  Funny, most of the items are different kinds of 啤酒 and ale.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>

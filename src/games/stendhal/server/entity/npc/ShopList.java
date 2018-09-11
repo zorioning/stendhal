@@ -26,14 +26,14 @@ public final class ShopList {
 	static {
 		final ShopList shops = ShopList.get();
 
-		shops.add("food&drinks", "beer", 10);
+		shops.add("food&drinks", "啤酒", 10);
 		shops.add("food&drinks", "wine", 15);
 		shops.add("food&drinks", "瓶子", 5);
 		shops.add("food&drinks", "干酪", 20);
 		shops.add("food&drinks", "苹果", 10);
 		shops.add("food&drinks", "carrot", 10);
 		shops.add("food&drinks", "肉", 40);
-		shops.add("food&drinks", "ham", 80);
+		shops.add("food&drinks", "火腿", 80);
 
 		shops.add("adosfoodseller", "苹果", 50);
 		shops.add("adosfoodseller", "carrot", 50);
@@ -41,7 +41,7 @@ public final class ShopList {
 		shops.add("buyfood", "干酪", 5);
 		shops.add("buyfood", "肉", 10);
 		shops.add("buyfood", "spinach", 15);
-		shops.add("buyfood", "ham", 20);
+		shops.add("buyfood", "火腿", 20);
 		shops.add("buyfood", "flour", 25);
 		shops.add("buyfood", "porcini", 30);
 
@@ -297,7 +297,7 @@ public final class ShopList {
 		// mountain dwarf buyer of odds and ends -3 ados abandoned keep)
 		shops.add("buyoddsandends", "shuriken", 20);
 		shops.add("buyoddsandends", "护身符", 800);
-		shops.add("buyoddsandends", "black pearl", 100);
+		shops.add("buyoddsandends", "黑珍珠", 100);
 		shops.add("buyoddsandends", "幸运石", 60);
 		shops.add("buyoddsandends", "knife", 5);
 		shops.add("buyoddsandends", "dagger", 20);
@@ -353,10 +353,10 @@ public final class ShopList {
 		// hotdog lady in athor)
 		shops.add("buy4hotdogs", "sausage", 30);
 		shops.add("buy4hotdogs", "cheese sausage", 25);
-		shops.add("buy4hotdogs", "bread", 15);
+		shops.add("buy4hotdogs", "面包", 15);
 		shops.add("buy4hotdogs", "onion", 20);
 		shops.add("buy4hotdogs", "canned tuna", 15);
-		shops.add("buy4hotdogs", "ham", 15);
+		shops.add("buy4hotdogs", "火腿", 15);
 		shops.add("buy4hotdogs", "干酪", 5);
 
 		shops.add("sellhotdogs", "hotdog", 160);
@@ -414,7 +414,7 @@ public final class ShopList {
 		// party time! For maria for example. Bit more expensive than normal
 		shops.add("sellparty", "pina colada", 100);
 		shops.add("sellparty", "巧克力棒", 100);
-		shops.add("sellparty", "beer", 10);
+		shops.add("sellparty", "啤酒", 10);
 		shops.add("sellparty", "wine", 15);
 		shops.add("sellparty", "vanilla shake", 150);
 		shops.add("sellparty", "icecream", 50);
@@ -464,7 +464,7 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);
 		shops.add("sellrevivalweeks", "三明治", 130);
 		shops.add("sellrevivalweeks", "wine", 25);
-		shops.add("sellrevivalweeks", "beer", 20);
+		shops.add("sellrevivalweeks", "啤酒", 20);
 		shops.add("sellrevivalweeks", "水", 15);
 
 		// for ados botanical gardens or if you like, other cafes.

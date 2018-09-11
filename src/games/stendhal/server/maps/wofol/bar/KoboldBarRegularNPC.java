@@ -61,7 +61,7 @@ public class KoboldBarRegularNPC implements ZoneConfigurator {
                 addHelp("*GrOaN*");
                 addQuest("*mOaN*");
                 addGoodbye("*BUrP!*");
-                addReply(Arrays.asList("wine","beer","mild","strong","torcibud"),
+                addReply(Arrays.asList("wine","啤酒","mild","strong","torcibud"),
                         "*Wrof!*");
             }
         };

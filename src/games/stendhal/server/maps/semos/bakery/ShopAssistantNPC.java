@@ -51,7 +51,7 @@ import games.stendhal.server.entity.npc.condition.QuestNotCompletedCondition;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * A woman who bakes bread for players.
+ * A woman who bakes 面包 for players.
  *
  * Erna will lend tools.
  *
@@ -97,12 +97,12 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				addHelp("面包对你很好，尤其在你外出冒险时，不能总吞下红色的生肉。我的老板 Leander 是这个岛上做的三明治 三明治es 最好的面包师!");
 				addGoodbye();
 
-				// Erna bakes bread if you bring her flour.
+				// Erna bakes 面包 if you bring her flour.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("flour", 2);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("erna_bake_bread",
-						"bake", "bread", requiredResources, 10 * 60);
+						"bake", "面包", requiredResources, 10 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
 				"欢迎来到 塞门镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包。");

@@ -197,11 +197,11 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("flour"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"#詹妮 will mill the grain I gave you as reward to flour which you could maybe use for #bread?",
+				"#詹妮 will mill the grain I gave you as reward to flour which you could maybe use for #面包?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("bread"),
+				Arrays.asList("面包"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
 				"#Erna hasn't baked for you yet? It is really worth it, because #Leander can use it to make #三明治s for you.",
@@ -225,7 +225,7 @@ public class HelpWithTheHarvest extends AbstractQuest {
 				Arrays.asList("erna"),
 				createFinishedCondition(),
 				ConversationStates.ATTENDING,
-				"Erna is the assistant to #Leander in the bakery. If you bring her #flour, she will bake #bread for you.",
+				"Erna is the assistant to #Leander in the bakery. If you bring her #flour, she will bake #面包 for you.",
 				null);
 
         /*

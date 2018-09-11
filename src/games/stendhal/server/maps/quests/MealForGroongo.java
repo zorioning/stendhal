@@ -498,7 +498,7 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_schnitzel.put("potato", new Pair<Integer, Integer>(3,6));
         requiredIngredients_schnitzel.put("porcini", new Pair<Integer, Integer>(2,4));
         requiredIngredients_schnitzel.put("button mushroom", new Pair<Integer, Integer>(4,8));
-        requiredIngredients_schnitzel.put("ham", new Pair<Integer, Integer>(2,3));
+        requiredIngredients_schnitzel.put("火腿", new Pair<Integer, Integer>(2,3));
         requiredIngredients_schnitzel.put("肉", new Pair<Integer, Integer>(2,3));
         requiredIngredients_schnitzel.put("milk", new Pair<Integer, Integer>(1,2));
         requiredIngredients_schnitzel.put("干酪", new Pair<Integer, Integer>(1,4));
@@ -584,10 +584,10 @@ public class MealForGroongo extends AbstractQuest {
         //requiredIngredients_brigadeiro.put("coconut", new Pair<Integer, Integer>(1,2)); // will be cacao pod... monkeys?
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_macedonia = new HashMap<String, Pair<Integer, Integer>>();
-        requiredIngredients_macedonia.put("banana", new Pair<Integer, Integer>(1,6));
+        requiredIngredients_macedonia.put("香蕉", new Pair<Integer, Integer>(1,6));
         requiredIngredients_macedonia.put("苹果", new Pair<Integer, Integer>(1,8));
-        requiredIngredients_macedonia.put("pear", new Pair<Integer, Integer>(1,8));
-        requiredIngredients_macedonia.put("watermelon", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_macedonia.put("梨子", new Pair<Integer, Integer>(1,8));
+        requiredIngredients_macedonia.put("西瓜", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_slagroomtart = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_slagroomtart.put("milk", new Pair<Integer, Integer>(1,4));

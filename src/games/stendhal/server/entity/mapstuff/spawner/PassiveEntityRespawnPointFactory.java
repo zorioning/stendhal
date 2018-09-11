@@ -113,7 +113,7 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint.setDescription("这是一些动物吃剩的食物，像是肉。");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("ham", 100);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("火腿", 100);
 			passiveEntityrespawnPoint.setDescription("这是一些动物吃剩的食物，像是ham.");
 			break;
 		case 2:
@@ -153,12 +153,12 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("菠萝", 1200);
 			break;
 		case 3:
-			passiveEntityrespawnPoint = new VegetableGrower("watermelon");
+			passiveEntityrespawnPoint = new VegetableGrower("西瓜");
 			passiveEntityrespawnPoint
 					.setDescription("这是一株西瓜藤.");
 			break;
 		case 4:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("banana", 1000);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("香蕉", 1000);
 			passiveEntityrespawnPoint
 					.setDescription("这棵树上的香蕉快要掉下来。");
 			break;
@@ -168,7 +168,7 @@ public class PassiveEntityRespawnPointFactory {
 					.setDescription("一棵葡萄藤。");
 			break;
 		case 6:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("pear", 500);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("梨子", 500);
 			passiveEntityrespawnPoint
 					.setDescription("树上的梨子快要掉下了。");
 			break;

@@ -83,10 +83,10 @@ public class ChefNPC implements ZoneConfigurator  {
 			public void createDialog() {
 				addJob("我是这里的面包师，也做 #pizza 外卖服务。在战争破坏和路被封锁之前，有很多来自 Ados 城的订单: 但也给了我更多时间给重要的客户制作 #make 三明治s 三明治；他们都说很好吃!");
 				addHelp("如果你想挣钱，可以帮我送一披撒 #pizza 外卖. 本来以前由我女儿 #莎丽 送，但他这会在外渡假去了");
-				addReply("bread", "Oh, Erna 管理对外的商务工作。你可以到外面房间跟她说.");
+				addReply("面包", "Oh, Erna 管理对外的商务工作。你可以到外面房间跟她说.");
 				addReply("干酪",
 				"现在 Cheese 干酪相当难找，我们这最近闹鼠灾。我很奇怪这些老鼠把干酪藏哪了？如果你卖 #'sell cheese' ，我很乐意买一些!");
-				addReply("ham",
+				addReply("火腿",
 				"很好，你好像一个专业猎人；为什么不去森林猎取一些上等肉呢？不要给我这些小片的肉，虽然。。。我只用高端火腿做三明治三明治s !");
 				addReply("莎丽",
 				"我女儿 莎丽 可能会帮你弄到火腿 ham. 她是一个侦察员。你明白，我想她现在可能在 Or'ril 城堡的南面露营.");
@@ -100,11 +100,11 @@ public class ChefNPC implements ZoneConfigurator  {
 
 				addGoodbye();
 
-				// Leander makes 三明治es if you bring him bread, cheese, and ham.
+				// Leander makes 三明治es if you bring him 面包, cheese, and ham.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("bread", 1);
+				requiredResources.put("面包", 1);
 				requiredResources.put("干酪", 2);
-				requiredResources.put("ham", 1);
+				requiredResources.put("火腿", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour(
 						"leander_make_sandwiches", "make", "三明治",

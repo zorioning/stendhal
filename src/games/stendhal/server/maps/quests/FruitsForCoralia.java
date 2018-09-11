@@ -84,7 +84,7 @@ public class FruitsForCoralia extends AbstractQuest {
     /**
 	 * Required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "苹果=4;banana=5;cherry=9;grapes=2;pear=4;watermelon=1;pomegranate=2";
+	protected static final String NEEDED_ITEMS = "苹果=4;香蕉=5;cherry=9;grapes=2;pear=4;西瓜=1;pomegranate=2";
 
     @Override
     public void addToWorld() {
@@ -245,7 +245,7 @@ public class FruitsForCoralia extends AbstractQuest {
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
-            "banana",
+            "香蕉",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
             "来自小岛的格外异域风情香蕉。一直往西走，穿过。。还是说香蕉的事吧，它肉多且够新鲜.",
@@ -266,14 +266,14 @@ public class FruitsForCoralia extends AbstractQuest {
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
-        	"pear",
+        	"梨子",
         	new QuestActiveCondition(QUEST_SLOT),
         	ConversationStates.QUESTION_1,
         	"在北方山上有个漂亮的瀑布，我看到过那里有梨树.",
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
-            "watermelon",
+            "西瓜",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
             "Kalavan 花园里有一个大西瓜，可以为我的帽子做成漂亮的装饰",

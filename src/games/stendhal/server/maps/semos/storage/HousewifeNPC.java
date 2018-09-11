@@ -38,7 +38,7 @@ public class HousewifeNPC implements ZoneConfigurator {
 		final SpeakerNPC npc = new SpeakerNPC("Eonna") {
 
 			/**
-			 * Creates a path around the table with the beers and to the furnance.
+			 * Creates a path around the table with the 啤酒s and to the furnance.
 			 */
 			@Override
 			protected void createPath() {

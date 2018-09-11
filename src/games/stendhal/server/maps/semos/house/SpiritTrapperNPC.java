@@ -95,13 +95,13 @@ public class SpiritTrapperNPC implements ZoneConfigurator {
                 productsNames.add("电箭");
 
                 final Map<String, Integer> reqRes_iceArrow = new TreeMap<String, Integer>();
-                reqRes_iceArrow.put("black pearl", 1);
+                reqRes_iceArrow.put("黑珍珠", 1);
 
                 final Map<String, Integer> reqRes_fireArrow = new TreeMap<String, Integer>();
-                reqRes_fireArrow.put("black pearl", 1);
+                reqRes_fireArrow.put("黑珍珠", 1);
 
                 final Map<String, Integer> reqRes_lightArrow = new TreeMap<String, Integer>();
-                reqRes_lightArrow.put("black pearl", 2);
+                reqRes_lightArrow.put("黑珍珠", 2);
 
 
                 final HashMap<String, Map<String, Integer>> requiredResourcesPerProduct = new HashMap<String, Map<String, Integer>>();

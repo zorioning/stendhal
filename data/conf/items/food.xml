@@ -50,9 +50,9 @@
 		</equipable>
 	</item>
 
-	<item name="banana">
+	<item name="香蕉">
 		<type class="food" subclass="banana" tileid="-1" />
-		<description>You see a banana. Take care of monkeys when you have them in your bag!</description>
+		<description>You see a 香蕉. Take care of monkeys when you have them in your bag!</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="10" />
@@ -190,7 +190,7 @@
 		</equipable>
 	</item>
 
-	<item name="pear">
+	<item name="梨子">
 		<type class="food" subclass="pear" tileid="-1" />
 		<description>You see a pear. Its lovely smell convinces you of taking it.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
@@ -259,9 +259,9 @@
 		</equipable>
 	</item>
 
-	<item name="watermelon">
+	<item name="西瓜">
 		<type class="food" subclass="watermelon" tileid="-1" />
-		<description>You see a watermelon. It freshes your throat during hot summer days.</description>
+		<description>You see a 西瓜. It freshes your throat during hot summer days.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="15" />
@@ -859,9 +859,9 @@
 	</item>
 
     <!-- product -->
-	<item name="bread">
+	<item name="面包">
 		<type class="food" subclass="baguette" tileid="-1" />
-		<description>You see a loaf of bread. It is freshly baked and ready to eat.</description>
+		<description>You see a loaf of 面包. It is freshly baked and ready to eat.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="40" />
@@ -1482,8 +1482,8 @@
 		</equipable>
 	</item>
 
-	<item name="ham">
-		<type class="food" subclass="ham" tileid="-1" />
+	<item name="火腿">
+		<type class="food" subclass="火腿" tileid="-1" />
 		<description>You see a juicy ham.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
@@ -1530,9 +1530,9 @@
 
 
     <!-- quest -->
-	<item name="easter egg">
+	<item name="复活蛋">
 		<type class="food" subclass="easter_egg" tileid="-1" />
-		<description>You see a lovely chocolate easter egg. It's huge!</description>
+		<description>You see a lovely chocolate 复活蛋. It's huge!</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="1980" />
@@ -1553,9 +1553,9 @@
 		</equipable>
 	</item>
 
-	<item name="small easter egg">
+	<item name="小复活蛋">
 		<type class="food" subclass="small_easter_egg" tileid="-1" />
-		<description>You see a small chocolate easter egg. Yummy!</description>
+		<description>You see a small chocolate 复活蛋. Yummy!</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="100" />

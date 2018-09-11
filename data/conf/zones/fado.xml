@@ -158,7 +158,7 @@ You'll definitely need a 婚戒. Come here to get yours cast once you are engage
         class-name="games.stendhal.server.entity.mapstuff.sound.BellSoundSource" />
     </entity>
 
-    <!-- Fado hotel beer garden -->
+    <!-- Fado hotel 啤酒 garden -->
 
     <!-- big tables -->
     <entity x="21" y="72">
