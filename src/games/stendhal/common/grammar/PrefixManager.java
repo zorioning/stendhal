@@ -62,7 +62,7 @@ final class PrefixManager
 //		register("piece of ", "pieces of ", "paper");
 //		register("piece of ", "pieces of ", "iron");
 //		register("piece of ", "pieces of ", "chicken");
-//		register("piece of ", "pieces of ", "coal");
+//		register("piece of ", "pieces of ", "煤炭");
 //		register("piece of ", "pieces of ", "beeswax");
 //
 //		register("sack of ", "sacks of ", "面粉");
@@ -71,14 +71,14 @@ final class PrefixManager
 //		register("sheaf of ", "sheaves of ", "小麦");
 //		register("loaf of ", "loaves of ", "面包");
 //		register("stick of ", "sticks of ", "butter");
-//		register("bulb of ", "bulbs of ", "garlic");
+//		register("bulb of ", "bulbs of ", "大蒜");
 //		register("jar of ", "jars of ", "honey");
 //		register("glass of ", "glasses of ", "wine");
 //		register("cup of ", "cups of ", "tea");
 //		register("sprig of ", "sprigs of ", "arandula");
 //		register("root of ", "roots of ", "mandragora");
 //		register("bunch of ", "bunches of ", "daisies");
-//		register("bunch of ", "bunches of ", "grapes");
+//		register("bunch of ", "bunches of ", "葡萄");
 //		register("can of ", "cans of ", "oil");
 //
 //		register("bottle of ", "bottles of ", "啤酒");

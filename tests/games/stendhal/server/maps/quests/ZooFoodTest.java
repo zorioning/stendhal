@@ -191,7 +191,7 @@ public class ZooFoodTest extends ZonePlayerAndNPCTestImpl {
 		assertTrue(enFeelgood.step(player, "offers"));
 
 		assertEquals(
-				"I sell antidote, minor potion, potion, and greater potion.",
+				"I sell antidote, 小治疗济, potion, and 大治疗济.",
 				getReply(feelgoodNpc));
 		assertTrue(enFeelgood.step(player, "bye"));
 		assertEquals("Bye!", getReply(feelgoodNpc));

@@ -74,7 +74,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	private final boolean productBound;
 
 	/**
-	 * A mapping which maps the name of each required resource (e.g. "iron ore")
+	 * A mapping which maps the name of each required resource (e.g. "铁矿")
 	 * to the amount of this resource that is required for one unit of the
 	 * product.
 	 */
@@ -97,7 +97,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	 *            valid item name.
 	 * @param requiredResourcesPerItem
 	 *            a mapping which maps the name of each required resource (e.g.
-	 *            "iron ore") to the amount of this resource that is required
+	 *            "铁矿") to the amount of this resource that is required
 	 *            for one unit of the product.
 	 * @param productionTimePerItem
 	 *            the number of seconds required to produce one unit of the
@@ -122,7 +122,7 @@ public class ProducerBehaviour extends TransactionBehaviour {
 	 *            valid item name.
 	 * @param requiredResourcesPerItem
 	 *            a mapping which maps the name of each required resource (e.g.
-	 *            "iron ore") to the amount of this resource that is required
+	 *            "铁矿") to the amount of this resource that is required
 	 *            for one unit of the product.
 	 * @param productionTimePerItem
 	 *            the number of seconds required to produce one unit of the

@@ -99,7 +99,7 @@ public class MoveAndStrengthenOnlinePlayers extends ScriptImpl {
 				}
 
 				private void fillBag(Player player) {
-					String[] items = {"leek", "porcini", "potion", "antidote", "啤酒", "minor potion", "home scroll", "阿多斯城回城卷", "空白卷轴"};
+					String[] items = {"韭菜", "porcini", "potion", "antidote", "啤酒", "小治疗济", "home scroll", "阿多斯城回城卷", "空白卷轴"};
 					for(String item : items) {
 						StackableItem stackable = (StackableItem) SingletonRepository.getEntityManager().getItem(item);
 						stackable.setQuantity(50);
@@ -111,7 +111,7 @@ public class MoveAndStrengthenOnlinePlayers extends ScriptImpl {
 					StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem("money");
 					money.setQuantity(5000);
 					player.equipToInventoryOnly(money);
-					StackableItem potions = (StackableItem) SingletonRepository.getEntityManager().getItem("greater potion");
+					StackableItem potions = (StackableItem) SingletonRepository.getEntityManager().getItem("大治疗济");
 					potions.setQuantity(5000);
 					player.equipToInventoryOnly(potions);
 					if(!player.isEquipped("混沌匕首")) {

@@ -34,8 +34,8 @@ public class ObtainAchievementsFactory extends AbstractAchievementFactory {
 		// Vegetable harvest achievement
 		achievements.add(createAchievement("obtain.harvest.vegetable", "Farmer", "Harvest 3 of all vegetables that grow in Faiumoni",
 				Achievement.EASY_BASE_SCORE, true,
-				new PlayerHasHarvestedNumberOfItemsCondition(3, "carrot", "salad", "broccoli", "cauliflower", "leek",
-						"onion", "courgette", "spinach", "collard", "garlic", "artichoke")));
+				new PlayerHasHarvestedNumberOfItemsCondition(3, "胡萝卜", "色拉", "绿花菜", "白花菜", "韭菜",
+						"洋葱", "西葫芦", "菠菜", "甘蓝", "大蒜", "菜蓟")));
 
 		// Fishing achievement
 		achievements.add(createAchievement("obtain.fish", "Fisherman", "Catch 15 of each type of fish",

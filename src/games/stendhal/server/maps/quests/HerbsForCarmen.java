@@ -77,7 +77,7 @@ public class HerbsForCarmen extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "arandula=5;porcini=1;苹果=3;木头=2;button mushroom=1";
+	protected static final String NEEDED_ITEMS = "arandula=5;porcini=1;苹果=3;木头=2;纽扣菇=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -176,7 +176,7 @@ public class HerbsForCarmen extends AbstractQuest {
 
 		npc.add(
 			ConversationStates.ATTENDING,
-			Arrays.asList("button mushroom","porcino","porcini","porcinis"),
+			Arrays.asList("纽扣菇","porcino","porcini","porcinis"),
 			null,
 			ConversationStates.ATTENDING,
 			"有人告诉我在 塞门镇 森林中有一些不同种类的蘑菇, 从这往南走就能到. ",
@@ -224,7 +224,7 @@ public class HerbsForCarmen extends AbstractQuest {
 				new SayTextAction("太好了! 现在我能免费治好很多人了, 非常感谢. 你工作时可以带上这个. "),
 				new IncreaseXPAction(50),
 				new IncreaseKarmaAction(5),
-				new EquipItemAction("minor potion", 5)
+				new EquipItemAction("小治疗济", 5)
 				);
 
 		/* add triggers for the item names */

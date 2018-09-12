@@ -184,7 +184,7 @@ public class GrammarTest {
 		assertEquals("piece of wood", Grammar.fullForm("wood"));
 		assertEquals("piece of paper", Grammar.fullForm("paper"));
 		assertEquals("piece of iron", Grammar.fullForm("iron"));
-		assertEquals("nugget of iron ore", Grammar.fullForm("iron ore"));
+		assertEquals("nugget of 铁矿", Grammar.fullForm("铁矿"));
 		assertEquals("sack of flour", Grammar.fullForm("面粉"));
 		assertEquals("sheaf of grain", Grammar.fullForm("grain"));
 		assertEquals("loaf of bread", Grammar.fullForm("bread"));
@@ -379,11 +379,11 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("black dragon cloaks",
 				"black dragon cloak");
 		testPluralisationAndSingularisation("golden cloaks", "golden cloak");
-		testPluralisationAndSingularisation("cherries", "cherry");
+		testPluralisationAndSingularisation("cherries", "樱桃");
 		testPluralisationAndSingularisation("pieces of cheese",
 				"piece of cheese");
-		testPluralisationAndSingularisation("carrots", "carrot");
-		testPluralisationAndSingularisation("salads", "salad");
+		testPluralisationAndSingularisation("胡萝卜s", "胡萝卜");
+		testPluralisationAndSingularisation("色拉s", "色拉");
 		testPluralisationAndSingularisation("apples", "apple");
 		testPluralisationAndSingularisation("loaves of bread",
 				"loaf of bread");
@@ -391,20 +391,20 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("pieces of ham", "火腿");
 		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("pies", "pie");
-		testPluralisationAndSingularisation("button mushrooms",
-				"button mushroom");
+		testPluralisationAndSingularisation("纽扣菇s",
+				"纽扣菇");
 		testPluralisationAndSingularisation("porcini", "porcino");
 		testPluralisationAndSingularisation("toadstools", "toadstool");
 		testPluralisationAndSingularisation("bottles of beer", "beer");
 		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
-		testPluralisationAndSingularisation("bottles of minor potion", "minor potion");
+		testPluralisationAndSingularisation("bottles of 小治疗济", "小治疗济");
 		testPluralisationAndSingularisation("bottles of antidote", "antidote");
 		testPluralisationAndSingularisation("bottles of potion", "potion");
-		testPluralisationAndSingularisation("bottles of greater potion",
-				"greater potion");
+		testPluralisationAndSingularisation("bottles of 大治疗济",
+				"大治疗济");
 		testPluralisationAndSingularisation("bottles of poison", "poison");
-		testPluralisationAndSingularisation("bottles of greater poison",
-				"greater poison");
+		testPluralisationAndSingularisation("bottles of 强毒",
+				"强毒");
 		testPluralisationAndSingularisation("bottles of deadly poison",
 				"deadly poison");
 		testPluralisationAndSingularisation("flasks", "flask");
@@ -416,8 +416,8 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("sheaves of grain",
 				"sheaf of grain");
 		testPluralisationAndSingularisation("bags of flour", "bag of flour");
-		testPluralisationAndSingularisation("nuggets of iron ore",
-				"nugget of iron ore");
+		testPluralisationAndSingularisation("nuggets of 铁矿",
+				"nugget of 铁矿");
 		testPluralisationAndSingularisation("bars of iron", "bar of iron");
 		testPluralisationAndSingularisation("golden gm tokens",
 				"golden gm token");
@@ -457,7 +457,7 @@ public class GrammarTest {
         testPluralisationAndSingularisation("men", "man");
         testPluralisationAndSingularisation("humans", "human");
 
-        testPluralisationAndSingularisation("tomatoes", "tomato");
+        testPluralisationAndSingularisation("西红柿es", "西红柿");
 		testPluralisationAndSingularisation("algae", "alga");
 		testPluralisationAndSingularisation("larvae", "larva");
 		testPluralisationAndSingularisation("hyphae", "hypha");
@@ -667,14 +667,14 @@ public class GrammarTest {
 	@Test
 	public void testQuantityPlNoun() {
 		int cnt = 0;
-		assertEquals("these 0 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityplnoun(cnt, "grilled steak", ""));
+		assertEquals("these 0 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityplnoun(cnt, "烤排", ""));
 		++cnt;
-		assertEquals("this grilled steak", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityplnoun(cnt, "grilled steak", ""));
+		assertEquals("this 烤排", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityplnoun(cnt, "烤排", ""));
 		++cnt;
-		assertEquals("these 2 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityplnoun(cnt, "grilled steak", ""));
+		assertEquals("these 2 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityplnoun(cnt, "烤排", ""));
 	}
 
 	/**
@@ -683,23 +683,23 @@ public class GrammarTest {
 	@Test
 	public void testQuantityNumberStrNoun() {
 		int cnt = 0;
-		assertEquals("these 0 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these 0 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		++cnt;
-		assertEquals("this grilled steak", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("this 烤排", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		++cnt;
-		assertEquals("these two grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these two 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		++cnt;
-		assertEquals("these three grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these three 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		cnt = 12;
-		assertEquals("these twelve grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these twelve 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 		cnt = 13;
-		assertEquals("these 13 grilled steaks", Grammar.thisthese(cnt) + " " +
-				Grammar.quantityNumberStrNoun(cnt, "grilled steak"));
+		assertEquals("these 13 烤排s", Grammar.thisthese(cnt) + " " +
+				Grammar.quantityNumberStrNoun(cnt, "烤排"));
 	}
 
 	/**

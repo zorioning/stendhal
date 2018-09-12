@@ -74,7 +74,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addReply("木头",
 						"我需要一些木头保持炉子的火力. 你可以在森林里的地上找到一些.");
 
-				addReply(Arrays.asList("ore", "iron", "iron ore"),
+				addReply(Arrays.asList("ore", "iron", "铁矿"),
 				"你能到 Or'ril 西面的山上, 矮人矿附近的地方找到铁矿, 去那要小心!");
 
 				addReply("金盘子",
@@ -86,15 +86,15 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addReply("bobbin", "虽然我做工具生意 #trade ,但我不做线轴 bobbins, 抱歉. 造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
 				addReply(Arrays.asList("oil", "can of oil"), "Oh, 这些是由渔夫 fishermen 给我们供应.");
 
-				addHelp("如果你给我带来木头 #wood 和铁矿 #'iron ore', 我能为你铸造 #cast 铁块. 然后把它卖给矮人, 就可以为自已赚些钱.");
+				addHelp("如果你给我带来木头 #wood 和铁矿 #'铁矿', 我能为你铸造 #cast 铁块. 然后把它卖给矮人, 就可以为自已赚些钱.");
 				addJob("我是一个铁匠, 工作是鋳铁 #cast , 并且卖点 #trade 工具.");
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SellerBehaviour(SingletonRepository.getShopList().get("selltools")));
 
-				// 艾克德罗斯 casts iron if you bring him wood and iron ore.
+				// 艾克德罗斯 casts iron if you bring him wood and 铁矿.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("木头", 1);
-				requiredResources.put("iron ore", 1);
+				requiredResources.put("铁矿", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("xoderos_cast_iron",
 						"cast", "iron", requiredResources, 5 * 60);

@@ -115,7 +115,7 @@ public class KoboldishTorcibud extends AbstractQuest {
         "eared bottle=0;" +
         "slim bottle=0;" +
         "mandragora=0;" +
-        "artichoke=0;" +
+        "菜蓟=0;" +
         "arandula=0;" +
         "sclaria=0;" +
         "kekik=0;" +
@@ -242,7 +242,7 @@ public class KoboldishTorcibud extends AbstractQuest {
             "eared bottle=" + required_bottle_eared + ";" +
             "slim bottle=" + required_bottle_slim + ";" +
             "mandragora=" + required_mandragora + ";" +
-            "artichoke=" + Rand.roll1D6() + ";" +
+            "菜蓟=" + Rand.roll1D6() + ";" +
             "arandula=" + Rand.roll1D6() + ";" +
             "sclaria=" + Rand.roll1D6() + ";" +
             "kekik=" + Rand.roll1D6() + ";" +
@@ -315,7 +315,7 @@ public class KoboldishTorcibud extends AbstractQuest {
                 new QuestNotStartedCondition(QUEST_SLOT),
                 new QuestInStateCondition(QUEST_SLOT, "rejected")),
             ConversationStates.QUEST_OFFERED,
-            "Wrof! Some bottles, artichokes, a few herbs and fierywater... Things like that. So, will you help?",
+            "Wrof! Some bottles, 菜蓟s, a few herbs and fierywater... Things like that. So, will you help?",
             null);
 
         // Player accepts the quest and gets to know what Wrviliza needs (switch to phase_2)
@@ -377,9 +377,9 @@ public class KoboldishTorcibud extends AbstractQuest {
             "Wrof! Welcome back. Did you gather any #stuff for me?",
             null);
 
-        // Player is curious about artichokes
+        // Player is curious about 菜蓟s
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("artichoke","artichokes"),
+            Arrays.asList("菜蓟","菜蓟s"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! Not so common vegetables,"

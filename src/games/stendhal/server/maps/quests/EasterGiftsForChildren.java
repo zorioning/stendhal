@@ -87,7 +87,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
 			res.add("I promised to bring 卡若琳 some sweets for children around Faiumoni as an Easter gift.");
 		}
-		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("小复活蛋", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
+		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("小复活蛋", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("樱桃", 5) || "done".equals(questState)) {
 			res.add("I got all the sweets and will take them to 卡若琳.");
 		}
 		if ("done".equals(questState)) {
@@ -166,10 +166,10 @@ public class EasterGiftsForChildren extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("cherry", "cherries"),
+				Arrays.asList("樱桃", "cherries"),
 				null,
 				ConversationStates.ATTENDING,
-				"Old Mother Helena in Fado sells the most beautifully red cherries. They are really tasty! I hope you tasted the lovely cherry pie already, made by Gertha in Kalavan City gardens.", null);
+				"Old Mother Helena in Fado sells the most beautifully red cherries. They are really tasty! I hope you tasted the lovely 樱桃派 already, made by Gertha in Kalavan City gardens.", null);
 
 		npc.add(
 				ConversationStates.ATTENDING,
@@ -190,7 +190,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("小复活蛋",1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
-					new PlayerHasItemWithHimCondition("cherry", 5))),
+					new PlayerHasItemWithHimCondition("樱桃", 5))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			"Oh nice! I see you have delicious sweets with you. Are they for the Easter baskets which I'm currently preparing?",
 			null);
@@ -202,7 +202,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("小复活蛋",1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
-					new PlayerHasItemWithHimCondition("cherry", 5)))),
+					new PlayerHasItemWithHimCondition("樱桃", 5)))),
 			ConversationStates.ATTENDING,
 			"Oh no. There are still some sweets missing which I need for my Easter baskets. Hope you can find them, soon...",
 			null);
@@ -211,7 +211,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		reward.add(new DropItemAction("巧克力棒", 5));
 		reward.add(new DropItemAction("小复活蛋", 1));
 		reward.add(new DropItemAction("苹果", 5));
-		reward.add(new DropItemAction("cherry",5));
+		reward.add(new DropItemAction("樱桃",5));
 		reward.add(new EquipItemAction("阿多斯城回城卷", 5));
 		reward.add(new EquipItemAction("home scroll", 2));
 		reward.add(new IncreaseXPAction(100));
@@ -230,7 +230,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("小复活蛋", 1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
-					new PlayerHasItemWithHimCondition("cherry", 5)),
+					new PlayerHasItemWithHimCondition("樱桃", 5)),
 
 			ConversationStates.ATTENDING, "How great! Now I can fill these baskets for the children! They will be so happy! Thank you very much for your help and Happy Easter! Please take these scrolls for your effort. :)",
 			new MultipleActions(reward));

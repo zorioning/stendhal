@@ -168,7 +168,7 @@ public class RestockFlowerShopTest {
         en.step(player, "yes");
         assertEquals("What did you bring?", getReply(seremela));
         // Undesired item
-        en.step(player, "cauliflower");
+        en.step(player, "白花菜");
         assertEquals("I don't think that would look good in the shop.", getReply(seremela));
         ItemCollection needed = getMissingItems(player);
         // Not carrying desired item

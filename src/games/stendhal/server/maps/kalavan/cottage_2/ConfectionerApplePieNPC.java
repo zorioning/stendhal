@@ -16,7 +16,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.ProducerBehaviour;
 
 /**
  * Provides Martha, the 苹果派s confectioner NPC.
- * She has a twin sister: Gertha, the cherry pies confectioner NPC.
+ * She has a twin sister: Gertha, the 樱桃派s confectioner NPC.
  *
  * @author omero
  */

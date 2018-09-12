@@ -157,10 +157,10 @@ public class SummonAtActionTest {
 				assertEquals("memem", action.get("target"));
 				assertEquals("bag", action.get("slot"));
 				assertEquals(3, action.getInt("amount"));
-				assertEquals("greater potion", action.get("item"));
+				assertEquals("大治疗济", action.get("item"));
 			}
 		};
 		SlashActionRepository.register();
-		ChatLineParser.parseAndHandle("/summonat memem bag 3 greater potion");
+		ChatLineParser.parseAndHandle("/summonat memem bag 3 大治疗济");
 	}
 }

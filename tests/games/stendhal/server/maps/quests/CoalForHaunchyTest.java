@@ -76,7 +76,7 @@ public class CoalForHaunchyTest extends ZonePlayerAndNPCTestImpl {
 		haunchyEng.step(player, "hi");
 		assertEquals("Hey! Nice day for a BBQ!", getReply(haunchy));
 		haunchyEng.step(player, "task");
-		assertEquals("I cannot use wood for this huge BBQ. To keep the heat I need some really old stone coal but there isn't much left. The problem is, that I can't fetch it myself because my steaks would burn then so I have to stay here. Can you bring me 25 pieces of #coal for my BBQ please?", getReply(haunchy));
+		assertEquals("I cannot use wood for this huge BBQ. To keep the heat I need some really old 煤 but there isn't much left. The problem is, that I can't fetch it myself because my steaks would burn then so I have to stay here. Can you bring me 25 pieces of #coal for my BBQ please?", getReply(haunchy));
 		haunchyEng.step(player, "coal");
 		assertEquals("Coal isn't easy to find. You normally can find it somewhere in the ground but perhaps you are lucky and find some in the old Semos Mine tunnels...", getReply(haunchy));
 		haunchyEng.step(player, "yes");
@@ -124,10 +124,10 @@ public class CoalForHaunchyTest extends ZonePlayerAndNPCTestImpl {
 		haunchyEng.step(player, "hi");
 		assertEquals("Hey! Nice day for a BBQ!", getReply(haunchy));
 		haunchyEng.step(player, "task");
-		// We get one or more grilled steaks a reward:
-		// You see a fresh grilled steak. It smells awesome and is really juicy. It is a special quest reward for player, and cannot be used by others. Stats are (HP: 200).
-		assertTrue(getReply(haunchy).matches("Thank you!! Take .* grilled steaks? from my grill!"));
-		assertTrue(player.isEquipped("grilled steak"));
+		// We get one or more 烤排s a reward:
+		// You see a fresh 烤排. It smells awesome and is really juicy. It is a special quest reward for player, and cannot be used by others. Stats are (HP: 200).
+		assertTrue(getReply(haunchy).matches("Thank you!! Take .* 烤排s? from my grill!"));
+		assertTrue(player.isEquipped("烤排"));
 		assertEquals("waiting", player.getQuest(questSlot, 0));
 		haunchyEng.step(player, "bye");
 		assertEquals("A nice day to you! Always keep your fire burning!", getReply(haunchy));

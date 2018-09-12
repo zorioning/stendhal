@@ -19,8 +19,8 @@
     <respawn value="5400"/>
     <corpse name="animal_2x2" harmless="bag_2x2" width="2" height="2"/>
     <drops>
-      <item value="greater potion" quantity="[2,6]" probability="75.0"/>
-      <item value="greater poison" quantity="[1,2]" probability="90.0"/>
+      <item value="大治疗济" quantity="[2,6]" probability="75.0"/>
+      <item value="强毒" quantity="[1,2]" probability="90.0"/>
       <item value="orcish sword" quantity="[1,1]" probability="0.3"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
     </drops>
@@ -31,7 +31,7 @@
       <susceptibility type="ice" value="1.5"/>
     </abilities>
     <ai>
-      <profile name="poisonous" params="15,deadly poison"/>
+      <profile name="poisonous" params="15,极毒"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -122,12 +122,12 @@
     <corpse name="small_boneless" harmless="spiderweb" />
     <drops>
       <item value="money" quantity="[10,35]" probability="100.0"/>
-      <item value="greater poison" quantity="[1,1]" probability="10.0"/>
+      <item value="强毒" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
-      <profile name="poisonous" params="40,greater poison"/>
+      <profile name="poisonous" params="40,强毒"/>
       <profile name="brave"/>
       <profile name="offensive"/>
       <profile name="human"/>
@@ -151,15 +151,15 @@
     <respawn value="5400"/>
     <corpse name="animal_2x2" harmless="spiderweb_2x2" width="2" height="2"/>
     <drops>
-      <item value="greater potion" quantity="[1,4]" probability="70.0"/>
-      <item value="greater poison" quantity="[1,2]" probability="80.0"/>
+      <item value="大治疗济" quantity="[1,4]" probability="70.0"/>
+      <item value="强毒" quantity="[1,2]" probability="80.0"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
       <item value="silk gland" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
-      <profile name="poisonous" params="5,greater poison"/>
+      <profile name="poisonous" params="5,强毒"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -288,7 +288,7 @@
     <corpse name="small_winged" harmless="feathered" />
     <drops>
       <item value="火腿" quantity="[1,3]" probability="60.0"/>
-      <item value="spinach" quantity="[1,1]" probability="20.0"/>
+      <item value="菠菜" quantity="[1,1]" probability="20.0"/>
     </drops>
     <equips>
     </equips>
@@ -1221,7 +1221,7 @@
   
   <creature name="毒液鼠">
     <type class="small_animal" subclass="venomrat" tileid="small_animal.png:3"/>
-    <description>Y这是一只毒液鼠, 它有剧毒. </description>
+    <description>Y这是一只毒液鼠, 它有强毒. </description>
     <attributes>
       <atk value="89"/>
       <def value="14"/>
@@ -1236,7 +1236,7 @@
     <drops>
       <item value="money" quantity="[3,7]" probability="100.0"/>
       <item value="干酪" quantity="[1,3]" probability="50.0"/>
-      <item value="greater poison" quantity="[1,1]" probability="15.0"/>
+      <item value="强毒" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
     </equips>
@@ -1245,7 +1245,7 @@
       	<sound value="rats-2"/>
         <sound value="rats-41"/>
       </says>
-      <profile name="poisonous" params="5,greater poison"/>
+      <profile name="poisonous" params="5,强毒"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -1435,7 +1435,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,100]" probability="70.0"/>
-      <item value="greater potion" quantity="[1,4]" probability="30.0"/>
+      <item value="大治疗济" quantity="[1,4]" probability="30.0"/>
       <item value="木矛" quantity="[20,40]" probability="30.0"/>
     </drops>
     <equips>
@@ -1638,7 +1638,7 @@
         <sound value="snake-cobra-1"/>
         <sound value="snake-cobra-2"/>
       </says>
-      <profile name="poisonous" params="5,greater poison"/>
+      <profile name="poisonous" params="5,强毒"/>
       <profile name="animal"/>
       <profile name="offensive"/>
       <profile name="patrolling"/>
@@ -1647,7 +1647,7 @@
   
   <creature name="眼镜蛇王">
     <type class="huge_animal" subclass="king_cobra" tileid="huge_animal.png:9"/>
-    <description>这是一只眼镜蛇王, 他的剧毒让人不寒而栗. </description>
+    <description>这是一只眼镜蛇王, 他的强毒让人不寒而栗. </description>
     <attributes>
       <atk value="750"/>
       <def value="102"/>
@@ -1660,7 +1660,7 @@
     <respawn value="5400"/>
     <corpse name="snake_3x2" harmless="bag_2x2" width="3" height="2"/>
     <drops>
-      <item value="disease poison" quantity="[1,1]" probability="5.0"/>
+      <item value="病毒" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -1669,7 +1669,7 @@
         <sound value="snake-cobra-1" />
         <sound value="snake-cobra-2" />
       </says>
-      <profile name="poisonous" params="5,disease poison"/>
+      <profile name="poisonous" params="5,病毒"/>
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>

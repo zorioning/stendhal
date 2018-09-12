@@ -43,11 +43,11 @@ import games.stendhal.server.maps.Region;
 import marauroa.common.game.IRPZone;
 
 /**
- * QUEST: Special Fish Soup.
+ * QUEST: Special 鱼汤.
  * <p>
  * PARTICIPANTS: <ul><li> Florence Boullabaisse on Ados market</ul>
  *
- * STEPS: <ul><li> Florence Boullabaisse tells you the ingredients of a special fish soup <li> You
+ * STEPS: <ul><li> Florence Boullabaisse tells you the ingredients of a special 鱼汤 <li> You
  * collect the ingredients <li> You bring the ingredients to Florence <li> The soup
  * is served at a market table<li> Eating the soup heals you fully over time <li> Making it adds karma
  * </ul>
@@ -62,8 +62,8 @@ import marauroa.common.game.IRPZone;
 public class FishSoup extends AbstractQuest {
 
 	private static final List<String> NEEDED_FOOD = Arrays.asList("surgeonfish",
-			"cod", "char", "roach", "clownfish", "onion", "mackerel",
-			"garlic", "leek", "perch", "tomato");
+			"cod", "char", "roach", "clownfish", "洋葱", "mackerel",
+			"大蒜", "韭菜", "perch", "西红柿");
 
 	private static final String QUEST_SLOT = "fishsoup_maker";
 
@@ -109,7 +109,7 @@ public class FishSoup extends AbstractQuest {
 	 */
 	private void placeSoupFor(final Player player) {
 		final Item soup = SingletonRepository.getEntityManager()
-				.getItem("fish soup");
+				.getItem("鱼汤");
 		final IRPZone zone = SingletonRepository.getRPWorld().getZone("0_阿多斯_城_n2");
 		// place on market table
 		soup.setPosition(64, 15);
@@ -219,7 +219,7 @@ public class FishSoup extends AbstractQuest {
 		// players asks about the ingredients individually
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("leek", "onion"),
+			Arrays.asList("韭菜", "洋葱"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"你在Fado能找到配料的一些成份. 所以你可以去取一些配料吗？",
@@ -228,10 +228,10 @@ public class FishSoup extends AbstractQuest {
 		// players asks about the ingredients individually
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("tomato", "garlic"),
+			Arrays.asList("西红柿", "大蒜"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"在 Kalavan 市的 Sue, 那里有个漂亮的花园, 花园里出售 tomatoes 和 garlic. "
+			"在 Kalavan 市的 Sue, 那里有个漂亮的花园, 花园里出售 西红柿es 和 大蒜. "
 			+ "所以你可以把配料取来吗？", null);
 	}
 
@@ -334,7 +334,7 @@ public class FishSoup extends AbstractQuest {
 		npc.add(ConversationStates.QUESTION_1, "",
 			new NotCondition(new TriggerInListCondition(NEEDED_FOOD)),
 			ConversationStates.QUESTION_1,
-			"I won't put that in your fish soup.", null);
+			"I won't put that in your 鱼汤.", null);
 
 		// allow to say goodbye while Florence is listening for food names
 		npc.add(ConversationStates.QUESTION_1, ConversationPhrases.GOODBYE_MESSAGES, null,
@@ -390,8 +390,8 @@ public class FishSoup extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Fish soup",
-				"Florence Boullabaisse makes a healthy and tasty fish soup, but it needs rather a lot of ingredients.",
+				"鱼汤",
+				"Florence Boullabaisse makes a healthy and tasty 鱼汤, but it needs rather a lot of ingredients.",
 				false);
 		step_1();
 		step_2();
@@ -405,11 +405,11 @@ public class FishSoup extends AbstractQuest {
 				return res;
 			}
 			if (!isCompleted(player)) {
-				res.add("I'm collecting ingredients to make fish soup. I still need " + missingFood(player, false) + ".");
+				res.add("I'm collecting ingredients to make 鱼汤. I still need " + missingFood(player, false) + ".");
 			} else if(isRepeatable(player)){
 				res.add("Florence is ready to make soup for me again!");
 			} else {
-				res.add("I made some yummy fish soup and Florence is now washing the dishes.");
+				res.add("I made some yummy 鱼汤 and Florence is now washing the dishes.");
 			}
 			return res;
 	}

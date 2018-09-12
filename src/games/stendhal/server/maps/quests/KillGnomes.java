@@ -50,7 +50,7 @@ import marauroa.common.Pair;
  *
  * STEPS:
  * <ul>
- * <li> Gnomes have been stealing carrots so 詹妮 asks you to kill some.
+ * <li> Gnomes have been stealing 胡萝卜s so 詹妮 asks you to kill some.
  * <li> You go kill the Gnomes in the gnome village and you get the reward from 詹妮
  * </ul>
  * <p>

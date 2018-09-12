@@ -221,7 +221,7 @@ public class StuffForVulcanus extends AbstractQuest {
 				"iron",
 				null,
 				ConversationStates.ATTENDING,
-				"Collect some iron ore from the mines which are rich in minerals.",
+				"Collect some 铁矿 from the mines which are rich in minerals.",
 				null);
 		npc.add(ConversationStates.ANY,
 				"木头",

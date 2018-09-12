@@ -348,9 +348,9 @@
     </equipable>
   </item>
   
-  <item name="greater poison">
+  <item name="强毒">
     <type class="drink" subclass="greater_poison" tileid="-1"/>
-    <description>You see a greater poison. Don't drink it!</description>
+    <description>You see a 强毒. Don't drink it!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-60"/>
@@ -371,9 +371,9 @@
     </equipable>
   </item>
   
-  <item name="deadly poison">
+  <item name="极毒">
     <type class="drink" subclass="deadly_poison" tileid="-1"/>
-    <description>You see a deadly poison. Don't drink it!</description>
+    <description>You see a 极毒. Don't drink it!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-100"/>
@@ -394,9 +394,9 @@
     </equipable>
   </item>
   
-  <item name="disease poison">
+  <item name="病毒">
     <type class="drink" subclass="disease_poison" tileid="-1"/>
-    <description>You see a disease poison.  Be careful, it's wicked.</description>
+    <description>You see a 病毒.  Be careful, it's wicked.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-2000"/>
@@ -417,9 +417,9 @@
     </equipable>
   </item>
   
-  <item name="mega poison">
+  <item name="剧毒">
     <type class="drink" subclass="mega_poison" tileid="-1"/>
-    <description>You see a mega poison. This is some wicked poison.</description>
+    <description>You see a 剧毒. This is some wicked poison.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-500"/>
@@ -440,7 +440,7 @@
     </equipable>
   </item>
   
-  <item name="twilight elixir">
+  <item name="荧光药济">
     <type class="drink" subclass="twilight_elixir" tileid="-1"/>
     <description>You see a bottle of medicinal elixir.</description>
     <implementation class-name="games.stendhal.server.entity.item.TwilightElixir"/>
@@ -463,9 +463,9 @@
     </equipable>
   </item>
   
-  <item name="minor potion">
+  <item name="小治疗济">
     <type class="drink" subclass="minor_potion" tileid="-1"/>
-    <description>You see a minor potion. It's not much but may save you in a tight spot.</description>
+    <description>You see a 小治疗济. It's not much but may save you in a tight spot.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="50"/>
@@ -510,9 +510,9 @@
     </equipable>
   </item>
   
-  <item name="fish soup">
+  <item name="鱼汤">
     <type class="drink" subclass="fish_soup" tileid="-1"/>
-    <description>You see a bowl of fish soup. Its contents fill you up.</description>
+    <description>You see a bowl of 鱼汤. Its contents fill you up.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="3500"/>
@@ -557,9 +557,9 @@
     </equipable>
   </item>
   
-  <item name="greater potion">
+  <item name="大治疗济">
     <type class="drink" subclass="greater_potion" tileid="-1"/>
-    <description>You see a greater potion, invaluable in battle.</description>
+    <description>You see a 大治疗济, invaluable in battle.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="300"/>
@@ -580,9 +580,9 @@
     </equipable>
   </item>
   
-  <item name="mega potion">
+  <item name="强治疗济">
     <type class="drink" subclass="mega_potion" tileid="-1"/>
-    <description>You see a mega potion. It strengthens greatly.</description>
+    <description>You see a 强治疗济. It strengthens greatly.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="800"/>
@@ -603,9 +603,9 @@
     </equipable>
   </item>
   
-  <item name="love potion">
+  <item name="真爱药水">
     <type class="drink" subclass="love_potion" tileid="-1"/>
-    <description>You see a love potion. It looks powerful so take care to use it carefully!</description>
+    <description>You see a 真爱药水. It looks powerful so take care to use it carefully!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="400"/>

@@ -135,7 +135,7 @@ public class BarMaidNPCTest {
 		Sentence sentence = new SentenceImplementation(new Expression("offer", ExpressionType.VERB));
 		engine.step(PlayerTestHelper.createPlayer("bob"), sentence);
 		assertThat(engine.getCurrentState(), is(ConversationStates.ATTENDING));
-		assertThat("offer text", getReply(barMaid), equalTo("I buy pieces of cheese, pieces of meat, spinaches, pieces of ham, sacks of flour, and porcini."));
+		assertThat("offer text", getReply(barMaid), equalTo("I buy pieces of cheese, pieces of meat, 菠菜es, pieces of ham, sacks of flour, and porcini."));
 
 		final Expression sell = new Expression("sell", ExpressionType.VERB);
 
@@ -156,10 +156,10 @@ public class BarMaidNPCTest {
 		assertThat("offer text", getReply(barMaid), is("A piece of meat is worth 10. Do you want to sell it?"));
 
 		engine.setCurrentState(ConversationStates.ATTENDING);
-		sentence = new SentenceImplementation(sell, new Expression("spinach", ExpressionType.OBJECT));
+		sentence = new SentenceImplementation(sell, new Expression("菠菜", ExpressionType.OBJECT));
 		engine.step(PlayerTestHelper.createPlayer("bob"), sentence);
 		assertThat(engine.getCurrentState(), is(ConversationStates.SELL_PRICE_OFFERED));
-		assertThat("offer text", getReply(barMaid), is("A spinach is worth 15. Do you want to sell it?"));
+		assertThat("offer text", getReply(barMaid), is("A 菠菜 is worth 15. Do you want to sell it?"));
 
 		engine.setCurrentState(ConversationStates.ATTENDING);
 		sentence = new SentenceImplementation(sell, new Expression("火腿", ExpressionType.OBJECT));

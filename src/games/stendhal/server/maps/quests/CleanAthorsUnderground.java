@@ -59,7 +59,7 @@ import marauroa.common.Pair;
  *
  * REWARD:<ul>
  * <li> 5000 XP
- * <li> 10 greater potion
+ * <li> 10 大治疗济
  * <li> some karma
  * </ul>
  *
@@ -168,7 +168,7 @@ public class CleanAthorsUnderground extends AbstractQuest {
 
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
-	    actions.add(new EquipItemAction("greater potion", 10));
+	    actions.add(new EquipItemAction("大治疗济", 10));
 		actions.add(new IncreaseXPAction(5000));
 		actions.add(new SetQuestAction(QUEST_SLOT, "killed;1"));
 		actions.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));
@@ -184,7 +184,7 @@ public class CleanAthorsUnderground extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT, 0, "start"),
 						new KilledForQuestCondition(QUEST_SLOT, 1)),
 				ConversationStates.ATTENDING,
-				"Brilliant! You killed some of these ugly creatures as I see! Hopefully they'll not return that fast or we will still not have the chance to explore some places."  + " Please take these greater potions as a reward for your help.",
+				"Brilliant! You killed some of these ugly creatures as I see! Hopefully they'll not return that fast or we will still not have the chance to explore some places."  + " Please take these 大治疗济s as a reward for your help.",
 				new MultipleActions(actions));
 
 		npc.add(ConversationStates.ATTENDING,

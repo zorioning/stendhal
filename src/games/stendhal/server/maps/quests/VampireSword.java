@@ -68,7 +68,7 @@ import games.stendhal.server.maps.Region;
  * goblet.</li>
  * <li>Fill the goblet and come back.</li>
  * <li>You get some items from the Catacombs and kill the Vampire Lord.</li>
- * <li>You get the iron needed in the usual way by collecting iron ore and
+ * <li>You get the iron needed in the usual way by collecting 铁矿 and
  * casting in 塞门镇.</li>
  * <li>Hogart forges the Vampire Sword for you.</li>
  * </ul>
@@ -302,7 +302,7 @@ public class VampireSword extends AbstractQuest {
 			"iron",
 			null,
 			ConversationStates.IDLE,
-			"You know, collect the iron ore lying around and get it cast! Bye!",
+			"You know, collect the 铁矿 lying around and get it cast! Bye!",
 			null);
 	}
 

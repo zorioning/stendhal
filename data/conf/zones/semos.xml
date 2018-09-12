@@ -2569,7 +2569,7 @@ Holy mackerel! These chips are tasty.
     <entity x="27" y="5">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-       The dwarf mine west of Or'ril castle is one of the main iron ore resources of Faiumoni. Even rumors of a dragon living under the earth cannot stop the industrious dwarves from digging further and further into the mountain.
+       The dwarf mine west of Or'ril castle is one of the main 铁矿 resources of Faiumoni. Even rumors of a dragon living under the earth cannot stop the industrious dwarves from digging further and further into the mountain.
      </attribute>
       <attribute name="class">book_blue</attribute>
     </entity>

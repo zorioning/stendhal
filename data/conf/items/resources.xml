@@ -3,7 +3,7 @@
 	xsi:schemaLocation="stendhal ../items.xsd ">
 	 <item name="木头">
     <type class="resource" subclass="wood" tileid="-1"/>
-    <description>一根木头, 掉落在林间的路旁. </description>
+    <description>一根掉落在林间的木头. </description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -81,7 +81,7 @@
     </equipable>
   </item>
 
-  <item name="iron ore">
+  <item name="铁矿">
     <type class="resource" subclass="iron_ore" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
@@ -101,9 +101,9 @@
     </equipable>
   </item>
 
-  <item name="coal">
+  <item name="煤炭">
     <type class="resource" subclass="coal" tileid="-1"/>
-    <description>You see a black and shiny piece of stone coal. It stayed in the ground for million of years.</description>
+    <description>这是一块闪着黑色光泽的煤炭. 它在地下呆了几百万年.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

@@ -601,7 +601,7 @@ public class VampireSwordTest {
 		player.setQuest(questSlot, "start");
 
 		en.step(player, "iron");
-		assertEquals("You know, collect the iron ore lying around and get it cast! Bye!", getReply(npc));
+		assertEquals("You know, collect the 铁矿 lying around and get it cast! Bye!", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 	}
 
