@@ -31,12 +31,12 @@ public class PlayerProducedNumberOfItemsConditionTest {
 
 	@Test
 	public void testEqualsHashCode() {
-		PlayerProducedNumberOfItemsCondition actual = new PlayerProducedNumberOfItemsCondition(1, "flour");
-		assertThat(actual.toString(), is("player has produced <1 of [flour]>"));
+		PlayerProducedNumberOfItemsCondition actual = new PlayerProducedNumberOfItemsCondition(1, "面粉");
+		assertThat(actual.toString(), is("player has produced <1 of [面粉]>"));
 		assertThat(actual, is(actual));
 		assertThat(actual.hashCode(), is(actual.hashCode()));
-		assertThat(actual, is(new PlayerProducedNumberOfItemsCondition(1, "flour")));
-		assertThat(actual.hashCode(), is(new PlayerProducedNumberOfItemsCondition(1, "flour").hashCode()));
+		assertThat(actual, is(new PlayerProducedNumberOfItemsCondition(1, "面粉")));
+		assertThat(actual.hashCode(), is(new PlayerProducedNumberOfItemsCondition(1, "面粉").hashCode()));
 		assertThat(actual, not(is(new PlayerProducedNumberOfItemsCondition(1, "iron"))));
 	}
 

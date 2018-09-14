@@ -62,8 +62,8 @@ import marauroa.common.game.IRPZone;
 public class FishSoup extends AbstractQuest {
 
 	private static final List<String> NEEDED_FOOD = Arrays.asList("surgeonfish",
-			"cod", "char", "roach", "clownfish", "onion", "mackerel",
-			"garlic", "leek", "perch", "tomato");
+			"cod", "char", "roach", "clownfish", "洋葱", "mackerel",
+			"大蒜", "韭菜", "perch", "西红柿");
 
 	private static final String QUEST_SLOT = "fishsoup_maker";
 
@@ -219,7 +219,7 @@ public class FishSoup extends AbstractQuest {
 		// players asks about the ingredients individually
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("leek", "onion"),
+			Arrays.asList("韭菜", "洋葱"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"你在Fado能找到配料的一些成份. 所以你可以去取一些配料吗？",
@@ -228,10 +228,10 @@ public class FishSoup extends AbstractQuest {
 		// players asks about the ingredients individually
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("tomato", "garlic"),
+			Arrays.asList("西红柿", "大蒜"),
 			null,
 			ConversationStates.QUEST_OFFERED,
-			"在 Kalavan 市的 Sue, 那里有个漂亮的花园, 花园里出售 tomatoes 和 garlic. "
+			"在 Kalavan 市的 Sue, 那里有个漂亮的花园, 花园里出售 西红柿es 和 大蒜. "
 			+ "所以你可以把配料取来吗？", null);
 	}
 

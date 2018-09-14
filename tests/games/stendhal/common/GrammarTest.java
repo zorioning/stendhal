@@ -185,7 +185,7 @@ public class GrammarTest {
 		assertEquals("piece of paper", Grammar.fullForm("paper"));
 		assertEquals("piece of iron", Grammar.fullForm("iron"));
 		assertEquals("nugget of iron ore", Grammar.fullForm("iron ore"));
-		assertEquals("sack of flour", Grammar.fullForm("flour"));
+		assertEquals("sack of flour", Grammar.fullForm("面粉"));
 		assertEquals("sheaf of grain", Grammar.fullForm("grain"));
 		assertEquals("loaf of bread", Grammar.fullForm("bread"));
 		assertEquals("bottle of beer", Grammar.fullForm("beer"));
@@ -393,7 +393,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("pies", "pie");
 		testPluralisationAndSingularisation("button mushrooms",
 				"button mushroom");
-		testPluralisationAndSingularisation("porcini", "porcino");
+		testPluralisationAndSingularisation("大脚菇", "porcino");
 		testPluralisationAndSingularisation("toadstools", "toadstool");
 		testPluralisationAndSingularisation("bottles of beer", "beer");
 		testPluralisationAndSingularisation("flasks of wine", "flask of wine");

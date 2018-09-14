@@ -92,14 +92,14 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 			@Override
 			public void createDialog() {
 				addJob("我是本面包店的助理.");
-				addReply("flour",
-				"我们用的面粉 #flour 是采用东北方的磨坊生产的,本地麦子磨的面粉. 但狼群吃了他们的送货员！如果你能帮匀们带一些过来, 我们能烘焙 #bake 些好吃的面包给你.");
+				addReply("面粉",
+				"我们用的面粉 #面粉 是采用东北方的磨坊生产的,本地麦子磨的面粉. 但狼群吃了他们的送货员！如果你能帮匀们带一些过来, 我们能烘焙 #bake 些好吃的面包给你.");
 				addHelp("面包对你很好, 尤其在你外出冒险时, 不能总吞下红色的生肉. 我的老板 Leander 是这个岛上做的三明治 三明治es 最好的面包师!");
 				addGoodbye();
 
-				// Erna bakes 面包 if you bring her flour.
+				// Erna bakes 面包 if you bring her 面粉.
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("flour", 2);
+				requiredResources.put("面粉", 2);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("erna_bake_bread",
 						"bake", "面包", requiredResources, 10 * 60);
@@ -107,7 +107,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				new ProducerAdder().addProducer(this, behaviour,
 				"欢迎来到 塞门镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包. ");
 
-				addOffer("我们的 pizza 外卖团队可以 #借 一些厨师制服给你.");
+				addOffer("我们的 比萨 外卖团队可以 #借 一些厨师制服给你.");
 
 				add(ConversationStates.ATTENDING, "借",
 				    new LevelLessThanCondition(6),
@@ -118,7 +118,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(new LevelGreaterThanCondition(5), new QuestNotCompletedCondition("pizza_delivery")),
 				    ConversationStates.ATTENDING,
-				    "你需要和 Leander 讲, 问他如果你能帮送 pizza 外卖, 然后我才可能会借给你.",
+				    "你需要和 Leander 讲, 问他如果你能帮送 比萨 外卖, 然后我才可能会借给你.",
 				    null);
 
 				add(ConversationStates.ATTENDING, "借",
@@ -243,12 +243,12 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    "你把上次借的东西还给我, 才能再借新的.",
 					    null);
 
-				// haven't done pizza
+				// haven't done 比萨
 				add(ConversationStates.ATTENDING,
 					    ITEMS,
 					    new QuestNotCompletedCondition("pizza_delivery"),
 					    ConversationStates.ATTENDING,
-					    "只有 pizza 外卖人员才能借工具. 请为 Leander 送一次外卖, 再说借的事.",
+					    "只有 比萨 外卖人员才能借工具. 请为 Leander 送一次外卖, 再说借的事.",
 					    null);
 
 				// player asks about pay from attending state

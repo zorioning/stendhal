@@ -24,7 +24,7 @@ import marauroa.common.game.SyntaxException;
 /**
  * A baby dragon is a domestic animal that can be owned by a player.
  * <p>
- * It eats ham or pizza from the ground.
+ * It eats ham or 比萨 from the ground.
  * <p>
  * They move much faster than sheep
  * <p>
@@ -111,7 +111,7 @@ public class BabyDragon extends Pet {
 	@Override
 	protected
 	List<String> getFoodNames() {
-		return Arrays.asList("火腿", "pizza", "肉");
+		return Arrays.asList("火腿", "比萨", "肉");
 	}
 
 	@Override

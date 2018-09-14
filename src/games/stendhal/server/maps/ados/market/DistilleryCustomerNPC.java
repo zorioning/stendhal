@@ -54,7 +54,7 @@ public class DistilleryCustomerNPC implements ZoneConfigurator {
 				addReply("gossip", "Always keep an ear on people's tellings and talk with everybody. You may learn interesting and useful things which could help you one day. Probably it's just good for having some conversation topics at least.");
 				addReply(Arrays.asList("Uncle Dag", "Uncle", "Dag"),
 						"Uncle Dag is the man! Cheers!");
-				addReply("drink", "Fierywater... that's a strong one! Take care with that!");
+				addReply("drink", "沸水... that's a strong one! Take care with that!");
 		        addReply("family", "My lovely #wife and my #daughter. They really are my two angels!");
 		        addReply("wife", "She is just an amazing person, I love her much! If I have got a new job soon, she will be more happy again, so tomorrow I try to get a job at the docks.");
 		        addReply("daughter", "My daughter is happy we moved from #塞门 镇 #City to Ados. She is in that age where she likes to go out at the weekend. Here she has more friends and there's just some more action going on, you know.");

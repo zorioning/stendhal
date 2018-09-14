@@ -49,9 +49,9 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li>卡若琳 wants to make children around Faiumoni happy with gifting easter baskets for them.</li>
+ * <li>卡若琳 wants to make children around Faiumoni happy with gifting easter 篮子s for them.</li>
  * <li>Players have to bring 卡若琳 sweets like 巧克力棒s and chocolate eggs, as well as some fruit.</li>
- * <li>Children around Faiumoni will be happy with 卡若琳s baskets.</li>
+ * <li>Children around Faiumoni will be happy with 卡若琳s 篮子s.</li>
  * </ul>
  *
  * REWARD:
@@ -87,7 +87,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, "start", "done")) {
 			res.add("I promised to bring 卡若琳 some sweets for children around Faiumoni as an Easter gift.");
 		}
-		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("小复活蛋", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("cherry", 5) || "done".equals(questState)) {
+		if ("start".equals(questState) && player.isEquipped("巧克力棒", 5)  && player.isEquipped("小复活蛋", 1) && player.isEquipped("苹果", 5)  && player.isEquipped("樱桃", 5) || "done".equals(questState)) {
 			res.add("I got all the sweets and will take them to 卡若琳.");
 		}
 		if ("done".equals(questState)) {
@@ -104,7 +104,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED,
-			"I need some help with packing Easter baskets for children around Faiumoni. I know that the bunny will meet them, but they are so lovely that I want to make them happy, too. Do you think you can help me?",
+			"I need some help with packing Easter 篮子s for children around Faiumoni. I know that the bunny will meet them, but they are so lovely that I want to make them happy, too. Do you think you can help me?",
 			null);
 
 		npc.add(
@@ -112,7 +112,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			ConversationPhrases.QUEST_MESSAGES,
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
-			"Thank you very much for the sweets! I already gave all Easter baskets away to children around Faiumoni and they were really happy! :) Unfortunately I don't have any other task for you at the moment. Have wonderful Easter holidays!",
+			"Thank you very much for the sweets! I already gave all Easter 篮子s away to children around Faiumoni and they were really happy! :) Unfortunately I don't have any other task for you at the moment. Have wonderful Easter holidays!",
 			null);
 
 		// Player asks for quests after it is already started
@@ -130,7 +130,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			ConversationPhrases.YES_MESSAGES,
 			null,
 			ConversationStates.ATTENDING,
-			"I need some #sweets for my Easter baskets. If you get 5 #chocolate #bars, a #small #easter #egg, 5 #苹果s and 5 #cherries, I'll give you a nice Easter reward.",
+			"I need some #sweets for my Easter 篮子s. If you get 5 #chocolate #bars, a #small #easter #egg, 5 #苹果s and 5 #cherries, I'll give you a nice Easter reward.",
 			new SetQuestAction(QUEST_SLOT, "start"));
 
 		// player is not willing to help
@@ -138,7 +138,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			ConversationStates.QUEST_OFFERED,
 			ConversationPhrases.NO_MESSAGES, null,
 			ConversationStates.ATTENDING,
-			"Oh what a pity! Poor children will not receive wonderful baskets then. Maybe I'll find someone else and ask him or her for help.",
+			"Oh what a pity! Poor children will not receive wonderful 篮子s then. Maybe I'll find someone else and ask him or her for help.",
 			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "rejected", -5.0));
 
 		// player wants to know what sweets she is referring to
@@ -147,7 +147,7 @@ public class EasterGiftsForChildren extends AbstractQuest {
 			Arrays.asList("sweets"),
 			null,
 			ConversationStates.ATTENDING,
-			"There are lots of chocolate sweets around but I would also like to fill my basket with fruits as well.", null);
+			"There are lots of chocolate sweets around but I would also like to fill my 篮子 with fruits as well.", null);
 
 		// player wants to know where he can get this sweets from
 		npc.add(
@@ -166,10 +166,10 @@ public class EasterGiftsForChildren extends AbstractQuest {
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("cherry", "cherries"),
+				Arrays.asList("樱桃", "cherries"),
 				null,
 				ConversationStates.ATTENDING,
-				"Old Mother Helena in Fado sells the most beautifully red cherries. They are really tasty! I hope you tasted the lovely cherry pie already, made by Gertha in Kalavan City gardens.", null);
+				"Old Mother Helena in Fado sells the most beautifully red cherries. They are really tasty! I hope you tasted the lovely 樱桃派 already, made by Gertha in Kalavan City gardens.", null);
 
 		npc.add(
 				ConversationStates.ATTENDING,
@@ -190,9 +190,9 @@ public class EasterGiftsForChildren extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("小复活蛋",1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
-					new PlayerHasItemWithHimCondition("cherry", 5))),
+					new PlayerHasItemWithHimCondition("樱桃", 5))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"Oh nice! I see you have delicious sweets with you. Are they for the Easter baskets which I'm currently preparing?",
+			"Oh nice! I see you have delicious sweets with you. Are they for the Easter 篮子s which I'm currently preparing?",
 			null);
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
@@ -202,16 +202,16 @@ public class EasterGiftsForChildren extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("小复活蛋",1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
-					new PlayerHasItemWithHimCondition("cherry", 5)))),
+					new PlayerHasItemWithHimCondition("樱桃", 5)))),
 			ConversationStates.ATTENDING,
-			"Oh no. There are still some sweets missing which I need for my Easter baskets. Hope you can find them, soon...",
+			"Oh no. There are still some sweets missing which I need for my Easter 篮子s. Hope you can find them, soon...",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("巧克力棒", 5));
 		reward.add(new DropItemAction("小复活蛋", 1));
 		reward.add(new DropItemAction("苹果", 5));
-		reward.add(new DropItemAction("cherry",5));
+		reward.add(new DropItemAction("樱桃",5));
 		reward.add(new EquipItemAction("阿多斯城回城卷", 5));
 		reward.add(new EquipItemAction("home scroll", 2));
 		reward.add(new IncreaseXPAction(100));
@@ -230,9 +230,9 @@ public class EasterGiftsForChildren extends AbstractQuest {
 					new PlayerHasItemWithHimCondition("巧克力棒", 5),
 					new PlayerHasItemWithHimCondition("小复活蛋", 1),
 					new PlayerHasItemWithHimCondition("苹果", 5),
-					new PlayerHasItemWithHimCondition("cherry", 5)),
+					new PlayerHasItemWithHimCondition("樱桃", 5)),
 
-			ConversationStates.ATTENDING, "How great! Now I can fill these baskets for the children! They will be so happy! Thank you very much for your help and Happy Easter! Please take these scrolls for your effort. :)",
+			ConversationStates.ATTENDING, "How great! Now I can fill these 篮子s for the children! They will be so happy! Thank you very much for your help and Happy Easter! Please take these scrolls for your effort. :)",
 			new MultipleActions(reward));
 
 

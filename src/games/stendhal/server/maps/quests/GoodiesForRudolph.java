@@ -76,7 +76,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 	private static final int REQUIRED_MONTHS = 11;
 	private static final int REQUIRED_MINUTES = 60 * 24 * 30 * REQUIRED_MONTHS;
 
-	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in 塞门镇. If you get 5 reindeer moss, 10 苹果s and 10 carrots, I'll give you a reward.";
+	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in 塞门镇. If you get 5 reindeer moss, 10 苹果s and 10 胡萝卜s, I'll give you a reward.";
 	private static final String RUDOLPH_TALK_QUEST_OFFER = "I want some delicious goodies only you can help me get. Do you think you can help me?";
 
 	@Override
@@ -96,7 +96,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, 0, "start", "done")) {
 			res.add("I promised to find goodies for him because he is a nice reindeer.");
 		}
-		if ("start".equals(questState) && player.isEquipped("reindeer moss", 5)  && player.isEquipped("carrot", 10) && player.isEquipped("苹果", 10) || "done".equals(questState)) {
+		if ("start".equals(questState) && player.isEquipped("reindeer moss", 5)  && player.isEquipped("胡萝卜", 10) && player.isEquipped("苹果", 10) || "done".equals(questState)) {
 			res.add("I got all the goodies and will take them to Rudolph.");
 		}
 		if (isCompleted(player)) {
@@ -159,7 +159,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 			Arrays.asList("goodies"),
 			null,
 			ConversationStates.ATTENDING,
-			"Reindeer moss is a pale green patch of wonderfulness which grows all around this city. 苹果s are found at the farm to the east of the city, and carrots are to the 东北： of the city.",
+			"Reindeer moss is a pale green patch of wonderfulness which grows all around this city. 苹果s are found at the farm to the east of the city, and 胡萝卜s are to the 东北： of the city.",
 			null);
 	}
 
@@ -173,7 +173,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 				new AndCondition(
 					new PlayerHasItemWithHimCondition("reindeer moss", 5),
 					new PlayerHasItemWithHimCondition("苹果", 10),
-					new PlayerHasItemWithHimCondition("carrot", 10))),
+					new PlayerHasItemWithHimCondition("胡萝卜", 10))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			"Excuse me, please! I see you have delicious goodies. Are they for me?",
 			null);
@@ -184,14 +184,14 @@ public class GoodiesForRudolph extends AbstractQuest {
 				new NotCondition(new AndCondition(
 					new PlayerHasItemWithHimCondition("reindeer moss", 5),
 					new PlayerHasItemWithHimCondition("苹果", 10),
-					new PlayerHasItemWithHimCondition("carrot", 10)))),
+					new PlayerHasItemWithHimCondition("胡萝卜", 10)))),
 			ConversationStates.ATTENDING,
 			"Oh my. I am so in anticipation of those goodies which I have asked you for. Hopefully it will not be much longer before you can bring them to me.",
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
         reward.add(new DropItemAction("reindeer moss", 5));
-        reward.add(new DropItemAction("carrot", 10));
+        reward.add(new DropItemAction("胡萝卜", 10));
         reward.add(new DropItemAction("苹果", 10));
 		reward.add(new EquipItemAction("money", 50));
 		reward.add(new EquipItemAction("snowglobe"));
@@ -211,7 +211,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 			new AndCondition(
 					new PlayerHasItemWithHimCondition("reindeer moss", 5),
 					new PlayerHasItemWithHimCondition("苹果", 10),
-					new PlayerHasItemWithHimCondition("carrot", 10)),
+					new PlayerHasItemWithHimCondition("胡萝卜", 10)),
 
 			ConversationStates.ATTENDING, "Oh, I am so excited! I have wanted to eat these things for so long. Thanks so much. And to borrow a phrase, Ho Ho Ho, Merry Christmas.",
 			new MultipleActions(reward));

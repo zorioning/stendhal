@@ -838,7 +838,7 @@ public class Sentence extends ErrorBuffer implements Iterable<Expression> {
         }
 
         if (!ret.found()) {
-            // check unknown/misspelled words, e.g. in "sell porcinis"
+            // check unknown/misspelled words, e.g. in "sell 大脚菇s"
             name = getUnknownTypeExpression(0);
 
             if (name != null) {

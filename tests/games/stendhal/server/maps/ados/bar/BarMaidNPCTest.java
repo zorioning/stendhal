@@ -135,7 +135,7 @@ public class BarMaidNPCTest {
 		Sentence sentence = new SentenceImplementation(new Expression("offer", ExpressionType.VERB));
 		engine.step(PlayerTestHelper.createPlayer("bob"), sentence);
 		assertThat(engine.getCurrentState(), is(ConversationStates.ATTENDING));
-		assertThat("offer text", getReply(barMaid), equalTo("I buy pieces of cheese, pieces of meat, spinaches, pieces of ham, sacks of flour, and porcini."));
+		assertThat("offer text", getReply(barMaid), equalTo("I buy pieces of cheese, pieces of meat, 菠菜es, pieces of ham, sacks of flour, and 大脚菇."));
 
 		final Expression sell = new Expression("sell", ExpressionType.VERB);
 
@@ -156,10 +156,10 @@ public class BarMaidNPCTest {
 		assertThat("offer text", getReply(barMaid), is("A piece of meat is worth 10. Do you want to sell it?"));
 
 		engine.setCurrentState(ConversationStates.ATTENDING);
-		sentence = new SentenceImplementation(sell, new Expression("spinach", ExpressionType.OBJECT));
+		sentence = new SentenceImplementation(sell, new Expression("菠菜", ExpressionType.OBJECT));
 		engine.step(PlayerTestHelper.createPlayer("bob"), sentence);
 		assertThat(engine.getCurrentState(), is(ConversationStates.SELL_PRICE_OFFERED));
-		assertThat("offer text", getReply(barMaid), is("A spinach is worth 15. Do you want to sell it?"));
+		assertThat("offer text", getReply(barMaid), is("A 菠菜 is worth 15. Do you want to sell it?"));
 
 		engine.setCurrentState(ConversationStates.ATTENDING);
 		sentence = new SentenceImplementation(sell, new Expression("火腿", ExpressionType.OBJECT));
@@ -174,18 +174,18 @@ public class BarMaidNPCTest {
 		assertThat("offer text", getReply(barMaid), is("A sack of flour is worth 25. Do you want to sell it?"));
 
 		engine.setCurrentState(ConversationStates.ATTENDING);
-		sentence = new SentenceImplementation(sell, new Expression("porcini", ExpressionType.OBJECT));
+		sentence = new SentenceImplementation(sell, new Expression("大脚菇", ExpressionType.OBJECT));
 		engine.step(PlayerTestHelper.createPlayer("bob"), sentence);
 		assertThat(engine.getCurrentState(), is(ConversationStates.SELL_PRICE_OFFERED));
 		assertThat("offer text", getReply(barMaid), is("A porcino is worth 30. Do you want to sell it?"));
 
 		engine.setCurrentState(ConversationStates.ATTENDING);
-		final Expression porcini = new Expression("porcini", ExpressionType.OBJECT);
+		final Expression porcini = new Expression("大脚菇", ExpressionType.OBJECT);
 		porcini.setAmount(2);
 		sentence = new SentenceImplementation(sell, porcini);
 		engine.step(PlayerTestHelper.createPlayer("bob"), sentence);
 		assertThat(engine.getCurrentState(), is(ConversationStates.SELL_PRICE_OFFERED));
-		assertThat("offer text", getReply(barMaid), is("2 porcini are worth 60. Do you want to sell them?"));
+		assertThat("offer text", getReply(barMaid), is("2 大脚菇 are worth 60. Do you want to sell them?"));
 
 		engine.setCurrentState(ConversationStates.ATTENDING);
 		final Expression flour = new Expression("flour", ExpressionType.OBJECT);

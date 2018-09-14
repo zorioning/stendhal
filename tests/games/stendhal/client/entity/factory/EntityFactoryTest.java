@@ -79,7 +79,7 @@ public class EntityFactoryTest {
 	@Test
 	public final void carrot() {
 		final RPObject rp = new MockRPObject("growing_entity_spawner",
-				"items/grower/carrot_grower", "carrot");
+				"items/grower/carrot_grower", "胡萝卜");
 		rp.put("max_ripeness", 1);
 		rp.put("width", 1);
 		rp.put("height", 1);

@@ -140,12 +140,12 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("coconut", 800);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("椰子", 800);
 			passiveEntityrespawnPoint
 					.setDescription("这里应该会有椰子落下. ");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new VegetableGrower("tomato");
+			passiveEntityrespawnPoint = new VegetableGrower("西红柿");
 			passiveEntityrespawnPoint
 					.setDescription("这是一株西红柿. ");
 			break;
@@ -163,7 +163,7 @@ public class PassiveEntityRespawnPointFactory {
 					.setDescription("这棵树上的香蕉快要掉下来. ");
 			break;
 		case 5:
-			passiveEntityrespawnPoint = new VegetableGrower("grapes", "已经没有葡萄剩下了. ");
+			passiveEntityrespawnPoint = new VegetableGrower("葡萄", "已经没有葡萄剩下了. ");
 			passiveEntityrespawnPoint
 					.setDescription("一棵葡萄藤. ");
 			break;
@@ -173,17 +173,17 @@ public class PassiveEntityRespawnPointFactory {
 					.setDescription("树上的梨子快要掉下了. ");
 			break;
 		case 7:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("pomegranate", 800);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("石榴", 800);
 			passiveEntityrespawnPoint
 					.setDescription("树上的石榴都裂口了. ");
 			break;
 		case 8:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("olive", 1200);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("橄榄", 1200);
 			passiveEntityrespawnPoint
 					.setDescription("树上的橄榄好像要掉了. ");
 			break;
 		case 9:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("cherry", 1000);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("樱桃", 1000);
 			passiveEntityrespawnPoint
 					.setDescription("红色的樱桃挂满枝头. ");
 			break;
@@ -224,41 +224,41 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint.setDescription("树上的苹果快要落下来了. ");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new VegetableGrower("carrot");
+			passiveEntityrespawnPoint = new VegetableGrower("胡萝卜");
 			passiveEntityrespawnPoint.put("menu", "Pick|Use");
 			break;
 		case 2:
-			passiveEntityrespawnPoint = new VegetableGrower("salad");
+			passiveEntityrespawnPoint = new VegetableGrower("色拉");
 			break;
 		case 3:
-			passiveEntityrespawnPoint = new VegetableGrower("broccoli");
+			passiveEntityrespawnPoint = new VegetableGrower("西蓝花");
 			break;
 		case 4:
-			passiveEntityrespawnPoint = new VegetableGrower("cauliflower");
+			passiveEntityrespawnPoint = new VegetableGrower("洋花菜");
 			break;
 		case 5:
 			passiveEntityrespawnPoint = new VegetableGrower("chinese cabbage");
 			break;
 		case 6:
-			passiveEntityrespawnPoint = new VegetableGrower("leek");
+			passiveEntityrespawnPoint = new VegetableGrower("韭菜");
 			break;
 		case 7:
-			passiveEntityrespawnPoint = new VegetableGrower("onion");
+			passiveEntityrespawnPoint = new VegetableGrower("洋葱");
 			break;
 		case 8:
-			passiveEntityrespawnPoint = new VegetableGrower("courgette");
+			passiveEntityrespawnPoint = new VegetableGrower("西葫芦");
 			break;
 		case 9:
-			passiveEntityrespawnPoint = new VegetableGrower("spinach");
+			passiveEntityrespawnPoint = new VegetableGrower("菠菜");
 			break;
 		case 10:
-			passiveEntityrespawnPoint = new VegetableGrower("collard");
+			passiveEntityrespawnPoint = new VegetableGrower("甘蓝");
 			break;
 		case 11:
-			passiveEntityrespawnPoint = new VegetableGrower("garlic");
+			passiveEntityrespawnPoint = new VegetableGrower("大蒜");
 			break;
 		case 12:
-			passiveEntityrespawnPoint = new VegetableGrower("artichoke");
+			passiveEntityrespawnPoint = new VegetableGrower("洋蓟");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;
@@ -308,16 +308,16 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new VegetableGrower("button mushroom");
-			passiveEntityrespawnPoint.setDescription("这里长着些小小的button mushroom. ");
+			passiveEntityrespawnPoint = new VegetableGrower("小圆菇");
+			passiveEntityrespawnPoint.setDescription("这里长着些小小的小圆菇. ");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new VegetableGrower("porcini");
-			passiveEntityrespawnPoint.setDescription("这里长着一些小小的porcini. ");
+			passiveEntityrespawnPoint = new VegetableGrower("大脚菇");
+			passiveEntityrespawnPoint.setDescription("这里长着一些小小的大脚菇. ");
 			break;
 		case 2:
-			passiveEntityrespawnPoint = new VegetableGrower("toadstool");
-			passiveEntityrespawnPoint.setDescription("一些toadstool长在这块土地上. ");
+			passiveEntityrespawnPoint = new VegetableGrower("红伞菇");
+			passiveEntityrespawnPoint.setDescription("一些红伞菇长在这块土地上. ");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;
@@ -330,7 +330,7 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new VegetableGrower("arandula");
+			passiveEntityrespawnPoint = new VegetableGrower("海芋");
 			break;
 		case 1:
 			passiveEntityrespawnPoint = new VegetableGrower("kekik");
@@ -357,7 +357,7 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new GrainField("grain", Arrays.asList("镰刀", "旧的大镰刀", "黑镰刀"));
+			passiveEntityrespawnPoint = new GrainField("小麦", Arrays.asList("镰刀", "旧的大镰刀", "黑镰刀"));
 			break;
 
 		case 1:

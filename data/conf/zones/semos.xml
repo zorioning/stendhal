@@ -310,7 +310,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellrevivalweeks</parameter>
-        <parameter name="title">卡若琳s 副食商店(销售部)</parameter>
+        <parameter name="title">卡若琳的副食商店(销售部)</parameter>
         <parameter name="seller">true</parameter>
         <parameter name="caption">卡若琳 sells snacks and drinks during the Mine Town Revival weeks.</parameter>
       </implementation>
@@ -321,7 +321,7 @@
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">sellrevivalweeks</parameter>
-        <parameter name="title">卡若琳s 副食商店 (销售部)</parameter>
+        <parameter name="title">卡若琳的副食商店 (销售部)</parameter>
         <parameter name="seller">true</parameter>
         <parameter name="caption">卡若琳 sells snacks and drinks during the Mine Town Revival weeks.</parameter>
       </implementation>
@@ -1239,7 +1239,7 @@
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.Gate">
         <parameter name="image">ice_path</parameter>
         <parameter name="orientation">h</parameter>
-        <parameter name="condition">new PlayerHasItemWithHimCondition("ice scroll")</parameter>
+        <parameter name="condition">new PlayerHasItemWithHimCondition("冰卷轴")</parameter>
         <parameter name="autoclose">2</parameter>
       </implementation>
 	</entity>
@@ -1972,7 +1972,7 @@ Caution: These dungeons contain many rats, and more dangerous creatures. Enter a
 
     <entity x="41" y="20">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
-      <attribute name="text">Assistance needed, to help with pizza deliveries.</attribute>
+      <attribute name="text">Assistance needed, to help with 比萨 deliveries.</attribute>
     </entity>
 
 
@@ -2023,7 +2023,7 @@ This sounds like a very nice place to meet some interesting people and have a ni
     <entity x="44" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">The sign says: "Bakery and pizza delivery. Daily fresh 面包!"
+      <attribute name="text">The sign says: "Bakery and 比萨 delivery. Daily fresh 面包!"
 Ahh nice, you can already smell it. And in small letters below is added: "New! Leander's tasty 三明治s!"</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>

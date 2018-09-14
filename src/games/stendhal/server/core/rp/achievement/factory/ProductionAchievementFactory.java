@@ -41,8 +41,8 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 		// may wish to remove mega potion by hand?
 
 		// this includes a lot of foods! at time of writing, this is at least:
-		// pie, cheese sausage, sausage, fish pie, 苹果派, cherry pie, crepes suzette, 三明治, 面包, pizza
-		// grilled steak is made using quest code and not production code so we add an extra condition, and it doesn't adhere to standard completion guidelines
+		// pie, cheese sausage, sausage, fish pie, 苹果派, 樱桃派, crepes suzette, 三明治, 面包, 比萨
+		// 烤排 is made using quest code and not production code so we add an extra condition, and it doesn't adhere to standard completion guidelines
 		achievements.add(createAchievement("production.class.food", "Gourmet", "Order all food types available from Faiumoni's cooks",
 				Achievement.MEDIUM_BASE_SCORE, true,
 				new AndCondition(
@@ -54,7 +54,7 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 		final String[] drinks = drinklist.toArray(new String[drinklist.size()]);
 
 		// soups and koboldish torcibud are made using quest code so we add extra conditions for those
-		// at time of writing, the other drinks are fierywater, tea, pina colada, and mega potion (which we may remove)
+		// at time of writing, the other drinks are 沸水, tea, pina colada, and mega potion (which we may remove)
 		achievements.add(createAchievement("production.class.drink", "Thirsty Worker", "Order all drink types available from Faiumoni's cooks",
 				Achievement.MEDIUM_BASE_SCORE, true,
 				new AndCondition(
@@ -66,14 +66,14 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 
 	    final List<String> resourcelist = producerRegister.getProducedItemNames("resource");
 		final String[] resources = resourcelist.toArray(new String[resourcelist.size()]);
-		// at time of writing: gold bar, mithril bar, flour, iron
+		// at time of writing: gold bar, mithril bar, 面粉, iron
 		achievements.add(createAchievement("production.class.resource", "Alchemist", "Produce 5 of each kind of precious metal and resource",
 				Achievement.HARD_BASE_SCORE, true,
 				new PlayerProducedNumberOfItemsCondition(5, resources)));
 
-		achievements.add(createAchievement("production.flour.1000", "詹妮's Assistant", "Produce 1000 flour",
+		achievements.add(createAchievement("production.flour.1000", "詹妮's Assistant", "Produce 1000 面粉",
 				Achievement.EASY_BASE_SCORE, true,
-				new PlayerProducedNumberOfItemsCondition(1000, "flour")));
+				new PlayerProducedNumberOfItemsCondition(1000, "面粉")));
 
 		return achievements;
 	}

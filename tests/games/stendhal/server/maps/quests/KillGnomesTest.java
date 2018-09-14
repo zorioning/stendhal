@@ -70,7 +70,7 @@ public class KillGnomesTest {
 
 		// Ask for the quest
 		en.step(player, "hi");
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("Some gnomes have been stealing carrots from the farms North of Semos. They need to be taught a lesson, will you help?", getReply(npc));
 
@@ -90,7 +90,7 @@ public class KillGnomesTest {
 	public void returnWithoutCompleting() {
 		player.setQuest(questSlot, QUEST_VALUE_STARTED);
 		en.step(player, "hi");
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 		en.step(player, "done");
 		assertEquals("You need to teach those pesky gnomes a lesson, by killing some as an example! Make sure you get the leaders, too, at least one infantryman and one cavalryman.", getReply(npc));
 		en.step(player, "bye");
@@ -113,7 +113,7 @@ public class KillGnomesTest {
 
 		// complete quest
 		en.step(player, "hi");
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 		en.step(player, "done");
 		assertEquals("I see you have killed the gnomes as I asked. I hope they will stay away from the carrots for a while! Please take these potions as a reward.", getReply(npc));
 		en.step(player, "bye");
@@ -131,7 +131,7 @@ public class KillGnomesTest {
 
 		// ask for quest again
 		en.step(player, "hi");
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc));
 		en.step(player, "task");
 		assertEquals("The gnomes haven't made any trouble since you last taught them a lesson.", getReply(npc));
 

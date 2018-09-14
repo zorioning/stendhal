@@ -71,15 +71,15 @@ public class RatChefNPC implements ZoneConfigurator {
                  */
 				addReply(Arrays.asList("chocolate", "巧克力棒", "巧克力棒s"),
                     "A rarity. It seems only very nasty and murderous folks carry some in their pockets.");
-				addReply("flour",
-                    "I stea.. ahem.. get all my supplies of flour from the nearby 塞门镇.");
+				addReply("面粉",
+                    "I stea.. ahem.. get all my supplies of 面粉 from the nearby 塞门镇.");
 				addReply("egg",
                     "I'd look for one where hens scratch about.");
 				addReply("milk",
                     "A farm would be a good place where one could find that ingredient.");
 				addReply("butter",
                     "Where you find milk you will most likely find butter as well!");
-				addReply(Arrays.asList("fierywater"),
+				addReply(Arrays.asList("沸水"),
                     "It gets distilled from sugar canes and you could try asking around in Ados market for that.");
                 addReply("sugar",
                     "That comes from grinding sugar canes, which you could harvest yourself in #cane #fields."
@@ -95,13 +95,13 @@ public class RatChefNPC implements ZoneConfigurator {
 				addGoodbye("Au revoir voyageur... And come back to visit me anytime you like!");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("flour", 1);
+				requiredResources.put("面粉", 1);
 				requiredResources.put("egg", 1);
 				requiredResources.put("butter", 1);
 				requiredResources.put("milk", 1);
 				requiredResources.put("sugar", 1);
 				requiredResources.put("巧克力棒", 1);
-				requiredResources.put("fierywater", 1);
+				requiredResources.put("沸水", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("gaston_bake_crepesuzette", "bake", "crepes suzette",
 				        requiredResources, 5 * 60);

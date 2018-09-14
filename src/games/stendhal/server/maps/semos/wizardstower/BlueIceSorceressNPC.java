@@ -79,26 +79,26 @@ public class BlueIceSorceressNPC implements ZoneConfigurator {
 				addOffer("Excuse me, I am very busy establishing the sorceresses part at the wizards circle.");
 
 				addReply("Frostshade", "Frostshade is the school of the magic of water and ice. It lies deep in the northern glaciers.");
-				addReply("blank scroll", "Zekiel is the storekeeper of the tower, I am sure he can help you.");
+				addReply("空白卷轴", "Zekiel is the storekeeper of the tower, I am sure he can help you.");
 				addQuest("The magic in this world has just begun and I am very busy to establish the sorceresses of #Frostshade at the wizards circle. I will tell you in time, when I have a quest for you.");
 				addGoodbye("Bye!");
 
-/**				addReply(Arrays.asList("ice scroll", "ice scrolls"),
+/**				addReply(Arrays.asList("冰卷轴", "冰卷轴s"),
 *				        "I need a #blank #scroll for that. If you bring me one, I will #enchant it for you.");
 *				add(
 *				        ConversationStates.ATTENDING,
 *				        Arrays.asList("enchant"),
-*				        new PlayerHasItemWithHimCondition("blank scroll"),
+*				        new PlayerHasItemWithHimCondition("空白卷轴"),
 *				        ConversationStates.ATTENDING,
-*				        "I enchanted your blank scroll to an ice scroll. May it cool off your feets on your travels.",
+*				        "I enchanted your 空白卷轴 to an 冰卷轴. May it cool off your feets on your travels.",
 *				        new MultipleActions(
-*				        		new DropItemAction("blank scroll", 1),
-*				        		new EquipItemAction("ice scroll", 1, true),
+*				        		new DropItemAction("空白卷轴", 1),
+*				        		new EquipItemAction("冰卷轴", 1, true),
 *				        		new IncreaseXPAction(250)));
 *				add(
 *				        ConversationStates.ATTENDING,
 *				        Arrays.asList("enchant"),
-*				    new NotCondition(new PlayerHasItemWithHimCondition("blank scroll")),
+*				    new NotCondition(new PlayerHasItemWithHimCondition("空白卷轴")),
 *				        ConversationStates.ATTENDING,
 *					"You don't have a #blank #scroll that I could enchant.", null);
 */

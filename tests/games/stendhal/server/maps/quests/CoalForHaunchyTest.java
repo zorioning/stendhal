@@ -124,10 +124,10 @@ public class CoalForHaunchyTest extends ZonePlayerAndNPCTestImpl {
 		haunchyEng.step(player, "hi");
 		assertEquals("Hey! Nice day for a BBQ!", getReply(haunchy));
 		haunchyEng.step(player, "task");
-		// We get one or more grilled steaks a reward:
-		// You see a fresh grilled steak. It smells awesome and is really juicy. It is a special quest reward for player, and cannot be used by others. Stats are (HP: 200).
-		assertTrue(getReply(haunchy).matches("Thank you!! Take .* grilled steaks? from my grill!"));
-		assertTrue(player.isEquipped("grilled steak"));
+		// We get one or more 烤排s a reward:
+		// You see a fresh 烤排. It smells awesome and is really juicy. It is a special quest reward for player, and cannot be used by others. Stats are (HP: 200).
+		assertTrue(getReply(haunchy).matches("Thank you!! Take .* 烤排s? from my grill!"));
+		assertTrue(player.isEquipped("烤排"));
 		assertEquals("waiting", player.getQuest(questSlot, 0));
 		haunchyEng.step(player, "bye");
 		assertEquals("A nice day to you! Always keep your fire burning!", getReply(haunchy));

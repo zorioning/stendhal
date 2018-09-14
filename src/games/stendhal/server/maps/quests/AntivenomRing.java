@@ -94,13 +94,13 @@ public class AntivenomRing extends AbstractQuest {
 
 	private static final String QUEST_SLOT = "antivenom_ring";
 
-	//public static final String NEEDED_ITEMS = "medicinal ring=1;venom gland=1;mandragora=2;fairy cake=5";
+	//public static final String NEEDED_ITEMS = "medicinal ring=1;venom gland=1;mandragora=2;仙女蛋糕=5";
 
 	/* Items taken to ??? to create cobra venom */
 	public static final String EXTRACTION_ITEMS = "venom gland=1;vial=1";
 
 	/* Items taken to apothecary to create antivenom */
-	public static final String MIX_ITEMS = "cobra venom=1;mandragora=2;fairy cake=5";
+	public static final String MIX_ITEMS = "cobra venom=1;mandragora=2;仙女蛋糕=5";
 
 	/* Items taken to ??? to create antivenom ring */
 	public static final int REQUIRED_MONEY = 10000;
@@ -284,7 +284,7 @@ public class AntivenomRing extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestCompletedCondition(QUEST_SLOT),
 				ConversationStates.QUESTION_1,
-				"非常感谢. 从上次吃到我喜欢的 fairy cake 己过了很长时间了吧, 你喜欢你的戒指吗？",
+				"非常感谢. 从上次吃到我喜欢的 仙女蛋糕 己过了很长时间了吧, 你喜欢你的戒指吗？",
 				null);
 
 		// Player is enjoying the ring
@@ -319,7 +319,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 		*/
 		mixer.add(ConversationStates.QUESTION_1,
-				Arrays.asList("cake", "fairy cake"),
+				Arrays.asList("cake", "仙女蛋糕"),
 				null,
 				ConversationStates.QUESTION_1,
 				"Oh, 我是我品尝过的最好的食物. 只有最重的生物才能做出如此可口的食物. ",
@@ -378,7 +378,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 		*/
 		mixer.add(ConversationStates.ATTENDING,
-				Arrays.asList("cake", "fairy cake"),
+				Arrays.asList("cake", "仙女蛋糕"),
 				null,
 				ConversationStates.ATTENDING,
 				"Oh, 这是我吃过最好的食物了. 只有最重的生物才能做出如此好吃的食物. ",
@@ -526,7 +526,7 @@ public class AntivenomRing extends AbstractQuest {
 		ChatAction mixAction = new MultipleActions (
 		new SetQuestAction(QUEST_SLOT, 1, "mixing"),
 		new SetQuestToTimeStampAction(QUEST_SLOT, 4),
-		new SayTextAction("谢谢你, 在这我吃完这美味的仙女蛋糕 fairy cakes 后, 我会去调试抗毒药的正确比例. 请在" + MIX_TIME + " 分钟后回来取.")
+		new SayTextAction("谢谢你, 在这我吃完这美味的仙女蛋糕 仙女蛋糕s 后, 我会去调试抗毒药的正确比例. 请在" + MIX_TIME + " 分钟后回来取.")
 		);
 
 		/* add triggers for the item names */

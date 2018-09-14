@@ -80,7 +80,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "瓶子=1;arandula=2;red lionfish=10;kokuda=1;toadstool=12;licorice=2;苹果=10;wine=30;garlic=2;pestle and mortar=1";
+	protected static final String NEEDED_ITEMS = "瓶子=1;海芋=2;red lionfish=10;kokuda=1;红伞菇=12;licorice=2;苹果=10;wine=30;大蒜=2;pestle and mortar=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -164,9 +164,9 @@ public class MixtureForOrtiv extends AbstractQuest {
 
 			npc.addReply("瓶子", "我听说一个年轻的女人在Semo卖这东西.");
 
-			npc.addReply("toadstool", "Toadstools 毒性很强, 我听说曾有猎人在森林吃了一点, 就病了好几天.");
+			npc.addReply("红伞菇", "红伞菇s 毒性很强, 我听说曾有猎人在森林吃了一点, 就病了好几天.");
 
-			npc.addReply("arandula", "像是一些旧友跟我说过, 塞门镇的北面, 离小树林很近的地方, 生找着一种名叫 arandula 的药草");
+			npc.addReply("海芋", "像是一些旧友跟我说过, 塞门镇的北面, 离小树林很近的地方, 生找着一种名叫 海芋 的药草");
 
 			npc.addReply("red lionfish","Red lionfish 很难找到, 它们体外有红白相门的条纹, 红是紫红色 " +
 					"或棕色. 我曾听说在Faiumoni的一个地方, 你可以钓到它们, 但要小心, 每条 lionfish  都有毒!");
@@ -177,7 +177,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 
 			npc.addReply("wine", "Mmmmm..没有比把喜人的杯子和红酒混合在一起更好的东西了, 咳咳 *cough* 当然为我的混合物需要它... 我打赌, 你可能在旅店或酒吧的某地买到酒...");
 
-			npc.addReply("garlic", "我知道, 刺客和强盗们不是吸血鬼, 但我会尽量好好使用它对抗他们. 城里的花园里有个漂亮的园丁, 她销售自己种的大蒜.");
+			npc.addReply("大蒜", "我知道, 刺客和强盗们不是吸血鬼, 但我会尽量好好使用它对抗他们. 城里的花园里有个漂亮的园丁, 她销售自己种的大蒜.");
 
 			npc.addReply(Arrays.asList("pestle","mortar","pestle and mortar"), "可能一些面包师或厨师用得着这些.");
 	}

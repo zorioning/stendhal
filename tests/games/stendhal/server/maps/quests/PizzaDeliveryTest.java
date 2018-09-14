@@ -211,7 +211,7 @@ public class PizzaDeliveryTest {
 		player.getSlot("bag").add(item);
 
 		en.step(player, "hi");
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc1));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc1));
 		en.step(player, "pizza");
 		assertFalse(player.isEquipped("pizza"));
 		assertTrue(player.isQuestCompleted(questSlot));
@@ -366,7 +366,7 @@ public class PizzaDeliveryTest {
 		player.setQuest(questSlot, "Jenny;" + System.currentTimeMillis());
 		// on time
 		en.step(player, "hi");
-		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #grain, I can #mill it into flour for you.", getReply(npc1));
+		assertEquals("Greetings! I am Jenny, the local miller. If you bring me some #小麦, I can #mill it into flour for you.", getReply(npc1));
 		en.step(player, "pizza");
 		// [17:00] kymara earns 10 experience points.
 		assertEquals("Ah, you brought my Pizza Margherita! Very nice of you! Here, take 20 coins as a tip!", getReply(npc1));

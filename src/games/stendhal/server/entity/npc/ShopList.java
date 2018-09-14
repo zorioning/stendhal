@@ -31,19 +31,19 @@ public final class ShopList {
 		shops.add("food&drinks", "瓶子", 5);
 		shops.add("food&drinks", "干酪", 20);
 		shops.add("food&drinks", "苹果", 10);
-		shops.add("food&drinks", "carrot", 10);
+		shops.add("food&drinks", "胡萝卜", 10);
 		shops.add("food&drinks", "肉", 40);
 		shops.add("food&drinks", "火腿", 80);
 
 		shops.add("adosfoodseller", "苹果", 50);
-		shops.add("adosfoodseller", "carrot", 50);
+		shops.add("adosfoodseller", "胡萝卜", 50);
 
 		shops.add("buyfood", "干酪", 5);
 		shops.add("buyfood", "肉", 10);
-		shops.add("buyfood", "spinach", 15);
+		shops.add("buyfood", "菠菜", 15);
 		shops.add("buyfood", "火腿", 20);
-		shops.add("buyfood", "flour", 25);
-		shops.add("buyfood", "porcini", 30);
+		shops.add("buyfood", "面粉", 25);
+		shops.add("buyfood", "大脚菇", 30);
 
 		shops.add("healing", "antidote", 50);
 		shops.add("healing", "minor potion", 100);
@@ -126,7 +126,7 @@ public final class ShopList {
 		// shops.add("selltools", "pick", 50);
 		// shops.add("selltools", "shovel", 50);
 		shops.add("selltools", "hammer", 60);
-		// used for harvest grain.
+		// used for harvest 小麦.
 		shops.add("selltools", "旧的大镰刀", 120);
         // for harvesting cane fields
 		shops.add("selltools", "镰刀", 80);
@@ -134,7 +134,7 @@ public final class ShopList {
 
 		shops.add("buyiron", "iron", 75);
 
-		shops.add("buygrain", "grain", 1);
+		shops.add("buygrain", "小麦", 1);
 
 		shops.add("sellrings", "订婚戒指", 5000);
 		// gold and gemstones
@@ -328,15 +328,15 @@ public final class ShopList {
 
 		// assassinhq chief falatheen the dishwasher and veggie buyer)
 		// sign is hard coded so if you change this change the sign
-		shops.add("buyveggiesandherbs", "carrot", 5);
-		shops.add("buyveggiesandherbs", "salad", 10);
-		shops.add("buyveggiesandherbs", "leek", 25);
-		shops.add("buyveggiesandherbs", "broccoli", 30);
-		shops.add("buyveggiesandherbs", "courgette", 10);
-		shops.add("buyveggiesandherbs", "cauliflower", 30);
-		shops.add("buyveggiesandherbs", "tomato", 20);
-		shops.add("buyveggiesandherbs", "onion", 20);
-		shops.add("buyveggiesandherbs", "arandula", 10);
+		shops.add("buyveggiesandherbs", "胡萝卜", 5);
+		shops.add("buyveggiesandherbs", "色拉", 10);
+		shops.add("buyveggiesandherbs", "韭菜", 25);
+		shops.add("buyveggiesandherbs", "西蓝花", 30);
+		shops.add("buyveggiesandherbs", "西葫芦", 10);
+		shops.add("buyveggiesandherbs", "洋花菜", 30);
+		shops.add("buyveggiesandherbs", "西红柿", 20);
+		shops.add("buyveggiesandherbs", "洋葱", 20);
+		shops.add("buyveggiesandherbs", "海芋", 10);
 		shops.add("buyveggiesandherbs", "kokuda", 200);
 		shops.add("buyveggiesandherbs", "kekik", 25);
 		shops.add("buyveggiesandherbs", "sclaria", 25);
@@ -354,7 +354,7 @@ public final class ShopList {
 		shops.add("buy4hotdogs", "sausage", 30);
 		shops.add("buy4hotdogs", "cheese sausage", 25);
 		shops.add("buy4hotdogs", "面包", 15);
-		shops.add("buy4hotdogs", "onion", 20);
+		shops.add("buy4hotdogs", "洋葱", 20);
 		shops.add("buy4hotdogs", "canned tuna", 15);
 		shops.add("buy4hotdogs", "火腿", 15);
 		shops.add("buy4hotdogs", "干酪", 5);
@@ -438,7 +438,7 @@ public final class ShopList {
 
 		// Athor ferry
 		shops.add("buypoisons", "poison", 40);
-		shops.add("buypoisons", "toadstool", 60);
+		shops.add("buypoisons", "红伞菇", 60);
 		shops.add("buypoisons", "greater poison", 60);
 		shops.add("buypoisons", "red lionfish", 50);
 		shops.add("buypoisons", "deadly poison", 100);
@@ -452,13 +452,13 @@ public final class ShopList {
 		shops.add("sellScubaStuff", "scuba gear", 22000);
 
 		// 矿镇复兴展会周 卡若琳
-		shops.add("sellrevivalweeks", "cherry pie", 195);
+		shops.add("sellrevivalweeks", "樱桃派", 195);
 		shops.add("sellrevivalweeks", "苹果派", 195);
 		shops.add("sellrevivalweeks", "vanilla shake", 120);
 		shops.add("sellrevivalweeks", "chocolate shake", 120);
 		shops.add("sellrevivalweeks", "冰淇淋", 60);
 		shops.add("sellrevivalweeks", "巧克力棒", 100);
-		shops.add("sellrevivalweeks", "grilled steak", 250);
+		shops.add("sellrevivalweeks", "烤排", 250);
 		shops.add("sellrevivalweeks", "hotdog", 170);
 		shops.add("sellrevivalweeks", "cheeseydog", 175);
 		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);

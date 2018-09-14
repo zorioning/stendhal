@@ -84,7 +84,7 @@ public class FruitsForCoralia extends AbstractQuest {
     /**
 	 * Required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "苹果=4;香蕉=5;cherry=9;grapes=2;pear=4;西瓜=1;pomegranate=2";
+	protected static final String NEEDED_ITEMS = "苹果=4;香蕉=5;樱桃=9;葡萄=2;pear=4;西瓜=1;石榴=2";
 
     @Override
     public void addToWorld() {
@@ -252,14 +252,14 @@ public class FruitsForCoralia extends AbstractQuest {
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
-        	"cherry",
+        	"樱桃",
         	new QuestActiveCondition(QUEST_SLOT),
         	ConversationStates.QUESTION_1,
         	"Fado 的一位老妇销售一些漂亮的樱桃 cherries.",
         	null);
 
     	npc.add(ConversationStates.QUESTION_1,
-            "grapes",
+            "葡萄",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
             "塞门镇北面的山上有一个漂亮的小教堂, 上面爬满了葡萄藤!  还听说 Or'ril山上有些旧房子.",
@@ -280,7 +280,7 @@ public class FruitsForCoralia extends AbstractQuest {
             null);
 
     	npc.add(ConversationStates.QUESTION_1,
-            "pomegranate",
+            "石榴",
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.QUESTION_1,
             "我没见过长在野外的石榴树, 但我听说一个住在南方大河的人在自家花园里种它们.",
