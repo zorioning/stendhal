@@ -75,7 +75,7 @@ final class PrefixManager
 //		register("jar of ", "jars of ", "honey");
 //		register("glass of ", "glasses of ", "wine");
 //		register("cup of ", "cups of ", "tea");
-//		register("sprig of ", "sprigs of ", "arandula");
+//		register("sprig of ", "sprigs of ", "海芋");
 //		register("root of ", "roots of ", "mandragora");
 //		register("bunch of ", "bunches of ", "daisies");
 //		register("bunch of ", "bunches of ", "grapes");

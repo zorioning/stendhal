@@ -77,7 +77,7 @@ public class HerbsForCarmen extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-	protected static final String NEEDED_ITEMS = "arandula=5;大脚菇=1;苹果=3;木头=2;小圆菇=1";
+	protected static final String NEEDED_ITEMS = "海芋=5;大脚菇=1;苹果=3;木头=2;小圆菇=1";
 
 	@Override
 	public List<String> getHistory(final Player player) {
@@ -184,11 +184,11 @@ public class HerbsForCarmen extends AbstractQuest {
 
 		npc.add(
 			ConversationStates.ATTENDING,
-			"arandula",
+			"海芋",
 			null,
 			ConversationStates.ATTENDING,
 			"出了 塞门镇 向北, 在 grove 树的旁边, 生着名叫 arnandula 的药草, 给你看看它的图片, 方但你找到它. ",
-			new ExamineChatAction("arandula.png", "卡蔓's drawing", "Arandula"));
+			new ExamineChatAction("arandula.png", "卡蔓's drawing", "海芋"));
 
 	}
 

@@ -160,7 +160,7 @@ public class ImperialPrincess extends AbstractQuest {
 						raiser.say("I need "
 								+ Integer.toString(1 + player.getLevel()
 										/ ARANDULA_DIVISOR)
-								+ " arandula, 1 kokuda, 1 sclaria, 1 kekik, "
+								+ " 海芋, 1 kokuda, 1 sclaria, 1 kekik, "
 								+ Integer.toString(1 + player.getLevel()
 										/ POTION_DIVISOR)
 								+ " potions and "
@@ -233,7 +233,7 @@ public class ImperialPrincess extends AbstractQuest {
 							if (player.isEquipped("kekik")
 								&& player.isEquipped("kokuda")
 								&& player.isEquipped("sclaria")
-								&& player.isEquipped("arandula",
+								&& player.isEquipped("海芋",
 										required_arandula)
 								&& player.isEquipped("potion", required_potion)
 								&& player.isEquipped("antidote",
@@ -244,7 +244,7 @@ public class ImperialPrincess extends AbstractQuest {
 								player.drop("sclaria");
 								player.drop("antidote", required_antidote);
 								player.drop("potion", required_potion);
-								player.drop("arandula", required_arandula);
+								player.drop("海芋", required_arandula);
 								raiser.say("Perfect! I will recommend you to my father, as a fine, " +
 										"helpful person. He will certainly agree you are eligible for " +
 										"citizenship of Kalavan.");
@@ -255,7 +255,7 @@ public class ImperialPrincess extends AbstractQuest {
 								//reminder of the items to bring
 								raiser.say("Shh! Don't say it till you have the "
 									+ required_arandula
-									+ " arandula, 1 #kokuda, 1 #sclaria, 1 #kekik, "
+									+ " 海芋, 1 #kokuda, 1 #sclaria, 1 #kekik, "
 									+ required_potion
 									+ " potions and "
 									+ required_antidote

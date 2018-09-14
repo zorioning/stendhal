@@ -331,12 +331,12 @@ public final class ShopList {
 		shops.add("buyveggiesandherbs", "胡萝卜", 5);
 		shops.add("buyveggiesandherbs", "色拉", 10);
 		shops.add("buyveggiesandherbs", "韭菜", 25);
-		shops.add("buyveggiesandherbs", "broccoli", 30);
+		shops.add("buyveggiesandherbs", "西蓝花", 30);
 		shops.add("buyveggiesandherbs", "西葫芦", 10);
-		shops.add("buyveggiesandherbs", "cauliflower", 30);
+		shops.add("buyveggiesandherbs", "洋花菜", 30);
 		shops.add("buyveggiesandherbs", "西红柿", 20);
 		shops.add("buyveggiesandherbs", "洋葱", 20);
-		shops.add("buyveggiesandherbs", "arandula", 10);
+		shops.add("buyveggiesandherbs", "海芋", 10);
 		shops.add("buyveggiesandherbs", "kokuda", 200);
 		shops.add("buyveggiesandherbs", "kekik", 25);
 		shops.add("buyveggiesandherbs", "sclaria", 25);

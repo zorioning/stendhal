@@ -116,7 +116,7 @@ public class KoboldishTorcibud extends AbstractQuest {
         "slim bottle=0;" +
         "mandragora=0;" +
         "洋蓟=0;" +
-        "arandula=0;" +
+        "海芋=0;" +
         "sclaria=0;" +
         "kekik=0;" +
         "沸水=0";
@@ -243,7 +243,7 @@ public class KoboldishTorcibud extends AbstractQuest {
             "slim bottle=" + required_bottle_slim + ";" +
             "mandragora=" + required_mandragora + ";" +
             "洋蓟=" + Rand.roll1D6() + ";" +
-            "arandula=" + Rand.roll1D6() + ";" +
+            "海芋=" + Rand.roll1D6() + ";" +
             "sclaria=" + Rand.roll1D6() + ";" +
             "kekik=" + Rand.roll1D6() + ";" +
             "沸水=" + Rand.roll1D6() + ";";
@@ -398,7 +398,7 @@ public class KoboldishTorcibud extends AbstractQuest {
 
         // Player is curious about herbs
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("arandula","sclaria","kekik"),
+            Arrays.asList("海芋","sclaria","kekik"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! Common herb that grow outside in the plains or woods... Easy to spot!",

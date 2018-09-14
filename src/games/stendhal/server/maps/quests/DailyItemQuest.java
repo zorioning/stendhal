@@ -172,10 +172,10 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("苹果派",2);
 		items.put("洋蓟",10);
 		items.put("面包",5);
-		items.put("broccoli",5);
+		items.put("西蓝花",5);
 		items.put("小圆菇",10);
 		items.put("胡萝卜",10);
-		items.put("cauliflower",5);
+		items.put("洋花菜",5);
 		items.put("char",5);
 		items.put("干酪",10);
 		items.put("樱桃",10);
@@ -222,7 +222,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("viking helmet",1);
 
 		// herb
-		items.put("arandula",5);
+		items.put("海芋",5);
 		items.put("sclaria",5);
 		items.put("mandragora",3);
 		items.put("kekik",5);

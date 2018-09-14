@@ -208,7 +208,7 @@ public class MedicineForTadTest extends ZonePlayerAndNPCTestImpl {
 	public void testBackToIlisaWithHerb() {
 		player.setQuest(questSlot, MedicineForTad.STATE_HERB);
 		PlayerTestHelper.equipWithItem(player, "flask");
-		PlayerTestHelper.equipWithItem(player, "arandula");
+		PlayerTestHelper.equipWithItem(player, "海芋");
 
 		String firstReply = startTalkingToNpc("Ilisa");
 

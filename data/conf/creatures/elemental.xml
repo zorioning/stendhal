@@ -527,7 +527,7 @@
       <item value="木头" quantity="[2,6]" probability="70.0"/>
       <item value="小麦" quantity="[5,20]" probability="30.0"/>
       <item value="韭菜" quantity="[3,20]" probability="10.0"/>
-      <item value="cauliflower" quantity="[5,20]" probability="25.0"/>
+      <item value="洋花菜" quantity="[5,20]" probability="25.0"/>
       <item value="胡萝卜" quantity="[3,24]" probability="20.0"/>
     </drops>
     <equips>

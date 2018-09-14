@@ -48,7 +48,7 @@ public class MillerNPC implements ZoneConfigurator {
 				addGoodbye();
 				addOffer("你也能买点种子种植 #plant, 然后开始漂亮的花.");
 				//addReply("plant","Your seeds should be planted on fertile ground. Look for the brown ground just over the path from the arandula patch in semos plains over yonder. Seeds will thrive there, you can visit each day to see if your flower has grown. When it is ready, it can be picked. The area is open to everyone so there's a chance someone else will pick your flower, but luckily seeds are cheap!");
-				addReply("plant","种子应该种在肥沃的土地上. 只要找找 塞门镇 平原 到 arandula 的道路经过的地方, 种子都可以在那里长的很好, 你可以每天看看花儿生长的情况. 当花儿长成时, 就能被采摘了. 这些地区对每个人开放, 所以每个人都有机会得到你种的花, 不好好在这些种子很便宜!");
+				addReply("plant","种子应该种在肥沃的土地上. 只要找找 塞门镇 平原 到 海芋 的道路经过的地方, 种子都可以在那里长的很好, 你可以每天看看花儿生长的情况. 当花儿长成时, 就能被采摘了. 这些地区对每个人开放, 所以每个人都有机会得到你种的花, 不好好在这些种子很便宜!");
 			}
 
 			/*

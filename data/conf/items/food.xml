@@ -305,9 +305,9 @@
 		</equipable>
 	</item>
 
-	<item name="broccoli">
+	<item name="西蓝花">
 		<type class="food" subclass="broccoli" tileid="-1" />
-		<description>You see a bunch of broccoli.</description>
+		<description>You see a bunch of 西蓝花.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="30" />
@@ -351,9 +351,9 @@
 		</equipable>
 	</item>
 
-	<item name="cauliflower">
+	<item name="洋花菜">
 		<type class="food" subclass="cauliflower" tileid="-1" />
-		<description>You see a fresh head of cauliflower.</description>
+		<description>You see a fresh head of 洋花菜.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="30" />

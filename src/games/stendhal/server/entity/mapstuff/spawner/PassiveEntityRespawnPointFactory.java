@@ -231,10 +231,10 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint = new VegetableGrower("色拉");
 			break;
 		case 3:
-			passiveEntityrespawnPoint = new VegetableGrower("broccoli");
+			passiveEntityrespawnPoint = new VegetableGrower("西蓝花");
 			break;
 		case 4:
-			passiveEntityrespawnPoint = new VegetableGrower("cauliflower");
+			passiveEntityrespawnPoint = new VegetableGrower("洋花菜");
 			break;
 		case 5:
 			passiveEntityrespawnPoint = new VegetableGrower("chinese cabbage");
@@ -330,7 +330,7 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new VegetableGrower("arandula");
+			passiveEntityrespawnPoint = new VegetableGrower("海芋");
 			break;
 		case 1:
 			passiveEntityrespawnPoint = new VegetableGrower("kekik");

@@ -67,7 +67,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 				// stuff needed for the SuntanCreamForZara quest
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("arandula", 1);
+				requiredResources.put("海芋", 1);
 				requiredResources.put("kokuda", 1);
 				requiredResources.put("minor potion", 1);
 
@@ -80,7 +80,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 				        Arrays.asList("suntan", "cream", "suntan cream"),
 				        "David's and mine suntan cream is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special suntan cream for you.");
 
-				addReply("arandula", "Arandula is a herb which is growing around 塞门镇.");
+				addReply("海芋", "海芋 is a herb which is growing around 塞门镇.");
 
 				addReply(
 				        "kokuda",
