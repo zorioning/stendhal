@@ -43,7 +43,7 @@ public final class ShopList {
 		shops.add("buyfood", "spinach", 15);
 		shops.add("buyfood", "火腿", 20);
 		shops.add("buyfood", "面粉", 25);
-		shops.add("buyfood", "porcini", 30);
+		shops.add("buyfood", "大脚菇", 30);
 
 		shops.add("healing", "antidote", 50);
 		shops.add("healing", "minor potion", 100);
@@ -438,7 +438,7 @@ public final class ShopList {
 
 		// Athor ferry
 		shops.add("buypoisons", "poison", 40);
-		shops.add("buypoisons", "toadstool", 60);
+		shops.add("buypoisons", "红伞菇", 60);
 		shops.add("buypoisons", "greater poison", 60);
 		shops.add("buypoisons", "red lionfish", 50);
 		shops.add("buypoisons", "deadly poison", 100);

@@ -83,7 +83,7 @@ final class PrefixManager
 //
 //		register("bottle of ", "bottles of ", "啤酒");
 //		register("bottle of ", "bottles of ", "water");
-//		register("bottle of ", "bottles of ", "fierywater");
+//		register("bottle of ", "bottles of ", "沸水");
 //		register("bottle of ", "bottles of ", "milk");
 //		register("bottle of ", "bottles of ", "holy water");
 //

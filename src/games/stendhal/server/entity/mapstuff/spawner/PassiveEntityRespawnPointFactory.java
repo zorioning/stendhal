@@ -308,16 +308,16 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-			passiveEntityrespawnPoint = new VegetableGrower("button mushroom");
-			passiveEntityrespawnPoint.setDescription("这里长着些小小的button mushroom. ");
+			passiveEntityrespawnPoint = new VegetableGrower("小圆菇");
+			passiveEntityrespawnPoint.setDescription("这里长着些小小的小圆菇. ");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new VegetableGrower("porcini");
-			passiveEntityrespawnPoint.setDescription("这里长着一些小小的porcini. ");
+			passiveEntityrespawnPoint = new VegetableGrower("大脚菇");
+			passiveEntityrespawnPoint.setDescription("这里长着一些小小的大脚菇. ");
 			break;
 		case 2:
-			passiveEntityrespawnPoint = new VegetableGrower("toadstool");
-			passiveEntityrespawnPoint.setDescription("一些toadstool长在这块土地上. ");
+			passiveEntityrespawnPoint = new VegetableGrower("红伞菇");
+			passiveEntityrespawnPoint.setDescription("一些红伞菇长在这块土地上. ");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;

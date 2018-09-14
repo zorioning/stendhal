@@ -79,7 +79,7 @@ public class RatChefNPC implements ZoneConfigurator {
                     "A farm would be a good place where one could find that ingredient.");
 				addReply("butter",
                     "Where you find milk you will most likely find butter as well!");
-				addReply(Arrays.asList("fierywater"),
+				addReply(Arrays.asList("沸水"),
                     "It gets distilled from sugar canes and you could try asking around in Ados market for that.");
                 addReply("sugar",
                     "That comes from grinding sugar canes, which you could harvest yourself in #cane #fields."
@@ -101,7 +101,7 @@ public class RatChefNPC implements ZoneConfigurator {
 				requiredResources.put("milk", 1);
 				requiredResources.put("sugar", 1);
 				requiredResources.put("巧克力棒", 1);
-				requiredResources.put("fierywater", 1);
+				requiredResources.put("沸水", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("gaston_bake_crepesuzette", "bake", "crepes suzette",
 				        requiredResources, 5 * 60);

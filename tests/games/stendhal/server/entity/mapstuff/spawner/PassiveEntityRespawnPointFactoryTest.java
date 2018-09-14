@@ -94,14 +94,14 @@ public class PassiveEntityRespawnPointFactoryTest {
 				.create(clazz, 0, null, 0, 0);
 		assertNotNull(value_0);
 		assertTrue(value_0 instanceof VegetableGrower);
-		assertEquals("button mushroom", ((VegetableGrower) value_0)
+		assertEquals("小圆菇", ((VegetableGrower) value_0)
 				.getVegetableName());
 
 		PassiveEntityRespawnPoint value_1 = PassiveEntityRespawnPointFactory
 				.create(clazz, 1, null, 0, 0);
 		assertNotNull(value_1);
 		assertTrue(value_1 instanceof VegetableGrower);
-		assertEquals("porcini", ((VegetableGrower) value_1).getVegetableName());
+		assertEquals("大脚菇", ((VegetableGrower) value_1).getVegetableName());
 
 		PassiveEntityRespawnPoint value_2 = PassiveEntityRespawnPointFactory
 				.create(clazz, 2, null, 0, 0);

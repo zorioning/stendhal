@@ -119,7 +119,7 @@ public class KoboldishTorcibud extends AbstractQuest {
         "arandula=0;" +
         "sclaria=0;" +
         "kekik=0;" +
-        "fierywater=0";
+        "沸水=0";
 
     @Override
     public void addToWorld() {
@@ -246,7 +246,7 @@ public class KoboldishTorcibud extends AbstractQuest {
             "arandula=" + Rand.roll1D6() + ";" +
             "sclaria=" + Rand.roll1D6() + ";" +
             "kekik=" + Rand.roll1D6() + ";" +
-            "fierywater=" + Rand.roll1D6() + ";";
+            "沸水=" + Rand.roll1D6() + ";";
     }
 
     /**
@@ -315,7 +315,7 @@ public class KoboldishTorcibud extends AbstractQuest {
                 new QuestNotStartedCondition(QUEST_SLOT),
                 new QuestInStateCondition(QUEST_SLOT, "rejected")),
             ConversationStates.QUEST_OFFERED,
-            "Wrof! Some bottles, artichokes, a few herbs and fierywater... Things like that. So, will you help?",
+            "Wrof! Some bottles, artichokes, a few herbs and 沸水... Things like that. So, will you help?",
             null);
 
         // Player accepts the quest and gets to know what Wrviliza needs (switch to phase_2)
@@ -387,9 +387,9 @@ public class KoboldishTorcibud extends AbstractQuest {
                 + " near 塞门镇.",
             null);
 
-        // Player is curious about fierywater
+        // Player is curious about 沸水
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("fierywater"),
+            Arrays.asList("沸水"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wroof! Powerful fluid, that is."

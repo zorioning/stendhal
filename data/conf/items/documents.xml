@@ -140,9 +140,9 @@
     </equipable>
   </item>
   
-  <item name="blank scroll">
+  <item name="空白卷轴">
     <type class="documents" subclass="scroll" tileid="-1"/>
-    <description>You see a rolled up blank scroll.</description>
+    <description>You see a rolled up 空白卷轴.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
        <quantity value="1"/>
@@ -159,7 +159,7 @@
     </equipable>
   </item>
   
-  <item name="ice scroll">
+  <item name="冰卷轴">
     <type class="documents" subclass="ice_scroll" tileid="-1"/>
     <description>You see a scroll, circled by ice crystals. You can feel its cold aura.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>

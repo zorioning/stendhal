@@ -81,7 +81,7 @@ public class BakerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				// This isn't bad grammar. It's his tyle of speech! Do't correct pls.
 				addJob("I #make #pizza. I have learn from the great baker #Leander.");
-				addReply(Arrays.asList("button mushroom", "porcini"),
+				addReply(Arrays.asList("小圆菇", "大脚菇"),
 				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
 				addReply("面粉", "Mill near 塞门镇 produce from 小麦.");
 				addReply("干酪", "Cheese? I know not.");
@@ -92,14 +92,14 @@ public class BakerNPC implements ZoneConfigurator {
 				addQuest("#Leander need pizza send. I #make #pizza, you have ingredients.");
 				addGoodbye("You no take candle!");
 
-				// makes a pizza if you bring 面粉 cheese mushroom porcini and ham
+				// makes a pizza if you bring 面粉 cheese mushroom 大脚菇 and ham
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", 2);
 				requiredResources.put("干酪", 1);
 				requiredResources.put("tomato", 1);
-				requiredResources.put("button mushroom", 2);
-				requiredResources.put("porcini", 1);
+				requiredResources.put("小圆菇", 2);
+				requiredResources.put("大脚菇", 1);
 				requiredResources.put("火腿", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("kroip_make_pizza", "make", "pizza",

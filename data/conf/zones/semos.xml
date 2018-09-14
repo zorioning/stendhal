@@ -1239,7 +1239,7 @@
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.Gate">
         <parameter name="image">ice_path</parameter>
         <parameter name="orientation">h</parameter>
-        <parameter name="condition">new PlayerHasItemWithHimCondition("ice scroll")</parameter>
+        <parameter name="condition">new PlayerHasItemWithHimCondition("冰卷轴")</parameter>
         <parameter name="autoclose">2</parameter>
       </implementation>
 	</entity>

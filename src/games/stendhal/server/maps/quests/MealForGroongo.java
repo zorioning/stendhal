@@ -68,10 +68,10 @@ import marauroa.common.Pair;
 /**
  * NOTE: quest slot templates for testing
  * ---------------------------
- * fetch_dessert;inprogress;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207220454
- * deliver_decentmeal;inprogress;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207289602
- * done;incomplete;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207484330;1
- * done;complete;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207484330;1
+ * fetch_dessert;inprogress;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,沸水=2,honey=2,sugar=4,;1337207220454
+ * deliver_decentmeal;inprogress;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,沸水=2,honey=2,sugar=4,;1337207289602
+ * done;incomplete;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,沸水=2,honey=2,sugar=4,;1337207484330;1
+ * done;complete;paella;chicken=2,tomato=3,garlic=3,trout=1,perch=1,onion=2,;gulab;面粉=2,沸水=2,honey=2,sugar=4,;1337207484330;1
  * ---------------------------
  */
 
@@ -496,8 +496,8 @@ public class MealForGroongo extends AbstractQuest {
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_schnitzel = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_schnitzel.put("potato", new Pair<Integer, Integer>(3,6));
-        requiredIngredients_schnitzel.put("porcini", new Pair<Integer, Integer>(2,4));
-        requiredIngredients_schnitzel.put("button mushroom", new Pair<Integer, Integer>(4,8));
+        requiredIngredients_schnitzel.put("大脚菇", new Pair<Integer, Integer>(2,4));
+        requiredIngredients_schnitzel.put("小圆菇", new Pair<Integer, Integer>(4,8));
         requiredIngredients_schnitzel.put("火腿", new Pair<Integer, Integer>(2,3));
         requiredIngredients_schnitzel.put("肉", new Pair<Integer, Integer>(2,3));
         requiredIngredients_schnitzel.put("milk", new Pair<Integer, Integer>(1,2));
@@ -621,7 +621,7 @@ public class MealForGroongo extends AbstractQuest {
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_gulab = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_gulab.put("面粉", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_gulab.put("fierywater", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_gulab.put("沸水", new Pair<Integer, Integer>(1,2));
         requiredIngredients_gulab.put("sugar", new Pair<Integer, Integer>(1,4));
         requiredIngredients_gulab.put("honey", new Pair<Integer, Integer>(1,4));
 

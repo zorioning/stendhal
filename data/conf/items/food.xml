@@ -581,9 +581,9 @@
 		</equipable>
 	</item>
 
-	<item name="button mushroom">
+	<item name="小圆菇">
 		<type class="food" subclass="button_mushroom" tileid="-1" />
-		<description>You see a button mushroom. It can be an ingredient, or you can eat it.</description>
+		<description>You see a 小圆菇. It can be an ingredient, or you can eat it.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="20" />
@@ -604,9 +604,9 @@
 		</equipable>
 	</item>
 
-	<item name="porcini">
+	<item name="大脚菇">
 		<type class="food" subclass="porcini" tileid="-1" />
-		<description>You see a porcini. It can be an ingredient, or you can eat it.</description>
+		<description>You see a 大脚菇. It can be an ingredient, or you can eat it.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="30" />
@@ -627,9 +627,9 @@
 		</equipable>
 	</item>
 
-	<item name="toadstool">
+	<item name="红伞菇">
 		<type class="food" subclass="toadstool" tileid="-1" />
-		<description>You see a toadstool. Beware!</description>
+		<description>You see a 红伞菇. Beware!</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="-60" />

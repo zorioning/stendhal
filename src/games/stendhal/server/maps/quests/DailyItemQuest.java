@@ -173,7 +173,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("artichoke",10);
 		items.put("面包",5);
 		items.put("broccoli",5);
-		items.put("button mushroom",10);
+		items.put("小圆菇",10);
 		items.put("carrot",10);
 		items.put("cauliflower",5);
 		items.put("char",5);
@@ -200,14 +200,14 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("perch",5);
 		items.put("pie",5);
 		items.put("pomegranate",5);
-		items.put("porcini",10);
+		items.put("大脚菇",10);
 		items.put("red lionfish",5);
 		items.put("roach",5);
 		items.put("salad",10);
 		items.put("三明治",5);
 		items.put("spinach",5);
 		items.put("surgeonfish",5);
-		items.put("toadstool",15);
+		items.put("红伞菇",15);
 		items.put("tomato",5);
 		items.put("trout",5);
 		items.put("olive",5);
