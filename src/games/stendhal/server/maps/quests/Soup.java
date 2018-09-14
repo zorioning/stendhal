@@ -62,7 +62,7 @@ import marauroa.common.game.IRPZone;
 public class Soup extends AbstractQuest {
 
 	private static final List<String> NEEDED_FOOD = Arrays.asList("胡萝卜",
-			"spinach", "courgette", "collard", "salad", "onion", "cauliflower",
+			"菠菜", "西葫芦", "甘蓝", "色拉", "洋葱", "cauliflower",
 			"broccoli", "韭菜");
 
 	private static final String QUEST_SLOT = "soup_maker";
@@ -212,14 +212,14 @@ public class Soup extends AbstractQuest {
 		// players asks about the vegetables individually
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("spinach", "courgette", "onion", "cauliflower", "broccoli", "韭菜"),
+			Arrays.asList("菠菜", "西葫芦", "洋葱", "cauliflower", "broccoli", "韭菜"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"You will find that in allotments in Fado. So will you fetch the ingredients?",
 			null);
 
 		// players asks about the vegetables individually
-		npc.add(ConversationStates.QUEST_OFFERED, "collard", null,
+		npc.add(ConversationStates.QUEST_OFFERED, "甘蓝", null,
 			ConversationStates.QUEST_OFFERED,
 			"That grows indoors in pots. Someone like a witch or an elf might grow it. "
 					+ "So will you fetch the ingredients?", null);
@@ -227,7 +227,7 @@ public class Soup extends AbstractQuest {
 		// players asks about the vegetables individually
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("salad", "胡萝卜"),
+			Arrays.asList("色拉", "胡萝卜"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"I usually have to get them imported from 塞门镇. So do you want the soup?",

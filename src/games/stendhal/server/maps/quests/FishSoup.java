@@ -62,7 +62,7 @@ import marauroa.common.game.IRPZone;
 public class FishSoup extends AbstractQuest {
 
 	private static final List<String> NEEDED_FOOD = Arrays.asList("surgeonfish",
-			"cod", "char", "roach", "clownfish", "onion", "mackerel",
+			"cod", "char", "roach", "clownfish", "洋葱", "mackerel",
 			"大蒜", "韭菜", "perch", "西红柿");
 
 	private static final String QUEST_SLOT = "fishsoup_maker";
@@ -219,7 +219,7 @@ public class FishSoup extends AbstractQuest {
 		// players asks about the ingredients individually
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
-			Arrays.asList("韭菜", "onion"),
+			Arrays.asList("韭菜", "洋葱"),
 			null,
 			ConversationStates.QUEST_OFFERED,
 			"你在Fado能找到配料的一些成份. 所以你可以去取一些配料吗？",

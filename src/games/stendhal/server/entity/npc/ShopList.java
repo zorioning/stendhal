@@ -40,7 +40,7 @@ public final class ShopList {
 
 		shops.add("buyfood", "干酪", 5);
 		shops.add("buyfood", "肉", 10);
-		shops.add("buyfood", "spinach", 15);
+		shops.add("buyfood", "菠菜", 15);
 		shops.add("buyfood", "火腿", 20);
 		shops.add("buyfood", "面粉", 25);
 		shops.add("buyfood", "大脚菇", 30);
@@ -329,13 +329,13 @@ public final class ShopList {
 		// assassinhq chief falatheen the dishwasher and veggie buyer)
 		// sign is hard coded so if you change this change the sign
 		shops.add("buyveggiesandherbs", "胡萝卜", 5);
-		shops.add("buyveggiesandherbs", "salad", 10);
+		shops.add("buyveggiesandherbs", "色拉", 10);
 		shops.add("buyveggiesandherbs", "韭菜", 25);
 		shops.add("buyveggiesandherbs", "broccoli", 30);
-		shops.add("buyveggiesandherbs", "courgette", 10);
+		shops.add("buyveggiesandherbs", "西葫芦", 10);
 		shops.add("buyveggiesandherbs", "cauliflower", 30);
 		shops.add("buyveggiesandherbs", "西红柿", 20);
-		shops.add("buyveggiesandherbs", "onion", 20);
+		shops.add("buyveggiesandherbs", "洋葱", 20);
 		shops.add("buyveggiesandherbs", "arandula", 10);
 		shops.add("buyveggiesandherbs", "kokuda", 200);
 		shops.add("buyveggiesandherbs", "kekik", 25);
@@ -354,7 +354,7 @@ public final class ShopList {
 		shops.add("buy4hotdogs", "sausage", 30);
 		shops.add("buy4hotdogs", "cheese sausage", 25);
 		shops.add("buy4hotdogs", "面包", 15);
-		shops.add("buy4hotdogs", "onion", 20);
+		shops.add("buy4hotdogs", "洋葱", 20);
 		shops.add("buy4hotdogs", "canned tuna", 15);
 		shops.add("buy4hotdogs", "火腿", 15);
 		shops.add("buy4hotdogs", "干酪", 5);

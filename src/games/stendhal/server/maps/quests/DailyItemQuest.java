@@ -183,8 +183,8 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("鸡腿",10);
 		items.put("巧克力棒",5);
 		items.put("clownfish",5);
-		items.put("collard",5);
-		items.put("courgette",5);
+		items.put("甘蓝",5);
+		items.put("西葫芦",5);
 		items.put("egg",1);
 		items.put("fairy cake", 5);
 		items.put("fish pie",1);
@@ -195,7 +195,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("honey",2);
 		items.put("韭菜",5);
 		items.put("肉",10);
-		items.put("onion",5);
+		items.put("洋葱",5);
 		items.put("梨子",5);
 		items.put("perch",5);
 		items.put("pie",5);
@@ -203,9 +203,9 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("大脚菇",10);
 		items.put("red lionfish",5);
 		items.put("roach",5);
-		items.put("salad",10);
+		items.put("色拉",10);
 		items.put("三明治",5);
-		items.put("spinach",5);
+		items.put("菠菜",5);
 		items.put("surgeonfish",5);
 		items.put("红伞菇",15);
 		items.put("西红柿",5);
