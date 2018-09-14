@@ -71,7 +71,7 @@ public class MedicineForTad extends AbstractQuest {
 
 	static final String ILISA_TALK_ASK_FOR_FLASK = "#泰德 要的药？他不是让你把 瓶子 带给他吗?";
 	static final String ILISA_TALK_ASK_FOR_HERB = "啊, 我看见你拿着 瓶子. #泰德 需要药, 对吧？ 唔... 我还需要点 #草药. 你能帮我取点吗?";
-	static final String ILISA_TALK_DESCRIBE_HERB = "塞门镇北面, 挨着小树林, 生长着一种名叫arandula的草药, 这张图画的是这种草药的图片, 所以快照图去找吧.";
+	static final String ILISA_TALK_DESCRIBE_HERB = "塞门镇北面, 挨着小树林, 生长着一种名叫海芋的草药, 这张图画的是这种草药的图片, 所以快照图去找吧.";
 	static final String ILISA_TALK_INTRODUCE_TAD = "他需要一种强心济来治好他的病, 他会给帮助过他的人很不错的酬金. ";
 	static final String ILISA_TALK_REMIND_HERB = "你拿到这些 #草药 来制作 #药济 了吗?";
 	static final String ILISA_TALK_PREPARE_MEDICINE = "很好!谢谢你, 现在我要把这些混合...加入这个...然后再滴点... 好了！你能让 #泰德 停下并收集这个吗？ 我想知道他在做些什么. ";
@@ -102,8 +102,8 @@ public class MedicineForTad extends AbstractQuest {
 	static final String HISTORY_QUEST_OFFERED = "他让我去 塞门镇 酒店里 找 Margaret 买一个 瓶子 .";
 	static final String HISTORY_GOT_FLASK = "我拿到了 瓶子 , 并马上带给了 泰德 .";
 	static final String HISTORY_TAKE_FLASK_TO_ILISA = "泰德 让我拿着 瓶子 到 塞门镇教堂找 Ilisa.";
-	static final String HISTORY_ILISA_ASKED_FOR_HERB = "Ilisa 让我去 塞门镇的北边取一种叫 Arandula 的药草, 这种药草长在小树林的旁边.";
-	static final String HISTORY_GOT_HERB = "我找到了 Arandula 药草, 并把它带给了 Ilisa.";
+	static final String HISTORY_ILISA_ASKED_FOR_HERB = "Ilisa 让我去 塞门镇的北边取一种叫 海芋 的药草, 这种药草长在小树林的旁边.";
+	static final String HISTORY_GOT_HERB = "我找到了 海芋 药草, 并把它带给了 Ilisa.";
 	static final String HISTORY_POTION_READY = "Ilisa 制作了一种强心济帮助 泰德 治疗. 她让我给他带话, 药已备好. ";
 	static final String HISTORY_DONE = "泰德 对我十分感谢.";
 
@@ -144,7 +144,7 @@ public class MedicineForTad extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, 0, STATE_HERB, STATE_POTION, STATE_DONE)) {
 			res.add(HISTORY_ILISA_ASKED_FOR_HERB);
 		}
-		if (questState.equals(STATE_HERB) && player.isEquipped("arandula")
+		if (questState.equals(STATE_HERB) && player.isEquipped("海芋")
 				|| player.isQuestInState(QUEST_SLOT, 0, STATE_POTION, STATE_DONE)) {
 			res.add(HISTORY_GOT_HERB);
 		}
@@ -315,7 +315,7 @@ public class MedicineForTad extends AbstractQuest {
 				ILISA_TALK_ASK_FOR_HERB,
 				new MultipleActions(processStep));
 
-		ChatAction showArandulaDrawing = new ExamineChatAction("arandula.png", "Ilisa's drawing", "Arandula");
+		ChatAction showArandulaDrawing = new ExamineChatAction("arandula.png", "Ilisa's drawing", "海芋");
 		ChatAction flagDrawingWasShown = new SetQuestAction(QUEST_SLOT, 1, STATE_SHOWN_DRAWING);
 		npc.add(
 				ConversationStates.ATTENDING,
@@ -323,14 +323,14 @@ public class MedicineForTad extends AbstractQuest {
 				new AndCondition(
 						new QuestInStateCondition(QUEST_SLOT, 0, STATE_HERB),
 						new NotCondition(new QuestInStateCondition(QUEST_SLOT, 1, STATE_SHOWN_DRAWING)),
-						new NotCondition(new PlayerHasItemWithHimCondition("arandula"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("海芋"))),
 				ConversationStates.ATTENDING,
 				ILISA_TALK_DESCRIBE_HERB,
 				new MultipleActions(showArandulaDrawing, flagDrawingWasShown));
 
 		npc.add(
 				ConversationStates.ATTENDING,
-				Arrays.asList("草药", "arandula"),
+				Arrays.asList("草药", "海芋"),
 				new QuestStartedCondition(QUEST_SLOT),
 				ConversationStates.ATTENDING,
 				ILISA_TALK_DESCRIBE_HERB,
@@ -352,12 +352,12 @@ public class MedicineForTad extends AbstractQuest {
 				new AndCondition(
 						new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, 0, STATE_HERB),
-						new NotCondition(new PlayerHasItemWithHimCondition("arandula"))),
+						new NotCondition(new PlayerHasItemWithHimCondition("海芋"))),
 				ConversationStates.ATTENDING,
 				ILISA_TALK_REMIND_HERB, null);
 
 		final List<ChatAction> processStep = new LinkedList<ChatAction>();
-		processStep.add(new DropItemAction("arandula"));
+		processStep.add(new DropItemAction("海芋"));
 		processStep.add(new IncreaseXPAction(50));
         processStep.add(new IncreaseKarmaAction(4));
 		processStep.add(new SetQuestAction(QUEST_SLOT, 0, STATE_POTION));
@@ -366,7 +366,7 @@ public class MedicineForTad extends AbstractQuest {
 				new AndCondition(
 						new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, 0, STATE_HERB),
-						new PlayerHasItemWithHimCondition("arandula")),
+						new PlayerHasItemWithHimCondition("海芋")),
 				ConversationStates.ATTENDING,
 				ILISA_TALK_PREPARE_MEDICINE,
 				new MultipleActions(processStep));

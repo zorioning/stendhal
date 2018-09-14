@@ -170,47 +170,47 @@ public class DailyItemQuest extends AbstractQuest {
 		// food
 		items.put("苹果",5);
 		items.put("苹果派",2);
-		items.put("artichoke",10);
+		items.put("洋蓟",10);
 		items.put("面包",5);
-		items.put("broccoli",5);
-		items.put("button mushroom",10);
-		items.put("carrot",10);
-		items.put("cauliflower",5);
+		items.put("西蓝花",5);
+		items.put("小圆菇",10);
+		items.put("胡萝卜",10);
+		items.put("洋花菜",5);
 		items.put("char",5);
 		items.put("干酪",10);
-		items.put("cherry",10);
-		items.put("cherry pie",2);
+		items.put("樱桃",10);
+		items.put("樱桃派",2);
 		items.put("鸡腿",10);
 		items.put("巧克力棒",5);
 		items.put("clownfish",5);
-		items.put("collard",5);
-		items.put("courgette",5);
+		items.put("甘蓝",5);
+		items.put("西葫芦",5);
 		items.put("egg",1);
-		items.put("fairy cake", 5);
+		items.put("仙女蛋糕", 5);
 		items.put("fish pie",1);
-		items.put("garlic",5);
-		items.put("grapes",5);
-		items.put("grilled steak",1);
+		items.put("大蒜",5);
+		items.put("葡萄",5);
+		items.put("烤排",1);
 		items.put("火腿",10);
 		items.put("honey",2);
-		items.put("leek",5);
+		items.put("韭菜",5);
 		items.put("肉",10);
-		items.put("onion",5);
+		items.put("洋葱",5);
 		items.put("梨子",5);
 		items.put("perch",5);
 		items.put("pie",5);
-		items.put("pomegranate",5);
-		items.put("porcini",10);
+		items.put("石榴",5);
+		items.put("大脚菇",10);
 		items.put("red lionfish",5);
 		items.put("roach",5);
-		items.put("salad",10);
+		items.put("色拉",10);
 		items.put("三明治",5);
-		items.put("spinach",5);
+		items.put("菠菜",5);
 		items.put("surgeonfish",5);
-		items.put("toadstool",15);
-		items.put("tomato",5);
+		items.put("红伞菇",15);
+		items.put("西红柿",5);
 		items.put("trout",5);
-		items.put("olive",5);
+		items.put("橄榄",5);
 
 		// helmet
         items.put("blue helmet",1);
@@ -222,7 +222,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("viking helmet",1);
 
 		// herb
-		items.put("arandula",5);
+		items.put("海芋",5);
 		items.put("sclaria",5);
 		items.put("mandragora",3);
 		items.put("kekik",5);

@@ -62,7 +62,7 @@ public class BakerNPC implements ZoneConfigurator {
 				nodes.add(new Node(10, 10));
 				// to the sink
 				nodes.add(new Node(10, 12));
-				// to the pizza/cake/whatever
+				// to the 比萨/cake/whatever
 				nodes.add(new Node(7, 12));
 				nodes.add(new Node(7, 10));
 				// to the pot
@@ -84,20 +84,20 @@ public class BakerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				// addGreeting("Hi, most of the people are out of town at the moment.");
 				addJob("我是本地的面包师. 尽管我们得到 塞门镇 的很多支援, 但还是有很多的工作要做. ");
-				addReply(Arrays.asList("面粉", "肉", "carrot"),
+				addReply(Arrays.asList("面粉", "肉", "胡萝卜"),
 				        "Ados 供应短缺, 我们要从西边的 塞门镇 取得大多数的食物.");
-				addReply(Arrays.asList("mushroom", "button mushroom"),
+				addReply(Arrays.asList("mushroom", "小圆菇"),
 					    "我们抱怨我们的 pies 不够吃, 所以我们现在只能吃点 mushroom 蘑菇充饥. 你可以在森林中找到一些.");
 				addHelp("如果你有足够多的肉或干酪, 可以云 Ados 酒吧找 Siandra 卖掉一些换钱.");
 				addGoodbye();
 
-				// Arlindo makes pies if you bring him 面粉, meat, carrot and a mushroom
+				// Arlindo makes pies if you bring him 面粉, meat, 胡萝卜 and a mushroom
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", Integer.valueOf(2));
 				requiredResources.put("肉", Integer.valueOf(2));
-				requiredResources.put("carrot", Integer.valueOf(1));
-				requiredResources.put("button mushroom", Integer.valueOf(2));
+				requiredResources.put("胡萝卜", Integer.valueOf(1));
+				requiredResources.put("小圆菇", Integer.valueOf(2));
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("arlindo_make_pie", "make", "pie",
 				        requiredResources, 7 * 60);

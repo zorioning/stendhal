@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="fierywater">
+  <item name="沸水">
     <type class="drink" subclass="fierywater" tileid="-1"/>
-    <description>You see a bottle of fierywater. Do not drink it pure, you would evaporate!</description>
+    <description>You see a bottle of 沸水. Do not drink it pure, you would evaporate!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-1000"/>

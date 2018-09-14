@@ -43,7 +43,7 @@ import games.stendhal.server.entity.player.Player;
  * <li> The marriage rites are performed
  * <li> The players are given rings
  * <li> When they go to the Hotel they choose a lovers room
- * <li> Champagne and fruit baskets is put in their bag (room if possible)
+ * <li> Champagne and fruit 篮子s is put in their bag (room if possible)
  * <li> They leave the lovers room when desired with another 标记卷轴
  *
  * <p>

@@ -207,14 +207,14 @@ public class KanmararnSoldiers extends AbstractQuest {
 
 		@Override
 		public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-			final Item map = SingletonRepository.getEntityManager().getItem("map");
+			final Item map = SingletonRepository.getEntityManager().getItem("地图");
 			map.setInfoString(npc.getName());
 			map.setDescription("You see a hand drawn map, but no matter how you look at it, nothing on it looks familiar.");
 			if (bind) {
 				map.setBoundTo(player.getName());
 			}
 			player.equipOrPutOnGround(map);
-			player.setQuest(QUEST_SLOT, "map");
+			player.setQuest(QUEST_SLOT, "地图");
 		}
 	}
 
@@ -228,7 +228,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 		henry.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES,
 			new AndCondition(new QuestNotCompletedCondition(QUEST_SLOT),
-							 new QuestNotInStateCondition(QUEST_SLOT,"map")),
+							 new QuestNotInStateCondition(QUEST_SLOT,"地图")),
 			ConversationStates.QUEST_OFFERED,
 			"Find my #group, Peter, Tom, and Charles, prove it and I will reward you. Will you do it?",
 			null);
@@ -236,7 +236,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 		henry.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new OrCondition(new QuestCompletedCondition(QUEST_SLOT),
-								 new QuestInStateCondition(QUEST_SLOT,"map")),
+								 new QuestInStateCondition(QUEST_SLOT,"地图")),
 				ConversationStates.ATTENDING,
 				"I'm so sad that most of my friends are dead.",
 				null);
@@ -300,24 +300,24 @@ public class KanmararnSoldiers extends AbstractQuest {
 				"You didn't prove that you have found them all!",
 				null);
 
-		henry.add(ConversationStates.ATTENDING, Arrays.asList("map", "group", "help"),
+		henry.add(ConversationStates.ATTENDING, Arrays.asList("地图", "group", "help"),
 				new OrCondition(
 					new	QuestCompletedCondition(QUEST_SLOT),
 					new AndCondition(new HenryQuestCompletedCondition(),
-					new PlayerOwnsItemIncludingBankCondition("map"))),
+					new PlayerOwnsItemIncludingBankCondition("地图"))),
 				ConversationStates.ATTENDING,
 				"I'm so sad that most of my friends are dead.", null);
 
-		henry.add(ConversationStates.ATTENDING, Arrays.asList("map"),
+		henry.add(ConversationStates.ATTENDING, Arrays.asList("地图"),
 				new AndCondition(
 					new	QuestNotCompletedCondition(QUEST_SLOT),
 					new HenryQuestCompletedCondition(),
-					new NotCondition(new PlayerOwnsItemIncludingBankCondition("map"))),
+					new NotCondition(new PlayerOwnsItemIncludingBankCondition("地图"))),
 				ConversationStates.ATTENDING,
 				"Luckily I drew a copy of the map, but please don't lose this one.",
 				new GiveMapAction(true));
 
-		henry.add(ConversationStates.ATTENDING, Arrays.asList("map"),
+		henry.add(ConversationStates.ATTENDING, Arrays.asList("地图"),
 				new HenryQuestNotCompletedCondition(),
 				ConversationStates.ATTENDING,
 				"If you find my friends, I will give you the map.", null);
@@ -385,7 +385,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 			"We were five, three of us died. You probably passed their corpses.");
 		james.addReply(Arrays.asList("one", "henry"),
 			"Yes, my youngest soldier. He ran away.");
-		james.addReply("map",
+		james.addReply("地图",
 			"The #treasure map that leads into the heart of the #dwarven #kingdom.");
 		james.addReply("treasure",
 			"A big treasure is rumored to be somewhere in this dungeon.");
@@ -400,22 +400,22 @@ public class KanmararnSoldiers extends AbstractQuest {
 
 		final List<ChatAction> actions = new LinkedList<ChatAction>();
 		actions.add(new IncreaseXPAction(5000));
-		actions.add(new DropInfostringItemAction("map","Henry"));
+		actions.add(new DropInfostringItemAction("地图","Henry"));
 		actions.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 15.0));
 		actions.add(new EquipItemAction("很棒的靴子", 1, true));
 
 		james.add(ConversationStates.ATTENDING,
-				Arrays.asList("map", "henry"),
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "map"),
-								new PlayerHasInfostringItemWithHimCondition("map", "henry")),
+				Arrays.asList("地图", "henry"),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "地图"),
+								new PlayerHasInfostringItemWithHimCondition("地图", "henry")),
 				ConversationStates.ATTENDING,
 				"The map! Wonderful! Thank you. And here is your reward. I got these boots while on the #dreamscape.",
 				new MultipleActions(actions));
 
 		james.add(ConversationStates.ATTENDING,
-				Arrays.asList("map", "henry"),
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "map"),
-								new NotCondition(new PlayerHasInfostringItemWithHimCondition("map", "henry"))),
+				Arrays.asList("地图", "henry"),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "地图"),
+								new NotCondition(new PlayerHasInfostringItemWithHimCondition("地图", "henry"))),
 				ConversationStates.ATTENDING,
 				"Well, where is the map?",
 				null);
@@ -430,7 +430,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 				ConversationStates.ATTENDING,
 				"Thanks again for bringing me the map!", null);
 
-		james.add(ConversationStates.ATTENDING, Arrays.asList("map", "henry",
+		james.add(ConversationStates.ATTENDING, Arrays.asList("地图", "henry",
 			 "group", "one"),
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
@@ -464,7 +464,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 				return res;
 			}
 			res.add("Sadly I only found corpses of Peter, Charles, and Tom. Henry was aghast. He gave me a map and an IOU, but didn't say what I should do with them now.");
-			if ("map".equals(questState)) {
+			if ("地图".equals(questState)) {
 				return res;
 			}
 			res.add("I met Sergeant James and gave him the treasure map. He gave me an excellent pair of 很棒的靴子 in return.");

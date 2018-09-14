@@ -195,8 +195,8 @@ public class GardenerNPC implements ZoneConfigurator {
 				addHelp("如果你带一些晚饭 #lunch 给我, 我会拿魔法卷轴给你换 #swap .");
 				addOffer("我的西红杮和大蒜长的很好, 集够了我就卖掉它.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
-                offerings.put("tomato", 30);
-                offerings.put("garlic", 50);
+                offerings.put("西红柿", 30);
+                offerings.put("大蒜", 50);
                 new SellerAdder().addSeller(this, new SellerBehaviour(offerings), false);
 				addReply("lunch", "茶 Tea 和 三明治 三明治, 请用!");
 				addReply("三明治", "Mmm.. 我喜欢汉堡和干酪一起吃.");

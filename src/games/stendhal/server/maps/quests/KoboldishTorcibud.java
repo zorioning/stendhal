@@ -115,11 +115,11 @@ public class KoboldishTorcibud extends AbstractQuest {
         "eared bottle=0;" +
         "slim bottle=0;" +
         "mandragora=0;" +
-        "artichoke=0;" +
-        "arandula=0;" +
+        "洋蓟=0;" +
+        "海芋=0;" +
         "sclaria=0;" +
         "kekik=0;" +
-        "fierywater=0";
+        "沸水=0";
 
     @Override
     public void addToWorld() {
@@ -242,11 +242,11 @@ public class KoboldishTorcibud extends AbstractQuest {
             "eared bottle=" + required_bottle_eared + ";" +
             "slim bottle=" + required_bottle_slim + ";" +
             "mandragora=" + required_mandragora + ";" +
-            "artichoke=" + Rand.roll1D6() + ";" +
-            "arandula=" + Rand.roll1D6() + ";" +
+            "洋蓟=" + Rand.roll1D6() + ";" +
+            "海芋=" + Rand.roll1D6() + ";" +
             "sclaria=" + Rand.roll1D6() + ";" +
             "kekik=" + Rand.roll1D6() + ";" +
-            "fierywater=" + Rand.roll1D6() + ";";
+            "沸水=" + Rand.roll1D6() + ";";
     }
 
     /**
@@ -315,7 +315,7 @@ public class KoboldishTorcibud extends AbstractQuest {
                 new QuestNotStartedCondition(QUEST_SLOT),
                 new QuestInStateCondition(QUEST_SLOT, "rejected")),
             ConversationStates.QUEST_OFFERED,
-            "Wrof! Some bottles, artichokes, a few herbs and fierywater... Things like that. So, will you help?",
+            "Wrof! Some bottles, 洋蓟s, a few herbs and 沸水... Things like that. So, will you help?",
             null);
 
         // Player accepts the quest and gets to know what Wrviliza needs (switch to phase_2)
@@ -377,9 +377,9 @@ public class KoboldishTorcibud extends AbstractQuest {
             "Wrof! Welcome back. Did you gather any #stuff for me?",
             null);
 
-        // Player is curious about artichokes
+        // Player is curious about 洋蓟s
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("artichoke","artichokes"),
+            Arrays.asList("洋蓟","洋蓟s"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! Not so common vegetables,"
@@ -387,9 +387,9 @@ public class KoboldishTorcibud extends AbstractQuest {
                 + " near 塞门镇.",
             null);
 
-        // Player is curious about fierywater
+        // Player is curious about 沸水
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("fierywater"),
+            Arrays.asList("沸水"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wroof! Powerful fluid, that is."
@@ -398,7 +398,7 @@ public class KoboldishTorcibud extends AbstractQuest {
 
         // Player is curious about herbs
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("arandula","sclaria","kekik"),
+            Arrays.asList("海芋","sclaria","kekik"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! Common herb that grow outside in the plains or woods... Easy to spot!",

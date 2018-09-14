@@ -335,7 +335,7 @@ public class SadScientist extends AbstractQuest {
 				new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
 				ConversationStates.ATTENDING,
 				"什么? 你怎么知道她? 好吧, 这是个悲伤的故事." +
-				" 她正给她的朋友Ilisa挑选arandula,她看见一个地窖的入口, " +
+				" 她正给她的朋友Ilisa挑选海芋,她看见一个地窖的入口, " +
 				" 3个月后, 一个年轻的英雄看到她成了吸血鬼. " +
 				" 多么悲伤的故事. " +
 				" 我把这封信留给她丈夫, " +

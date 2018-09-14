@@ -292,7 +292,7 @@ public class SentenceTest {
 		assertFalse(sentence.hasError());
 		assertEquals("where/QUE?", sentence.toString());
 
-		sentence = ConversationParser.parse("they have very good pizza");
+		sentence = ConversationParser.parse("they have very good 比萨");
 		assertFalse(sentence.hasError());
 		assertEquals("they/SUB-PRO-PLU have/VER good pizza/OBJ-FOO", sentence.toString());
 	}

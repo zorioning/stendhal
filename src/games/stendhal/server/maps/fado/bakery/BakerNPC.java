@@ -69,7 +69,7 @@ public class BakerNPC implements ZoneConfigurator {
 				nodes.add(new Node(10, 10));
 				// to the sink
 				nodes.add(new Node(10, 12));
-				// to the pizza/cake/whatever
+				// to the 比萨/cake/whatever
 				nodes.add(new Node(7, 12));
 				nodes.add(new Node(7, 10));
 				// to the pot
@@ -89,21 +89,21 @@ public class BakerNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addJob("I'm the local baker. My speciality is fish and leek pies. I pride myself in making them promptly.");
+				addJob("I'm the local baker. My speciality is fish and 韭菜 pies. I pride myself in making them promptly.");
 				addReply(Arrays.asList("cod", "mackerel"),
 				        "You can catch cod in Ados. Mackerel may be caught at sea. Perhaps creatures which eat fish might drop them too.");
 				addReply("面粉", "We get our supplies of 面粉 from 塞门镇");
-				addReply("leek", "We're lucky enough to have leeks growing right here in the Fado allotments.");
-				addHelp("Ask me to make you a fish and leek pie. They're not stodgy like meat pies so you can eat them a little quicker.");
+				addReply("韭菜", "We're lucky enough to have 韭菜s growing right here in the Fado allotments.");
+				addHelp("Ask me to make you a fish and 韭菜 pie. They're not stodgy like meat pies so you can eat them a little quicker.");
 				addGoodbye();
 
-				// Linzo makes fish pies if you bring him 面粉, leek, cod and mackerel
+				// Linzo makes fish pies if you bring him 面粉, 韭菜, cod and mackerel
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", 1);
 				requiredResources.put("cod", 2);
 				requiredResources.put("mackerel", 1);
-				requiredResources.put("leek", 1);
+				requiredResources.put("韭菜", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("linzo_make_fish_pie", "make", "fish pie",
 				        requiredResources, 5 * 60);
@@ -117,7 +117,7 @@ public class BakerNPC implements ZoneConfigurator {
 		baker.setDirection(Direction.DOWN);
 		baker.setPosition(15, 3);
 		baker.initHP(1000);
-		baker.setDescription("You see Linzo. He is the local Fado baker and a specialist in baking fish and leek pies.");
+		baker.setDescription("You see Linzo. He is the local Fado baker and a specialist in baking fish and 韭菜 pies.");
 		zone.add(baker);
 	}
 }

@@ -61,7 +61,7 @@ public class ProducerRegisterTest {
 		requiredResources.put("面粉", 1);
 		requiredResources.put("cod", 2);
 		requiredResources.put("mackerel", 1);
-		requiredResources.put("leek", 1);
+		requiredResources.put("韭菜", 1);
 		final ProducerBehaviour behaviour = new ProducerBehaviour("linzo_make_fish_pie", "make", "fish pie",
 		        requiredResources, 5 * 60);
 

@@ -63,7 +63,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li>Karma +25 in all</li>
  * <li>XP +200 in all</li>
- * <li>Some grilled steaks, random between 1 and 4.</li>
+ * <li>Some 烤排s, random between 1 and 4.</li>
  * </ul>
  *
  * REPETITIONS:
@@ -166,9 +166,9 @@ public class CoalForHaunchy extends AbstractQuest {
 									final Sentence sentence,
 									final EventRaiser npc) {
 								int grilledsteakAmount = Rand.rand(4) + 1;
-								new EquipItemAction("grilled steak", grilledsteakAmount, true).fire(player, sentence, npc);
+								new EquipItemAction("烤排", grilledsteakAmount, true).fire(player, sentence, npc);
 								npc.say("谢谢你！从我的烧烤架上拿走 " + grilledsteakAmount + " 个 " +
-										 "grilled steak" + " !");
+										 "烤排" + " !");
 								new SetQuestAndModifyKarmaAction(getSlotName(), "waiting;"
 										+ System.currentTimeMillis(), 10.0).fire(player, sentence, npc);
 							}
