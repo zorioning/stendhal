@@ -66,7 +66,7 @@ public class SoupTest {
 		en.step(player, "revive");
 		assertEquals("My special soup has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
 		en.step(player, "ingredients");
-		assertEquals("I need 9 ingredients before I make the soup: #carrot, #spinach, #courgette, #collard, #salad, #onion, #cauliflower, #broccoli, and #leek. Will you collect them?", getReply(npc));
+		assertEquals("I need 9 ingredients before I make the soup: #carrot, #spinach, #courgette, #collard, #salad, #onion, #cauliflower, #broccoli, and #韭菜. Will you collect them?", getReply(npc));
 		en.step(player, "no");
 		assertEquals("Oh, never mind. It's your loss.", getReply(npc));
 		en.step(player, "bye");
@@ -76,13 +76,13 @@ public class SoupTest {
 		en.step(player, "revive");
 		assertEquals("My special soup has a magic touch. I need you to bring me the #ingredients.", getReply(npc));
 		en.step(player, "ingredients");
-		assertEquals("I need 9 ingredients before I make the soup: #carrot, #spinach, #courgette, #collard, #salad, #onion, #cauliflower, #broccoli, and #leek. Will you collect them?", getReply(npc));
+		assertEquals("I need 9 ingredients before I make the soup: #carrot, #spinach, #courgette, #collard, #salad, #onion, #cauliflower, #broccoli, and #韭菜. Will you collect them?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("You made a wise choice. Do you have anything I need already?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("What did you bring?", getReply(npc));
-		en.step(player, "leek");
-		assertEquals("Don't take me for a fool, traveller. You don't have a leek with you.", getReply(npc));
+		en.step(player, "韭菜");
+		assertEquals("Don't take me for a fool, traveller. You don't have a 韭菜 with you.", getReply(npc));
 		en.step(player, "spinach");
 		assertEquals("Don't take me for a fool, traveller. You don't have a spinach with you.", getReply(npc));
 		en.step(player, "bye");
@@ -96,7 +96,7 @@ public class SoupTest {
 		PlayerTestHelper.equipWithItem(player, "collard");
 		PlayerTestHelper.equipWithItem(player, "cauliflower");
 		PlayerTestHelper.equipWithItem(player, "broccoli");
-		PlayerTestHelper.equipWithItem(player, "leek");
+		PlayerTestHelper.equipWithItem(player, "韭菜");
 		en.step(player, "hi");
 		assertEquals("Welcome back! I hope you collected some #ingredients for the soup, or #everything.", getReply(npc));
 		en.step(player, "everything");

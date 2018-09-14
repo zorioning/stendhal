@@ -92,7 +92,7 @@
     <corpse name="tiny_humanoid" harmless="gnome_military" />
     <drops>
       <item value="money" quantity="[4,10]" probability="70.0"/>
-      <item value="carrot" quantity="[2,10]" probability="20.0"/>
+      <item value="胡萝卜" quantity="[2,10]" probability="20.0"/>
       <item value="大脚菇" quantity="[1,10]" probability="10.0"/>
       <item value="potion" quantity="[1,1]" probability="20.0"/>
     </drops>

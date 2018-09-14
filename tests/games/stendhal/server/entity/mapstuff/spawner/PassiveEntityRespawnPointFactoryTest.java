@@ -227,7 +227,7 @@ public class PassiveEntityRespawnPointFactoryTest {
 				.create(clazz, 6, null, 0, 0);
 		assertNotNull(value_6);
 		assertTrue(value_6 instanceof VegetableGrower);
-		assertEquals("leek", ((VegetableGrower) value_6).getVegetableName());
+		assertEquals("韭菜", ((VegetableGrower) value_6).getVegetableName());
 
 		PassiveEntityRespawnPoint value_7 = PassiveEntityRespawnPointFactory
 				.create(clazz, 7, null, 0, 0);
@@ -258,13 +258,13 @@ public class PassiveEntityRespawnPointFactoryTest {
 				.create(clazz, 11, null, 0, 0);
 		assertNotNull(value_11);
 		assertTrue(value_11 instanceof VegetableGrower);
-		assertEquals("garlic", ((VegetableGrower) value_11).getVegetableName());
+		assertEquals("大蒜", ((VegetableGrower) value_11).getVegetableName());
 
 		PassiveEntityRespawnPoint value_12 = PassiveEntityRespawnPointFactory
 				.create(clazz, 12, null, 0, 0);
 		assertNotNull(value_12);
 		assertTrue(value_12 instanceof VegetableGrower);
-		assertEquals("artichoke", ((VegetableGrower) value_12).getVegetableName());
+		assertEquals("洋蓟", ((VegetableGrower) value_12).getVegetableName());
 
 		PassiveEntityRespawnPoint value_13 = PassiveEntityRespawnPointFactory
 		.create(clazz, 13, null, 0, 0);
@@ -314,14 +314,14 @@ public class PassiveEntityRespawnPointFactoryTest {
 		PassiveEntityRespawnPoint value_0 = PassiveEntityRespawnPointFactory
 				.create(clazz, 0, null, 0, 0);
 		assertNotNull(value_0);
-		assertEquals("You see a place where a coconut looks likely to fall.",
+		assertEquals("You see a place where a 椰子 looks likely to fall.",
 				value_0.getDescription());
 
 		PassiveEntityRespawnPoint value_1 = PassiveEntityRespawnPointFactory
 				.create(clazz, 1, null, 0, 0);
 		assertNotNull(value_1);
 		assertTrue(value_1 instanceof VegetableGrower);
-		assertEquals("tomato", ((VegetableGrower) value_1).getVegetableName());
+		assertEquals("西红柿", ((VegetableGrower) value_1).getVegetableName());
 
 		PassiveEntityRespawnPoint value_2 = PassiveEntityRespawnPointFactory
 				.create(clazz, 2, null, 0, 0);
@@ -332,7 +332,7 @@ public class PassiveEntityRespawnPointFactoryTest {
 		PassiveEntityRespawnPoint value_9 = PassiveEntityRespawnPointFactory
 				.create(clazz, 9, null, 0, 0);
 		assertNotNull(value_9);
-		assertEquals("You see a place where a cherry looks likely to fall.",
+		assertEquals("You see a place where a 樱桃 looks likely to fall.",
 				value_9.getDescription());
 
 		PassiveEntityRespawnPoint value_10 = PassiveEntityRespawnPointFactory

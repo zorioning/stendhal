@@ -73,9 +73,9 @@
 		</equipable>
 	</item>
 
-	<item name="cherry">
+	<item name="樱桃">
 		<type class="food" subclass="cherry" tileid="-1" />
-		<description>You see a cherry. Its tangy taste revives you a little.</description>
+		<description>You see a 樱桃. Its tangy taste revives you a little.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="10" />
@@ -96,9 +96,9 @@
 		</equipable>
 	</item>
 
-	<item name="coconut">
+	<item name="椰子">
 		<type class="food" subclass="coconut" tileid="-1" />
-		<description>You see a coconut. Luckily it's already cracked and you can drink from it.</description>
+		<description>You see a 椰子. Luckily it's already cracked and you can drink from it.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Drink" />
 		<attributes>
 			<amount value="50" />
@@ -144,9 +144,9 @@
 	</item>
 	Removing 螃蟹 meat -->
 
-	<item name="grapes">
+	<item name="葡萄">
 		<type class="food" subclass="grapes" tileid="-1" />
-		<description>You see a bunch of grapes. They look quite juicy and tasty.</description>
+		<description>You see a bunch of 葡萄. They look quite juicy and tasty.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="15" />
@@ -167,9 +167,9 @@
 		</equipable>
 	</item>
 
-	<item name="olive">
+	<item name="橄榄">
 		<type class="food" subclass="olive" tileid="-1" />
-		<description>You see a small ripe olive. It can be eaten or used to create olive oil.</description>
+		<description>You see a small ripe 橄榄. It can be eaten or used to create 橄榄 oil.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="5" />
@@ -236,9 +236,9 @@
 		</equipable>
 	</item>
 
-	<item name="pomegranate">
+	<item name="石榴">
 		<type class="food" subclass="pomegranate" tileid="-1" />
-		<description>You see a pomegranate. If you eat it, you will be in a great shape soon.</description>
+		<description>You see a 石榴. If you eat it, you will be in a great shape soon.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="15" />
@@ -282,9 +282,9 @@
 		</equipable>
 	</item>
 
-	<item name="artichoke">
+	<item name="洋蓟">
 		<type class="food" subclass="artichoke" tileid="-1" />
-		<description>You see an artichoke. It can be an ingredient, or you can eat it.</description>
+		<description>You see an 洋蓟. It can be an ingredient, or you can eat it.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="40" />
@@ -328,9 +328,9 @@
 		</equipable>
 	</item>
 
-	<item name="carrot">
+	<item name="胡萝卜">
 		<type class="food" subclass="carrot" tileid="-1" />
-		<description>You see a carrot. It can be an ingredient, or you can eat it.</description>
+		<description>You see a 胡萝卜. It can be an ingredient, or you can eat it.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="30" />
@@ -420,9 +420,9 @@
 		</equipable>
 	</item>
 
-	<item name="garlic">
+	<item name="大蒜">
 		<type class="food" subclass="garlic" tileid="-1" />
-		<description>You see some fresh garlic.</description>
+		<description>You see some fresh 大蒜.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="40" />
@@ -443,9 +443,9 @@
 		</equipable>
 	</item>
 
-	<item name="leek">
+	<item name="韭菜">
 		<type class="food" subclass="leek" tileid="-1" />
-		<description>You see a fresh leek.</description>
+		<description>You see a fresh 韭菜.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="40" />
@@ -535,9 +535,9 @@
 		</equipable>
 	</item>
 
-	<item name="tomato">
+	<item name="西红柿">
 		<type class="food" subclass="tomato" tileid="-1" />
-		<description>You see a tomato, put it in a salad or eat it.</description>
+		<description>You see a 西红柿, put it in a salad or eat it.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="30" />
@@ -928,9 +928,9 @@
 		</equipable>
 	</item>
 
-	<item name="cherry pie">
+	<item name="樱桃派">
 		<type class="food" subclass="cherrypie" tileid="-1" />
-		<description>You see a delicious cherry pie, made with only genuine ingredients.</description>
+		<description>You see a delicious 樱桃派, made with only genuine ingredients.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="230" />
@@ -976,7 +976,7 @@
 
 	<item name="fish pie">
 		<type class="food" subclass="fishpie" tileid="-1" />
-		<description>You see a fish and leek pie. It's not too stodgy so you can eat it faster than a meat pie.</description>
+		<description>You see a fish and 韭菜 pie. It's not too stodgy so you can eat it faster than a meat pie.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="160" />

@@ -71,7 +71,7 @@ final class PrefixManager
 //		register("sheaf of ", "sheaves of ", "小麦");
 //		register("loaf of ", "loaves of ", "面包");
 //		register("stick of ", "sticks of ", "butter");
-//		register("bulb of ", "bulbs of ", "garlic");
+//		register("bulb of ", "bulbs of ", "大蒜");
 //		register("jar of ", "jars of ", "honey");
 //		register("glass of ", "glasses of ", "wine");
 //		register("cup of ", "cups of ", "tea");

@@ -15,7 +15,7 @@ import games.stendhal.server.entity.npc.behaviour.adder.ProducerAdder;
 import games.stendhal.server.entity.npc.behaviour.impl.ProducerBehaviour;
 
 /**
- * Provides Gertha, the cherry pies confectioner NPC.
+ * Provides Gertha, the 樱桃派s confectioner NPC.
  * She has a twin sister: Martha, the 苹果派s confectioner NPC.
  *
  * @author omero
@@ -63,11 +63,11 @@ public class ConfectionerCherryPieNPC implements ZoneConfigurator {
 					"I'd look for some at a mill...");
 				addReply("egg",
 					"Find some hens and you'll easily find some eggs too!");
-				addReply("cherry",
+				addReply("樱桃",
 					"Mmm... Those are sometimes hard to get. Did you already ask in some tavern if they can offer any?");
 
-				addHelp("If it would help, I could #bake a cherry pie for you!");
-				addOffer("I'd be happy to #bake a cherry pie for you. Why don't you just ask me?!");
+				addHelp("If it would help, I could #bake a 樱桃派 for you!");
+				addOffer("I'd be happy to #bake a 樱桃派 for you. Why don't you just ask me?!");
 
 				addQuest("I'd love to try and bake a strawberry pie once in a while... But alas! Strawberries are nowhere to be found...");
 
@@ -79,13 +79,13 @@ public class ConfectionerCherryPieNPC implements ZoneConfigurator {
 				requiredResources.put("honey", Integer.valueOf(1));
 				requiredResources.put("milk", Integer.valueOf(1));
 				requiredResources.put("egg", Integer.valueOf(1));
-				requiredResources.put("cherry", Integer.valueOf(2));
+				requiredResources.put("樱桃", Integer.valueOf(2));
 
-				final ProducerBehaviour behaviour = new ProducerBehaviour("gertha_bake_cherrypie", "bake", "cherry pie",
+				final ProducerBehaviour behaviour = new ProducerBehaviour("gertha_bake_cherrypie", "bake", "樱桃派",
 				        requiredResources, 15 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
-				        "Hello! Did you come to taste one of my fabulous cherry pies? I could #bake one for you happily!");
+				        "Hello! Did you come to taste one of my fabulous 樱桃派s? I could #bake one for you happily!");
 			}
 		};
 
@@ -93,7 +93,7 @@ public class ConfectionerCherryPieNPC implements ZoneConfigurator {
 		npc.setDirection(Direction.DOWN);
 		npc.setPosition(10, 6);
 		npc.initHP(100);
-		npc.setDescription("You see Gertha. She loves baking cherry pies for her guests.");
+		npc.setDescription("You see Gertha. She loves baking 樱桃派s for her guests.");
 		zone.add(npc);
 	}
 }

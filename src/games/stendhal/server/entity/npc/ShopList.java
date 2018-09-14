@@ -31,12 +31,12 @@ public final class ShopList {
 		shops.add("food&drinks", "瓶子", 5);
 		shops.add("food&drinks", "干酪", 20);
 		shops.add("food&drinks", "苹果", 10);
-		shops.add("food&drinks", "carrot", 10);
+		shops.add("food&drinks", "胡萝卜", 10);
 		shops.add("food&drinks", "肉", 40);
 		shops.add("food&drinks", "火腿", 80);
 
 		shops.add("adosfoodseller", "苹果", 50);
-		shops.add("adosfoodseller", "carrot", 50);
+		shops.add("adosfoodseller", "胡萝卜", 50);
 
 		shops.add("buyfood", "干酪", 5);
 		shops.add("buyfood", "肉", 10);
@@ -328,13 +328,13 @@ public final class ShopList {
 
 		// assassinhq chief falatheen the dishwasher and veggie buyer)
 		// sign is hard coded so if you change this change the sign
-		shops.add("buyveggiesandherbs", "carrot", 5);
+		shops.add("buyveggiesandherbs", "胡萝卜", 5);
 		shops.add("buyveggiesandherbs", "salad", 10);
-		shops.add("buyveggiesandherbs", "leek", 25);
+		shops.add("buyveggiesandherbs", "韭菜", 25);
 		shops.add("buyveggiesandherbs", "broccoli", 30);
 		shops.add("buyveggiesandherbs", "courgette", 10);
 		shops.add("buyveggiesandherbs", "cauliflower", 30);
-		shops.add("buyveggiesandherbs", "tomato", 20);
+		shops.add("buyveggiesandherbs", "西红柿", 20);
 		shops.add("buyveggiesandherbs", "onion", 20);
 		shops.add("buyveggiesandherbs", "arandula", 10);
 		shops.add("buyveggiesandherbs", "kokuda", 200);
@@ -452,7 +452,7 @@ public final class ShopList {
 		shops.add("sellScubaStuff", "scuba gear", 22000);
 
 		// 矿镇复兴展会周 卡若琳
-		shops.add("sellrevivalweeks", "cherry pie", 195);
+		shops.add("sellrevivalweeks", "樱桃派", 195);
 		shops.add("sellrevivalweeks", "苹果派", 195);
 		shops.add("sellrevivalweeks", "vanilla shake", 120);
 		shops.add("sellrevivalweeks", "chocolate shake", 120);

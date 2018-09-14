@@ -85,7 +85,7 @@ public class BakerNPC implements ZoneConfigurator {
 				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
 				addReply("面粉", "Mill near 塞门镇 produce from 小麦.");
 				addReply("干酪", "Cheese? I know not.");
-				addReply("tomato", "This grow in glass houses.");
+				addReply("西红柿", "This grow in glass houses.");
 				addReply("火腿", "The pig animal have ham.");
 				addHelp("I have work with #Leander, I #make #pizza.");
 				addReply("Leander", "I was with human, in 塞门镇. The great Leander taught to #make #pizza.");
@@ -97,7 +97,7 @@ public class BakerNPC implements ZoneConfigurator {
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", 2);
 				requiredResources.put("干酪", 1);
-				requiredResources.put("tomato", 1);
+				requiredResources.put("西红柿", 1);
 				requiredResources.put("小圆菇", 2);
 				requiredResources.put("大脚菇", 1);
 				requiredResources.put("火腿", 1);
