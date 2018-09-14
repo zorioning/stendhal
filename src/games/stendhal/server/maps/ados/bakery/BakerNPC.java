@@ -62,7 +62,7 @@ public class BakerNPC implements ZoneConfigurator {
 				nodes.add(new Node(10, 10));
 				// to the sink
 				nodes.add(new Node(10, 12));
-				// to the pizza/cake/whatever
+				// to the 比萨/cake/whatever
 				nodes.add(new Node(7, 12));
 				nodes.add(new Node(7, 10));
 				// to the pot

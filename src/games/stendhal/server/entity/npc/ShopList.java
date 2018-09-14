@@ -458,7 +458,7 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "chocolate shake", 120);
 		shops.add("sellrevivalweeks", "冰淇淋", 60);
 		shops.add("sellrevivalweeks", "巧克力棒", 100);
-		shops.add("sellrevivalweeks", "grilled steak", 250);
+		shops.add("sellrevivalweeks", "烤排", 250);
 		shops.add("sellrevivalweeks", "hotdog", 170);
 		shops.add("sellrevivalweeks", "cheeseydog", 175);
 		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);

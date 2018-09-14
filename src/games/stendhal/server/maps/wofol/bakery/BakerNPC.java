@@ -80,19 +80,19 @@ public class BakerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				// This isn't bad grammar. It's his tyle of speech! Do't correct pls.
-				addJob("I #make #pizza. I have learn from the great baker #Leander.");
+				addJob("I #make #比萨. I have learn from the great baker #Leander.");
 				addReply(Arrays.asList("小圆菇", "大脚菇"),
 				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
 				addReply("面粉", "Mill near 塞门镇 produce from 小麦.");
 				addReply("干酪", "Cheese? I know not.");
 				addReply("西红柿", "This grow in glass houses.");
 				addReply("火腿", "The pig animal have ham.");
-				addHelp("I have work with #Leander, I #make #pizza.");
-				addReply("Leander", "I was with human, in 塞门镇. The great Leander taught to #make #pizza.");
-				addQuest("#Leander need pizza send. I #make #pizza, you have ingredients.");
+				addHelp("I have work with #Leander, I #make #比萨.");
+				addReply("Leander", "I was with human, in 塞门镇. The great Leander taught to #make #比萨.");
+				addQuest("#Leander need 比萨 send. I #make #比萨, you have ingredients.");
 				addGoodbye("You no take candle!");
 
-				// makes a pizza if you bring 面粉 cheese mushroom 大脚菇 and ham
+				// makes a 比萨 if you bring 面粉 cheese mushroom 大脚菇 and ham
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("面粉", 2);
@@ -102,7 +102,7 @@ public class BakerNPC implements ZoneConfigurator {
 				requiredResources.put("大脚菇", 1);
 				requiredResources.put("火腿", 1);
 
-				final ProducerBehaviour behaviour = new ProducerBehaviour("kroip_make_pizza", "make", "pizza",
+				final ProducerBehaviour behaviour = new ProducerBehaviour("kroip_make_pizza", "make", "比萨",
 				        requiredResources, 5 * 60, true);
 
 				new ProducerAdder().addProducer(this, behaviour,
