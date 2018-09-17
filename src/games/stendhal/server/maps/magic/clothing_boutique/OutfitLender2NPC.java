@@ -126,7 +126,8 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 						if (type) {
 							if (player.getOutfit().getBody() > 80
 									&& player.getOutfit().getBody() < 99) {
-								seller.say("You already have a magic outfit on which just wouldn't look good with another - could you please put yourself in something more conventional and ask again? Thanks!");
+								//seller.say("You already have a magic outfit on which just wouldn't look good with another - could you please put yourself in something more conventional and ask again? Thanks!");
+								seller.say("你已经穿了魔法装备，但看起来不太好 - 请你在更传统的地方设身处地然后再问一次？ 谢谢！");
 								return false;
 							}
 						}
@@ -138,7 +139,7 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 							putOnOutfit(player, outfitType);
 							return true;
 						} else {
-							seller.say("Sorry, you don't have enough money!");
+							seller.say("对不起，你没有足够的钱。");
 							return false;
 						}
 					}
@@ -167,19 +168,22 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 				priceList.put("green slime", (int) (N * 3000));
 				priceList.put("gingerbread man", (int) (N * 1200));
 				priceList.put("umbrella", (int) (N * 300));
-			    addGreeting("Hello, I hope you are enjoying looking around our gorgeous boutique.");
-				addQuest("Just look fabulous!");
+			    //addGreeting("Hello, I hope you are enjoying looking around our gorgeous boutique.");
+				addGreeting("您好！ 我希望你你喜欢光临我们的魔法装备店！");
+				addQuest("看起来简直棒极了！");
 				add(
 					ConversationStates.ATTENDING,
 					ConversationPhrases.OFFER_MESSAGES,
 					null,
 					ConversationStates.ATTENDING,
-					"Please tell me which outfit you would like, ask to #hire #glasses, #hire a #小妖精 #face, #hire a #thing #face, #hire a #umbrella, #hire a #purple #slime outfit, #hire a #green #slime, #hire a #red #slime, #hire a #blue #slime, or #hire a #gingerbread #man outfit.",
+					"请告诉我你喜欢哪一个装备, ask to #hire #glasses, #hire a #小妖精 #face, #hire a #thing #face, #hire a #umbrella, #hire a #purple #slime outfit, #hire a #green #slime, #hire a #red #slime, #hire a #blue #slime, or #hire a #gingerbread #man outfit.",
 					new ExamineChatAction("outfits2.png", "Outfits", "Price varies"));
-				addJob("I work with magic in a fun way! Ask about the #offer.");
-				addHelp("I can cast a spell to dress you in a magical outfit. They wear off after some time. I hope I can #offer you something you like. If not 莉莉娅娜 also rents out from a different range.");
-				addGoodbye("Bye!");
-				final OutfitChangerBehaviour behaviour = new SpecialOutfitChangerBehaviour(priceList, endurance, "Your magical outfit has worn off.");
+				//addJob("I work with magic in a fun way! Ask about the #offer.");
+				addJob("我以一种有趣的方式在 Magic 工作。 询问 #工作 。");
+				//addHelp("I can cast a spell to dress you in a magical outfit. They wear off after some time. I hope I can #offer you something you like. If not 莉莉娅娜 also rents out from a different range.");
+				addHelp("我可以用法术给你穿上魔法装备。他们会在一段时间后自动消失。我希望我可以 #买卖 一些你喜欢的东西。 如果不是 莉莉娅娜 也可以从不同的范围出租。");
+				addGoodbye("再见！");
+				final OutfitChangerBehaviour behaviour = new SpecialOutfitChangerBehaviour(priceList, endurance, "你的魔法装备已经磨损。");
 				new OutfitChangerAdder().addOutfitChanger(this, behaviour, "hire", false, false);
 			}
 		};
@@ -187,7 +191,7 @@ public class OutfitLender2NPC implements ZoneConfigurator {
 		npc.setEntityClass("wizardwomannpc");
 		npc.setPosition(5, 7);
 		npc.initHP(100);
-		npc.setDescription("You see Saskia. She works in the Magic City boutique.");
+		npc.setDescription("你看见 Saskia. 她在 Magic 主城的装备店工作！");
 		zone.add(npc);
 	}
 }
