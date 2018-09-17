@@ -86,7 +86,7 @@
   </item>
   
   <item name="黑镰刀">
-    <type class="axe" subclass="black_axe" tileid="-1"/>
+    <type class="axe" subclass="black_scythe" tileid="-1"/>
     <description>这是一把黑镰刀. 对于一种农具来说, 它的攻击力是惊人的. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
