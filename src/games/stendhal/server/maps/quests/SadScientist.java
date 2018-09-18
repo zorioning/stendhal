@@ -239,12 +239,12 @@ public class SadScientist extends AbstractQuest {
 		final ChatCondition condition = new AndCondition(
 				new QuestStateStartsWithCondition(QUEST_SLOT, "kill_scientist"),
 				new KilledForQuestCondition(QUEST_SLOT, 1),
-				new PlayerHasItemWithHimCondition("goblet")
+				new PlayerHasItemWithHimCondition("红酒杯")
 			);
 		ChatAction action = new MultipleActions(
 										new SetQuestAction(QUEST_SLOT, "decorating;"),
 										new SetQuestToTimeStampAction(QUEST_SLOT, 1),
-										new DropItemAction("goblet",1)
+										new DropItemAction("红酒杯",1)
 										);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()), condition),
@@ -268,7 +268,7 @@ public class SadScientist extends AbstractQuest {
 				new NotCondition(
 						new AndCondition(
 										new KilledForQuestCondition(QUEST_SLOT, 1),
-										new PlayerHasItemWithHimCondition("goblet")))
+										new PlayerHasItemWithHimCondition("红酒杯")))
 			);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				condition, ConversationStates.IDLE,
@@ -335,7 +335,7 @@ public class SadScientist extends AbstractQuest {
 				new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
 				ConversationStates.ATTENDING,
 				"什么? 你怎么知道她? 好吧, 这是个悲伤的故事." +
-				" 她正给她的朋友Ilisa挑选海芋,她看见一个地窖的入口, " +
+				" 她正给她的朋友伊丽莎挑选海芋,她看见一个地窖的入口, " +
 				" 3个月后, 一个年轻的英雄看到她成了吸血鬼. " +
 				" 多么悲伤的故事. " +
 				" 我把这封信留给她丈夫, " +

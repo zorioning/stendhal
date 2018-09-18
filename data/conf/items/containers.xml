@@ -24,9 +24,9 @@
     </equipable>
   </item>
   
-  <item name="empty sack">
+  <item name="空布袋">
     <type class="container" subclass="empty_sack" tileid="-1"/>
-    <description>You see an empty sack. It will not stand up, unless you fill it first.</description>
+    <description>You see an 空布袋. It will not stand up, unless you fill it first.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -116,9 +116,9 @@
   </item>
   -->
   
-  <item name="eared bottle">
+  <item name="耳瓶">
     <type class="container" subclass="bottle_eared" tileid="-1"/>
-    <description>You see an eared bottle. It is empty, someone drank the contents.</description>
+    <description>You see an 耳瓶. It is empty, someone drank the contents.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -134,9 +134,9 @@
     </equipable>
   </item>
   
-  <item name="fat bottle">
+  <item name="大瓶子">
     <type class="container" subclass="bottle_fat" tileid="-1"/>
-    <description>You see a fat bottle. It is empty, someone drank the contents.</description>
+    <description>You see a 大瓶子. It is empty, someone drank the contents.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -190,9 +190,9 @@
   </item>
   -->
   
-  <item name="slim bottle">
+  <item name="细瓶子">
     <type class="container" subclass="bottle_slim" tileid="-1"/>
-    <description>You see a slim bottle. It is empty, someone drank the contents.</description>
+    <description>You see a 细瓶子. It is empty, someone drank the contents.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -264,9 +264,9 @@
   </item>
   -->
   
-  <item name="empty goblet">
+  <item name="高脚杯">
     <type class="container" subclass="empty_goblet" tileid="-1"/>
-    <description>You see an empty goblet.  You wonder what could it hold.</description>
+    <description>You see an 高脚杯.  You wonder what could it hold.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -280,9 +280,9 @@
     </equipable>
   </item>
   
-  <item name="goblet">
+  <item name="红酒杯">
     <type class="container" subclass="full_goblet" tileid="-1"/>
-    <description>You see a goblet.  You look at its contents, and shiver at the blood inside.</description>
+    <description>You see a 红酒杯.  You look at its contents, and shiver at the blood inside.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -298,12 +298,12 @@
     </equipable>
   </item>
   
-  <item name="keyring">
+  <item name="钥匙环">
     <type class="container" subclass="keyring" tileid="-1"/>
-    <description>You see a keyring.</description>
+    <description>You see a 钥匙环.</description>
     <implementation class-name="games.stendhal.server.entity.item.Container"/>
     <attributes>
-      <slot_name value="keyring"/>
+      <slot_name value="钥匙环"/>
     </attributes>
     <weight value="1.0"/>
     <value value="1"/>

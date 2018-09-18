@@ -130,7 +130,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("异种元素斗篷",1);
 
 		// club
-		items.put("skull staff",1);
+		items.put("骨玉法杖",1);
 
 		// drinks
 		items.put("mega potion",5);

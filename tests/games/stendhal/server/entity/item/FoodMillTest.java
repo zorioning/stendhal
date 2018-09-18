@@ -64,8 +64,8 @@ public class FoodMillTest {
 		PlayerTestHelper.equipWithItemToSlot(user, "sugar cane", "rhand");
 
 		fm.onUsed(user);
-		assertEquals("You don't have an empty sack with you", PlayerTestHelper.getPrivateReply(user));
-		PlayerTestHelper.equipWithItem(user, "empty sack");
+		assertEquals("You don't have an 空布袋 with you", PlayerTestHelper.getPrivateReply(user));
+		PlayerTestHelper.equipWithItem(user, "空布袋");
 		fm.onUsed(user);
 		assertTrue(user.isEquipped("sugar"));
 	}

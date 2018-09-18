@@ -346,9 +346,9 @@
     </equipable>
   </item>
   
-  <item name="黑曜石铠甲">
+  <item name="密银铠甲">
     <type class="armor" subclass="mithril_armor" tileid="-1"/>
-    <description>这是一件黑曜石铠甲, 缝制紧密, 非常漂亮. </description>
+    <description>这是一件密银铠甲, 缝制紧密, 非常漂亮. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="29"/>

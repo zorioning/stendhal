@@ -856,7 +856,7 @@ public class j2DClient implements UserInterface {
 		// Note: this is an exact object reference check
 		if ((user != null) && (user != lastuser)) {
 			character.setPlayer(user);
-			keyring.setSlot(user, "keyring");
+			keyring.setSlot(user, "钥匙环");
 			spells.setSlot(user, "spells");
 			inventory.setSlot(user, "bag");
 			lastuser = user;

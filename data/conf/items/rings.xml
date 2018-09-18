@@ -19,7 +19,7 @@
       <slot name="bag"/>
       <slot name="trade"/>
       <slot name="finger"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
   
@@ -39,7 +39,7 @@
       <slot name="bag"/>
       <slot name="trade"/>
       <slot name="finger"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
   
@@ -58,7 +58,7 @@
       <slot name="bag"/>
       <slot name="trade"/>
       <slot name="finger"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
   DISABLED -->
@@ -79,7 +79,7 @@
       <slot name="bag"/>
       <slot name="trade"/>
       <slot name="finger"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -97,7 +97,7 @@
       <slot name="bag"/>
       <slot name="trade"/>
       <slot name="finger"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -117,7 +117,7 @@
       <slot name="bag"/>
       <slot name="trade"/>
       <slot name="finger"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
   

@@ -130,7 +130,7 @@ public final class ShopList {
 		shops.add("selltools", "旧的大镰刀", 120);
         // for harvesting cane fields
 		shops.add("selltools", "镰刀", 80);
-		shops.add("selltools", "金盘子", 230);
+		shops.add("selltools", "淘金盘", 230);
 
 		shops.add("buyiron", "iron", 75);
 
@@ -256,7 +256,7 @@ public final class ShopList {
 		shops.add("buyelvish", "精灵之剑", 800);
 		shops.add("buyelvish", "精灵之盾", 1000);
 		shops.add("buyelvish", "卓尔之剑", 1200);
-		shops.add("buyelvish", "像小精灵的斗篷", 400);
+		shops.add("buyelvish", "精灵披风", 400);
 		shops.add("buyelvish", "精灵护甲", 400);
 
 		// magic items or 'relics' (witch in magic city)

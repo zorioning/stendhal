@@ -120,7 +120,7 @@
       <slot name="content"/>
       <slot name="bag"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
   

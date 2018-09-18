@@ -246,9 +246,9 @@
     </equipable>
   </item>
   
-  <item name="黑曜石盾">
+  <item name="密银盾">
     <type class="shield" subclass="mithril_shield" tileid="-1"/>
-    <description>一面黑曜石盾, 它可能提供最大的防护. </description>
+    <description>一面密银盾, 它可能提供最大的防护. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="45"/>

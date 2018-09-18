@@ -191,9 +191,9 @@
     </equipable>
   </item>
   
-  <item name="黑曜石靴">
+  <item name="密银靴">
     <type class="boots" subclass="mithril_boots" tileid="-1"/>
-    <description>这是一双黑曜石靴. </description>
+    <description>这是一双密银靴. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>

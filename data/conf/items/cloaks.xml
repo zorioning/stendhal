@@ -191,9 +191,9 @@
     </equipable>
   </item>
   
-   <item name="像小精灵的斗篷">
+   <item name="精灵披风">
     <type class="cloak" subclass="elvish_cloak" tileid="-1"/>
-    <description>这是一件像小精灵的斗篷. 颜色灰暗, 但是又厚实又保暖. </description>
+    <description>这是一件精灵披风. 颜色灰暗, 但是又厚实又保暖. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="6"/>
@@ -286,9 +286,9 @@
     </equipable>
   </item>
   
-  <item name="黑曜石斗篷">
+  <item name="密银斗篷">
     <type class="cloak" subclass="mithril_cloak" tileid="-1"/>
-    <description>这是一件黑曜石斗篷, 它的编织非常精细, 外观令人叹为观止. </description>
+    <description>这是一件密银斗篷, 它的编织非常精细, 外观令人叹为观止. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="28"/>
