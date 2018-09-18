@@ -181,7 +181,7 @@ public abstract class UpdateConverter {
      *            RPObject representing a player
      */
     public static void updatePlayerRPObject(final RPObject object) {
-    	final String[] slotsNormal = { "bag", "rhand", "lhand", "head", "armor",
+    	final String[] slotsNormal = { "背包", "rhand", "lhand", "head", "armor",
     			"legs", "feet", "finger", "cloak", "bank", "bank_ados",
     			"zaras_chest_ados", "bank_fado", "bank_nalwor", "spells",
     			"钥匙环", "trade" };

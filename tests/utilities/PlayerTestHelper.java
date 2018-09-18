@@ -278,9 +278,9 @@ public abstract class PlayerTestHelper {
 	}
 
 	public static void addEmptySlots(final Player player) {
-		//		"bag", "rhand", "lhand", "head", "armor",
+		//		"背包", "rhand", "lhand", "head", "armor",
 		//		"legs", "feet", "finger", "cloak", "钥匙环"
-		player.addSlot(new PlayerSlot("bag"));
+		player.addSlot(new PlayerSlot("背包"));
 		player.addSlot(new PlayerSlot("lhand"));
 		player.addSlot(new PlayerSlot("rhand"));
 		player.addSlot(new PlayerSlot("armor"));

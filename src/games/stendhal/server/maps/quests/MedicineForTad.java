@@ -77,7 +77,7 @@ public class MedicineForTad extends AbstractQuest {
 	static final String ILISA_TALK_PREPARE_MEDICINE = "很好!谢谢你, 现在我要把这些混合...加入这个...然后再滴点... 好了！你能让 #泰德 停下并收集这个吗？ 我想知道他在做些什么. ";
 	static final String ILISA_TALK_EXPLAIN_MEDICINE = "这是 #泰德 急需的东西.";
 
-	static final String KETTEH_TALK_BYE_INTRODUCES_TAD = "再会, 你在旅店里见到泰德了？ 如果你有时间请去看看他, 我听说他近来身体不太好. 你可以在 塞门镇 村子里的旅店找到他, 离尼世亚很近.";
+	static final String KETTEH_TALK_BYE_INTRODUCES_TAD = "再会, 你在旅店里见到泰德了？ 如果你有时间请去看看他, 我听说他近来身体不太好. 你可以在塞门镇西边村子的旅店里找到他, 离尼世亚很近.";
 	static final String KETTEH_TALK_BYE_REMINDS_OF_TAD = "再见, 不要忘了去看看 泰德. 我希望他好起来.";
 
 	static final String TAD_TALK_GOT_FLASK = "Ok, 你得到了 瓶子!";
@@ -92,14 +92,14 @@ public class MedicineForTad extends AbstractQuest {
 	static final String TAD_TALK_ALREADY_HELPED_1 = "我现在好多了, 谢谢.";
 	static final String TAD_TALK_ALREADY_HELPED_2 = "你帮我脱离险境！现在我觉得好多了！";
 	static final String TAD_TALK_WAIT_FOR_FLASK = "*cough* 咳...咳！Oh 亲爱的... 我真的需要这些药！请快点去找 #玛格丽特 取个 #瓶子 回来.";
-	static final String TAD_TALK_FLASK_MARGARET = "你应该去 #玛格丽特 处取个 瓶子.";
-	static final String TAD_TALK_INTRODUCE_MARGARET = "玛格丽特 是酒店的服务员, 平时就在离这不远的酒店里. ";
+	static final String TAD_TALK_FLASK_MARGARET = "你能去 #玛格丽特 处取个 瓶子 吗?";
+	static final String TAD_TALK_INTRODUCE_MARGARET = "玛格丽特 是酒馆的服务员, 平时就在离这不远的酒馆里.";
 	static final String TAD_TALK_CONFIRM_QUEST = "所以, 你会帮我吗?";
-	static final String TAD_TALK_QUEST_REFUSED = "Oh, 请不要改变主意好吗？ *sneeze*";
-	static final String TAD_TALK_QUEST_ACCEPTED = "太好了! 请尽快吧. *sneeze*";
+	static final String TAD_TALK_QUEST_REFUSED = "Oh, 请不要改变主意好吗? 呜呜 *sneeze*";
+	static final String TAD_TALK_QUEST_ACCEPTED = "太好了! 请尽快吧. 呜呜 *sneeze*";
 
 	static final String HISTORY_MET_TAD = "我在 塞门镇 旅店里见到了 泰德.";
-	static final String HISTORY_QUEST_OFFERED = "他让我去 塞门镇 酒店里 找 玛格丽特 买一个 瓶子 .";
+	static final String HISTORY_QUEST_OFFERED = "他让我去 塞门镇 酒馆里 找 玛格丽特 买一个 瓶子 .";
 	static final String HISTORY_GOT_FLASK = "我拿到了 瓶子 , 并马上带给了 泰德 .";
 	static final String HISTORY_TAKE_FLASK_TO_ILISA = "泰德 让我拿着 瓶子 到 塞门镇教堂找 伊丽莎.";
 	static final String HISTORY_ILISA_ASKED_FOR_HERB = "伊丽莎 让我去 塞门镇的北边取一种叫 海芋 的药草, 这种药草长在小树林的旁边.";

@@ -18,7 +18,7 @@
       <slot name="lhand" />
       <slot name="rhand" />
       <slot name="head" />
-      <slot name="bag" />
+      <slot name="背包" />
     </equipable>
   </item>
   
@@ -38,7 +38,7 @@
       <slot name="lhand" />
       <slot name="rhand" />
       <slot name="head" />
-      <slot name="bag" />
+      <slot name="背包" />
     </equipable>
   </item>
   
@@ -58,7 +58,7 @@
       <slot name="lhand" />
       <slot name="rhand" />
       <slot name="head" />
-      <slot name="bag" />
+      <slot name="背包" />
     </equipable>
   </item>
   
@@ -78,7 +78,7 @@
       <slot name="lhand" />
       <slot name="rhand" />
       <slot name="head" />
-      <slot name="bag" />
+      <slot name="背包" />
     </equipable>
   </item>
   
@@ -98,7 +98,7 @@
       <slot name="lhand" />
       <slot name="rhand" />
       <slot name="head" />
-      <slot name="bag" />
+      <slot name="背包" />
     </equipable>
   </item>
   

@@ -677,7 +677,7 @@ public class j2DClient implements UserInterface {
 		containerPanel.addRepaintable(character);
 
 		// Create the bag window
-		inventory = new SlotWindow("bag", 3, 4);
+		inventory = new SlotWindow("背包", 3, 4);
 		inventory.setAcceptedTypes(EntityMap.getClass("item", null, null));
 		inventory.setCloseable(false);
 		containerPanel.addRepaintable(inventory);
@@ -858,7 +858,7 @@ public class j2DClient implements UserInterface {
 			character.setPlayer(user);
 			keyring.setSlot(user, "钥匙环");
 			spells.setSlot(user, "spells");
-			inventory.setSlot(user, "bag");
+			inventory.setSlot(user, "背包");
 			lastuser = user;
 		}
 

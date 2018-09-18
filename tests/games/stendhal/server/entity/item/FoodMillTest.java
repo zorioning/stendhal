@@ -48,7 +48,7 @@ public class FoodMillTest {
 		fm.onUsed(user);
 		assertEquals("You should be carrying the sugar mill in order to use it.", PlayerTestHelper.getPrivateReply(user));
 
-		user.equip("bag", fm);
+		user.equip("背包", fm);
 		fm.onUsed(user);
 		assertEquals("You should hold the sugar mill in either hand in order to use it.", PlayerTestHelper.getPrivateReply(user));
 		user.equip("lhand", fm);
@@ -81,7 +81,7 @@ public class FoodMillTest {
 		assertEquals("You should be carrying the scroll eraser in order to use it.", PlayerTestHelper.getPrivateReply(user));
 		assertFalse(user.isEquipped("empty scroll"));
 
-		user.equip("bag", fm);
+		user.equip("背包", fm);
 		fm.onUsed(user);
 		assertEquals("You should hold the scroll eraser in either hand in order to use it.", PlayerTestHelper.getPrivateReply(user));
 		assertFalse(user.isEquipped("empty scroll"));
@@ -92,7 +92,7 @@ public class FoodMillTest {
 		assertFalse(user.isEquipped("empty scroll"));
 		
 		PlayerTestHelper.equipWithItemToSlot(user, "cheese", "rhand");
-		PlayerTestHelper.equipWithItemToSlot(user, "marked scroll","bag");
+		PlayerTestHelper.equipWithItemToSlot(user, "marked scroll","背包");
 		fm.onUsed(user);
 		assertEquals("You need to have at least a marked scroll in your other hand", PlayerTestHelper.getPrivateReply(user));
 		assertFalse(user.isEquipped("empty scroll"));

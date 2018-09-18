@@ -18,7 +18,7 @@
       <slot name="lhand"/>
       <slot name="rhand"/>
       <slot name="钥匙环"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -35,7 +35,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -57,7 +57,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -76,7 +76,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -98,7 +98,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -118,7 +118,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -138,7 +138,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>

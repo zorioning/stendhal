@@ -7,7 +7,7 @@
     <description>You see a backpack.</description>
      <implementation class-name="games.stendhal.server.entity.item.Container"/>
     <attributes>
-      <slot_name value="bag"/>
+      <slot_name value="背包"/>
       <undroppableondeath value="1" />
       <autobind value="1" />
       <slot_size value="15"/>
@@ -18,7 +18,7 @@
       <slot name="ground"/>
 <!--       <slot name="content"/>  -->
       <slot name="back"/>
-<!--      <slot name="bag"/>
+<!--      <slot name="背包"/>
       <slot name="trade"/>
  -->      
     </equipable>
@@ -37,7 +37,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -55,7 +55,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -74,7 +74,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -92,7 +92,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -110,7 +110,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -129,7 +129,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -147,7 +147,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -166,7 +166,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -184,7 +184,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -203,7 +203,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -222,7 +222,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -240,7 +240,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -258,7 +258,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -275,7 +275,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -293,7 +293,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -311,7 +311,7 @@
       <slot name="ground"/>
 <!--       <slot name="content"/>  -->
       <slot name="belt"/>
-<!--      <slot name="bag"/>
+<!--      <slot name="背包"/>
       <slot name="trade"/>
  -->      
     </equipable>
@@ -331,7 +331,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>

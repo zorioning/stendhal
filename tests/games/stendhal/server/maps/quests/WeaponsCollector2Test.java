@@ -136,7 +136,7 @@ public class WeaponsCollector2Test {
 		assertEquals("What did you find?", getReply(npc));
 
 		Item weapon = new Item("破晓之星", "", "", null);
-		pl.getSlot("bag").add(weapon);
+		pl.getSlot("背包").add(weapon);
 
 		assertTrue(en.stepTest(pl, "破晓之星"));
 		assertEquals("Thank you very much! Do you have anything more for me?",
@@ -149,7 +149,7 @@ public class WeaponsCollector2Test {
 
 		for (final String cloakName : wc.getNeededItems()) {
 			weapon = new Item(cloakName, "", "", null);
-			pl.getSlot("bag").add(weapon);
+			pl.getSlot("背包").add(weapon);
 			en.step(pl, cloakName);
 		}
 

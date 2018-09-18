@@ -37,7 +37,7 @@ public class PlayerTestHelperTest {
 		final Player bob = new Player(new RPObject());
 		PlayerTestHelper.addEmptySlots(bob);
 
-		assertTrue(bob.hasSlot("bag"));
+		assertTrue(bob.hasSlot("背包"));
 		assertTrue(bob.hasSlot("lhand"));
 		assertTrue(bob.hasSlot("rhand"));
 		assertTrue(bob.hasSlot("armor"));

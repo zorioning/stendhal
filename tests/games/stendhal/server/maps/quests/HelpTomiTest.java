@@ -86,7 +86,7 @@ public class HelpTomiTest {
 		assertEquals("bye", getReply(npc));
 
 		Item item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));
@@ -109,7 +109,7 @@ public class HelpTomiTest {
 		assertEquals("bye", getReply(npc));
 
 		item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp2 = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));
@@ -123,7 +123,7 @@ public class HelpTomiTest {
 		assertEquals("bye", getReply(npc));
 
 		item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp3 = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));
@@ -139,7 +139,7 @@ public class HelpTomiTest {
 		// check the XP rate change point
 		player.setQuest(questSlot, 1, "11");
 		item = ItemTestHelper.createItem("ice sword");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp4 = player.getXP();
 		en.step(player, "hi");
 		assertEquals("help!", getReply(npc));

@@ -112,7 +112,7 @@ public class WeaponsCollectorTest {
 		assertEquals(wc.respondToOfferOfNotExistingItem("bardiche"), getReply(npc));
 
         Item cloak = new Item("bardiche", "", "", null);
-		pl.getSlot("bag").add(cloak);
+		pl.getSlot("背包").add(cloak);
 
 		assertTrue(en.stepTest(pl, "bardiche"));
 		assertEquals(wc.respondToItemBrought(), getReply(npc));
@@ -121,11 +121,11 @@ public class WeaponsCollectorTest {
 		assertEquals(wc.respondToOfferOfNotMissingItem(), getReply(npc));
 
 		cloak = new Item("stone cloak", "", "", null);
-		pl.getSlot("bag").add(cloak);
+		pl.getSlot("背包").add(cloak);
 
 		for (final String cloakName : wc.getNeededItems()) {
 			cloak = new Item(cloakName, "", "", null);
-			pl.getSlot("bag").add(cloak);
+			pl.getSlot("背包").add(cloak);
 			assertTrue(en.step(pl, cloakName));
 		}
 

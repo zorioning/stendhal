@@ -92,7 +92,7 @@ public class BeerForHayunnTest {
 		final StackableItem beer = new StackableItem("beer", "", "", null);
 		beer.setQuantity(1);
 		beer.setID(new ID(2, "testzone"));
-		player.getSlot("bag").add(beer);
+		player.getSlot("背包").add(beer);
 		assertEquals(1, player.getNumberOfEquipped("beer"));
 		en.step(player, "hi");
 		en.step(player, "yes");
