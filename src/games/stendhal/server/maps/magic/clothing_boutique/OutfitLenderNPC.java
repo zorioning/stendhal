@@ -179,8 +179,9 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 				priceList.put("马尾", (int) (N * 1200));
 				priceList.put("女士双马尾", (int) (N * 1200));
 				priceList.put("alien", (int) (N * 1200));
-			       	addGreeting("Hi! How may I help you?");
-				addQuest("I can't think of anything for you, sorry.");
+			       	addGreeting("您好！有什么我可以帮助您的吗？");
+				//addQuest("I can't think of anything for you, sorry.");
+				addQuest("我不能代替您考虑，对不起。");
 				add(
 					ConversationStates.ATTENDING,
 					ConversationPhrases.OFFER_MESSAGES,
@@ -188,10 +189,13 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 					ConversationStates.ATTENDING,
 					"Just tell me if you want to #hire a #gown, #hire a #green #dress, #hire #glasses, #hire #other #glasses, #hire a #hat, #hire an #alien suit, #hire a #horse outfit, #hire a #girl #horse outfit, #hire a #jumpsuit, #hire #dungarees, #hire a #bunny #suit or #hire an #orange outfit.",
 					new ExamineChatAction("outfits.png", "Outfits", "Price varies"));
-				addJob("I work in this clothes boutique. It's no ordinary shop, we use magic to put our clients into fantastic outfits. Ask about the #offer.");
+				//addJob("I work in this clothes boutique. It's no ordinary shop, we use magic to put our clients into fantastic outfits. Ask about the #offer.");
+				addJob("我在魔法装备店工作。 它不是一家普通的店， 我们使用魔法为我们的顾客穿上梦幻般的装备。 询问关于 #买卖");
 				// addJob("I normally work in a clothes boutique, we use magic to put our clients into fantastic outfits. I'm here for 矿镇复兴展会周, where we #offer our outfits at greatly reduced prices, but they last for less time!");
-				addHelp("Our hired outfits wear off after some time, but you can always come back for more!");
-				addGoodbye("Bye!");
+				addJob("我通常在魔法装备店工作， 我们使用魔法为我们的顾客穿上梦幻般的装备。 我在这里为了 矿镇复兴展会周, 在那里我们用折扣价 #买卖 我们的装备, 但是它们持续时间更短！");
+				//addHelp("Our hired outfits wear off after some time, but you can always come back for more!");
+				addHelp("我们卖的装备会在一段时间后磨损, 但你总是可以回来买更多的。");
+				addGoodbye("再见！");
 				final OutfitChangerBehaviour behaviour = new SpecialOutfitChangerBehaviour(priceList, endurance, "Your magical outfit has worn off.");
 				new OutfitChangerAdder().addOutfitChanger(this, behaviour, "hire", false, false);
 			}
@@ -201,7 +205,7 @@ public class OutfitLenderNPC implements ZoneConfigurator {
 		npc.setPosition(16, 5);
 		// npc.setPosition(101, 102);
 		npc.initHP(100);
-		npc.setDescription("You see 莉莉娅娜. She works in the Magic City clothes boutique.");
+		npc.setDescription("你看见 莉莉娅娜. 她在 Magic 主城魔法装备店工作。");
 		zone.add(npc);
 	}
 }
