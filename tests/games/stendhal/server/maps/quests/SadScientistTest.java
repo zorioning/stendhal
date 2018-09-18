@@ -200,7 +200,7 @@ public class SadScientistTest {
 		en.step(player, "bye");
 		assertEquals("Have a good day and enjoy your stay!", getReply(npc));
 
-		assertTrue(player.isEquipped("note"));
+		assertTrue(player.isEquipped("笔记"));
 		// -----------------------------------------------
 
 		npc = SingletonRepository.getNPCList().get("Vasi Elos");
@@ -224,7 +224,7 @@ public class SadScientistTest {
 		assertEquals("Go away!", getReply(npc));
 
 		// -----------------------------------------------
-		assertFalse(player.isEquipped("note"));
+		assertFalse(player.isEquipped("笔记"));
 		en.step(player, "hi");
 		assertEquals("I am only in pain. Kill my brother and bring me his blood. It's all I want now.", getReply(npc));
 

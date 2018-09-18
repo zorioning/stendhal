@@ -426,7 +426,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("bronze gm tokens",
 				"bronze gm token");
 		testPluralisationAndSingularisation("tokens", "token");
-		testPluralisationAndSingularisation("notes", "note");
+		testPluralisationAndSingularisation("notes", "笔记");
 		testPluralisationAndSingularisation("coupons", "coupon");
 		testPluralisationAndSingularisation("dice", "dice");
 		testPluralisationAndSingularisation("teddies", "teddy");

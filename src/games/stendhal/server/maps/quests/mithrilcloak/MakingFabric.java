@@ -446,7 +446,7 @@ class MakingFabric {
 
 		// player returns without having taking letter
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest", "letter", "note"),
+				Arrays.asList("weave", "fabric", "magical", "mithril fabric", "ida", "mithril", "cloak", "密银斗篷", "pedinghaus", "task", "quest", "letter", "笔记"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"),
 				ConversationStates.ATTENDING,
 				"Please don't forget to take that letter to Pedinghaus. It means a lot to me.", null);
@@ -542,7 +542,7 @@ class MakingFabric {
 
 		// accept the letter
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("letter", "note", "whiggins", "apology"),
+				Arrays.asList("letter", "笔记", "whiggins", "apology"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_letter"), new PlayerHasItemWithHimCondition("sealed envelope")),
 				ConversationStates.ATTENDING,
 				"*reads* ... *reads* ... Well, I must say, that is a weight off my mind. Thank you ever so much. Please convey my warmest regards to Whiggins. All is forgiven.",

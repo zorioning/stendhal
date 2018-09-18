@@ -2870,7 +2870,7 @@
       <item value="混沌靴" quantity="[1,1]" probability="2.0"/>
       <item value="影子斗篷" quantity="[1,1]" probability="1.0"/>
       <item value="附魔钢盾" quantity="[1,1]" probability="1.0"/>
-      <item value="ice sword" quantity="[1,1]" probability="0.1"/>
+      <item value="冰剑" quantity="[1,1]" probability="0.1"/>
     </drops>
     <equips>
     </equips>
@@ -2986,7 +2986,7 @@
       <item value="mega potion" quantity="[1,1]" probability="20.0"/>
       <item value="火山之锤" quantity="[1,1]" probability="0.01"/>
       <item value="黑镰刀" quantity="[1,1]" probability="0.1"/>
-      <item value="hell dagger" quantity="[1,1]" probability="0.5"/>
+      <item value="地狱匕首" quantity="[1,1]" probability="0.5"/>
     </drops>
     <equips>
     </equips>

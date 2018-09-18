@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="note">
+  <item name="笔记">
     <type class="documents" subclass="paper" tileid="-1"/>
-    <description>You see a note.</description>
+    <description>You see a 笔记.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>

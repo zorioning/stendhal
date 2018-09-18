@@ -104,7 +104,7 @@ public final class ShopList {
 		shops.add("sellbetterstuff2", "shadow helmet", 8000);
 		shops.add("sellbetterstuff2", "shadow legs", 10000);
 		shops.add("sellbetterstuff2", "影盾", 30000);
-		shops.add("sellbetterstuff2", "hell dagger", 20000);
+		shops.add("sellbetterstuff2", "地狱匕首", 20000);
 
 		shops.add("sellrangedstuff", "木弓", 300);
 		shops.add("sellrangedstuff", "木箭", 2);
@@ -174,8 +174,8 @@ public final class ShopList {
 		shops.add("buyrare2", "crossbow", 175);
 		shops.add("buyrare2", "巨剑", 250);
 		shops.add("buyrare2", "烈火剑", 2000);
-		shops.add("buyrare2", "ice sword", 5000);
-        shops.add("buyrare2", "hell dagger", 8000);
+		shops.add("buyrare2", "冰剑", 5000);
+        shops.add("buyrare2", "地狱匕首", 8000);
 
 		// very rare armor shop (ados)
 		shops.add("buyrare3", "golden legs", 3000);
