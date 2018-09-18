@@ -85,7 +85,7 @@ public final class ShopList {
 		shops.add("sellstuff", "木棍", 10);
 		shops.add("sellstuff", "dagger", 25);
 		shops.add("sellstuff", "木盾", 25);
-		shops.add("sellstuff", "", 25);
+		shops.add("sellstuff", "布衣", 25);
 		shops.add("sellstuff", "leather helmet", 25);
 		shops.add("sellstuff", "cloak", 30);
 		shops.add("sellstuff", "leather legs", 35);
@@ -109,7 +109,7 @@ public final class ShopList {
 		shops.add("sellrangedstuff", "木弓", 300);
 		shops.add("sellrangedstuff", "木箭", 2);
 
-		shops.add("buystuff", "short sword", 15);
+		shops.add("buystuff", "短剑", 15);
 		shops.add("buystuff", "sword", 60);
 		shops.add("buystuff", "镶嵌盾", 20);
 		shops.add("buystuff", "镶嵌甲", 22);

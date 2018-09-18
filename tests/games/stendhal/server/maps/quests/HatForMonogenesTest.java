@@ -68,7 +68,7 @@ public class HatForMonogenesTest {
 
 		final ZoneConfigurator zoneConf = new TraderNPC();
 		zoneConf.configureZone(new StendhalRPZone("int_塞门_酒馆"), null);
-		npcXin = SingletonRepository.getNPCList().get("Xin Blanca");
+		npcXin = SingletonRepository.getNPCList().get("辛布兰卡");
 		enXin = npcXin.getEngine();
 
 		quest = new MeetMonogenes();

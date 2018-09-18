@@ -253,7 +253,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("knives", "knife");
 		testPluralisationAndSingularisation("daggers", "dagger");
-		testPluralisationAndSingularisation("short swords", "short sword");
+		testPluralisationAndSingularisation("短剑s", "短剑");
 		testPluralisationAndSingularisation("swords", "sword");
 		testPluralisationAndSingularisation("scimitars", "scimitar");
 		testPluralisationAndSingularisation(

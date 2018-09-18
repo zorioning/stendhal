@@ -687,9 +687,9 @@
     </equipable>
   </item>
 
-  <item name="short sword">
+  <item name="短剑">
     <type class="sword" subclass="short_sword" tileid="-1"/>
-    <description>You see a well kept short sword which will be easy to carry as you travel.</description>
+    <description>You see a well kept 短剑 which will be easy to carry as you travel.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <atk value="11"/>

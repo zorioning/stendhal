@@ -23,7 +23,7 @@
       <item value="链甲" quantity="[1,1]" probability="3.0"/>
       <item value="加固锁子甲" quantity="[1,1]" probability="0.05"/>
       <item value="链靴" quantity="[1,1]" probability="0.5"/>
-      <item value="short sword" quantity="[1,1]" probability="10.0"/>
+      <item value="短剑" quantity="[1,1]" probability="10.0"/>
     </drops>
     <equips>
     </equips>

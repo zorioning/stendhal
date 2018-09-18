@@ -278,7 +278,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("katana",1);
 		items.put("knife",1);
 		items.put("scimitar",1);
-		items.put("short sword",1);
+		items.put("短剑",1);
 		items.put("sword",1);
 
 		// tool

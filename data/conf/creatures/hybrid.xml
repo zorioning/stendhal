@@ -330,7 +330,7 @@
       <item value="重斧" quantity="[1,1]" probability="2.0"/>
       <item value="钉靴" quantity="[1,1]" probability="0.5"/>
       <item value="leather helmet" quantity="[1,1]" probability="1.5"/>
-      <item value="short sword" quantity="[1,1]" probability="1.0"/>
+      <item value="短剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
