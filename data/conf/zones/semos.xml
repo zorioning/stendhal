@@ -4500,7 +4500,16 @@ Mature sheep wanted: please speak to 赛特
       <parameter name="color_method">softlight</parameter>
       <parameter name="color">#22ffdd</parameter>
     </attributes>
-    <!-- Don't allow teleporting in as we don't want 标记卷轴s made 
+    
+    <!-- Music -->
+    <entity x="0" y="0">
+      <implementation
+        class-name="games.stendhal.server.entity.mapstuff.sound.BackgroundMusicSource">
+        <parameter name="sound">eerie_curious</parameter>
+      </implementation>
+    </entity>
+
+    <!-- Don't allow teleporting in as we don't want marked scrolls made 
       or ring abused -->
     <configurator class-name="games.stendhal.server.core.config.zone.NoTeleportIn" />
     <portal x="43" y="49" ref="exit1">
