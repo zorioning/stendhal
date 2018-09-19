@@ -27,7 +27,7 @@ import marauroa.common.game.RPObject;
 
 /**
  * Represents everything that can be consumed by RPentity. Including food,
- * poison, antidote, ...
+ * poison, 抗毒药济, ...
  *
  * Note: this class has a natural ordering that is inconsistent with equals.
  */
