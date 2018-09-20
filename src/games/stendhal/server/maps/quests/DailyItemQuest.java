@@ -157,7 +157,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("牛奶",5);
 		items.put("小治疗剂",5);
 		items.put("毒药",5);
-		items.put("potion",5);
+		items.put("治疗济",5);
 		items.put("茶",3);
 		items.put("水",5);
 		items.put("红酒",10);
@@ -198,7 +198,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("洋葱",5);
 		items.put("梨子",5);
 		items.put("perch",5);
-		items.put("pie",5);
+		items.put("馅饼",5);
 		items.put("石榴",5);
 		items.put("大脚菇",10);
 		items.put("red lionfish",5);

@@ -255,7 +255,7 @@ public class FruitsForCoraliaTest extends ZonePlayerAndNPCTestImpl {
 		// -----------------------------------------------
 
 		// [19:05] pinch earns 50 experience points.
-		assertTrue(player.isEquipped("crepes suzette"));
+		assertTrue(player.isEquipped("可丽饼"));
 		assertTrue(player.isEquipped("小治疗剂"));
 		assertThat(player.getXP(), greaterThan(xp));
 		assertThat(player.getKarma(), greaterThan(karma));

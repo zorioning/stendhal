@@ -87,7 +87,7 @@ final class PrefixManager
 //		register("bottle of ", "bottles of ", "牛奶");
 //		register("bottle of ", "bottles of ", "holy water");
 //
-//		registerEnd("bottle of ", "bottles of ", "potion");
+//		registerEnd("bottle of ", "bottles of ", "治疗济");
 //		registerEnd("bottle of ", "bottles of ", "毒药");
 //		registerEnd("bottle of ", "bottles of ", "抗毒药济");
 //		registerEnd("nugget of ", "nuggets of ", " ore");
@@ -154,7 +154,7 @@ final class PrefixManager
 	}
 	/**
 	 * Define the singular and plural prefix strings for an item name to be matched at the end,
-	 * for example "bottle of ... potion".
+	 * for example "bottle of ... 治疗济".
 	 * @param prefixSingular
 	 * @param prefixPlural
 	 * @param endString

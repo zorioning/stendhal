@@ -882,9 +882,9 @@
 		</equipable>
 	</item>
 
-	<item name="crepes suzette">
+	<item name="可丽饼">
 		<type class="food" subclass="crepesuzette" tileid="-1" />
-		<description>You see a crepes suzette topped with hot chocolate sauce.</description>
+		<description>You see a 可丽饼 topped with hot chocolate sauce.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />
 		<attributes>
 			<amount value="100" />
@@ -951,7 +951,7 @@
 		</equipable>
 	</item>
 
-	<item name="pie">
+	<item name="馅饼">
 		<type class="food" subclass="piesmall" tileid="-1" />
 		<description>You see a meat and vegetable pie.</description>
 		<implementation class-name="games.stendhal.server.entity.item.Food" />

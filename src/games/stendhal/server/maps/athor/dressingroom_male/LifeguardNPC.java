@@ -87,7 +87,7 @@ public class LifeguardNPC implements ZoneConfigurator {
 						"kokuda",
 				"We can't find the Kokuda herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.");
 
-				addReply("小治疗剂", "It's a small bottle full of potion. You can buy it at several places.");
+				addReply("小治疗剂", "It's a small bottle full of 治疗济. You can buy it at several places.");
 
 			}
 		};

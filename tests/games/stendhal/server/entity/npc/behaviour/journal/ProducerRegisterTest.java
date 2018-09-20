@@ -148,8 +148,8 @@ public class ProducerRegisterTest {
 
 		assertFalse(producerRegister.getProducers().isEmpty());
 
-		assertEquals(producerRegister.getProducedItemNames("food"), Arrays.asList("pie", "香肠"));
-		assertEquals(producerRegister.getProducedItemNames("food").toString(), "[pie, 香肠]");
+		assertEquals(producerRegister.getProducedItemNames("food"), Arrays.asList("馅饼", "香肠"));
+		assertEquals(producerRegister.getProducedItemNames("food").toString(), "[馅饼, 香肠]");
 
 
 	}

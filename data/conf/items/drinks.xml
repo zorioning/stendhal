@@ -25,9 +25,9 @@
     </equipable>
   </item>
   
-  <item name="mild koboldish torcibud">
+  <item name="轻康复药">
     <type class="drink" subclass="koboldish_torcibud_mild" tileid="-1"/>
-    <description>You see a bottle of mild koboldish torcibud. It will help you recover when you're all bruised and battered.</description>
+    <description>You see a bottle of 轻康复药. It will help you recover when you're all bruised and battered.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="90"/>
@@ -48,9 +48,9 @@
     </equipable>
   </item>
   
-  <item name="strong koboldish torcibud">
+  <item name="康复药">
     <type class="drink" subclass="koboldish_torcibud_strong" tileid="-1"/>
-    <description>You see a bottle of strong koboldish torcibud. It will help you recover when you're all bruised and battered.</description>
+    <description>You see a bottle of 康复药. It will help you recover when you're all bruised and battered.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="180"/>
@@ -71,9 +71,9 @@
     </equipable>
   </item>
   
-  <item name="vsop koboldish torcibud">
+  <item name="强康复药">
     <type class="drink" subclass="koboldish_torcibud_vsop" tileid="-1"/>
-    <description>You see a bottle of VSOP koboldish torcibud, specially aged in oak casks wrapped by the darkness of a dungeon cellar. It will help you recover when you're all bruised and battered.</description>
+    <description>You see a bottle of 强康复药, specially aged in oak casks wrapped by the darkness of a dungeon cellar. It will help you recover when you're all bruised and battered.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="270"/>
@@ -488,9 +488,9 @@
     </equipable>
   </item>
   
-  <item name="soup">
+  <item name="蔬菜汤">
     <type class="drink" subclass="soup" tileid="-1"/>
-    <description>You see a bowl of soup. Its contents fill you up.</description>
+    <description>You see a bowl of 蔬菜汤. Its contents fill you up.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="2500"/>
@@ -536,9 +536,9 @@
     </equipable>
   </item>
   
-  <item name="potion">
+  <item name="治疗济">
     <type class="drink" subclass="potion" tileid="-1"/>
-    <description>You see a potion. Take it to battle and you may survive longer.</description>
+    <description>You see a 治疗济. Take it to battle and you may survive longer.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="100"/>
@@ -605,9 +605,9 @@
     </equipable>
   </item>
   
-  <item name="爱之药水">
+  <item name="爱之治疗济">
     <type class="drink" subclass="love_potion" tileid="-1"/>
-    <description>You see a 爱之药水. It looks powerful so take care to use it carefully!</description>
+    <description>You see a 爱之治疗济. It looks powerful so take care to use it carefully!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="400"/>

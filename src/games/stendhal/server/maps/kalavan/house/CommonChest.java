@@ -40,7 +40,7 @@ public class CommonChest implements ZoneConfigurator {
 		chest.add(SingletonRepository.getEntityManager().getItem("复活蛋"));
 		chest.add(SingletonRepository.getEntityManager().getItem("强治疗剂"));
 		chest.add(SingletonRepository.getEntityManager().getItem("present"));
-		chest.add(SingletonRepository.getEntityManager().getItem("pie"));
+		chest.add(SingletonRepository.getEntityManager().getItem("馅饼"));
 		zone.add(chest);
 	}
 }

@@ -56,7 +56,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="potion" quantity="[1,3]" probability="10.0"/>
+      <item value="治疗济" quantity="[1,3]" probability="10.0"/>
       <item value="石斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="perch" quantity="[1,1]" probability="1.0"/>
       <item value="night dagger" quantity="[1,1]" probability="0.05"/>
@@ -557,7 +557,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,60]" probability="100.0"/>
-      <item value="potion" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
       <item value="medicinal ring" quantity="[1,1]" probability="0.75"/>
     </drops>
     <equips>

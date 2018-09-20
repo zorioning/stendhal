@@ -390,7 +390,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("chunks of meat", "chunk of meat");
 		testPluralisationAndSingularisation("pieces of ham", "火腿");
 		testPluralisationAndSingularisation("三明治es", "三明治");
-		testPluralisationAndSingularisation("pies", "pie");
+		testPluralisationAndSingularisation("pies", "馅饼");
 		testPluralisationAndSingularisation("button mushrooms",
 				"button mushroom");
 		testPluralisationAndSingularisation("大脚菇", "porcino");

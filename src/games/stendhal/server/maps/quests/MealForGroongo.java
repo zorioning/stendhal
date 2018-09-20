@@ -1660,13 +1660,13 @@ public class MealForGroongo extends AbstractQuest {
                     final int amountOfMoneys = Rand.randUniform(1000, 1500);
                     final int amountOfPies = Rand.randUniform(10, 15);
                     final StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem("money");
-                    final StackableItem pie = (StackableItem) SingletonRepository.getEntityManager().getItem("pie");
+                    final StackableItem pie = (StackableItem) SingletonRepository.getEntityManager().getItem("馅饼");
                     money.setQuantity(amountOfMoneys);
                     pie.setQuantity(amountOfPies);
 
                     npc.say("Here, take " +
                         amountOfPies + " " +
-                         "pie" +
+                         "馅饼" +
                         " and " +
                         amountOfMoneys + " " +
                          "money" +
