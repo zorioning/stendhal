@@ -187,12 +187,12 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("西葫芦",5);
 		items.put("egg",1);
 		items.put("仙女蛋糕", 5);
-		items.put("fish pie",1);
+		items.put("鱼肉派",1);
 		items.put("大蒜",5);
 		items.put("葡萄",5);
 		items.put("烤排",1);
 		items.put("火腿",10);
-		items.put("honey",2);
+		items.put("蜂蜜",2);
 		items.put("韭菜",5);
 		items.put("肉",10);
 		items.put("洋葱",5);

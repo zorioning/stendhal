@@ -417,7 +417,7 @@
     <respawn value="1000"/>
     <corpse name="small_boneless"/>
     <drops>
-      <item value="honey" quantity="[1,2]" probability="15.0"/>
+      <item value="蜂蜜" quantity="[1,2]" probability="15.0"/>
       <item value="毒药" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>

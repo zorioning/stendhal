@@ -60,7 +60,7 @@ public class WitchNPC implements ZoneConfigurator {
 				addReply("how", "The question really is what may help... Maybe I'll ask her later about it, I first have to finish my new #recipe...");
 				addReply("recipe", "Oh I doubt that you can eat or drink what I prepare at the moment... But I know two really nice women who can make some tasty #soup for you.");
 				addReply("soup", "Florence Boullabaisse and Mother Helena are awesome soup cooks. You'll find them on the Ados market and in the Fado tavern.");
-				addHelp("Aldrin sells some honey, you would love to eat it with 面包.");
+				addHelp("Aldrin sells some 蜂蜜, you would love to eat it with 面包.");
 				addOffer("I'm sorry but I can't sell you anything.");
 				addGoodbye("Bye bye and take care around here!");
 			}

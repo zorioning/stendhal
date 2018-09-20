@@ -303,7 +303,7 @@ public class ConversationParserTest {
 		assertEquals("冰淇淋", sentence.getObject(0).getMainWord());
 		assertEquals("冰淇淋", sentence.getObjectName());
 		assertEquals("i buy 冰淇淋!", sentence.getNormalized());
-		assertEquals("i/SUB-PRO buy/VER-CON icecream/OBJ!", sentence.toString());
+		assertEquals("i/SUB-PRO buy/VER-CON 冰淇淋/OBJ!", sentence.toString());
 
 		sentence = ConversationParser.parse("would you like to have an ice cream?");
 		assertFalse(sentence.hasError());
@@ -311,7 +311,7 @@ public class ConversationParserTest {
 		assertEquals("buy", sentence.getVerbString());
 		assertEquals(1, sentence.getSubjectCount());
 		assertEquals(1, sentence.getObject(0).getAmount());
-		assertEquals("icecream", sentence.getObject(0).getMainWord());
+		assertEquals("冰淇淋", sentence.getObject(0).getMainWord());
 		assertEquals("icecream", sentence.getObjectName());
 		assertEquals("you buy icecream!", sentence.getNormalized());
 		assertEquals("you/SUB-PRO buy/VER-CON icecream/OBJ!", sentence.toString());

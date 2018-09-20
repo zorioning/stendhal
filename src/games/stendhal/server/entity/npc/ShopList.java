@@ -351,32 +351,32 @@ public final class ShopList {
 		shops.add("buy4gnomes", "木盾", 20);
 
 		// hotdog lady in athor)
-		shops.add("buy4hotdogs", "sausage", 30);
-		shops.add("buy4hotdogs", "cheese sausage", 25);
+		shops.add("buy4hotdogs", "香肠", 30);
+		shops.add("buy4hotdogs", "起司香肠", 25);
 		shops.add("buy4hotdogs", "面包", 15);
 		shops.add("buy4hotdogs", "洋葱", 20);
 		shops.add("buy4hotdogs", "canned tuna", 15);
 		shops.add("buy4hotdogs", "火腿", 15);
 		shops.add("buy4hotdogs", "干酪", 5);
 
-		shops.add("sellhotdogs", "hotdog", 160);
-		shops.add("sellhotdogs", "cheeseydog", 180);
+		shops.add("sellhotdogs", "热狗", 160);
+		shops.add("sellhotdogs", "芝士狗", 180);
 		shops.add("sellhotdogs", "金枪鱼三明治", 130);
 		shops.add("sellhotdogs", "三明治", 120);
-		shops.add("sellhotdogs", "vanilla shake", 110);
-		shops.add("sellhotdogs", "chocolate shake", 110);
+		shops.add("sellhotdogs", "香草奶昔", 110);
+		shops.add("sellhotdogs", "巧克力奶昔", 110);
 		shops.add("sellhotdogs", "巧克力棒", 100);
 		shops.add("sellhotdogs", "snowglobe", 200);
 
 		// magic city barmaid)
-		shops.add("sellmagic", "hotdog", 160);
-		shops.add("sellmagic", "cheeseydog", 180);
+		shops.add("sellmagic", "热狗", 160);
+		shops.add("sellmagic", "芝士狗", 180);
 		shops.add("sellmagic", "金枪鱼三明治", 130);
 		shops.add("sellmagic", "三明治", 120);
-		shops.add("sellmagic", "vanilla shake", 110);
-		shops.add("sellmagic", "chocolate shake", 110);
+		shops.add("sellmagic", "香草奶昔", 110);
+		shops.add("sellmagic", "巧克力奶昔", 110);
 		shops.add("sellmagic", "巧克力棒", 100);
-		shops.add("sellmagic", "licorice", 100);
+		shops.add("sellmagic", "甘草", 100);
 
 		// kirdneh city armor)
 		shops.add("buykirdneharmor", "蓝色盔甲", 13000);
@@ -416,9 +416,9 @@ public final class ShopList {
 		shops.add("sellparty", "巧克力棒", 100);
 		shops.add("sellparty", "啤酒", 10);
 		shops.add("sellparty", "红酒", 15);
-		shops.add("sellparty", "vanilla shake", 150);
+		shops.add("sellparty", "香草奶昔", 150);
 		shops.add("sellparty", "冰淇淋", 50);
-		shops.add("sellparty", "hotdog", 180);
+		shops.add("sellparty", "热狗", 180);
 		shops.add("sellparty", "三明治", 140);
 
 
@@ -454,13 +454,13 @@ public final class ShopList {
 		// 矿镇复兴展会周 卡若琳
 		shops.add("sellrevivalweeks", "樱桃派", 195);
 		shops.add("sellrevivalweeks", "苹果派", 195);
-		shops.add("sellrevivalweeks", "vanilla shake", 120);
-		shops.add("sellrevivalweeks", "chocolate shake", 120);
+		shops.add("sellrevivalweeks", "香草奶昔", 120);
+		shops.add("sellrevivalweeks", "巧克力奶昔", 120);
 		shops.add("sellrevivalweeks", "冰淇淋", 60);
 		shops.add("sellrevivalweeks", "巧克力棒", 100);
 		shops.add("sellrevivalweeks", "烤排", 250);
-		shops.add("sellrevivalweeks", "hotdog", 170);
-		shops.add("sellrevivalweeks", "cheeseydog", 175);
+		shops.add("sellrevivalweeks", "热狗", 170);
+		shops.add("sellrevivalweeks", "芝士狗", 175);
 		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);
 		shops.add("sellrevivalweeks", "三明治", 130);
 		shops.add("sellrevivalweeks", "红酒", 25);
@@ -471,7 +471,7 @@ public final class ShopList {
 		// expensive prices to make sure that the npc production of these items isn't compromised
 		shops.add("cafe", "茶", 80);
 		shops.add("cafe", "水", 50);
-		shops.add("cafe", "chocolate shake", 150);
+		shops.add("cafe", "巧克力奶昔", 150);
 		shops.add("cafe", "三明治", 170);
 		shops.add("cafe", "金枪鱼三明治", 180);
 		shops.add("cafe", "苹果派", 250);

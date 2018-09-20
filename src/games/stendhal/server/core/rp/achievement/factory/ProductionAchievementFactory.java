@@ -41,7 +41,7 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 		// may wish to remove 强治疗剂 by hand?
 
 		// this includes a lot of foods! at time of writing, this is at least:
-		// pie, cheese sausage, sausage, fish pie, 苹果派, 樱桃派, crepes suzette, 三明治, 面包, 比萨
+		// pie, 起司香肠, 香肠, 鱼肉派, 苹果派, 樱桃派, crepes suzette, 三明治, 面包, 比萨
 		// 烤排 is made using quest code and not production code so we add an extra condition, and it doesn't adhere to standard completion guidelines
 		achievements.add(createAchievement("production.class.food", "Gourmet", "Order all food types available from Faiumoni's cooks",
 				Achievement.MEDIUM_BASE_SCORE, true,

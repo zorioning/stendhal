@@ -142,7 +142,7 @@
       <item value="money" quantity="[5,40]" probability="100.0"/>
       <item value="红斗篷" quantity="[1,1]" probability="5.5"/>
       <item value="cod" quantity="[2,4]" probability="3.5"/>
-      <item value="fish pie" quantity="[1,1]" probability="7.5"/>
+      <item value="鱼肉派" quantity="[1,1]" probability="7.5"/>
       <item value="赠券" quantity="[1,1]" probability="10.5"/>
     </drops>
     <equips>      
@@ -202,7 +202,7 @@
       <item value="红铠甲" quantity="[1,1]" probability="2.0"/>
       <item value="红斗篷" quantity="[1,1]" probability="5.5"/>
       <item value="红靴子" quantity="[1,1]" probability="5.5"/>
-      <item value="fish pie" quantity="[1,1]" probability="3.5"/>
+      <item value="鱼肉派" quantity="[1,1]" probability="3.5"/>
     </drops>
     <equips>      
     </equips>
@@ -938,7 +938,7 @@
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="大治疗剂" quantity="[2,4]" probability="30.0"/>
-      <item value="fish pie" quantity="[1,2]" probability="20.0"/>
+      <item value="鱼肉派" quantity="[1,2]" probability="20.0"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.5"/>
       <item value="black legs" quantity="[1,1]" probability="0.1"/>
     </drops>
@@ -1983,7 +1983,7 @@
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
       <item value="cloak" quantity="[1,1]" probability="10.0"/>
-      <item value="fish pie" quantity="[1,1]" probability="2.0"/>
+      <item value="鱼肉派" quantity="[1,1]" probability="2.0"/>
      </drops>
     <equips>
     </equips>
@@ -2836,7 +2836,7 @@
     <drops>
       <item value="money" quantity="[5,93]" probability="100.0"/>
       <item value="空白卷轴" quantity="[1,2]" probability="10.0"/>
-      <item value="scroll eraser" quantity="[1,1]" probability="1.0"/>
+      <item value="重绘机" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
     </equips>
