@@ -88,7 +88,7 @@ final class PrefixManager
 //		register("bottle of ", "bottles of ", "holy water");
 //
 //		registerEnd("bottle of ", "bottles of ", "potion");
-//		registerEnd("bottle of ", "bottles of ", "poison");
+//		registerEnd("bottle of ", "bottles of ", "毒药");
 //		registerEnd("bottle of ", "bottles of ", "抗毒药济");
 //		registerEnd("nugget of ", "nuggets of ", " ore");
 //

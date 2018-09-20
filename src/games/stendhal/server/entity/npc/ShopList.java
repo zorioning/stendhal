@@ -46,15 +46,15 @@ public final class ShopList {
 		shops.add("buyfood", "大脚菇", 30);
 
 		shops.add("healing", "抗毒药济", 50);
-		shops.add("healing", "minor potion", 100);
+		shops.add("healing", "小治疗剂", 100);
 		shops.add("healing", "potion", 250);
-		shops.add("healing", "greater potion", 500);
+		shops.add("healing", "大治疗剂", 500);
 
 		shops.add("superhealing", "抗毒药济", 50);
 		shops.add("superhealing", "大瓶抗毒药济", 100);
 		shops.add("superhealing", "potion", 250);
-		shops.add("superhealing", "greater potion", 500);
-		shops.add("superhealing", "mega potion", 1500);
+		shops.add("superhealing", "大治疗剂", 500);
+		shops.add("superhealing", "强治疗剂", 1500);
 
 		shops.add("scrolls", "home scroll", 250);
 		shops.add("scrolls", "召唤卷轴", 200);
@@ -437,13 +437,13 @@ public final class ShopList {
 		shops.add("buyadosarmors", "蓝盾", 900);
 
 		// Athor ferry
-		shops.add("buypoisons", "poison", 40);
+		shops.add("buypoisons", "毒药", 40);
 		shops.add("buypoisons", "红伞菇", 60);
-		shops.add("buypoisons", "greater poison", 60);
+		shops.add("buypoisons", "特级毒药", 60);
 		shops.add("buypoisons", "red lionfish", 50);
-		shops.add("buypoisons", "deadly poison", 100);
-		shops.add("buypoisons", "mega poison", 500);
-		shops.add("buypoisons", "disease poison", 2000);
+		shops.add("buypoisons", "极毒", 100);
+		shops.add("buypoisons", "剧毒", 500);
+		shops.add("buypoisons", "痍毒", 2000);
 
 		// Should have its own shop (buytraps)
 		shops.add("buypoisons", "rodent trap", 50);

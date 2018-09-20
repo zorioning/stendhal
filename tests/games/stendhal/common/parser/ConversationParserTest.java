@@ -226,13 +226,13 @@ public class ConversationParserTest {
 		assertEquals("sell poison", sentence.getNormalized());
 		assertEquals("sell/VER poison/OBJ-FOO-FLU", sentence.toString());
 
-		sentence = ConversationParser.parse("sell 10 bottles of mega poison");
+		sentence = ConversationParser.parse("sell 10 bottles of 剧毒");
 		assertFalse(sentence.hasError());
 		assertEquals("sell", sentence.getVerbString());
 		assertEquals(10, sentence.getObject(0).getAmount());
-		assertEquals("mega poison", sentence.getObject(0).getNormalized());
-		assertEquals("sell mega poison", sentence.getNormalized());
-		assertThat(sentence.toString(), anyOf(equalTo("sell/VER mega poison/OBJ"), equalTo("sell/VER mega poison/OBJ-FOO-FLU")));
+		assertEquals("剧毒", sentence.getObject(0).getNormalized());
+		assertEquals("sell 剧毒", sentence.getNormalized());
+		assertThat(sentence.toString(), anyOf(equalTo("sell/VER 剧毒/OBJ"), equalTo("sell/VER 剧毒/OBJ-FOO-FLU")));
 	}
 
 	/**

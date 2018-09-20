@@ -133,8 +133,8 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("骨玉法杖",1);
 
 		// drinks
-		items.put("mega potion",5);
-		items.put("fish soup",3);
+		items.put("强治疗剂",5);
+		items.put("鱼汤",3);
 
 		// helmet
 		items.put("chaos helmet",1);

@@ -153,10 +153,10 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("抗毒药济",5);
 		items.put("啤酒",10);
 		items.put("大瓶抗毒药济",5);
-		items.put("greater potion",5);
+		items.put("大治疗剂",5);
 		items.put("牛奶",5);
-		items.put("minor potion",5);
-		items.put("poison",5);
+		items.put("小治疗剂",5);
+		items.put("毒药",5);
 		items.put("potion",5);
 		items.put("茶",3);
 		items.put("水",5);

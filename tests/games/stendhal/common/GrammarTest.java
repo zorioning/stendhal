@@ -397,7 +397,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("toadstools", "toadstool");
 		testPluralisationAndSingularisation("bottles of beer", "beer");
 		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
-		testPluralisationAndSingularisation("bottles of minor potion", "minor potion");
+		testPluralisationAndSingularisation("bottles of 小治疗剂", "小治疗剂");
 		testPluralisationAndSingularisation("bottles of antidote", "antidote");
 		testPluralisationAndSingularisation("bottles of potion", "potion");
 		testPluralisationAndSingularisation("bottles of greater potion",

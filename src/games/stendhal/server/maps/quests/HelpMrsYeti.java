@@ -166,7 +166,7 @@ import games.stendhal.server.maps.Region;
 		potionactions.add(new DropItemAction("kokuda"));
 		potionactions.add(new DropItemAction("红酒"));
 		potionactions.add(new DropItemAction("黑珍珠"));
-		potionactions.add(new EquipItemAction("love potion"));
+		potionactions.add(new EquipItemAction("爱之药水"));
 		potionactions.add(new IncreaseXPAction(100));
 		potionactions.add(new SetQuestAction(QUEST_SLOT, "gotpotion"));
 
@@ -177,7 +177,7 @@ import games.stendhal.server.maps.Region;
 								 new PlayerHasItemWithHimCondition("kokuda"),
 								 new PlayerHasItemWithHimCondition("红酒"),
 								 new PlayerHasItemWithHimCondition("黑珍珠")),
-				ConversationStates.ATTENDING, "I see you have all the items for the potion. *mutters magic words* And now, ta da! You have the love potion. Wish Mrs Yeti good luck from me!",
+				ConversationStates.ATTENDING, "I see you have all the items for the potion. *mutters magic words* And now, ta da! You have the 爱之药水. Wish Mrs Yeti good luck from me!",
 				new MultipleActions(potionactions));
 
 		npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","potion"),
@@ -187,7 +187,7 @@ import games.stendhal.server.maps.Region;
 																   new PlayerHasItemWithHimCondition("kokuda"),
 																   new PlayerHasItemWithHimCondition("红酒"),
 																   new PlayerHasItemWithHimCondition("黑珍珠")))),
-				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠 to make the love potion. Please bring them all together at once. Thanks!", null);
+				ConversationStates.ATTENDING, "I need 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠 to make the 爱之药水. Please bring them all together at once. Thanks!", null);
 
 
 	}
@@ -226,22 +226,22 @@ import games.stendhal.server.maps.Region;
 		questTrigger.add(extraTrigger);
 
 	    final List<ChatAction> tookpotionactions = new LinkedList<ChatAction>();
-		tookpotionactions.add(new DropItemAction("love potion"));
+		tookpotionactions.add(new DropItemAction("爱之药水"));
 		tookpotionactions.add(new IncreaseKarmaAction(10.0));
 		tookpotionactions.add(new IncreaseXPAction(1000));
 		tookpotionactions.add(new SetQuestAction(QUEST_SLOT, "dragon"));
 
 		npc.add(ConversationStates.ATTENDING, questTrigger,
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "gotpotion"),
-				new PlayerHasItemWithHimCondition("love potion")),
+				new PlayerHasItemWithHimCondition("爱之药水")),
 				ConversationStates.ATTENDING, "Thank you! That looks so powerful I almost love you from smelling it! But don't worry I will save it for my husband. But he won't take it without some other temptation. I think he'd like a baby #dragon, if you'd be so kind as to bring one.",
 				new MultipleActions(tookpotionactions));
 
 		npc.add(
 			ConversationStates.ATTENDING, questTrigger,
-			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "gotpotion"), new NotCondition(new PlayerHasItemWithHimCondition("love potion"))),
+			new AndCondition(new QuestInStateCondition(QUEST_SLOT, "gotpotion"), new NotCondition(new PlayerHasItemWithHimCondition("爱之药水"))),
 			ConversationStates.ATTENDING,
-			"What did you do with the love potion?",
+			"What did you do with the 爱之药水?",
 			null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -250,7 +250,7 @@ import games.stendhal.server.maps.Region;
 								new QuestInStateCondition(QUEST_SLOT, "pies"),
 								new QuestInStateCondition(QUEST_SLOT, "knife")),
 				ConversationStates.ATTENDING,
-				"I am waiting for you to return with a love potion. Please ask Salva Mattori in the magic city about: #potion.",
+				"I am waiting for you to return with a 爱之药水. Please ask Salva Mattori in the magic city about: #potion.",
 				null);
 	}
 
@@ -340,7 +340,7 @@ import games.stendhal.server.maps.Region;
 	public void addToWorld() {
 		fillQuestInfo(
 				"Help Mrs Yeti",
-				"Mrs Yeti is really unhappy with her current lovelife because her husband turned away from her. Now the couple is in deep trouble. Just a special love potion can help Mrs Yeti to get her husband back.",
+				"Mrs Yeti is really unhappy with her current lovelife because her husband turned away from her. Now the couple is in deep trouble. Just a special 爱之药水 can help Mrs Yeti to get her husband back.",
 				true);
 		startQuest();
 		makePotion();
@@ -358,7 +358,7 @@ import games.stendhal.server.maps.Region;
 			}
 			final String questState = player.getQuest(QUEST_SLOT);
 			res.add("I met Mrs. Yeti in icy caves below 塞门镇 Mountain.");
-			res.add("Mrs. Yeti asked me to go to Salva Mattori for a special love potion for her husband.");
+			res.add("Mrs. Yeti asked me to go to Salva Mattori for a special 爱之药水 for her husband.");
 			if ("rejected".equals(questState)) {
 				res.add("I don't want to help with soppy love stories..");
 				return res;
@@ -378,11 +378,11 @@ import games.stendhal.server.maps.Region;
 			if ("knife".equals(questState)) {
 				return res;
 			}
-			res.add("The love potion requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠.");
+			res.add("The 爱之药水 requires 3 紫丁香 flowers, 1 sprig of kokuda, 1 glass of 红酒 and 1 黑珍珠.");
 			if ("potion".equals(questState)) {
 				return res;
 			}
-			res.add("I must take the love potion in its heart shaped bottle, to Mrs. Yeti.");
+			res.add("I must take the 爱之药水 in its heart shaped bottle, to Mrs. Yeti.");
 			if ("gotpotion".equals(questState)) {
 				return res;
 			}

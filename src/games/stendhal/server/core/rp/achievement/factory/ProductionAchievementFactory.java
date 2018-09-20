@@ -38,7 +38,7 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 
 	    final List<String> foodlist = producerRegister.getProducedItemNames("food");
 		final String[] foods = foodlist.toArray(new String[foodlist.size()]);
-		// may wish to remove mega potion by hand?
+		// may wish to remove 强治疗剂 by hand?
 
 		// this includes a lot of foods! at time of writing, this is at least:
 		// pie, cheese sausage, sausage, fish pie, 苹果派, 樱桃派, crepes suzette, 三明治, 面包, 比萨
@@ -54,7 +54,7 @@ public class ProductionAchievementFactory extends AbstractAchievementFactory {
 		final String[] drinks = drinklist.toArray(new String[drinklist.size()]);
 
 		// soups and koboldish torcibud are made using quest code so we add extra conditions for those
-		// at time of writing, the other drinks are 沸水, 茶, 椰林飘香, and mega potion (which we may remove)
+		// at time of writing, the other drinks are 沸水, 茶, 椰林飘香, and 强治疗剂 (which we may remove)
 		achievements.add(createAchievement("production.class.drink", "Thirsty Worker", "Order all drink types available from Faiumoni's cooks",
 				Achievement.MEDIUM_BASE_SCORE, true,
 				new AndCondition(
