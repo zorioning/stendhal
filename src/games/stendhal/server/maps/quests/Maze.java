@@ -46,7 +46,7 @@ public class Maze extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Maze",
-				"Haizen's maze is a great challenge for path finders.",
+				"海震's maze is a great challenge for path finders.",
 				false);
 		addMazeSign();
 		setupConversation();
@@ -58,7 +58,7 @@ public class Maze extends AbstractQuest {
 			if (!player.hasQuest(getSlotName())) {
 				return res;
 			}
-			res.add("Haizen created a magical maze for me to solve.");
+			res.add("海震 created a magical maze for me to solve.");
 
 			if (player.getZone().getName().endsWith("_maze")) {
 				res.add("I am currently trapped in the maze.");
@@ -71,7 +71,7 @@ public class Maze extends AbstractQuest {
 				if (isRepeatable(player)) {
 					res.add("I could have another try to solve a maze now.");
 				} else {
-					res.add("Haizen won't make me a new maze yet.");
+					res.add("海震 won't make me a new maze yet.");
 				}
 			}
 			final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
@@ -98,7 +98,7 @@ public class Maze extends AbstractQuest {
 	}
 
 	private SpeakerNPC getNPC() {
-		return npcs.get("Haizen");
+		return npcs.get("海震");
 	}
 
 	private void addMazeSign() {
@@ -180,7 +180,7 @@ public class Maze extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Haizen";
+		return "海震";
 	}
 
 	@Override

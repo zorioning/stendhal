@@ -49,7 +49,7 @@ public class MazeTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	public MazeTest() {
-		super(ZONE_NAME, "Haizen");
+		super(ZONE_NAME, "海震");
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class MazeTest extends ZonePlayerAndNPCTestImpl {
 
 	@Test
 	public void testQuest() {
-		npc = SingletonRepository.getNPCList().get("Haizen");
+		npc = SingletonRepository.getNPCList().get("海震");
 		en = npc.getEngine();
 
 		en.step(player, "hi");

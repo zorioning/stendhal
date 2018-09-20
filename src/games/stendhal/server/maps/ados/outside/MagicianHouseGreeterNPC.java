@@ -20,7 +20,7 @@ import games.stendhal.server.entity.RPEntity;
 import games.stendhal.server.entity.npc.SpeakerNPC;
 
 /**
- * Builds a NPC outside Magician house in Ados  (name:Venethiel) who is the pupil of Magician Haizen
+ * Builds a NPC outside Magician house in Ados  (name:温妮尔) who is the pupil of Magician 海震
  *
  * @author geomac
  */
@@ -32,21 +32,21 @@ public class MagicianHouseGreeterNPC implements ZoneConfigurator {
 	}
 
 	private void createMagicianHouseGreeterNPC(final StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Venethiel") {
+		final SpeakerNPC npc = new SpeakerNPC("温妮尔") {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("Hello, I am so excited about the magical #maze!");
-				addHelp("If you get tired, you'll have to log off to get back to #Haizen.");
-				addReply("maze", "I'm afraid you will lose your way, but there are #scrolls for you to find.");
-				addReply("scrolls", "You only have ten minutes to pick up the scrolls in the #maze.");
-				addQuest("I am asking players to complete the #maze. Haizen will then make me his #assistant.");
-				addReply("assistant", "One day, I may learn how to use magic.");
-				addReply("Haizen", "He is teaching me about magic.");
-				addOffer("I can offer you some #advice.");
-				addReply("advice", "It would be helpful to look upon the mini map often.");
-				addJob("I am hoping to be Haizens #assistant soon.");
-				addGoodbye("Thank you and have a nice day.");
+				addGreeting("喂, 我对魔法 #迷阵 很感兴趣!");
+				addHelp("如果你觉得累了, 你就会退出然后回去找 #海震.");
+				addReply("迷阵", "我想你是迷路了, 不过我有 #卷轴 可帮你指路.");
+				addReply("卷轴", "在 #迷阵 里你只有十分钟时间捡起卷轴.");
+				addQuest("我正让玩家完成 #迷阵. 海震就会让我成为他的 #助手 .");
+				addReply("助手", "某天, 我可以学习如何运用魔法.");
+				addReply("海震", "他教我使用魔法.");
+				addOffer("我可以给你一些 #建议.");
+				addReply("建议", "常看小地图会很有帮助.");
+				addJob("我希望可以马上成为海震的 #助手 .");
+				addGoodbye("谢谢你, 祝你开心.");
 			}
 
 			@Override
@@ -55,7 +55,7 @@ public class MagicianHouseGreeterNPC implements ZoneConfigurator {
 			}
 		};
 
-		npc.setDescription("You see Venethiel. She wants to learn about magic.");
+		npc.setDescription("你遇见了 温妮尔. 她想学习魔法.");
 		npc.setEntityClass("magicianhousegreeternpc");
 		npc.setPosition(70, 52);
 		npc.setDirection(Direction.DOWN);
