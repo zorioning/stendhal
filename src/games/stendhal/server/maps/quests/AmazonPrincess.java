@@ -197,7 +197,7 @@ npc.add(ConversationStates.ATTENDING,
 			res.add("她让我找一些饮品, 但我觉得她应该没喝过.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
-			res.add("公主很渴, 我答应给她找一个异域饮品, 找到后对她说 'drink' . ");
+			res.add("公主很渴, 我答应给她找一个异界饮品, 找到后对她说 'drink' . ");
 		}
 		if ("start".equals(questState) && player.isEquipped("椰林飘香") || isCompleted(player)) {
 			res.add("我为公主找到一种 椰林飘香 的饮料, 我觉得她会喜欢喝. ");

@@ -215,7 +215,7 @@
       <item value="money" quantity="[30,80]" probability="100.0"/>
       <item value="大治疗剂" quantity="[2,4]" probability="60.0"/>
       <item value="giant heart" quantity="[1,1]" probability="80.0"/>
-      <item value="black helmet" quantity="[1,1]" probability="0.01"/>
+      <item value="黑头盔" quantity="[1,1]" probability="0.01"/>
       <item value="黑斗篷" quantity="[1,1]" probability="0.005"/>
       <item value="巨剑" quantity="[1,1]" probability="1.5"/>
     </drops>
@@ -290,7 +290,7 @@
     <corpse name="humanoid_2x2" harmless="cloaked_green_2x2" width="2" height="2"/>
     <drops>
       <item value="money" quantity="[5,95]" probability="100.0"/>
-      <item value="华丽的斗篷" quantity="[1,1]" probability="1.6"/>
+      <item value="奇妙斗篷" quantity="[1,1]" probability="1.6"/>
       <item value="影子靴子" quantity="[1,1]" probability="2.5"/>
     </drops>
     <equips>

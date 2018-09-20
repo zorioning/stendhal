@@ -953,11 +953,11 @@
     <corpse name="humanoid_2x2" width="2" height="2"/>
     <drops>
       <item value="money" quantity="[30,100]" probability="100.0" />
-      <item value="异域盾" quantity="[1,1]" probability="1.0" />
-      <item value="异种元素斗篷" quantity="[1,1]" probability="1.5" />
-      <item value="异种元素靴子" quantity="[1,1]" probability="2.5" />
+      <item value="异界盾" quantity="[1,1]" probability="1.0" />
+      <item value="异界斗篷" quantity="[1,1]" probability="1.5" />
+      <item value="异界靴子" quantity="[1,1]" probability="2.5" />
       <item value="xeno sword" quantity="[1,1]" probability="0.5" />
-      <item value="异种元素甲" quantity="[1,1]" probability="1.5" />
+      <item value="异界甲" quantity="[1,1]" probability="1.5" />
       <item value="xeno legs" quantity="[1,1]" probability="1.5" />
       <item value="xeno helmet" quantity="[1,1]" probability="1.5" />
     </drops>

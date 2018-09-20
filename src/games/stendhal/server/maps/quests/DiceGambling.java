@@ -140,8 +140,8 @@ public class DiceGambling extends AbstractQuest {
 		"拿着这个拉风的长弓, 你会是个优秀的弓箭手！"));
 		map.put(17,	new Pair<String, String>("红斗篷",
 		"穿上这件时尚的 红斗篷 你一定变得很酷！"));
-		map.put(18, new Pair<String, String>("magic chain helmet",
-				"你得到了特等奖！一个 magic chain helmet!"));
+		map.put(18, new Pair<String, String>("附魔索链头盔",
+				"你得到了特等奖！一个 附魔索链头盔!"));
 
 		return map;
 	}

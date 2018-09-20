@@ -222,7 +222,7 @@ public final class ShopList {
 		shops.add("boots&helm", "石靴", 2500);
 		shops.add("boots&helm", "混沌靴", 4000);
         shops.add("boots&helm", "绿了吧唧的靴子", 6000);
-        shops.add("boots&helm", "异种元素靴子", 8000);
+        shops.add("boots&helm", "异界靴子", 8000);
         shops.add("boots&helm", "xeno helmet", 8000);
 
 		// helmet shop (mithrilbourgh)
@@ -231,9 +231,9 @@ public final class ShopList {
 		shops.add("boots&helm", "golden helmet", 3000);
 		shops.add("boots&helm", "shadow helmet", 4000);
 		shops.add("boots&helm", "horned golden helmet", 5000);
-		shops.add("boots&helm", "chaos helmet", 6000);
-		shops.add("boots&helm", "magic chain helmet", 8000);
-		shops.add("boots&helm", "black helmet", 10000);
+		shops.add("boots&helm", "混沌头盔", 6000);
+		shops.add("boots&helm", "附魔索链头盔", 8000);
+		shops.add("boots&helm", "黑头盔", 10000);
 
 		// buy axes (woodcutter)
 		shops.add("buyaxe", "战戟", 2000);
@@ -262,7 +262,7 @@ public final class ShopList {
 		// magic items or 'relics' (witch in magic city)
 		shops.add("buymagic", "恶魔剑", 4000);
 		shops.add("buymagic", "暗之匕首", 8000);
-		shops.add("buymagic", "liberty helmet", 8000);
+		shops.add("buymagic", "自由头盔", 8000);
 		shops.add("buymagic", "immortal sword", 10000);
 		shops.add("buymagic", "jewelled legs", 12000);
 		shops.add("buymagic", "附魔钢盾", 16000);
@@ -278,9 +278,9 @@ public final class ShopList {
 
 		// mainio items (despot in mithrilbourgh throne room)
 		shops.add("buymainio", "奇妙甲", 22000);
-		shops.add("buymainio", "很棒的靴子", 4000);
-		shops.add("buymainio", "华丽的斗篷", 12000);
-		shops.add("buymainio", "mainio helmet", 8000);
+		shops.add("buymainio", "奇妙靴子", 4000);
+		shops.add("buymainio", "奇妙斗篷", 12000);
+		shops.add("buymainio", "奇妙头盔", 8000);
 		shops.add("buymainio", "mainio legs", 7000);
 		shops.add("buymainio", "奇妙之盾", 16000);
 
@@ -382,15 +382,15 @@ public final class ShopList {
 		shops.add("buykirdneharmor", "蓝色盔甲", 13000);
 		shops.add("buykirdneharmor", "石甲", 18000);
 		shops.add("buykirdneharmor", "冰护甲", 19000);
-		shops.add("buykirdneharmor", "异种元素甲", 21000);
+		shops.add("buykirdneharmor", "异界甲", 21000);
 		shops.add("buykirdneharmor", "野蛮人护甲", 5000);
 		shops.add("buykirdneharmor", "绿龙盾", 13000);
-		shops.add("buykirdneharmor", "异域盾", 20000);
+		shops.add("buykirdneharmor", "异界盾", 20000);
 
 
 		// amazon cloaks shop
 		shops.add("buyamazoncloaks", "吸血鬼斗篷", 14000);
-		shops.add("buyamazoncloaks", "异种元素斗篷", 18000);
+		shops.add("buyamazoncloaks", "异界斗篷", 18000);
 		shops.add("buyamazoncloaks", "精灵斗篷", 50);
 		shops.add("buyamazoncloaks", "巫妖斗篷", 10000);
 		shops.add("buyamazoncloaks", "石斗篷", 350);
@@ -426,7 +426,7 @@ public final class ShopList {
 		shops.add("buyblack", "黑色盔甲", 60000);
 		shops.add("buyblack", "黑靴子", 10000);
 		shops.add("buyblack", "黑斗篷", 20000);
-		shops.add("buyblack", "black helmet", 15000);
+		shops.add("buyblack", "黑头盔", 15000);
 		shops.add("buyblack", "black legs", 40000);
 		shops.add("buyblack", "黑盾", 75000);
 		shops.add("buyblack", "black sword", 20000);
