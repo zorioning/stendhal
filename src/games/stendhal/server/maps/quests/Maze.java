@@ -45,8 +45,8 @@ public class Maze extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"迷阵",
-				"海震的迷阵对于寻路者是个很大的挑战.",
+				"迷宫",
+				"海震的迷宫对于寻路者是个很大的挑战.",
 				false);
 		addMazeSign();
 		setupConversation();
@@ -58,25 +58,25 @@ public class Maze extends AbstractQuest {
 			if (!player.hasQuest(getSlotName())) {
 				return res;
 			}
-			res.add("海震建立了一个巨型迷阵让我去解开.");
+			res.add("海震建立了一个巨型迷宫让我去解开.");
 
 			if (player.getZone().getName().endsWith("_maze")) {
-				res.add("我落入的迷阵中的圈套.");
+				res.add("我落入的迷宫中的圈套.");
 			} else {
 				if (!isCompleted(player)) {
-					res.add("最终我没有解开迷阵.");
+					res.add("最终我没有解开迷宫.");
 				} else {
-					res.add("我解开了迷阵!");
+					res.add("我解开了迷宫!");
 				}
 				if (isRepeatable(player)) {
-					res.add("现在我可以再一次尝试试解开迷阵.");
+					res.add("现在我可以再一次尝试试解开迷宫.");
 				} else {
-					res.add("海震还没有为我做出新迷阵.");
+					res.add("海震还没有为我做出新迷宫.");
 				}
 			}
 			final int repetitions = player.getNumberOfRepetitions(getSlotName(), 2);
 			if (repetitions > 1) {
-				res.add("我解开迷阵已经用了 " + repetitions + " ,这么久的时间!");
+				res.add("我解开迷宫已经用了 " + repetitions + " ,这么久的时间!");
 			}
 
 			return res;
@@ -84,12 +84,12 @@ public class Maze extends AbstractQuest {
 
 	@Override
 	public String getName() {
-		return "迷阵";
+		return "迷宫";
 	}
 
 	@Override
 	public String getSlotName() {
-		return "迷阵";
+		return "迷宫";
 	}
 
 	@Override
@@ -110,17 +110,17 @@ public class Maze extends AbstractQuest {
 	private void setupConversation() {
 		SpeakerNPC npc = getNPC();
 
-		npc.addQuest("我可以把你送入 #迷阵 ,你需要自已找到出口. 我在桌子上那本 蓝色的书 上记下了用时最快和解题最多的解题人.");
+		npc.addQuest("我可以把你送入 #迷宫 ,你需要自已找到出口. 我在桌子上那本 蓝色的书 上记下了用时最快和解题最多的解题人.");
 
 		npc.add(ConversationStates.ATTENDING,
-				"迷阵",
+				"迷宫",
 				new TimePassedCondition(getSlotName(), 1, COOLING_TIME),
 				ConversationStates.QUEST_OFFERED,
-				"迷阵中会在对角有一个传送口可以出来. 我也在另外两个角落放上卷轴, 如果你够快就能得到. 你想试试吗?",
+				"迷宫中会在对角有一个传送口可以出来. 我也在另外两个角落放上卷轴, 如果你够快就能得到. 你想试试吗?",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
-				"迷阵",
+				"迷宫",
 				new NotCondition(new TimePassedCondition(getSlotName(), 1, COOLING_TIME)),
 				ConversationStates.ATTENDING,
 				null,

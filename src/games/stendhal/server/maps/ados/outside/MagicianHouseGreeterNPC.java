@@ -36,16 +36,16 @@ public class MagicianHouseGreeterNPC implements ZoneConfigurator {
 
 			@Override
 			protected void createDialog() {
-				addGreeting("喂, 我对魔法 #迷阵 很感兴趣!");
-				addHelp("如果你觉得累了, 你就会退出然后回去找 #海震.");
-				addReply("迷阵", "我想你是迷路了, 不过我有 #卷轴 可帮你指路.");
-				addReply("卷轴", "在 #迷阵 里你只有十分钟时间捡起卷轴.");
-				addQuest("我正让玩家完成 #迷阵. 海震就会让我成为他的 #助手 .");
-				addReply("助手", "某天, 我可以学习如何运用魔法.");
+				addGreeting("喂, 我对魔法 #迷宫 很感兴趣!");
+				addHelp("如果你走累了, 可以退出游戏然后再进入就能回到 #海震 房间.");
+				addReply("迷宫", "我估计你会迷路, 但有 #卷轴 可帮你.");
+				addReply("卷轴", "进入 #迷宫 十分钟内可以捡起地上的卷轴.");
+				addQuest("如果我让别人进入并完成 #迷宫. 海震就会让我成为他的 #助手.");
+				addReply("助手", "希望某天, 我也学会运用魔法.");
 				addReply("海震", "他教我使用魔法.");
 				addOffer("我可以给你一些 #建议.");
 				addReply("建议", "常看小地图会很有帮助.");
-				addJob("我希望可以马上成为海震的 #助手 .");
+				addJob("希望我可以马上成为海震的 #助手 .");
 				addGoodbye("谢谢你, 祝你开心.");
 			}
 
