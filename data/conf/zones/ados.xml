@@ -704,7 +704,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>    
         
@@ -713,7 +713,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     
@@ -722,7 +722,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     
@@ -731,7 +731,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     
@@ -740,7 +740,7 @@ areas.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
     

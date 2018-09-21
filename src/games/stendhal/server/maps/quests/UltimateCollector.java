@@ -66,7 +66,7 @@ public class UltimateCollector extends AbstractQuest {
 	private static final String QUEST_SLOT = "ultimate_collector";
 
 	/** 类牙棍 in Kotoch: The Orc Saman is the NPC */
-	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // kotoch
+	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // 科多奇
 
 	/** Vampire Sword quest: Hogart is the NPC */
 	private static final String VAMPIRE_SWORD_QUEST_SLOT = "vs_quest"; // dwarf blacksmith
@@ -149,7 +149,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(CLUB_THORNS_QUEST_SLOT),
 							 new QuestNotCompletedCondition(IMMORTAL_SWORD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"在 Kotoch 我还有一个请求你没有完成. 要深入探究, 你才能真正变成武器收藏家. !",
+			"在 科多奇 我还有一个请求你没有完成. 要深入探究, 你才能真正变成武器收藏家. !",
 			null);
 
 

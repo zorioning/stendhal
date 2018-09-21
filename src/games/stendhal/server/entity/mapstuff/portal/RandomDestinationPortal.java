@@ -132,7 +132,7 @@ public class RandomDestinationPortal extends QuestCompletedPortal {
 		locations.add(new Location("-1_塞门_矿山_nw", 30, 22, 75));		// kobold city
 		locations.add(new Location("0_athor_island", 30, 77, 73));          // 阿托尔岛
         locations.add(new Location("-1_阿多斯_城墙", 30, 91, 62));			// ados sewers
-        locations.add(new Location("-2_kotoch_entrance", 30, 20, 111));     // orc dungeons
+        locations.add(new Location("-2_科多奇_入口", 30, 20, 111));     // orc dungeons
         locations.add(new Location("0_纳尔沃_城", 60, 88, 85));           // nalwor city
         locations.add(new Location("-1_塞门_雪人_洞", 60, 13, 39));		// yeti cave
         locations.add(new Location("-2_阿多斯_郊外_nw", 70, 28, 5));       // dwarfs/bario
