@@ -89,9 +89,9 @@
     </equipable>
   </item>
 
-  <item name="kanmararn prison key">
+  <item name="卡梅伦监狱钥匙">
     <type class="key" subclass="blue" tileid="-1"/>
-    <description>You see a key which matches the locks in the Kanmararn prison.</description>
+    <description>You see a key which matches the locks in the 卡梅伦 prison.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>

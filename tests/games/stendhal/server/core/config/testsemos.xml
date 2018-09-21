@@ -366,14 +366,14 @@
 
 	<!--  Level -5 -->
 
-	<zone name="-5_kanmararn_entrance" level="-5" x="500096" y="500064"
+	<zone name="-5_卡梅伦_入口" level="-5" x="500096" y="500064"
 		file="Level -5/kanmararn/entrance.tmx">
 	</zone>
 
 
 	<!--  Level -6 -->
 
-	<zone name="-6_kanmararn_city" level="-6" x="500160" y="500064"
+	<zone name="-6_卡梅伦_城" level="-6" x="500160" y="500064"
 		file="Level -6/kanmararn/city.tmx">
 	</zone>
 
@@ -384,7 +384,7 @@
 		If we call it _jail, players can't move items around in it for
 		security reasons
 	-->
-	<zone name="-7_kanmararn_prison" level="-7" x="500160" y="500064"
+	<zone name="-7_卡梅伦_监狱" level="-7" x="500160" y="500064"
 		file="Level -7/kanmararn/jail.tmx">
 	</zone>
 

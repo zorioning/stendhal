@@ -2273,7 +2273,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <entity x="5" y="11">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.ShopSign">
         <parameter name="shop">buychaos</parameter>
-        <parameter name="title">Hunel (Kanmararn) suspected to buy:</parameter>
+        <parameter name="title">Hunel (卡梅伦) suspected to buy:</parameter>
         <parameter name="seller">false</parameter>
       </implementation>
       <attribute name="class">transparent</attribute>

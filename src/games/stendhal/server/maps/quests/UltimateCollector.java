@@ -198,7 +198,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new QuestNotStartedCondition(QUEST_SLOT),
 					 new QuestNotCompletedCondition(KANMARARN_QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"你已收集了很多特殊装备, 但你还从没有帮助过 Kanmararn 地下的这些人, 你应该完成他们的要求.",
+			"你已收集了很多特殊装备, 但你还从没有帮助过 卡梅伦 地下的这些人, 你应该完成他们的要求.",
 			null);
 
 	}

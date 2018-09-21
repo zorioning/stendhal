@@ -4406,14 +4406,14 @@ TO OLD SEMOS VILLAGE
 
   <!-- Level -5 -->
 
-  <zone name="-5_kanmararn_entrance" level="-5" x="500096" y="500064"
+  <zone name="-5_卡梅伦_入口" level="-5" x="500096" y="500064"
     file="Level -5/kanmararn/entrance.tmx">
   </zone>
 
 
   <!-- Level -6 -->
 
-  <zone name="-6_kanmararn_city" level="-6" x="500160" y="500064"
+  <zone name="-6_卡梅伦_城" level="-6" x="500160" y="500064"
     file="Level -6/kanmararn/city.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.kanmararn.CowardSoldierNPC" />
@@ -4427,63 +4427,63 @@ TO OLD SEMOS VILLAGE
 
   <!-- If we call it _jail, players can't move items around in it for security 
     reasons. This issue is fixed now. -->
-  <zone name="-7_kanmararn_prison" level="-7" x="500160" y="500064"
+  <zone name="-7_卡梅伦_监狱" level="-7" x="500160" y="500064"
     file="Level -7/kanmararn/jail.tmx">
     <configurator
       class-name="games.stendhal.server.maps.semos.kanmararn.DwarfGuardNPC" />
     <configurator
       class-name="games.stendhal.server.maps.semos.kanmararn.DuergarKingCreature" />
     <portal x="11" y="18" ref="jail_lock_outside">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="11" y="22" ref="jail_lock_inside">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside" />
     </portal>
     <portal x="19" y="9" ref="jail_lock_inside2">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside2" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside2" />
     </portal>
     <portal x="19" y="13" ref="jail_lock_outside2">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside2" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside2" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="36" y="18" ref="jail_lock_outside3">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside3" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside3" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="36" y="22" ref="jail_lock_inside3">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside3" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside3" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="44" y="9" ref="jail_lock_inside4">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_outside4" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_outside4" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
     <portal x="44" y="13" ref="jail_lock_outside4">
-      <destination zone="-7_kanmararn_prison" ref="jail_lock_inside4" />
+      <destination zone="-7_卡梅伦_监狱" ref="jail_lock_inside4" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">kanmararn prison key</parameter>
+        <parameter name="key">卡梅伦监狱钥匙</parameter>
         <parameter name="rejected">You do not have the key to open the lock.</parameter>
       </implementation>
     </portal>
