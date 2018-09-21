@@ -71,7 +71,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** Vampire Sword quest: Hogart is the NPC */
 	private static final String VAMPIRE_SWORD_QUEST_SLOT = "vs_quest"; // dwarf blacksmith
 
-	/** Obsidian Knife quest: Alrak is the NPC */
+	/** 黑曜石刀 quest: Alrak is the NPC */
 	private static final String OBSIDIAN_KNIFE_QUEST_SLOT = "obsidian_knife"; // dwarf blacksmith
 
 	/** Immortal Sword Quest in Kotoch: Vulcanus is the NPC */

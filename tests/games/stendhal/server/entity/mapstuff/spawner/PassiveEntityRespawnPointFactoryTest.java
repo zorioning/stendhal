@@ -289,13 +289,13 @@ public class PassiveEntityRespawnPointFactoryTest {
 				.create(clazz, 1, null, 0, 0);
 		assertNotNull(value_1);
 		assertEquals(
-				"You see evidence of a sapphire stone being here recently.",
+				"You see evidence of a 蓝宝石 stone being here recently.",
 				value_1.getDescription());
 
 		PassiveEntityRespawnPoint value_2 = PassiveEntityRespawnPointFactory
 				.create(clazz, 2, null, 0, 0);
 		assertNotNull(value_2);
-		assertEquals("You see trace elements of the precious gem emerald.",
+		assertEquals("You see trace elements of the precious gem 翡翠.",
 				value_2.getDescription());
 
 		PassiveEntityRespawnPoint value_3 = PassiveEntityRespawnPointFactory

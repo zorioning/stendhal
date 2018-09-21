@@ -139,11 +139,11 @@ public final class ShopList {
 		shops.add("sellrings", "订婚戒指", 5000);
 		// gold and gemstones
 		shops.add("buyprecious", "gold bar", 250);
-		shops.add("buyprecious", "emerald", 200);
-		shops.add("buyprecious", "sapphire", 400);
-		shops.add("buyprecious", "carbuncle", 600);
-		shops.add("buyprecious", "diamond", 800);
-		shops.add("buyprecious", "obsidian", 1000);
+		shops.add("buyprecious", "翡翠", 200);
+		shops.add("buyprecious", "蓝宝石", 400);
+		shops.add("buyprecious", "红宝石", 600);
+		shops.add("buyprecious", "钻石", 800);
+		shops.add("buyprecious", "黑曜石", 1000);
 		shops.add("buyprecious", "mithril bar", 2500);
 
 		// rare weapons shop
