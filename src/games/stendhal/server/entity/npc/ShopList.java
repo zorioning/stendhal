@@ -337,9 +337,9 @@ public final class ShopList {
 		shops.add("buyveggiesandherbs", "西红柿", 20);
 		shops.add("buyveggiesandherbs", "洋葱", 20);
 		shops.add("buyveggiesandherbs", "海芋", 10);
-		shops.add("buyveggiesandherbs", "kokuda", 200);
-		shops.add("buyveggiesandherbs", "kekik", 25);
-		shops.add("buyveggiesandherbs", "sclaria", 25);
+		shops.add("buyveggiesandherbs", "科科达", 200);
+		shops.add("buyveggiesandherbs", "百里香", 25);
+		shops.add("buyveggiesandherbs", "鼠尾草", 25);
 
 		// gnome village buyer in 0 ados mountain n2 w2)
 		shops.add("buy4gnomes", "皮甲", 25);

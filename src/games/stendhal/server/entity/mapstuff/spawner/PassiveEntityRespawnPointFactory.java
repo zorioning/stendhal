@@ -333,18 +333,18 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint = new VegetableGrower("海芋");
 			break;
 		case 1:
-			passiveEntityrespawnPoint = new VegetableGrower("kekik");
+			passiveEntityrespawnPoint = new VegetableGrower("百里香");
 			break;
 		case 2:
-			passiveEntityrespawnPoint = new VegetableGrower("sclaria");
+			passiveEntityrespawnPoint = new VegetableGrower("鼠尾草");
 			break;
 		case 3:
-			passiveEntityrespawnPoint = new VegetableGrower("mandragora");
+			passiveEntityrespawnPoint = new VegetableGrower("曼德拉草");
 			break;
 		case 4:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("reindeer moss", 300);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("石蕊", 300);
 			passiveEntityrespawnPoint
-					.setDescription("这里是reindeer moss生长的地方. ");
+					.setDescription("这里是石蕊生长的地方. ");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;

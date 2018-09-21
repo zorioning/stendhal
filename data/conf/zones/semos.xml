@@ -217,8 +217,8 @@
     <entity x="15" y="10">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Reader" />
-      <attribute name="text">Kokuda 炖汤食谱:
-1 kokuda
+      <attribute name="text">科科达 炖汤食谱:
+1 科科达
 3 eggs
 2 数瓶水</attribute>
     </entity>
