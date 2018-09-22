@@ -99,7 +99,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 
 	@Test
 	public void testAcceptQuest() {
-		String neededItems = "20 mithril bars, an obsidian, a 钻石, 5 emeralds, 10 carbuncles, 10 sapphires, a black shield, a magic plate shield, 10 gold bars, 20 pieces of iron, 10 黑珍珠, 20 shurikens, 15 marbles and a snowglobe";
+		String neededItems = "20 mithril bars, an obsidian, a 钻石, 5 emeralds, 10 carbuncles, 10 sapphires, a black shield, a magic plate shield, 10 gold bars, 20 pieces of iron, 10 黑珍珠, 20 shurikens, 15 玻璃球 and a snowglobe";
 
 		en.setCurrentState(ConversationStates.QUEST_OFFERED);
 		en.step(player, "yes");
@@ -119,7 +119,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 		en.step(player, "hi");
 
 		assertEquals("I cannot #forge it without the missing 15 mithril bars. After all, this IS a mithril shield.", getReply(baldemar));
-		String neededItems = "15 mithril bars, an obsidian, a 钻石, 5 emeralds, 10 carbuncles, 10 sapphires, a black shield, a magic plate shield, 10 gold bars, 20 pieces of iron, 10 黑珍珠, 20 shurikens, 15 marbles and a snowglobe";
+		String neededItems = "15 mithril bars, an obsidian, a 钻石, 5 emeralds, 10 carbuncles, 10 sapphires, a black shield, a magic plate shield, 10 gold bars, 20 pieces of iron, 10 黑珍珠, 20 shurikens, 15 玻璃球 and a snowglobe";
 		assertHistory(HISTORY_DEFAULT, HISTORY_START, HISTORY_NEED_ITEMS_PREFIX + neededItems + HISTORY_NEED_ITEMS_SUFFIX);
 	}
 
@@ -216,7 +216,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 		en.setCurrentState(ConversationStates.IDLE);
 		player.setQuest(questSlot, "start;20;1;1;5;10;10;1;1;10;20;10;20;2;0");
 		en.step(player, "hi");
-		assertEquals("My son wants some new toys. I need 13 marbles still.", getReply(baldemar));
+		assertEquals("My son wants some new toys. I need 13 玻璃球 still.", getReply(baldemar));
 	}
 
 	@Test
@@ -302,7 +302,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 		PlayerTestHelper.equipWithStackableItem(player, "iron", 20);
 		PlayerTestHelper.equipWithStackableItem(player, "黑珍珠", 10);
 		PlayerTestHelper.equipWithStackableItem(player, "shuriken", 20);
-		PlayerTestHelper.equipWithStackableItem(player, "marbles", 15);
+		PlayerTestHelper.equipWithStackableItem(player, "玻璃球", 15);
 		PlayerTestHelper.equipWithItem(player, "snowglobe");
 
 		en.setCurrentState(ConversationStates.IDLE);
@@ -317,7 +317,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 		player.setQuest(questSlot, "start;0;0;0;0;0;0;0;0;0;0;0;0;0;0");
 		en.step(player, "forge");
 
-		assertEquals("I need 20 mithril bars, an obsidian, a 钻石, 5 emeralds, 10 carbuncles, 10 sapphires, a black shield, a magic plate shield, 10 gold bars, 20 pieces of iron, 10 黑珍珠, 20 shurikens, 15 marbles and a snowglobe.", getReply(baldemar));
+		assertEquals("I need 20 mithril bars, an obsidian, a 钻石, 5 emeralds, 10 carbuncles, 10 sapphires, a black shield, a magic plate shield, 10 gold bars, 20 pieces of iron, 10 黑珍珠, 20 shurikens, 15 玻璃球 and a snowglobe.", getReply(baldemar));
 	}
 
 	@Test
@@ -326,7 +326,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 		player.setQuest(questSlot, "start;20;1;1;5;10;10;1;1;10;20;10;10;0;0");
 		en.step(player, "forge");
 
-		assertEquals("I need 10 shurikens, 15 marbles and a snowglobe.", getReply(baldemar));
+		assertEquals("I need 10 shurikens, 15 玻璃球 and a snowglobe.", getReply(baldemar));
 	}
 
 	@Test
@@ -335,7 +335,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 		player.setQuest(questSlot, "start;20;1;1;5;10;10;1;1;10;20;10;20;12;0");
 		en.step(player, "forge");
 
-		assertEquals("I need 3 marbles and a snowglobe.", getReply(baldemar));
+		assertEquals("I need 3 玻璃球 and a snowglobe.", getReply(baldemar));
 	}
 
 	@Test

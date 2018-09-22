@@ -267,7 +267,7 @@
       <item value="治疗济" quantity="[1,2]" probability="30.0"/>
       <item value="毒药" quantity="[1,2]" probability="40.0"/>
        <item value="蓝靴子" quantity="[1,1]" probability="5.0"/>
-        <item value="blue legs" quantity="[1,1]" probability="1.5"/>
+        <item value="蓝裤子" quantity="[1,1]" probability="1.5"/>
     </drops>
     <equips>
     </equips>

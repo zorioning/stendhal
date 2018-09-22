@@ -84,7 +84,7 @@ public class StuffForVulcanus extends AbstractQuest {
 		itemCollector.require().item("iron").pieces(15).bySaying("I cannot #forge it without the missing %s.");
 		itemCollector.require().item("木头").pieces(26).bySaying("How do you expect me to #forge it without missing %s for the fire?");
 		itemCollector.require().item("gold bar").pieces(12).bySaying("I must pay a bill to spirits in order to cast the enchantment over the sword. I need %s more.");
-		itemCollector.require().item("giant heart").pieces(6).bySaying("It is the base element of the enchantment. I need %s still.");
+		itemCollector.require().item("巨人心脏").pieces(6).bySaying("It is the base element of the enchantment. I need %s still.");
 
 		questLogic.setItemCollector(itemCollector);
 		questLogic.setQuest(this);
@@ -163,7 +163,7 @@ public class StuffForVulcanus extends AbstractQuest {
 						player.setQuest(QUEST_SLOT, "forging;" + System.currentTimeMillis());
 					} else {
 						if (!player.hasKilled("giant") && !missingSomething) {
-							raiser.say("Did you really get those giant hearts yourself? I don't think so! This powerful sword can only be given to those that are strong enough to kill a #giant.");
+							raiser.say("Did you really get those 巨人心脏s yourself? I don't think so! This powerful sword can only be given to those that are strong enough to kill a #giant.");
 						}
 
 						questLogic.updateQuantitiesInQuestStatus(player);
@@ -236,7 +236,7 @@ public class StuffForVulcanus extends AbstractQuest {
 				"A smith in Ados can forge the gold into gold bars for you.",
 				null);
 		npc.add(ConversationStates.ANY,
-				Arrays.asList("giant", "giant heart"),
+				Arrays.asList("giant", "巨人心脏"),
 				null,
 				ConversationStates.ATTENDING,
 				"There are ancient stories of giants living in the mountains at the north of 塞门镇 and Ados.",
@@ -288,7 +288,7 @@ public class StuffForVulcanus extends AbstractQuest {
 			res.add("Vulcanus, son of gods himself, now forges my immortal sword.");
 		}
 		if (isCompleted(player)) {
-			res.add("Gold bars and giant hearts together with the forging from a god's son made me a sword of which I can be proud.");
+			res.add("Gold bars and 巨人心脏s together with the forging from a god's son made me a sword of which I can be proud.");
 		}
 		return res;
 	}

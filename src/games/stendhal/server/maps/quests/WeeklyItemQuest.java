@@ -133,11 +133,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("骨玉法杖",1);
 
 		// drinks
-<<<<<<< HEAD
-		items.put("强治疗济",5);
-=======
 		items.put("强治疗剂",5);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		items.put("鱼汤",3);
 
 		// helmet
@@ -152,15 +148,15 @@ public class WeeklyItemQuest extends AbstractQuest {
 		items.put("黑曜石",1);
 
 		// legs
-		items.put("chaos legs",1);
-		items.put("dwarvish legs",1);
-		items.put("golden legs",1);
-		items.put("mainio legs",1);
-		items.put("shadow legs",1);
-		items.put("xeno legs",1);
+		items.put("混沌护腿",1);
+		items.put("矮人护腿",1);
+		items.put("黄金护腿",1);
+		items.put("奇妙裤子",1);
+		items.put("影子护腿",1);
+		items.put("异界护腿",1);
 
 		// misc
-		items.put("giant heart",5);
+		items.put("巨人心脏",5);
 		items.put("venom gland",1);
 
 		// resource

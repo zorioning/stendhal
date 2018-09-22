@@ -1549,7 +1549,7 @@ For example say:  11  if you want the room called Water of Love.
     <portal x="115" y="73" ref="in1">
       <destination zone="-1_fado_great_cave_w2" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">sedah gate key</parameter>
+        <parameter name="key">西大城门钥匙</parameter>
         <parameter name="rejected">The gate is locked</parameter>
       </implementation>
     </portal>
@@ -1557,7 +1557,7 @@ For example say:  11  if you want the room called Water of Love.
     <portal x="116" y="73" ref="in2">
       <destination zone="-1_fado_great_cave_w2" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">sedah gate key</parameter>
+        <parameter name="key">西大城门钥匙</parameter>
         <parameter name="rejected">The gate is locked</parameter>
       </implementation>
     </portal>
@@ -1565,7 +1565,7 @@ For example say:  11  if you want the room called Water of Love.
     <portal x="117" y="73" ref="in3">
       <destination zone="-1_fado_great_cave_w2" ref="in" />
       <implementation class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">sedah gate key</parameter>
+        <parameter name="key">西大城门钥匙</parameter>
         <parameter name="rejected">The gate is locked</parameter>
       </implementation>
     </portal>
@@ -1593,32 +1593,32 @@ For example say:  11  if you want the room called Water of Love.
     </portal>
     
     <portal x="69" y="92" ref="house1_entrance">
-      <destination zone="int_sedah_house1" ref="entrance" />
+      <destination zone="int_西大城_house1" ref="entrance" />
     </portal>
     
     <portal x="39" y="94" ref="house0_entrance">
-      <destination zone="int_sedah_house0" ref="entrance_right" />
+      <destination zone="int_西大城_house0" ref="entrance_right" />
     </portal>
     
     <portal x="99" y="103" ref="house2_entrance">
-      <destination zone="int_sedah_house2" ref="entrance" />
+      <destination zone="int_西大城_house2" ref="entrance" />
     </portal>
     
     <portal x="91" y="115" ref="mausoleum_entrance">
-      <destination zone="int_sedah_mausoleum" ref="entrance" />
+      <destination zone="int_西大城_mausoleum" ref="entrance" />
     </portal>
     
     <portal x="121" y="105" ref="house3_entrance">
-      <destination zone="int_sedah_barracks_0" ref="entrance" />
+      <destination zone="int_西大城_barracks_0" ref="entrance" />
     </portal>
     
     <portal x="12" y="108" ref="house4_entrance">
-      <destination zone="int_sedah_house4_0" ref="entrance" />
+      <destination zone="int_西大城_house4_0" ref="entrance" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_house0" file="interiors/sedah/house0.tmx">
+  <zone name="int_西大城_house0" file="interiors/sedah/house0.tmx">
     <portal x="19" y="30" ref="entrance_left">
       <destination zone="-1_fado_great_cave_w2" ref="house0_entrance" />
     </portal>
@@ -1629,64 +1629,64 @@ For example say:  11  if you want the room called Water of Love.
     
   </zone>
 
-  <zone name="int_sedah_house1" file="interiors/sedah/house1.tmx">
+  <zone name="int_西大城_house1" file="interiors/sedah/house1.tmx">
     <portal x="6" y="13" ref="entrance">
       <destination zone="-1_fado_great_cave_w2" ref="house1_entrance" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_house2" file="interiors/sedah/house2.tmx">
+  <zone name="int_西大城_house2" file="interiors/sedah/house2.tmx">
     <portal x="6" y="13" ref="entrance">
       <destination zone="-1_fado_great_cave_w2" ref="house2_entrance" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_house4_0" file="interiors/sedah/house4.tmx">
+  <zone name="int_西大城_house4_0" file="interiors/sedah/house4.tmx">
     <portal x="15" y="28" ref="entrance">
       <destination zone="-1_fado_great_cave_w2" ref="house4_entrance" />
     </portal>
     
     <portal x="13" y="13" ref="up">
-      <destination zone="int_sedah_house4_1" ref="down" />
+      <destination zone="int_西大城_house4_1" ref="down" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_house4_1" file="interiors/sedah/house4_1.tmx">
+  <zone name="int_西大城_house4_1" file="interiors/sedah/house4_1.tmx">
     <configurator class-name="games.stendhal.server.maps.sedah.house.WannaBeKingNPC" />
     <portal x="3" y="3" ref="down">
-      <destination zone="int_sedah_house4_0" ref="up" />
+      <destination zone="int_西大城_house4_0" ref="up" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_mausoleum" file="interiors/sedah/mausoleum.tmx">
+  <zone name="int_西大城_mausoleum" file="interiors/sedah/mausoleum.tmx">
     <portal x="6" y="14" ref="entrance">
       <destination zone="-1_fado_great_cave_w2" ref="mausoleum_entrance" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_barracks_0" file="interiors/sedah/house3.tmx">
+  <zone name="int_西大城_barracks_0" file="interiors/sedah/house3.tmx">
     <portal x="16" y="28" ref="entrance">
       <destination zone="-1_fado_great_cave_w2" ref="house3_entrance" />
     </portal>
     
     <portal x="4" y="4" ref="up">
-      <destination zone="int_sedah_barracks_1" ref="down" />
+      <destination zone="int_西大城_barracks_1" ref="down" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_barracks_1" file="interiors/sedah/house3_1.tmx">
+  <zone name="int_西大城_barracks_1" file="interiors/sedah/house3_1.tmx">
     <portal x="4" y="4" ref="down">
-      <destination zone="int_sedah_barracks_0" ref="up" />
+      <destination zone="int_西大城_barracks_0" ref="up" />
     </portal>
     
     <portal x="15" y="26" ref="up">
-      <destination zone="int_sedah_barracks_2" ref="down" />
+      <destination zone="int_西大城_barracks_2" ref="down" />
     </portal>
     
     <entity x="15" y="3">
@@ -1702,29 +1702,29 @@ it back as you got it!
     
   </zone>
 
-  <zone name="int_sedah_barracks_2" file="interiors/sedah/house3_2.tmx">
+  <zone name="int_西大城_barracks_2" file="interiors/sedah/house3_2.tmx">
     <portal x="15" y="26" ref="down">
-      <destination zone="int_sedah_barracks_1" ref="up" />
+      <destination zone="int_西大城_barracks_1" ref="up" />
     </portal>
     
   </zone>
 
   <zone name="-1_fado_great_cave_w" level="-1" x="499744" y="500640" file="Level -1/fado/great_cave_w.tmx">
     <portal x="52" y="96" ref="shop_in">
-      <destination zone="int_sedah_storage" ref="out" />
+      <destination zone="int_西大城_storage" ref="out" />
     </portal>
     
     <portal x="37" y="116" ref="house5_in">
-      <destination zone="int_sedah_house5" ref="out" />
+      <destination zone="int_西大城_house5" ref="out" />
     </portal>
     
     <portal x="92" y="102" ref="house6_in">
-      <destination zone="int_sedah_house6" ref="out" />
+      <destination zone="int_西大城_house6" ref="out" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_storage" file="interiors/sedah/shop.tmx">
+  <zone name="int_西大城_storage" file="interiors/sedah/shop.tmx">
     <!-- NPCs -->
     <configurator class-name="games.stendhal.server.maps.sedah.storage.StorageNPC" />
     
@@ -1734,14 +1734,14 @@ it back as you got it!
     
   </zone>
 
-  <zone name="int_sedah_house5" file="interiors/sedah/house5.tmx">
+  <zone name="int_西大城_house5" file="interiors/sedah/house5.tmx">
     <portal x="6" y="13" ref="out">
       <destination zone="-1_fado_great_cave_w" ref="house5_in" />
     </portal>
     
   </zone>
 
-  <zone name="int_sedah_house6" file="interiors/sedah/house6.tmx">
+  <zone name="int_西大城_house6" file="interiors/sedah/house6.tmx">
     <portal x="6" y="13" ref="out">
       <destination zone="-1_fado_great_cave_w" ref="house6_in" />
     </portal>

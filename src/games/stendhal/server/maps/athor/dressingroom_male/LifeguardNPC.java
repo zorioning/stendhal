@@ -79,13 +79,13 @@ public class LifeguardNPC implements ZoneConfigurator {
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 				final ProducerBehaviour mixerBehaviour = new ProducerBehaviour("david_mix_cream",
-						"mix", "suntan cream", requiredResources, 10 * 60);
+						"mix", "防晒油", requiredResources, 10 * 60);
 
 				new ProducerAdder().addProducer(this, mixerBehaviour, "Hallo!");
 
 				addReply(
-						Arrays.asList("suntan", "cream", "suntan cream"),
-				"Pam's and mine suntan cream is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special suntan cream for you.");
+						Arrays.asList("suntan", "cream", "防晒油"),
+				"Pam's and mine 防晒油 is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special 防晒油 for you.");
 
 				addReply("海芋", "海芋 is a herb which is growing around 塞门镇.");
 

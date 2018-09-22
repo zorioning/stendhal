@@ -48,7 +48,7 @@ import games.stendhal.server.util.ItemCollection;
  *
  * PARTICIPANTS:
  * <ul>
- * <li> Ivan Abe, the wannabe king who lives in Sedah</li>
+ * <li> Ivan Abe, the wannabe king who lives in 西大</li>
  * <li> Kendra Mattori, priestess living in Magic City</li>
  * </ul>
  *

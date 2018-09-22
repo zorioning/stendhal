@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
 
-  <item name="bulb">
+  <item name="根茎">
     <type class="misc" subclass="bulb" tileid="-1"/>
-    <description>You see a bulb. It can be planted anywhere, but it will only thrive on fertile ground.</description>
+    <description>You see a 根茎. It can be planted anywhere, but it will only thrive on fertile ground.</description>
     <implementation class-name="games.stendhal.server.entity.item.Seed"/> 
 	 <attributes>
       <quantity value="1"/>
@@ -42,9 +42,9 @@
     </equipable>
   </item>
 
-  <item name="giant heart">
+  <item name="巨人心脏">
     <type class="misc" subclass="giant_heart" tileid="-1"/>
-    <description>You see a giant heart. This proves that a giant was defeated, and has magical properties that you are not sure of.</description>
+    <description>You see a 巨人心脏. This proves that a giant was defeated, and has magical properties that you are not sure of.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -139,9 +139,9 @@
     </equipable>
   </item>
 
-  <item name="vampirette entrails">
+  <item name="吸血鬼内脏">
     <type class="misc" subclass="vampirette_entrails" tileid="-1"/>
-    <description>You see some vampirette entrails. These guts proves that a vampirette was slain.</description> 
+    <description>You see some 吸血鬼内脏. These guts proves that a vampirette was slain.</description> 
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -159,9 +159,9 @@
     </equipable>
   </item>
 
-  <item name="bat entrails">
+  <item name="蝙蝠内脏">
     <type class="misc" subclass="bat_entrails" tileid="-1"/>
-    <description>You see some bat entrails, full of the blood of a living creature.</description>
+    <description>You see some 蝙蝠内脏, full of the blood of a living creature.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -179,9 +179,9 @@
     </equipable>
   </item>
 
-  <item name="suntan cream">
+  <item name="防晒油">
     <type class="misc" subclass="suntan_cream" tileid="-1"/>
-    <description>You see a clear bottle of suntan cream and notice that the outside is slippery. A nice scent of coconut mixed with bannana wafts into the air from it.</description>
+    <description>You see a clear bottle of 防晒油 and notice that the outside is slippery. A nice scent of coconut mixed with bannana wafts into the air from it.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -199,9 +199,9 @@
     </equipable>
   </item>
 
-   <item name="marbles">
+   <item name="玻璃球">
     <type class="misc" subclass="marbles" tileid="-1"/>
-    <description>You see some marbles. Boys will be boys.</description>
+    <description>You see some 玻璃球. Boys will be boys.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -219,9 +219,9 @@
     </equipable>
   </item>
  
-   <item name="canned tuna">
+   <item name="金枪鱼罐头">
     <type class="misc" subclass="canotuna" tileid="-1"/>
-    <description>You see what appears to be canned tuna. Too bad you don't have a can opener.</description>
+    <description>You see what appears to be 金枪鱼罐头. Too bad you don't have a can opener.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

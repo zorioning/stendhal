@@ -4246,7 +4246,7 @@ TO OLD SEMOS VILLAGE
       <destination zone="-3_塞门_墓室" ref="upstairs" />
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.KeyedPortal">
-        <parameter name="key">vampirette entrails</parameter>
+        <parameter name="key">吸血鬼内脏</parameter>
         <parameter name="quantity">7</parameter>
         <parameter name="rejected">
      Prove that you killed all vampirettes before you face their lord.

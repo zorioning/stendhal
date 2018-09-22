@@ -156,8 +156,8 @@ public abstract class UpdateConverter {
 						zoneName = "ados";
 					}
 					doorId = zoneName + " house " + Integer.toString(id);
-					// now set the infostring of the house key to doorId;number;
-					item = SingletonRepository.getEntityManager().getItem("house key");
+					// now set the infostring of the 房间钥匙 to doorId;number;
+					item = SingletonRepository.getEntityManager().getItem("房间钥匙");
 					((HouseKey) item).setup(doorId, number, null);
 				} catch (final NumberFormatException e) {
 					// shouldn't happen - give up and this will generate a warning

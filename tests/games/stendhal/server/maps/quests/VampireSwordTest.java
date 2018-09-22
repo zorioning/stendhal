@@ -81,8 +81,8 @@ public class VampireSwordTest {
 	}
 
 	public VampireSwordTest() {
-		requiredForFilling.put("vampirette entrails", 7);
-		requiredForFilling.put("bat entrails", 7);
+		requiredForFilling.put("吸血鬼内脏", 7);
+		requiredForFilling.put("蝙蝠内脏", 7);
 		requiredForFilling.put("skull ring", 1);
 		requiredForFilling.put("高脚杯", 1);
 	}
@@ -307,7 +307,7 @@ public class VampireSwordTest {
 	 */
 	@Test
 	public void testBloodMaterialDescription() {
-		for (String material : Arrays.asList("blood", "vampirette entrails", "bat entrails")) {
+		for (String material : Arrays.asList("blood", "吸血鬼内脏", "蝙蝠内脏")) {
 			final Player player = PlayerTestHelper.createPlayer("me");
 			final SpeakerNPC npc = vs.npcs.get(VAMPIRE_NPC);
 			final Engine en = vs.npcs.get(VAMPIRE_NPC).getEngine();
@@ -385,9 +385,9 @@ public class VampireSwordTest {
 		player.equipToInventoryOnly(item);
 		item = SingletonRepository.getEntityManager().getItem("skull ring");
 		player.equipToInventoryOnly(item);
-		item = SingletonRepository.getEntityManager().getItem("bat entrails");
+		item = SingletonRepository.getEntityManager().getItem("蝙蝠内脏");
 		player.equipToInventoryOnly(item);
-		item = SingletonRepository.getEntityManager().getItem("vampirette entrails");
+		item = SingletonRepository.getEntityManager().getItem("吸血鬼内脏");
 		player.equipToInventoryOnly(item);
 
 		en.step(player, "fill");
@@ -438,7 +438,7 @@ public class VampireSwordTest {
 			}
 
 			en.step(player, "fill");
-			assertEquals("I need you to fetch me 7 #'bat entrails', 7 #'vampirette entrails', a #'skull ring', and an #'高脚杯' for this job, which will take 5 minutes. Do you have what I need?", getReply(npc));
+			assertEquals("I need you to fetch me 7 #'蝙蝠内脏', 7 #'吸血鬼内脏', a #'skull ring', and an #'高脚杯' for this job, which will take 5 minutes. Do you have what I need?", getReply(npc));
 
 			en.step(player, yes);
 			assertEquals("answer to '" + yes + "'", "OK, I will fill a 盛血高脚杯 for you, but that will take some time. Please come back in 5 minutes.", getReply(npc));

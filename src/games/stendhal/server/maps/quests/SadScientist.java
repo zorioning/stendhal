@@ -79,7 +79,7 @@ import games.stendhal.server.util.ItemCollection;
  *
  * REWARD:
  * <ul>
- * 		<li>a pair of black legs</li>
+ * 		<li>a pair of 黑护腿</li>
  * 		<li>20 Karma</li>
  * 		<li>10000 XP</li>
  * </ul>
@@ -127,7 +127,7 @@ public class SadScientist extends AbstractQuest {
 			res.add("宝石腿还需要 " + missingItems.toStringList() + ".");
 			return res;
 		}
-		res.add("Vasi Elos 需要一个基座 影子腿 shadow legs, 好把这些珠宝镶到上面");
+		res.add("Vasi Elos 需要一个基座 影子腿 影子护腿, 好把这些珠宝镶到上面");
 		if ("legs".equals(questState)) {
 			return res;
 		}
@@ -211,7 +211,7 @@ public class SadScientist extends AbstractQuest {
 											new IncreaseKarmaAction(20),
 											new IncreaseXPAction(10000),
 											// here, true = bind them to player
-											new EquipItemAction("black legs", 1, true)
+											new EquipItemAction("黑护腿", 1, true)
 										);
 		npc.add(ConversationStates.IDLE,
 				ConversationPhrases.GREETING_MESSAGES,
@@ -429,7 +429,7 @@ public class SadScientist extends AbstractQuest {
 							new MultipleActions(
 									new SetQuestAction(QUEST_SLOT,"legs"),
 									new SayTextAction("我是一个十足的大傻瓜, 我要我的妻子记住我的爱. 当然这些腿也需要些珠宝镶上 " +
-											". 请下次带来一对影之腿 shadow legs. 再见.")), ConversationStates.IDLE
+											". 请下次带来一对影之腿 影子护腿. 再见.")), ConversationStates.IDLE
 							));
 		}
 	}
@@ -465,23 +465,23 @@ public class SadScientist extends AbstractQuest {
 	//player returns without legs
 	final AndCondition nolegscondition = new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 									new QuestInStateCondition(QUEST_SLOT, "legs"),
-									new NotCondition(new PlayerHasItemWithHimCondition("shadow legs"))
+									new NotCondition(new PlayerHasItemWithHimCondition("影子护腿"))
 									);
 	npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			nolegscondition,
 			ConversationStates.IDLE,
-			"又见面了. 请你有了 shadow legs 影之腿后再来吧, 我要为 vera 把珠宝镶到这个基座上. ",
+			"又见面了. 请你有了 影子护腿 影之腿后再来吧, 我要为 vera 把珠宝镶到这个基座上. ",
 			null);
 
 	//player returns with legs
 	final AndCondition legscondition = new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 								new QuestInStateCondition(QUEST_SLOT, "legs"),
-								new PlayerHasItemWithHimCondition("shadow legs")
+								new PlayerHasItemWithHimCondition("影子护腿")
 								);
 	final ChatAction action = new MultipleActions(
 	new SetQuestAction(QUEST_SLOT,"making;"),
 	new SetQuestToTimeStampAction(QUEST_SLOT, 1),
-	new DropItemAction("shadow legs"));
+	new DropItemAction("影子护腿"));
 	npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 			legscondition,
 			ConversationStates.IDLE,

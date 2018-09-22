@@ -104,7 +104,7 @@ import marauroa.common.Pair;
 		enemyForces.put("mountain orc",
 				new Pair<Integer, String>(150,"Stupid creatures, but very strong. Can be found in an abandoned underground keep somewhere near Ados."));
 		enemyForces.put("imperial",
-				new Pair<Integer, String>(200,"They come from their castle in the underground Sedah city, ruled by their Emperor Dalmung."));
+				new Pair<Integer, String>(200,"They come from their castle in the underground 西大城, ruled by their Emperor Dalmung."));
 		enemyForces.put("barbarian",
 				new Pair<Integer, String>(200,"Different barbarian tribes live on the surface in the North West area of Ados Mountains. Not dangerous but noisy."));
 		enemyForces.put("oni",

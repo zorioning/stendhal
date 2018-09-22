@@ -155,7 +155,7 @@ public class VampireSword extends AbstractQuest {
 
 		npc.addGoodbye("*cough* ... farewell ... *cough*");
 		npc.addReply(
-			Arrays.asList("blood", "vampirette entrails", "bat entrails"),
+			Arrays.asList("blood", "吸血鬼内脏", "蝙蝠内脏"),
 			"I need blood. I can take it from the entrails of the alive and undead. I will mix the bloods together for you and #fill your #盛血高脚杯, if you let me drink some too. But I'm afraid of the powerful #lord.");
 
 		npc.addReply(Arrays.asList("lord", "vampire", "skull ring"),
@@ -170,8 +170,8 @@ public class VampireSword extends AbstractQuest {
 		// Which the vampire lord drops if the quest is active as in games.stendhal.server.maps.semos.catacombs.VampireLordCreature
 		// But, it could have been done other ways using quests slot checks and killed conditions
 		final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-		requiredResources.put("vampirette entrails", 7);
-		requiredResources.put("bat entrails", 7);
+		requiredResources.put("吸血鬼内脏", 7);
+		requiredResources.put("蝙蝠内脏", 7);
 		requiredResources.put("skull ring", 1);
 		requiredResources.put("高脚杯", 1);
 		final ProducerBehaviour behaviour = new ProducerBehaviour(

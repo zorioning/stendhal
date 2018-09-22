@@ -152,7 +152,7 @@ public class RandomDestinationPortal extends QuestCompletedPortal {
 		locations.add(new Location("-6_阿多斯_废弃_要塞", 170, 15, 19));	// -6 ados abandoned keep
 		locations.add(new Location("int_mithrilbourgh_stores", 170, 6, 5));	// mithrilbourgh stores
 		locations.add(new Location("hell", 200, 66, 77));					// hell
-		locations.add(new Location("-1_fado_great_cave_w2", 200, 90, 57));  // sedah
+		locations.add(new Location("-1_fado_great_cave_w2", 200, 90, 57));  // 西大
 		locations.add(new Location("4_kikareukin_cave", 200, 10, 10)); 		// 4 kika
 		locations.add(new Location("5_kikareukin_cave", 200, 31, 100)); 	// 5 kika
 		locations.add(new Location("-2_塞门_矿山_e2", 200, 4, 5));			// chaos mines

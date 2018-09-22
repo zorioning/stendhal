@@ -55,7 +55,7 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li> 1 XP<li>
  * <li> 鳞甲</li>
- * <li> Chain legs</li>
+ * <li> 索链护腿</li>
  * <li> Karma: 14<li>
  * </ul>
  *
@@ -235,7 +235,7 @@ ask for 马尾鬃.
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("马尾鬃"));
 		reward.add(new EquipItemAction("鳞甲", 1, true));
-		reward.add(new EquipItemAction("chain legs", 1, true));
+		reward.add(new EquipItemAction("索链护腿", 1, true));
 		reward.add(new IncreaseXPAction(100));
 		reward.add(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "done", 10.0));
 

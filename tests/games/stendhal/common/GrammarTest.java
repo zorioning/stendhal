@@ -351,10 +351,10 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("trophy helmets", "trophy helmet");
 		testPluralisationAndSingularisation("pairs of leather legs",
 				"pair of leather legs");
-		testPluralisationAndSingularisation("pairs of studded legs",
-				"pair of studded legs");
-		testPluralisationAndSingularisation("pairs of chain legs",
-				"pair of chain legs");
+		testPluralisationAndSingularisation("pairs of 镶嵌护腿",
+				"pair of 镶嵌护腿");
+		testPluralisationAndSingularisation("pairs of 索链护腿",
+				"pair of 索链护腿");
 		testPluralisationAndSingularisation("pairs of golden legs",
 				"pair of golden legs");
 		testPluralisationAndSingularisation("pairs of leather boots",

@@ -244,7 +244,7 @@
       <item value="money" quantity="[45,85]" probability="50.0" />
       <item value="阔剑" quantity="[1,1]" probability="4.0" />
       <item value="dagger" quantity="[1,1]" probability="3.5" />
-      <item value="golden legs" quantity="[1,1]" probability="0.5" />
+      <item value="黄金护腿" quantity="[1,1]" probability="0.5" />
       <item value="黄金锁子甲" quantity="[1,1]" probability="7.0" />
     </drops>
     <equips>
@@ -454,7 +454,7 @@
       <item value="大治疗剂" quantity="[1,2]" probability="80.0"/>
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="奇妙之盾" quantity="[1,1]" probability="1.5"/>
-      <item value="mainio legs" quantity="[1,1]" probability="0.5"/>
+      <item value="奇妙裤子" quantity="[1,1]" probability="0.5"/>
       <item value="斑点蛋" quantity="[1,1]" probability="0.05"/>
     </drops>
     <equips>

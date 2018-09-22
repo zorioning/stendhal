@@ -105,7 +105,7 @@ public class StuffForBaldemar extends AbstractQuest {
 				.bySaying("I need %s to crush into fine powder to sprinkle onto shield to give it a nice sheen.");
 		itemCollector.require().item("shuriken").pieces(20).bySaying(
 				"I need %s to melt down with the mithril, gold and iron. It is a 'secret' ingredient that only you and I know about. ;)");
-		itemCollector.require().item("marbles").pieces(15).bySaying("My son wants some new toys. I need %s still.");
+		itemCollector.require().item("玻璃球").pieces(15).bySaying("My son wants some new toys. I need %s still.");
 		itemCollector.require().item("snowglobe").bySaying("I just LOVE those trinkets from Athor. I need %s still.");
 
 		questLogic.setItemCollector(itemCollector);

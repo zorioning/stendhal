@@ -261,14 +261,14 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("百里香",5);
 
 		// legs
-        items.put("blue legs",1);
-		items.put("chain legs",1);
-		items.put("leather legs",1);
-		items.put("studded legs",1);
+        items.put("蓝裤子",1);
+		items.put("索链护腿",1);
+		items.put("皮裤",1);
+		items.put("镶嵌护腿",1);
 
 		// misc
 		items.put("dice",1);
-		items.put("marbles", 2);
+		items.put("玻璃球", 2);
 		items.put("rodent trap",5);
 		items.put("teddy",1);
 
