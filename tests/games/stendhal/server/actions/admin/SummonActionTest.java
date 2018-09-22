@@ -144,7 +144,7 @@ public class SummonActionTest {
 		pl.put("adminlevel", 5000);
 		final RPAction action = new RPAction();
 		action.put("type", "summon");
-		action.put("creature", "fishing rod");
+		action.put("creature", "钓鱼杆");
 		action.put("x", 0);
 		action.put("y", 0);
 		CommandCenter.execute(pl, action);
@@ -168,7 +168,7 @@ public class SummonActionTest {
 		final RPAction action = new RPAction();
 		action.put("type", "summon");
 		action.put("creature", "unknown");
-		action.put("x", "bag");
+		action.put("x", "背包");
 		action.put("y", "perch");
 		CommandCenter.execute(pl, action);
 		assertEquals(1, pl.getID().getObjectID());

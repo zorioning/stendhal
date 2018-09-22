@@ -200,11 +200,11 @@ public class ConversationParserTest {
 		assertEquals(7, sentence.getObject(0).getAmount());
 		assertEquals("banana", sentence.getObject(0).getNormalized());
 
-		sentence = ConversationParser.parse("buy a bottle of wine");
+		sentence = ConversationParser.parse("buy a bottle of 红酒");
 		assertFalse(sentence.hasError());
 		assertEquals("buy", sentence.getVerbString());
 		assertEquals(1, sentence.getObject(0).getAmount());
-		assertEquals("wine", sentence.getObject(0).getNormalized());
+		assertEquals("红酒", sentence.getObject(0).getNormalized());
 
 		sentence = ConversationParser.parse("buy two pairs of trousers");
 		assertFalse(sentence.hasError());
@@ -232,7 +232,11 @@ public class ConversationParserTest {
 		assertEquals(10, sentence.getObject(0).getAmount());
 		assertEquals("剧毒", sentence.getObject(0).getNormalized());
 		assertEquals("sell 剧毒", sentence.getNormalized());
+<<<<<<< HEAD
 		assertThat(sentence.toString(), anyOf(equalTo("sell/VER mega poison/OBJ"), equalTo("sell/VER mega poison/OBJ-FOO-FLU")));
+=======
+		assertThat(sentence.toString(), anyOf(equalTo("sell/VER 剧毒/OBJ"), equalTo("sell/VER 剧毒/OBJ-FOO-FLU")));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	}
 
 	/**
@@ -303,7 +307,7 @@ public class ConversationParserTest {
 		assertEquals("冰淇淋", sentence.getObject(0).getMainWord());
 		assertEquals("冰淇淋", sentence.getObjectName());
 		assertEquals("i buy 冰淇淋!", sentence.getNormalized());
-		assertEquals("i/SUB-PRO buy/VER-CON icecream/OBJ!", sentence.toString());
+		assertEquals("i/SUB-PRO buy/VER-CON 冰淇淋/OBJ!", sentence.toString());
 
 		sentence = ConversationParser.parse("would you like to have an ice cream?");
 		assertFalse(sentence.hasError());
@@ -311,7 +315,7 @@ public class ConversationParserTest {
 		assertEquals("buy", sentence.getVerbString());
 		assertEquals(1, sentence.getSubjectCount());
 		assertEquals(1, sentence.getObject(0).getAmount());
-		assertEquals("icecream", sentence.getObject(0).getMainWord());
+		assertEquals("冰淇淋", sentence.getObject(0).getMainWord());
 		assertEquals("icecream", sentence.getObjectName());
 		assertEquals("you buy icecream!", sentence.getNormalized());
 		assertEquals("you/SUB-PRO buy/VER-CON icecream/OBJ!", sentence.toString());

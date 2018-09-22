@@ -103,7 +103,7 @@ public class KillMonks extends AbstractQuest {
 				ConversationPhrases.QUEST_MESSAGES,
 				new QuestNotStartedCondition(QUEST_SLOT),
 				ConversationStates.QUEST_OFFERED,
-				"我的爱妻去 Kroip 送新鲜 pizza时, 被一些monk僧侣尾随, 她没机会逃脱, 最后在去Wo'fol的路上时被杀了. 现在我要报仇, 你能帮我吗？",
+				"我的爱妻去 Kroip 送新鲜 比萨时, 被一些monk僧侣尾随, 她没机会逃脱, 最后在去Wo'fol的路上时被杀了. 现在我要报仇, 你能帮我吗？",
 				null);
 
 		npc.add(ConversationStates.ATTENDING,
@@ -158,7 +158,7 @@ public class KillMonks extends AbstractQuest {
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 				//add random number of soups
 				final StackableItem soup = (StackableItem) SingletonRepository.getEntityManager()
-						.getItem("soup");
+						.getItem("蔬菜汤");
 				int amount;
 				// between 1 and 5 soup
 				amount = Rand.rand(4) + 1;

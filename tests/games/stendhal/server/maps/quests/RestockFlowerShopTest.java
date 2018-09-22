@@ -138,7 +138,7 @@ public class RestockFlowerShopTest {
         en.step(player, "pansies");
         en.step(player, "rose");
         en.step(player, "zantedechia");
-        en.step(player, "water");
+        en.step(player, "水");
         assertEquals("You don't have a bottle of water with you!", getReply(seremela));
         en.step(player, "nothing");
         en.step(player, "who");
@@ -168,7 +168,11 @@ public class RestockFlowerShopTest {
         en.step(player, "yes");
         assertEquals("What did you bring?", getReply(seremela));
         // Undesired item
+<<<<<<< HEAD
         en.step(player, "白花菜");
+=======
+        en.step(player, "洋花菜");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
         assertEquals("I don't think that would look good in the shop.", getReply(seremela));
         ItemCollection needed = getMissingItems(player);
         // Not carrying desired item
@@ -186,7 +190,7 @@ public class RestockFlowerShopTest {
         assertEquals("Please come back when you have found some flowers.", getReply(seremela));
 
         // Respond that did not bring items
-        PlayerTestHelper.equipWithStackableItem(player, "water", 100);
+        PlayerTestHelper.equipWithStackableItem(player, "水", 100);
         PlayerTestHelper.equipWithStackableItem(player, "rose", 100);
         PlayerTestHelper.equipWithStackableItem(player, "lilia", 100);
         PlayerTestHelper.equipWithStackableItem(player, "zantedeschia", 100);
@@ -198,7 +202,7 @@ public class RestockFlowerShopTest {
         // Has brought items
         en.step(player, "yes");
         assertEquals("What did you bring?", getReply(seremela));
-        checkNeeded(player, en, "water");
+        checkNeeded(player, en, "水");
         checkNeeded(player, en, "rose");
         checkNeeded(player, en, "lilia");
         checkNeeded(player, en, "zantedeschia");

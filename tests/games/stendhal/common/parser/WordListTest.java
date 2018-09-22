@@ -71,7 +71,7 @@ public class WordListTest {
 		assertTrue(w.isPlural());
 		assertEquals("胡萝卜", w.getPlurSing());
 
-		w = wl.find("water");
+		w = wl.find("水");
 		assertNotNull(w);
 		assertTrue(w.getType().isObject());
 		assertEquals(ExpressionType.OBJECT + ExpressionType.SUFFIX_FOOD + ExpressionType.SUFFIX_FLUID, w.getTypeString());

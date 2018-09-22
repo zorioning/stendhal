@@ -120,28 +120,32 @@ public class DiceGambling extends AbstractQuest {
 				"小哥, 你真是狗屎运！我对你很失望！给你, 把这 蓝盾 拿走吧."));
 		map.put(7, new Pair<String, String>("啤酒",
 				"这是安慰奖, 一瓶啤酒."));
-		map.put(8, new Pair<String, String>("wine",
+		map.put(8, new Pair<String, String>("红酒",
 				"你赢了一杯可口的红酒！"));
 		map.put(9, new Pair<String, String>("镶嵌盾",
 				"这个简单的盾是给你的奖励"));
 		map.put(10, new Pair<String, String>("chain legs",
 				"我希望你能用到这些 chain legs."));
-		map.put(11,	new Pair<String, String>("antidote",
+		map.put(11,	new Pair<String, String>("抗毒药济",
 			   "当你在野外中毒时, 这瓶解毒济可帮上大忙"));
 		map.put(12, new Pair<String, String>("三明治",
 				"你赢了一块美味的三明治！"));
-		map.put(13, new Pair<String, String>("cheeseydog",
+		map.put(13, new Pair<String, String>("芝士狗",
 				"把这个好吃的 cheesydog 带走吧！"));
 		map.put(14, new Pair<String, String>("home scroll",
 		"你赢到了这个好用的回城卷！"));
+<<<<<<< HEAD
 		map.put(15,	new Pair<String, String>("大治疗济",
+=======
+		map.put(15,	new Pair<String, String>("大治疗剂",
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				"你赢了一瓶大生命药济, 但你以前或许从来没用过这个!"));
 		map.put(16,	new Pair<String, String>("longbow",
 		"拿着这个拉风的长弓, 你会是个优秀的弓箭手！"));
 		map.put(17,	new Pair<String, String>("红斗篷",
 		"穿上这件时尚的 红斗篷 你一定变得很酷！"));
-		map.put(18, new Pair<String, String>("magic chain helmet",
-				"你得到了特等奖！一个 magic chain helmet!"));
+		map.put(18, new Pair<String, String>("附魔索链头盔",
+				"你得到了特等奖！一个 附魔索链头盔!"));
 
 		return map;
 	}

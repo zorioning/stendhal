@@ -142,9 +142,9 @@ public class MarriageTest {
 		// -----------------------------------------------
 
 		Item item = ItemTestHelper.createItem("money", 5000);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("gold bar", 10);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");
 		en.step(player, "task");
@@ -161,9 +161,9 @@ public class MarriageTest {
 		// -----------------------------------------------
 
 		item = ItemTestHelper.createItem("money", 5000);
-		player2.getSlot("bag").add(item);
+		player2.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("gold bar", 10);
-		player2.getSlot("bag").add(item);
+		player2.getSlot("背包").add(item);
 
 		en.step(player2, "hi");
 		assertEquals("Hi! Can I #help you?", getReply(npc));
@@ -420,7 +420,7 @@ public class MarriageTest {
 		// 8. Waterfall Wonder - splash, or admire
 		// 9. Wooden Delicacy - go back to your roots
 		// 10. Simple Serenity - a room of calm
-		// 11. Water of Love - wine flows freely
+		// 11. Water of Love - 红酒 flows freely
 		// 12. Stone Hearted - an architect's delight
 		// 13. Blue For You - azure, lapis, cobalt and cornflower
 		// 14. Rhapsody in pink - romantic yet regal

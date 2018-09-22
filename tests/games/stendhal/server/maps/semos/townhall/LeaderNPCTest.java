@@ -115,15 +115,15 @@ public class LeaderNPCTest {
 
 		player.drop(weapon);
 
-		final Item weapon2 = new Item("ice sword", "sword", "subclass", null);
+		final Item weapon2 = new Item("冰剑", "sword", "subclass", null);
 		weapon2.setEquipableSlots(Arrays.asList("lhand"));
 		weapon2.put("atk", 29);
 		weapon2.put("rate", 5);
 		player.equipToInventoryOnly(weapon2);
-		assertTrue(player.isEquipped("ice sword"));
+		assertTrue(player.isEquipped("冰剑"));
 
 		assertTrue(en.step(player, "weapon"));
-		assertEquals("That ice sword is a powerful weapon, it has a good damage to rate ratio.", getReply(npc));
+		assertEquals("That 冰剑 is a powerful weapon, it has a good damage to rate ratio.", getReply(npc));
 		player.drop(weapon2);
 
 		final Item weapon3 = new Item("vampire sword", "sword", "subclass", null);
@@ -170,15 +170,15 @@ public class LeaderNPCTest {
 		assertEquals("That black sword is a powerful weapon, it has a good damage to rate ratio. It should be useful against strong creatures. Remember though that something weaker but faster may suffice against lower level creatures.", getReply(npc));
 		player.drop(weapon6);
 
-		final Item weapon7 = new Item("obsidian knife", "sword", "subclass", null);
+		final Item weapon7 = new Item("黑曜石刀", "sword", "subclass", null);
 		weapon7.setEquipableSlots(Arrays.asList("lhand"));
 		weapon7.put("atk", 4);
 		weapon7.put("rate", 1);
 		player.equipToInventoryOnly(weapon7);
-		assertTrue(player.isEquipped("obsidian knife"));
+		assertTrue(player.isEquipped("黑曜石刀"));
 
 		assertTrue(en.step(player, "weapon"));
-		assertEquals("That obsidian knife is a powerful weapon, it has a good damage to rate ratio. Despite the fast rate being useful, the low attack will not help you against strong creatures. Something heavier would be better then.", getReply(npc));
+		assertEquals("That 黑曜石刀 is a powerful weapon, it has a good damage to rate ratio. Despite the fast rate being useful, the low attack will not help you against strong creatures. Something heavier would be better then.", getReply(npc));
 		player.drop(weapon7);
 
 		final Item weapon8 = new Item("assassin dagger", "sword", "subclass", null);

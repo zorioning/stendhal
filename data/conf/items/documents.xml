@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="note">
+  <item name="笔记">
     <type class="documents" subclass="paper" tileid="-1"/>
-    <description>You see a note.</description>
+    <description>You see a 笔记.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -13,14 +13,14 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="coupon">
+  <item name="赠券">
     <type class="documents" subclass="coupon" tileid="-1"/>
-    <description>You see a coupon.</description>
+    <description>You see a 赠券.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -29,12 +29,12 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="closed envelope">
+  <item name="未打开的信封">
     <type class="documents" subclass="closed_envelope" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -47,12 +47,12 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="opened envelope">
+  <item name="打开的信封">
     <type class="documents" subclass="opened_envelope" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -65,12 +65,12 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="sealed envelope">
+  <item name="密封的信">
     <type class="documents" subclass="sealed_envelope" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -83,12 +83,12 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="unsealed envelope">
+  <item name="un密封的信">
     <type class="documents" subclass="unsealed_envelope" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -101,12 +101,12 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="assassins id">
+  <item name="刺客编号">
     <type class="documents" subclass="license" tileid="-1"/>
     <description>You see an assassin's ID. Perhaps this can be put to good use.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -118,15 +118,15 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
   
-  <item name="map">
+  <item name="地图">
     <type class="documents" subclass="mapwithgrid" tileid="-1"/>
-    <description>You see a hand drawn map, but no matter how you look at it, nothing on it looks familiar.</description>
+    <description>一张手绘地图, 不管你如何看, 都看不如像哪里.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -135,14 +135,14 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="blank scroll">
+  <item name="空白卷轴">
     <type class="documents" subclass="scroll" tileid="-1"/>
-    <description>You see a rolled up blank scroll.</description>
+    <description>You see a rolled up 空白卷轴.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
        <quantity value="1"/>
@@ -152,14 +152,14 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
-  <item name="ice scroll">
+  <item name="冰卷轴">
     <type class="documents" subclass="ice_scroll" tileid="-1"/>
     <description>You see a scroll, circled by ice crystals. You can feel its cold aura.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
@@ -171,7 +171,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -180,7 +180,7 @@
   
   <!--<item name="recipe">
     <type class="documents" subclass="recipe" tileid="-1"/>
-    <description>You see a recipe, ready for being delivered to Imorgen. It names ingredients for a powerful potion against werewolves. </description>
+    <description>You see a recipe, ready for being delivered to Imorgen. It names ingredients for a powerful 治疗济 against werewolves. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -189,7 +189,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -207,7 +207,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="lhand" />
       <slot name="rhand" />
     </equipable>

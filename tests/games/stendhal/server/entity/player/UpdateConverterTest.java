@@ -124,6 +124,7 @@ public class UpdateConverterTest {
 		final Player player = PlayerTestHelper.createPlayer("player");
 
 		// First we use only the old quest slot name.
+<<<<<<< HEAD
 		player.setQuest("Valo_concoct_potion", "3;强治疗济;1200000000000");
 		UpdateConverter.updateQuests(player);
 		assertNull(player.getQuest("Valo_concoct_potion"));
@@ -134,6 +135,18 @@ public class UpdateConverterTest {
 		UpdateConverter.updateQuests(player);
 		assertNull(player.getQuest("Valo_concoct_potion"));
 		assertEquals("11;强治疗济;1200000000000", player.getQuest("valo_concoct_potion"));
+=======
+		player.setQuest("Valo_concoct_potion", "3;强治疗剂;1200000000000");
+		UpdateConverter.updateQuests(player);
+		assertNull(player.getQuest("Valo_concoct_potion"));
+		assertEquals("3;强治疗剂;1200000000000", player.getQuest("valo_concoct_potion"));
+
+		// Now add the old name to the existing new one and see if they are accumulated correct.
+		player.setQuest("Valo_concoct_potion", "8;强治疗剂;1300000000000");
+		UpdateConverter.updateQuests(player);
+		assertNull(player.getQuest("Valo_concoct_potion"));
+		assertEquals("11;强治疗剂;1200000000000", player.getQuest("valo_concoct_potion"));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	}
 
 	/**
@@ -158,22 +171,22 @@ public class UpdateConverterTest {
 	public void testUpdateKeyring() {
 		final Player player = PlayerTestHelper.createPlayer("player");
 		// First test *not* updating
-		assertNull("Sanity check", player.getFeature("keyring"));
+		assertNull("Sanity check", player.getFeature("钥匙环"));
 		UpdateConverter.updateKeyring(player);
-		assertNull("Updating without keyring feature should not create a keyring", player.getFirstEquipped("keyring"));
-		assertNull("Sanity check", player.getFeature("keyring"));
+		assertNull("Updating without keyring feature should not create a keyring", player.getFirstEquipped("钥匙环"));
+		assertNull("Sanity check", player.getFeature("钥匙环"));
 
 		// The actual update checks
-		player.setFeature("keyring", true);
-		assertNotNull("Sanity check", player.getFeature("keyring"));
+		player.setFeature("钥匙环", true);
+		assertNotNull("Sanity check", player.getFeature("钥匙环"));
 		Item key = ItemTestHelper.createItem("dungeon silver key");
-		player.equip("keyring", key);
+		player.equip("钥匙环", key);
 		UpdateConverter.updateKeyring(player);
-		Item keyring = player.getFirstEquipped("keyring");
+		Item keyring = player.getFirstEquipped("钥匙环");
 		assertNotNull("Check creating a keyring when updating with the keyring feature", keyring);
 		assertEquals("Check the keyring is bound to the owner", player.getName(), keyring.getBoundTo());
 		assertEquals("Check the key got moved to the created container", keyring, key.getContainer());
 		assertEquals("Check that the keyring got placed in belt slot", player.getSlot("belt"), keyring.getContainerSlot());
-		assertNull("Check that the old keyring feature was turned off", player.getFeature("keyring"));
+		assertNull("Check that the old keyring feature was turned off", player.getFeature("钥匙环"));
 	}
 }

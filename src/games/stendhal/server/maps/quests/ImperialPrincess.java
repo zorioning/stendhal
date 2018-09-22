@@ -79,7 +79,7 @@ public class ImperialPrincess extends AbstractQuest {
 	private static final int POTION_DIVISOR = 10;
 
 	/** The player is asked to get a number of herbs depending on level.
-	 * So if they are level 40, they must bring 2 + 1 antidotes
+	 * So if they are level 40, they must bring 2 + 1 抗毒药济s
 	 */
 	private static final int ANTIDOTE_DIVISOR = 20;
 
@@ -101,7 +101,7 @@ public class ImperialPrincess extends AbstractQuest {
 		final String questState = player.getQuest(QUEST_SLOT);
 		res.add("Princess Ylflia asked me for some herbs and potions to ease the pain of captives in Kalavan Basement.");
 		if (!questState.equals("recommended") && !questState.equals("done")) {
-			res.add("I must tell Princess Ylflia that I have \"herbs\" when I have collected all the herbs, potions and antidotes she needs.");
+			res.add("I must tell Princess Ylflia that I have \"herbs\" when I have collected all the herbs, potions and 抗毒药济s she needs.");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "recommended", "done")) {
 			res.add("I took Princess Ylflia the healing items and she told me she would recommend me to her father, the King.");
@@ -160,13 +160,13 @@ public class ImperialPrincess extends AbstractQuest {
 						raiser.say("I need "
 								+ Integer.toString(1 + player.getLevel()
 										/ ARANDULA_DIVISOR)
-								+ " arandula, 1 kokuda, 1 sclaria, 1 kekik, "
+								+ " 海芋, 1 科科达, 1 鼠尾草, 1 百里香, "
 								+ Integer.toString(1 + player.getLevel()
 										/ POTION_DIVISOR)
-								+ " potions and "
+								+ " 治疗济s and "
 								+ Integer.toString(1 + player.getLevel()
 										/ ANTIDOTE_DIVISOR)
-								+ " antidotes. Will you get these items?");
+								+ " 抗毒药济s. Will you get these items?");
 					}
 				});
 
@@ -195,15 +195,15 @@ public class ImperialPrincess extends AbstractQuest {
 
 		// give some hints of where to find herbs. No warranties!
 		npc.addReply(
-				"kokuda",
+				"科科达",
 				"I believe that herb can only be found on Athor, though they guard their secrets" +
 				" closely over there.");
 		npc.addReply(
-				"sclaria",
-				"Healers who use sclaria gather it in all sorts of places - around Or'ril, in Nalwor" +
+				"鼠尾草",
+				"Healers who use 鼠尾草 gather it in all sorts of places - around Or'ril, in Nalwor" +
 				" forest, I am sure you will find that without trouble.");
 		npc.addReply(
-				"kekik",
+				"百里香",
 				"My maid's friend 詹妮 has a source not far from her. The wooded areas at the eastern" +
 				" end of Nalwor river may have it. too.");
 	}
@@ -230,21 +230,21 @@ public class ImperialPrincess extends AbstractQuest {
 								+ level / ANTIDOTE_DIVISOR;
 							final int required_potion = 1
 								+ level	/ POTION_DIVISOR;
-							if (player.isEquipped("kekik")
-								&& player.isEquipped("kokuda")
-								&& player.isEquipped("sclaria")
-								&& player.isEquipped("arandula",
+							if (player.isEquipped("百里香")
+								&& player.isEquipped("科科达")
+								&& player.isEquipped("鼠尾草")
+								&& player.isEquipped("海芋",
 										required_arandula)
-								&& player.isEquipped("potion", required_potion)
-								&& player.isEquipped("antidote",
+								&& player.isEquipped("治疗济", required_potion)
+								&& player.isEquipped("抗毒药济",
 										required_antidote))
 							{
-								player.drop("kekik");
-								player.drop("kokuda");
-								player.drop("sclaria");
-								player.drop("antidote", required_antidote);
-								player.drop("potion", required_potion);
-								player.drop("arandula", required_arandula);
+								player.drop("百里香");
+								player.drop("科科达");
+								player.drop("鼠尾草");
+								player.drop("抗毒药济", required_antidote);
+								player.drop("治疗济", required_potion);
+								player.drop("海芋", required_arandula);
 								raiser.say("Perfect! I will recommend you to my father, as a fine, " +
 										"helpful person. He will certainly agree you are eligible for " +
 										"citizenship of Kalavan.");
@@ -255,11 +255,11 @@ public class ImperialPrincess extends AbstractQuest {
 								//reminder of the items to bring
 								raiser.say("Shh! Don't say it till you have the "
 									+ required_arandula
-									+ " arandula, 1 #kokuda, 1 #sclaria, 1 #kekik, "
+									+ " 海芋, 1 #科科达, 1 #鼠尾草, 1 #百里香, "
 									+ required_potion
-									+ " potions and "
+									+ " 治疗济s and "
 									+ required_antidote
-									+ " antidotes. I don't want anyone suspecting our code.");
+									+ " 抗毒药济s. I don't want anyone suspecting our code.");
 							}
 						} catch (final NumberFormatException e) {
 							// Should not happen but catch the exception

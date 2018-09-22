@@ -42,7 +42,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Pizza Delivery
+ * QUEST: 比萨 Delivery
  * <p>
  * PARTICIPANTS:
  * <ul>
@@ -52,17 +52,17 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
- * <li> Leander gives you a pizza and tells you who ordered it, and how much
+ * <li> Leander gives you a 比萨 and tells you who ordered it, and how much
  * time you have to deliver.
- * <li> As a gimmick, you get a pizza delivery uniform.
- * <li> You walk to the customer and say "pizza".
- * <li> The customer takes the pizza. If you were fast enough, you get a tip.
+ * <li> As a gimmick, you get a 比萨 delivery uniform.
+ * <li> You walk to the customer and say "比萨".
+ * <li> The customer takes the 比萨. If you were fast enough, you get a tip.
  * <li> You put on your original clothes automatically.
  * </ul>
  * REWARD:
  * <ul>
  * <li> XP (Amount varies depending on customer. You only get half of the XP if
- * the pizza has become cold.)
+ * the 比萨 has become cold.)
  * <li> some karma if delivered on time (5)
  * <li> gold coins (As a tip, if you were fast enough; amount varies depending
  * on customer.)
@@ -90,17 +90,17 @@ public class PizzaDelivery extends AbstractQuest {
 		/** A hint where to find the customer. */
 		private final String npcDescription;
 
-		/** The pizza style the customer likes. */
+		/** The 比萨 style the customer likes. */
 		private final String flavor;
 
-		/** The time until the pizza should be delivered. */
+		/** The time until the 比萨 should be delivered. */
 		private final int expectedMinutes;
 
 		/** The money the player should get on fast delivery. */
 		private final int tip;
 
 		/**
-		 * The experience the player should gain for delivery. When the pizza
+		 * The experience the player should gain for delivery. When the 比萨
 		 * has already become cold, the player will gain half of this amount.
 		 */
 		private final int xp;
@@ -108,13 +108,13 @@ public class PizzaDelivery extends AbstractQuest {
 		/**
 		 * The text that the customer should say upon quick delivery. It should
 		 * contain %d as a placeholder for the tip, and can optionally contain
-		 * %s as a placeholder for the pizza flavor.
+		 * %s as a placeholder for the 比萨 flavor.
 		 */
 		private final String messageOnHotPizza;
 
 		/**
 		 * The text that the customer should say upon quick delivery. It can
-		 * optionally contain %s as a placeholder for the pizza flavor.
+		 * optionally contain %s as a placeholder for the 比萨 flavor.
 		 */
 		private final String messageOnColdPizza;
 
@@ -176,7 +176,7 @@ public class PizzaDelivery extends AbstractQuest {
 			return res;
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
-		res.add("我见到 Leander, 并同意帮他送出pizza快递");
+		res.add("我见到 Leander, 并同意帮他送出比萨快递");
 		if (!"done".equals(questState)) {
 			final String[] questData = questState.split(";");
 			final String customerName = questData[0];
@@ -184,12 +184,12 @@ public class PizzaDelivery extends AbstractQuest {
 			res.add("Leander 给了我一份 " + customerData.flavor + " 要送给 " + customerName + ".");
 			res.add("Leander 告诉我: \"" + customerData.npcDescription + "\"");
 			if (!isDeliveryTooLate(player)) {
-				res.add("如果我快点, 我尽可能保证pizza还是热的. ");
+				res.add("如果我快点, 我尽可能保证比萨还是热的. ");
 			} else {
-				res.add("pizza已经凉了. ");
+				res.add("比萨已经凉了. ");
 			}
 		} else {
-			res.add("我送出了Leander给我的最后一份pizza. ");
+			res.add("我送出了Leander给我的最后一份比萨. ");
 		}
 		return res;
 	}
@@ -202,7 +202,7 @@ public class PizzaDelivery extends AbstractQuest {
 		customerDB.put("Balduin",
 			new CustomerData(
 				"Balduin 是一个隐士, 他住在Semons 和 Ados 之间的一坐大山中. 他被称为 Ados Rock. 要从这里往东走. ",
-				"Pizza Prosciutto",
+				"比萨Prosciutto",
 				// minutes to deliver. Tested by mort: 6:30
 				// min, with killing some orcs.
 				7,
@@ -220,7 +220,7 @@ public class PizzaDelivery extends AbstractQuest {
 		customerDB.put("Cyk",
 			new CustomerData(
 				"Cyk 目前在 Anthor 岛度假. 他有一头蓝色头发, 你很容易认出他, 要先去东南方找Athor渡口. ",
-				"Pizza Hawaii",
+				"比萨 Hawaii",
 				// minutes to deliver. You need about 6 min
 				// to Eliza, up to 12 min to wait for the
 				// ferry, 5 min for the crossing, and 0.5
@@ -232,13 +232,13 @@ public class PizzaDelivery extends AbstractQuest {
 				// experience gain for delivery
 				500,
 				"Wow, 我不相信你能跑半个世界送过来！给, 拿着这 %s bucks!",
-				"已经凉了, 虽然我在如此远的面包店订了pizza的期望.....还是谢谢你. ",
+				"已经凉了, 虽然我在如此远的面包店订了比萨的期望.....还是谢谢你. ",
 				20));
 
 		customerDB.put("Eliza",
 			new CustomerData(
 				"Eliza 在Athor岛做渡口服务工作. 你可以在 Ados 沼泽南方的码头找到她. ",
-				"Pizza del Mare",
+				"比萨 del Mare",
 				// minutes to deliver. Tested by mort: 6
 				// min, ignoring slow animals and not
 				// walking through the swamps.
@@ -254,7 +254,7 @@ public class PizzaDelivery extends AbstractQuest {
 		customerDB.put("Fidorea",
 			new CustomerData(
 				"Fidorea 生活在Ados 城. 她是一位化装艺术家. 从这里往东可以找到她. ",
-				"Pizza Napoli",
+				"比萨 Napoli",
 				// minutes to deliver. Tested by mort: about
 				// 6 min, outrunning all enemies.
 				7,
@@ -262,14 +262,14 @@ public class PizzaDelivery extends AbstractQuest {
 				150,
 				// experience gain for delivery
 				200,
-				"非常感谢！你就是为送pizza而生. 这 %d 片金币作为小费送给你!",
+				"非常感谢！你就是为送比萨而生. 这 %d 片金币作为小费送给你!",
 				"Bummer. 凉凉.",
 				15));
 
-		customerDB.put("Haizen",
+		customerDB.put("海震",
 			new CustomerData(
-				"Haizen 是一位魔法师, 他住在到达Ados路边的小屋, 从这里往东然后再往北走就到了. ",
-				"Pizza Diavolo",
+				"海震 是一位魔法师, 他住在到达Ados路边的小屋, 从这里往东然后再往北走就到了. ",
+				"比萨 Diavolo",
 				// minutes to deliver. Tested by kymara:
 				// exactly 3 min.
 				4,
@@ -278,13 +278,13 @@ public class PizzaDelivery extends AbstractQuest {
 				// experience gain for delivery
 				150,
 				"啊, 我的 %s 居然还是新鲜的！这是你的小费 %d 枚钱币!",
-				"我希望下次拿到Pizza时, 它还是热的. ",
+				"我希望下次拿到比萨时, 它还是热的. ",
 				10));
 
 		customerDB.put("詹妮",
 			new CustomerData(
 				"詹妮 拥有一座磨坊, 地点在 Semons 镇的北方稍偏东的平原中",
-				"Pizza Margherita",
+				"比萨 Margherita",
 				// minutes to deliver. Tested by mort: can
 				// be done in 1:15 min, with no real danger.
 				2,
@@ -293,13 +293,13 @@ public class PizzaDelivery extends AbstractQuest {
 				// experience gain for delivery
 				50,
 				"啊, 你带来了我的 %s! 你太棒了！来, 这是给你的小费 %d 金币!",
-				"不好意思. 你的pizza 怎么不是热的？面包房不就在离这不远的城里？",
+				"不好意思. 你的比萨 怎么不是热的？面包房不就在离这不远的城里？",
 				2));
 
 		customerDB.put("Jynath",
 			new CustomerData(
 				"Jynath 是个女巫, 她住在 Or'ril 城堡南部的小房子里. 你需要往西南方向走, 穿过森林, 然后延路一直向西, 直到看到她的房子",
-				"Pizza Funghi",
+				"比萨 Funghi",
 				// minutes to deliver. Tested by mort: 5:30
 				// min, leaving the slow monsters on the way
 				// behind.
@@ -309,13 +309,13 @@ public class PizzaDelivery extends AbstractQuest {
 				// experience gain for delivery
 				200,
 				"Oh, 我没期望你能这么快来, 太好了, 通常我不给小费, 但这次你的杰出表现, 这是你的 %d 片金子.",
-				"太差了... 我必须用一个超强魔法给pizza重新加热. ",
+				"太差了... 我必须用一个超强魔法给比萨重新加热. ",
 				5));
 
 		customerDB.put("Katinka",
 			new CustomerData(
 				"Katinka 在Ados野生动物避难所, 照料着很多小动物. 在这的东北方, Ados大路的旁边. ",
-				"Pizza Vegetale",
+				"比萨 Vegetale",
 				// minutes to deliver. Tested by kymara in
 				// 3:25 min, leaving behind the orcs.
 				4,
@@ -324,12 +324,12 @@ public class PizzaDelivery extends AbstractQuest {
 				// experience gain for delivery
 				200,
 				"呀! 我的 %s! 到了, 你得到 %d 片金子作为小费!",
-				"恶. 我恨冷pizza. 我会把它喂动物们了. ",
+				"恶. 我恨冷比萨. 我会把它喂动物们了. ",
 				10));
 
 		customerDB.put("Marcus",
 			new CustomerData(
-				"Marcus 是 Semon 牢房的守卫. 从这往西走到头, 在Semon 村子的远方. ", "Pizza Tonno",
+				"Marcus 是 Semon 牢房的守卫. 从这往西走到头, 在Semon 村子的远方. ", "比萨 Tonno",
 				// minutes to deliver. Tested by kymara: takes longer than before due to fence in village
 				3,
 				// tip when delivered on time. A bit higher than 詹妮
@@ -345,7 +345,7 @@ public class PizzaDelivery extends AbstractQuest {
 		customerDB.put("尼世亚",
 			new CustomerData(
 				"尼世亚 卖羊人. 要吧在西边找到他, 就是村子中. ",
-				"Pizza Pasta",
+				"比萨 Pasta",
 				// minutes to deliver. Tested by mort: easy
 				// to do in less than 1 min.
 				1,
@@ -360,7 +360,7 @@ public class PizzaDelivery extends AbstractQuest {
 		customerDB.put("奥斯特",
 			new CustomerData(
 				"奥斯特 是个军火商, 他现在在塞门镇酒馆的二楼出租房中.",
-				"Pizza Quattro Stagioni",
+				"比萨 Quattro Stagioni",
 				// minutes to deliver. Tested by mort: can
 				// be done in 45 sec with no danger.
 				1,
@@ -368,14 +368,14 @@ public class PizzaDelivery extends AbstractQuest {
 				10,
 				// experience gain for delivery
 				25,
-				"谢谢你! 你的pizza服务真好, 这是你的小费 %d 金币!",
+				"谢谢你! 你的比萨服务真好, 这是你的小费 %d 金币!",
 				"我应该自已去面包房取, 或许还快点. ",
 				0));
 
 		customerDB.put("Ramon",
 			new CustomerData(
 				"Ramon 在到Athor岛的渡口作赌场发牌手, 从这里往东南方向走到港口末端, 路很长!",
-				"Pizza Bolognese",
+				"比萨 Bolognese",
 				// minutes to deliver. You need about 6 mins
 				// to Eliza, and once you board the ferry,
 				// about 15 sec to deliver. If you have bad
@@ -394,8 +394,8 @@ public class PizzaDelivery extends AbstractQuest {
 		customerDB.put("Tor'Koom",
 			new CustomerData(
 				"Tor'Koom 是一个兽人, 住在塞门镇城地下的地牢中. 羊是他最爱的食物. 他住在地下四层, 小心!",
-				// "Pizza sheep" in Italian ;)
-				"Pizza Pecora",
+				// "比萨 sheep" in Italian ;)
+				"比萨 Pecora",
 				// minutes to deliver. Tested by kymara:
 				// done in about 8 min, with lots of monsters getting in your way.
 				9,
@@ -404,21 +404,21 @@ public class PizzaDelivery extends AbstractQuest {
 				// experience gain for delivery
 				300,
 				"Yummy %s! 过来, 拿走这些 %d 钱!",
-				"Grrr. Pizza 凉了, 你走的像羊一样慢.",
+				"Grrr. 比萨 凉了, 你走的像羊一样慢.",
 				15));
 
 		customerDB.put("Martin Farmer",
 				new CustomerData(
 					"Martin 农夫正在Ados城度假. 你需要从这里往东走",
-					"Pizza Fiorentina",
+					"比萨 Fiorentina",
 					// minutes to deliver. Time for Fidorea was 7, so 8 should be ok for martin
 					8,
 					// tip when delivered on time
 					160,
 					// experience gain for delivery
 					220,
-					"Ooooh, 我爱刚出炉的pizza, 谢谢, 拿上这些 %d money...!",
-					"Hmpf.. 凉pizza.. ok.. 我收下了, 不过下次快点.",
+					"Ooooh, 我爱刚出炉的比萨, 谢谢, 拿上这些 %d money...!",
+					"Hmpf.. 凉比萨.. ok.. 我收下了, 不过下次快点.",
 					10));
 	}
 
@@ -427,7 +427,7 @@ public class PizzaDelivery extends AbstractQuest {
 		final String name = Rand.rand(getAllowedCustomers(player));
 		final CustomerData data = customerDB.get(name);
 
-		final Item pizza = SingletonRepository.getEntityManager().getItem("pizza");
+		final Item pizza = SingletonRepository.getEntityManager().getItem("比萨");
 		pizza.setInfoString(data.flavor);
 		pizza.setDescription("你看了 " + data.flavor + ".");
 		pizza.setBoundTo(name);
@@ -439,13 +439,13 @@ public class PizzaDelivery extends AbstractQuest {
     			+ "#" + name
     			+ " 在 "
     			+ data.expectedMinutes+ "分钟"
-    			+ " 内. 然后说 \"pizza\" 完成运送 "
+    			+ " 内. 然后说 \"比萨\" 完成运送 "
     			+ name
     			+ " 知道是这发给你, 噢, 请穿上这个快递装, 并且别把它丢到地上 " + data.flavor + " 在地上! 我们的顾客都喜欢新鲜的. ");
     		player.setOutfit(UNIFORM, true);
     		player.setQuest(QUEST_SLOT, name + ";" + System.currentTimeMillis());
 		} else {
-			npc.say("当你背包有空间了再来拿pizza!");
+			npc.say("当你背包有空间了再来拿比萨!");
 		}
 	}
 
@@ -492,14 +492,14 @@ public class PizzaDelivery extends AbstractQuest {
 	}
 
 	private void handOverPizza(final Player player, final EventRaiser npc) {
-		if (player.isEquipped("pizza")) {
+		if (player.isEquipped("比萨")) {
 			final CustomerData data = customerDB.get(npc.getName());
-			for (final Item pizza : player.getAllEquipped("pizza")) {
+			for (final Item pizza : player.getAllEquipped("比萨")) {
 				final String flavor = pizza.getInfoString();
 				if (data.flavor.equals(flavor)) {
 					player.drop(pizza);
 					// Check whether the player was supposed to deliver the
-					// pizza.
+					// 比萨.
 					if (player.hasQuest(QUEST_SLOT) && !player.isQuestCompleted(QUEST_SLOT)) {
 						if (isDeliveryTooLate(player)) {
 							if (data.messageOnColdPizza.contains("%s")) {
@@ -522,22 +522,22 @@ public class PizzaDelivery extends AbstractQuest {
 							player.addXP(data.xp);
 							player.addKarma(5);
 						}
-						new InflictStatusOnNPCAction("pizza").fire(player, null, npc);
+						new InflictStatusOnNPCAction("比萨").fire(player, null, npc);
 						player.setQuest(QUEST_SLOT, "done");
 						putOffUniform(player);
 					} else {
-						// This should not happen: a player cannot pick up a pizza from the ground
-						// that did have a flavor, those are bound. If a pizza has flavor the player
+						// This should not happen: a player cannot pick up a 比萨 from the ground
+						// that did have a flavor, those are bound. If a 比萨 has flavor the player
 						// should only have got it from the quest.
-						npc.say("Eek! pizza都脏了！你是在地上找的吗？");
+						npc.say("Eek! 比萨都脏了！你是在地上找的吗？");
 					}
 					return;
 				}
 			}
-			// The player has brought the pizza to the wrong NPC, or it's a plain pizza.
+			// The player has brought the 比萨 to the wrong NPC, or it's a plain 比萨.
 			npc.say("不, 谢谢, 我喜欢 " + data.flavor + " 更好.");
 		} else {
-			npc.say("有Pizza? 在哪?");
+			npc.say("有比萨? 在哪?");
 		}
 	}
 
@@ -552,23 +552,23 @@ public class PizzaDelivery extends AbstractQuest {
 	private void prepareBaker() {
 		final SpeakerNPC leander = npcs.get("Leander");
 
-		// haven't done the pizza quest before or already delivered the last one, ok to wear pizza outfit
+		// haven't done the 比萨 quest before or already delivered the last one, ok to wear 比萨 outfit
 		leander.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new OutfitCompatibleWithClothesCondition(), new QuestNotActiveCondition(QUEST_SLOT)),
 				ConversationStates.QUEST_OFFERED,
-				"我需要你以最快速度送出热的pizza. 如果你足够快, 你可以得到小费, 这个单你接吗？",
+				"我需要你以最快速度送出热的比萨. 如果你足够快, 你可以得到小费, 这个单你接吗？",
 				null);
 
-		// haven't done the pizza quest before or already delivered the last one, outfit would be incompatible with pizza outfit
+		// haven't done the 比萨 quest before or already delivered the last one, outfit would be incompatible with 比萨 outfit
 		leander.add(ConversationStates.ATTENDING,
 				ConversationPhrases.QUEST_MESSAGES,
 				new AndCondition(new NotCondition(new OutfitCompatibleWithClothesCondition()), new QuestNotActiveCondition(QUEST_SLOT)),
 				ConversationStates.ATTENDING,
-				"抱歉, 你不能穿上我们的pizza快递. 如果你改变主意. 你可以再向我问 #task 接单.",
+				"抱歉, 你不能穿上我们的比萨快递. 如果你改变主意. 你可以再向我问 #task 接单.",
 				null);
 
-		// pizza quest is active: check if the delivery is too late already or not
+		// 比萨 quest is active: check if the delivery is too late already or not
 		leander.add(ConversationStates.ATTENDING,
 			ConversationPhrases.QUEST_MESSAGES, new QuestActiveCondition(QUEST_SLOT),
 			ConversationStates.QUEST_OFFERED, null,
@@ -579,11 +579,11 @@ public class PizzaDelivery extends AbstractQuest {
 								.split(";");
 						final String customerName = questData[0];
 						if (isDeliveryTooLate(player)) {
-							// If the player still carries any pizza due for an NPC,
+							// If the player still carries any 比萨 due for an NPC,
 							// take it away because the baker is angry,
 							// and because the player probably won't
 							// deliver it anymore anyway.
-							for (final Item pizza : player.getAllEquipped("pizza")) {
+							for (final Item pizza : player.getAllEquipped("比萨")) {
 								if (pizza.getInfoString()!=null) {
 									player.drop(pizza);
 								}
@@ -592,7 +592,7 @@ public class PizzaDelivery extends AbstractQuest {
 								+ customerName
 								+ " . 上次任务失败了, 你确定这次可以按时送货吗?");
 						} else {
-							npc.say("你还要送pizza给 "
+							npc.say("你还要送比萨给 "
 									+ customerName + ", 赶快!");
 							npc.setCurrentState(ConversationStates.ATTENDING);
 						}
@@ -632,11 +632,11 @@ public class PizzaDelivery extends AbstractQuest {
 		for (final String name : customerDB.keySet()) {
 			final SpeakerNPC npc = npcs.get(name);
 			if (npc == null) {
-				logger.error("NPC " + name + " is used in the Pizza Delivery quest but does not exist in game.", new Throwable());
+				logger.error("NPC " + name + " is used in the 比萨 Delivery quest but does not exist in game.", new Throwable());
 				continue;
 			}
 
-			npc.add(ConversationStates.ATTENDING, "pizza", null,
+			npc.add(ConversationStates.ATTENDING, "比萨", null,
 				ConversationStates.ATTENDING, null,
 				new ChatAction() {
 					@Override
@@ -650,8 +650,8 @@ public class PizzaDelivery extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Pizza Delivery",
-				"Leander 的 pizza 店招收新手男女快递员.",
+				"比萨 Delivery",
+				"Leander 的 比萨 店招收新手男女快递员.",
 				false);
 		buildCustomerDatabase();
 		prepareBaker();

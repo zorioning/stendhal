@@ -62,7 +62,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 	private static final int COST = 3000;
 	private static final String QUEST_SLOT = "borrow_kitchen_equipment";
 
-	private static final List<String> ITEMS = Arrays.asList("sugar mill", "pestle and mortar");
+	private static final List<String> ITEMS = Arrays.asList("制糖机", "杵和臼");
 
 
 	@Override
@@ -107,7 +107,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				new ProducerAdder().addProducer(this, behaviour,
 				"欢迎来到 塞门镇面包房! 我们为能把磨坊的面粉送到这里的人烤 #bake 出好吃的面包. ");
 
-				addOffer("我们的 pizza 外卖团队可以 #借 一些厨师制服给你.");
+				addOffer("我们的 比萨 外卖团队可以 #借 一些厨师制服给你.");
 
 				add(ConversationStates.ATTENDING, "借",
 				    new LevelLessThanCondition(6),
@@ -118,7 +118,7 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 				add(ConversationStates.ATTENDING, "借",
 				    new AndCondition(new LevelGreaterThanCondition(5), new QuestNotCompletedCondition("pizza_delivery")),
 				    ConversationStates.ATTENDING,
-				    "你需要和 Leander 讲, 问他如果你能帮送 pizza 外卖, 然后我才可能会借给你.",
+				    "你需要和 Leander 讲, 问他如果你能帮送 比萨 外卖, 然后我才可能会借给你.",
 				    null);
 
 				add(ConversationStates.ATTENDING, "借",
@@ -216,15 +216,15 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 						});
 				}
 
-				// additionally add "sugar" as trigger word
+				// additionally add "糖块" as trigger word
 				add(ConversationStates.ATTENDING,
-					    "sugar",
+					    "糖块",
 					    new AndCondition(
 					        new LevelGreaterThanCondition(5),
 					        new QuestCompletedCondition("pizza_delivery"),
 					        new QuestNotActiveCondition(QUEST_SLOT)),
 					    ConversationStates.ATTENDING,
-					    "抱歉, 我不能借给你糖 sugar, 只有 #sugar #mill.",
+					    "抱歉, 我不能借给你糖 糖块, 只有 #sugar #mill.",
 					    null);
 
 				// too low level
@@ -243,12 +243,12 @@ public class ShopAssistantNPC implements ZoneConfigurator  {
 					    "你把上次借的东西还给我, 才能再借新的.",
 					    null);
 
-				// haven't done pizza
+				// haven't done 比萨
 				add(ConversationStates.ATTENDING,
 					    ITEMS,
 					    new QuestNotCompletedCondition("pizza_delivery"),
 					    ConversationStates.ATTENDING,
-					    "只有 pizza 外卖人员才能借工具. 请为 Leander 送一次外卖, 再说借的事.",
+					    "只有 比萨 外卖人员才能借工具. 请为 Leander 送一次外卖, 再说借的事.",
 					    null);
 
 				// player asks about pay from attending state

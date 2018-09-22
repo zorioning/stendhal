@@ -292,7 +292,7 @@ public class SentenceTest {
 		assertFalse(sentence.hasError());
 		assertEquals("where/QUE?", sentence.toString());
 
-		sentence = ConversationParser.parse("they have very good pizza");
+		sentence = ConversationParser.parse("they have very good 比萨");
 		assertFalse(sentence.hasError());
 		assertEquals("they/SUB-PRO-PLU have/VER good pizza/OBJ-FOO", sentence.toString());
 	}
@@ -309,12 +309,12 @@ public class SentenceTest {
 	}
 
 	/**
-	 * Test for the answer "pestle and mortar" in response to
+	 * Test for the answer "杵和臼" in response to
 	 * "Wonderful! Did you bring anything else with you?" (Ortiv Milquetoast).
 	 */
 	@Test
 	public final void testPestleMortar() {
-		Sentence sentence = ConversationParser.parse("pestle and mortar");
+		Sentence sentence = ConversationParser.parse("杵和臼");
 		assertFalse(sentence.hasError());
 
 		assertEquals("pestle/OBJ, mortar/OBJ", sentence.toString());
@@ -322,7 +322,7 @@ public class SentenceTest {
 		assertEquals("pestle", sentence.getObject(0).getNormalized());
 		assertEquals("mortar", sentence.getObject(1).getNormalized());
 
-		assertEquals("pestle and mortar", sentence.getTriggerExpression().getNormalized());
+		assertEquals("杵和臼", sentence.getTriggerExpression().getNormalized());
 	}
 
 	/**

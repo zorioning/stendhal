@@ -41,8 +41,8 @@ import games.stendhal.server.entity.player.Player;
  *
  * STEPS: <ul><li> Find Bunny <li> Say hi <li> Get reward </ul>
  *
- * REWARD: <ul><li> a basket which can be opened to obtain a random good reward: food,
- * money, potions, items, etc...</ul>
+ * REWARD: <ul><li> a 篮子 which can be opened to obtain a random good reward: food,
+ * money, 治疗济s, items, etc...</ul>
  *
  * REPETITIONS: None
  */
@@ -76,7 +76,7 @@ public class MeetBunny extends AbstractQuest {
 
 			@Override
 			protected void createDialog() {
-				// Greet players who have a basket but go straight back to idle to give others a chance
+				// Greet players who have a 篮子 but go straight back to idle to give others a chance
 				add(ConversationStates.IDLE,
 						ConversationPhrases.GREETING_MESSAGES,
 						new AndCondition(new GreetingMatchesNameCondition(super.getName()),
@@ -85,16 +85,16 @@ public class MeetBunny extends AbstractQuest {
 						"Hi again! Don't eat too much this Easter!", null);
 
 				final List<ChatAction> reward = new LinkedList<ChatAction>();
-				reward.add(new EquipItemAction("basket"));
+				reward.add(new EquipItemAction("篮子"));
 				reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 
-				// Give unmet players a basket
+				// Give unmet players a 篮子
 				add(ConversationStates.IDLE,
 					ConversationPhrases.GREETING_MESSAGES,
 					new AndCondition(new GreetingMatchesNameCondition(super.getName()),
 							new QuestNotCompletedCondition(QUEST_SLOT)),
 					ConversationStates.IDLE,
-					"Happy Easter! I have an easter basket for you. Bye!",
+					"Happy Easter! I have an easter 篮子 for you. Bye!",
 					new MultipleActions(reward));
 			}
 		};
@@ -103,7 +103,7 @@ public class MeetBunny extends AbstractQuest {
 		bunny.initHP(100);
 		// times out twice as fast as normal NPCs
 		bunny.setPlayerChatTimeout(TIME_OUT);
-		bunny.setDescription("You see a friendly bunny carrying brightly coloured Easter baskets.");
+		bunny.setDescription("You see a friendly bunny carrying brightly coloured Easter 篮子s.");
 		// start in int_admin_playground
 
 		StendhalRPZone zone = SingletonRepository.getRPWorld().getZone("int_admin_playground");

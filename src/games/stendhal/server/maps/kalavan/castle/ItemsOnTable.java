@@ -32,22 +32,30 @@ public class ItemsOnTable implements ZoneConfigurator {
 	private void buildBasementArea(final StendhalRPZone zone) {
 
 		// Plant grower for poison
+<<<<<<< HEAD
 		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("病毒", 2000);
+=======
+		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("痍毒", 2000);
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		plantGrower.setPosition(109, 103);
 		plantGrower.setDescription("Scientists often put bottles down here.");
 		zone.add(plantGrower);
 
 		plantGrower.setToFullGrowth();
 
-		// Plant grower for antidote
-		final PassiveEntityRespawnPoint plantGrower2 = new PassiveEntityRespawnPoint("greater antidote", 4500);
+		// Plant grower for 抗毒药济
+		final PassiveEntityRespawnPoint plantGrower2 = new PassiveEntityRespawnPoint("大瓶抗毒药济", 4500);
 		plantGrower2.setPosition(83, 111);
 		plantGrower2.setDescription("Scientists often put bottles down here.");
 		zone.add(plantGrower2);
 
 		plantGrower2.setToFullGrowth();
 
+<<<<<<< HEAD
 		// Plant grower for 剧毒
+=======
+		// Plant grower for mega poison
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		final PassiveEntityRespawnPoint plantGrower3 = new PassiveEntityRespawnPoint("剧毒", 4000);
 		plantGrower3.setPosition(100, 116);
 		plantGrower3.setDescription("Scientists often put bottles down here.");
@@ -71,24 +79,24 @@ public class ItemsOnTable implements ZoneConfigurator {
 
 		plantGrower5.setToFullGrowth();
 
-		// grower for an empty eared bottle (30min)
-		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("eared bottle", 6000);
+		// grower for an empty 耳瓶 (30min)
+		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("耳瓶", 6000);
 		bottleGrower1.setPosition(91, 90);
 		bottleGrower1.setDescription("Scientists often put bottles down here.");
 		zone.add(bottleGrower1);
 
 		bottleGrower1.setToFullGrowth();
 
-		// grower for an empty slim bottle (30min)
-		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("slim bottle", 6000);
+		// grower for an empty 细瓶子 (30min)
+		final PassiveEntityRespawnPoint bottleGrower2 = new PassiveEntityRespawnPoint("细瓶子", 6000);
 		bottleGrower2.setPosition(102, 89);
 		bottleGrower2.setDescription("Scientists often put bottles down here.");
 		zone.add(bottleGrower2);
 
 		bottleGrower2.setToFullGrowth();
 
-		// grower for an empty fat bottle
-		final PassiveEntityRespawnPoint bottleGrower3 = new PassiveEntityRespawnPoint("fat bottle", 3000);
+		// grower for an empty 大瓶子
+		final PassiveEntityRespawnPoint bottleGrower3 = new PassiveEntityRespawnPoint("大瓶子", 3000);
 		bottleGrower3.setPosition(104, 105);
 		bottleGrower3.setDescription("Scientists often put bottles down here.");
 		zone.add(bottleGrower3);

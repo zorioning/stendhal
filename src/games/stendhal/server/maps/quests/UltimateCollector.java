@@ -66,21 +66,21 @@ public class UltimateCollector extends AbstractQuest {
 	private static final String QUEST_SLOT = "ultimate_collector";
 
 	/** 类牙棍 in Kotoch: The Orc Saman is the NPC */
-	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // kotoch
+	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // 科多奇
 
 	/** Vampire Sword quest: Hogart is the NPC */
 	private static final String VAMPIRE_SWORD_QUEST_SLOT = "vs_quest"; // dwarf blacksmith
 
-	/** Obsidian Knife quest: Alrak is the NPC */
+	/** 黑曜石刀 quest: Alrak is the NPC */
 	private static final String OBSIDIAN_KNIFE_QUEST_SLOT = "obsidian_knife"; // dwarf blacksmith
 
 	/** Immortal Sword Quest in Kotoch: Vulcanus is the NPC */
 	private static final String IMMORTAL_SWORD_QUEST_SLOT = "immortalsword_quest"; // kotoch
 
-	/** 黑曜石斗篷 quest: Ida is the NPC */
+	/** 密银斗篷 quest: Ida is the NPC */
 	private static final String MITHRIL_CLOAK_QUEST_SLOT = "mithril_cloak"; // mithril
 
-	/** 黑曜石盾 quest: Baldemar is the NPC */
+	/** 密银盾 quest: Baldemar is the NPC */
 	private static final String MITHRIL_SHIELD_QUEST_SLOT = "mithrilshield_quest"; // mithril
 
 	/** Cloak Collector 2nd quest: Josephine is the NPC (Completing 2nd requires 1st) */
@@ -149,7 +149,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new OrCondition(new QuestNotCompletedCondition(CLUB_THORNS_QUEST_SLOT),
 							 new QuestNotCompletedCondition(IMMORTAL_SWORD_QUEST_SLOT))),
 			ConversationStates.ATTENDING,
-			"在 Kotoch 我还有一个请求你没有完成. 要深入探究, 你才能真正变成武器收藏家. !",
+			"在 科多奇 我还有一个请求你没有完成. 要深入探究, 你才能真正变成武器收藏家. !",
 			null);
 
 
@@ -198,7 +198,7 @@ public class UltimateCollector extends AbstractQuest {
 					 new QuestNotStartedCondition(QUEST_SLOT),
 					 new QuestNotCompletedCondition(KANMARARN_QUEST_SLOT)),
 			ConversationStates.ATTENDING,
-			"你已收集了很多特殊装备, 但你还从没有帮助过 Kanmararn 地下的这些人, 你应该完成他们的要求.",
+			"你已收集了很多特殊装备, 但你还从没有帮助过 卡梅伦 地下的这些人, 你应该完成他们的要求.",
 			null);
 
 	}

@@ -17,7 +17,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="feet"/>
     </equipable>
@@ -37,7 +37,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -55,7 +55,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -73,7 +73,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="feet"/>
     </equipable>
@@ -93,7 +93,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -112,7 +112,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -131,7 +131,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -148,7 +148,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="feet"/>
     </equipable>
@@ -167,14 +167,14 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="很棒的靴子">
+  <item name="奇妙靴子">
     <type class="boots" subclass="mainio_boots" tileid="-1"/>
-    <description>这是一双很棒的靴子. 很难想象这么好看的靴子能把你的脚保护的这么好. </description>
+    <description>这是一双奇妙靴子. 很难想象这么好看的靴子能把你的脚保护的这么好. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="11"/>
@@ -185,15 +185,15 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="feet"/>
     </equipable>
   </item>
   
-  <item name="黑曜石靴">
+  <item name="密银靴">
     <type class="boots" subclass="mithril_boots" tileid="-1"/>
-    <description>这是一双黑曜石靴. </description>
+    <description>这是一双密银靴. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="18"/>
@@ -206,7 +206,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="feet"/>
     </equipable>
@@ -225,7 +225,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -246,7 +246,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -265,7 +265,7 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
@@ -285,7 +285,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="feet"/>
     </equipable>
@@ -304,14 +304,14 @@
       <slot name="ground"/>
       <slot name="content"/>
       <slot name="feet"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
 
-  <item name="异种元素靴子">
+  <item name="异界靴子">
     <type class="boots" subclass="xeno_boots" tileid="-1"/>
-    <description>这是一双精美的工艺品, 一双异种元素靴子. </description>
+    <description>这是一双精美的工艺品, 一双异界靴子. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
       <def value="13"/>
@@ -322,7 +322,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="feet"/>
     </equipable>

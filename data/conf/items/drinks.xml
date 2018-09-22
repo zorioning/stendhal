@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="fierywater">
+  <item name="沸水">
     <type class="drink" subclass="fierywater" tileid="-1"/>
-    <description>You see a bottle of fierywater. Do not drink it pure, you would evaporate!</description>
+    <description>You see a bottle of 沸水. Do not drink it pure, you would evaporate!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-1000"/>
@@ -20,14 +20,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="mild koboldish torcibud">
+  <item name="轻康复药">
     <type class="drink" subclass="koboldish_torcibud_mild" tileid="-1"/>
-    <description>You see a bottle of mild koboldish torcibud. It will help you recover when you're all bruised and battered.</description>
+    <description>You see a bottle of 轻康复药. It will help you recover when you're all bruised and battered.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="90"/>
@@ -43,14 +43,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="strong koboldish torcibud">
+  <item name="康复药">
     <type class="drink" subclass="koboldish_torcibud_strong" tileid="-1"/>
-    <description>You see a bottle of strong koboldish torcibud. It will help you recover when you're all bruised and battered.</description>
+    <description>You see a bottle of 康复药. It will help you recover when you're all bruised and battered.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="180"/>
@@ -66,14 +66,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="vsop koboldish torcibud">
+  <item name="强康复药">
     <type class="drink" subclass="koboldish_torcibud_vsop" tileid="-1"/>
-    <description>You see a bottle of VSOP koboldish torcibud, specially aged in oak casks wrapped by the darkness of a dungeon cellar. It will help you recover when you're all bruised and battered.</description>
+    <description>You see a bottle of 强康复药, specially aged in oak casks wrapped by the darkness of a dungeon cellar. It will help you recover when you're all bruised and battered.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="270"/>
@@ -90,14 +90,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
   <item name="苹果汁">
     <type class="drink" subclass="red_juice" tileid="-1"/>
-    <description>You see 苹果汁. On a hot summer day, it would taste great.</description>
+    <description>炎炎夏日来一杯苹果汁, 感觉一定很不错.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="30"/>
@@ -113,14 +113,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
   <item name="啤酒">
     <type class="drink" subclass="beer" tileid="-1"/>
-    <description>You see a 啤酒. On a hot summer day, it would taste great.</description>
+    <description>夏天时分来杯啤酒. 还是很爽的.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="6"/>
@@ -136,14 +136,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="wine">
+  <item name="红酒">
     <type class="drink" subclass="wine" tileid="-1"/>
-    <description>You see a glass of red wine. It will quench your thirst.</description>
+    <description>口渴了来杯红酒就够了.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="10"/>
@@ -159,14 +159,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
   <item name="水">
     <type class="drink" subclass="waterbottle" tileid="-1"/>
-    <description>You see a bottle of fresh spring water. It's really tasty and fresh.</description>
+    <description>甘甜清凉的泉水.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="15"/>
@@ -182,14 +182,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="pina colada">
+  <item name="椰林飘香">
     <type class="drink" subclass="pina_colada2" tileid="-1"/>
-    <description>You see a pina colada. It looks delicious but tastes dangerously strong!</description>
+    <description>椰林飘香. 一种看起来很好喝却很冲的鸡尾酒!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="28"/>
@@ -205,14 +205,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="tea">
+  <item name="茶">
     <type class="drink" subclass="tea" tileid="-1"/>
-    <description>You see a lovely cup of tea.</description>
+    <description>一杯上好的茶.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="30"/>
@@ -228,14 +228,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="milk">
+  <item name="牛奶">
     <type class="drink" subclass="milk" tileid="-1"/>
-    <description>You see a small bottle of fresh milk.</description>
+    <description>一小瓶鲜牛奶.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="10"/>
@@ -251,16 +251,17 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="antidote">
+  <item name="抗毒药济">
     <type class="drink" subclass="antidote" tileid="-1"/>
-    <description>You see an antidote, to cure you of poison and protect you for a while.</description>
-    <implementation class-name="games.stendhal.server.entity.item.Drink"/>
+    <description>抗毒药济可以解毒, 并可以在一会时间内抗毒.</description>
+    <implementation class-name="games.stendhal.server.entity.item.StatusHealer"/>
     <attributes>
+      <immunization value="poisoned"/>
       <amount value="400"/>
       <frequency value="1"/>
       <quantity value="1"/>
@@ -274,16 +275,17 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="greater antidote">
+  <item name="大瓶抗毒药济">
     <type class="drink" subclass="greater_antidote" tileid="-1"/>
-    <description>You see a greater antidote, to cure you of poison and protect you for a long while.</description>
-    <implementation class-name="games.stendhal.server.entity.item.Drink"/>
+    <description>大瓶抗毒药济, 不但可以解毒, 还可以有更长时间的抗毒效果.</description>
+    <implementation class-name="games.stendhal.server.entity.item.StatusHealer"/>
     <attributes>
+      <immunization value="poisoned"/>
       <amount value="800"/>
       <frequency value="1"/>
       <quantity value="1"/>
@@ -297,14 +299,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="mana">
+  <item name="魔力药水">
     <type class="drink" subclass="mana" tileid="-1"/>
-    <description>You see an bottle of mana, to increase your mana rapidly.</description>
+    <description>魔力药水, 快速恢复你的魔力.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="20"/>
@@ -320,14 +322,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
   
-  <item name="poison">
+  <item name="毒药">
     <type class="drink" subclass="poison" tileid="-1"/>
-    <description>You see a bottle of poison. Don't drink it!</description>
+    <description>You see a bottle of 毒药. Don't drink it!</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-40"/>
@@ -341,16 +343,22 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
+<<<<<<< HEAD
   <item name="强毒">
     <type class="drink" subclass="greater_poison" tileid="-1"/>
     <description>You see a 强毒. Don't drink it!</description>
+=======
+  <item name="特级毒药">
+    <type class="drink" subclass="greater_poison" tileid="-1"/>
+    <description>You see a 特级毒药. Don't drink it!</description>
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-60"/>
@@ -364,7 +372,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -387,16 +395,22 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
+<<<<<<< HEAD
   <item name="病毒">
     <type class="drink" subclass="disease_poison" tileid="-1"/>
     <description>You see a 病毒.  Be careful, it's wicked.</description>
+=======
+  <item name="痍毒">
+    <type class="drink" subclass="disease_poison" tileid="-1"/>
+    <description>You see a 痍毒.  Be careful, it's wicked.</description>
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="-2000"/>
@@ -410,7 +424,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -433,14 +447,18 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
+<<<<<<< HEAD
   <item name="荧光药济">
+=======
+  <item name="莹光药剂">
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     <type class="drink" subclass="twilight_elixir" tileid="-1"/>
     <description>You see a bottle of medicinal elixir.</description>
     <implementation class-name="games.stendhal.server.entity.item.TwilightElixir"/>
@@ -456,16 +474,22 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
+<<<<<<< HEAD
   <item name="小治疗济">
     <type class="drink" subclass="minor_potion" tileid="-1"/>
     <description>You see a 小治疗济. It's not much but may save you in a tight spot.</description>
+=======
+  <item name="小治疗剂">
+    <type class="drink" subclass="minor_potion" tileid="-1"/>
+    <description>You see a 小治疗剂. It's not much but may save you in a tight spot.</description>
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="50"/>
@@ -479,16 +503,16 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
-  <item name="soup">
+  <item name="蔬菜汤">
     <type class="drink" subclass="soup" tileid="-1"/>
-    <description>You see a bowl of soup. Its contents fill you up.</description>
+    <description>You see a bowl of 蔬菜汤. Its contents fill you up.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="2500"/>
@@ -503,7 +527,7 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
@@ -527,16 +551,16 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
-  <item name="potion">
+  <item name="治疗济">
     <type class="drink" subclass="potion" tileid="-1"/>
-    <description>You see a potion. Take it to battle and you may survive longer.</description>
+    <description>You see a 治疗济. Take it to battle and you may survive longer.</description>
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="100"/>
@@ -550,16 +574,22 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
+<<<<<<< HEAD
   <item name="大治疗济">
     <type class="drink" subclass="greater_potion" tileid="-1"/>
     <description>You see a 大治疗济, invaluable in battle.</description>
+=======
+  <item name="大治疗剂">
+    <type class="drink" subclass="greater_potion" tileid="-1"/>
+    <description>You see a 大治疗剂, invaluable in battle.</description>
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="300"/>
@@ -573,16 +603,22 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
+<<<<<<< HEAD
   <item name="强治疗济">
     <type class="drink" subclass="mega_potion" tileid="-1"/>
     <description>You see a 强治疗济. It strengthens greatly.</description>
+=======
+  <item name="强治疗剂">
+    <type class="drink" subclass="mega_potion" tileid="-1"/>
+    <description>You see a 强治疗剂. It strengthens greatly.</description>
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="800"/>
@@ -596,16 +632,22 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
     </equipable>
   </item>
   
+<<<<<<< HEAD
   <item name="真爱药水">
     <type class="drink" subclass="love_potion" tileid="-1"/>
     <description>You see a 真爱药水. It looks powerful so take care to use it carefully!</description>
+=======
+  <item name="爱之治疗济">
+    <type class="drink" subclass="love_potion" tileid="-1"/>
+    <description>You see a 爱之治疗济. It looks powerful so take care to use it carefully!</description>
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     <implementation class-name="games.stendhal.server.entity.item.Drink"/>
     <attributes>
       <amount value="400"/>
@@ -619,10 +661,34 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
+    </equipable>
+  </item>
+  
+  <item name="sedative">
+    <type class="drink" subclass="sedative" tileid="-1" />
+    <description>You see a sedative. It's effects can protect you from a shocked state.</description>
+    <implementation class-name="games.stendhal.server.entity.item.StatusHealer" />
+    <attributes>
+      <immunization value="shocked" />
+      <amount value="400" />
+      <frequency value="1"/>
+      <quantity value="1"/>
+      <regen value="1"/>
+      <menu value="Drink|Use" />
+    </attributes>
+    <weight value="1.0" />
+    <value value="1" />
+    <equipable>
+      <slot name="ground" />
+      <slot name="content" />
+      <slot name="lhand" />
+      <slot name="rhand" />
+      <slot name="bag" />
+      <slot name="trade" />
     </equipable>
   </item>
   
@@ -644,7 +710,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>-->

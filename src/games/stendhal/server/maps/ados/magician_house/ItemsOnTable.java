@@ -36,17 +36,17 @@ public class ItemsOnTable implements ZoneConfigurator {
 		item.setInfoString("giant_red_dragon");
 
 		// Plant grower for poison
-		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("poison", 1500);
+		final PassiveEntityRespawnPoint plantGrower = new PassiveEntityRespawnPoint("毒药", 1500);
 		plantGrower.setPosition(3, 6);
-		plantGrower.setDescription("Haizen tends to put his magic drinks here.");
+		plantGrower.setDescription("海震把魔法试济放在这里.");
 		zone.add(plantGrower);
 
 		plantGrower.setToFullGrowth();
 
-		// grower for an empty slim bottle (see Koboldish Torcibud quest, respawning time 1h)
-		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("slim bottle", 12000);
+		// grower for an empty 细瓶子 (see Koboldish Torcibud quest, respawning time 1h)
+		final PassiveEntityRespawnPoint bottleGrower1 = new PassiveEntityRespawnPoint("细瓶子", 12000);
 		bottleGrower1.setPosition(10, 5);
-		bottleGrower1.setDescription("This is a likely spot where a bottle could be found.");
+		bottleGrower1.setDescription("这里像是存放瓶子的地方.");
 		zone.add(bottleGrower1);
 
 		bottleGrower1.setToFullGrowth();

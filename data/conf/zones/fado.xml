@@ -45,7 +45,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>    
 
@@ -54,7 +54,7 @@
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">v</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>    
 
@@ -452,7 +452,11 @@ You'll definitely need a 婚戒. Come here to get yours cast once you are engage
 SOUP RECIPE
 
 胡萝卜, 色拉 (From 塞门镇)
+<<<<<<< HEAD
 洋葱, 白花菜, 绿花菜, 韭菜, 菠菜, 西葫芦 (From Fado)
+=======
+洋葱, cauliflower, 西蓝花, leek, 菠菜, 西葫芦 (From Fado)
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 甘蓝 (special exotic type of cabbage - hard to find. often grows indoors)
       </attribute>
       <attribute name="class">book_blue</attribute>
@@ -600,7 +604,7 @@ where panning for gold is possible. this spot is south of Or'ril castle.
         <parameter name="image">fence_gate</parameter>
         <parameter name="orientation">h</parameter>
         <parameter name="condition">new AlwaysFalseCondition()</parameter>
-        <parameter name="message">门上锁了</parameter>
+        <parameter name="message">门锁住了</parameter>
       </implementation>
 	</entity>
   </zone>
@@ -687,7 +691,7 @@ If the bride is called Helen, you should say 'marry Helen'
 8. Waterfall Wonder - splash, or admire
 9. Wooden Delicacy - go back to your roots
 10. Simple Serenity - a room of calm
-11. Water of Love - wine flows freely
+11. Water of Love - 红酒 flows freely
 12. Stone Hearted - an architect's delight
 13. Blue For You - azure, lapis, cobalt and cornflower
 14. Rhapsody in pink - romantic yet regal

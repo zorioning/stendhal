@@ -48,13 +48,17 @@ public class AdminMaker extends ScriptImpl {
 	private static Logger logger = Logger.getLogger(AdminMaker.class);
 	private static final String TELE_QUEST_SLOT = "AdminMakerTele";
 
-	private final List<String> itemsSingle = Arrays.asList("rod of the gm",
+	private final List<String> itemsSingle = Arrays.asList("GM自慰棒",
 			"金盾", "黄金铠甲", "金斗篷",
 			"golden helmet", "golden legs", "金靴子",
 			"hunter crossbow");
 
 	private final List<String> itemsStack = Arrays.asList("money",
+<<<<<<< HEAD
 			"大治疗济", "greater antidote", "加强箭",
+=======
+			"大治疗剂", "大瓶抗毒药济", "加强箭",
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			"极毒");
 
 
@@ -110,7 +114,7 @@ public class AdminMaker extends ScriptImpl {
 				}
 			}
 			// turn on their keyring for them
-			player.setFeature("keyring", true);
+			player.setFeature("钥匙环", true);
 		}
 
 		private void admin(final Player player) {
@@ -124,7 +128,7 @@ public class AdminMaker extends ScriptImpl {
 
 		@Override
 		public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
-			raiser.say("I will give you some items, and adjust your level and skills. Also, your keyring is enabled.");
+			raiser.say("I will give you some items, and adjust your level and skills. Also, your 钥匙环 is enabled.");
 			xpGain(player);
 			equip(player);
 			admin(player);
@@ -155,9 +159,9 @@ public class AdminMaker extends ScriptImpl {
 			new Destination("-2_orril_lich_palace", 67, 118),
 			new Destination("-2_orril_dwarf_mine", 50, 40),
 			new Destination("-1_塞门_矿山_nw", 22, 75),
-			new Destination("-6_kanmararn_city", 33, 52),
+			new Destination("-6_卡梅伦_城", 33, 52),
 			new Destination("-2_阿多斯_郊外_nw", 28, 4),
-			new Destination("-2_kotoch_entrance", 20, 111),
+			new Destination("-2_科多奇_入口", 20, 111),
 			new Destination("1_kikareukin_cave", 18, 97),
 			new Destination("0_kalavan_city", 64, 13),
 			new Destination("0_kirdneh_city", 63, 26),

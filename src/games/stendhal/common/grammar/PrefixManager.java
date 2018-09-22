@@ -66,10 +66,11 @@ final class PrefixManager
 //		register("piece of ", "pieces of ", "beeswax");
 //
 //		register("sack of ", "sacks of ", "面粉");
-//		register("sack of ", "sacks of ", "sugar");
+//		register("sack of ", "sacks of ", "糖块");
 //
 //		register("sheaf of ", "sheaves of ", "小麦");
 //		register("loaf of ", "loaves of ", "面包");
+<<<<<<< HEAD
 //		register("stick of ", "sticks of ", "butter");
 //		register("bulb of ", "bulbs of ", "大蒜");
 //		register("jar of ", "jars of ", "honey");
@@ -77,19 +78,28 @@ final class PrefixManager
 //		register("cup of ", "cups of ", "tea");
 //		register("sprig of ", "sprigs of ", "arandula");
 //		register("root of ", "roots of ", "mandragora");
+=======
+//		register("stick of ", "sticks of ", "奶油");
+//		register("bulb of ", "bulbs of ", "大蒜");
+//		register("jar of ", "jars of ", "蜂蜜");
+//		register("glass of ", "glasses of ", "红酒");
+//		register("cup of ", "cups of ", "茶");
+//		register("sprig of ", "sprigs of ", "海芋");
+//		register("root of ", "roots of ", "曼德拉草");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 //		register("bunch of ", "bunches of ", "daisies");
 //		register("bunch of ", "bunches of ", "葡萄");
 //		register("can of ", "cans of ", "oil");
 //
 //		register("bottle of ", "bottles of ", "啤酒");
-//		register("bottle of ", "bottles of ", "water");
-//		register("bottle of ", "bottles of ", "fierywater");
-//		register("bottle of ", "bottles of ", "milk");
+//		register("bottle of ", "bottles of ", "水");
+//		register("bottle of ", "bottles of ", "沸水");
+//		register("bottle of ", "bottles of ", "牛奶");
 //		register("bottle of ", "bottles of ", "holy water");
 //
-//		registerEnd("bottle of ", "bottles of ", "potion");
-//		registerEnd("bottle of ", "bottles of ", "poison");
-//		registerEnd("bottle of ", "bottles of ", "antidote");
+//		registerEnd("bottle of ", "bottles of ", "治疗济");
+//		registerEnd("bottle of ", "bottles of ", "毒药");
+//		registerEnd("bottle of ", "bottles of ", "抗毒药济");
 //		registerEnd("nugget of ", "nuggets of ", " ore");
 //
 //		registerEnd("pair of ", "pairs of ", " legs");
@@ -154,7 +164,7 @@ final class PrefixManager
 	}
 	/**
 	 * Define the singular and plural prefix strings for an item name to be matched at the end,
-	 * for example "bottle of ... potion".
+	 * for example "bottle of ... 治疗济".
 	 * @param prefixSingular
 	 * @param prefixPlural
 	 * @param endString

@@ -2,7 +2,7 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="dungeon silver key">
+  <item name="龙之银钥匙">
     <type class="key" subclass="silver" tileid="-1"/>
     <description>You see a silver dungeon key. Use it only if you are brave.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
@@ -14,13 +14,13 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
-  <item name="lich gold key">
+  <item name="巫妖金钥匙">
     <type class="key" subclass="gold" tileid="-1"/>
     <description>You see a golden lich key. It will open the door to terrible things.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
@@ -32,13 +32,13 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
-  <item name="minotaur key">
+  <item name="牛头人钥匙">
     <type class="key" subclass="bronze" tileid="-1"/>
     <description>You see a fancy bronze key. It smells faintly of minotaur, perhaps one dropped it?</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
@@ -49,9 +49,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -66,13 +66,13 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
-  <item name="kotoch prison key">
+  <item name="科多奇监狱钥匙">
     <type class="key" subclass="copper" tileid="-1"/>
     <description>You see an ancient copper key, enscribed with something in Orcish.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
@@ -83,15 +83,15 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
-  <item name="kanmararn prison key">
+  <item name="卡梅伦监狱钥匙">
     <type class="key" subclass="blue" tileid="-1"/>
-    <description>You see a key which matches the locks in the Kanmararn prison.</description>
+    <description>You see a key which matches the locks in the 卡梅伦 prison.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item" />
     <attributes>
     </attributes>
@@ -100,9 +100,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -117,9 +117,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -135,9 +135,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -153,9 +153,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
   
@@ -170,9 +170,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -188,9 +188,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -205,9 +205,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -222,9 +222,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -239,9 +239,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -256,9 +256,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -273,9 +273,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -290,9 +290,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -307,9 +307,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 
@@ -324,9 +324,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>-->
 
@@ -341,9 +341,9 @@
     <equipable>
       <slot name="ground"/>
       <slot name="content"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
-      <slot name="keyring"/>
+      <slot name="钥匙环"/>
     </equipable>
   </item>
 </items>

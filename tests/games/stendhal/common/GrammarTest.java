@@ -191,7 +191,7 @@ public class GrammarTest {
 		assertEquals("bottle of beer", Grammar.fullForm("beer"));
 		assertEquals("glass of wine", Grammar.fullForm("wine"));
 		assertEquals("bottle of poison", Grammar.fullForm("poison"));
-		assertEquals("bottle of antidote", Grammar.fullForm("antidote"));
+		assertEquals("bottle of antidote", Grammar.fullForm("抗毒药济"));
 		assertEquals("money", Grammar.fullForm("money"));
 		assertEquals("whatever book", Grammar.fullForm("book whatever"));
 		assertEquals("sprig of arandula", Grammar.fullForm("arandula"));
@@ -253,7 +253,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("三明治es", "三明治");
 		testPluralisationAndSingularisation("knives", "knife");
 		testPluralisationAndSingularisation("daggers", "dagger");
-		testPluralisationAndSingularisation("short swords", "short sword");
+		testPluralisationAndSingularisation("短剑s", "短剑");
 		testPluralisationAndSingularisation("swords", "sword");
 		testPluralisationAndSingularisation("scimitars", "scimitar");
 		testPluralisationAndSingularisation(
@@ -390,6 +390,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("chunks of meat", "chunk of meat");
 		testPluralisationAndSingularisation("pieces of ham", "火腿");
 		testPluralisationAndSingularisation("三明治es", "三明治");
+<<<<<<< HEAD
 		testPluralisationAndSingularisation("pies", "pie");
 		testPluralisationAndSingularisation("纽扣菇s",
 				"纽扣菇");
@@ -398,6 +399,16 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("bottles of beer", "beer");
 		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
 		testPluralisationAndSingularisation("bottles of 小治疗济", "小治疗济");
+=======
+		testPluralisationAndSingularisation("pies", "馅饼");
+		testPluralisationAndSingularisation("button mushrooms",
+				"button mushroom");
+		testPluralisationAndSingularisation("大脚菇", "porcino");
+		testPluralisationAndSingularisation("toadstools", "toadstool");
+		testPluralisationAndSingularisation("bottles of beer", "beer");
+		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
+		testPluralisationAndSingularisation("bottles of 小治疗剂", "小治疗剂");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		testPluralisationAndSingularisation("bottles of antidote", "antidote");
 		testPluralisationAndSingularisation("bottles of potion", "potion");
 		testPluralisationAndSingularisation("bottles of 大治疗济",
@@ -426,7 +437,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("bronze gm tokens",
 				"bronze gm token");
 		testPluralisationAndSingularisation("tokens", "token");
-		testPluralisationAndSingularisation("notes", "note");
+		testPluralisationAndSingularisation("notes", "笔记");
 		testPluralisationAndSingularisation("coupons", "coupon");
 		testPluralisationAndSingularisation("dice", "dice");
 		testPluralisationAndSingularisation("teddies", "teddy");
@@ -799,7 +810,7 @@ public class GrammarTest {
 		assertEquals("trousers", Grammar.extractNoun("pair of trousers"));
 		assertEquals("grain", Grammar.extractNoun("sacks of grain"));
 		assertEquals("grain", Grammar.extractNoun("sheaves of grain"));
-		assertEquals("water", Grammar.extractNoun("bottle of water"));
+		assertEquals("水", Grammar.extractNoun("bottle of water"));
 		assertEquals("arundula", Grammar.extractNoun("sprigs of arundula"));
 		assertEquals("armor", Grammar.extractNoun("suit of armor"));
 		assertEquals("wine", Grammar.extractNoun("glasses of wine"));

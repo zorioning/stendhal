@@ -220,7 +220,11 @@ public class TestEnvDlg extends javax.swing.JDialog {
         lbSentence.setText("Please enter a sentence:");
 
         cbSentence.setEditable(true);
+<<<<<<< HEAD
         cbSentence.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "buy seven bananas", "buy 3 cookies", "give a bottle of wine", "buy enhanced lion shield", "Would you like to have an ice cream?", "Mary has a little lamb.", "I and you, he and they", "What is the an answer to life, the universe and everything?", "to be or not to be", "Take these three 烤排s and have fun!", "99 red balloons", "Hi, how are you?", "_Hi, how are you?" }));
+=======
+        cbSentence.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "buy seven bananas", "buy 3 cookies", "give a bottle of 红酒", "buy enhanced lion shield", "Would you like to have an ice cream?", "Mary has a little lamb.", "I and you, he and they", "What is the an answer to life, the universe and everything?", "to be or not to be", "Take these three 烤排s and have fun!", "99 red balloons", "Hi, how are you?", "_Hi, how are you?" }));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
         cbSentence.addActionListener(new java.awt.event.ActionListener() {
             @Override
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -404,7 +408,11 @@ public class TestEnvDlg extends javax.swing.JDialog {
         });
 
         cbMatchExpr.setEditable(true);
+<<<<<<< HEAD
         cbMatchExpr.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "buy seven bananas", "buy bananas", "buy * bananas", "buy * *", "|EXACT|buy seven bananas", "buy 3 cookies", "|JOKER|buy * bananas", "give a bottle of wine", "give *", "give * * * *", "|JOKER|ICASE|give *", "buy enhanced lion shield", "Would you like to have an ice cream?", "Mary has a little lamb.", "I and you, he and they", "What is the an answer to life, the universe and everything?", "to be or not to be", "Take these three 烤排s and have fun!", "99 red balloons", "Hi, how are you?", "_Hi, how are you?" }));
+=======
+        cbMatchExpr.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "buy seven bananas", "buy bananas", "buy * bananas", "buy * *", "|EXACT|buy seven bananas", "buy 3 cookies", "|JOKER|buy * bananas", "give a bottle of 红酒", "give *", "give * * * *", "|JOKER|ICASE|give *", "buy enhanced lion shield", "Would you like to have an ice cream?", "Mary has a little lamb.", "I and you, he and they", "What is the an answer to life, the universe and everything?", "to be or not to be", "Take these three 烤排s and have fun!", "99 red balloons", "Hi, how are you?", "_Hi, how are you?" }));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
         cbMatchExpr.addActionListener(new java.awt.event.ActionListener() {
             @Override
 			public void actionPerformed(java.awt.event.ActionEvent evt) {

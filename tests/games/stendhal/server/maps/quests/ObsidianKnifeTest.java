@@ -90,7 +90,7 @@ public class ObsidianKnifeTest {
 		player.setQuest(questSlot, "meat");
 
 		Item item = ItemTestHelper.createItem("meat", 100);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		final int xp = player.getXP();
 		final double oldKarma = player.getKarma();
 
@@ -177,27 +177,27 @@ public class ObsidianKnifeTest {
 		en.step(player, "hi");
 		assertEquals("Hi! Perhaps you have come to ask about that #knife again ... ", getReply(npc));
 		en.step(player, "knife");
-		assertEquals("I'll make an obsidian knife if you can slay a black dragon and get the gem which makes the blade. Bring a cod so that I can make the bone handle, too.", getReply(npc));
+		assertEquals("I'll make an 黑曜石刀 if you can slay a black dragon and get the gem which makes the blade. Bring a cod so that I can make the bone handle, too.", getReply(npc));
 		assertThat(player.getQuest(questSlot), is("knife_offered"));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
 		en.step(player, "hi");
-		assertEquals("Hello again. Don't forget I offered to make that obsidian knife, if you bring me a cod and a piece of obsidian from a black dragon you killed. In the meantime if I can #help you, just say the word.", getReply(npc));
+		assertEquals("Hello again. Don't forget I offered to make that 黑曜石刀, if you bring me a cod and a piece of obsidian from a black dragon you killed. In the meantime if I can #help you, just say the word.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 
 		// -----------------------------------------------
 		item = ItemTestHelper.createItem("obsidian");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 		// add one item
 		en.step(player, "hi");
-		assertEquals("Hello again. Don't forget I offered to make that obsidian knife, if you bring me a cod and a piece of obsidian from a black dragon you killed. In the meantime if I can #help you, just say the word.", getReply(npc));
+		assertEquals("Hello again. Don't forget I offered to make that 黑曜石刀, if you bring me a cod and a piece of obsidian from a black dragon you killed. In the meantime if I can #help you, just say the word.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
 		// add the next item
 		item = ItemTestHelper.createItem("cod");
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		// they haven't killed a dragon
 		en.step(player, "hi");
@@ -221,7 +221,7 @@ public class ObsidianKnifeTest {
 		en.step(player, "hi");
 		// [09:35] kymara earns 10000 experience points.
 		assertEquals("The knife is ready! You know, that was enjoyable. I think I'll start making things again. Thanks!", getReply(npc));
-		assertTrue(player.isEquipped("obsidian knife"));
+		assertTrue(player.isEquipped("黑曜石刀"));
 		assertThat(player.getXP(), greaterThan(xp3));
 		assertThat(player.getQuest(questSlot), is("done"));
 	}

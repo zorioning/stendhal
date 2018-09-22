@@ -70,7 +70,7 @@ import games.stendhal.server.util.ItemCollection;
  * STEPS:
  * <ul>
  * 		<li>Talk to Vasi Elos, a lonely scientist.</li>
- * 		<li>Give him all stuff he needs for a present for his honey.</li>
+ * 		<li>Give him all stuff he needs for a present for his 蜂蜜.</li>
  * 		<li>Talk to semos mayor.</li>
  * 		<li>Bring Elos mayor's letter.</li>
  * 		<li>Kill the Imperial Scientist.</li>
@@ -96,7 +96,7 @@ public class SadScientist extends AbstractQuest {
 	private static final String LETTER_DESCRIPTION = "这是一封寄给 Vasi Elos 的信.";
 	private static final String QUEST_SLOT = "sad_scientist";
 	private static final int REQUIRED_MINUTES = 20;
-	private static final String NEEDED_ITEMS = "emerald=1;obsidian=1;sapphire=1;carbuncle=2;gold bar=20;mithril bar=1";
+	private static final String NEEDED_ITEMS = "翡翠=1;黑曜石=1;蓝宝石=1;红宝石=2;gold bar=20;mithril bar=1";
 
 	@Override
 	public String getName() {
@@ -136,11 +136,11 @@ public class SadScientist extends AbstractQuest {
 			return res;
 		}
 		res.add("Vasi Elos 让我找 Mayor Sakhs 寻问找出 Vera 在哪.");
-		if ("find_vera".equals(questState) && !player.isEquipped("note")) {
+		if ("find_vera".equals(questState) && !player.isEquipped("笔记")) {
 			return res;
 		}
 		res.add("我有一张信条, 记录着一些可怕的事, 要把它送给 Vasi.");
-		if ("find_vera".equals(questState) && player.isEquipped("note")) {
+		if ("find_vera".equals(questState) && player.isEquipped("笔记")) {
 			return res;
 		}
 		res.add("Vera的离开让Vasi Elos 非常伤心愤怒, 我必须新旧他的亲哥哥, 并把一杯鲜血带给他.");
@@ -239,12 +239,12 @@ public class SadScientist extends AbstractQuest {
 		final ChatCondition condition = new AndCondition(
 				new QuestStateStartsWithCondition(QUEST_SLOT, "kill_scientist"),
 				new KilledForQuestCondition(QUEST_SLOT, 1),
-				new PlayerHasItemWithHimCondition("goblet")
+				new PlayerHasItemWithHimCondition("盛血高脚杯")
 			);
 		ChatAction action = new MultipleActions(
 										new SetQuestAction(QUEST_SLOT, "decorating;"),
 										new SetQuestToTimeStampAction(QUEST_SLOT, 1),
-										new DropItemAction("goblet",1)
+										new DropItemAction("盛血高脚杯",1)
 										);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()), condition),
@@ -268,7 +268,7 @@ public class SadScientist extends AbstractQuest {
 				new NotCondition(
 						new AndCondition(
 										new KilledForQuestCondition(QUEST_SLOT, 1),
-										new PlayerHasItemWithHimCondition("goblet")))
+										new PlayerHasItemWithHimCondition("盛血高脚杯")))
 			);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				condition, ConversationStates.IDLE,
@@ -279,13 +279,13 @@ public class SadScientist extends AbstractQuest {
 	private void playerReturnsWithLetter(final SpeakerNPC npc) {
 		final ChatCondition condition = new AndCondition(
 				new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
-				new PlayerHasItemWithHimCondition("note")
+				new PlayerHasItemWithHimCondition("笔记")
 			);
 
 		final ChatAction action = new MultipleActions(
 					new SetQuestAction(QUEST_SLOT, 0, "kill_scientist"),
 					new StartRecordingKillsAction(QUEST_SLOT, 1, "Sergej Elos", 0, 1),
-					new DropItemAction("note")
+					new DropItemAction("笔记")
 				);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()), condition),
@@ -293,7 +293,7 @@ public class SadScientist extends AbstractQuest {
 				"Hello! 你给我带了什么东西吗?",
 				null);
 
-		npc.add(ConversationStates.INFORMATION_2, Arrays.asList("letter", "yes", "note"),
+		npc.add(ConversationStates.INFORMATION_2, Arrays.asList("letter", "yes", "笔记"),
 				condition,
 				ConversationStates.ATTENDING,
 				"Oh 不要! 我感到很痛苦, 我不再需要创造这些美丽的宝石腿了. " +
@@ -311,7 +311,7 @@ public class SadScientist extends AbstractQuest {
 	private void playerReturnsWithoutLetter(final SpeakerNPC npc) {
 		final ChatCondition condition = new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 				new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
-				new NotCondition(new PlayerHasItemWithHimCondition("note"))
+				new NotCondition(new PlayerHasItemWithHimCondition("笔记"))
 			);
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
 				condition,
@@ -324,7 +324,7 @@ public class SadScientist extends AbstractQuest {
 		final ChatAction action = new ChatAction() {
 			@Override
 			public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
-				final Item item = SingletonRepository.getEntityManager().getItem("note");
+				final Item item = SingletonRepository.getEntityManager().getItem("笔记");
 				item.setInfoString(player.getName());
 				item.setDescription(LETTER_DESCRIPTION);
 				item.setBoundTo(player.getName());
@@ -335,7 +335,7 @@ public class SadScientist extends AbstractQuest {
 				new QuestStateStartsWithCondition(QUEST_SLOT, "find_vera"),
 				ConversationStates.ATTENDING,
 				"什么? 你怎么知道她? 好吧, 这是个悲伤的故事." +
-				" 她正给她的朋友Ilisa挑选arandula,她看见一个地窖的入口, " +
+				" 她正给她的朋友伊丽莎挑选海芋,她看见一个地窖的入口, " +
 				" 3个月后, 一个年轻的英雄看到她成了吸血鬼. " +
 				" 多么悲伤的故事. " +
 				" 我把这封信留给她丈夫, " +
@@ -519,7 +519,7 @@ public class SadScientist extends AbstractQuest {
 				Arrays.asList("gem","gems"),
 				null,
 				ConversationStates.QUEST_STARTED,
-				"我需要一个 emerald, 一个 obsidian, 一个 sapphire, 两个 carbuncles, 20 枚金条 和一个  mithril 条." +
+				"我需要一个 翡翠, 一个 黑曜石, 一个 蓝宝石, 两个 红宝石s, 20 枚金条 和一个  mithril 条." +
 				" 你能为了我妻子弄到这些吗?",
 				null);
 
@@ -528,7 +528,7 @@ public class SadScientist extends AbstractQuest {
 				Arrays.asList("leg","legs"),
 				null,
 				ConversationStates.QUEST_STARTED,
-				"宝石腿, 我需要一个 emerald, 一个 obsidian, 一个 sapphire, 两个 carbuncles, 20 枚金条 和一个  mithril 条." +
+				"宝石腿, 我需要一个 翡翠, 一个 黑曜石, 一个 蓝宝石, 两个 红宝石s, 20 枚金条 和一个  mithril 条." +
 				" 你能为了我妻子弄到这些吗?",
 				null);
 

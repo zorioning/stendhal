@@ -68,10 +68,17 @@ import marauroa.common.Pair;
 /**
  * NOTE: quest slot templates for testing
  * ---------------------------
+<<<<<<< HEAD
  * fetch_dessert;inprogress;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207220454
  * deliver_decentmeal;inprogress;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207289602
  * done;incomplete;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207484330;1
  * done;complete;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,fierywater=2,honey=2,sugar=4,;1337207484330;1
+=======
+ * fetch_dessert;inprogress;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,沸水=2,蜂蜜=2,糖块=4,;1337207220454
+ * deliver_decentmeal;inprogress;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,沸水=2,蜂蜜=2,糖块=4,;1337207289602
+ * done;incomplete;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,沸水=2,蜂蜜=2,糖块=4,;1337207484330;1
+ * done;complete;paella;chicken=2,西红柿=3,大蒜=3,trout=1,perch=1,洋葱=2,;gulab;面粉=2,沸水=2,蜂蜜=2,糖块=4,;1337207484330;1
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
  * ---------------------------
  */
 
@@ -474,14 +481,18 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_paella.put("鸡腿", new Pair<Integer, Integer>(2,3));
         requiredIngredients_paella.put("perch", new Pair<Integer, Integer>(1,1));
         requiredIngredients_paella.put("trout", new Pair<Integer, Integer>(1,1));
-        requiredIngredients_paella.put("butter", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_paella.put("奶油", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_ciorba = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_ciorba.put("tripe", new Pair<Integer, Integer>(1,3));
         requiredIngredients_ciorba.put("pinto beans", new Pair<Integer, Integer>(1,3));
         requiredIngredients_ciorba.put("洋葱", new Pair<Integer, Integer>(2,4));
         requiredIngredients_ciorba.put("大蒜", new Pair<Integer, Integer>(1,3));
+<<<<<<< HEAD
         requiredIngredients_ciorba.put("milk", new Pair<Integer, Integer>(1,3));
+=======
+        requiredIngredients_ciorba.put("牛奶", new Pair<Integer, Integer>(1,3));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
         requiredIngredients_ciorba.put("胡萝卜", new Pair<Integer, Integer>(1,3));
         requiredIngredients_ciorba.put("vinegar", new Pair<Integer, Integer>(1,3));
 
@@ -496,11 +507,16 @@ public class MealForGroongo extends AbstractQuest {
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_schnitzel = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_schnitzel.put("potato", new Pair<Integer, Integer>(3,6));
+<<<<<<< HEAD
         requiredIngredients_schnitzel.put("porcini", new Pair<Integer, Integer>(2,4));
         requiredIngredients_schnitzel.put("纽扣菇", new Pair<Integer, Integer>(4,8));
+=======
+        requiredIngredients_schnitzel.put("大脚菇", new Pair<Integer, Integer>(2,4));
+        requiredIngredients_schnitzel.put("小圆菇", new Pair<Integer, Integer>(4,8));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
         requiredIngredients_schnitzel.put("火腿", new Pair<Integer, Integer>(2,3));
         requiredIngredients_schnitzel.put("肉", new Pair<Integer, Integer>(2,3));
-        requiredIngredients_schnitzel.put("milk", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_schnitzel.put("牛奶", new Pair<Integer, Integer>(1,2));
         requiredIngredients_schnitzel.put("干酪", new Pair<Integer, Integer>(1,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_consomme = new HashMap<String, Pair<Integer, Integer>>();
@@ -509,16 +525,20 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_consomme.put("胡萝卜", new Pair<Integer, Integer>(1,4));
         requiredIngredients_consomme.put("鸡腿", new Pair<Integer, Integer>(1,4));
         requiredIngredients_consomme.put("肉", new Pair<Integer, Integer>(2,4));
-        requiredIngredients_consomme.put("sclaria", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_consomme.put("kekik", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_consomme.put("鼠尾草", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_consomme.put("百里香", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_paidakia = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_paidakia.put("肉", new Pair<Integer, Integer>(1,5));
         requiredIngredients_paidakia.put("vinegar", new Pair<Integer, Integer>(1,4));
+<<<<<<< HEAD
         requiredIngredients_paidakia.put("sclaria", new Pair<Integer, Integer>(1,4));
+=======
+        requiredIngredients_paidakia.put("鼠尾草", new Pair<Integer, Integer>(1,4));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
         requiredIngredients_paidakia.put("橄榄油", new Pair<Integer, Integer>(1,2));
         requiredIngredients_paidakia.put("potato", new Pair<Integer, Integer>(1,6));
-        requiredIngredients_paidakia.put("kekik", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_paidakia.put("百里香", new Pair<Integer, Integer>(1,2));
         requiredIngredients_paidakia.put("lemon", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_kushari = new HashMap<String, Pair<Integer, Integer>>();
@@ -578,10 +598,10 @@ public class MealForGroongo extends AbstractQuest {
         // All not-yet-existing ingredients commented out for testing purposes
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_brigadeiro = new HashMap<String, Pair<Integer, Integer>>();
-        requiredIngredients_brigadeiro.put("milk", new Pair<Integer, Integer>(1,4));
-        requiredIngredients_brigadeiro.put("sugar", new Pair<Integer, Integer>(2,4));
-        requiredIngredients_brigadeiro.put("butter", new Pair<Integer, Integer>(2,4));
-        //requiredIngredients_brigadeiro.put("coconut", new Pair<Integer, Integer>(1,2)); // will be cacao pod... monkeys?
+        requiredIngredients_brigadeiro.put("牛奶", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_brigadeiro.put("糖块", new Pair<Integer, Integer>(2,4));
+        requiredIngredients_brigadeiro.put("奶油", new Pair<Integer, Integer>(2,4));
+        //requiredIngredients_brigadeiro.put("椰子", new Pair<Integer, Integer>(1,2)); // will be cacao pod... monkeys?
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_macedonia = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_macedonia.put("香蕉", new Pair<Integer, Integer>(1,6));
@@ -590,40 +610,40 @@ public class MealForGroongo extends AbstractQuest {
         requiredIngredients_macedonia.put("西瓜", new Pair<Integer, Integer>(1,2));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_slagroomtart = new HashMap<String, Pair<Integer, Integer>>();
-        requiredIngredients_slagroomtart.put("milk", new Pair<Integer, Integer>(1,4));
-        requiredIngredients_slagroomtart.put("sugar", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_slagroomtart.put("牛奶", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_slagroomtart.put("糖块", new Pair<Integer, Integer>(1,2));
         requiredIngredients_slagroomtart.put("egg", new Pair<Integer, Integer>(2,4));
         //requiredIngredients_slagroomtart.put("菠萝", new Pair<Integer, Integer>(1,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_vatrushka = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_vatrushka.put("面粉", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_vatrushka.put("sugar", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_vatrushka.put("糖块", new Pair<Integer, Integer>(1,4));
         requiredIngredients_vatrushka.put("干酪", new Pair<Integer, Integer>(1,8));
         requiredIngredients_vatrushka.put("樱桃", new Pair<Integer, Integer>(1,10));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_cake = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_cake.put("面粉", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_cake.put("sugar", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_cake.put("糖块", new Pair<Integer, Integer>(1,4));
         requiredIngredients_cake.put("干酪", new Pair<Integer, Integer>(1,8));
         requiredIngredients_cake.put("胡萝卜", new Pair<Integer, Integer>(1,10));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_tarte = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_tarte.put("面粉", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_tarte.put("sugar", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_tarte.put("糖块", new Pair<Integer, Integer>(1,4));
         requiredIngredients_tarte.put("chocolate", new Pair<Integer, Integer>(1,6));
-        requiredIngredients_tarte.put("milk", new Pair<Integer, Integer>(2,4));
+        requiredIngredients_tarte.put("牛奶", new Pair<Integer, Integer>(2,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_kirschtorte = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_kirschtorte.put("面粉", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_kirschtorte.put("sugar", new Pair<Integer, Integer>(1,4));
-        requiredIngredients_kirschtorte.put("butter", new Pair<Integer, Integer>(1,4));
-        requiredIngredients_kirschtorte.put("milk", new Pair<Integer, Integer>(2,4));
+        requiredIngredients_kirschtorte.put("糖块", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_kirschtorte.put("奶油", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_kirschtorte.put("牛奶", new Pair<Integer, Integer>(2,4));
 
         final HashMap<String, Pair<Integer, Integer>> requiredIngredients_gulab = new HashMap<String, Pair<Integer, Integer>>();
         requiredIngredients_gulab.put("面粉", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_gulab.put("fierywater", new Pair<Integer, Integer>(1,2));
-        requiredIngredients_gulab.put("sugar", new Pair<Integer, Integer>(1,4));
-        requiredIngredients_gulab.put("honey", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_gulab.put("沸水", new Pair<Integer, Integer>(1,2));
+        requiredIngredients_gulab.put("糖块", new Pair<Integer, Integer>(1,4));
+        requiredIngredients_gulab.put("蜂蜜", new Pair<Integer, Integer>(1,4));
 
         final HashMap<String, HashMap<String, Pair<Integer, Integer>>> requiredIngredientsForDessert =
                 new HashMap<String, HashMap<String, Pair<Integer, Integer>>>();
@@ -1660,13 +1680,13 @@ public class MealForGroongo extends AbstractQuest {
                     final int amountOfMoneys = Rand.randUniform(1000, 1500);
                     final int amountOfPies = Rand.randUniform(10, 15);
                     final StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem("money");
-                    final StackableItem pie = (StackableItem) SingletonRepository.getEntityManager().getItem("pie");
+                    final StackableItem pie = (StackableItem) SingletonRepository.getEntityManager().getItem("馅饼");
                     money.setQuantity(amountOfMoneys);
                     pie.setQuantity(amountOfPies);
 
                     npc.say("Here, take " +
                         amountOfPies + " " +
-                         "pie" +
+                         "馅饼" +
                         " and " +
                         amountOfMoneys + " " +
                          "money" +

@@ -4,7 +4,7 @@
 
   <item name="rhosyd">
     <type class="flower" subclass="exotic_flower" tileid="-1"/>
-    <description>You see a beautiful and rare rhosyd flower.</description>
+    <description>美丽却稀有的 rhosyd 花.</description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
     <attributes>
     </attributes>
@@ -15,14 +15,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
 
   <item name="玫瑰">
     <type class="flower" subclass="rose" tileid="-1"/>
-    <description>You see a single red 玫瑰. It smells heavenly.</description>
+    <description>一支 玫瑰. 有一种梦幻般的香味.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -35,14 +35,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item> 
 
   <item name="紫丁香">
     <type class="flower" subclass="lilia" tileid="-1"/>
-    <description>You see a 紫丁香, a single precious bloom.</description>
+    <description>紫丁香, 天国之花.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -55,14 +55,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
 
   <item name="雏菊">
     <type class="flower" subclass="daisies" tileid="-1"/>
-    <description>You see a bunch of 雏菊. They are cheap and cheerful!</description>
+    <description>一束雏菊. 虽然便宜却开得很灿烂!</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -75,14 +75,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
 
   <item name="三色堇">
     <type class="flower" subclass="pansy" tileid="-1"/>
-    <description>You see a 三色堇, so colorful and beautiful.</description>
+    <description>一束 三色堇, 颜色多变很美丽.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -95,14 +95,14 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>
 
   <item name="马蹄莲">
     <type class="flower" subclass="zantedeschia" tileid="-1"/>
-    <description>You see a 马蹄莲, a delicate bloom with the sweetest fragrance.</description>
+    <description>一朵 马蹄莲, 花开得娇魅, 散发着甜甜的香味.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -115,7 +115,7 @@
       <slot name="content"/>
       <slot name="lhand"/>
       <slot name="rhand"/>
-      <slot name="bag"/>
+      <slot name="背包"/>
       <slot name="trade"/>
     </equipable>
   </item>

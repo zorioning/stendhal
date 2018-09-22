@@ -22,7 +22,6 @@ import games.stendhal.server.core.engine.SingletonRepository;
 import games.stendhal.server.core.engine.StendhalRPZone;
 import games.stendhal.server.core.pathfinder.FixedPath;
 import games.stendhal.server.core.pathfinder.Node;
-import games.stendhal.server.entity.CollisionAction;
 import games.stendhal.server.entity.npc.ConversationStates;
 import games.stendhal.server.entity.npc.ShopList;
 import games.stendhal.server.entity.npc.SpeakerNPC;
@@ -79,7 +78,7 @@ public class WitchNPC implements ZoneConfigurator {
 				addJob("I'm a witch, since you ask. I grow #甘蓝 as a hobby.");
 				addReply("甘蓝",	"That cabbage in the pot. Be careful of it!");
 				/*
-				 * addHelp("You may want to buy some potions or do some #task
+				 * addHelp("You may want to buy some 治疗济s or do some #task
 				 * for me.");
 				 */
 				addHelp("I can #heal you, and I can #offer you powerful #scrolls that are #magic.");
@@ -115,7 +114,6 @@ public class WitchNPC implements ZoneConfigurator {
 
 		npc.setEntityClass("witchnpc");
 		npc.setPosition(24, 7);
-		npc.setCollisionAction(CollisionAction.STOP);
 		npc.initHP(100);
 		npc.setDescription("You see Jynath, the witch. She is riding on a broom.");
 		npc.setSounds(Arrays.asList("witch-cackle-1"));

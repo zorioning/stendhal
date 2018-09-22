@@ -55,11 +55,11 @@ public class TimeUtil {
 			return;
 		}
 
-		if (approxUnit(sbuf, seconds, SECONDS_IN_HOUR, "时")) {
+		if (approxUnit(sbuf, seconds, SECONDS_IN_HOUR, "小时")) {
 			return;
 		}
 
-		if (approxUnit(sbuf, seconds, SECONDS_IN_MINUTE, "分")) {
+		if (approxUnit(sbuf, seconds, SECONDS_IN_MINUTE, "分钟")) {
 			return;
 		}
 
@@ -97,26 +97,27 @@ public class TimeUtil {
 			sbuf.append(count);
 		} else if (remainder >= (size * 3 / 4)) {
 			count++;
-			sbuf.append("只有不到 ");
-			sbuf.append(count);
+			sbuf.append("还剩大约不到 ");
+			sbuf.append(count+1);
+			sbuf.append(name);
 		} else if (remainder >= (size * 1 / 4)) {
-			sbuf.append("大约 ");
-			sbuf.append(count);
-			sbuf.append(" 和一半");
-
+			sbuf.append("还剩大约 ");
+			sbuf.append(count);		
+			sbuf.append(name);
+			sbuf.append(" 多");
 			/*
 			 * Force plural context (e.g. "1 and a half moments")
 			 */
 			count = 2;
 		} else if (remainder >= (size * 5 / 100)) {
-			sbuf.append("只有超过 ");
+			sbuf.append("还要 ");
 			sbuf.append(count);
+			sbuf.append(name);
 		} else {
 			sbuf.append(count);
+			sbuf.append(name);
 		}
-
 		sbuf.append(' ');
-		sbuf.append(name);
 		return true;
 	}
 
@@ -211,8 +212,7 @@ public class TimeUtil {
 			}
 
 			sbuf.append(count);
-			sbuf.append(" 时");
-//			sbuf.append(" 时"));
+			sbuf.append(" 小时");
 		}
 		count = seconds / SECONDS_IN_MINUTE;
 		if (count != 0) {
@@ -225,7 +225,7 @@ public class TimeUtil {
 			}
 
 			sbuf.append(count);
-			sbuf.append(" 分");
+			sbuf.append(" 分钟");
 //			sbuf.append(Grammar.plnoun(count, "minute"));
 		}
 

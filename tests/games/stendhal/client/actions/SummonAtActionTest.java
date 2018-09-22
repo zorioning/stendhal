@@ -66,7 +66,7 @@ public class SummonAtActionTest {
 			public void send(final RPAction action) {
 				assertEquals("summonat", action.get("type"));
 				assertEquals("player", action.get("target"));
-				assertEquals("bag", action.get("slot"));
+				assertEquals("背包", action.get("slot"));
 				assertEquals(1, action.getInt("amount"));
 				assertEquals("5x", action.get("item"));
 			}
@@ -75,7 +75,7 @@ public class SummonAtActionTest {
 		final SummonAtAction action = new SummonAtAction();
 
 		// issue "/summonat bag 5x money"
-		assertTrue(action.execute(new String[]{"player", "bag", "5x"}, "money"));
+		assertTrue(action.execute(new String[]{"player", "背包", "5x"}, "money"));
 
 		assertEquals("Invalid amount: 5x", getInterface().getLastEventLine());
 	}
@@ -91,7 +91,7 @@ public class SummonAtActionTest {
 			public void send(final RPAction action) {
 				assertEquals("summonat", action.get("type"));
 				assertEquals("player", action.get("target"));
-				assertEquals("bag", action.get("slot"));
+				assertEquals("背包", action.get("slot"));
 				assertEquals(5, action.getInt("amount"));
 				assertEquals("money", action.get("item"));
 			}
@@ -99,7 +99,7 @@ public class SummonAtActionTest {
 
 		// issue "/summonat bag 5 money"
 		final SummonAtAction action = new SummonAtAction();
-		assertTrue(action.execute(new String[]{"player", "bag", "5"}, "money"));
+		assertTrue(action.execute(new String[]{"player", "背包", "5"}, "money"));
 		assertNull(getInterface().getLastEventLine());
 	}
 
@@ -114,7 +114,7 @@ public class SummonAtActionTest {
 			public void send(final RPAction action) {
 				assertEquals("summonat", action.get("type"));
 				assertEquals("player", action.get("target"));
-				assertEquals("bag", action.get("slot"));
+				assertEquals("背包", action.get("slot"));
 				assertEquals(1, action.getInt("amount"));
 				assertEquals("silver sword", action.get("item"));
 			}
@@ -122,7 +122,7 @@ public class SummonAtActionTest {
 
 		// issue "/summonat bag silver sword"
 		final SummonAtAction action = new SummonAtAction();
-		assertTrue(action.execute(new String[]{"player", "bag", "silver"}, "sword"));
+		assertTrue(action.execute(new String[]{"player", "背包", "silver"}, "sword"));
 		assertNull(getInterface().getLastEventLine());
 	}
 
@@ -155,12 +155,20 @@ public class SummonAtActionTest {
 			public void send(final RPAction action) {
 				assertEquals("summonat", action.get("type"));
 				assertEquals("memem", action.get("target"));
-				assertEquals("bag", action.get("slot"));
+				assertEquals("背包", action.get("slot"));
 				assertEquals(3, action.getInt("amount"));
+<<<<<<< HEAD
 				assertEquals("大治疗济", action.get("item"));
 			}
 		};
 		SlashActionRepository.register();
 		ChatLineParser.parseAndHandle("/summonat memem bag 3 大治疗济");
+=======
+				assertEquals("大治疗剂", action.get("item"));
+			}
+		};
+		SlashActionRepository.register();
+		ChatLineParser.parseAndHandle("/summonat memem bag 3 大治疗剂");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	}
 }

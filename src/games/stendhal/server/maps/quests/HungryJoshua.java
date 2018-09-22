@@ -61,7 +61,7 @@ import games.stendhal.server.maps.Region;
  * REWARD:
  * <ul>
  * <li> 200 XP</li>
- * <li> Karma: 10</li>
+ * <li> Karma: 12 total (10 + 2)</li>
  * <li> ability to use the keyring</li>
  * </ul>
  *
@@ -146,7 +146,7 @@ public class HungryJoshua extends AbstractQuest {
 			null,
 			ConversationStates.ATTENDING,
 			"谢谢你. 见到他时说 #食物 或 #三明治 ，让他知道你并不只是个顾客.",
-			new SetQuestAction(QUEST_SLOT, "start"));
+			new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 2.0));
 
 		npc.add(
 			ConversationStates.QUEST_OFFERED,
@@ -247,9 +247,9 @@ public class HungryJoshua extends AbstractQuest {
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		if (System.getProperty("stendhal.container") != null) {
 			reward.add(new CreateSlotAction(ImmutableList.of("belt", "back")));
-			reward.add(new EquipItemAction("keyring", 1, true));
+			reward.add(new EquipItemAction("钥匙环", 1, true));
 		} else {
-			reward.add(new EnableFeatureAction("keyring"));
+			reward.add(new EnableFeatureAction("钥匙环"));
 		}
 		/** Complete the quest */
 		npc.add(

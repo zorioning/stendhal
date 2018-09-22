@@ -29,7 +29,7 @@ import games.stendhal.server.entity.npc.behaviour.impl.SellerBehaviour;
  * Builds 卡尔, the farmer NPC.
  * He gives 马尾鬃 needed for the BowsForOuchit quest
  * He gives help to newcomers about the area
- * He suggests you can buy milk from his wife Philomena
+ * He suggests you can buy 牛奶 from his wife Philomena
  * @author kymara
  */
 public class FarmerNPC implements ZoneConfigurator {
@@ -73,7 +73,7 @@ public class FarmerNPC implements ZoneConfigurator {
 			protected void createDialog() {
 				addGreeting("Heyho! Nice to see you here at our farm.");
 				addJob("Oh, working here is hard, I don't think that you can help me here.");
-				addOffer("Our milk is really tasty. Ask my wife #Philomena for some.");
+				addOffer("Our 牛奶 is really tasty. Ask my wife #Philomena for some.");
 				addReply("Philomena","She's in the farm house just south west from here.");
 				addHelp("You need help? I can tell you a bit about the #neighborhood.");
 				addReply("neighborhood.","In the north is a cave with bears and other creatures. If you go to the north-east " +
@@ -81,9 +81,9 @@ public class FarmerNPC implements ZoneConfigurator {
 						"still live there? You want to go south-east? Well.. you can reach Ados there too, but I think the " +
 						"way is a bit harder.");
 				addQuest("I don't have time for those things, sorry. Working.. working.. working..");
-				addReply("empty sack","Oh, I got plenty of those to sell. Ask me for an #offer.");
+				addReply("空布袋","Oh, I got plenty of those to sell. Ask me for an #offer.");
                 final Map<String, Integer> offerings = new HashMap<String, Integer>();
-                offerings.put("empty sack", 10);
+                offerings.put("空布袋", 10);
                 new SellerAdder().addSeller(this, new SellerBehaviour(offerings));
 				addGoodbye("Bye bye. Be careful on your way.");
 			}

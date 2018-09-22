@@ -73,7 +73,7 @@ class GettingTools {
 
 		// player asks about scissors. they will need a random number of eggshells plus the metal
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("scissors", "magical", "magical scissors", "ida", "mithril", "cloak", "黑曜石斗篷"),
+			Arrays.asList("scissors", "magical", "magical scissors", "ida", "mithril", "cloak", "密银斗篷"),
 			new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_scissors"),
 			ConversationStates.ATTENDING,
 			null,
@@ -89,7 +89,7 @@ class GettingTools {
 
 		// player needs eggshells
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("scissors", "magical", "magical scissors", "ida", "mithril", "cloak", "黑曜石斗篷"),
+			Arrays.asList("scissors", "magical", "magical scissors", "ida", "mithril", "cloak", "密银斗篷"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "need_eggshells"),
 			ConversationStates.SERVICE_OFFERED,
 			"So, did you bring the items I need for the magical scissors?", null);
@@ -145,7 +145,7 @@ class GettingTools {
 
 		// player returns while hogart is making scissors or has made them
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("scissors", "magical", "magical scissors", "ida", "mithril", "cloak", "黑曜石斗篷"),
+			Arrays.asList("scissors", "magical", "magical scissors", "ida", "mithril", "cloak", "密银斗篷"),
 			new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "makingscissors;"),
 			ConversationStates.ATTENDING, null, new ChatAction() {
 				@Override
@@ -182,10 +182,14 @@ class GettingTools {
 
 		// offer eggshells when prompted
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("eggshells", "magical", "附魔蛋壳", "scissors", "hogart", "ida", "cloak", "黑曜石斗篷", "specials"),
+				Arrays.asList("eggshells", "magical", "附魔蛋壳", "scissors", "hogart", "ida", "cloak", "密银斗篷", "specials"),
 				new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "need_eggshells"),
 				ConversationStates.QUEST_ITEM_QUESTION,
+<<<<<<< HEAD
 				"Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every " + Integer.toString(REQUIRED_POISONS) + " 病毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?",
+=======
+				"Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every " + Integer.toString(REQUIRED_POISONS) + " 痍毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?",
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				null);
 
 		// respond to question of how many eggshells are desired. terry expects a number or some kind
@@ -199,11 +203,19 @@ class GettingTools {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 
                         final int required = (sentence.getNumeral().getAmount());
+<<<<<<< HEAD
 						if (player.drop("病毒", required * REQUIRED_POISONS)) {
 							npc.say("Ok, here's your " + Integer.toString(required) + " eggshells. Enjoy!");
 							new EquipItemAction("附魔蛋壳", required, true).fire(player, sentence, npc);
 						} else {
 							npc.say("Ok, ask me again when you have " + Integer.toString(required * REQUIRED_POISONS) + " 病毒s with you.");
+=======
+						if (player.drop("痍毒", required * REQUIRED_POISONS)) {
+							npc.say("Ok, here's your " + Integer.toString(required) + " eggshells. Enjoy!");
+							new EquipItemAction("附魔蛋壳", required, true).fire(player, sentence, npc);
+						} else {
+							npc.say("Ok, ask me again when you have " + Integer.toString(required * REQUIRED_POISONS) + " 痍毒s with you.");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 						}
 					}
 				});
@@ -224,7 +236,7 @@ class GettingTools {
 
 		// take scissors and ask for needle now
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("scissors", "magical", "magical scissors", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("scissors", "magical", "magical scissors", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "got_scissors"), new PlayerHasItemWithHimCondition("magical scissors")),
 				ConversationStates.ATTENDING,
 				"You brought those magical scissors! Excellent! Now that I can cut the fabric I need a magical needle. You can buy one from a trader in the abandoned keep of Ados mountains, #Ritati Dragon something or other. Just go to him and ask for his 'specials'.",
@@ -237,7 +249,7 @@ class GettingTools {
 
 		// remind about scissors
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("scissors", "magical", "magical scissors", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("scissors", "magical", "magical scissors", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new OrCondition(
 								new QuestInStateCondition(mithrilcloak.getQuestSlot(), "need_scissors"),
 								new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "need_eggshells;"),
@@ -274,7 +286,7 @@ class GettingTools {
 
 		// ask for joke when prompted for needle
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("needle", "magical", "magical needle", "ida", "cloak", "黑曜石斗篷", "specials"),
+				Arrays.asList("needle", "magical", "magical needle", "ida", "cloak", "密银斗篷", "specials"),
 				new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "need_needle"),
 				ConversationStates.ATTENDING,
 				"Ok, but I have a little rule: never do important business with someone unless"
@@ -349,7 +361,7 @@ class GettingTools {
 
 		// offer needle when prompted if they already told a joke
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("needle", "magical", "magical needle", "ida", "cloak", "黑曜石斗篷", "specials"),
+				Arrays.asList("needle", "magical", "magical needle", "ida", "cloak", "密银斗篷", "specials"),
 				new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "told_joke"),
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"I have some magical needles but they cost a pretty penny, "
@@ -387,7 +399,7 @@ class GettingTools {
 
 		// specials response for if the queststate condition is not met
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("needle", "magical", "magical needle", "ida", "cloak", "黑曜石斗篷", "specials"),
+				Arrays.asList("needle", "magical", "magical needle", "ida", "cloak", "密银斗篷", "specials"),
 				null,
 				ConversationStates.ATTENDING,
 				"The time will come when you will need my specials, but that time is not now.",
@@ -401,7 +413,7 @@ class GettingTools {
 
 		// player brings needle for first or subsequent time
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("needle", "magical needle", "magical", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("needle", "magical needle", "magical", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new AndCondition(new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "told_joke"), new PlayerHasItemWithHimCondition("magical needle")),
 				ConversationStates.ATTENDING,
 				null,
@@ -436,7 +448,7 @@ class GettingTools {
 
 		// remind about needle
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("needle", "magical needle", "magical", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("needle", "magical needle", "magical", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new OrCondition(new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "need_needle"),
 								new AndCondition(
 									new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "told_joke"),
@@ -456,7 +468,7 @@ class GettingTools {
 		// the second number is the number of needles that she's still going to use - player doesn't know number
 
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("magical", "mithril", "cloak", "黑曜石斗篷", "task", "quest"),
+				Arrays.asList("magical", "mithril", "cloak", "密银斗篷", "task", "quest"),
 				new QuestStateStartsWithCondition(mithrilcloak.getQuestSlot(), "sewing;"),
 				ConversationStates.ATTENDING, null, new ChatAction() {
 						@Override

@@ -112,6 +112,7 @@ public class KoboldishTorcibud extends AbstractQuest {
     // a template of the items that wrviliza will ask for the quest,
     // it is only used to initialize the triggers in phase_2.
     private static final String REQUIRED_ITEMS_TEMPLATE =
+<<<<<<< HEAD
         "eared bottle=0;" +
         "slim bottle=0;" +
         "mandragora=0;" +
@@ -120,6 +121,16 @@ public class KoboldishTorcibud extends AbstractQuest {
         "sclaria=0;" +
         "kekik=0;" +
         "fierywater=0";
+=======
+        "耳瓶=0;" +
+        "细瓶子=0;" +
+        "曼德拉草=0;" +
+        "洋蓟=0;" +
+        "海芋=0;" +
+        "鼠尾草=0;" +
+        "百里香=0;" +
+        "沸水=0";
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
     @Override
     public void addToWorld() {
@@ -239,6 +250,7 @@ public class KoboldishTorcibud extends AbstractQuest {
 		int required_mandragora = Rand.randUniform(1,3) + pLevel / FACTOR_MANDRAGORA;
 
         return
+<<<<<<< HEAD
             "eared bottle=" + required_bottle_eared + ";" +
             "slim bottle=" + required_bottle_slim + ";" +
             "mandragora=" + required_mandragora + ";" +
@@ -247,6 +259,16 @@ public class KoboldishTorcibud extends AbstractQuest {
             "sclaria=" + Rand.roll1D6() + ";" +
             "kekik=" + Rand.roll1D6() + ";" +
             "fierywater=" + Rand.roll1D6() + ";";
+=======
+            "耳瓶=" + required_bottle_eared + ";" +
+            "细瓶子=" + required_bottle_slim + ";" +
+            "曼德拉草=" + required_mandragora + ";" +
+            "洋蓟=" + Rand.roll1D6() + ";" +
+            "海芋=" + Rand.roll1D6() + ";" +
+            "鼠尾草=" + Rand.roll1D6() + ";" +
+            "百里香=" + Rand.roll1D6() + ";" +
+            "沸水=" + Rand.roll1D6() + ";";
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     }
 
     /**
@@ -315,7 +337,11 @@ public class KoboldishTorcibud extends AbstractQuest {
                 new QuestNotStartedCondition(QUEST_SLOT),
                 new QuestInStateCondition(QUEST_SLOT, "rejected")),
             ConversationStates.QUEST_OFFERED,
+<<<<<<< HEAD
             "Wrof! Some bottles, 菜蓟s, a few herbs and fierywater... Things like that. So, will you help?",
+=======
+            "Wrof! Some bottles, 洋蓟s, a few herbs and 沸水... Things like that. So, will you help?",
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
             null);
 
         // Player accepts the quest and gets to know what Wrviliza needs (switch to phase_2)
@@ -377,9 +403,15 @@ public class KoboldishTorcibud extends AbstractQuest {
             "Wrof! Welcome back. Did you gather any #stuff for me?",
             null);
 
+<<<<<<< HEAD
         // Player is curious about 菜蓟s
         npc.add(ConversationStates.ATTENDING,
             Arrays.asList("菜蓟","菜蓟s"),
+=======
+        // Player is curious about 洋蓟s
+        npc.add(ConversationStates.ATTENDING,
+            Arrays.asList("洋蓟","洋蓟s"),
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! Not so common vegetables,"
@@ -387,9 +419,9 @@ public class KoboldishTorcibud extends AbstractQuest {
                 + " near 塞门镇.",
             null);
 
-        // Player is curious about fierywater
+        // Player is curious about 沸水
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("fierywater"),
+            Arrays.asList("沸水"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wroof! Powerful fluid, that is."
@@ -398,15 +430,15 @@ public class KoboldishTorcibud extends AbstractQuest {
 
         // Player is curious about herbs
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("arandula","sclaria","kekik"),
+            Arrays.asList("海芋","鼠尾草","百里香"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! Common herb that grow outside in the plains or woods... Easy to spot!",
             null);
 
-        // Player is curious about mandragora
+        // Player is curious about 曼德拉草
         npc.add(ConversationStates.ATTENDING,
-            Arrays.asList("mandragora"),
+            Arrays.asList("曼德拉草"),
             new QuestActiveCondition(QUEST_SLOT),
             ConversationStates.ATTENDING,
             "Wrof! All I know is that it is rare root that grows better outside in the woods,"
@@ -445,12 +477,12 @@ public class KoboldishTorcibud extends AbstractQuest {
                 final StackableItem
                     koboldish_torcibud_vsop = (StackableItem)
                         SingletonRepository
-                            .getEntityManager().getItem("vsop koboldish torcibud");
+                            .getEntityManager().getItem("强康复药");
                 final int torcibud_bottles = 1 + Rand.roll1D6();
                 koboldish_torcibud_vsop.setQuantity(torcibud_bottles);
                 koboldish_torcibud_vsop.setBoundTo(player.getName());
                 // vsop torcibud will heal up to 75% of the player's base HP he has when getting rewarded
-                // all vsop koboldish torcibud is persistent (set in the xml for this item) so this value will last
+                // all 强康复药 is persistent (set in the xml for this item) so this value will last
                 koboldish_torcibud_vsop.put("amount", player.getBaseHP()*75/100);
 
                 //player.equipOrPutOnGround(koboldish_torcibud_vsop);

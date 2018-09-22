@@ -67,9 +67,15 @@ public class LifeguardNPC implements ZoneConfigurator {
 				// stuff needed for the SuntanCreamForZara quest
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
+<<<<<<< HEAD
 				requiredResources.put("arandula", 1);
 				requiredResources.put("kokuda", 1);
 				requiredResources.put("小治疗济", 1);
+=======
+				requiredResources.put("海芋", 1);
+				requiredResources.put("科科达", 1);
+				requiredResources.put("小治疗剂", 1);
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 				final ProducerBehaviour mixerBehaviour = new ProducerBehaviour("pamela_mix_cream",
 						"mix", "suntan cream", requiredResources, 10 * 60);
@@ -80,13 +86,17 @@ public class LifeguardNPC implements ZoneConfigurator {
 				        Arrays.asList("suntan", "cream", "suntan cream"),
 				        "David's and mine suntan cream is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special suntan cream for you.");
 
-				addReply("arandula", "Arandula is a herb which is growing around 塞门镇.");
+				addReply("海芋", "海芋 is a herb which is growing around 塞门镇.");
 
 				addReply(
-				        "kokuda",
-				        "We can't find the Kokuda herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.");
+				        "科科达",
+				        "We can't find the 科科达 herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.");
 
+<<<<<<< HEAD
 				addReply("小治疗济", "It's a small bottle full of potion. You can buy it at several places.");
+=======
+				addReply("小治疗剂", "It's a small bottle full of 治疗济. You can buy it at several places.");
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			}
 		};
 

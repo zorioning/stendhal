@@ -51,7 +51,11 @@ import games.stendhal.server.maps.Region;
  *
  * STEPS:
  * <ul>
+<<<<<<< HEAD
  * <li>Rudolph asks you for some reindeer moss, 胡萝卜s and 苹果s.</li>
+=======
+ * <li>Rudolph asks you for some 石蕊, carrots and 苹果s.</li>
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
  * <li>You get his goodies by collecting them from around 塞门镇..</li>
  * <li>Rudolph sees you have collected goodies and asks for them and then thanks you.</li>
  * </ul>
@@ -76,7 +80,11 @@ public class GoodiesForRudolph extends AbstractQuest {
 	private static final int REQUIRED_MONTHS = 11;
 	private static final int REQUIRED_MINUTES = 60 * 24 * 30 * REQUIRED_MONTHS;
 
+<<<<<<< HEAD
 	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in 塞门镇. If you get 5 reindeer moss, 10 苹果s and 10 胡萝卜s, I'll give you a reward.";
+=======
+	private static final String RUDOLPH_TALK_QUEST_ACCEPT = "I heard about the wonderful #goodies you have here in 塞门镇. If you get 5 石蕊, 10 苹果s and 10 胡萝卜s, I'll give you a reward.";
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	private static final String RUDOLPH_TALK_QUEST_OFFER = "I want some delicious goodies only you can help me get. Do you think you can help me?";
 
 	@Override
@@ -96,7 +104,11 @@ public class GoodiesForRudolph extends AbstractQuest {
 		if (player.isQuestInState(QUEST_SLOT, 0, "start", "done")) {
 			res.add("I promised to find goodies for him because he is a nice reindeer.");
 		}
+<<<<<<< HEAD
 		if ("start".equals(questState) && player.isEquipped("reindeer moss", 5)  && player.isEquipped("胡萝卜", 10) && player.isEquipped("苹果", 10) || "done".equals(questState)) {
+=======
+		if ("start".equals(questState) && player.isEquipped("石蕊", 5)  && player.isEquipped("胡萝卜", 10) && player.isEquipped("苹果", 10) || "done".equals(questState)) {
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			res.add("I got all the goodies and will take them to Rudolph.");
 		}
 		if (isCompleted(player)) {
@@ -159,7 +171,11 @@ public class GoodiesForRudolph extends AbstractQuest {
 			Arrays.asList("goodies"),
 			null,
 			ConversationStates.ATTENDING,
+<<<<<<< HEAD
 			"Reindeer moss is a pale green patch of wonderfulness which grows all around this city. 苹果s are found at the farm to the east of the city, and 胡萝卜s are to the 东北： of the city.",
+=======
+			"石蕊 is a pale green patch of wonderfulness which grows all around this city. 苹果s are found at the farm to the east of the city, and 胡萝卜s are to the 东北： of the city.",
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			null);
 	}
 
@@ -171,7 +187,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new AndCondition(
-					new PlayerHasItemWithHimCondition("reindeer moss", 5),
+					new PlayerHasItemWithHimCondition("石蕊", 5),
 					new PlayerHasItemWithHimCondition("苹果", 10),
 					new PlayerHasItemWithHimCondition("胡萝卜", 10))),
 			ConversationStates.QUEST_ITEM_BROUGHT,
@@ -182,7 +198,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 			new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				new NotCondition(new AndCondition(
-					new PlayerHasItemWithHimCondition("reindeer moss", 5),
+					new PlayerHasItemWithHimCondition("石蕊", 5),
 					new PlayerHasItemWithHimCondition("苹果", 10),
 					new PlayerHasItemWithHimCondition("胡萝卜", 10)))),
 			ConversationStates.ATTENDING,
@@ -190,7 +206,11 @@ public class GoodiesForRudolph extends AbstractQuest {
 			null);
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
+<<<<<<< HEAD
         reward.add(new DropItemAction("reindeer moss", 5));
+=======
+        reward.add(new DropItemAction("石蕊", 5));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
         reward.add(new DropItemAction("胡萝卜", 10));
         reward.add(new DropItemAction("苹果", 10));
 		reward.add(new EquipItemAction("money", 50));
@@ -209,7 +229,7 @@ public class GoodiesForRudolph extends AbstractQuest {
 			// away and then saying "yes"
 
 			new AndCondition(
-					new PlayerHasItemWithHimCondition("reindeer moss", 5),
+					new PlayerHasItemWithHimCondition("石蕊", 5),
 					new PlayerHasItemWithHimCondition("苹果", 10),
 					new PlayerHasItemWithHimCondition("胡萝卜", 10)),
 

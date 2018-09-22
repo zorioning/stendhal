@@ -64,7 +64,7 @@ class TwilightZone {
 
 		// offer moss when prompted
 		npc.add(ConversationStates.ANY,
-				Arrays.asList("moss", "magical", "twilight", "ida", "cloak", "黑曜石斗篷", "specials", "暮光苔藓"),
+				Arrays.asList("moss", "magical", "twilight", "ida", "cloak", "密银斗篷", "specials", "暮光苔藓"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"Keep it quiet will you! Yeah, I got moss, it's "
@@ -105,7 +105,7 @@ class TwilightZone {
 		final SpeakerNPC npc = npcs.get("Ida");
 		// player hasn't given elixir to lda in the twilight zone yet
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("magical", "mithril", "cloak", "黑曜石斗篷", "task", "quest", "twilight"),
+				Arrays.asList("magical", "mithril", "cloak", "密银斗篷", "task", "quest", "twilight"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
 				ConversationStates.ATTENDING,
 				"What's happening to me? I'm feverish .. I see twilight .. you can't understand unless you visit me here ... you must ask #Pdiddi how to get to the #twilight.",
@@ -116,7 +116,7 @@ class TwilightZone {
 
 		// player gave elixir and returned
 		npc.add(ConversationStates.ATTENDING,
-				Arrays.asList("magical", "mithril", "cloak", "黑曜石斗篷", "task", "quest", "twilight", "elixir"),
+				Arrays.asList("magical", "mithril", "cloak", "密银斗篷", "task", "quest", "twilight", "elixir"),
 				new QuestInStateCondition(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
 				ConversationStates.ATTENDING,
 				"When I was sick I got behind on my other jobs. I promised #Josephine I'd make her a stripey cloak but I have no time. So please, I'm relying on you to buy one and take it to her. They sell 蓝色条纹斗篷s in Ados abandoned keep. Thank you!",
@@ -131,7 +131,11 @@ class TwilightZone {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc2.getName()),
 						new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
+<<<<<<< HEAD
 						new NotCondition(new PlayerHasItemWithHimCondition("荧光药济"))),
+=======
+						new NotCondition(new PlayerHasItemWithHimCondition("莹光药剂"))),
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				ConversationStates.IDLE,
 				"I'm sick .. so sick .. only some powerful medicine will fix me.",
 				null);
@@ -140,7 +144,11 @@ class TwilightZone {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc2.getName()),
 						new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
+<<<<<<< HEAD
 						new PlayerHasItemWithHimCondition("荧光药济")),
+=======
+						new PlayerHasItemWithHimCondition("莹光药剂")),
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"Is that elixir for me? If #yes I will take it immediately. You must return to see me again in my normal state.",
 				 null);
@@ -148,12 +156,20 @@ class TwilightZone {
 		npc2.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.YES_MESSAGES,
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
+<<<<<<< HEAD
 								 new PlayerHasItemWithHimCondition("荧光药济")
+=======
+								 new PlayerHasItemWithHimCondition("莹光药剂")
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 								 ),
 				ConversationStates.IDLE,
 				"Thank you!",
 				new MultipleActions(
+<<<<<<< HEAD
 								new DropItemAction("荧光药济"),
+=======
+								new DropItemAction("莹光药剂"),
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 								new SetQuestAction(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
 								new TeleportAction("int_阿多斯_缝纫_店", 12, 20, Direction.DOWN)
 								)
@@ -162,7 +178,11 @@ class TwilightZone {
 		npc2.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.NO_MESSAGES,
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
+<<<<<<< HEAD
 								 new PlayerHasItemWithHimCondition("荧光药济")
+=======
+								 new PlayerHasItemWithHimCondition("莹光药剂")
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 								 ),
 				ConversationStates.IDLE,
 				"I'm getting sicker ...",

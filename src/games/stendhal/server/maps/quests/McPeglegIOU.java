@@ -32,13 +32,13 @@ import games.stendhal.server.maps.Region;
 /**
  * QUEST: McPegleg's IOU
  *
- * PARTICIPANTS: - a corpse in kanmararn - McPegleg
+ * PARTICIPANTS: - a corpse in 卡梅伦 - McPegleg
  *
- * NOTE: The corpse with contains the IOU is created in KanmararnSoldiers.java
+ * NOTE: The corpse with contains the IOU is created in 卡梅伦Soldiers.java
  * Without it this quest cannot be started (so the player won't notice the
  * problem at all).
  *
- * STEPS: - find IOU in a corpse in kanmararn - bring it to McPegleg
+ * STEPS: - find IOU in a corpse in 卡梅伦 - bring it to McPegleg
  *
  * REWARD: - 250 money
  *
@@ -53,7 +53,7 @@ public class McPeglegIOU extends AbstractQuest {
 		return QUEST_SLOT;
 	}
 	private void step_1() {
-		// find the IOU in a corpse in kanmararn.
+		// find the IOU in a corpse in 卡梅伦.
 		// this is implemented in KanmararnSoldiers
 	}
 
@@ -62,7 +62,7 @@ public class McPeglegIOU extends AbstractQuest {
 		final SpeakerNPC npc = npcs.get("McPegleg");
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("iou", "henry", "charles", "note"),
+			Arrays.asList("iou", "henry", "charles", "笔记"),
 			new QuestNotCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING, null,
 			new ChatAction() {
@@ -71,7 +71,7 @@ public class McPeglegIOU extends AbstractQuest {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					// from all notes that the player is carrying, try to
 					// find the IOU note
-					final List<Item> notes = player.getAllEquipped("note");
+					final List<Item> notes = player.getAllEquipped("笔记");
 					Item iouNote = null;
 					for (final Item note : notes) {
 						if ("charles".equalsIgnoreCase(note.getInfoString())) {
@@ -95,7 +95,7 @@ public class McPeglegIOU extends AbstractQuest {
 			});
 
 		npc.add(ConversationStates.ATTENDING,
-			Arrays.asList("iou", "henry", "charles", "note"),
+			Arrays.asList("iou", "henry", "charles", "笔记"),
 			new QuestCompletedCondition(QUEST_SLOT),
 			ConversationStates.ATTENDING,
 			"You already got cash for that damned IOU!", null);

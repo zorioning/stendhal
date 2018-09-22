@@ -80,7 +80,7 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 					}
 
 					/**
-					  * Wrviliza will sell her mild or strong koboldish torcibud
+					  * Wrviliza will sell her mild or 康复药
 					  * only when the player can afford the price and carries as many empty bottles
 					  * as the requested amount in his inventory.
 					  */
@@ -91,10 +91,10 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						int amount = res.getAmount();
 						String requiredContainer = "";
 
-						if ("mild koboldish torcibud".equals(chosenItemName)) {
-							requiredContainer = "slim bottle";
-						} else if ("strong koboldish torcibud".equals(chosenItemName)) {
-							requiredContainer = "eared bottle";
+						if ("轻康复药".equals(chosenItemName)) {
+							requiredContainer = "细瓶子";
+						} else if ("康复药".equals(chosenItemName)) {
+							requiredContainer = "耳瓶";
 						}
 
 						int price = getCharge(res, player);
@@ -102,7 +102,7 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						        price = (int) (BAD_BOY_BUYING_PENALTY * price);
 						}
 
-						if ("slim bottle".equals(requiredContainer) || "eared bottle".equals(requiredContainer)) {
+						if ("细瓶子".equals(requiredContainer) || "耳瓶".equals(requiredContainer)) {
 							if (!player.isEquipped(requiredContainer, amount) || !player.isEquipped("money", price)) {
 								seller.say("Wrauff! I can only sell you "
 									+ chosenItemName
@@ -150,11 +150,11 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
                 final int STRONG_KOBOLDISH_TORCIBUD_PRICE = 195;
 
 				final Map<String, Integer> items = new HashMap<String, Integer>();
-				//啤酒 and wine have higher than average prices here.
+				//啤酒 and 红酒 have higher than average prices here.
 				items.put("啤酒", 18);
-				items.put("wine", 25);
-				items.put("mild koboldish torcibud", MILD_KOBOLDISH_TORCIBUD_PRICE);
-				items.put("strong koboldish torcibud", STRONG_KOBOLDISH_TORCIBUD_PRICE);
+				items.put("红酒", 25);
+				items.put("轻康复药", MILD_KOBOLDISH_TORCIBUD_PRICE);
+				items.put("康复药", STRONG_KOBOLDISH_TORCIBUD_PRICE);
 
 				new SellerAdder().addSeller(this, new TorcibudSellerBehaviour(items));
 
@@ -162,11 +162,11 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 					"Wroff! Welcome into the Kobold's Den bar wanderer!"
 						+ " I'm Wrviliza, wife of #Wrvil."
 						+ " If you want me to #offer you some beverages, just say so!");
-				addJob("Wroff! I offer wine, 啤酒 and my famous #mild or #strong koboldish #torcibud.");
+				addJob("Wroff! I offer 红酒, 啤酒 and my famous #mild or #strong koboldish #torcibud.");
 				addHelp("Wruff... If you are thirsty I can #offer you some beverage. If you didn't notice, this is a bar!");
 				addGoodbye("Wroff... Goodbye and good luck!");
 
-				addReply(Arrays.asList("wine","啤酒"),
+				addReply(Arrays.asList("红酒","啤酒"),
 						"Wrof! It will quench your thirst for a few coins...");
 				addReply("mild",
 						"Wrof! Not so #strong koboldish #torcibud. Give an empty #slim #bottle and "
@@ -178,9 +178,9 @@ public class KoboldBarmaidNPC implements ZoneConfigurator {
 						"Wrof! Real stuff from a secret koboldish recipe! Ask me to #offer you some!");
 				addReply("wrvil",
 						"Wrof! He be my husband. Runs shop in northern Wo'fol...");
-				addReply("eared bottle",
+				addReply("耳瓶",
 						"Wrof! A large bottle with handles on the neck that resemble ears... It cannot be you have never seen one!");
-				addReply("slim bottle",
+				addReply("细瓶子",
 						"Wrof! A bottle narrower at bottom and a bit wider at the shoulders ... I'm sure you've seen one already!");
 
                 /**

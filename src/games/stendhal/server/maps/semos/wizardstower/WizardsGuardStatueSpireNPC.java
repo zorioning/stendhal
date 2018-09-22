@@ -156,11 +156,11 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 							"Fine. Just tell me when you want to forge a 赤魔剑.",
 							null);
 
-/**				// behavior on special item BLANK SCROLL
+/**				// behavior on special item 空白卷轴
 				add(ConversationStates.ATTENDING,
-				    Arrays.asList("blank scroll", "scrolls"),
+				    Arrays.asList("空白卷轴", "scrolls"),
 				    ConversationStates.INFORMATION_1,
-				    "I will create a blank scroll for you, but I need eight pieces of wood for that. The blank scroll can be enchanted by wizards. Do you want a blank scroll?",
+				    "I will create a 空白卷轴 for you, but I need eight pieces of wood for that. The 空白卷轴 can be enchanted by wizards. Do you want a 空白卷轴?",
 				    null);
 				add(ConversationStates.INFORMATION_1,
 					ConversationPhrases.YES_MESSAGES,
@@ -172,50 +172,50 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 					ConversationPhrases.YES_MESSAGES,
 					new PlayerHasItemWithHimCondition("木头", 8),
 					ConversationStates.ATTENDING,
-					"There is your blank scroll.",
+					"There is your 空白卷轴.",
 					new MultipleActions(
 						new DropItemAction("木头", 8),
-						new EquipItemAction("blank scroll", 1, true),
+						new EquipItemAction("空白卷轴", 1, true),
 						new IncreaseXPAction(250)));
 				add(ConversationStates.INFORMATION_1,
 					ConversationPhrases.NO_MESSAGES,
 					null,
 					ConversationStates.ATTENDING,
-					"Well, maybe later. Just tell me when you want a blank scroll.",
+					"Well, maybe later. Just tell me when you want a 空白卷轴.",
 					null);
 
 				//behavior on special item 裂缝斗篷
 				add(ConversationStates.ATTENDING,
 				    Arrays.asList("裂缝斗篷"),
 				    ConversationStates.INFORMATION_2,
-				    "I will create a 裂缝斗篷 for you, but I have to fuse a carbuncle and a sapphire in the magic. The cloak is useless in battle and will protect you only one time, when entering a magical rift."+
+				    "I will create a 裂缝斗篷 for you, but I have to fuse a 红宝石 and a 蓝宝石 in the magic. The cloak is useless in battle and will protect you only one time, when entering a magical rift."+
 					" The rift disintegrates the cloak instead of you. There is no way to get the cloak back. If you want to enter the rift again, you will need a new 裂缝斗篷. Shall I create one for you?",
 				     null);
 				add(ConversationStates.INFORMATION_2,
 					ConversationPhrases.YES_MESSAGES,
 					new AndCondition(
-							new NotCondition(new PlayerHasItemWithHimCondition("carbuncle", 1)),
-							new PlayerHasItemWithHimCondition("sapphire", 1)),
+							new NotCondition(new PlayerHasItemWithHimCondition("红宝石", 1)),
+							new PlayerHasItemWithHimCondition("蓝宝石", 1)),
 					ConversationStates.ATTENDING,
-					"You don't have a carbuncle, I will need a sapphire and a carbuncle.",
+					"You don't have a 红宝石, I will need a 蓝宝石 and a 红宝石.",
 					null);
 				add(ConversationStates.INFORMATION_2,
 					ConversationPhrases.YES_MESSAGES,
 					new AndCondition(
-							new NotCondition(new PlayerHasItemWithHimCondition("sapphire", 1)),
-							new PlayerHasItemWithHimCondition("carbuncle", 1)),
+							new NotCondition(new PlayerHasItemWithHimCondition("蓝宝石", 1)),
+							new PlayerHasItemWithHimCondition("红宝石", 1)),
 					ConversationStates.ATTENDING,
-					"You don't have a sapphire, I will need a carbuncle and a sapphire.",
+					"You don't have a 蓝宝石, I will need a 红宝石 and a 蓝宝石.",
 					null);
 				add(ConversationStates.INFORMATION_2, ConversationPhrases.YES_MESSAGES,
 						new AndCondition(
-								new PlayerHasItemWithHimCondition("sapphire", 1),
-								new PlayerHasItemWithHimCondition("carbuncle", 1)),
+								new PlayerHasItemWithHimCondition("蓝宝石", 1),
+								new PlayerHasItemWithHimCondition("红宝石", 1)),
 					ConversationStates.ATTENDING,
 					"There is your 裂缝斗篷. Don't forget that it protects you only one time, before it is destroyed. So be sure that you are ready for what awaits you in the rift.",
 					new MultipleActions(
-							new DropItemAction("carbuncle", 1),
-							new DropItemAction("sapphire", 1),
+							new DropItemAction("红宝石", 1),
+							new DropItemAction("蓝宝石", 1),
 							new EquipItemAction("裂缝斗篷", 1, true),
 							new IncreaseXPAction(5000)));
 				add(ConversationStates.INFORMATION_2,

@@ -56,7 +56,7 @@ public class BarmanNPCTest {
 		engine.step(player,"buy 500 巧克力棒");
 		assertThat(getReply(dale),is("500 巧克力棒s will cost 50000. Do you want to buy them?"));
 		final Item item = ItemTestHelper.createItem("money", 50000);
-		player.getSlot("bag").add(item);
+		player.getSlot("背包").add(item);
 
 		engine.step(player,"yes");
 		assertThat(getReply(dale),is("Congratulations! Here are your 巧克力棒s!"));
@@ -70,12 +70,12 @@ public class BarmanNPCTest {
 		assertThat(getReply(dale),is("Hey, good looking ..."));
 
 		engine.step(player,"offer");
-		assertThat(getReply(dale), anyOf(equalTo("I sell wine, pina colada, and 巧克力棒."),
-				equalTo("I sell wine, 巧克力棒, and pina colada."),
-				equalTo("I sell 巧克力棒, wine, and pina colada."),
-				equalTo("I sell 巧克力棒, pina colada, and wine."),
-				equalTo("I sell pina colada, 巧克力棒, and wine."),
-				equalTo("I sell pina colada, wine, and 巧克力棒.")));
+		assertThat(getReply(dale), anyOf(equalTo("I sell 红酒, 椰林飘香, and 巧克力棒."),
+				equalTo("I sell 红酒, 巧克力棒, and 椰林飘香."),
+				equalTo("I sell 巧克力棒, 红酒, and 椰林飘香."),
+				equalTo("I sell 巧克力棒, 椰林飘香, and 红酒."),
+				equalTo("I sell 椰林飘香, 巧克力棒, and 红酒."),
+				equalTo("I sell 椰林飘香, 红酒, and 巧克力棒.")));
 
 		engine.step(player,"buy 100 chocolate");
 		assertThat(getReply(dale),is("Please specify which sort of chocolate you want to buy."));

@@ -44,7 +44,7 @@ public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 	}
 
 	public BarMaidNPCTest() {
-		setNpcNames("Margaret");
+		setNpcNames("玛格丽特");
 		setZoneForPlayer(ZONE_NAME);
 		addZoneConfigurator(new BarMaidNPC(), ZONE_NAME);
 	}
@@ -54,7 +54,7 @@ public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testHiAndBye() {
-		final SpeakerNPC npc = getNPC("Margaret");
+		final SpeakerNPC npc = getNPC("玛格丽特");
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hello"));
@@ -69,7 +69,7 @@ public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testBuyHam() {
-		final SpeakerNPC npc = getNPC("Margaret");
+		final SpeakerNPC npc = getNPC("玛格丽特");
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi"));
@@ -79,7 +79,11 @@ public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 		assertEquals("I am the bar maid for this fair tavern. You can #buy both imported and local beers, and fine food.", getReply(npc));
 
 		assertTrue(en.step(player, "offer"));
+<<<<<<< HEAD
 		assertEquals("I sell beer, wine, flask, cheese, 苹果, 胡萝卜, meat, and ham.", getReply(npc));
+=======
+		assertEquals("I sell beer, 红酒, flask, cheese, 苹果, carrot, meat, and ham.", getReply(npc));
+>>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 		assertTrue(en.step(player, "quest"));
 		assertEquals("Oh nice that you ask me. Unfortunately I have nothing to do for you.", getReply(npc));
@@ -158,14 +162,14 @@ public class BarMaidNPCTest extends ZonePlayerAndNPCTestImpl {
 	 */
 	@Test
 	public void testSellHam() {
-		final SpeakerNPC npc = SingletonRepository.getNPCList().get("Margaret");
+		final SpeakerNPC npc = SingletonRepository.getNPCList().get("玛格丽特");
 		assertNotNull(npc);
 		final Engine en = npc.getEngine();
 
-		assertTrue(en.step(player, "hi Margaret"));
+		assertTrue(en.step(player, "hi 玛格丽特"));
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 
-		// Currently there are no response to "sell" sentences defined for Margaret.
+		// Currently there are no response to "sell" sentences defined for 玛格丽特.
 		assertFalse(en.step(player, "sell"));
 	}
 
