@@ -305,12 +305,12 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint.setDescription("这里银光闪闪.");
 			break;
 		case 4:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("gold nugget", 6000);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("金砂", 6000);
 			passiveEntityrespawnPoint.setDescription("这是一些很小的薄金片");
 			break;
 		case 5:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("mithril nugget", 12000);
-			passiveEntityrespawnPoint.setDescription("我是一小块mithril nugget矿.");
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("密银矿石", 12000);
+			passiveEntityrespawnPoint.setDescription("我是一小块密银矿石矿.");
 			break;
 		default:
 			passiveEntityrespawnPoint = null;

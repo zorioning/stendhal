@@ -161,7 +161,7 @@ public class WeeklyItemQuest extends AbstractQuest {
 
 		// resource
 		items.put("mithril bar",1);
-		items.put("mithril nugget",1);
+		items.put("密银矿石",1);
 		items.put("silk gland",7);
 
 		// special

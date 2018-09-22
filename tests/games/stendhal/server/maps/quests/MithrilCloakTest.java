@@ -186,7 +186,7 @@ public class MithrilCloakTest {
 		en.step(player, "fuse");
 		assertEquals("I can only create mithril thread when you have got some silk #thread. And remember, I will know if you really need the magic performed or not.", getReply(npc));
 		en.step(player, "mithril");
-		assertEquals("Should you need it, I can #fuse mithril nuggets and silk thread together. But I don't perform this magic for just anyone... Once you have the mithril thread, it can be woven into fabric by #Whiggins.", getReply(npc));
+		assertEquals("Should you need it, I can #fuse 密银矿石s and silk thread together. But I don't perform this magic for just anyone... Once you have the mithril thread, it can be woven into fabric by #Whiggins.", getReply(npc));
 		en.step(player, "threads");
 		assertEquals("The best thread of all is light and strong, it is called #silk and it comes from the silk glands of spiders. Making the thread from the glands is a job which is messy. Wizards will not stoop so low. #Scientists are most likely to make thread if you need it.", getReply(npc));
 		en.step(player, "whiggins");
@@ -199,7 +199,7 @@ public class MithrilCloakTest {
 
 		Item item = ItemTestHelper.createItem("silk gland", 40);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("mithril nugget", 7);
+		item = ItemTestHelper.createItem("密银矿石", 7);
 		player.getSlot("背包").add(item);
 		item = ItemTestHelper.createItem("silk thread", 40);
 		player.getSlot("背包").add(item);

@@ -121,9 +121,9 @@
     </equipable>
   </item>
 
-  <item name="wool">
+  <item name="羊毛">
     <type class="resource" subclass="wool" tileid="-1"/>
-    <description>You see wool. It was recently shorn.</description>
+    <description>You see 羊毛. It was recently shorn.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -141,9 +141,9 @@
     </equipable>
   </item>
 
-  <item name="yarn">
+  <item name="线球">
     <type class="resource" subclass="yarn" tileid="-1"/>
-    <description>You see a ball of yarn. It was spun with care.</description>
+    <description>You see a ball of 线球. It was spun with care.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -181,9 +181,9 @@
     </equipable>
   </item>
 
-  <item name="gold nugget">
+  <item name="金砂">
     <type class="resource" subclass="gold_ore" tileid="-1"/>
-    <description>You see a gold nugget. Its rich golden colour shines, and it may be useful.</description>
+    <description>You see a 金砂. Its rich golden colour shines, and it may be useful.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -201,9 +201,9 @@
     </equipable>
   </item>
 
-  <item name="mithril nugget">
+  <item name="密银矿石">
     <type class="resource" subclass="mithril_ore" tileid="-1"/>
-    <description>You see a mithril nugget. Its pale silvery color shines, and it may be useful.</description>
+    <description>You see a 密银矿石. Its pale silvery color shines, and it may be useful.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

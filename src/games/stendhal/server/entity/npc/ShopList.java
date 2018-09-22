@@ -45,18 +45,6 @@ public final class ShopList {
 		shops.add("buyfood", "面粉", 25);
 		shops.add("buyfood", "大脚菇", 30);
 
-<<<<<<< HEAD
-		shops.add("healing", "antidote", 50);
-		shops.add("healing", "小治疗济", 100);
-		shops.add("healing", "potion", 250);
-		shops.add("healing", "大治疗济", 500);
-
-		shops.add("superhealing", "antidote", 50);
-		shops.add("superhealing", "greater antidote", 100);
-		shops.add("superhealing", "potion", 250);
-		shops.add("superhealing", "大治疗济", 500);
-		shops.add("superhealing", "强治疗济", 1500);
-=======
 		shops.add("healing", "抗毒药济", 50);
 		shops.add("healing", "小治疗剂", 100);
 		shops.add("healing", "治疗济", 250);
@@ -67,7 +55,6 @@ public final class ShopList {
 		shops.add("superhealing", "治疗济", 250);
 		shops.add("superhealing", "大治疗剂", 500);
 		shops.add("superhealing", "强治疗剂", 1500);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 		shops.add("scrolls", "home scroll", 250);
 		shops.add("scrolls", "召唤卷轴", 200);
@@ -184,7 +171,7 @@ public final class ShopList {
 		// more rare weapons shop (fado)
 		shops.add("buyrare2", "大战锤", 120);
 		shops.add("buyrare2", "突刺剑", 150);
-		shops.add("buyrare2", "crossbow", 175);
+		shops.add("buyrare2", "十字弩", 175);
 		shops.add("buyrare2", "巨剑", 250);
 		shops.add("buyrare2", "烈火剑", 2000);
 		shops.add("buyrare2", "冰剑", 5000);
@@ -327,11 +314,11 @@ public final class ShopList {
 		shops.add("buyarcherstuff", "金箭", 10);
 		shops.add("buyarcherstuff", "加强箭", 35);
 		shops.add("buyarcherstuff", "木弓", 250);
-		shops.add("buyarcherstuff", "crossbow", 400);
+		shops.add("buyarcherstuff", "十字弩", 400);
 		shops.add("buyarcherstuff", "longbow", 300);
 		shops.add("buyarcherstuff", "composite bow", 350);
-		shops.add("buyarcherstuff", "hunter crossbow", 800);
-		shops.add("buyarcherstuff", "mithril bow", 2000);
+		shops.add("buyarcherstuff", "猎人十字弓", 800);
+		shops.add("buyarcherstuff", "密银弓", 2000);
 
 		// selling arrows
 		shops.add("sellarrows", "木箭", 2);
@@ -344,17 +331,6 @@ public final class ShopList {
 		shops.add("buyveggiesandherbs", "胡萝卜", 5);
 		shops.add("buyveggiesandherbs", "色拉", 10);
 		shops.add("buyveggiesandherbs", "韭菜", 25);
-<<<<<<< HEAD
-		shops.add("buyveggiesandherbs", "绿花菜", 30);
-		shops.add("buyveggiesandherbs", "西葫芦", 10);
-		shops.add("buyveggiesandherbs", "白花菜", 30);
-		shops.add("buyveggiesandherbs", "西红柿", 20);
-		shops.add("buyveggiesandherbs", "洋葱", 20);
-		shops.add("buyveggiesandherbs", "arandula", 10);
-		shops.add("buyveggiesandherbs", "kokuda", 200);
-		shops.add("buyveggiesandherbs", "kekik", 25);
-		shops.add("buyveggiesandherbs", "sclaria", 25);
-=======
 		shops.add("buyveggiesandherbs", "西蓝花", 30);
 		shops.add("buyveggiesandherbs", "西葫芦", 10);
 		shops.add("buyveggiesandherbs", "洋花菜", 30);
@@ -364,7 +340,6 @@ public final class ShopList {
 		shops.add("buyveggiesandherbs", "科科达", 200);
 		shops.add("buyveggiesandherbs", "百里香", 25);
 		shops.add("buyveggiesandherbs", "鼠尾草", 25);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 		// gnome village buyer in 0 ados mountain n2 w2)
 		shops.add("buy4gnomes", "皮甲", 25);
@@ -468,17 +443,13 @@ public final class ShopList {
 		shops.add("buypoisons", "red lionfish", 50);
 		shops.add("buypoisons", "极毒", 100);
 		shops.add("buypoisons", "剧毒", 500);
-<<<<<<< HEAD
-		shops.add("buypoisons", "病毒", 2000);
-=======
 		shops.add("buypoisons", "痍毒", 2000);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 		// Should have its own shop (buytraps)
 		shops.add("buypoisons", "rodent trap", 50);
 
 		//Scuba Instructor Edward
-		shops.add("sellScubaStuff", "scuba gear", 22000);
+		shops.add("sellScubaStuff", "潜水装", 22000);
 
 		// 矿镇复兴展会周 卡若琳
 		shops.add("sellrevivalweeks", "樱桃派", 195);
@@ -488,13 +459,8 @@ public final class ShopList {
 		shops.add("sellrevivalweeks", "冰淇淋", 60);
 		shops.add("sellrevivalweeks", "巧克力棒", 100);
 		shops.add("sellrevivalweeks", "烤排", 250);
-<<<<<<< HEAD
-		shops.add("sellrevivalweeks", "hotdog", 170);
-		shops.add("sellrevivalweeks", "cheeseydog", 175);
-=======
 		shops.add("sellrevivalweeks", "热狗", 170);
 		shops.add("sellrevivalweeks", "芝士狗", 175);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		shops.add("sellrevivalweeks", "金枪鱼三明治", 140);
 		shops.add("sellrevivalweeks", "三明治", 130);
 		shops.add("sellrevivalweeks", "红酒", 25);

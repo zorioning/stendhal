@@ -37,11 +37,11 @@ public class WellSource extends PlayerActivityEntity {
 	 */
 <<<<<<< HEAD
 	private static final String[] items = { "money", "木头", "铁矿",
-			"gold nugget", "potion", "home scroll", "大治疗济",
+			"金砂", "potion", "home scroll", "大治疗济",
 			"sapphire", "carbuncle", "horned golden helmet", "暗之匕首",
 =======
 	private static final String[] items = { "money", "木头", "iron ore",
-			"gold nugget", "治疗济", "home scroll", "大治疗剂",
+			"金砂", "治疗济", "home scroll", "大治疗剂",
 			"蓝宝石", "红宝石", "horned golden helmet", "暗之匕首",
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			"present" };

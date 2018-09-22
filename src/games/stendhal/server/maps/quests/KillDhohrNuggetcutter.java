@@ -58,7 +58,7 @@ import marauroa.common.Pair;
  * <p>
  * REWARD:
  * <ul>
- * <li> mithril nugget
+ * <li> 密银矿石
  * <li> 4000 XP
  * <li>35 karma in total
  * </ul>
@@ -169,7 +169,7 @@ public class KillDhohrNuggetcutter extends AbstractQuest {
 					public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 						raiser.say("Thank you so much. You are a warrior, indeed! Here, have one of these. We have found them scattered about. We have no idea what they are.");
 							final Item mithrilnug = SingletonRepository.getEntityManager()
-									.getItem("mithril nugget");
+									.getItem("密银矿石");
 							player.equipOrPutOnGround(mithrilnug);
 							player.addKarma(25.0);
 							player.addXP(4000);

@@ -2,9 +2,9 @@
 <items xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="stendhal ../items.xsd ">
   
-  <item name="snowball">
+  <item name="雪球">
     <type class="missile" subclass="snowballs" tileid="-1"/>
-    <description>You see snowballs. You can throw them at your friends or put it in your bag to keep your fish fresh. But be careful, there could be little stones in it.</description>
+    <description>You see 雪球s. You can throw them at your friends or put it in your bag to keep your fish fresh. But be careful, there could be little stones in it.</description>
     <implementation class-name="games.stendhal.server.entity.item.NoStatsStackableItem"/>
     <attributes>
       <atk value="-1"/>
@@ -113,9 +113,9 @@
     </equipable>
   </item>
   
-  <item name="fire shuriken">
+  <item name="火炉">
     <type class="missile" subclass="fire_shuriken" tileid="-1"/>
-    <description>You see a fire shuriken. Throwing this flaming missile unleashes fiendish power.</description>
+    <description>You see a 火炉. Throwing this flaming missile unleashes fiendish power.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <atk value="12"/>

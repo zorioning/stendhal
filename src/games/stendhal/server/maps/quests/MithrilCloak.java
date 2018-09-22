@@ -48,7 +48,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <li>Once machine fixed and if you have done 密银盾 quest, Ida offers you cloak</li>
  * <li>Kampusch tells you to how to make the fabric</li>
  * <li>Imperial scientists take silk glands and make silk thread</li>
- * <li>Kampusch fuses mithril nuggets into the silk thread</li>
+ * <li>Kampusch fuses 密银矿石s into the silk thread</li>
  * <li>Whiggins weaves mithril thread into mithril fabric</li>
  * <li>Ida takes fabric then asks for scissors</li>
  * <li>Hogart makes the scissors which need eggshells</li>

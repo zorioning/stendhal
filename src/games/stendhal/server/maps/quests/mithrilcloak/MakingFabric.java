@@ -316,7 +316,7 @@ class MakingFabric {
 		npc.addReply("气球", "Ah! They are dropped by the charming little baby angels who dwell in Kikareukin Islands. I want one for my daughter.");
 		npc.addReply("silk thread", "That is from the silk glands of 巨型蜘蛛. You need 40 spools of silk thread to make something as large as a cloak, say.");
 		npc.addReply("silk", "That is from the silk glands of 巨型蜘蛛.");
-		npc.addReply("mithril nuggets", "You can find them for yourself.");
+		npc.addReply("密银矿石s", "You can find them for yourself.");
 		npc.addReply("Whiggins", "Find the wizard Whiggins inside his house in the magic city.");
 		npc.addReply("scientists", "I hear of experiments deep in Kalavan Castle. The scientists are a crazy bunch, but look for the lead researcher, Vincento Price, he may be sane enough to help you.");
 
@@ -333,10 +333,10 @@ class MakingFabric {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					if (player.isEquipped("silk thread", 40)
-						&& player.isEquipped("mithril nugget", 7)
+						&& player.isEquipped("密银矿石", 7)
 						&& player.isEquipped("气球")) {
 						player.drop("silk thread", 40);
-					    player.drop("mithril nugget", 7);
+					    player.drop("密银矿石", 7);
 						player.drop("气球");
 						final long timeNow = new Date().getTime();
 						player.setQuest(mithrilcloak.getQuestSlot(), "fusingthread;" + timeNow);

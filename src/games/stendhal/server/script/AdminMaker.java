@@ -51,14 +51,10 @@ public class AdminMaker extends ScriptImpl {
 	private final List<String> itemsSingle = Arrays.asList("GM自慰棒",
 			"金盾", "黄金铠甲", "金斗篷",
 			"golden helmet", "黄金护腿", "金靴子",
-			"hunter crossbow");
+			"猎人十字弓");
 
 	private final List<String> itemsStack = Arrays.asList("money",
-<<<<<<< HEAD
-			"大治疗济", "greater antidote", "加强箭",
-=======
 			"大治疗剂", "大瓶抗毒药济", "加强箭",
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			"极毒");
 
 

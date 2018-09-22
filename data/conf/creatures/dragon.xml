@@ -336,7 +336,7 @@
       <item value="强治疗剂" quantity="[1,1]" probability="50.0"/>
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="money" quantity="[30,100]" probability="100.0"/>
-      <item value="gold nugget" quantity="[2,5]" probability="10.0"/>
+      <item value="金砂" quantity="[2,5]" probability="10.0"/>
       <item value="钻石" quantity="[1,1]" probability="2.0"/>
       <item value="金斗篷" quantity="[1,1]" probability="2.5"/>
     </drops>

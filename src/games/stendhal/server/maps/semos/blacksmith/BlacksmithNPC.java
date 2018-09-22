@@ -85,7 +85,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addReply("淘金盘",
 				"带着这个工具, 你才能够淘金. 顺着 Or'ril 河, 城堡的南边, 瀑布的旁边是一个湖. 我以前在那里发现过金块 #'gold nugget' . 也许你也可以.");
 
-				addReply("gold nugget",
+				addReply("金砂",
 				"我兄弟住在 Ados. 他能把金块重铸成纯金条.");
 
 				addReply("bobbin", "虽然我做工具生意 #trade ,但我不做线轴 bobbins, 抱歉. 造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
