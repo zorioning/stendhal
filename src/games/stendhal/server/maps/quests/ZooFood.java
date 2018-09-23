@@ -157,11 +157,7 @@ public class ZooFood extends AbstractQuest {
 	    final Map<String,Integer> items = new HashMap<String, Integer>();
 	    items.put("苹果",5);
 	    items.put("面包",3);
-<<<<<<< HEAD
-	    items.put("纽扣菇",5);
-=======
 	    items.put("小圆菇",5);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 	    items.put("胡萝卜",5);
 	    items.put("干酪",10);
 	    items.put("樱桃",5);

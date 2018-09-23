@@ -152,23 +152,13 @@ public class DailyItemQuest extends AbstractQuest {
 		// drinks
 		items.put("抗毒药济",5);
 		items.put("啤酒",10);
-<<<<<<< HEAD
-		items.put("greater antidote",5);
-		items.put("大治疗济",5);
-		items.put("milk",5);
-		items.put("小治疗济",5);
-		items.put("poison",5);
-		items.put("potion",5);
-		items.put("tea",3);
-=======
 		items.put("大瓶抗毒药济",5);
 		items.put("大治疗剂",5);
 		items.put("牛奶",5);
 		items.put("小治疗剂",5);
 		items.put("毒药",5);
-		items.put("治疗济",5);
+		items.put("治疗剂",5);
 		items.put("茶",3);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		items.put("水",5);
 		items.put("红酒",10);
 
@@ -180,21 +170,12 @@ public class DailyItemQuest extends AbstractQuest {
 		// food
 		items.put("苹果",5);
 		items.put("苹果派",2);
-<<<<<<< HEAD
-		items.put("菜蓟",10);
-		items.put("面包",5);
-		items.put("绿花菜",5);
-		items.put("纽扣菇",10);
-		items.put("胡萝卜",10);
-		items.put("白花菜",5);
-=======
 		items.put("洋蓟",10);
 		items.put("面包",5);
 		items.put("西蓝花",5);
 		items.put("小圆菇",10);
 		items.put("胡萝卜",10);
 		items.put("洋花菜",5);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		items.put("char",5);
 		items.put("干酪",10);
 		items.put("樱桃",10);
@@ -211,36 +192,22 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("葡萄",5);
 		items.put("烤排",1);
 		items.put("火腿",10);
-<<<<<<< HEAD
-		items.put("honey",2);
-=======
 		items.put("蜂蜜",2);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		items.put("韭菜",5);
 		items.put("肉",10);
 		items.put("洋葱",5);
 		items.put("梨子",5);
 		items.put("perch",5);
-<<<<<<< HEAD
-		items.put("pie",5);
-		items.put("石榴",5);
-		items.put("porcini",10);
-=======
 		items.put("馅饼",5);
 		items.put("石榴",5);
 		items.put("大脚菇",10);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		items.put("red lionfish",5);
 		items.put("roach",5);
 		items.put("色拉",10);
 		items.put("三明治",5);
 		items.put("菠菜",5);
 		items.put("surgeonfish",5);
-<<<<<<< HEAD
-		items.put("toadstool",15);
-=======
 		items.put("红伞菇",15);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		items.put("西红柿",5);
 		items.put("trout",5);
 		items.put("橄榄",5);

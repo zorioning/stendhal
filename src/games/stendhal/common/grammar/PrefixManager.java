@@ -70,15 +70,6 @@ final class PrefixManager
 //
 //		register("sheaf of ", "sheaves of ", "小麦");
 //		register("loaf of ", "loaves of ", "面包");
-<<<<<<< HEAD
-//		register("stick of ", "sticks of ", "butter");
-//		register("bulb of ", "bulbs of ", "大蒜");
-//		register("jar of ", "jars of ", "honey");
-//		register("glass of ", "glasses of ", "wine");
-//		register("cup of ", "cups of ", "tea");
-//		register("sprig of ", "sprigs of ", "arandula");
-//		register("root of ", "roots of ", "mandragora");
-=======
 //		register("stick of ", "sticks of ", "奶油");
 //		register("bulb of ", "bulbs of ", "大蒜");
 //		register("jar of ", "jars of ", "蜂蜜");
@@ -86,7 +77,6 @@ final class PrefixManager
 //		register("cup of ", "cups of ", "茶");
 //		register("sprig of ", "sprigs of ", "海芋");
 //		register("root of ", "roots of ", "曼德拉草");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 //		register("bunch of ", "bunches of ", "daisies");
 //		register("bunch of ", "bunches of ", "葡萄");
 //		register("can of ", "cans of ", "oil");
@@ -97,7 +87,7 @@ final class PrefixManager
 //		register("bottle of ", "bottles of ", "牛奶");
 //		register("bottle of ", "bottles of ", "holy water");
 //
-//		registerEnd("bottle of ", "bottles of ", "治疗济");
+//		registerEnd("bottle of ", "bottles of ", "治疗剂");
 //		registerEnd("bottle of ", "bottles of ", "毒药");
 //		registerEnd("bottle of ", "bottles of ", "抗毒药济");
 //		registerEnd("nugget of ", "nuggets of ", " ore");
@@ -164,7 +154,7 @@ final class PrefixManager
 	}
 	/**
 	 * Define the singular and plural prefix strings for an item name to be matched at the end,
-	 * for example "bottle of ... 治疗济".
+	 * for example "bottle of ... 治疗剂".
 	 * @param prefixSingular
 	 * @param prefixPlural
 	 * @param endString

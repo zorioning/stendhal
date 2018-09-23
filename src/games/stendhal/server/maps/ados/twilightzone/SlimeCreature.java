@@ -23,11 +23,7 @@ import games.stendhal.server.entity.creature.ItemGuardCreature;
 import games.stendhal.server.entity.mapstuff.spawner.CreatureRespawnPoint;
 
 /**
-<<<<<<< HEAD
- * Configure twilight zone to include a slime Creature which drops 荧光药济.
-=======
  * Configure twilight zone to include a slime Creature which drops 莹光药剂.
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
  *
  */
 public class SlimeCreature implements ZoneConfigurator {
@@ -46,11 +42,7 @@ public class SlimeCreature implements ZoneConfigurator {
 
 	private void buildTwilightArea(final StendhalRPZone zone) {
 		final EntityManager manager = SingletonRepository.getEntityManager();
-<<<<<<< HEAD
-		final Creature creature = new ItemGuardCreature(manager.getCreature("twilight slime"), "荧光药济", "mithril_cloak", "twilight_zone");
-=======
 		final Creature creature = new ItemGuardCreature(manager.getCreature("twilight slime"), "莹光药剂", "mithril_cloak", "twilight_zone");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		final CreatureRespawnPoint point = new CreatureRespawnPoint(zone, 5, 5, creature, 1);
 		zone.add(point);
 	}

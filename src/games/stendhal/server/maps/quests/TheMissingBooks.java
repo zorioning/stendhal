@@ -34,7 +34,7 @@ import games.stendhal.server.entity.npc.condition.GreetingMatchesNameCondition;
 import games.stendhal.server.entity.player.Player;
 
 /**
- * QUEST: Quest to get a recipe for a 治疗济 for Imorgen
+ * QUEST: Quest to get a recipe for a 治疗剂 for Imorgen
  * <p>
  *
  * PARTICIPANTS:
@@ -54,7 +54,7 @@ import games.stendhal.server.entity.player.Player;
  *
  * REWARD:
  *  <ul>
- *  <li>A recipe which Imorgen needs for her 治疗济</li>
+ *  <li>A recipe which Imorgen needs for her 治疗剂</li>
  *  </ul>
  *
  * REPETITIONS:
@@ -74,7 +74,7 @@ public class TheMissingBooks extends AbstractQuest {
 						"it lays, hidden under soft sand - the mighty treasure of Faiumoni.");
 		quotes.put("As a mighty warrior,...",
 						"you always need to wear a powerful armor in fights.");
-		quotes.put("You don't believe in magic? The 治疗济...",
+		quotes.put("You don't believe in magic? The 治疗剂...",
 						"of love, made made from a magician's hand, even works for Yetis.");
 		quotes.put("Hungry? Thirsty? Tired?...",
 						"A break might help. Take a look around the lovely nature of Faiumoni and find relaxing places to make a stop at. Even when you are busy during tasks, a healthy snack will power you up.");

@@ -80,11 +80,7 @@ public class MixtureForOrtiv extends AbstractQuest {
 	/**
 	 * required items for the quest.
 	 */
-<<<<<<< HEAD
-	protected static final String NEEDED_ITEMS = "瓶子=1;arandula=2;red lionfish=10;kokuda=1;toadstool=12;licorice=2;苹果=10;wine=30;大蒜=2;pestle and mortar=1";
-=======
 	protected static final String NEEDED_ITEMS = "瓶子=1;海芋=2;red lionfish=10;科科达=1;红伞菇=12;甘草=2;苹果=10;红酒=30;大蒜=2;杵和臼=1";
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 	@Override
 	public List<String> getHistory(final Player player) {

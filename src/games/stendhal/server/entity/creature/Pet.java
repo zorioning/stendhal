@@ -117,11 +117,7 @@ public abstract class Pet extends DomesticAnimal {
 	protected abstract List<String> getFoodNames();
 
 	protected List<String> getMedicineNames() {
-<<<<<<< HEAD
-		return Arrays.asList("小治疗济", "potion", "大治疗济", "强治疗济");
-=======
-		return Arrays.asList("小治疗剂", "治疗济", "大治疗剂", "强治疗剂");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
+		return Arrays.asList("小治疗剂", "治疗剂", "大治疗剂", "强治疗剂");
 	}
 
 	public static void generateRPClass() {

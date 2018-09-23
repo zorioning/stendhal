@@ -192,7 +192,7 @@ public class ZooFoodTest extends ZonePlayerAndNPCTestImpl {
 
 		assertEquals(
 <<<<<<< HEAD
-				"I sell antidote, 小治疗济, potion, and 大治疗济.",
+				"I sell antidote, 小治疗剂, potion, and 大治疗剂.",
 =======
 				"I sell 抗毒药济, 小治疗剂, potion, and 大治疗剂.",
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae

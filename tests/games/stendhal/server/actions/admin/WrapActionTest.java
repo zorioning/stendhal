@@ -96,7 +96,7 @@ public class WrapActionTest {
 		final Player player = PlayerTestHelper.createPlayer("bob");
 
 <<<<<<< HEAD
-		PlayerTestHelper.equipWithItem(player, "大治疗济");
+		PlayerTestHelper.equipWithItem(player, "大治疗剂");
 =======
 		PlayerTestHelper.equipWithItem(player, "大治疗剂");
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
@@ -110,9 +110,9 @@ public class WrapActionTest {
 		final Present present = (Present) player.getFirstEquipped("present");
 		assertNotNull(present);
 <<<<<<< HEAD
-		assertThat(present.getInfoString(), is("大治疗济"));
+		assertThat(present.getInfoString(), is("大治疗剂"));
 		present.onUsed(player);
-		assertTrue(player.isEquipped("大治疗济"));
+		assertTrue(player.isEquipped("大治疗剂"));
 =======
 		assertThat(present.getInfoString(), is("大治疗剂"));
 		present.onUsed(player);

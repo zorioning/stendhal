@@ -770,9 +770,9 @@ As a mighty warrior, you always need to wear a powerful armor in fights.
     <entity x="3" y="27">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Sign" />
       <attribute name="text">
-Wooooza! Magic and its powerful 治疗济s
+Wooooza! Magic and its powerful 治疗剂s
 -By Salva Mattori-
-You don't believe in magic? The 治疗济 of love, made from a magician's hand, even works for Yetis.
+You don't believe in magic? The 治疗剂 of love, made from a magician's hand, even works for Yetis.
 	 	</attribute>
       <attribute name="resistance">0</attribute>
       <attribute name="class">book_green</attribute>

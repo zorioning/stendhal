@@ -282,7 +282,7 @@ public class MarketTest {
 		Market market = Market.createShop();
 		zone.add(market);
 <<<<<<< HEAD
-		Item item = SingletonRepository.getEntityManager().getItem("大治疗济");
+		Item item = SingletonRepository.getEntityManager().getItem("大治疗剂");
 =======
 		Item item = SingletonRepository.getEntityManager().getItem("大治疗剂");
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
@@ -295,7 +295,7 @@ public class MarketTest {
 		Integer number = Integer.valueOf(5);
 		Offer offer = market.createOffer(george, item, price, number);
 <<<<<<< HEAD
-		assertThat(offer.getItem().getName(), is("大治疗济"));
+		assertThat(offer.getItem().getName(), is("大治疗剂"));
 =======
 		assertThat(offer.getItem().getName(), is("大治疗剂"));
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
@@ -310,7 +310,7 @@ public class MarketTest {
 		assertThat(ernie.isEquipped("money", price), is(Boolean.TRUE));
 		market.acceptOffer(offer, ernie);
 <<<<<<< HEAD
-		assertThat(Boolean.valueOf(ernie.isEquipped("大治疗济", 5)), is(Boolean.TRUE));
+		assertThat(Boolean.valueOf(ernie.isEquipped("大治疗剂", 5)), is(Boolean.TRUE));
 =======
 		assertThat(Boolean.valueOf(ernie.isEquipped("大治疗剂", 5)), is(Boolean.TRUE));
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae

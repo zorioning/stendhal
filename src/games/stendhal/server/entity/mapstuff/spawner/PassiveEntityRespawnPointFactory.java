@@ -231,17 +231,10 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint = new VegetableGrower("色拉");
 			break;
 		case 3:
-<<<<<<< HEAD
-			passiveEntityrespawnPoint = new VegetableGrower("绿花菜");
-			break;
-		case 4:
-			passiveEntityrespawnPoint = new VegetableGrower("白花菜");
-=======
 			passiveEntityrespawnPoint = new VegetableGrower("西蓝花");
 			break;
 		case 4:
 			passiveEntityrespawnPoint = new VegetableGrower("洋花菜");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			break;
 		case 5:
 			passiveEntityrespawnPoint = new VegetableGrower("chinese cabbage");
@@ -265,11 +258,7 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint = new VegetableGrower("大蒜");
 			break;
 		case 12:
-<<<<<<< HEAD
-			passiveEntityrespawnPoint = new VegetableGrower("菜蓟");
-=======
 			passiveEntityrespawnPoint = new VegetableGrower("洋蓟");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			break;
 		default:
 			passiveEntityrespawnPoint = null;
@@ -287,13 +276,8 @@ public class PassiveEntityRespawnPointFactory {
 			passiveEntityrespawnPoint.setDescription("一根木头倒在地下.");
 			break;
 		case 1:
-<<<<<<< HEAD
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("铁矿", 3000);
-			passiveEntityrespawnPoint.setDescription("你发现这些矿脉中可能存在铁矿. ");
-=======
 			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("iron ore", 3000);
 			passiveEntityrespawnPoint.setDescription("你发现这些矿脉中可能存在铁矿.");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			break;
 
 		case 2:
@@ -324,13 +308,8 @@ public class PassiveEntityRespawnPointFactory {
 		PassiveEntityRespawnPoint passiveEntityrespawnPoint;
 		switch (type) {
 		case 0:
-<<<<<<< HEAD
-			passiveEntityrespawnPoint = new VegetableGrower("纽扣菇");
-			passiveEntityrespawnPoint.setDescription("这里长着些小小的纽扣菇. ");
-=======
 			passiveEntityrespawnPoint = new VegetableGrower("小圆菇");
 			passiveEntityrespawnPoint.setDescription("这里长着些小小的小圆菇. ");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			break;
 		case 1:
 			passiveEntityrespawnPoint = new VegetableGrower("大脚菇");

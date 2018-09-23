@@ -47,12 +47,12 @@ public final class ShopList {
 
 		shops.add("healing", "抗毒药济", 50);
 		shops.add("healing", "小治疗剂", 100);
-		shops.add("healing", "治疗济", 250);
+		shops.add("healing", "治疗剂", 250);
 		shops.add("healing", "大治疗剂", 500);
 
 		shops.add("superhealing", "抗毒药济", 50);
 		shops.add("superhealing", "大瓶抗毒药济", 100);
-		shops.add("superhealing", "治疗济", 250);
+		shops.add("superhealing", "治疗剂", 250);
 		shops.add("superhealing", "大治疗剂", 500);
 		shops.add("superhealing", "强治疗剂", 1500);
 

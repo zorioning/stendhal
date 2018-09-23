@@ -74,13 +74,8 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addReply("木头",
 						"我需要一些木头保持炉子的火力. 你可以去森林里找到一些.");
 
-<<<<<<< HEAD
-				addReply(Arrays.asList("ore", "iron", "铁矿"),
-				"你能到 Or'ril 西面的山上, 矮人矿附近的地方找到铁矿, 去那要小心!");
-=======
 				addReply(Arrays.asList("ore", "iron", "iron ore"),
 				"你能到 Or'ril 西面的山上, 矮人矿附近的地方找到铁矿, 但去那要小心!");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 				addReply("淘金盘",
 				"带着这个工具, 你才能够淘金. 顺着 Or'ril 河, 城堡的南边, 瀑布的旁边是一个湖. 我以前在那里发现过金块 #'gold nugget' . 也许你也可以.");
@@ -91,13 +86,8 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addReply("bobbin", "虽然我做工具生意 #trade ,但我不做线轴 bobbins, 抱歉. 造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
 				addReply(Arrays.asList("oil", "can of oil"), "Oh, 这些是由渔夫 fishermen 给我们供应.");
 
-<<<<<<< HEAD
-				addHelp("如果你给我带来木头 #wood 和铁矿 #'铁矿', 我能为你铸造 #cast 铁块. 然后把它卖给矮人, 就可以为自已赚些钱.");
-				addJob("我是一个铁匠, 工作是鋳铁 #cast , 并且卖点 #trade 工具.");
-=======
 				addHelp("如果你给我带来木头 #wood 和铁矿 #'iron ore', 我能为你铸造 #cast 铁块. 然后把它卖给矮人, 就可以为自已赚些钱.");
 				addJob("我是一个铁匠, 工作是鋳铁 #cast , 也 #销售 点工具.");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				addGoodbye();
 				new SellerAdder().addSeller(this, new SellerBehaviour(SingletonRepository.getShopList().get("selltools")));
 

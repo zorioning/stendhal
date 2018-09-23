@@ -19,13 +19,8 @@
     <respawn value="5400"/>
     <corpse name="animal_2x2" harmless="bag_2x2" width="2" height="2"/>
     <drops>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[2,6]" probability="75.0"/>
-      <item value="强毒" quantity="[1,2]" probability="90.0"/>
-=======
       <item value="大治疗剂" quantity="[2,6]" probability="75.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="90.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="orcish sword" quantity="[1,1]" probability="0.3"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
     </drops>
@@ -127,20 +122,12 @@
     <corpse name="small_boneless" harmless="spiderweb" />
     <drops>
       <item value="money" quantity="[10,35]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="强毒" quantity="[1,1]" probability="10.0"/>
-=======
       <item value="特级毒药" quantity="[1,1]" probability="10.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     </drops>
     <equips>
     </equips>
     <ai>
-<<<<<<< HEAD
-      <profile name="poisonous" params="40,强毒"/>
-=======
       <profile name="poisonous" params="40,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="offensive"/>
       <profile name="human"/>
@@ -164,24 +151,15 @@
     <respawn value="5400"/>
     <corpse name="animal_2x2" harmless="spiderweb_2x2" width="2" height="2"/>
     <drops>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,4]" probability="70.0"/>
-      <item value="强毒" quantity="[1,2]" probability="80.0"/>
-=======
       <item value="大治疗剂" quantity="[1,4]" probability="70.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="80.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="money" quantity="[30,150]" probability="100.0"/>
       <item value="silk gland" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
     <ai>
-<<<<<<< HEAD
-      <profile name="poisonous" params="5,强毒"/>
-=======
       <profile name="poisonous" params="5,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -1258,11 +1236,7 @@
     <drops>
       <item value="money" quantity="[3,7]" probability="100.0"/>
       <item value="干酪" quantity="[1,3]" probability="50.0"/>
-<<<<<<< HEAD
-      <item value="强毒" quantity="[1,1]" probability="15.0"/>
-=======
       <item value="特级毒药" quantity="[1,1]" probability="15.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     </drops>
     <equips>
     </equips>
@@ -1271,11 +1245,7 @@
       	<sound value="rats-2"/>
         <sound value="rats-41"/>
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="5,强毒"/>
-=======
       <profile name="poisonous" params="5,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -1465,11 +1435,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,100]" probability="70.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,4]" probability="30.0"/>
-=======
       <item value="大治疗剂" quantity="[1,4]" probability="30.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="木矛" quantity="[20,40]" probability="30.0"/>
     </drops>
     <equips>
@@ -1673,11 +1639,7 @@
         <sound value="snake-cobra-1"/>
         <sound value="snake-cobra-2"/>
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="5,强毒"/>
-=======
       <profile name="poisonous" params="5,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="animal"/>
       <profile name="offensive"/>
       <profile name="patrolling"/>
@@ -1699,11 +1661,7 @@
     <respawn value="5400"/>
     <corpse name="snake_3x2" harmless="bag_2x2" width="3" height="2"/>
     <drops>
-<<<<<<< HEAD
-      <item value="病毒" quantity="[1,1]" probability="5.0"/>
-=======
       <item value="痍毒" quantity="[1,1]" probability="5.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     </drops>
     <equips>
     </equips>
@@ -1712,11 +1670,7 @@
         <sound value="snake-cobra-1" />
         <sound value="snake-cobra-2" />
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="5,病毒"/>
-=======
       <profile name="poisonous" params="5,痍毒"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>

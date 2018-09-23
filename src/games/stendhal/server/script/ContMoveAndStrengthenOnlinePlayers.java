@@ -90,11 +90,7 @@ public class ContMoveAndStrengthenOnlinePlayers extends ScriptImpl {
 			StackableItem money = (StackableItem) SingletonRepository.getEntityManager().getItem("money");
 			money.setQuantity(5000);
 			player.equipToInventoryOnly(money);
-<<<<<<< HEAD
-			StackableItem potions = (StackableItem) SingletonRepository.getEntityManager().getItem("大治疗济");
-=======
 			StackableItem potions = (StackableItem) SingletonRepository.getEntityManager().getItem("大治疗剂");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 			potions.setQuantity(5000);
 			player.equipToInventoryOnly(potions);
 			if(!player.isEquipped("混沌匕首")) {

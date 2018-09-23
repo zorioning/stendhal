@@ -94,21 +94,13 @@ public class AntivenomRing extends AbstractQuest {
 
 	private static final String QUEST_SLOT = "antivenom_ring";
 
-<<<<<<< HEAD
-	//public static final String NEEDED_ITEMS = "medicinal ring=1;venom gland=1;mandragora=2;仙女蛋糕=5";
-=======
 	//public static final String NEEDED_ITEMS = "medicinal ring=1;venom gland=1;曼德拉草=2;仙女蛋糕=5";
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 	/* Items taken to ??? to create cobra venom */
 	public static final String EXTRACTION_ITEMS = "venom gland=1;vial=1";
 
 	/* Items taken to apothecary to create antivenom */
-<<<<<<< HEAD
-	public static final String MIX_ITEMS = "cobra venom=1;mandragora=2;仙女蛋糕=5";
-=======
 	public static final String MIX_ITEMS = "cobra venom=1;曼德拉草=2;仙女蛋糕=5";
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 	/* Items taken to ??? to create antivenom ring */
 	public static final int REQUIRED_MONEY = 10000;
@@ -327,11 +319,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 		*/
 		mixer.add(ConversationStates.QUESTION_1,
-<<<<<<< HEAD
-				Arrays.asList("cake", "仙女蛋糕"),
-=======
 				Arrays.asList("蛋糕", "仙女蛋糕"),
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				null,
 				ConversationStates.QUESTION_1,
 				"Oh, 我是我品尝过的最好的食物. 只有最重的生物才能做出如此可口的食物. ",
@@ -390,11 +378,7 @@ public class AntivenomRing extends AbstractQuest {
 				null);
 		*/
 		mixer.add(ConversationStates.ATTENDING,
-<<<<<<< HEAD
-				Arrays.asList("cake", "仙女蛋糕"),
-=======
 				Arrays.asList("蛋糕", "仙女蛋糕"),
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				null,
 				ConversationStates.ATTENDING,
 				"Oh, 这是我吃过最好的食物了. 只有最重的生物才能做出如此好吃的食物. ",
@@ -542,11 +526,7 @@ public class AntivenomRing extends AbstractQuest {
 		ChatAction mixAction = new MultipleActions (
 		new SetQuestAction(QUEST_SLOT, 1, "mixing"),
 		new SetQuestToTimeStampAction(QUEST_SLOT, 4),
-<<<<<<< HEAD
-		new SayTextAction("谢谢你, 在这我吃完这美味的仙女蛋糕 仙女蛋糕s 后, 我会去调试抗毒药的正确比例. 请在" + MIX_TIME + " 分钟后回来取.")
-=======
 		new SayTextAction("谢谢你, 在这我吃完这美味的仙女蛋糕后, 我会去调试抗毒药的正确比例. 请在" + MIX_TIME + " 分钟后回来取.")
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		);
 
 		/* add triggers for the item names */

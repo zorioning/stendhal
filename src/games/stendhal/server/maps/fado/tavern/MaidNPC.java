@@ -81,11 +81,7 @@ public class MaidNPC implements ZoneConfigurator {
 
 				final Map<String, Integer> offers = new HashMap<String, Integer>();
 				offers.put("啤酒", 10);
-<<<<<<< HEAD
-				offers.put("wine", 15);
-=======
 				offers.put("红酒", 15);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				offers.put("樱桃", 20);
 				offers.put("鸡腿", 50);
 				offers.put("面包", 50);

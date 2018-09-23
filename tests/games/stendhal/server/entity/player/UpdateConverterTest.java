@@ -125,16 +125,16 @@ public class UpdateConverterTest {
 
 		// First we use only the old quest slot name.
 <<<<<<< HEAD
-		player.setQuest("Valo_concoct_potion", "3;强治疗济;1200000000000");
+		player.setQuest("Valo_concoct_potion", "3;强治疗剂;1200000000000");
 		UpdateConverter.updateQuests(player);
 		assertNull(player.getQuest("Valo_concoct_potion"));
-		assertEquals("3;强治疗济;1200000000000", player.getQuest("valo_concoct_potion"));
+		assertEquals("3;强治疗剂;1200000000000", player.getQuest("valo_concoct_potion"));
 
 		// Now add the old name to the existing new one and see if they are accumulated correct.
-		player.setQuest("Valo_concoct_potion", "8;强治疗济;1300000000000");
+		player.setQuest("Valo_concoct_potion", "8;强治疗剂;1300000000000");
 		UpdateConverter.updateQuests(player);
 		assertNull(player.getQuest("Valo_concoct_potion"));
-		assertEquals("11;强治疗济;1200000000000", player.getQuest("valo_concoct_potion"));
+		assertEquals("11;强治疗剂;1200000000000", player.getQuest("valo_concoct_potion"));
 =======
 		player.setQuest("Valo_concoct_potion", "3;强治疗剂;1200000000000");
 		UpdateConverter.updateQuests(player);

@@ -193,7 +193,7 @@ public class GardenerNPC implements ZoneConfigurator {
 				addReply(ConversationPhrases.NO_MESSAGES, "比下雨好多!");
 				addJob("我是个园丁. 希望你喜欢这些花坛.");
 				addHelp("如果你带一些 #午饭 给我, 我会拿魔法卷轴给你 #交换 .");
-				addOffer("我的西红杮和大蒜长的很好, 集够了我就卖掉它.");
+				addOffer("我的西红柿和大蒜长的很好, 集够了我就卖掉它.");
 				final Map<String, Integer> offerings = new HashMap<String, Integer>();
                 offerings.put("西红柿", 30);
                 offerings.put("大蒜", 50);

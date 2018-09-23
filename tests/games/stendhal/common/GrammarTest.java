@@ -398,7 +398,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("toadstools", "toadstool");
 		testPluralisationAndSingularisation("bottles of beer", "beer");
 		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
-		testPluralisationAndSingularisation("bottles of 小治疗济", "小治疗济");
+		testPluralisationAndSingularisation("bottles of 小治疗剂", "小治疗剂");
 =======
 		testPluralisationAndSingularisation("pies", "馅饼");
 		testPluralisationAndSingularisation("button mushrooms",
@@ -411,8 +411,8 @@ public class GrammarTest {
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		testPluralisationAndSingularisation("bottles of antidote", "antidote");
 		testPluralisationAndSingularisation("bottles of potion", "potion");
-		testPluralisationAndSingularisation("bottles of 大治疗济",
-				"大治疗济");
+		testPluralisationAndSingularisation("bottles of 大治疗剂",
+				"大治疗剂");
 		testPluralisationAndSingularisation("bottles of poison", "poison");
 		testPluralisationAndSingularisation("bottles of 强毒",
 				"强毒");

@@ -80,13 +80,8 @@ public class BakerNPC implements ZoneConfigurator {
 			@Override
 			protected void createDialog() {
 				// This isn't bad grammar. It's his tyle of speech! Do't correct pls.
-<<<<<<< HEAD
-				addJob("I #make #pizza. I have learn from the great baker #Leander.");
-				addReply(Arrays.asList("纽扣菇", "porcini"),
-=======
 				addJob("I #make #比萨. I have learn from the great baker #Leander.");
 				addReply(Arrays.asList("小圆菇", "大脚菇"),
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				        "#Leander taught me mushroom grow in wood area. People like mushroom, I add more.");
 				addReply("面粉", "Mill near 塞门镇 produce from 小麦.");
 				addReply("干酪", "Cheese? I know not.");
@@ -103,13 +98,8 @@ public class BakerNPC implements ZoneConfigurator {
 				requiredResources.put("面粉", 2);
 				requiredResources.put("干酪", 1);
 				requiredResources.put("西红柿", 1);
-<<<<<<< HEAD
-				requiredResources.put("纽扣菇", 2);
-				requiredResources.put("porcini", 1);
-=======
 				requiredResources.put("小圆菇", 2);
 				requiredResources.put("大脚菇", 1);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				requiredResources.put("火腿", 1);
 
 				final ProducerBehaviour behaviour = new ProducerBehaviour("kroip_make_pizza", "make", "比萨",

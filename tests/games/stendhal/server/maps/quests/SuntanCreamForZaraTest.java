@@ -104,12 +104,12 @@ public class SuntanCreamForZaraTest {
 		assertEquals("David's and mine 防晒油 is famous all over the island. But the way to the labyrinth entrance is blocked, so we can't get all the ingredients we need. If you bring me the things we need, I can #mix our special 防晒油 for you.", getReply(npc));
 		en.step(player, "mix");
 <<<<<<< HEAD
-		assertEquals("I can only mix a 防晒油 if you bring me a #'bottle of 小治疗济', a #'sprig of arandula', and a #kokuda.", getReply(npc));
+		assertEquals("I can only mix a 防晒油 if you bring me a #'bottle of 小治疗剂', a #'sprig of arandula', and a #kokuda.", getReply(npc));
 		en.step(player, "sprig of arandula");
 		assertEquals("Arandula is a herb which is growing around Semos.", getReply(npc));
 		en.step(player, "kokuda");
 		assertEquals("We can't find the Kokuda herb which is growing on this island, because the entrance of the labyrinth, where you can find this herb, is blocked.", getReply(npc));
-		en.step(player, "bottle of 小治疗济");
+		en.step(player, "bottle of 小治疗剂");
 =======
 		assertEquals("I can only mix a 防晒油 if you bring me a #'bottle of 小治疗剂', a #'sprig of 海芋', and a #科科达.", getReply(npc));
 		en.step(player, "sprig of 海芋");
@@ -123,7 +123,7 @@ public class SuntanCreamForZaraTest {
 		assertEquals("Have fun!", getReply(npc));
 
 <<<<<<< HEAD
-		PlayerTestHelper.equipWithItem(player, "小治疗济");
+		PlayerTestHelper.equipWithItem(player, "小治疗剂");
 		PlayerTestHelper.equipWithItem(player, "kokuda");
 		PlayerTestHelper.equipWithItem(player, "arandula");
 =======
@@ -137,7 +137,7 @@ public class SuntanCreamForZaraTest {
 		assertEquals("Hallo!", getReply(npc));
 		en.step(player, "mix");
 <<<<<<< HEAD
-		assertEquals("I need you to fetch me a #'bottle of 小治疗济', a #'sprig of arandula', and a #kokuda for this job, which will take 10 minutes. Do you have what I need?", getReply(npc));
+		assertEquals("I need you to fetch me a #'bottle of 小治疗剂', a #'sprig of arandula', and a #kokuda for this job, which will take 10 minutes. Do you have what I need?", getReply(npc));
 =======
 		assertEquals("I need you to fetch me a #'bottle of 小治疗剂', a #'sprig of 海芋', and a #科科达 for this job, which will take 10 minutes. Do you have what I need?", getReply(npc));
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
@@ -148,7 +148,7 @@ public class SuntanCreamForZaraTest {
 
 		assertNotNull(player.getQuest("pamela_mix_cream"));
 <<<<<<< HEAD
-		assertFalse(player.isEquipped("小治疗济"));
+		assertFalse(player.isEquipped("小治疗剂"));
 		assertFalse(player.isEquipped("kokuda"));
 		assertFalse(player.isEquipped("arandula"));
 =======

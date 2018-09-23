@@ -143,11 +143,7 @@
       <item value="红斗篷" quantity="[1,1]" probability="5.5"/>
       <item value="cod" quantity="[2,4]" probability="3.5"/>
       <item value="鱼肉派" quantity="[1,1]" probability="7.5"/>
-<<<<<<< HEAD
-      <item value="coupon" quantity="[1,1]" probability="10.5"/>
-=======
       <item value="赠券" quantity="[1,1]" probability="10.5"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     </drops>
     <equips>      
     </equips>
@@ -357,7 +353,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,40]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="10.5"/>
+      <item value="治疗剂" quantity="[1,1]" probability="10.5"/>
       <item value="玻璃球" quantity="[1,1]" probability="40.0"/>
       <item value="巧克力棒" quantity="[1,2]" probability="30.0"/>
       <item value="刺客匕首" quantity="[1,1]" probability="0.050"/>
@@ -393,7 +389,7 @@
     <corpse name="humanoid" harmless="cloaked_black" />
     <drops>
       <item value="money" quantity="[20,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="15.5"/>
+      <item value="治疗剂" quantity="[1,1]" probability="15.5"/>
       <item value="黑珍珠" quantity="[1,1]" probability="30.0"/>
       <item value="啤酒" quantity="[1,2]" probability="20.0"/>
       <item value="刺客匕首" quantity="[1,1]" probability="0.050"/>
@@ -604,11 +600,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[60,340]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[2,4]" probability="35"/>
-=======
       <item value="大治疗剂" quantity="[2,4]" probability="35"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="刺客匕首" quantity="[1,1]" probability="0.5"/>
       <item value="火炉" quantity="[5,20]" probability="5.0"/>
     </drops>
@@ -677,7 +669,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,30]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="2.5"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.25"/>
       <item value="大战锤" quantity="[1,1]" probability="1.0"/>
@@ -708,7 +700,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="5.0"/>
       <item value="黄金铠甲" quantity="[1,1]" probability="0.5"/>
       <item value="金靴子" quantity="[1,1]" probability="1.0"/>
@@ -741,7 +733,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
@@ -773,7 +765,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="horned golden helmet" quantity="[1,1]" probability="0.25"/>
     </drops>
     <equips>
@@ -806,13 +798,8 @@
       <item value="money" quantity="[10,50]" probability="100.0"/>
       <item value="野蛮人护甲" quantity="[1,1]" probability="10.0"/>
       <item value="混乱之锤" quantity="[1,1]" probability="0.5"/>
-<<<<<<< HEAD
-      <item value="vulcano hammer" quantity="[1,1]" probability="0.0050"/>
-      <item value="大治疗济" quantity="[1,2]" probability="1.5"/>
-=======
       <item value="火山之锤" quantity="[1,1]" probability="0.0050"/>
       <item value="大治疗剂" quantity="[1,2]" probability="1.5"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="巨剑" quantity="[1,1]" probability="1.0"/>
     </drops>
     <equips>
@@ -848,11 +835,7 @@
       <item value="黑靴子" quantity="[1,1]" probability="0.025"/>
       <item value="巨棍" quantity="[1,1]" probability="0.0050"/>
       <item value="混乱之锤" quantity="[1,1]" probability="0.5"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,3]" probability="1.5"/>
-=======
       <item value="大治疗剂" quantity="[1,3]" probability="1.5"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="混乱之盾" quantity="[1,1]" probability="0.0050"/>
     </drops>
     <equips>
@@ -884,11 +867,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,2]" probability="10.0"/>
-=======
       <item value="大治疗剂" quantity="[1,2]" probability="10.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="混沌护腿" quantity="[1,1]" probability="2.0"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="黑头盔" quantity="[1,1]" probability="0.05"/>
@@ -921,11 +900,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,2]" probability="20.0"/>
-=======
       <item value="大治疗剂" quantity="[1,2]" probability="20.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="混沌护腿" quantity="[1,1]" probability="2.5"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.25"/>
@@ -962,11 +937,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[2,4]" probability="30.0"/>
-=======
       <item value="大治疗剂" quantity="[2,4]" probability="30.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="鱼肉派" quantity="[1,2]" probability="20.0"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.5"/>
       <item value="黑护腿" quantity="[1,1]" probability="0.1"/>
@@ -1069,11 +1040,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[7,48]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="potion" quantity="[1,3]" probability="20.0"/>
-=======
-      <item value="治疗济" quantity="[1,3]" probability="20.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
+      <item value="治疗剂" quantity="[1,3]" probability="20.0"/>
       <item value="西红柿" quantity="[1,2]" probability="30.0"/>
     </drops>
     <equips>
@@ -1141,7 +1108,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,60]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="混沌护腿" quantity="[1,1]" probability="0.5"/>
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
       <item value="混沌靴" quantity="[1,1]" probability="1.5"/>
@@ -1249,7 +1216,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[10,50]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="30.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="混沌护腿" quantity="[1,1]" probability="2.0"/>
       <item value="混沌斗篷" quantity="[1,1]" probability="0.5"/>
       <item value="黑头盔" quantity="[1,1]" probability="0.01"/>
@@ -1279,11 +1246,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[80,200]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,2]" probability="30.0"/>
-=======
       <item value="大治疗剂" quantity="[1,2]" probability="30.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="影子铠甲" quantity="[1,1]" probability="2.0"/>
       <item value="浑沌护甲" quantity="[1,1]" probability="0.1"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.05"/>
@@ -1320,13 +1283,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[100,600]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,2]" probability="30.0"/>
-      <item value="强治疗济" quantity="[1,1]" probability="1.0"/>
-=======
       <item value="大治疗剂" quantity="[1,2]" probability="30.0"/>
       <item value="强治疗剂" quantity="[1,1]" probability="1.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="浑沌护甲" quantity="[1,1]" probability="2.5"/>
       <item value="混沌靴" quantity="[1,1]" probability="2.5"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.1"/>
@@ -1619,7 +1577,7 @@
     <corpse name="humanoid" harmless="cloaked_blue" />
     <drops>
       <item value="money" quantity="[5,40]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="10.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="10.0"/>
       <item value="抗毒药济" quantity="[1,2]" probability="2.0"/>
       <item value="法杖" quantity="[1,1]" probability="3.0"/>
     </drops>
@@ -1685,7 +1643,7 @@
     <corpse name="humanoid" harmless="cloaked_white" />
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
-      <item value="治疗济" quantity="[2,4]" probability="8.0"/>
+      <item value="治疗剂" quantity="[2,4]" probability="8.0"/>
       <item value="石斗篷" quantity="[1,1]" probability="2.0"/>
 
       <item value="影子铠甲" quantity="[1,1]" probability="1.0"/>
@@ -1717,7 +1675,7 @@
     <corpse name="humanoid" harmless="cloaked_blue" />
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,2]" probability="10.0"/>
+      <item value="治疗剂" quantity="[1,2]" probability="10.0"/>
       <item value="大瓶抗毒药济" quantity="[1,2]" probability="2.0"/>
       <item value="影子铠甲" quantity="[1,1]" probability="0.7"/>
       <item value="暗之匕首" quantity="[1,1]" probability="0.1"/>
@@ -1980,11 +1938,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[80,130]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[2,5]" probability="30.0"/>
-=======
       <item value="大治疗剂" quantity="[2,5]" probability="30.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="混沌之剑" quantity="[1,1]" probability="1.0"/>
       <item value="黑靴子" quantity="[1,1]" probability="0.1"/>
       <item value="黑头盔" quantity="[1,1]" probability="0.5"/>
@@ -2086,11 +2040,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,30]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="greater antidote" quantity="[1,1]" probability="30.0"/>
-=======
       <item value="大瓶抗毒药济" quantity="[1,1]" probability="30.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="菠菜" quantity="[2,4]" probability="40.0"/>
       <item value="西红柿" quantity="[2,3]" probability="40.0"/>
     </drops>
@@ -2272,9 +2222,9 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[5,43]" probability="100.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="5.0"/>
+      <item value="治疗剂" quantity="[1,1]" probability="5.0"/>
       <item value="抗毒药济" quantity="[2,5]" probability="20.0"/>
-      <item value="sedative" quantity="[1,2]" probability="5.0"/>
+      <item value="镇静剂" quantity="[1,2]" probability="5.0"/>
     </drops>
     <equips>
     </equips>
@@ -2953,7 +2903,7 @@
     <corpse name="humanoid" harmless="cloaked_brown" />
     <drops>
       <item value="money" quantity="[3,30]" probability="80.0"/>
-      <item value="治疗济" quantity="[1,1]" probability="50.0"/>
+      <item value="治疗剂" quantity="[1,1]" probability="50.0"/>
       <item value="黄金战锤" quantity="[1,1]" probability="3.0"/>
       <item value="法杖" quantity="[1,1]" probability="3.0"/>
     </drops>
@@ -2995,13 +2945,8 @@
     <corpse name="humanoid" harmless="cloaked_black" />
     <drops>
       <item value="money" quantity="[5,20]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,1]" probability="10.0"/>
-      <item value="antidote" quantity="[1,3]" probability="10.0"/>
-=======
       <item value="大治疗剂" quantity="[1,1]" probability="10.0"/>
       <item value="抗毒药济" quantity="[1,3]" probability="10.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     </drops>
     <equips>
     </equips>
@@ -3038,15 +2983,9 @@
     <corpse name="humanoid_2x2" harmless="cloaked_red_2x2" width="2" height="2" />
     <drops>
       <item value="money" quantity="[100,600]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[2,4]" probability="20.0"/>
-      <item value="强治疗济" quantity="[1,1]" probability="20.0"/>
-      <item value="vulcano hammer" quantity="[1,1]" probability="0.01"/>
-=======
       <item value="大治疗剂" quantity="[2,4]" probability="20.0"/>
       <item value="强治疗剂" quantity="[1,1]" probability="20.0"/>
       <item value="火山之锤" quantity="[1,1]" probability="0.01"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="黑镰刀" quantity="[1,1]" probability="0.1"/>
       <item value="地狱匕首" quantity="[1,1]" probability="0.5"/>
     </drops>
@@ -3085,13 +3024,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[3,30]" probability="90.0"/>
-<<<<<<< HEAD
-      <item value="小治疗济" quantity="[1,3]" probability="10.0"/>
-      <item value="wine" quantity="[5,7]" probability="60.0"/>
-=======
       <item value="小治疗剂" quantity="[1,3]" probability="10.0"/>
       <item value="红酒" quantity="[5,7]" probability="60.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     </drops>
     <equips>
     </equips>

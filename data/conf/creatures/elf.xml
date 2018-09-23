@@ -84,11 +84,7 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="精灵斗篷" quantity="[1,1]" probability="2.5"/> 
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,2]" probability="20.0"/>
-=======
       <item value="大治疗剂" quantity="[1,2]" probability="20.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="money" quantity="[10,70]" probability="100.0"/>
       <item value="空白卷轴" quantity="[1,2]" probability="8.0"/>
       <item value="重绘机" quantity="[1,1]" probability="0.4"/>
@@ -424,13 +420,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[50,90]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,6]" probability="20.0"/>
-      <item value="强毒" quantity="[1,2]" probability="50.0"/>
-=======
       <item value="大治疗剂" quantity="[1,6]" probability="20.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="50.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="纳尔沃城回城卷" quantity="[1,2]" probability="25.0"/>
       <item value="混沌靴" quantity="[1,1]" probability="1.0"/>
     </drops>
@@ -445,11 +436,7 @@
       <says>
         <noise state="idle follow fight" value="巨型蜘蛛女王会为我报仇!"/>
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="5,强毒"/>
-=======
       <profile name="poisonous" params="5,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="offensive"/>
       <profile name="human"/>
@@ -549,13 +536,8 @@
     <respawn value="7300"/>
     <corpse name="humanoid"/>
     <drops>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,4]" probability="80.0"/>
-      <item value="强毒" quantity="[1,1]" probability="50.0"/>
-=======
       <item value="大治疗剂" quantity="[1,4]" probability="80.0"/>
       <item value="特级毒药" quantity="[1,1]" probability="50.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="money" quantity="[30,150]" probability="100.0"/>
       <item value="空白卷轴" quantity="[1,2]" probability="25.0"/>
       <item value="宝石护腿" quantity="[1,1]" probability="0.0050"/>
@@ -572,11 +554,7 @@
       <says>
         <noise state="idle follow fight" value="巨型蜘蛛女王快缠住他!"/>
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="15,强毒"/>
-=======
       <profile name="poisonous" params="15,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -600,13 +578,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[30,100]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,2]" probability="50.0"/>
-      <item value="强毒" quantity="[1,2]" probability="75.0"/>
-=======
       <item value="大治疗剂" quantity="[1,2]" probability="50.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="75.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="骷髅盾" quantity="[1,1]" probability="15.0"/>
       <item value="地狱匕首" quantity="[1,1]" probability="0.2"/>
     </drops>
@@ -617,11 +590,7 @@
         <noise state="idle follow fight" value="我们是恐怖的黑暗精灵军队!"/>
         <noise state="idle follow fight" value="是你所恐惧的黑暗!"/>
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="15,强毒"/>
-=======
       <profile name="poisonous" params="15,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -645,13 +614,8 @@
     <corpse name="humanoid"/>
     <drops>
       <item value="money" quantity="[30,200]" probability="100.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,2]" probability="50.0"/>
-      <item value="强毒" quantity="[1,2]" probability="75.0"/>
-=======
       <item value="大治疗剂" quantity="[1,2]" probability="50.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="75.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="影子铠甲" quantity="[1,1]" probability="2.5"/>
       <item value="black sword" quantity="[1,1]" probability="0.05"/>
     </drops>
@@ -667,11 +631,7 @@
         <noise state="idle follow fight" value="你再也见不到光明了!"/>
         <noise state="idle follow fight" value="黑暗会降临在你身上!"/>
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="15,强毒"/>
-=======
       <profile name="poisonous" params="15,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -695,11 +655,7 @@
     <respawn value="11500"/>
     <corpse name="humanoid"/>
     <drops>
-<<<<<<< HEAD
-      <item value="强治疗济" quantity="[1,2]" probability="50.0"/>
-=======
       <item value="强治疗剂" quantity="[1,2]" probability="50.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <item value="极毒" quantity="[1,3]" probability="40.0"/>
       <item value="money" quantity="[100,400]" probability="100.0"/>
       <item value="黑色盔甲" quantity="[1,1]" probability="0.0050"/>
@@ -718,11 +674,7 @@
         <noise state="idle follow fight" value="你打扰了我的休息!"/>
         <noise state="idle follow fight" value="现在, 你要出代价!"/>
       </says>
-<<<<<<< HEAD
-      <profile name="poisonous" params="15,强毒"/>
-=======
       <profile name="poisonous" params="15,特级毒药"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
       <profile name="brave"/>
       <profile name="animal"/>
       <profile name="offensive"/>
@@ -893,7 +845,7 @@
       <item value="精灵之剑" quantity="[1,1]" probability="1.0"/>
       <item value="katana" quantity="[1,1]" probability="5.0"/>
       <item value="阔剑" quantity="[1,1]" probability="2.0"/>
-      <item value="治疗济" quantity="[2,4]" probability="20.0"/>
+      <item value="治疗剂" quantity="[2,4]" probability="20.0"/>
       <item value="elvish hat" quantity="[1,1]" probability="2.0" />
     </drops>
     <equips>
@@ -1066,11 +1018,7 @@
       <item value="冰剑" quantity="[1,1]" probability="0.0080"/>
       <item value="阔剑" quantity="[1,1]" probability="5.0"/>
       <item value="精灵之盾" quantity="[1,1]" probability="5.0"/>
-<<<<<<< HEAD
-      <item value="大治疗济" quantity="[1,1]" probability="10.0"/>
-=======
       <item value="大治疗剂" quantity="[1,1]" probability="10.0"/>
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
     </drops>
     <equips>
     </equips>

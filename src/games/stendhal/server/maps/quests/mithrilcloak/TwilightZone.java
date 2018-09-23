@@ -131,11 +131,7 @@ class TwilightZone {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc2.getName()),
 						new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-<<<<<<< HEAD
-						new NotCondition(new PlayerHasItemWithHimCondition("荧光药济"))),
-=======
 						new NotCondition(new PlayerHasItemWithHimCondition("莹光药剂"))),
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				ConversationStates.IDLE,
 				"I'm sick .. so sick .. only some powerful medicine will fix me.",
 				null);
@@ -144,11 +140,7 @@ class TwilightZone {
 				ConversationPhrases.GREETING_MESSAGES,
 				new AndCondition(new GreetingMatchesNameCondition(npc2.getName()),
 						new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-<<<<<<< HEAD
-						new PlayerHasItemWithHimCondition("荧光药济")),
-=======
 						new PlayerHasItemWithHimCondition("莹光药剂")),
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 				ConversationStates.QUEST_ITEM_QUESTION,
 				"Is that elixir for me? If #yes I will take it immediately. You must return to see me again in my normal state.",
 				 null);
@@ -156,20 +148,12 @@ class TwilightZone {
 		npc2.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.YES_MESSAGES,
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-<<<<<<< HEAD
-								 new PlayerHasItemWithHimCondition("荧光药济")
-=======
 								 new PlayerHasItemWithHimCondition("莹光药剂")
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 								 ),
 				ConversationStates.IDLE,
 				"Thank you!",
 				new MultipleActions(
-<<<<<<< HEAD
-								new DropItemAction("荧光药济"),
-=======
 								new DropItemAction("莹光药剂"),
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 								new SetQuestAction(mithrilcloak.getQuestSlot(), "taking_striped_cloak"),
 								new TeleportAction("int_阿多斯_缝纫_店", 12, 20, Direction.DOWN)
 								)
@@ -178,11 +162,7 @@ class TwilightZone {
 		npc2.add(ConversationStates.QUEST_ITEM_QUESTION,
 				ConversationPhrases.NO_MESSAGES,
 				new AndCondition(new QuestInStateCondition(mithrilcloak.getQuestSlot(), "twilight_zone"),
-<<<<<<< HEAD
-								 new PlayerHasItemWithHimCondition("荧光药济")
-=======
 								 new PlayerHasItemWithHimCondition("莹光药剂")
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 								 ),
 				ConversationStates.IDLE,
 				"I'm getting sicker ...",

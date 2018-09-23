@@ -270,7 +270,7 @@ public class HerbsForCarmenTest {
 		assertEquals("Bye.", getReply(npc));
 
 <<<<<<< HEAD
-		assertTrue(player.isEquipped("小治疗济", 5));
+		assertTrue(player.isEquipped("小治疗剂", 5));
 =======
 		assertTrue(player.isEquipped("小治疗剂", 5));
 >>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae

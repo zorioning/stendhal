@@ -204,15 +204,9 @@ npc.add(ConversationStates.ATTENDING,
 		}
         if (isCompleted(player)) {
             if (isRepeatable(player)) {
-<<<<<<< HEAD
-                res.add("我把 pina colada 带给公主, 但我打赌她肯定会再要, 也许我应该弄到更多的 鱼肉派s.");
-            } else {
-                res.add("公主 Esclara 很爱我带给她的 pina colada , 她不再感到口渴了. 她把 鱼肉派s 送给了我, 还有一个香吻!");
-=======
                 res.add("我把 椰林飘香 带给公主, 但我打赌她肯定会再要, 也许我应该弄到更多的 鱼肉派s.");
             } else {
-                res.add("公主 Esclara 很爱我带给她的 椰林飘香 , 她不再感到口渴了. 她把 鱼肉派s 送给了我, 还有一个香吻!");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
+                res.add("公主 Esclara 很爱我带给她的 椰林飘香 , 她不再感到口渴了. 她把 鱼肉派 送给了我, 还有一个香吻!");
             }
 		}
 		return res;
