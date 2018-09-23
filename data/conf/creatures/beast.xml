@@ -90,9 +90,9 @@
   
   <!-- START: gargoyle -->
   
-  <creature name="gargoyle">
+  <creature name="石像鬼">
     <type class="gargoyle" subclass="gargoyle" tileid="gargoyle.png:2"/>
-    <description>You see a gargoyle, You should think that it is a statue, but no, it is alive!</description>
+    <description>You see a 石像鬼, You should think that it is a statue, but no, it is alive!</description>
     <attributes>
       <atk value="98"/>
       <def value="16"/>
@@ -121,9 +121,9 @@
     </ai>
   </creature>
   
-  <creature name="elder gargoyle">
+  <creature name="高级石像鬼">
     <type class="gargoyle" subclass="elder_gargoyle" tileid="gargoyle.png:1"/>
-    <description>You see an elder gargoyle, it is wise...</description>
+    <description>You see an 高级石像鬼, it is wise...</description>
     <attributes>
       <atk value="114"/>
       <def value="16"/>
@@ -151,9 +151,9 @@
     </ai>
   </creature>
   
-  <creature name="dark gargoyle">
+  <creature name="黑暗石像鬼">
     <type class="gargoyle" subclass="dark_gargoyle" tileid="gargoyle.png:0"/>
-    <description>You see a dark gargoyle, do you feel the fear?</description>
+    <description>You see a 黑暗石像鬼, do you feel the fear?</description>
     <attributes>
       <atk value="134"/>
       <def value="22"/>
@@ -185,9 +185,9 @@
     </ai>
   </creature>  
   
-  <creature name="venom gargoyle">
+  <creature name="毒液石像鬼">
     <type class="gargoyle" subclass="venom_gargoyle" tileid="gargoyle.png:3"/>
-    <description>You see a venom gargoyle, a hideous and poisonous creature.</description>
+    <description>You see a 毒液石像鬼, a hideous and poisonous creature.</description>
     <attributes>
       <atk value="188"/>
       <def value="61"/>

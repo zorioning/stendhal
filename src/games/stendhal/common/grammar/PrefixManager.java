@@ -63,7 +63,7 @@ final class PrefixManager
 //		register("piece of ", "pieces of ", "iron");
 //		register("piece of ", "pieces of ", "chicken");
 //		register("piece of ", "pieces of ", "煤炭");
-//		register("piece of ", "pieces of ", "beeswax");
+//		register("piece of ", "pieces of ", "蜂蜡");
 //
 //		register("sack of ", "sacks of ", "面粉");
 //		register("sack of ", "sacks of ", "糖块");

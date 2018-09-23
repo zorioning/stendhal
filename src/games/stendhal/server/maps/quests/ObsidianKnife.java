@@ -410,7 +410,7 @@ public class ObsidianKnife extends AbstractQuest {
 						new QuestStateStartsWithCondition(QUEST_SLOT, "reading;"),
 						new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_DAYS * MINUTES_IN_DAYS)),
 				ConversationStates.QUEST_2_OFFERED,
-				"I've finished reading! That was really interesting. I learned how to make a special #knife from #黑曜石.",
+				"I've finished reading! That was really interesting. I learned how to make a special #小刀 from #黑曜石.",
 				new SetQuestAction(QUEST_SLOT, "book_read"));
 
 
@@ -418,11 +418,11 @@ public class ObsidianKnife extends AbstractQuest {
 				"黑曜石",
 				new LevelGreaterThanCondition(REQUIRED_LEVEL),
 				ConversationStates.QUEST_2_OFFERED,
-				"That book says that the black gem, 黑曜石, can be used to make a very sharp cutting edge. Fascinating! If you slay a black dragon to bring it, I'll make a #knife for you.",
+				"That book says that the black gem, 黑曜石, can be used to make a very sharp cutting edge. Fascinating! If you slay a black dragon to bring it, I'll make a #小刀 for you.",
 				new SetQuestAction(QUEST_SLOT, "knife_offered"));
 
 		npc.add(ConversationStates.QUEST_2_OFFERED,
-				"knife",
+				"小刀",
 				new LevelGreaterThanCondition(REQUIRED_LEVEL),
 				ConversationStates.QUEST_2_OFFERED,
 				"I'll make an 黑曜石刀 if you can slay a black dragon and get the gem which makes the blade. Bring a "
@@ -431,7 +431,7 @@ public class ObsidianKnife extends AbstractQuest {
 				new SetQuestAction(QUEST_SLOT, "knife_offered"));
 
 		npc.add(ConversationStates.QUEST_2_OFFERED,
-				Arrays.asList("黑曜石", "knife"),
+				Arrays.asList("黑曜石", "小刀"),
 				new NotCondition(new LevelGreaterThanCondition(REQUIRED_LEVEL)),
 				ConversationStates.ATTENDING,
 				"Well, I don't think you're quite ready for such a dangerous weapon yet. How about you come back when you're above level " + Integer.toString(REQUIRED_LEVEL) + "?",
@@ -442,7 +442,7 @@ public class ObsidianKnife extends AbstractQuest {
 				new AndCondition(new GreetingMatchesNameCondition(npc.getName()),
 						new QuestInStateCondition(QUEST_SLOT, "book_read")),
 				ConversationStates.QUEST_2_OFFERED,
-				"Hi! Perhaps you have come to ask about that #knife again ... ",
+				"Hi! Perhaps you have come to ask about that #小刀 again ... ",
 				null);
 
 		// player says hi to NPC when equipped with the fish and the gem and
@@ -498,7 +498,7 @@ public class ObsidianKnife extends AbstractQuest {
 						new NotCondition(new TimePassedCondition(QUEST_SLOT, 1, REQUIRED_MINUTES))),
 				ConversationStates.IDLE,
 				null,
-				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "I haven't finished making the knife. Please check back in"));
+				new SayTimeRemainingAction(QUEST_SLOT, 1, REQUIRED_MINUTES, "I haven't finished making the 小刀. Please check back in"));
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new IncreaseXPAction(10000));

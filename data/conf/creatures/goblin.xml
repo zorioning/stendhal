@@ -26,7 +26,7 @@
       <item value="皮靴" quantity="[1,1]" probability="0.5"/>
       <item value="法杖" quantity="[1,1]" probability="1.0"/>
       <item value="小圆盾" quantity="[1,1]" probability="0.5"/>
-      <item value="knife" quantity="[1,1]" probability="0.5"/>
+      <item value="小刀" quantity="[1,1]" probability="0.5"/>
       <item value="布衣" quantity="[1,1]" probability="5.0"/>
     </drops>
     <equips>

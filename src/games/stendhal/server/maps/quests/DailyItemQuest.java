@@ -236,7 +236,7 @@ public class DailyItemQuest extends AbstractQuest {
 		// misc
 		items.put("dice",1);
 		items.put("玻璃球", 2);
-		items.put("rodent trap",5);
+		items.put("捕兽夹",5);
 		items.put("teddy",1);
 
 		// money
@@ -251,7 +251,7 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("煤炭",10);
 		items.put("面粉",5);
 		items.put("小麦",20);
-		items.put("gold bar",5);
+		items.put("金条",5);
 		items.put("金砂",10);
 		items.put("iron",5);
 		items.put("铁矿",10);
@@ -275,9 +275,9 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("双刃剑",1);
 		items.put("dagger",1);
 		items.put("精灵之剑",1);
-		items.put("katana",1);
-		items.put("knife",1);
-		items.put("scimitar",1);
+		items.put("太刀",1);
+		items.put("小刀",1);
+		items.put("半月弯刀",1);
 		items.put("短剑",1);
 		items.put("sword",1);
 

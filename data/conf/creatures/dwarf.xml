@@ -470,11 +470,11 @@
     <corpse name="humanoid_2x2" harmless="bag_2x2" width="2" height="2"/>
     <drops>
       <item value="money" quantity="[50,200]" probability="100.0"/>
-      <item value="mithril bar" quantity="[1,1]" probability="0.0010"/>
+      <item value="密银锭" quantity="[1,1]" probability="0.0010"/>
       <item value="附魔甲" quantity="[1,1]" probability="0.0010"/>
       <item value="密银矿石" quantity="[1,1]" probability="0.2"/>
       <item value="大治疗剂" quantity="[1,2]" probability="30.0"/>
-      <item value="snowglobe" quantity="[1,1]" probability="15.0"/>
+      <item value="雪珠" quantity="[1,1]" probability="15.0"/>
     </drops>
     <equips>
     </equips>

@@ -83,7 +83,7 @@ public class VampireSwordTest {
 	public VampireSwordTest() {
 		requiredForFilling.put("吸血鬼内脏", 7);
 		requiredForFilling.put("蝙蝠内脏", 7);
-		requiredForFilling.put("skull ring", 1);
+		requiredForFilling.put("骷髅戒指", 1);
 		requiredForFilling.put("高脚杯", 1);
 	}
 
@@ -325,7 +325,7 @@ public class VampireSwordTest {
 	 */
 	@Test
 	public void testVampireLordDescription() {
-		for (String word : Arrays.asList("lord", "vampire", "skull ring")) {
+		for (String word : Arrays.asList("lord", "vampire", "骷髅戒指")) {
 			final Player player = PlayerTestHelper.createPlayer("me");
 			final SpeakerNPC npc = vs.npcs.get(VAMPIRE_NPC);
 			final Engine en = vs.npcs.get(VAMPIRE_NPC).getEngine();
@@ -333,7 +333,7 @@ public class VampireSwordTest {
 			en.setCurrentState(ConversationStates.ATTENDING);
 
 			en.step(player, word);
-			assertEquals("answer to '" + word + "'", "The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his skull ring with the #盛血高脚杯.", getReply(npc));
+			assertEquals("answer to '" + word + "'", "The Vampire Lord rules these Catacombs! And I'm afraid of him. I can only help you if you kill him and bring me his 骷髅戒指 with the #盛血高脚杯.", getReply(npc));
 			assertEquals(en.getCurrentState(), ConversationStates.ATTENDING);
 		}
 	}
@@ -383,7 +383,7 @@ public class VampireSwordTest {
 
 		Item item = SingletonRepository.getEntityManager().getItem("高脚杯");
 		player.equipToInventoryOnly(item);
-		item = SingletonRepository.getEntityManager().getItem("skull ring");
+		item = SingletonRepository.getEntityManager().getItem("骷髅戒指");
 		player.equipToInventoryOnly(item);
 		item = SingletonRepository.getEntityManager().getItem("蝙蝠内脏");
 		player.equipToInventoryOnly(item);
@@ -438,7 +438,7 @@ public class VampireSwordTest {
 			}
 
 			en.step(player, "fill");
-			assertEquals("I need you to fetch me 7 #'蝙蝠内脏', 7 #'吸血鬼内脏', a #'skull ring', and an #'高脚杯' for this job, which will take 5 minutes. Do you have what I need?", getReply(npc));
+			assertEquals("I need you to fetch me 7 #'蝙蝠内脏', 7 #'吸血鬼内脏', a #'骷髅戒指', and an #'高脚杯' for this job, which will take 5 minutes. Do you have what I need?", getReply(npc));
 
 			en.step(player, yes);
 			assertEquals("answer to '" + yes + "'", "OK, I will fill a 盛血高脚杯 for you, but that will take some time. Please come back in 5 minutes.", getReply(npc));

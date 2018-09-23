@@ -95,7 +95,7 @@ public class SoupTest {
 		assertEquals("Don't take me for a fool, traveller. You don't have a 菠菜 with you.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Bye.", getReply(npc));
-		// [16:51] Removed contained home scroll item with ID 6 from bag
+		// [16:51] Removed contained 回城卷 item with ID 6 from bag
 		// [16:52] You see 菠菜. It is enriched with vitamins. Stats are (HP: 30).
 		// summon all except 色拉 and 洋葱 in player's bag
 <<<<<<< HEAD

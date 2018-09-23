@@ -21,7 +21,7 @@
     <drops>
       <item value="大治疗剂" quantity="[2,6]" probability="75.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="90.0"/>
-      <item value="orcish sword" quantity="[1,1]" probability="0.3"/>
+      <item value="兽人大剑" quantity="[1,1]" probability="0.3"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
     </drops>
     <equips>
@@ -154,7 +154,7 @@
       <item value="大治疗剂" quantity="[1,4]" probability="70.0"/>
       <item value="特级毒药" quantity="[1,2]" probability="80.0"/>
       <item value="money" quantity="[30,150]" probability="100.0"/>
-      <item value="silk gland" quantity="[1,1]" probability="30.0"/>
+      <item value="蜘蛛丝腺" quantity="[1,1]" probability="30.0"/>
     </drops>
     <equips>
     </equips>
@@ -1366,7 +1366,7 @@
     <drops>
       <item value="money" quantity="[7,20]" probability="100.0"/>
       <item value="干酪" quantity="[3,7]" probability="80.0"/>
-      <item value="rodent trap" quantity="[1,1]" probability="15.0" />
+      <item value="捕兽夹" quantity="[1,1]" probability="15.0" />
     </drops>
     <equips>
     </equips>

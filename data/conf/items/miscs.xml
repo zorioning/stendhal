@@ -119,9 +119,9 @@
     </equipable>
   </item>
 
-  <item name="rodent trap">
+  <item name="捕兽夹">
     <type class="misc" subclass="rodent_trap" tileid="-1"/>
-    <description>You see a rodent trap.</description> 
+    <description>You see a 捕兽夹.</description> 
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -239,13 +239,13 @@
     </equipable>
   </item>
   
-   <item name="snowglobe">
+   <item name="雪珠">
     <type class="misc" subclass="snowglobe" tileid="-1"/>
-    <description>You see a snowglobe. It's so festive, it reminds you of Christmas!</description>
+    <description>You see a 雪珠. It's so festive, it reminds you of Christmas!</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <behavior class-name="games.stendhal.server.entity.item.behavior.MessagingUseBehavior">
-      <parameter name="public" value="!me shakes snowglobe."/>
-      <parameter name="private" value="Snowflakes twirl around and fall softly to the ground of the snowglobe."/>
+      <parameter name="public" value="!me shakes 雪珠."/>
+      <parameter name="private" value="Snowflakes twirl around and fall softly to the ground of the 雪珠."/>
     </behavior>
     <attributes>
       <quantity value="1"/>
@@ -265,9 +265,9 @@
   </item>
 
   <!--must be stackable as it is a produced item-->
-  <item name="bobbin">
+  <item name="线轴">
     <type class="misc" subclass="bobbin" tileid="-1"/>
-    <description>You see a bobbin for a sewing machine.</description>
+    <description>You see a 线轴 for a sewing machine.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -285,9 +285,9 @@
     </equipable>
   </item>
 
-  <item name="venom gland">
+  <item name="毒腺">
     <type class="misc" subclass="venom_gland" tileid="-1"/>
-    <description>You see the venom gland of a giant cobra. It is filled with deadly toxin.</description>
+    <description>You see the 毒腺 of a giant cobra. It is filled with deadly toxin.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>

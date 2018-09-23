@@ -61,7 +61,7 @@ import games.stendhal.server.maps.Region;
  *
  * REWARD:
  * <ul>
- * <li>You get 20 gold bars</li>
+ * <li>You get 20 金条s</li>
  * <li>Karma: 15</li>
  * <li>You get 52,000 experience points in all</li>
  * </ul>
@@ -265,7 +265,7 @@ import games.stendhal.server.maps.Region;
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("野蛮人护甲"));
 		reward.add(new IncreaseXPAction(50000));
-		reward.add(new EquipItemAction("gold bar", 20));
+		reward.add(new EquipItemAction("金条", 20));
 		reward.add(new SetQuestAction(QUEST_SLOT, "done"));
 		reward.add(new IncreaseKarmaAction(15));
 

@@ -96,7 +96,7 @@ public class SadScientist extends AbstractQuest {
 	private static final String LETTER_DESCRIPTION = "这是一封寄给 Vasi Elos 的信.";
 	private static final String QUEST_SLOT = "sad_scientist";
 	private static final int REQUIRED_MINUTES = 20;
-	private static final String NEEDED_ITEMS = "翡翠=1;黑曜石=1;蓝宝石=1;红宝石=2;gold bar=20;mithril bar=1";
+	private static final String NEEDED_ITEMS = "翡翠=1;黑曜石=1;蓝宝石=1;红宝石=2;金条=20;密银锭=1";
 
 	@Override
 	public String getName() {

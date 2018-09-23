@@ -200,13 +200,13 @@ public class GardenerNPC implements ZoneConfigurator {
                 new SellerAdder().addSeller(this, new SellerBehaviour(offerings), false);
 				addReply("午饭", "茶 和 三明治, 请慢用!");
 				addReply("三明治", "嗯.. 我喜欢汉堡和干酪一起吃.");
-				addReply(Arrays.asList("kalavan city scroll", "scroll"), "这是一个魔法卷轴, 它能把你传送回 Kalavan. 不要问我它怎么工作的!");
+				addReply(Arrays.asList("卡拉文回城卷", "scroll"), "这是一个魔法卷轴, 它能把你传送回 Kalavan. 不要问我它怎么工作的!");
 
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
 				requiredResources.put("茶", 1);
 				requiredResources.put("三明治", 1);
 
-				final ProducerBehaviour behaviour = new SpecialProducerBehaviour("交换", "kalavan city scroll", requiredResources, 1 * 60);
+				final ProducerBehaviour behaviour = new SpecialProducerBehaviour("交换", "卡拉文回城卷", requiredResources, 1 * 60);
 
 				new ProducerAdder().addProducer(this, behaviour,
 				        "阳光不错 [daylightphase], 是吧?");

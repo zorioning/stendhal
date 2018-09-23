@@ -264,7 +264,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("fire swords", "fire sword");
 		testPluralisationAndSingularisation("ice swords", "ice sword");
 		testPluralisationAndSingularisation("great swords", "great sword");
-		testPluralisationAndSingularisation("r hand swords", "r hand sword");
+		testPluralisationAndSingularisation("左手剑s", "左手剑");
 		testPluralisationAndSingularisation("l hand swords", "l hand sword");
 		testPluralisationAndSingularisation("small axes", "small axe");
 		testPluralisationAndSingularisation("hand axes", "hand axe");
@@ -444,7 +444,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("maps", "map");
 		testPluralisationAndSingularisation("summon scrolls", "summon scroll");
 		testPluralisationAndSingularisation("empty scrolls", "empty scroll");
-		testPluralisationAndSingularisation("home scrolls", "home scroll");
+		testPluralisationAndSingularisation("回城卷s", "回城卷");
 		testPluralisationAndSingularisation("marked scrolls", "marked scroll");
 		testPluralisationAndSingularisation("presents", "present");
 		testPluralisationAndSingularisation("rods of the gm", "rod of the gm");
@@ -565,7 +565,7 @@ public class GrammarTest {
 				"veteran kobold");
 		testPluralisationAndSingularisation("trolls", "troll");
 		testPluralisationAndSingularisation("orcs", "orc");
-		testPluralisationAndSingularisation("dark gargoyles", "dark gargoyle");
+		testPluralisationAndSingularisation("黑暗石像鬼s", "黑暗石像鬼");
 		testPluralisationAndSingularisation("ogres", "ogre");
 		testPluralisationAndSingularisation("mummies", "mummy");
 		testPluralisationAndSingularisation("leader kobolds", "leader kobold");
@@ -582,8 +582,8 @@ public class GrammarTest {
 		testPluralisationAndSingularisation(
 				"plural of slime is slime but this is a creature....",
 				"brown slimes", "brown slime");
-		testPluralisationAndSingularisation("venom gargoyles",
-				"venom gargoyle");
+		testPluralisationAndSingularisation("毒液石像鬼s",
+				"毒液石像鬼");
 		testPluralisationAndSingularisation("elder ogres", "elder ogre");
 		testPluralisationAndSingularisation("dwarf guardians",
 				"dwarf guardian");

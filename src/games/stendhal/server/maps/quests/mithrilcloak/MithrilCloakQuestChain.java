@@ -34,9 +34,9 @@ package games.stendhal.server.maps.quests.mithrilcloak;
  * <li>Ida needs sewing machine fixed, with one of three items from a list</li>
  * <li>Once machine fixed and if you have done 密银盾 quest, Ida offers you cloak</li>
  * <li>Kampusch tells you to how to make the fabric</li>
- * <li>Imperial scientists take silk glands and make silk thread</li>
- * <li>Kampusch fuses mithril nuggets into the silk thread</li>
- * <li>Whiggins weaves mithril thread into mithril fabric</li>
+ * <li>Imperial scientists take 蜘蛛丝腺s and make 丝线</li>
+ * <li>Kampusch fuses mithril nuggets into the 丝线</li>
+ * <li>Whiggins weaves 密银线 into 密银布</li>
  * <li>Ida takes fabric then asks for scissors</li>
  * <li>Hogart makes the scissors which need eggshells</li>
  * <li>Terry swaps eggshells for poisons</li>

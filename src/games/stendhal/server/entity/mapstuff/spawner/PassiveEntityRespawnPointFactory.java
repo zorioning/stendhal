@@ -281,11 +281,11 @@ public class PassiveEntityRespawnPointFactory {
 			break;
 
 		case 2:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("gold bar", 9000);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("金条", 9000);
 			passiveEntityrespawnPoint.setDescription("这里金光闪烁.");
 			break;
 		case 3:
-			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("mithril bar", 16000);
+			passiveEntityrespawnPoint = new PassiveEntityRespawnPoint("密银锭", 16000);
 			passiveEntityrespawnPoint.setDescription("这里银光闪闪.");
 			break;
 		case 4:

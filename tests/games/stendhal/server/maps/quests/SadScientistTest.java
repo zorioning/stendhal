@@ -39,7 +39,7 @@ import utilities.QuestHelper;
 public class SadScientistTest {
 	private static final String QUEST_SLOT = "sad_scientist";
 	// better: use the one from quest and make it visible
-	private static final String NEEDED_ITEMS = "翡翠=1;obsidian=1;蓝宝石=1;carbuncle=2;gold bar=20;mithril bar=1;影子护腿=1";
+	private static final String NEEDED_ITEMS = "翡翠=1;obsidian=1;蓝宝石=1;carbuncle=2;金条=20;密银锭=1;影子护腿=1";
 	private Player player = null;
 	private SpeakerNPC npc = null;
 	private Engine en = null;
@@ -108,9 +108,9 @@ public class SadScientistTest {
 		en.step(player, "yes");
 		assertEquals("My wife is living in Semos City. She loves gems. Can you bring me some #gems that I need to make a pair of precious #legs?", getReply(npc));
 		en.step(player, "gems");
-		assertEquals("I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife?", getReply(npc));
+		assertEquals("I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 金条s and one 密银锭. Can you do that for my wife?", getReply(npc));
 		en.step(player, "legs");
-		assertEquals("宝石护腿. I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 gold bars and one mithril bar. Can you do that for my wife? Can you bring what I need?", getReply(npc));
+		assertEquals("宝石护腿. I need an 翡翠, an obsidian, a 蓝宝石, 2 carbuncles, 20 金条s and one 密银锭. Can you do that for my wife? Can you bring what I need?", getReply(npc));
 		en.step(player, "yes");
 		assertEquals("I am waiting, Semos man.", getReply(npc));
 
@@ -120,17 +120,17 @@ public class SadScientistTest {
 		assertEquals("Hello. Do you have any #items I need for the 宝石护腿?", getReply(npc));
 
 		// summon all the items needed:
-		// but not all the gold bar
-		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 10);
-		PlayerTestHelper.equipWithItem(player, "mithril bar");
+		// but not all the 金条
+		PlayerTestHelper.equipWithStackableItem(player, "金条", 10);
+		PlayerTestHelper.equipWithItem(player, "密银锭");
 		PlayerTestHelper.equipWithItem(player, "翡翠");
 		PlayerTestHelper.equipWithItem(player, "obsidian");
 		PlayerTestHelper.equipWithItem(player, "蓝宝石");
 		PlayerTestHelper.equipWithStackableItem(player, "carbuncle", 2);
 
-		assertFalse(player.isEquipped("gold bar", 20));
+		assertFalse(player.isEquipped("金条", 20));
 
-		final String[] triggers = { "obsidian", "gold bar", "carbuncle", "蓝宝石", "翡翠", "mithril bar" };
+		final String[] triggers = { "obsidian", "金条", "carbuncle", "蓝宝石", "翡翠", "密银锭" };
 
 		for (final String playerSays : triggers) {
 
@@ -143,11 +143,11 @@ public class SadScientistTest {
 			assertEquals("Good, do you have anything else?", getReply(npc));
 			assertThat(player.getQuest(QUEST_SLOT), not((is(NEEDED_ITEMS))));
 		}
-		// now bring the remaining gold bar
-		PlayerTestHelper.equipWithStackableItem(player, "gold bar", 10);
+		// now bring the remaining 金条
+		PlayerTestHelper.equipWithStackableItem(player, "金条", 10);
 
 		// -----------------------------------------------
-		en.step(player, "gold bar");
+		en.step(player, "金条");
 		assertEquals("I am a stupid fool too much in love with my wife Vera to remember, of course these legs also need a base to add " +
 		"the jewels to. Please return with a pair of 影子护腿. Bye.", getReply(npc));
 

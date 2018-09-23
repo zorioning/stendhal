@@ -143,22 +143,22 @@ import games.stendhal.server.maps.Region;
 				new SetQuestAction(QUEST_SLOT, "hackim"));
 
 		npc.add(
-			ConversationStates.ATTENDING, Arrays.asList("salva","knife"),
-			new NotCondition(new QuestInStateCondition(QUEST_SLOT, "knife")),
+			ConversationStates.ATTENDING, Arrays.asList("salva","小刀"),
+			new NotCondition(new QuestInStateCondition(QUEST_SLOT, "小刀")),
 			ConversationStates.ATTENDING,
 			"You need to go to Hackim Easso and ask him about a magic knife for #salva before I can help you.",
 			null);
 
-	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","治疗剂"),
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "knife"),
-				new PlayerHasItemWithHimCondition("knife")),
+	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","小刀","治疗剂"),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "小刀"),
+				new PlayerHasItemWithHimCondition("小刀")),
 				ConversationStates.ATTENDING, "Very good! Now I need the items to make the love #治疗剂. I need 3 紫丁香 flowers, 1 sprig of 科科达, 1 glass of 红酒 and 1 黑珍珠. Please bring them all together at once and then ask me to make the #治疗剂.",
-				new MultipleActions(new SetQuestAction(QUEST_SLOT, "治疗剂"), new DropItemAction("knife")));
+				new MultipleActions(new SetQuestAction(QUEST_SLOT, "治疗剂"), new DropItemAction("小刀")));
 
-	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","knife","治疗剂"),
-				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "knife"),
-				new NotCondition(new PlayerHasItemWithHimCondition("knife"))),
-				ConversationStates.ATTENDING, "I see you have been to Hackim, but where is the magic knife?",
+	    npc.add(ConversationStates.ATTENDING,  Arrays.asList("salva","小刀","治疗剂"),
+				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "小刀"),
+				new NotCondition(new PlayerHasItemWithHimCondition("小刀"))),
+				ConversationStates.ATTENDING, "I see you have been to Hackim, but where is the magic 小刀?",
 				null);
 
 		final List<ChatAction> potionactions = new LinkedList<ChatAction>();
@@ -206,9 +206,9 @@ import games.stendhal.server.maps.Region;
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "pies"),
 				new PlayerHasItemWithHimCondition("馅饼",5)),
 				ConversationStates.ATTENDING, "Ah, thank you very much! Now I will tell you a little secret of mine. I am not a blacksmith, "
-				+ "only an assistant. I can't make knives at all! But I sell Salva a normal knife and is happy enough with that! So just take her "
-				+ "a plain knife like you could buy from 辛布兰卡 in 塞门镇 Tavern. I'll tell her I made it! Oh and thanks for the pies!!!",
-				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "knife", 1.0), new DropItemAction("馅饼",5)));
+				+ "only an assistant. I can't make knives at all! But I sell Salva a normal 小刀 and is happy enough with that! So just take her "
+				+ "a plain 小刀 like you could buy from 辛布兰卡 in 塞门镇 Tavern. I'll tell her I made it! Oh and thanks for the pies!!!",
+				new MultipleActions(new SetQuestAndModifyKarmaAction(QUEST_SLOT, "小刀", 1.0), new DropItemAction("馅饼",5)));
 
 	    npc.add(ConversationStates.ATTENDING, Arrays.asList("salva", "pies"),
 				new AndCondition(new QuestInStateCondition(QUEST_SLOT, "pies"),
@@ -248,7 +248,7 @@ import games.stendhal.server.maps.Region;
 				questTrigger,
 				new OrCondition(new QuestInStateCondition(QUEST_SLOT, "start"),
 								new QuestInStateCondition(QUEST_SLOT, "pies"),
-								new QuestInStateCondition(QUEST_SLOT, "knife")),
+								new QuestInStateCondition(QUEST_SLOT, "小刀")),
 				ConversationStates.ATTENDING,
 				"I am waiting for you to return with a 爱之治疗剂. Please ask Salva Mattori in the magic city about: #治疗剂.",
 				null);
@@ -375,7 +375,7 @@ import games.stendhal.server.maps.Region;
 				return res;
 			}
 			res.add("Hackim said I should go buy a standard knife like from 辛布兰卡!! Apparently he tricked Salva all these years into believing they are magic, I better not let on...");
-			if ("knife".equals(questState)) {
+			if ("小刀".equals(questState)) {
 				return res;
 			}
 			res.add("The 爱之治疗剂 requires 3 紫丁香 flowers, 1 sprig of 科科达, 1 glass of 红酒 and 1 黑珍珠.");

@@ -83,7 +83,7 @@ public class BlacksmithNPC implements ZoneConfigurator  {
 				addReply("金砂",
 				"我兄弟住在 Ados. 他能把金块重铸成纯金条.");
 
-				addReply("bobbin", "虽然我做工具生意 #trade ,但我不做线轴 bobbins, 抱歉. 造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
+				addReply("线轴", "虽然我做工具生意 #trade ,但我不做线轴 bobbins, 抱歉. 造出这东西对我来说太麻烦了. 你可以找一个 矮人试试.");
 				addReply(Arrays.asList("oil", "can of oil"), "Oh, 这些是由渔夫 fishermen 给我们供应.");
 
 				addHelp("如果你给我带来木头 #wood 和铁矿 #'iron ore', 我能为你铸造 #cast 铁块. 然后把它卖给矮人, 就可以为自已赚些钱.");
