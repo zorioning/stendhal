@@ -132,7 +132,7 @@ public final class ShopList {
 		shops.add("selltools", "镰刀", 80);
 		shops.add("selltools", "淘金盘", 230);
 
-		shops.add("buyiron", "iron", 75);
+		shops.add("buyiron", "铁锭", 75);
 
 		shops.add("buygrain", "小麦", 1);
 

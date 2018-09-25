@@ -360,7 +360,7 @@ public class MithrilCloakTest {
 		assertEquals("Greetings! How may I help you?", getReply(npc));
 		en.step(player, "scissors");
 		// Hogart asks for random number of eggshells (2-4? 1-3?) so only test starts with
-		assertTrue(getReply(npc).startsWith("Ah yes, Ida sent me a message about some 魔法剪刀. I need one each of an iron bar and a 密银锭, and also "));
+		assertTrue(getReply(npc).startsWith("Ah yes, Ida sent me a message about some 魔法剪刀. I need one each of an 铁锭 and a 密银锭, and also "));
 		en.step(player, "eggshells");
 		assertEquals("They must be from dragon eggs. I guess you better find someone who dares to hatch dragons!", getReply(npc));
 		en.step(player, "bye");
@@ -371,7 +371,7 @@ public class MithrilCloakTest {
 		player.setQuest(questSlot, "need_eggshells;4");
 		Item item = ItemTestHelper.createItem("密银锭", 1);
 		player.getSlot("背包").add(item);
-		item = ItemTestHelper.createItem("iron", 1);
+		item = ItemTestHelper.createItem("铁锭", 1);
 		player.getSlot("背包").add(item);
 
 		en.step(player, "hi");

@@ -81,7 +81,7 @@
     </equipable>
   </item>
 
-  <item name="铁矿">
+  <item name="铁矿石">
     <type class="resource" subclass="iron_ore" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
@@ -221,7 +221,7 @@
     </equipable>
   </item>
 
-  <item name="iron">
+  <item name="铁锭">
     <type class="resource" subclass="iron" tileid="-1"/>
     <description/>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>

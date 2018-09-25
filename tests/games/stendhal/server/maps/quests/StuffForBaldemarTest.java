@@ -299,7 +299,7 @@ public class StuffForBaldemarTest extends ZonePlayerAndNPCTestImpl {
 
 		PlayerTestHelper.equipWithItem(player, "magic plate shield");
 		PlayerTestHelper.equipWithStackableItem(player, "金条", 10);
-		PlayerTestHelper.equipWithStackableItem(player, "iron", 20);
+		PlayerTestHelper.equipWithStackableItem(player, "铁锭", 20);
 		PlayerTestHelper.equipWithStackableItem(player, "黑珍珠", 10);
 		PlayerTestHelper.equipWithStackableItem(player, "忍者镖", 20);
 		PlayerTestHelper.equipWithStackableItem(player, "玻璃球", 15);

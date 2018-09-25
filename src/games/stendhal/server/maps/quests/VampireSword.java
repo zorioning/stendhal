@@ -68,7 +68,7 @@ import games.stendhal.server.maps.Region;
  * 盛血高脚杯.</li>
  * <li>Fill the 盛血高脚杯 and come back.</li>
  * <li>You get some items from the Catacombs and kill the Vampire Lord.</li>
- * <li>You get the iron needed in the usual way by collecting 铁矿 and
+ * <li>You get the 铁锭 needed in the usual way by collecting 铁矿石 and
  * casting in 塞门镇.</li>
  * <li>Hogart forges the 吸血鬼之刃 for you.</li>
  * </ul>
@@ -188,7 +188,7 @@ public class VampireSword extends AbstractQuest {
 
 		final List<ChatAction> startforging = new LinkedList<ChatAction>();
 		startforging.add(new DropItemAction("盛血高脚杯"));
-		startforging.add(new DropItemAction("iron", 10));
+		startforging.add(new DropItemAction("铁锭", 10));
 		startforging.add(new IncreaseKarmaAction(5.0));
 		startforging.add(new SetQuestAction(QUEST_SLOT, "forging;"));
 		startforging.add(new SetQuestToTimeStampAction(QUEST_SLOT, 1));
@@ -199,7 +199,7 @@ public class VampireSword extends AbstractQuest {
 					new QuestInStateCondition(QUEST_SLOT,"start"),
 					new PlayerHasItemWithHimCondition("盛血高脚杯"),
 					new KilledCondition("vampire lord"),
-					new PlayerHasItemWithHimCondition("iron", REQUIRED_IRON)),
+					new PlayerHasItemWithHimCondition("铁锭", REQUIRED_IRON)),
 			ConversationStates.IDLE,
 			"You've brought everything I need to make the 吸血鬼之刃. Come back in "
 			+ REQUIRED_MINUTES
@@ -212,7 +212,7 @@ public class VampireSword extends AbstractQuest {
 						new QuestInStateCondition(QUEST_SLOT,"start"),
 						new PlayerHasItemWithHimCondition("盛血高脚杯"),
 						new KilledCondition("vampire lord"),
-						new NotCondition(new PlayerHasItemWithHimCondition("iron", REQUIRED_IRON))),
+						new NotCondition(new PlayerHasItemWithHimCondition("铁锭", REQUIRED_IRON))),
 		ConversationStates.QUEST_ITEM_BROUGHT,
 		"You have battled hard to bring that 盛血高脚杯. I will use it to #forge the 吸血鬼之刃",
 		null);
@@ -294,15 +294,15 @@ public class VampireSword extends AbstractQuest {
 			ConversationStates.QUEST_ITEM_BROUGHT,
 			"Bring me "
 				+ REQUIRED_IRON
-				+ " #iron bars to forge the sword with. Don't forget to bring the 盛血高脚杯 too.",
+				+ " #铁锭s to forge the sword with. Don't forget to bring the 盛血高脚杯 too.",
 			null);
 
 		npc.add(
 			ConversationStates.QUEST_ITEM_BROUGHT,
-			"iron",
+			"铁锭",
 			null,
 			ConversationStates.IDLE,
-			"You know, collect the 铁矿 lying around and get it cast! Bye!",
+			"You know, collect the 铁矿石 lying around and get it cast! Bye!",
 			null);
 	}
 

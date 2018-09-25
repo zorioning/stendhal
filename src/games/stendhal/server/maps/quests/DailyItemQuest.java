@@ -253,8 +253,8 @@ public class DailyItemQuest extends AbstractQuest {
 		items.put("小麦",20);
 		items.put("金条",5);
 		items.put("金砂",10);
-		items.put("iron",5);
-		items.put("铁矿",10);
+		items.put("铁锭",5);
+		items.put("铁矿石",10);
 		items.put("木头",10);
 
 		// shield

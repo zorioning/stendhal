@@ -99,12 +99,12 @@ public class StuffForBaldemar extends AbstractQuest {
 		itemCollector.require().item("附魔钢盾")
 				.bySaying("I need %s for the pieces and parts for your new shield.");
 		itemCollector.require().item("金条").pieces(10)
-				.bySaying("I need %s to melt down with the mithril and iron.");
-		itemCollector.require().item("iron").pieces(20).bySaying("I need %s to melt down with the mithril and gold.");
+				.bySaying("I need %s to melt down with the mithril and 铁锭.");
+		itemCollector.require().item("铁锭").pieces(20).bySaying("I need %s to melt down with the mithril and gold.");
 		itemCollector.require().item("黑珍珠").pieces(10)
 				.bySaying("I need %s to crush into fine powder to sprinkle onto shield to give it a nice sheen.");
 		itemCollector.require().item("忍者镖").pieces(20).bySaying(
-				"I need %s to melt down with the mithril, gold and iron. It is a 'secret' ingredient that only you and I know about. ;)");
+				"I need %s to melt down with the mithril, gold and 铁锭. It is a 'secret' ingredient that only you and I know about. ;)");
 		itemCollector.require().item("玻璃球").pieces(15).bySaying("My son wants some new toys. I need %s still.");
 		itemCollector.require().item("雪珠").bySaying("I just LOVE those trinkets from Athor. I need %s still.");
 

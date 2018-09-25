@@ -190,7 +190,7 @@ public class StuffForVulcanusTest extends ZonePlayerAndNPCTestImpl {
 		en.setCurrentState(ConversationStates.IDLE);
 		player.setQuest(questSlot, "start;10;0;0;0");
 		PlayerTestHelper.equipWithStackableItem(player, "金条", 12);
-		PlayerTestHelper.equipWithStackableItem(player, "iron", 10);
+		PlayerTestHelper.equipWithStackableItem(player, "铁锭", 10);
 
 		en.step(player, "hi");
 		assertEquals("How do you expect me to #forge it without missing 26 pieces of wood for the fire?", getReply(vulcanus));

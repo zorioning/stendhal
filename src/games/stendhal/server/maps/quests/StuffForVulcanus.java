@@ -81,7 +81,7 @@ public class StuffForVulcanus extends AbstractQuest {
 	private final BringOrderedListOfItemsQuestLogic questLogic = new BringOrderedListOfItemsQuestLogic();
 
 	public StuffForVulcanus() {
-		itemCollector.require().item("iron").pieces(15).bySaying("I cannot #forge it without the missing %s.");
+		itemCollector.require().item("铁锭").pieces(15).bySaying("I cannot #forge it without the missing %s.");
 		itemCollector.require().item("木头").pieces(26).bySaying("How do you expect me to #forge it without missing %s for the fire?");
 		itemCollector.require().item("金条").pieces(12).bySaying("I must pay a bill to spirits in order to cast the enchantment over the sword. I need %s more.");
 		itemCollector.require().item("巨人心脏").pieces(6).bySaying("It is the base element of the enchantment. I need %s still.");
@@ -218,10 +218,10 @@ public class StuffForVulcanus extends AbstractQuest {
 			});
 
 		npc.add(ConversationStates.ANY,
-				"iron",
+				"铁锭",
 				null,
 				ConversationStates.ATTENDING,
-				"Collect some 铁矿 from the mines which are rich in minerals.",
+				"Collect some 铁矿石 from the mines which are rich in minerals.",
 				null);
 		npc.add(ConversationStates.ANY,
 				"木头",

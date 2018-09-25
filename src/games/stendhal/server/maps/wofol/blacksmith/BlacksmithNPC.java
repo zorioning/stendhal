@@ -93,14 +93,14 @@ public class BlacksmithNPC implements ZoneConfigurator {
 				addReply("Wrvil", "He runs a trading business not far from here. I used to make the odd item for him, but don't have any energy left.");
 				addGoodbye();
 
-				addReply("线轴", "Ask me to #make you a 线轴 if you have some iron with you, and some cash. I'm a bit forgetful so when you return please say 'remind' to prompt me.");
+				addReply("线轴", "Ask me to #make you a 线轴 if you have some 铁锭 with you, and some cash. I'm a bit forgetful so when you return please say 'remind' to prompt me.");
 
 				/* @author kymara */
 
 				// bobbin from iron
 				// (uses sorted TreeMap instead of HashMap)
 				final Map<String, Integer> requiredResources = new TreeMap<String, Integer>();
-				requiredResources.put("iron", Integer.valueOf(1));
+				requiredResources.put("铁锭", Integer.valueOf(1));
 				requiredResources.put("money", Integer.valueOf(100));
 
 				// make sure alrak tells player to remind him to get 线轴 back by overriding transactAgreedDeal

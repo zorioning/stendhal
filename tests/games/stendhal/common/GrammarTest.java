@@ -183,8 +183,8 @@ public class GrammarTest {
 		assertEquals("piece of cheese", Grammar.fullForm("Cheese"));
 		assertEquals("piece of wood", Grammar.fullForm("wood"));
 		assertEquals("piece of paper", Grammar.fullForm("paper"));
-		assertEquals("piece of iron", Grammar.fullForm("iron"));
-		assertEquals("nugget of 铁矿", Grammar.fullForm("铁矿"));
+		assertEquals("piece of iron", Grammar.fullForm("铁锭"));
+		assertEquals("nugget of 铁矿", Grammar.fullForm("铁矿石"));
 		assertEquals("sack of flour", Grammar.fullForm("面粉"));
 		assertEquals("sheaf of grain", Grammar.fullForm("grain"));
 		assertEquals("loaf of bread", Grammar.fullForm("bread"));
@@ -427,8 +427,8 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("sheaves of grain",
 				"sheaf of grain");
 		testPluralisationAndSingularisation("bags of flour", "bag of flour");
-		testPluralisationAndSingularisation("nuggets of 铁矿",
-				"nugget of 铁矿");
+		testPluralisationAndSingularisation("nuggets of 铁矿石",
+				"nugget of 铁矿石");
 		testPluralisationAndSingularisation("bars of iron", "bar of iron");
 		testPluralisationAndSingularisation("golden gm tokens",
 				"golden gm token");

@@ -35,7 +35,7 @@ public class WellSource extends PlayerActivityEntity {
 	/**
 	 * The list of possible rewards.
 	 */
-	private static final String[] items = { "money", "木头", "iron ore",
+	private static final String[] items = { "money", "木头", "铁矿石",
 			"金砂", "治疗剂", "回城卷", "大治疗剂",
 			"蓝宝石", "红宝石", "horned golden helmet", "暗之匕首",
 			"present" };

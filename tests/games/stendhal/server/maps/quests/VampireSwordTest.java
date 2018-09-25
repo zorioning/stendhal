@@ -587,7 +587,7 @@ public class VampireSwordTest {
 		player.setQuest(questSlot, "start");
 
 		en.step(player, "forge");
-		assertEquals("Bring me 10 #iron bars to forge the sword with. Don't forget to bring the 盛血高脚杯 too.", getReply(npc));
+		assertEquals("Bring me 10 #铁锭s to forge the sword with. Don't forget to bring the 盛血高脚杯 too.", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.QUEST_ITEM_BROUGHT);
 	}
 
@@ -600,7 +600,7 @@ public class VampireSwordTest {
 		en.setCurrentState(ConversationStates.QUEST_ITEM_BROUGHT);
 		player.setQuest(questSlot, "start");
 
-		en.step(player, "iron");
+		en.step(player, "铁锭");
 		assertEquals("You know, collect the 铁矿 lying around and get it cast! Bye!", getReply(npc));
 		assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 	}
@@ -618,14 +618,14 @@ public class VampireSwordTest {
 			Item item = SingletonRepository.getEntityManager().getItem("盛血高脚杯");
 			player.equipToInventoryOnly(item);
 
-			PlayerTestHelper.equipWithStackableItem(player, "iron", 10);
+			PlayerTestHelper.equipWithStackableItem(player, "铁锭", 10);
 
 			player.setSharedKill("vampire lord");
 
 			en.step(player, hello);
 			assertEquals("You've brought everything I need to make the vampire sword. Come back in 10 minutes and it will be ready", getReply(npc));
 			assertFalse("dwarf took the 盛血高脚杯", player.isEquipped("盛血高脚杯"));
-			assertFalse("dwarf took the iron", player.isEquipped("iron"));
+			assertFalse("dwarf took the iron", player.isEquipped("铁锭"));
 			assertTrue("in forging state", player.getQuest(questSlot).startsWith("forging;"));
 			assertEquals(en.getCurrentState(), ConversationStates.IDLE);
 		}

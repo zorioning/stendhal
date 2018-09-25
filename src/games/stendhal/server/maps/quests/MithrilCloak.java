@@ -179,7 +179,7 @@ public class MithrilCloak extends AbstractQuest {
 		if (questState.equals("need_scissors")) {
 			return res;
 		}
-		res.add("Hogart 需要我带给他一块铁块 iron bar, 一块密银块 a密银锭, 和一点魔法蛋壳 附魔蛋壳.");
+		res.add("Hogart 需要我带给他一块铁块 铁锭, 一块密银块 a密银锭, 和一点魔法蛋壳 附魔蛋壳.");
 		if (questState.startsWith("need_eggshells;")) {
 			// the quest slot knows how many eggshells were needed.
 			return res;

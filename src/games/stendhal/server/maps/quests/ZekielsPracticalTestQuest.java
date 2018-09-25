@@ -128,7 +128,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 
 		// we should only answer to these ingredients questions if the 蜡烛s stage is not yet done
 		npc.add(ConversationStates.ATTENDING,
-				"iron",
+				"铁锭",
 				new QuestInStateCondition(QUEST_SLOT, "start"),
 				ConversationStates.ATTENDING,
 				"The 蜡烛stick needs to be made of iron. The blacksmith in 塞门镇 can help you.",
@@ -152,7 +152,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 					new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
 					new NotCondition(new PlayerHasItemWithHimCondition("蜂蜡",REQUIRED_BEESWAX)),
-					new PlayerHasItemWithHimCondition("iron",REQUIRED_IRON)),
+					new PlayerHasItemWithHimCondition("铁锭",REQUIRED_IRON)),
 			ConversationStates.ATTENDING,
 			"Greetings, I see you have the iron, but I still need six pieces of 蜂蜡. Please come back when you " +
 			"have all #ingredients with you.",
@@ -163,7 +163,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			new AndCondition(
 					new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
-					new NotCondition(new PlayerHasItemWithHimCondition("iron",REQUIRED_IRON)),
+					new NotCondition(new PlayerHasItemWithHimCondition("铁锭",REQUIRED_IRON)),
 					new PlayerHasItemWithHimCondition("蜂蜡",REQUIRED_BEESWAX)),
 			ConversationStates.ATTENDING,
 			"Greetings, I see you have the 蜂蜡, but I still need two pieces of iron. Please come back when you " +
@@ -175,7 +175,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			new AndCondition(
 					new GreetingMatchesNameCondition(npc.getName()),
 					new QuestInStateCondition(QUEST_SLOT,"start"),
-					new PlayerHasItemWithHimCondition("iron",REQUIRED_IRON),
+					new PlayerHasItemWithHimCondition("铁锭",REQUIRED_IRON),
 					new PlayerHasItemWithHimCondition("蜂蜡",REQUIRED_BEESWAX)),
 			ConversationStates.ATTENDING,
 			"Greetings, finally you have brought me all ingredients that I need to summon the magic 蜡烛s. Now you " +
@@ -183,7 +183,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 			new MultipleActions(
 					new SetQuestAction(QUEST_SLOT,"candles_done"),
 					new DropItemAction("蜂蜡", 6),
-					new DropItemAction("iron", 2),
+					new DropItemAction("铁锭", 2),
 					new IncreaseXPAction(4000),
 					new IncreaseKarmaAction(10)));
 
@@ -358,7 +358,7 @@ public class ZekielsPracticalTestQuest extends AbstractQuest {
 		}
 		final String questState = player.getQuest(QUEST_SLOT);
 		history.add("I entered the Wizards Circle tower. Zekiel the guardian asked me for items to make magic candles.");
-		if (questState.equals("start") && player.isEquipped("蜂蜡", REQUIRED_BEESWAX) && player.isEquipped("iron", REQUIRED_IRON)
+		if (questState.equals("start") && player.isEquipped("蜂蜡", REQUIRED_BEESWAX) && player.isEquipped("铁锭", REQUIRED_IRON)
 				|| questState.equals("candles_done") || questState.endsWith("_step") || questState.equals("done")) {
 			history.add("I collected 蜂蜡 and iron for the magic candles which I will find on the next steps, if I pass each test.");
 		}

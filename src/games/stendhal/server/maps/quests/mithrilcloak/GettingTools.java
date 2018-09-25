@@ -81,7 +81,7 @@ class GettingTools {
 				@Override
 				public void fire(final Player player, final Sentence sentence, final EventRaiser raiser) {
 					final int neededEggshells = Rand.randUniform(2, 4);
-					raiser.say("Ah yes, Ida sent me a message about some 魔法剪刀. I need one each of an iron bar and a 密银锭, and also " + Integer.toString(neededEggshells) + " magical #eggshells. Ask me about #scissors again when you return with those items.");
+					raiser.say("Ah yes, Ida sent me a message about some 魔法剪刀. I need one each of an 铁锭 and a 密银锭, and also " + Integer.toString(neededEggshells) + " magical #eggshells. Ask me about #scissors again when you return with those items.");
 					// store the number of needed eggshells in the quest slot so he remembers how many he asked for
 					player.setQuest(mithrilcloak.getQuestSlot(), "need_eggshells;" + Integer.toString(neededEggshells));
 				}
@@ -116,10 +116,10 @@ class GettingTools {
 				public void fire(final Player player, final Sentence sentence, final EventRaiser npc) {
 					final String[] questslot = player.getQuest(mithrilcloak.getQuestSlot()).split(";");
 					final int neededEggshells = Integer.valueOf(questslot[1]);
-					if (player.isEquipped("iron")
+					if (player.isEquipped("铁锭")
 						&& player.isEquipped("密银锭")
 						&& player.isEquipped("附魔蛋壳", neededEggshells)) {
-							player.drop("iron");
+							player.drop("铁锭");
 							player.drop("密银锭");
 							player.drop("附魔蛋壳", neededEggshells);
 							npc.say("Good. It will take me some time to make these, come back in "
@@ -128,7 +128,7 @@ class GettingTools {
 							player.setQuest(mithrilcloak.getQuestSlot(), "makingscissors;" + System.currentTimeMillis());
 							player.notifyWorldAboutChanges();
 						} else {
-							npc.say("Liar, you don't have everything I need. Ask me about #scissors again when you have an iron bar, a 密银锭, and "
+							npc.say("Liar, you don't have everything I need. Ask me about #scissors again when you have an 铁锭, a 密银锭, and "
 									+ questslot[1] + " 附魔蛋壳. And don't be wasting my time!");
 						}
 				}
