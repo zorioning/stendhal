@@ -105,14 +105,14 @@ import marauroa.common.Pair;
 				new Pair<Integer, String>(150,"Stupid creatures, but very strong. Can be found in an abandoned underground keep somewhere near Ados."));
 		enemyForces.put("imperial",
 				new Pair<Integer, String>(200,"They come from their castle in the underground 西大城, ruled by their 帝国大梦."));
-		enemyForces.put("barbarian",
-				new Pair<Integer, String>(200,"Different barbarian tribes live on the surface in the North West area of Ados Mountains. Not dangerous but noisy."));
+		enemyForces.put("蛮人",
+				new Pair<Integer, String>(200,"Different 蛮人 tribes live on the surface in the North West area of Ados Mountains. Not dangerous but noisy."));
 		enemyForces.put("oni",
 				new Pair<Integer, String>(200,"Very strange race, living in their castle in Fado forest. There are rumors that they have agreed an alliance with the Magic city wizards."));
 
 		/*
 		 * those are not interesting
-		enemyForces.put("dwarf",
+		enemyForces.put("矮人",
 				new Pair<Integer, String>(275,""));
 		enemyForces.put("elf",
 				new Pair<Integer, String>(300,""));
@@ -161,7 +161,7 @@ import marauroa.common.Pair;
 							  "山地矮人英雄",
 							  "山地矮人首领",
 							  "钳工都尔",
-							  "giant dwarf",
+							  "巨型都尔",
 							  "矮人傀儡"));
 		enemys.put("mountain orc",
 				Arrays.asList("mountain orc",
@@ -224,14 +224,14 @@ import marauroa.common.Pair;
 							  "oni priest",
 							  "oni king",
 							  "oni queen"));
-		enemys.put("barbarian",
-				Arrays.asList("barbarian",
+		enemys.put("蛮人",
+				Arrays.asList("蛮人",
 						      "蛮族人狼",
 						      "蛮族精英",
 						      "蛮族牧师",
 						      "野蛮夏曼人",
 						      "蛮族首领",
-						      "野蛮人王"));
+						      "蛮人王"));
 	}
 
 	/**

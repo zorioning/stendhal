@@ -563,7 +563,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("ghosts", "ghost");
 		testPluralisationAndSingularisation("giantrats", "giantrat");
 		testPluralisationAndSingularisation("elves", "elf");
-		testPluralisationAndSingularisation("dwarves", "dwarf");
+		testPluralisationAndSingularisation("dwarves", 矮人);
 		testPluralisationAndSingularisation("ratmen", "ratman");
 		testPluralisationAndSingularisation("ratwomen", "ratwoman");
 		testPluralisationAndSingularisation("elder beholders",

@@ -4100,7 +4100,7 @@ TO OLD SEMOS VILLAGE
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.portal.LevelCheckingPortal">
         <parameter name="minimum-level">150</parameter>
-        <parameter name="rejected">Aenihata's barrier is strong. The balrog would kill you instantly, run away!</parameter>
+        <parameter name="rejected">Aenihata's barrier is strong. The 巴洛克 would kill you instantly, run away!</parameter>
       </implementation>
     </portal>
     <portal x="42" y="44" ref="exit_balrog" replacing="true">

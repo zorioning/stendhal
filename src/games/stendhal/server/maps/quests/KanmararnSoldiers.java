@@ -389,7 +389,7 @@ public class KanmararnSoldiers extends AbstractQuest {
 			"The #treasure map that leads into the heart of the #dwarven #kingdom.");
 		james.addReply("treasure",
 			"A big treasure is rumored to be somewhere in this dungeon.");
-		james.addReply(Arrays.asList("dwarf", "dwarves", "dwarven", "dwarven kingdom"),
+		james.addReply(Arrays.asList("矮人", "dwarves", "dwarven", "dwarven kingdom"),
 			"They are strong enemies! We're in their #kingdom.");
 		james.addReply(Arrays.asList("peter", "tom", "charles"),
 			"He was a good soldier and fought bravely.");

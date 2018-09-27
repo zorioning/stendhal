@@ -80,7 +80,7 @@ public class JailedDwarf extends AbstractQuest {
 						new QuestNotCompletedCondition(QUEST_SLOT),
 						new NotCondition(new PlayerHasItemWithHimCondition("卡梅伦监狱钥匙"))),
 				ConversationStates.IDLE,
-				"Help! The duergars have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.",
+				"Help! The 杜加矮人s have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.",
 				new SetQuestAction(QUEST_SLOT, "start"));
 
 		npc.add(ConversationStates.IDLE, ConversationPhrases.GREETING_MESSAGES,
@@ -98,7 +98,7 @@ public class JailedDwarf extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Jailed Dwarf",
-				"Down in 卡梅伦 is an afraid dwarf locked in a cell waiting for visitors. He is supposed to be the guard, but duergars have raided the prison. He might need some armor to survive once out of it.",
+				"Down in 卡梅伦 is an afraid dwarf locked in a cell waiting for visitors. He is supposed to be the guard, but 杜加矮人s have raided the prison. He might need some armor to survive once out of it.",
 				true);
 		step_1();
 	}

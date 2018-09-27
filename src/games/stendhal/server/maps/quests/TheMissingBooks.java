@@ -81,7 +81,7 @@ public class TheMissingBooks extends AbstractQuest {
 		quotes.put("And there they were: two strangers, alone in the tunnel...",
 						"of 阿多斯城, heading out for reaching the right entrance to a life full of joy and peace - at least they hoped for that.");
 		quotes.put("Oh my oh my oh my! What for a huge creature I'm looking at! It's red, it's huge,...",
-						"it's powerful, it has a hard forehand...Could that be it? It is a balrog!");
+						"it's powerful, it has a hard forehand...Could that be it? It is a 巴洛克!");
 		quotes.put("You need some 面粉, some eggs, some 奶油, some 糖块, some chocolate and some 牛奶...",
 						"a hot drink for the winter, some rat to make it silk. Now after waiting for some time and after the job is done: a 可丽饼 that is you hold, enjoy it and have fun!");
 	}

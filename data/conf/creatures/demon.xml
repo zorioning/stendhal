@@ -159,9 +159,9 @@
     </ai>
   </creature>
   
-  <creature name="balrog">
+  <creature name="巴洛克">
     <type class="mythical_animal" subclass="balrog" tileid="enormous_creature.png:0"/>
-    <description>You see a huge balrog. He is slow hitting, but terribly strong as he stands towering above you.</description>
+    <description>You see a huge 巴洛克. He is slow hitting, but terribly strong as he stands towering above you.</description>
     <attributes>
       <atk value="2557"/>
       <def value="154"/>

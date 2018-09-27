@@ -2,11 +2,11 @@
 <creatures xmlns="stendhal" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="stendhal ../creatures.xsd ">
   
-  <!-- START: duergar -->
+  <!-- START: 杜加矮人 -->
   
-  <creature name="duergar">
+  <creature name="杜加矮人">
     <type class="dwarf" subclass="duergar" tileid="dwarf_duergar.png:6"/>
-    <description>You see a duergar. It is a close relative to dwarves but with a diabolically tainted blood.</description>
+    <description>You see a 杜加矮人. It is a close relative to dwarves but with a diabolically tainted blood.</description>
     <attributes>
       <atk value="278"/>
       <def value="49"/>
@@ -244,13 +244,13 @@
     </ai>
   </creature>
   
-  <!-- END: duergar -->
+  <!-- END: 杜加矮人 -->
   
-  <!-- START: dwarf -->
+  <!-- START: 矮人 -->
   
-  <creature name="dwarf">
+  <creature name="矮人">
     <type class="dwarf" subclass="dwarf" tileid="dwarf.png:1"/>
-    <description>You see a dwarf who works in the mine to find some iron for us.</description>
+    <description>You see a 矮人 who works in the mine to find some iron for us.</description>
     <attributes>
       <atk value="168"/>
       <def value="26"/>
@@ -315,9 +315,9 @@
     </ai>
   </creature>
   
-  <creature name="elder dwarf">
+  <creature name="矮人壮士">
     <type class="dwarf" subclass="elder_dwarf" tileid="dwarf.png:2"/>
-    <description>You see an elder dwarf, a mighty warrior tired of fighting.</description>
+    <description>You see an 矮人壮士, a mighty warrior tired of fighting.</description>
     <attributes>
       <atk value="214"/>
       <def value="33"/>
@@ -349,9 +349,9 @@
     </ai>
   </creature>
   
-  <creature name="hero dwarf">
+  <creature name="矮人英雄">
     <type class="dwarf" subclass="hero_dwarf" tileid="dwarf.png:3"/>
-    <description>You see a hero dwarf. He is an old dwarf warrior who became a hero for fighting in many dwarf wars and he is very famous for his strength and brutality.</description>
+    <description>You see a 矮人英雄. He is an old dwarf warrior who became a hero for fighting in many dwarf wars and he is very famous for his strength and brutality.</description>
     <attributes>
       <atk value="244"/>
       <def value="43"/>
@@ -382,9 +382,9 @@
     </ai>
   </creature>
   
-  <creature name="leader dwarf">
+  <creature name="矮人统领">
     <type class="dwarf" subclass="leader_dwarf" tileid="dwarf.png:4"/>
-    <description>You see a leader dwarf. He is the most mighty dwarf of his tribe so he enjoys much popularity there.</description>
+    <description>You see a 矮人统领. He is the most mighty dwarf of his tribe so he enjoys much popularity there.</description>
     <attributes>
       <atk value="311"/>
       <def value="111"/>
@@ -417,13 +417,13 @@
     </ai>
   </creature>
   
-  <!-- END: dwarf -->
+  <!-- END: 矮人 -->
   
-  <!-- START: giant dwarf -->
+  <!-- START: 巨型都尔 -->
   
-  <creature name="giant dwarf">
+  <creature name="巨型都尔">
     <type class="dwarf" subclass="giant_dwarf" tileid="dwarf.png:5"/>
-    <description>You see a giant dwarf. It is very hard for him to be a giant dwarf because some of the other dwarves don't really see him as one of them because of his height... But in his big heart he is a dwarf and in a battle he will fight against each enemy!</description>
+    <description>You see a 巨型都尔. It is very hard for him to be a 巨型都尔 because some of the other dwarves don't really see him as one of them because of his height... But in his big heart he is a dwarf and in a battle he will fight against each enemy!</description>
     <attributes>
       <atk value="616"/>
       <def value="99"/>
@@ -521,7 +521,7 @@
     </ai>
   </creature>
   
-  <!-- END: giant dwarf -->
+  <!-- END: 巨型都尔 -->
   
   <!-- START: 山地矮人 -->
   

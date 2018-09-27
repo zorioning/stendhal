@@ -66,7 +66,7 @@ public class DwarfGuardNPCTest extends ZonePlayerAndNPCTestImpl {
 		final Engine en = npc.getEngine();
 
 		assertTrue(en.step(player, "hi Hunel"));
-		assertEquals("Help! The duergars have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.", getReply(npc));
+		assertEquals("Help! The 杜加矮人s have raided the prison and locked me up! I'm supposed to be the Guard! It's a shambles.", getReply(npc));
 
 		// Hunel doesn't listen to us until we get the prison key.
 		assertFalse(en.step(player, "bye"));

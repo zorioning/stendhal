@@ -337,9 +337,9 @@
     </ai>
   </creature>
 
-  <creature name="弟子刺客">
+  <creature name="刺客门徒">
     <type class="human" subclass="little_assassin" tileid="human_evil.png:6"/>
-    <description>这是一个弟子刺客. 他很年轻, 但他已经学会了战斗和杀戮. </description>
+    <description>这是一个刺客门徒. 他很年轻, 但他已经学会了战斗和杀戮. </description>
     <attributes>
       <atk value="344"/>
       <def value="77"/>
@@ -621,9 +621,9 @@
   
   <!-- END: assassin -->
   
-  <!-- START: barbarian -->
+  <!-- START: 蛮人 -->
   
-  <creature name="barbarian">
+  <creature name="蛮人">
     <type class="human" subclass="barbarian" tileid="human_barbarian.png:3"/>
     <description></description>
     <attributes>
@@ -815,7 +815,7 @@
     </ai>
   </creature>
   
-  <creature name="野蛮人王">
+  <creature name="蛮人王">
     <type class="human" subclass="barbarian_king" tileid="human_barbarian.png:6"/>
     <description></description>
     <attributes>
@@ -847,7 +847,7 @@
     </ai>
   </creature>
   
-  <!-- END: barbarian -->
+  <!-- END: 蛮人 -->
   
   <!-- START: blordrough -->
   
