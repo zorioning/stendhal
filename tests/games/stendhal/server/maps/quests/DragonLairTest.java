@@ -87,7 +87,7 @@ public class DragonLairTest {
 		en.step(player, "task");
 		assertEquals("Would you like to visit our dragon lair?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Great! Enjoy your visit. I know THEY will. Oh, watch out, we have a couple chaos dragonriders exercising our dragons. Don't get in their way!", getReply(npc));
+		assertEquals("Great! Enjoy your visit. I know THEY will. Oh, watch out, we have a couple 混沌龙骑士s exercising our dragons. Don't get in their way!", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Farewell. May your days be many and your heart be free.", getReply(npc));
 		// [21:59] green dragon has been killed by kymara
@@ -127,7 +127,7 @@ public class DragonLairTest {
 		en.step(player, "task");
 		assertEquals("Would you like to visit our dragon lair?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Great! Enjoy your visit. I know THEY will. Oh, watch out, we have a couple chaos dragonriders exercising our dragons. Don't get in their way!", getReply(npc));
+		assertEquals("Great! Enjoy your visit. I know THEY will. Oh, watch out, we have a couple 混沌龙骑士s exercising our dragons. Don't get in their way!", getReply(npc));
 		en.step(player, "bye");
 		// [22:01] 混沌绿龙骑士 has been killed by kymara
 		// [22:01] kymara earns 31900 experience points.

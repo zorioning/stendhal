@@ -1060,9 +1060,9 @@
   
   <!-- START: chaos -->
   
-  <creature name="chaos soldier">
+  <creature name="混沌士兵">
     <type class="chaos" subclass="chaos_soldier" tileid="chaos.png:4"/>
-    <description>You see a chaos soldier. Chaos soldiers are servants of the evil. Killing you is one of their evil plans.</description>
+    <description>You see a 混沌士兵. 混沌士兵s are servants of the evil. Killing you is one of their evil plans.</description>
     <attributes>
       <atk value="543"/>
       <def value="81"/>
@@ -1092,9 +1092,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos warrior">
+  <creature name="混沌勇士">
     <type class="chaos" subclass="chaos_warrior" tileid="chaos.png:5"/>
-    <description>You see a chaos warrior. This chaotic creature is fighting with a big blade to slay his enemies.</description>
+    <description>You see a 混沌勇士. This chaotic creature is fighting with a big blade to slay his enemies.</description>
     <attributes>
       <atk value="604"/>
       <def value="81"/>
@@ -1128,9 +1128,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos commander">
+  <creature name="混沌司令">
     <type class="chaos" subclass="chaos_commander" tileid="chaos.png:0"/>
-    <description>You see a chaos commander who is working on an evil plan. You should take care of him before he fulfills his duty.</description>
+    <description>You see a 混沌司令 who is working on an evil plan. You should take care of him before he fulfills his duty.</description>
     <attributes>
       <atk value="654"/>
       <def value="91"/>
@@ -1165,9 +1165,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos sorcerer">
+  <creature name="混沌巫师">
     <type class="chaos" subclass="chaos_sorceror" tileid="chaos.png:6"/>
-    <description>You see a chaos sorcerer. Chaos sorcerers will cast some evil spells on you if you don't obey them.</description>
+    <description>You see a 混沌巫师. 混沌巫师s will cast some evil spells on you if you don't obey them.</description>
     <attributes>
       <atk value="670"/>
       <def value="123"/>
@@ -1200,9 +1200,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos dragonrider">
+  <creature name="混沌龙骑士">
     <type class="chaos" subclass="chaos_dragonrider" tileid="chaos.png:1"/>
-    <description>You see a chaos dragonrider. He is very well trained in dragon riding, but he can also fight well on the ground.</description>
+    <description>You see a 混沌龙骑士. He is very well trained in dragon riding, but he can also fight well on the ground.</description>
     <attributes>
       <atk value="706"/>
       <def value="89"/>
@@ -1230,9 +1230,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos lord">
+  <creature name="混沌领主">
     <type class="chaos" subclass="chaos_lord" tileid="chaos.png:2"/>
-    <description>You see a chaos lord who is one of the strongest chaos creatures in Faiumoni. You should prepare well before attacking him.</description>
+    <description>You see a 混沌领主 who is one of the strongest chaos creatures in Faiumoni. You should prepare well before attacking him.</description>
     <attributes>
       <atk value="807"/>
       <def value="92"/>
@@ -1267,9 +1267,9 @@
     </ai>
   </creature>
   
-  <creature name="chaos overlord">
+  <creature name="混沌君主">
     <type class="chaos" subclass="chaos_overlord" tileid="chaos.png:3"/>
-    <description>You see a chaos overlord. It is him who directs the creation of evil plans and gives orders to all chaotic creatures which exist.</description>
+    <description>You see a 混沌君主. It is him who directs the creation of evil plans and gives orders to all chaotic creatures which exist.</description>
     <attributes>
       <atk value="1042"/>
       <def value="113"/>
@@ -1314,7 +1314,7 @@
     (doesn't have to push it away, say.) The AI profiles ensure they do not
     move except when pushed by player. -->
   
-  <creature name="chaos pawn">
+  <creature name="黑方卒">
     <type class="chaos" subclass="chaos_soldier" tileid="chess.png:0"/>
     <hidden/>
     <description>You see a pawn for a game of chess. He will drop nothing if you kill him.</description>
@@ -1339,7 +1339,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos rook">
+  <creature name="黑方车">
     <type class="chaos" subclass="chaos_commander" tileid="chess.png:1"/>
     <hidden/>
     <description>You see a rook for a game of chess. He will drop nothing if you kill him.</description>
@@ -1364,7 +1364,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos knight">
+  <creature name="黑方马">
     <type class="chaos" subclass="chaos_dragonrider" tileid="chess.png:2"/>
     <hidden/>
     <description>You see a knight for a game of chess. He will drop nothing if you kill him.</description>
@@ -1389,7 +1389,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos bishop">
+  <creature name="黑方象">
     <type class="chaos" subclass="chaos_sorceror" tileid="chess.png:3"/>
     <hidden/>
     <description>You see a bishop for a game of chess. He will not reward you if you kill him.</description>
@@ -1414,7 +1414,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos king">
+  <creature name="黑方帅">
     <type class="chaos" subclass="chaos_lord" tileid="chess.png:4"/>
     <hidden/>
     <description>You see a king of a game of chess. He will reward nothing if you kill him.</description>
@@ -1439,7 +1439,7 @@
     </ai>
   </creature>
   
-  <creature name="chaos queen">
+  <creature name="黑方女皇">
     <type class="chaos" subclass="chaos_overlord" tileid="chess.png:5"/>
     <hidden/>
     <description>You see a queen piece for a game of chess. She will reward nothing if you kill her.</description>

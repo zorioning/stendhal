@@ -64,7 +64,7 @@ public abstract class UpdateConverter {
 	private static final List<String> ITEM_NAMES_NEW_0_66 = Arrays.asList(
 			"golden key", "silver key", "黑色的书", "蓝色的书",
 			"杜加壮士", "黑暗杜加", "大巨头",
-			"chaos sorcerer"
+			"混沌巫师"
 	);
 	/**
 	 * quest name, quest index, creatures to kill.
