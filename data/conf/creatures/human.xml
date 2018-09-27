@@ -1966,9 +1966,9 @@
   
   <!-- START: kalavan -->
   
-  <creature name="kalavan housewife">
+  <creature name="卡拉文家庭主妇">
     <type class="human" subclass="kalavan_housewife" tileid="human_kalavan.png:2"/>
-    <description>You see a kalavan housewife. She lives in Kalavan city and she is very angry with rude people who want to steal her food out of the kitchen and destroy her beautiful flower garden!</description>
+    <description>You see a 卡拉文家庭主妇. She lives in Kalavan city and she is very angry with rude people who want to steal her food out of the kitchen and destroy her beautiful flower garden!</description>
     <attributes>
       <atk value="274"/>
       <def value="42"/>
@@ -1994,9 +1994,9 @@
     </ai>
   </creature>
   
-  <creature name="kalavan peasant">
+  <creature name="卡拉文农夫">
     <type class="human" subclass="kalavan_peasant" tileid="human_kalavan.png:3"/>
-    <description>You see a kalavan peasant. He works in the fields around Kalavan city. As he heard there were strangers in the city he came to help the kalavan citizens in fighting the enemies!</description>
+    <description>You see a 卡拉文农夫. He works in the fields around Kalavan city. As he heard there were strangers in the city he came to help the 卡拉文居民s in fighting the enemies!</description>
     <attributes>
       <atk value="296"/>
       <def value="44"/>
@@ -2024,9 +2024,9 @@
     </ai>
   </creature>
   
-  <creature name="kalavan wisewoman">
+  <creature name="卡拉文女白领">
     <type class="human" subclass="kalavan_wisewoman" tileid="human_kalavan.png:4"/>
-    <description>You see a kalavan wisewoman. Normally she sits in her small room and does some handworking but now she wants to have some action!</description>
+    <description>You see a 卡拉文女白领. Normally she sits in her small room and does some handworking but now she wants to have some action!</description>
     <attributes>
       <atk value="301"/>
       <def value="46"/>
@@ -2054,9 +2054,9 @@
     </ai>
   </creature>
   
-  <creature name="kalavan citizen">
+  <creature name="卡拉文居民">
     <type class="human" subclass="kalavan_citizen" tileid="human_kalavan.png:1"/>
-    <description>You see a kalavan citizen. He lives in kalavan city and tries to protect it from invaders!</description>
+    <description>You see a 卡拉文居民. He lives in kalavan city and tries to protect it from invaders!</description>
     <attributes>
       <atk value="310"/>
       <def value="56"/>
@@ -2087,7 +2087,7 @@
   
   <!-- START: madaram -->
   
-  <creature name="madaram archer">
+  <creature name="马德拉弓箭手">
     <type class="madaram" subclass="madaram_archer" tileid="madaram.png:1"/>
     <description></description>
     <attributes>
@@ -2119,7 +2119,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram peasant">
+  <creature name="马德拉弓箭手">
     <type class="madaram" subclass="madaram_peasant" tileid="madaram.png:7"/>
     <description></description>
     <attributes>
@@ -2148,7 +2148,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram trooper">
+  <creature name="马德拉骑士">
     <type class="madaram" subclass="madaram_trooper" tileid="madaram.png:11"/>
     <description></description>
     <attributes>
@@ -2177,7 +2177,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram soldier">
+  <creature name="马德拉骑士">
     <type class="madaram" subclass="madaram_soldier" tileid="madaram.png:9"/>
     <description></description>
     <attributes>
@@ -2206,7 +2206,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram healer">
+  <creature name="马德拉医师">
     <type class="madaram" subclass="madaram_healer" tileid="madaram.png:5"/>
     <description></description>
     <attributes>
@@ -2236,7 +2236,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram axeman">
+  <creature name="马德拉斧手">
     <type class="madaram" subclass="madaram_axeman" tileid="madaram.png:2"/>
     <description></description>
     <attributes>
@@ -2265,7 +2265,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram queen">
+  <creature name="马德拉女王">
     <type class="madaram" subclass="madaram_queen" tileid="madaram.png:8"/>
     <description></description>
     <attributes>
@@ -2296,7 +2296,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram hero">
+  <creature name="马德拉英雄">
     <type class="madaram" subclass="madaram_hero" tileid="madaram.png:6"/>
     <description></description>
     <attributes>
@@ -2325,7 +2325,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram windwalker">
+  <creature name="马德拉风行者">
     <type class="madaram" subclass="madaram_windwalker" tileid="madaram.png:12"/>
     <description></description>
     <attributes>
@@ -2354,7 +2354,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram cavalry">
+  <creature name="马德拉骑兵">
     <type class="madaram" subclass="madaram_cavalry" tileid="madaram.png:4"/>
     <description></description>
     <attributes>
@@ -2385,7 +2385,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram stalker">
+  <creature name="马德拉杀手">
     <type class="madaram" subclass="madaram_stalker" tileid="madaram.png:10"/>
     <description></description>
     <attributes>
@@ -2450,7 +2450,7 @@
     (doesn't have to push it away, say.) The AI profiles ensure they do not
     move except when pushed by player. -->
   
-  <creature name="madaram pawn">
+  <creature name="红方兵">
     <type class="madaram" subclass="madaram_peasant" tileid="chess.png:6"/>
     <hidden />
     <description>You see a pawn for a game of chess. It will reward nothing if killed.</description>
@@ -2475,7 +2475,7 @@
      </ai>
   </creature>
   
-  <creature name="madaram rook">
+  <creature name="红方车">
     <type class="madaram" subclass="madaram_axeman" tileid="chess.png:7"/>
     <hidden/>
     <description>You see a rook for a game of chess. It will scarcely reward you to kill it.</description>
@@ -2500,7 +2500,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram knight">
+  <creature name="红方马">
     <type class="madaram" subclass="madaram_cavalry" tileid="chess.png:8"/>
     <hidden/>
     <description>You see a knight, a chess piece. He won't reward you if you kill him.</description>
@@ -2525,7 +2525,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram bishop">
+  <creature name="红方相">
     <type class="madaram" subclass="madaram_healer" tileid="chess.png:9"/>
     <hidden/>
     <description>You see a bishop for a game of chess. It will reward you nothing if you slay it.</description>
@@ -2550,7 +2550,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram king">
+  <creature name="红方将">
     <type class="madaram" subclass="madaram_buster_blader" tileid="chess.png:10"/>
     <hidden/>
     <description>You see a king to play chess with, he will reward you nothing if you kill him.</description>
@@ -2575,7 +2575,7 @@
     </ai>
   </creature>
   
-  <creature name="madaram queen ">
+  <creature name="红方女王">
     <type class="madaram" subclass="madaram_queen" tileid="chess.png:11"/>
     <hidden/>
     <description>You see a queen piece for a game of chess. She will reward nothing if you kill her.</description>
