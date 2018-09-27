@@ -33,7 +33,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar axeman">
+  <creature name="杜加斧手">
     <type class="dwarf" subclass="duergar_axe" tileid="dwarf_duergar.png:0"/>
     <description></description>
     <attributes>
@@ -64,7 +64,7 @@
     </ai>
   </creature>
   
-  <creature name="elder duergar">
+  <creature name="杜加壮士">
     <type class="dwarf" subclass="duergar_elder" tileid="dwarf_duergar.png:2"/>
     <description></description>
     <attributes>
@@ -91,7 +91,7 @@
     </ai>
   </creature>  
   
-  <creature name="duergar elite">
+  <creature name="杜加精英">
     <type class="dwarf" subclass="duergar_elite" tileid="dwarf_duergar.png:3"/>
     <description></description>
     <attributes>
@@ -120,7 +120,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar hero">
+  <creature name="杜加英雄">
     <type class="dwarf" subclass="duergar_hero" tileid="dwarf_duergar.png:4"/>
     <description></description>
     <attributes>
@@ -152,7 +152,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar wizard">
+  <creature name="杜加巫师">
     <type class="dwarf" subclass="duergar_wizard" tileid="dwarf_duergar.png:7"/>
     <description></description>
     <attributes>
@@ -180,7 +180,7 @@
     </ai>
   </creature>
   
-  <creature name="black duergar">
+  <creature name="黑暗杜加">
     <type class="dwarf" subclass="duergar_black" tileid="dwarf_duergar.png:1"/>
     <description></description>
     <attributes>
@@ -214,7 +214,7 @@
     </ai>
   </creature>
   
-  <creature name="duergar king">
+  <creature name="杜加王">
     <type class="dwarf" subclass="duergar_king" tileid="dwarf_duergar.png:5"/>
     <description></description>
     <attributes>
@@ -281,9 +281,9 @@
     </ai>
   </creature>
   
-  <creature name="dwarf guardian">
+  <creature name="矮人守卫">
     <type class="dwarf" subclass="dwarf_guardian" tileid="dwarf.png:0"/>
-    <description>You see a dwarf guardian who fights against the humans.</description>
+    <description>You see a 矮人守卫 who fights against the humans.</description>
     <attributes>
       <atk value="200"/>
       <def value="31"/>
@@ -454,7 +454,7 @@
     </ai>
   </creature>
   
-  <creature name="Dhohr Nuggetcutter">
+  <creature name="钳工都尔">
     <type class="dwarf" subclass="giant_dwarf" tileid="dwarf.png:6"/>
     <description></description>
     <attributes>
@@ -487,9 +487,9 @@
     </ai>
   </creature>
   
-  <creature name="Lord Durin">
+  <creature name="都林之主">
     <type class="dwarf" subclass="lord_durin" tileid="dwarf.png:7"/>
-    <description>You see the mighty Lord Durin, an ancient dwarf who has led his race through countless battles.</description>
+    <description>You see the mighty 都林之主, an ancient dwarf who has led his race through countless battles.</description>
     <attributes>
       <atk value="1855"/>
       <def value="180"/>
@@ -523,11 +523,11 @@
   
   <!-- END: giant dwarf -->
   
-  <!-- START: mountain dwarf -->
+  <!-- START: 山地矮人 -->
   
-  <creature name="mountain dwarf">
+  <creature name="山地矮人">
     <type class="dwarf" subclass="dwarf" tileid="mountain_dwarf.png:1"/>
-    <description>You see a mountain dwarf. He likes earth, stones and rocks. Deep within the mountain, where no animal and no human has ever been, you can hear the sound of his pickaxe as he searches for gold and ore.</description>
+    <description>You see a 山地矮人. He likes earth, stones and rocks. Deep within the mountain, where no animal and no human has ever been, you can hear the sound of his pickaxe as he searches for gold and ore.</description>
     <attributes>
       <atk value="437"/>
       <def value="72"/>
@@ -557,9 +557,9 @@
     </ai>
   </creature>
   
-  <creature name="mountain dwarf guardian">
+  <creature name="山地矮人守卫">
     <type class="dwarf" subclass="dwarf_guardian" tileid="mountain_dwarf.png:0"/>
-    <description>You see a mountain dwarf guardian. He has to watch out for enemies and guards the mountain dwarfs while they are doing their work.</description>
+    <description>You see a 山地矮人守卫. He has to watch out for enemies and guards the 山地矮人s while they are doing their work.</description>
     <attributes>
       <atk value="461"/>
       <def value="70"/>
@@ -589,9 +589,9 @@
     </ai>
   </creature>  
   
-  <creature name="mountain elder dwarf">
+  <creature name="山地矮人壮士">
     <type class="dwarf" subclass="elder_dwarf" tileid="mountain_dwarf.png:2"/>
-    <description>You see a mountain elder dwarf. For many years he worked deep in the mountain and found much gold and ore in his life. Soon he will be too old to do this work but at the moment he is still a strong dwarf.</description>
+    <description>You see a 山地矮人壮士. For many years he worked deep in the mountain and found much gold and ore in his life. Soon he will be too old to do this work but at the moment he is still a strong dwarf.</description>
     <attributes>
       <atk value="484"/>
       <def value="75"/>
@@ -623,9 +623,9 @@
     </ai>
   </creature> 
   
-  <creature name="mountain hero dwarf">
+  <creature name="山地矮人英雄">
     <type class="dwarf" subclass="hero_dwarf" tileid="mountain_dwarf.png:3"/>
-    <description>You see a mountain hero dwarf. Many, many dwarves admire him! He was a member of a dwarvish group which discovered a very big gold deposit!</description>
+    <description>You see a 山地矮人英雄. Many, many dwarves admire him! He was a member of a dwarvish group which discovered a very big gold deposit!</description>
     <attributes>
       <atk value="503"/>
       <def value="72"/>
@@ -657,9 +657,9 @@
     </ai>
   </creature>
   
-  <creature name="mountain leader dwarf">
+  <creature name="山地矮人首领">
     <type class="dwarf" subclass="leader_dwarf" tileid="mountain_dwarf.png:4"/>
-    <description>You see a mountain leader dwarf. He is responsible for the mountain dwarves and their work, and also for the organization of the guardian troops. But in serious cases he will also fight on his own!</description>
+    <description>You see a 山地矮人首领. He is responsible for the mountain dwarves and their work, and also for the organization of the guardian troops. But in serious cases he will also fight on his own!</description>
     <attributes>
       <atk value="560"/>
       <def value="83"/>
@@ -694,6 +694,6 @@
     </ai>
   </creature>
   
-  <!-- END: mountain dwarf -->
+  <!-- END: 山地矮人 -->
   
 </creatures>

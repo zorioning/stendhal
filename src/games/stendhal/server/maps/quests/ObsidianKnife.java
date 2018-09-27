@@ -350,7 +350,7 @@ public class ObsidianKnife extends AbstractQuest {
 				NAME,
 				null,
 				ConversationStates.ATTENDING,
-				"啊, 这个 mountain dwarf! 希望他喜欢这本宝石书 gem book.",
+				"啊, 这个 山地矮人! 希望他喜欢这本宝石书 gem book.",
 				new MultipleActions(new EquipItemAction("蓝色的书", 1, true),
 				new SetQuestAction(QUEST_SLOT, "got_book")));
 

@@ -99,7 +99,7 @@ import marauroa.common.Pair;
 				new Pair<Integer, String>(100,"Drows, or dark elves as they are commonly called, can be found under Nalwor. They use poison in battles, gathering it from different poisonous creatures."));
 		enemyForces.put("chaos",
 				new Pair<Integer, String>(150,"They are strong and crazy. Only my elite archers hold them from expanding more."));
-		enemyForces.put("mountain dwarf",
+		enemyForces.put("山地矮人",
 				new Pair<Integer, String>(150,"They are my historical neighbors, living in 塞门矿山."));
 		enemyForces.put("mountain orc",
 				new Pair<Integer, String>(150,"Stupid creatures, but very strong. Can be found in an abandoned underground keep somewhere near Ados."));
@@ -154,15 +154,15 @@ import marauroa.common.Pair;
 							  "混沌绿龙骑士",
 							  "chaos overlord",
 							  "混沌红龙骑士"));
-		enemys.put("mountain dwarf",
-				Arrays.asList("mountain dwarf",
+		enemys.put("山地矮人",
+				Arrays.asList("山地矮人",
 							  "mountain elder dwarf",
-							  "mountain dwarf guardian",
-							  "mountain hero dwarf",
-							  "mountain leader dwarf",
-							  "Dhohr Nuggetcutter",
+							  "山地矮人守卫",
+							  "山地矮人英雄",
+							  "山地矮人首领",
+							  "钳工都尔",
 							  "giant dwarf",
-							  "dwarf golem"));
+							  "矮人傀儡"));
 		enemys.put("mountain orc",
 				Arrays.asList("mountain orc",
 							  "mountain orc warrior",

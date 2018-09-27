@@ -597,7 +597,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("deaths", "death");
 		testPluralisationAndSingularisation("commander elves",
 				"commander elf");
-		testPluralisationAndSingularisation("stone golems", "stone golem");
+		testPluralisationAndSingularisation("石傀儡s", "石傀儡");
 		testPluralisationAndSingularisation("archmage elves", "archmage elf");
 		testPluralisationAndSingularisation("leader dwarves", "leader dwarf");
 		testPluralisationAndSingularisation("demon skeletons",

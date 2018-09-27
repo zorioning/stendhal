@@ -294,7 +294,7 @@ public final class ShopList {
 		shops.add("buy4assassins", "矮人护腿", 15000);
 		shops.add("buy4assassins", "刺客匕首", 7000);
 
-		// mountain dwarf buyer of odds and ends -3 ados abandoned keep)
+		// 山地矮人 buyer of odds and ends -3 ados abandoned keep)
 		shops.add("buyoddsandends", "忍者镖", 20);
 		shops.add("buyoddsandends", "护身符", 800);
 		shops.add("buyoddsandends", "黑珍珠", 100);

@@ -51,7 +51,7 @@ import games.stendhal.server.maps.Region;
  * <p>
  * STEPS:
  * <li> Mr. Yeti asks for some snow, and wants you to get 25 snowballs.
- * <li> You collect 25 snowballs from ice golems.
+ * <li> You collect 25 snowballs from 冰傀儡s.
  * <li> You give the snowballs to Mr. Yeti.
  * <li> Mr. Yeti gives you 20 cod or perch.
  * <p>
@@ -100,7 +100,7 @@ public class Snowballs extends AbstractQuest {
 		}
 		res.add("Mr. Yeti asked me to collect some 雪球 for him and I promised it.");
 		if (player.isEquipped("雪球", REQUIRED_SNOWBALLS) || isCompleted(player)) {
-			res.add("I found some 雪球 after killing some ice golems.");
+			res.add("I found some 雪球 after killing some 冰傀儡s.");
 		}
 		if (isCompleted(player)) {
 			res.add("I made Mr. Yeti happy when I gave him the 雪球 he wanted.");
@@ -203,7 +203,7 @@ public class Snowballs extends AbstractQuest {
 				ConversationPhrases.YES_MESSAGES,
 				null,
 				ConversationStates.ATTENDING,
-				"Fine. You can loot the 雪球 from the ice golem in this cavern, but be careful there is something huge nearby! Come back when you get twenty five 雪球.",
+				"Fine. You can loot the 雪球 from the 冰傀儡 in this cavern, but be careful there is something huge nearby! Come back when you get twenty five 雪球.",
 				new SetQuestAndModifyKarmaAction(QUEST_SLOT, "start", 2.0));
 
 		// player is not willing to help
@@ -281,7 +281,7 @@ public class Snowballs extends AbstractQuest {
 		return "雪球";
 	}
 
-	// the djinns, ice golems and ice elementals on the way to yeti caves are quite dangerous
+	// the djinns, 冰傀儡s and 冰元素s on the way to yeti caves are quite dangerous
 	@Override
 	public int getMinLevel() {
 		return 60;

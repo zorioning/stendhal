@@ -39,7 +39,7 @@ import games.stendhal.server.maps.Region;
  * STEPS:
  * <ul>
  * <li> You see Hunel locked in the cell. </li>
- * <li> Gget the key by killing the duergar king. </li>
+ * <li> Gget the key by killing the 杜加王. </li>
  * <li> Speak to Hunel when you have the key. </li>
  * <li> Hunel wants to stay in, he is afraid. </li>
  * <li> You can then sell chaos equipment to Hunel. </li>
@@ -111,7 +111,7 @@ public class JailedDwarf extends AbstractQuest {
 			}
 			res.add("I need to get a key to unlock Hunel.");
 			if (isCompleted(player)) {
-				res.add("I killed the Duergar King and got the key to unlock Hunel. But now he's too afraid to leave, wanting to buy more and more armor before he feels safe. Poor Hunel.");
+				res.add("I killed the 杜加王 and got the key to unlock Hunel. But now he's too afraid to leave, wanting to buy more and more armor before he feels safe. Poor Hunel.");
 			}
 			return res;
 	}
