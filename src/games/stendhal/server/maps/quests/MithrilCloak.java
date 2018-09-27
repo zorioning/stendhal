@@ -31,7 +31,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * PARTICIPANTS:
  * <ul>
  * <li>Ida, a seamstress in Ados.</li>
- * <li>Imperial scientists, in kalavan basement</li>
+ * <li>帝国科学家s, in kalavan basement</li>
  * <li>Mithrilbourgh wizards, in kirdneh and magic city</li>
  * <li>Hogart, a retired master dwarf smith, forgotten below the dwarf mines in
  * Orril.</li>
@@ -47,7 +47,7 @@ import games.stendhal.server.maps.quests.mithrilcloak.MithrilCloakQuestChain;
  * <li>Ida needs sewing machine fixed, with one of three items from a list</li>
  * <li>Once machine fixed and if you have done 密银盾 quest, Ida offers you cloak</li>
  * <li>Kampusch tells you to how to make the fabric</li>
- * <li>Imperial scientists take 蜘蛛丝腺s and make 丝线</li>
+ * <li>帝国科学家s take 蜘蛛丝腺s and make 丝线</li>
  * <li>Kampusch fuses 密银矿石s into the 丝线</li>
  * <li>Whiggins weaves 密银线 into 密银布</li>
  * <li>Ida takes fabric then asks for scissors</li>

@@ -92,7 +92,7 @@ public class DragonLairTest {
 		assertEquals("Farewell. May your days be many and your heart be free.", getReply(npc));
 		// [21:59] green dragon has been killed by kymara
 		// [21:59] kymara earns 1750 experience points.
-		// [21:59] red dragon has been killed by kymara
+		// [21:59] 红龙 has been killed by kymara
 		// [21:59] kymara earns 20700 experience points.
 
 		// quest slot should now start with "start"
@@ -129,9 +129,9 @@ public class DragonLairTest {
 		en.step(player, "yes");
 		assertEquals("Great! Enjoy your visit. I know THEY will. Oh, watch out, we have a couple chaos dragonriders exercising our dragons. Don't get in their way!", getReply(npc));
 		en.step(player, "bye");
-		// [22:01] chaos green dragonrider has been killed by kymara
+		// [22:01] 混沌绿龙骑士 has been killed by kymara
 		// [22:01] kymara earns 31900 experience points.
-		// [22:01] bone dragon has been killed by kymara
+		// [22:01] 骨龙 has been killed by kymara
 		// [22:01] kymara earns 2210 experience points.
 		assertEquals("Farewell. May your days be many and your heart be free.", getReply(npc));
 

@@ -4,7 +4,7 @@
   
   <!-- START: demon -->
   
-  <creature name="violet avenger">
+  <creature name="紫花复仇者">
     <type class="hybrid" subclass="violet_avenger" tileid="hybrid.png:8"/>
     <description></description>
     <attributes>
@@ -32,7 +32,7 @@
     </ai>
   </creature>
   
-  <creature name="devil queen">
+  <creature name="魔鬼女王">
     <type class="undead" subclass="devil_queen" tileid="undead.png:4"/>
     <description></description>
     <attributes>
@@ -98,9 +98,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial demon servant">
+  <creature name="帝国魔佣军">
     <type class="demon" subclass="imperial_demon_servant" tileid="demon.png:3"/>
-    <description>You see an imperial demon servant who carries out whims of his demon lords. </description>
+    <description>You see an 帝国魔佣军 who carries out whims of his demon lords. </description>
     <attributes>
       <atk value="587"/>
       <def value="74"/>
@@ -127,9 +127,9 @@
     </ai>
   </creature>
   
-  <creature name="imperial demon lord">
+  <creature name="帝国魔鬼统领">
     <type class="demon" subclass="imperial_demon_lord" tileid="demon.png:2"/>
-    <description>You see an imperial demon lord. He holds the rank of General among demons, and very few out rank it in hell.</description>
+    <description>You see an 帝国魔鬼统领. He holds the rank of General among demons, and very few out rank it in hell.</description>
     <attributes>
       <atk value="676"/>
       <def value="89"/>
@@ -240,9 +240,9 @@
     </ai>
   </creature>
   
-  <creature name="winged blue imp">
+  <creature name="鸦天怪">
     <type class="demon" subclass="winged_blue_imp" tileid="demon.png:1"/>
-    <description>You see a winged blue imp. It's endowed with the power of evil. His trident is able to 毒药 even the bravest warriors.</description>
+    <description>You see a 鸦天怪. It's endowed with the power of evil. His trident is able to 毒药 even the bravest warriors.</description>
     <attributes>
       <atk value="515"/>
       <def value="86"/>

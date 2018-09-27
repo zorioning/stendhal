@@ -377,15 +377,6 @@ public class MithrilCloakTest {
 		en.step(player, "hi");
 		assertEquals("Hi. I don't get so many visitors, down here.", getReply(npc));
 		en.step(player, "eggshells");
-<<<<<<< HEAD
-		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 病毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
-		en.step(player, "4");
-		assertEquals("Ok, ask me again when you have 24 病毒s with you.", getReply(npc));
-		item = ItemTestHelper.createItem("病毒", 24);
-		player.getSlot("bag").add(item);
-		en.step(player, "eggshells");
-		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 病毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
-=======
 		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 痍毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
 		en.step(player, "4");
 		assertEquals("Ok, ask me again when you have 24 痍毒s with you.", getReply(npc));
@@ -393,7 +384,6 @@ public class MithrilCloakTest {
 		player.getSlot("背包").add(item);
 		en.step(player, "eggshells");
 		assertEquals("Sure, I sell eggshells. They're not worth much to me. I'll swap you one eggshell for every 6 痍毒s you bring me. I need it to kill the rats you see. Anyway, how many eggshells was you wanting?", getReply(npc));
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		en.step(player, "4");
 		assertEquals("Ok, here's your 4 eggshells. Enjoy!", getReply(npc));
 		en.step(player, "bye");
@@ -545,17 +535,12 @@ public class MithrilCloakTest {
 
 		en.step(player, "hi");
 		assertEquals("I'm sick .. so sick .. only some powerful medicine will fix me.", getReply(npc));
-		// [22:22] twilight slime has been killed by jammyjam
+		// [22:22] 荧光光史莱姆 has been killed by jammyjam
 		// [22:22] jammyjam earns 14580 experience points.
 		// [22:22] You see a bottle of medicinal elixir. It is a special quest reward for jammyjam, and cannot be used by others.
 
-<<<<<<< HEAD
-		item = ItemTestHelper.createItem("荧光药济", 1);
-		player.getSlot("bag").add(item);
-=======
 		item = ItemTestHelper.createItem("莹光药剂", 1);
 		player.getSlot("背包").add(item);
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 
 		en.step(player, "hi");
 		assertEquals("Is that elixir for me? If #yes I will take it immediately. You must return to see me again in my normal state.", getReply(npc));

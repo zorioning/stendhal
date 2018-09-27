@@ -73,7 +73,7 @@ import games.stendhal.server.util.ItemCollection;
  * 		<li>Give him all stuff he needs for a present for his 蜂蜜.</li>
  * 		<li>Talk to semos mayor.</li>
  * 		<li>Bring Elos mayor's letter.</li>
- * 		<li>Kill the Imperial Scientist.</li>
+ * 		<li>Kill the 帝国科学家.</li>
  *		<li>Give him the flask with his brother's blood.</li>
  * </ul>
  *
@@ -147,7 +147,7 @@ public class SadScientist extends AbstractQuest {
 		if (questState.startsWith("kill_scientist") && !new KilledForQuestCondition(QUEST_SLOT, 1).fire(player, null, null)) {
 			return res;
 		}
-		res.add("我杀了帝国科学家 Imperial Scientist Sergej Elos ,并且取了一杯鲜血作为证据");
+		res.add("我杀了帝国科学家 帝国科学家 Sergej Elos ,并且取了一杯鲜血作为证据");
 		if (questState.startsWith("kill_scientist") && new KilledForQuestCondition(QUEST_SLOT, 1).fire(player, null, null)) {
 			return res;
 		}

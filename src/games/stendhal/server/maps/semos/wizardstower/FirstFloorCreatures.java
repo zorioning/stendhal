@@ -42,7 +42,7 @@ public class FirstFloorCreatures implements ZoneConfigurator {
 		final Creature creature = manager.getCreature("fire elemental");
 		final Creature creature1 = manager.getCreature("demon");
 		final Creature creature2 = manager.getCreature("imp");
-		final Creature creature3 = manager.getCreature("red dragon");
+		final Creature creature3 = manager.getCreature("红龙");
 
 		creature1.setName("fire demon");
 

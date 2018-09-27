@@ -32,10 +32,10 @@ public class ChaosRaid extends CreateRaid {
 		attackArmy.put("chaos sorcerer", 3);
 		attackArmy.put("chaos overlord", 3);
 		attackArmy.put("chaos dragonrider", 3);
-		attackArmy.put("chaos red dragonrider", 2);
-		attackArmy.put("chaos green dragonrider", 2);
+		attackArmy.put("混沌红龙骑士", 2);
+		attackArmy.put("混沌绿龙骑士", 2);
 		attackArmy.put("黑巨人", 1);
-		attackArmy.put("black dragon", 1);
+		attackArmy.put("黑龙", 1);
 		return attackArmy;
 	}
 

@@ -216,7 +216,7 @@ public class SadScientistTest {
 		en.step(player, "hi");
 		assertEquals("Hello! Do you have anything for me?", getReply(npc));
 		en.step(player, "yes");
-		assertEquals("Oh no! I feel the pain. I do not need to create those beautiful 宝石护腿 now. I want to transform them. I want to make them a symbol of pain. You! Go kill my brother, the Imperial Scientist Sergej Elos. Give me his blood.", getReply(npc));
+		assertEquals("Oh no! I feel the pain. I do not need to create those beautiful 宝石护腿 now. I want to transform them. I want to make them a symbol of pain. You! Go kill my brother, the 帝国科学家 Sergej Elos. Give me his blood.", getReply(npc));
 		en.step(player, "bye");
 		assertEquals("Do it!", getReply(npc));
 		// i don't understand this. it doesn't always do it. but no error. weird.

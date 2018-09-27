@@ -390,16 +390,6 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("chunks of meat", "chunk of meat");
 		testPluralisationAndSingularisation("pieces of ham", "火腿");
 		testPluralisationAndSingularisation("三明治es", "三明治");
-<<<<<<< HEAD
-		testPluralisationAndSingularisation("pies", "pie");
-		testPluralisationAndSingularisation("纽扣菇s",
-				"纽扣菇");
-		testPluralisationAndSingularisation("porcini", "porcino");
-		testPluralisationAndSingularisation("toadstools", "toadstool");
-		testPluralisationAndSingularisation("bottles of beer", "beer");
-		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
-		testPluralisationAndSingularisation("bottles of 小治疗剂", "小治疗剂");
-=======
 		testPluralisationAndSingularisation("pies", "馅饼");
 		testPluralisationAndSingularisation("button mushrooms",
 				"button mushroom");
@@ -408,7 +398,6 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("bottles of beer", "beer");
 		testPluralisationAndSingularisation("flasks of wine", "flask of wine");
 		testPluralisationAndSingularisation("bottles of 小治疗剂", "小治疗剂");
->>>>>>> f76672e17df092a61ddb88a57859203a0a9ef0ae
 		testPluralisationAndSingularisation("bottles of antidote", "antidote");
 		testPluralisationAndSingularisation("bottles of potion", "potion");
 		testPluralisationAndSingularisation("bottles of 大治疗剂",
@@ -624,7 +613,7 @@ public class GrammarTest {
 		testPluralisationAndSingularisation("green dragons", "green dragon");
 		testPluralisationAndSingularisation("death knights", "death knight");
 		testPluralisationAndSingularisation("liches", "lich");
-		testPluralisationAndSingularisation("blue dragons", "blue dragon");
+		testPluralisationAndSingularisation("蓝龙s", "蓝龙");
 		testPluralisationAndSingularisation("black dragons", "black dragon");
 	}
 
