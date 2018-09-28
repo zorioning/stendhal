@@ -2729,7 +2729,7 @@
     </ai>
   </creature>
   
-  <creature name="白银堡精军士长">
+  <creature name="白银堡军士长">
     <type class="human" subclass="soldier_sergeant" tileid="human_soldier.png:7"/>
     <description></description>
     <attributes>
@@ -2759,7 +2759,7 @@
     </ai>
   </creature>
   
-  <creature name="白银堡精中尉">
+  <creature name="白银堡中尉">
     <type class="human" subclass="soldier_lieutenant" tileid="human_soldier.png:6"/>
     <description></description>
     <attributes>
@@ -2789,7 +2789,7 @@
     </ai>
   </creature>
   
-  <creature name="白银堡精上校">
+  <creature name="白银堡上校">
     <type class="human" subclass="soldier_colonel" tileid="human_soldier.png:1"/>
     <description></description>
     <attributes>
@@ -2819,7 +2819,7 @@
     </ai>
   </creature>
   
-  <creature name="白银堡精法师">
+  <creature name="白银堡法师">
     <type class="human" subclass="soldier_wizard" tileid="human_soldier.png:8"/>
     <description></description>
     <attributes>
@@ -2851,9 +2851,9 @@
     </ai>
   </creature>
   
-  <creature name="白银堡精将军">
+  <creature name="白银堡将军">
     <type class="human" subclass="soldier_general" tileid="human_soldier.png:4"/>
-    <description>You see a 白银堡精将军. Some call him Hawkeyes. He cast his gaze over the city walls and saw you coming from miles away.</description>
+    <description>You see a 白银堡将军. Some call him Hawkeyes. He cast his gaze over the city walls and saw you coming from miles away.</description>
     <attributes>
       <atk value="624"/>
       <def value="83"/>
@@ -3209,9 +3209,9 @@
   
   <!-- START: risecia -->
   
-  <creature name="红疮恶棍">
+  <creature name="红鼻恶棍">
     <type class="human" subclass="risecia_thug" tileid="human.png:8"/>
-    <description>You see a 红疮恶棍, stay away from him!</description>
+    <description>You see a 红鼻恶棍, stay away from him!</description>
     <attributes>
       <atk value="152"/>
       <def value="38"/>
@@ -3244,9 +3244,9 @@
     </ai>
   </creature>
   
-  <creature name="红疮弓箭手">
+  <creature name="红鼻弓箭手">
     <type class="human" subclass="risecia_archer" tileid="human.png:5"/>
-    <description>You see a 红疮弓箭手, just one of the warriors who wants to protect his chief.</description>
+    <description>You see a 红鼻弓箭手, just one of the warriors who wants to protect his chief.</description>
     <attributes>
       <atk value="159"/>
       <def value="38"/>
@@ -3278,9 +3278,9 @@
     </ai>
   </creature>
   
-  <creature name="红疮剑客">
+  <creature name="红鼻剑客">
     <type class="human" subclass="risecia_swordsman" tileid="human.png:7"/>
-    <description>You see a 红疮剑客, the blade of his sword will cut your head!</description>
+    <description>You see a 红鼻剑客, the blade of his sword will cut your head!</description>
     <attributes>
       <atk value="194"/>
       <def value="27"/>
@@ -3311,9 +3311,9 @@
     </ai>
   </creature> 
   
-  <creature name="红疮精灵首领">
+  <creature name="红鼻精灵首领">
     <type class="human" subclass="risecia_leader" tileid="human.png:6"/>
-    <description>You see the 红疮精灵首领, he doesn't want to die! His little warriors protect him against invaders.</description> 
+    <description>You see the 红鼻精灵首领, he doesn't want to die! His little warriors protect him against invaders.</description> 
     <attributes>
       <atk value="209"/>
       <def value="22"/>

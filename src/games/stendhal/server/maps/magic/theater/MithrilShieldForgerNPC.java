@@ -54,7 +54,7 @@ public class MithrilShieldForgerNPC implements ZoneConfigurator {
 			} //remaining behaviour defined in quest
 		};
 
-		baldemar.setDescription("You see Baldemar, a 白银堡精法师 well studied in the craft of forging mithril.");
+		baldemar.setDescription("You see Baldemar, a 白银堡法师 well studied in the craft of forging mithril.");
 		baldemar.setEntityClass("mithrilforgernpc");
 		baldemar.setPosition(4, 6);
 		baldemar.initHP(100);
