@@ -4498,7 +4498,6 @@ TO OLD SEMOS VILLAGE
       <parameter name="color_method">softlight</parameter>
       <parameter name="color">#22ffdd</parameter>
     </attributes>
-    
     <!-- Music -->
     <entity x="0" y="0">
       <implementation

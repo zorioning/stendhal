@@ -4,9 +4,9 @@
   
   <!-- START: amazon -->
   
-  <creature name="amazoness archer">
+  <creature name="亚马逊弓箭手">
     <type class="amazon" subclass="amazoness_archer" tileid="amazon.png:1"/>
-    <description>You see an amazoness archer. She handles her bow quite well and her arrows are very dangerous when she shoots them at you out of the forest!</description>
+    <description>亚马逊弓箭手. 她熟练地拿着弓, 然后对着你躲藏的森林射出利箭!</description>
     <attributes>
       <atk value="448"/>
       <def value="66"/>
@@ -517,7 +517,7 @@
   
   <creature name="武士">
     <type class="human" subclass="samurai" tileid="human_evil.png:5"/>
-    <description>if he failed to uphold his honor he could only regain it by performing seppuku</description>
+    <description>If this samurai failed to uphold his honor, he could only regain it by performing seppuku</description>
     <attributes>
       <atk value="585"/>
       <def value="73"/>

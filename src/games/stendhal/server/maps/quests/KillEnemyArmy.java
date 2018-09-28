@@ -156,7 +156,7 @@ import marauroa.common.Pair;
 							  "混沌红龙骑士"));
 		enemys.put("山地矮人",
 				Arrays.asList("山地矮人",
-							  "mountain elder dwarf",
+							  "山地矮人壮士",
 							  "山地矮人守卫",
 							  "山地矮人英雄",
 							  "山地矮人首领",
@@ -206,7 +206,7 @@ import marauroa.common.Pair;
 		/*
 		 * exclude amazoness ( because they dont want to leave their island? )
 		enemys.put("amazoness",
-				Arrays.asList("amazoness archer",
+				Arrays.asList("亚马逊弓箭手",
 						      "亚马逊猎人",
 						      "亚马逊海岸警卫队",
 						      "亚马逊阿彻指挥官",
