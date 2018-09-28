@@ -117,7 +117,7 @@ public class WizardsGuardStatueSpireNPC implements ZoneConfigurator {
 
 					//behavior for forging a 赤魔剑
 					add(ConversationStates.ATTENDING,
-							Arrays.asList("赤魔剑", "swords", "sword"),
+							Arrays.asList("赤魔剑", "swords", "铁剑"),
 							ConversationStates.INFORMATION_1,
 						    "I can craft for you a 赤魔剑 if you can procure a 恶魔剑 and a 烈火剑.",
 						    null);
