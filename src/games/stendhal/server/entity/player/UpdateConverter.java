@@ -83,7 +83,7 @@ public abstract class UpdateConverter {
 
 		KILL_QUEST_NAMES.put("club_thorns",
 				new Pair<Integer, List<String>>(1, Arrays.asList(
-					"mountain orc chief")));
+					"山岭兽族首领")));
 
 		KILL_QUEST_NAMES.put("kill_dhohr_nuggetcutter",
 				new Pair<Integer, List<String>>(1, Arrays.asList(

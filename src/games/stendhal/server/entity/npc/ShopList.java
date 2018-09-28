@@ -185,7 +185,7 @@ public final class ShopList {
 		shops.add("buyrare3", "金盾", 10000);
 		shops.add("buyrare3", "影盾", 15000);
 
-		// less rare armor shop (kobold city - kobolds drop some of these
+		// less rare armor shop (狗镇 - kobolds drop some of these
 		// things)
 		shops.add("buystuff2", "鳞甲", 65);
 		shops.add("buystuff2", "镶嵌护腿", 70);

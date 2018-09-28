@@ -4,9 +4,9 @@
   
   <!-- START: oni -->
   
-  <creature name="oni warrior">
+  <creature name="欧尼武士">
     <type class="oni" subclass="oni_warrior" tileid="oni.png:0"/>
-    <description>You see an oni warrior. His purple skin colour should not lull you into a false sense of security!</description>
+    <description>You see an 欧尼武士. His purple skin colour should not lull you into a false sense of security!</description>
     <attributes>
       <atk value="499"/>
       <def value="77"/>
@@ -33,9 +33,9 @@
     </ai>
   </creature>
   
-  <creature name="oni archer">
+  <creature name="欧尼弓箭手">
     <type class="oni" subclass="oni_archer" tileid="oni.png:1"/>
-    <description>You see an oni archer. His arrows will follow you everywhere for protecting his queen!</description>
+    <description>You see an 欧尼弓箭手. His arrows will follow you everywhere for protecting his queen!</description>
     <attributes>
       <atk value="511"/>
       <def value="77"/>
@@ -65,9 +65,9 @@
     </ai>
   </creature>
   
-  <creature name="oni priest">
+  <creature name="欧尼祭司">
     <type class="oni" subclass="oni_priest" tileid="oni.png:2"/>
-    <description>You see a mysterious oni priest, uttering strange incantations.</description>
+    <description>You see a mysterious 欧尼祭司, uttering strange incantations.</description>
     <attributes>
       <atk value="547"/>
       <def value="76"/>
@@ -95,9 +95,9 @@
     </ai>
   </creature>
   
-  <creature name="oni king">
+  <creature name="欧尼国王">
     <type class="oni" subclass="oni_king" tileid="oni.png:3"/>
-    <description>You see the oni king. His power leads brave oni troops around his kingdom.</description>
+    <description>You see the 欧尼国王. His power leads brave oni troops around his kingdom.</description>
     <attributes>
       <atk value="714"/>
       <def value="93"/>
@@ -119,16 +119,16 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="Revere me, the Oni King!"/>
+        <noise state="idle follow fight" value="Revere me, the 欧尼国王!"/>
       </says>
       <profile name="offensive"/>
       <profile name="human"/>
     </ai>
   </creature>
   
-  <creature name="oni queen">
+  <creature name="欧尼女王">
     <type class="oni" subclass="oni_queen" tileid="oni.png:4"/>
-    <description>You see the oni queen. She supports her husband and takes an eye onto their kingdom while he conquers new land and fights on battlefields.</description>
+    <description>You see the 欧尼女王. She supports her husband and takes an eye onto their kingdom while he conquers new land and fights on battlefields.</description>
     <attributes>
       <atk value="737"/>
       <def value="98"/>
@@ -152,7 +152,7 @@
     </equips>
     <ai>
       <says>
-        <noise state="idle follow fight" value="You must bow before the Oni Queen."/>
+        <noise state="idle follow fight" value="You must bow before the 欧尼女王."/>
       </says>
       <profile name="offensive"/>
       <profile name="human"/>

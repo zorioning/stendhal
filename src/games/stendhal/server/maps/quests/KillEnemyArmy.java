@@ -101,7 +101,7 @@ import marauroa.common.Pair;
 				new Pair<Integer, String>(150,"They are strong and crazy. Only my elite archers hold them from expanding more."));
 		enemyForces.put("山地矮人",
 				new Pair<Integer, String>(150,"They are my historical neighbors, living in 塞门矿山."));
-		enemyForces.put("mountain orc",
+		enemyForces.put("山岭兽人",
 				new Pair<Integer, String>(150,"Stupid creatures, but very strong. Can be found in an abandoned underground keep somewhere near Ados."));
 		enemyForces.put("imperial",
 				new Pair<Integer, String>(200,"They come from their castle in the underground 西大城, ruled by their 帝国大梦."));
@@ -163,11 +163,11 @@ import marauroa.common.Pair;
 							  "钳工都尔",
 							  "巨型都尔",
 							  "矮人傀儡"));
-		enemys.put("mountain orc",
-				Arrays.asList("mountain orc",
-							  "mountain orc warrior",
-							  "mountain orc hunter",
-							  "mountain orc chief"));
+		enemys.put("山岭兽人",
+				Arrays.asList("山岭兽人",
+							  "山岭兽族勇士",
+							  "山岭兽族猎手",
+							  "山岭兽族首领"));
 		enemys.put("imperial",
 				Arrays.asList("帝国守卫",
 							  "帝国精英士兵",
@@ -219,11 +219,11 @@ import marauroa.common.Pair;
 						      "亚马逊巨人"));
 		 */
 		enemys.put("oni",
-				Arrays.asList("oni warrior",
-							  "oni archer",
-							  "oni priest",
-							  "oni king",
-							  "oni queen"));
+				Arrays.asList("欧尼武士",
+							  "欧尼弓箭手",
+							  "欧尼祭司",
+							  "欧尼国王",
+							  "欧尼女王"));
 		enemys.put("蛮人",
 				Arrays.asList("蛮人",
 						      "蛮族人狼",

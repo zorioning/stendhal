@@ -91,7 +91,7 @@
     <point-of-interest x="13" y="126">
       <name>Ados Abandoned Keep</name>
       <type>dungeon</type>
-      <description>Home of mountain orcs, mountain dwarves and duergars. Prepare well before entering this keep.</description>
+      <description>Home of 山岭兽人s, mountain dwarves and duergars. Prepare well before entering this keep.</description>
       <url>https://stendhalgame.org/dungeon/ados_abandoned_keep.html</url>
     </point-of-interest>
     
@@ -5705,7 +5705,7 @@ I have found some water but fear I am trapped. I have yet to find any food and t
     <entity x="37" y="30">
       <implementation class-name="games.stendhal.server.entity.mapstuff.sign.Reader"/>
       <attribute name="text">The journal of Zephiros the explorer:
-It has been three days since I decided to explore the lower levels of the caves and I have yet to find an exit. How I wish I could reach the water source on the upper level. I can hear the nagas in the darkness. I can hardly stand their screaming any longer. May the gods have mercy on me and any who may dare to follow my footsteps.
+It has been three days since I decided to explore the lower levels of the caves and I have yet to find an exit. How I wish I could reach the water source on the upper level. I can hear the 娜迦s in the darkness. I can hardly stand their screaming any longer. May the gods have mercy on me and any who may dare to follow my footsteps.
       </attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="resistance">0</attribute>

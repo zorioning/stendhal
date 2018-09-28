@@ -2552,7 +2552,7 @@ Holy mackerel! These chips are tasty.
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.PopupImage">
         <parameter name="image">map-wofol.png</parameter>
-        <parameter name="title">塞门矿山 和 Wofol 的 Kobold 城</parameter>
+        <parameter name="title">塞门矿山 和 Wofol 的 狗头人 城</parameter>
       </implementation>
       <attribute name="class">map-wofol</attribute>
     </entity>

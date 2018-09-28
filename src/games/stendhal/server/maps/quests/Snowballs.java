@@ -47,13 +47,13 @@ import games.stendhal.server.maps.Region;
  * QUEST: Snowballs
  * <p>
  * PARTICIPANTS:
- * <li> Mr. Yeti, a creature in a dungeon needs help
+ * <li> 耶提先生, a creature in a dungeon needs help
  * <p>
  * STEPS:
- * <li> Mr. Yeti asks for some snow, and wants you to get 25 snowballs.
+ * <li> 耶提先生 asks for some snow, and wants you to get 25 snowballs.
  * <li> You collect 25 snowballs from 冰傀儡s.
- * <li> You give the snowballs to Mr. Yeti.
- * <li> Mr. Yeti gives you 20 cod or perch.
+ * <li> You give the snowballs to 耶提先生.
+ * <li> 耶提先生 gives you 20 cod or perch.
  * <p>
  * REWARD: <li> 20 cod or perch <li> 50 XP <li> 22 karma in total (20 + 2)
  * <p>
@@ -92,27 +92,27 @@ public class Snowballs extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("我进入冰冷的洞窟并见到了 Mr. Yeti.");
+		res.add("我进入冰冷的洞窟并见到了 耶提先生.");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if (questState.equals("rejected")) {
-			res.add("我现在不想帮助 Mr. Yeti, 他粗暴地赶走了我...");
+			res.add("我现在不想帮助 耶提先生, 他粗暴地赶走了我...");
 			return res;
 		}
-		res.add("Mr. Yeti 要我为他收集一些雪球, 我保证完成任务.");
+		res.add("耶提先生 要我为他收集一些雪球, 我保证完成任务.");
 		if (player.isEquipped("雪球", REQUIRED_SNOWBALLS) || isCompleted(player)) {
 			res.add("通过杀死冰傀儡我得到了一些雪球.");
 		}
 		if (isCompleted(player)) {
-			res.add("我把雪球给了 Mr. Yeti 后, 他很开心.");
+			res.add("我把雪球给了 耶提先生 后, 他很开心.");
 		}
 		if(isRepeatable(player)){
-			res.add("Mr. Yeti 又该需要雪球了!");
+			res.add("耶提先生 又该需要雪球了!");
 		}
 		return res;
 	}
 
 	private void prepareRequestingStep() {
-		final SpeakerNPC npc = npcs.get("Mr. Yeti");
+		final SpeakerNPC npc = npcs.get("耶提先生");
 
 		// says hi without having started quest before
 		npc.add(ConversationStates.IDLE,
@@ -217,7 +217,7 @@ public class Snowballs extends AbstractQuest {
 
 	private void prepareBringingStep() {
 
-		final SpeakerNPC npc = npcs.get("Mr. Yeti");
+		final SpeakerNPC npc = npcs.get("耶提先生");
 
 		final List<ChatAction> reward = new LinkedList<ChatAction>();
 		reward.add(new DropItemAction("雪球", REQUIRED_SNOWBALLS));
@@ -269,7 +269,7 @@ public class Snowballs extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Mr. Yeti 的雪球",
+				"耶提先生 的雪球",
 				"Faiumoni冰窟里的居民需要你帮他找些雪球.",
 				false);
 		prepareRequestingStep();
@@ -289,7 +289,7 @@ public class Snowballs extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Mr. Yeti";
+		return "耶提先生";
 	}
 
 	@Override
