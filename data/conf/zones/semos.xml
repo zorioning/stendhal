@@ -4245,7 +4245,7 @@ TO OLD SEMOS VILLAGE
         <parameter name="key">吸血鬼内脏</parameter>
         <parameter name="quantity">7</parameter>
         <parameter name="rejected">
-     Prove that you killed all vampirettes before you face their lord.
+     Prove that you killed all 吸血女郎s before you face their lord.
     </parameter>
       </implementation>
     </portal>

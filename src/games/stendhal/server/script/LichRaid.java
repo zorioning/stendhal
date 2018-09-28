@@ -34,7 +34,7 @@ public class LichRaid extends CreateRaid {
 		attackArmy.put("堕落僧侣", 3);
 		attackArmy.put("堕落高僧", 2);
 		attackArmy.put("巫妖", 8);
-		attackArmy.put("尸巫", 3);
+		attackArmy.put("巫妖王", 3);
 		attackArmy.put("大巫妖", 3);
 
 		return attackArmy;
