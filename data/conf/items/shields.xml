@@ -63,7 +63,7 @@
     </equipable>
   </item>
   
-  <item name="chaos shield">
+  <item name="混乱之盾">
     <type class="shield" subclass="chaos_shield" tileid="-1"/>
     <description>一面混乱之盾, 上面特殊的花纹可以迷惑敌人. </description>
     <implementation class-name="games.stendhal.server.entity.item.Item"/>
