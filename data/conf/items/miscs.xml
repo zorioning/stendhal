@@ -221,7 +221,7 @@
  
    <item name="金枪鱼罐头">
     <type class="misc" subclass="canotuna" tileid="-1"/>
-    <description>You see what appears to be 金枪鱼罐头. Too bad you don't have a can opener.</description>
+    <description>你想看看金枪鱼罐头里面装着什么. 可惜没有开罐工具.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -241,7 +241,7 @@
   
    <item name="雪珠">
     <type class="misc" subclass="snowglobe" tileid="-1"/>
-    <description>You see a 雪珠. It's so festive, it reminds you of Christmas!</description>
+    <description>一台雪珠. 非常喜庆, 它提醒你圣诞节的到来!</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <behavior class-name="games.stendhal.server.entity.item.behavior.MessagingUseBehavior">
       <parameter name="public" value="!me shakes 雪珠."/>
@@ -267,7 +267,7 @@
   <!--must be stackable as it is a produced item-->
   <item name="线轴">
     <type class="misc" subclass="bobbin" tileid="-1"/>
-    <description>You see a 线轴 for a sewing machine.</description>
+    <description>线轴可以用在绕线机上.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
@@ -287,7 +287,7 @@
 
   <item name="毒腺">
     <type class="misc" subclass="venom_gland" tileid="-1"/>
-    <description>You see the 毒腺 of a giant cobra. It is filled with deadly toxin.</description>
+    <description>眼镜蛇蛇身上的毒腺, 里面满是死亡毒液.</description>
     <implementation class-name="games.stendhal.server.entity.item.StackableItem"/>
     <attributes>
       <quantity value="1"/>
