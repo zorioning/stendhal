@@ -49,7 +49,7 @@ public class MineTown extends ScriptImpl {
 	 */
 	private void startSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) != null) {
-			admin.sendPrivateText("矿镇复兴展会周 are already active.");
+			admin.sendPrivateText("矿镇复兴展会周 活动已开始.");
 			return;
 		}
 		StendhalQuestSystem.get().loadQuest(new MineTownRevivalWeeks());
@@ -62,7 +62,7 @@ public class MineTown extends ScriptImpl {
 	 */
 	private void stopSemosMineTowns(Player admin) {
 		if (StendhalQuestSystem.get().getQuest(MineTownRevivalWeeks.QUEST_NAME) == null) {
-			admin.sendPrivateText("矿镇复兴展会周 are not active.");
+			admin.sendPrivateText("矿镇复兴展会周 还没开始.");
 			return;
 		}
 		StendhalQuestSystem.get().unloadQuest(MineTownRevivalWeeks.QUEST_NAME);
