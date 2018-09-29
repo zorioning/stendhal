@@ -254,7 +254,7 @@ public class PathsBuildHelper {
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
 		/*
-		 * Susi's house
+		 * 苏茜's house
 		 */
 		localroute.clear();
 		localroute.add(new Node(42,97));
@@ -267,7 +267,7 @@ public class PathsBuildHelper {
 		fullPath.add(new LinkedList<RPZonePath>(globalroute));
 
 		/*
-		 * next house from Susi
+		 * next house from 苏茜
 		 */
 		localroute.clear();
 		localroute.add(new Node(42,116));

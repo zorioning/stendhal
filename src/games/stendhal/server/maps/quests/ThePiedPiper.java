@@ -39,7 +39,7 @@ import games.stendhal.server.maps.quests.piedpiper.TPPQuestHelperFunctions;
  * <li> George
  * <li> Anna
  * <li> Jens
- * <li> Susi
+ * <li> 苏茜
  * <li> Finn Farmer
  * <li> Pied Piper
  * </ul>
