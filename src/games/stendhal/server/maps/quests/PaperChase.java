@@ -60,7 +60,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 	private static final List<String> NPC_IDLE = Arrays.asList("泰德", "Haunchy Meatoch", "Pdiddi", "Ketteh Wehoh");
 
 	private List<String> points = Arrays.asList("尼世亚", "Marcus", "Eheneumniranin", "Balduin", "Rachel", "Fritz",
-												"Alice Farmer", "伊丽莎白", "Sue", "Old Mother Helena", "Hazel",
+												"Alice Farmer", "伊丽莎白", "Sue", "Old Mother Helena", "哈泽尔",
 												"Captain Brownbeard", "Jane", "Seremela", "Phalk", "费多拉");
 
 	private Map<String, String> texts = new HashMap<String, String>();
@@ -81,7 +81,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		greetings.put("伊丽莎白", "Fantastic vacation so far and so much to explore! ");
 		greetings.put("Sue", "I love chocolate! You found me, maybe you can bring me a bar next time. ");
 		greetings.put("Old Mother Helena", "All of these flowers around give me a warm feeling. Hope you enjoy them too, thanks for visiting me! ");
-		greetings.put("Hazel", "Oh hello, so nice that you found me here. Come and join me again soon to let me cook some nice soup for you. ");
+		greetings.put("哈泽尔", "Oh hello, so nice that you found me here. Come and join me again soon to let me cook some nice soup for you. ");
 		greetings.put("Captain Brownbeard", "The museum really is a lovely place to work at. Wonderful that you found me here. ");
 		greetings.put("Jane", "Yaaarrrr! My boatey will bring you over the sea, the sea! *sing* ");
 		greetings.put("Seremela", "It's hot here at the beach, hope you used some 防晒油. ");
@@ -101,7 +101,7 @@ public class PaperChase extends AbstractQuest implements TeleportListener {
 		texts.put("伊丽莎白", "Now you have to find a young girl who plays on a playground in Kirdneh and loves chocolate.");
 		texts.put("Sue", "Please go and find the nice gardener who owns some greenhouses with 西红柿es inside near Kalavan.");
 		texts.put("Old Mother Helena", "Now please go and try to find a nice old woman who is really famous for her soups which can keep you warm and healthy. She might ask you about them first, just try to put her off for now :)");
-		texts.put("Hazel", "I know a really nice lady who can help you next. She works in a museum and loves her job.");
+		texts.put("哈泽尔", "I know a really nice lady who can help you next. She works in a museum and loves her job.");
 		texts.put("Captain Brownbeard", "Now you have to travel on a ferry and talk to an old salt who will lead you to the next person to meet up with.");
 		texts.put("Jane", "Harrr yarrr the next lady enjoys a sunbath together with her husband on Athor beach.");
 		texts.put("Seremela", "It's not long ago that the next person you have to find opened a beautiful flowershop. I've seen lots of long eared creatures walking around her, hidden in a city which lays in a forest.");

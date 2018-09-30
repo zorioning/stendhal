@@ -2219,7 +2219,7 @@ You should never dive with a cold or severe allergy because, you may not be able
     <!-- This must be after the NPC configurator -->
     <entity x="9" y="12">
       <implementation class-name="games.stendhal.server.entity.mapstuff.chest.NPCOwnedChest">
-        <parameter name="npc">Mr Taxman</parameter>
+        <parameter name="npc">税官</parameter>
       </implementation>
     </entity>
     
