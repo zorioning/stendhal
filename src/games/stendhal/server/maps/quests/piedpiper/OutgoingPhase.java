@@ -49,7 +49,7 @@ public class OutgoingPhase extends TPPQuest {
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				"鼠灾消除. "+
-	    		"你们可以为自已的付出得到 #奖励 , 想了解详情请查看 #详情 "
+	    		"你们可以为自已的付出得到 #奖励 , 想了解详情请查看 #详情 ",
 				null);
 
 		// Player asking about details.

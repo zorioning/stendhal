@@ -35,7 +35,7 @@ public class InactivePhase extends TPPQuest {
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				"现在的阿多斯不再有鼠灾了. 你仍然可以根据你上次的帮助成果"+
-				  "领取 #奖励 .你有需要的话可以询问 #详情 "				  
+				  "领取 #奖励 .你有需要的话可以询问 #详情 ",			  
 				null);
 
 		// Player asking about details

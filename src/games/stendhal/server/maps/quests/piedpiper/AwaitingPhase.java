@@ -60,7 +60,7 @@ public class AwaitingPhase extends TPPQuest {
 				new TPPQuestInPhaseCondition(myphase),
 				ConversationStates.ATTENDING,
 				"好的, 我们尽力打扫城市. "+
-	    		"你的帮助会得到 #奖励, 如果想了解 #详情 只管问."
+	    		"你的帮助会得到 #奖励, 如果想了解 #详情 只管问.",
 				null);
 
 		// Player asking about details.
