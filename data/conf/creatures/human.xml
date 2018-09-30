@@ -448,7 +448,7 @@
     </ai>
   </creature>
   
-  <creature name="assassin">
+  <creature name="刺客">
     <type class="human" subclass="assassin" tileid="human_evil.png:0"/>
     <description>You see an assassin. He is very good at killing his victims silently without being seen by anyone.</description>
     <attributes>
