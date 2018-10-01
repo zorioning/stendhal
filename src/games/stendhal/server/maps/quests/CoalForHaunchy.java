@@ -44,7 +44,7 @@ import games.stendhal.server.entity.player.Player;
 import games.stendhal.server.maps.Region;
 
 /**
- * QUEST: Coal for Haunchy
+ * QUEST: Coal for 哈文米特奇
  *
  * PARTICIPANTS:
  * <ul>
@@ -55,8 +55,8 @@ import games.stendhal.server.maps.Region;
  * <ul>
  * <li>哈文米特奇 asks you to fetch coal for his BBQ</li>
  * <li>Find some coal in 塞门镇 Mine or buy some from other players</li>
- * <li>Take the coal to Haunchy</li>
- * <li>Haunchy gives you a tasty reward</li>
+ * <li>Take the coal to 哈文米特奇</li>
+ * <li>哈文米特奇 gives you a tasty reward</li>
  * </ul>
  *
  * REWARD:
@@ -193,7 +193,7 @@ public class CoalForHaunchy extends AbstractQuest {
 	@Override
 	public void addToWorld() {
 		fillQuestInfo(
-				"Haunchy 的煤炭",
+				"哈文米特奇 的煤炭",
 				"哈文米特奇 担心他的烧烤大餐. 他准备的煤炭能够持续到他的烧烤结束吗？或许他准备的不够?",
 				true);
 		offerQuestStep();
@@ -213,16 +213,16 @@ public class CoalForHaunchy extends AbstractQuest {
 			res.add("他让我去弄些煤炭, 但我没时间做这些. ");
 		}
 		if (player.isQuestInState(QUEST_SLOT, "start") || isCompleted(player)) {
-			res.add("烧烤大餐的铁架温度不够, 我答应为 Haunchy 去找 25 块煤炭. ");
+			res.add("烧烤大餐的铁架温度不够, 我答应为 哈文米特奇 去找 25 块煤炭. ");
 		}
 		if ("start".equals(questState) && player.isEquipped("煤炭",25) || isCompleted(player)) {
-			res.add("我找到了 25 块煤炭, 我想 Haunchy 一定会很高兴");
+			res.add("我找到了 25 块煤炭, 我想 哈文米特奇 一定会很高兴");
 		}
 		if (isCompleted(player)) {
 			if (isRepeatable(player)) {
-				res.add("我带着 25 块煤炭给了 Haunchy, 但我but I'd bet his amount is low again and needs more. Maybe I'll get more grilled tasty steaks.");
+				res.add("我带着 25 块煤炭给了 哈文米特奇, 但我敢说他现在一定更缺了. 或许我会得到更多烤排.");
 			} else {
-				res.add("哈文米特奇 was really happy when I gave him the 煤炭, he has enough for now. He gave me some of the best steaks which I ever ate!");
+				res.add("当我把煤炭送来时, 哈文米特奇十分开心. 现在他的煤炭够用了. 他给了我一些我爱吃的烤排!");
 			}
 		}
 		return res;

@@ -51,11 +51,11 @@ public class TollboothNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-			    addGreeting("你好, 如果你想过桥去对面的 #Antum ,你需要 #支付 " + REQUIRED_COINS + " 金币.");
-				addHelp("如果你想过桥去对面的 #Antum ,你需要 #支付 " + REQUIRED_COINS + " 金币.");
-				addJob("我守护这座连接着 塞门镇 和 Antum.");
+			    addGreeting("你好, 如果你想过桥去对面的 #安图木 ,你需要 #支付 " + REQUIRED_COINS + " 金币.");
+				addHelp("如果你想过桥去对面的 #安图木 ,你需要 #支付 " + REQUIRED_COINS + " 金币.");
+				addJob("我守护这座连接着 塞门镇 和 安图木.");
 				addGoodbye("再会.");
-				addReply("antum", "Antum 是圣地.");
+				addReply("安图木", "安图木 是圣地.");
 
 			}
 
@@ -80,14 +80,14 @@ public class TollboothNPC implements ZoneConfigurator  {
                 Arrays.asList("支付","付钱"),
                 new NotCondition(new PlayerHasItemWithHimCondition("money", 25)),
                 ConversationStates.ATTENDING,
-                "我很抱歉, 你的钱不够.",
+                "很抱歉, 你的钱不够.",
                 null
                 );
 
         npc.setPosition(37, 30);
         npc.setDirection(Direction.LEFT);
         npc.setEntityClass("youngsoldiernpc");
-        npc.setDescription("你见到了大桥收费员陶乐 .");
+        npc.setDescription("你见到了大桥收费员陶乐.");
         zone.add(npc);
 	}
 }

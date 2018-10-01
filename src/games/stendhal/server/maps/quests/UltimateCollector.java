@@ -65,7 +65,7 @@ public class UltimateCollector extends AbstractQuest {
 	/** Quest slot for this quest, the Ultimate Collector */
 	private static final String QUEST_SLOT = "ultimate_collector";
 
-	/** 类牙棍 in Kotoch: The Orc Saman is the NPC */
+	/** 尖牙棍 in Kotoch: The 兽人萨满 is the NPC */
 	private static final String CLUB_THORNS_QUEST_SLOT = "club_thorns"; // 科多奇
 
 	/** Vampire Sword quest: Hogart is the NPC */
