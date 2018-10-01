@@ -2636,7 +2636,7 @@ Holy mackerel! These chips are tasty.
     <entity x="20" y="18">
       <implementation
         class-name="games.stendhal.server.entity.mapstuff.sign.Description" />
-      <attribute name="text">来自镇长 Sakhs 的公告, 塞门镇的市民为抵抗怪物做了大量的工作, 请継做好街道的清理工作.</attribute>
+      <attribute name="text">来自镇长 沙克斯 的公告, 塞门镇的市民为抵抗怪物做了大量的工作, 请継做好街道的清理工作.</attribute>
       <attribute name="class">transparent</attribute>
       <attribute name="width">1</attribute>
       <attribute name="height">1</attribute>

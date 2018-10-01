@@ -199,9 +199,9 @@ public class PizzaDelivery extends AbstractQuest {
 	private static void buildCustomerDatabase() {
 		customerDB = new HashMap<String, CustomerData>();
 
-		customerDB.put("Balduin",
+		customerDB.put("巴尔顿",
 			new CustomerData(
-				"Balduin 是一个隐士, 他住在Semons 和 Ados 之间的一坐大山中. 他被称为 Ados Rock. 要从这里往东走. ",
+				"巴尔顿 是一个隐士, 他住在Semons 和 Ados 之间的一坐大山中. 他被称为 Ados Rock. 要从这里往东走. ",
 				"比萨Prosciutto",
 				// minutes to deliver. Tested by mort: 6:30
 				// min, with killing some orcs.
@@ -327,9 +327,9 @@ public class PizzaDelivery extends AbstractQuest {
 				"恶. 我恨冷比萨. 我会把它喂动物们了. ",
 				10));
 
-		customerDB.put("Marcus",
+		customerDB.put("马鲁斯",
 			new CustomerData(
-				"Marcus 是 Semon 牢房的守卫. 从这往西走到头, 在Semon 村子的远方. ", "比萨 Tonno",
+				"马鲁斯 是 Semon 牢房的守卫. 从这往西走到头, 在Semon 村子的远方. ", "比萨 Tonno",
 				// minutes to deliver. Tested by kymara: takes longer than before due to fence in village
 				3,
 				// tip when delivered on time. A bit higher than 詹妮

@@ -422,7 +422,7 @@ public final class ShopList {
 		shops.add("sellparty", "三明治", 140);
 
 
-		// black items (balduin, when ultimate collector quest completed)
+		// black items (巴尔顿, when ultimate collector quest completed)
 		shops.add("buyblack", "黑色盔甲", 60000);
 		shops.add("buyblack", "黑靴子", 10000);
 		shops.add("buyblack", "黑斗篷", 20000);

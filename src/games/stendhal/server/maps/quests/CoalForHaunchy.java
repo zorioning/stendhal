@@ -48,12 +48,12 @@ import games.stendhal.server.maps.Region;
  *
  * PARTICIPANTS:
  * <ul>
- * <li>Haunchy Meatoch, the BBQ grillmaster on the Ados market</li>
+ * <li>哈文米特奇, the BBQ grillmaster on the Ados market</li>
  * </ul>
  *
  * STEPS:
  * <ul>
- * <li>Haunchy Meatoch asks you to fetch coal for his BBQ</li>
+ * <li>哈文米特奇 asks you to fetch coal for his BBQ</li>
  * <li>Find some coal in 塞门镇 Mine or buy some from other players</li>
  * <li>Take the coal to Haunchy</li>
  * <li>Haunchy gives you a tasty reward</li>
@@ -81,7 +81,7 @@ public class CoalForHaunchy extends AbstractQuest {
 	private static final int REQUIRED_MINUTES = 2880;
 
 	private void offerQuestStep() {
-		final SpeakerNPC npc = npcs.get("Haunchy Meatoch");
+		final SpeakerNPC npc = npcs.get("哈文米特奇");
 
 		// player says quest when he has not ever done the quest before (rejected or just new)
 		npc.add(ConversationStates.ATTENDING,
@@ -143,7 +143,7 @@ public class CoalForHaunchy extends AbstractQuest {
 	 *
 	 */
 	private void bringCoalStep() {
-		final SpeakerNPC npc = npcs.get("Haunchy Meatoch");
+		final SpeakerNPC npc = npcs.get("哈文米特奇");
 
 		final List<String> triggers = new ArrayList<String>();
 		triggers.add("煤炭");
@@ -194,7 +194,7 @@ public class CoalForHaunchy extends AbstractQuest {
 	public void addToWorld() {
 		fillQuestInfo(
 				"Haunchy 的煤炭",
-				"Haunchy Meatoch 担心他的烧烤大餐. 他准备的煤炭能够持续到他的烧烤结束吗？或许他准备的不够?",
+				"哈文米特奇 担心他的烧烤大餐. 他准备的煤炭能够持续到他的烧烤结束吗？或许他准备的不够?",
 				true);
 		offerQuestStep();
 		bringCoalStep();
@@ -207,7 +207,7 @@ public class CoalForHaunchy extends AbstractQuest {
 		if (!player.hasQuest(QUEST_SLOT)) {
 			return res;
 		}
-		res.add("Haunchy Meatoch 欢迎我来到 Ados 集市");
+		res.add("哈文米特奇 欢迎我来到 Ados 集市");
 		final String questState = player.getQuest(QUEST_SLOT);
 		if ("rejected".equals(questState)) {
 			res.add("他让我去弄些煤炭, 但我没时间做这些. ");
@@ -222,7 +222,7 @@ public class CoalForHaunchy extends AbstractQuest {
 			if (isRepeatable(player)) {
 				res.add("我带着 25 块煤炭给了 Haunchy, 但我but I'd bet his amount is low again and needs more. Maybe I'll get more grilled tasty steaks.");
 			} else {
-				res.add("Haunchy Meatoch was really happy when I gave him the 煤炭, he has enough for now. He gave me some of the best steaks which I ever ate!");
+				res.add("哈文米特奇 was really happy when I gave him the 煤炭, he has enough for now. He gave me some of the best steaks which I ever ate!");
 			}
 		}
 		return res;
@@ -256,6 +256,6 @@ public class CoalForHaunchy extends AbstractQuest {
 
 	@Override
 	public String getNPCName() {
-		return "Haunchy Meatoch";
+		return "哈文米特奇";
 	}
 }

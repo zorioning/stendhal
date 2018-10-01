@@ -43,12 +43,12 @@ public class HolidayingWomanNPCTest extends ZonePlayerAndNPCTestImpl {
 		super.setUp();
 
 		player = createPlayer("player");
-		aliceNpc = SingletonRepository.getNPCList().get("Alice Farmer");
+		aliceNpc = SingletonRepository.getNPCList().get("农妇爱丽丝");
 		aliceEngine = aliceNpc.getEngine();
 	}
 
 	public HolidayingWomanNPCTest() {
-		super(ZONE_NAME, "Alice Farmer", "蓝德", "Erna");
+		super(ZONE_NAME, "农妇爱丽丝", "蓝德", "Erna");
 	}
 
 	@Test
