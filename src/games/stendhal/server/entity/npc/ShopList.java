@@ -248,7 +248,7 @@ public final class ShopList {
 		shops.add("buychaos", "混沌护腿", 8000);
 		shops.add("buychaos", "混沌之剑", 12000);
 		shops.add("buychaos", "混乱之盾", 18000);
-		shops.add("buychaos", "浑沌护甲", 20000);
+		shops.add("buychaos", "混沌护甲", 20000);
 
 		// buy elvish items (albino elf, after quest)
 		shops.add("buyelvish", "精灵靴", 300);

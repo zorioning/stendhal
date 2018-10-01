@@ -42,7 +42,7 @@ public class TollboothNPC implements ZoneConfigurator  {
 	}
 
 	private void buildNPC(StendhalRPZone zone) {
-		final SpeakerNPC npc = new SpeakerNPC("Toller") {
+		final SpeakerNPC npc = new SpeakerNPC("陶乐") {
 
 			@Override
 			protected void createPath() {
@@ -51,10 +51,10 @@ public class TollboothNPC implements ZoneConfigurator  {
 
 			@Override
 			public void createDialog() {
-			    addGreeting("Hello, 如果你想过桥去对面的 #Antum ,你需要支付 #pay " + REQUIRED_COINS + " 金币.");
-				addHelp("如果你想过桥去对面的 #Antum ,你需要支付 #pay " + REQUIRED_COINS + " 金币.");
+			    addGreeting("你好, 如果你想过桥去对面的 #Antum ,你需要 #支付 " + REQUIRED_COINS + " 金币.");
+				addHelp("如果你想过桥去对面的 #Antum ,你需要 #支付 " + REQUIRED_COINS + " 金币.");
 				addJob("我守护这座连接着 塞门镇 和 Antum.");
-				addGoodbye("Farewell.");
+				addGoodbye("再会.");
 				addReply("antum", "Antum 是圣地.");
 
 			}
@@ -67,7 +67,7 @@ public class TollboothNPC implements ZoneConfigurator  {
 
         // Player has enough money and pays toll
         npc.add(ConversationStates.ATTENDING,
-                Arrays.asList("pay","支付","付钱"),
+                Arrays.asList("支付","付钱"),
                 new PlayerHasItemWithHimCondition("money", 25),
                 ConversationStates.IDLE,
                 "返回 塞门地区 不用付费, 只用走过大门就行.",
@@ -77,7 +77,7 @@ public class TollboothNPC implements ZoneConfigurator  {
 
         // Player does not have enough money for toll
         npc.add(ConversationStates.ATTENDING,
-                Arrays.asList("pay","支付","付钱"),
+                Arrays.asList("支付","付钱"),
                 new NotCondition(new PlayerHasItemWithHimCondition("money", 25)),
                 ConversationStates.ATTENDING,
                 "我很抱歉, 你的钱不够.",
@@ -87,7 +87,7 @@ public class TollboothNPC implements ZoneConfigurator  {
         npc.setPosition(37, 30);
         npc.setDirection(Direction.LEFT);
         npc.setEntityClass("youngsoldiernpc");
-        npc.setDescription("你见到了 大桥收费站的人员 Toller .");
+        npc.setDescription("你见到了大桥收费员陶乐 .");
         zone.add(npc);
 	}
 }
