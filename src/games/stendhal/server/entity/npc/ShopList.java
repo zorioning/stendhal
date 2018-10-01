@@ -305,7 +305,7 @@ public final class ShopList {
 		shops.add("buyoddsandends", "大瓶抗毒药济", 80);
 		shops.add("buyoddsandends", "玻璃球", 80);
 		shops.add("buyoddsandends", "魔法针", 1500);
-		shops.add("buyoddsandends", "雪珠", 150);
+		shops.add("buyoddsandends", "雪晶球", 150);
 		shops.add("buyoddsandends", "蜘蛛丝腺", 500);
 
 		// archery shop in nalwor)
@@ -366,7 +366,7 @@ public final class ShopList {
 		shops.add("sellhotdogs", "香草奶昔", 110);
 		shops.add("sellhotdogs", "巧克力奶昔", 110);
 		shops.add("sellhotdogs", "巧克力棒", 100);
-		shops.add("sellhotdogs", "雪珠", 200);
+		shops.add("sellhotdogs", "雪晶球", 200);
 
 		// magic city barmaid)
 		shops.add("sellmagic", "热狗", 160);
